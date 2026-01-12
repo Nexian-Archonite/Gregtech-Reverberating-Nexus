@@ -1,0 +1,14 @@
+﻿saves/
+logs/
+crash-reports/
+local/
+resourcepacks/
+shaderpacks/
+screenshots/
+*.log
+options.txt
+usercache.json
+usernamecache.json
+realms_persistence.json
+servers.dat
+patchouli_data.json
