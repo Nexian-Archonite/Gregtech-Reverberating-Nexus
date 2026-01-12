@@ -1,0 +1,22 @@
+#Enable debug rendering
+debugRender = false
+#Gas energy display unit
+#Allowed Values: JOULE, KCAL
+energyDisplayUnit = "JOULE"
+#Gas mass display unit
+#Allowed Values: KILOGRAM, POUND
+massDisplayUnit = "KILOGRAM"
+#Pressure display unit
+#Allowed Values: PASCAL, BAR, PSI, MM_HG
+pressureDisplayUnit = "PASCAL"
+#Enable rendering particles for DuctBlock
+renderDuctParticles = true
+#Use metric prefixes for units (15000 Pa = 15 kPa)
+simplifyDisplayUnits = true
+#Temperature display unit
+#Allowed Values: KELVIN, CELSIUS, FAHRENHEIT
+tempDisplayUnit = "KELVIN"
+#Duct volume display unit
+#Allowed Values: CUBIC_METER, GALLON
+volumeDisplayUnit = "CUBIC_METER"
+

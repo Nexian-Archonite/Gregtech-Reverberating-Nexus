@@ -1,0 +1,36 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "lv__low_voltage"
+	group: "4B637402490FA38D"
+	icon: "gtceu:nexus_steel_ingot"
+	id: "794BCEDCC46401C0"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["614269BB3A46BABE"]
+			id: "3A8C2C4178E31D86"
+			subtitle: "Welcome to LV"
+			tasks: [{
+				id: "511FC620E3D26C82"
+				item: "gtceu:nexus_steel_ingot"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6F08874E4DD9E1CD"]
+			id: "27E0B77DD8F5790E"
+			tasks: [{
+				id: "4CCB09D615375B81"
+				item: "kubejs:lv_universal_circuit"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.0d
+		}
+	]
+	title: "LV - Low Voltage"
+}

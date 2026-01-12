@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "gtceu:block/metallurgically_enhanced_source_casing"
+    },
+    "active=true": {
+      "model": "gtceu:block/metallurgically_enhanced_source_casing_bloom"
+    }
+  }
+}

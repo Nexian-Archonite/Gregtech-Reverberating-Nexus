@@ -1,0 +1,171 @@
+Summary:
+
+Game takes 21 seconds to bootstrap
+ 5. Transformer Class Loader Working: 6.409 ms
+ 8. Loading User / Options: 3.075 ms
+11. Constructing Mods: 4.633 ms
+--------------------
+Reload Manager takes 23 seconds, loading 31 tasks
+Tasks are processed in parallel using multiple threads.
+Off thread utilization: 25,69%
+--------------------
+Mods use 4 seconds to initialize
+Mod init happens in parallel as part of Game Bootstrap, in stage <Constructing Mods> ~ <Loading Registries>
+Mods use 0 seconds to load
+Mod init takes 38,39 seconds CPU time. Thread utilization: 828,54%
+- railways: 2.776 ms
+- mekanism: 2.697 ms
+- kubejs: 2.647 ms
+- ad_astra: 2.065 ms
+- ars_nouveau: 2.008 ms
+- ldlib: 1.233 ms
+- create: 1.178 ms
+- framework: 1.001 ms
+--------------------
+Model Load Time per Stage:
+Found 1 packs
+Loaded 3.691 model files with total size of 1.768 KB
+Baked 5905 models
+- vanilla: 1.768 KB
+------------------------------------------------------------
+
+Details:
+
+Game takes 21 seconds to bootstrap
+ 1. Services Initializing: 3 ms
+ 2. Services Loading: 74 ms
+ 3. Mod Scanning: 1.869 ms
+ 4. Launch Plugin Working: 628 ms
+ 5. Transformer Class Loader Working: 6.409 ms
+ 6. Client Early Initialization: 1.412 ms
+ 7. Vanilla Bootstrap Start: 1.454 ms
+ 8. Loading User / Options: 3.075 ms
+ 9. Minecraft Client Initialization: 1.602 ms
+10. Loading Languages: 17 ms
+11. Constructing Mods: 4.633 ms
+12. Gather Tasks: 399 ms
+13. Setup GUI: 60 ms
+14. Dispatch Client Events: 19 ms
+15. Vanilla Client Setup: 155 ms
+16. Initializing Tasks: 69 ms
+17. Setup Loading Screen: 2 ms
+--------------------
+Reload Manager takes 23 seconds, loading 31 tasks
+Tasks are processed in parallel using multiple threads.
+<Task>: <main thread time> / <total time>
+- ModelManager: 23 ms / 4.467 ms
+- FontManager: 70 ms / 998 ms
+- SoundManager: 116 ms / 188 ms
+- TextureManager: 0 ms / 119 ms
+- EntityRenderDispatcher: 110 ms / 110 ms
+Misc 25 Tasks: 218 ms / 437 ms
+Model Analyzer: 0 ms / 341 ms
+Main thread utilization: 2,26%
+Off thread utilization: 25,69%
+Idle time: 23 ms
+--------------------
+Mods use 4 seconds to initialize
+Mod init happens in parallel as part of Game Bootstrap, in stage <Constructing Mods> ~ <Loading Registries>
+Mods use 0 seconds to load
+Mod init takes 38,39 seconds CPU time. Thread utilization: 828,54%
+- railways: 2.776 ms
+  | - Construct: 2.776 ms
+  | - Others: 0 ms
+- mekanism: 2.697 ms
+  | - Construct: 2.697 ms
+  | - Others: 0 ms
+- kubejs: 2.647 ms
+  | - Construct: 2.647 ms
+  | - Others: 0 ms
+- ad_astra: 2.065 ms
+  | - Construct: 2.065 ms
+  | - Others: 0 ms
+- ars_nouveau: 2.008 ms
+  | - Construct: 2.007 ms
+  | - Others: 0 ms
+- ldlib: 1.233 ms
+  | - Construct: 1.233 ms
+  | - Others: 0 ms
+- create: 1.178 ms
+  | - Construct: 1.178 ms
+  | - Others: 0 ms
+- framework: 1.001 ms
+  | - Construct: 1.001 ms
+  | - Others: 0 ms
+- create_new_age: 910 ms
+- botania: 847 ms
+- fzzy_config: 752 ms
+- quark: 749 ms
+- particle_core: 740 ms
+- draconicevolution: 679 ms
+- balm: 628 ms
+- guideme: 609 ms
+- zeta: 599 ms
+- jei: 574 ms
+- dynamictrees: 571 ms
+- copycats: 558 ms
+- structure_gel: 533 ms
+- accessories: 523 ms
+- gtceu: 515 ms
+- sophisticatedbackpacks: 513 ms
+- ftbquests: 432 ms
+- codechickenlib: 415 ms
+- waystones: 414 ms
+- modernfix: 412 ms
+- undergarden: 357 ms
+- ars_elemental: 356 ms
+- farmersdelight: 349 ms
+- create_extra_casing: 348 ms
+- cofh_core: 339 ms
+- ctm: 330 ms
+- ad_astra_giselle_addon: 324 ms
+- mynethersdelight: 304 ms
+- moonlight: 297 ms
+- glodium: 268 ms
+- ae2: 260 ms
+- ftbchunks: 234 ms
+- toms_storage: 229 ms
+- architectury: 226 ms
+- botarium: 222 ms
+- fabric_screen_api_v1: 213 ms
+- embeddium: 208 ms
+- libx: 204 ms
+- gtnihilo: 201 ms
+- forge: 195 ms
+- create_hypertube: 193 ms
+- fusion: 180 ms
+- probejs: 164 ms
+- functionalstorage: 164 ms
+- brandonscore: 162 ms
+- ftbultimine: 153 ms
+- cclayer: 153 ms
+- mythicbotany: 151 ms
+- ratatouille: 146 ms
+- createaddition: 145 ms
+- itemfilters: 129 ms
+- rubberdrawers: 124 ms
+- sophisticatedcore: 121 ms
+- ftbteams: 119 ms
+- rusticdelight: 114 ms
+- craftingtweaks: 113 ms
+- notreepunching: 103 ms
+- ftblibrary: 101 ms
+- bookshelf: 101 ms
+Misc 143 mods: 2.676 ms
+--------------------
+Model Load Time per Stage:
+- Reading jsons: 430 ms
+- Parsing jsons: 269 ms
+- Adding modded special models: 0 ms
+- Resolving hierarchy: 68 ms
+- Stitching Textures: 0 ms
+- Baking models: 514 ms
+- Mods altering models: 0 ms
+- Assigning models to block: 31 ms
+- Waiting for barrier: 254 ms
+- Uploading stitch: 23 ms
+Found 1 packs
+Loaded 3.691 model files with total size of 1.768 KB
+Baked 5905 models
+- vanilla: 1.768 KB
+Misc 0 packs: 0 KB

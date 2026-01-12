@@ -1,0 +1,36 @@
+GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
+event.create('cyclotron')
+.category('imthescatmanbebobebobeboeboboeoebobeoboebboeboeboeboeboeboeboeobeobeboebooeboeeoboeboeboebo')
+.setMaxIOSize(1, 9, 1, 1)
+.setSlotOverlay(true, true, GuiTextures.CENTRIFUGE_OVERLAY)
+.setProgressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE, FillDirection.LEFT_TO_RIGHT)
+.setSound(GTSoundEntries.CENTRIFUGE)
+})
+
+GTCEuStartupEvents.registry('gtceu:machine', event => {
+
+    event.create('cyclotron', 'multiblock')
+    .rotationState(RotationState.NON_Y_AXIS)
+    .recipeTypes([GTRecipeTypes.get('cyclotron'), 'centrifuge'])
+    .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT, GTRecipeModifiers.PARALLEL_HATCH])
+    .appearanceBlock(() => Block.getBlock("gtceu:vibration_safe_casing"))
+    .pattern(definition => FactoryBlockPattern.start()
+    .aisle("BBBBB", "BCCCB", "BCCCB", "BCCCB", "BBCBB", "ABBBA", "AABAA")
+    .aisle("BBBBB", "CADAC", "CAAAC", "CADAC", "BAAAB", "BADAB", "ABBBA")
+    .aisle("BBBBB", "CAFAC", "CDFDC", "CAFAC", "CDFDC", "BAFAB", "BBFBB")
+    .aisle("BBBBB", "CADAC", "CAAAC", "CADAC", "BAAAB", "BADAB", "ABBBA")
+    .aisle("BBEBB", "BCCCB", "BCCCB", "BCCCB", "BBCBB", "ABBBA", "AABAA")
+   .where("A", Predicates.any())
+   .where("B", Predicates.blocks("gtceu:vibration_safe_casing")
+        .or(Predicates.autoAbilities(definition.getRecipeTypes()))
+        .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
+        .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1)))
+   .where("C", Predicates.blocks("kubejs:obsidian_glass"))
+   .where("D", Predicates.blocks("gtceu:titanium_pipe_casing"))
+   .where("E", Predicates.controller(Predicates.blocks(definition.get())))
+   .where("F", Predicates.blocks("gtceu:titanium_gearbox"))
+.build())
+.workableCasingModel('gtceu:block/casings/solid/vibration_safe_casing', 
+    'gtceu:block/machines/centrifuge')
+
+})

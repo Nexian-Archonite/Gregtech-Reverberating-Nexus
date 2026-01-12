@@ -1,0 +1,22 @@
+{
+  "id": "Death-18-14-42-01-04-2026_2070-105-5228",
+  "name": "Death 18:14:42 01-04-2026",
+  "icon": "journeymap:ui/img/waypoint-death-icon.png",
+  "colorizedIcon": "fake:color--4894329-waypoint-death-icon.png",
+  "x": 2070,
+  "y": 105,
+  "z": 5228,
+  "r": 181,
+  "g": 81,
+  "b": 135,
+  "enable": true,
+  "type": "Death",
+  "origin": "journeymap",
+  "dimensions": [
+    "ad_astra:moon"
+  ],
+  "persistent": true,
+  "showDeviation": false,
+  "iconColor": -1,
+  "customIconColor": false
+}

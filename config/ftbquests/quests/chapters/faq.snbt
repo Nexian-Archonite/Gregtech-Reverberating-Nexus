@@ -1,0 +1,21 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "faq"
+	group: ""
+	id: "4D2152BEB6540CA7"
+	order_index: 0
+	quest_links: [ ]
+	quests: [{
+		id: "306928B5B6E7792F"
+		subtitle: "Plant some flowers on Potted Soil and extract it that way :D"
+		tasks: [{
+			id: "72A23BAD65A34C50"
+			title: "How do i get mana plasma?"
+			type: "checkmark"
+		}]
+		x: 0.0d
+		y: 0.0d
+	}]
+	title: "FAQ"
+}

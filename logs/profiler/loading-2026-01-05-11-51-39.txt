@@ -1,0 +1,273 @@
+Summary:
+
+Game takes 28 seconds to bootstrap
+ 5. Transformer Class Loader Working: 5,164 ms
+ 8. Loading User / Options: 2,076 ms
+ 9. Minecraft Client Initialization: 4,949 ms
+11. Constructing Mods: 5,543 ms
+15. Loading Registries: 4,021 ms
+--------------------
+Reload Manager takes 55 seconds, loading 80 tasks
+Tasks are processed in parallel using multiple threads.
+- ModelManager: 28 seconds
+Off thread utilization: 76.78%
+--------------------
+Mods use 10 seconds to initialize
+Mod init happens in parallel as part of Game Bootstrap, in stage <Constructing Mods> ~ <Loading Registries>
+Mods use 10 seconds to load
+Mod init takes 44.02 seconds CPU time. Thread utilization: 418.32%
+- ctm: 3,887 ms
+- ldlib: 3,179 ms
+- railways: 3,079 ms
+- kubejs: 2,840 ms
+- ars_nouveau: 2,783 ms
+- ad_astra: 1,701 ms
+- create: 1,691 ms
+- quark: 1,610 ms
+- botania: 1,452 ms
+- gtceu: 1,350 ms
+- framework: 1,349 ms
+- draconicevolution: 1,118 ms
+- copycats: 1,053 ms
+- guideme: 1,036 ms
+--------------------
+Model Load Time per Stage:
+Found 75 packs
+Loaded 33,340 model files with total size of 25,129 KB
+Baked 87614 models
+- Steam_Rails-1.6.14-beta+forge-mc1.20.1.jar: 5,567 KB
+- gtceu-1.20.1-7.4.0.jar: 3,847 KB
+- create-1.20.1-6.0.8.jar: 2,919 KB
+- vanilla: 1,767 KB
+- refurbished_furniture-forge-1.20.1-1.0.20.jar: 1,606 KB
+- Quark-4.0-462.jar: 1,260 KB
+- Botania-1.20.1-450-FORGE.jar: 1,099 KB
+------------------------------------------------------------
+
+Details:
+
+Game takes 28 seconds to bootstrap
+ 1. Services Initializing: 3 ms
+ 2. Services Loading: 40 ms
+ 3. Mod Scanning: 1,453 ms
+ 4. Launch Plugin Working: 576 ms
+ 5. Transformer Class Loader Working: 5,164 ms
+ 6. Client Early Initialization: 1,357 ms
+ 7. Vanilla Bootstrap Start: 1,024 ms
+ 8. Loading User / Options: 2,076 ms
+ 9. Minecraft Client Initialization: 4,949 ms
+10. Loading Languages: 14 ms
+11. Constructing Mods: 5,543 ms
+12. Creating Registries: 315 ms
+13. Gathering Object Holders: 223 ms
+14. Injecting Capabilities: 421 ms
+15. Loading Registries: 4,021 ms
+16. Gather Modded Resource Packs: 21 ms
+17. Gather Tasks: 446 ms
+18. Setup GUI: 26 ms
+19. Dispatch Client Events: 462 ms
+20. Vanilla Client Setup: 133 ms
+21. Initializing Tasks: 10 ms
+22. Setup Loading Screen: 1 ms
+--------------------
+Reload Manager takes 55 seconds, loading 80 tasks
+Tasks are processed in parallel using multiple threads.
+<Task>: <main thread time> / <total time>
+- ModelManager: 628 ms / 28,967 ms
+- ClientModLoader: 2,844 ms / 7,068 ms
+- TextureManager: 0 ms / 1,650 ms
+- FontManager: 111 ms / 940 ms
+- SoundManager: 82 ms / 402 ms
+- GameRenderer$1: 121 ms / 184 ms
+- ParticleEngine: 5 ms / 166 ms
+- EntityRenderDispatcher: 124 ms / 124 ms
+- LanguageManager: 117 ms / 117 ms
+- guideme: 3 ms / 2,001 ms
+- geckolib: 0 ms / 1,718 ms
+- ctm: 0 ms / 588 ms
+- ftbchunks: 9 ms / 447 ms
+Misc 66 Tasks: 405 ms / 940 ms
+Model Analyzer: 0 ms / 1,457 ms
+Main thread utilization: 8.08%
+Off thread utilization: 76.78%
+Idle time: 6396 ms
+--------------------
+Mods use 10 seconds to initialize
+Mod init happens in parallel as part of Game Bootstrap, in stage <Constructing Mods> ~ <Loading Registries>
+Mods use 10 seconds to load
+Mod init takes 44.02 seconds CPU time. Thread utilization: 418.32%
+- ctm: 3,887 ms
+  | - Construct: 319 ms
+  | - ModelEvent$ModifyBakingResult: 3,261 ms
+  | - ModelEvent$BakingCompleted: 304 ms
+  | - Others: 2 ms
+- ldlib: 3,179 ms
+  | - Construct: 1,051 ms
+  | - ModelEvent$ModifyBakingResult: 2,093 ms
+  | - Others: 34 ms
+- railways: 3,079 ms
+  | - Construct: 2,945 ms
+  | - Others: 133 ms
+- kubejs: 2,840 ms
+  | - Construct: 2,787 ms
+  | - Others: 52 ms
+- ars_nouveau: 2,783 ms
+  | - Construct: 2,388 ms
+  | - FMLCommonSetupEvent: 237 ms
+  | - RegisterEvent: 107 ms
+  | - Others: 50 ms
+- ad_astra: 1,701 ms
+  | - Construct: 1,354 ms
+  | - RegisterEvent: 312 ms
+  | - Others: 34 ms
+- create: 1,691 ms
+  | - Construct: 1,143 ms
+  | - RegisterEvent: 261 ms
+  | - FMLClientSetupEvent: 207 ms
+  | - Others: 79 ms
+- quark: 1,610 ms
+  | - Construct: 1,024 ms
+  | - RegisterEvent: 465 ms
+  | - Others: 120 ms
+- botania: 1,452 ms
+  | - Construct: 921 ms
+  | - EntityRenderersEvent$RegisterRenderers: 182 ms
+  | - RegisterEvent: 159 ms
+  | - Others: 188 ms
+- gtceu: 1,350 ms
+  | - Construct: 718 ms
+  | - RegisterEvent: 549 ms
+  | - Others: 81 ms
+- framework: 1,349 ms
+  | - Construct: 1,234 ms
+  | - RegisterEvent: 111 ms
+  | - Others: 2 ms
+- draconicevolution: 1,118 ms
+  | - Construct: 684 ms
+  | - FMLClientSetupEvent: 263 ms
+  | - RegisterEvent: 121 ms
+  | - Others: 49 ms
+- copycats: 1,053 ms
+  | - Construct: 951 ms
+  | - Others: 102 ms
+- guideme: 1,036 ms
+  | - Construct: 1,032 ms
+  | - Others: 4 ms
+- waystones: 842 ms
+- dynamictrees: 833 ms
+- ftbquests: 808 ms
+- create_new_age: 794 ms
+- undergarden: 776 ms
+- zeta: 677 ms
+- sophisticatedbackpacks: 664 ms
+- jei: 650 ms
+- structure_gel: 609 ms
+- fzzy_config: 582 ms
+- accessories: 563 ms
+- particle_core: 552 ms
+- ars_elemental: 536 ms
+- ftbchunks: 518 ms
+- moonlight: 507 ms
+- advanced_ae: 464 ms
+- expatternprovider: 460 ms
+- create_extra_casing: 441 ms
+- balm: 439 ms
+- modernfix: 434 ms
+- brandonscore: 421 ms
+- ae2: 394 ms
+- ad_astra_giselle_addon: 375 ms
+- toms_storage: 369 ms
+- architectury: 367 ms
+- mynethersdelight: 366 ms
+- ratatouille: 350 ms
+- farmersdelight: 350 ms
+- probejs: 343 ms
+- cofh_core: 328 ms
+- expandedae: 326 ms
+- journeymap: 319 ms
+- mythicbotany: 315 ms
+- sophisticatedcore: 300 ms
+- patchouli: 281 ms
+- codechickenlib: 280 ms
+- emi: 259 ms
+- itemfilters: 259 ms
+- functionalstorage: 256 ms
+- sound_physics_remastered: 250 ms
+- gtmutils: 248 ms
+- buildinggadgets2: 245 ms
+- createaddition: 242 ms
+- fusion: 239 ms
+- forge: 235 ms
+- craftingtweaks: 234 ms
+- create_hypertube: 224 ms
+- megacells: 222 ms
+- libx: 220 ms
+- botarium: 207 ms
+- glodium: 207 ms
+- arseng: 205 ms
+- ponder: 203 ms
+- embeddium: 203 ms
+- fabric_screen_api_v1: 200 ms
+- comforts: 194 ms
+- ftbultimine: 193 ms
+- createbb: 174 ms
+- placebo: 172 ms
+- gtnihilo: 169 ms
+- jade: 163 ms
+- infernalmobs: 146 ms
+- ae2wtlib: 129 ms
+- bookshelf: 126 ms
+- extra_gauges: 117 ms
+- flywheel: 112 ms
+- chloride: 111 ms
+- rubberdrawers: 101 ms
+Misc 133 mods: 2,658 ms
+--------------------
+Model Load Time per Stage:
+- Reading jsons: 2,523 ms
+- Parsing jsons: 2,381 ms
+- Adding modded special models: 55 ms
+- Resolving hierarchy: 942 ms
+- Stitching Textures: 0 ms
+- Baking models: 4,677 ms
+- Mods altering models: 5,417 ms
+- Assigning models to block: 385 ms
+- Waiting for barrier: 8,761 ms
+- Uploading stitch: 628 ms
+Found 75 packs
+Loaded 33,340 model files with total size of 25,129 KB
+Baked 87614 models
+- Steam_Rails-1.6.14-beta+forge-mc1.20.1.jar: 5,567 KB
+- gtceu-1.20.1-7.4.0.jar: 3,847 KB
+- create-1.20.1-6.0.8.jar: 2,919 KB
+- vanilla: 1,767 KB
+- refurbished_furniture-forge-1.20.1-1.0.20.jar: 1,606 KB
+- Quark-4.0-462.jar: 1,260 KB
+- Botania-1.20.1-450-FORGE.jar: 1,099 KB
+- ad_astra-forge-1.20.1-1.15.20.jar: 897 KB
+- ars_nouveau-1.20.1-4.12.7-all.jar: 842 KB
+- create_extra_casing-4.0.4.jar: 590 KB
+- appliedenergistics2-forge-15.4.10.jar: 567 KB
+- MyNethersDelight-1.20.1-0.1.8.jar: 440 KB
+- Draconic-Evolution-1.20.1-3.1.2.621-universal.jar: 328 KB
+- The_Undergarden-1.20.1-0.8.14.jar: 303 KB
+- DynamicTreesArsNouveau-1.20.1-1.2.0.jar: 292 KB
+- gtse-1.2.0.jar: 257 KB
+- ars_elemental-1.20.1-0.6.7.8.jar: 249 KB
+- rusticdelight-forge-1.20.1-1.4.1.jar: 241 KB
+- FarmersDelight-1.20.1-1.2.9.jar: 208 KB
+- createaddition-1.20.1-1.3.3.jar: 196 KB
+- functionalstorage-1.20.1-1.2.10.jar: 151 KB
+- create_ratatouille-1.20.1-1.3.7fix1 for Create6.0.7~.jar: 138 KB
+- copycats-3.0.4+mc.1.20.1-forge.jar: 135 KB
+- create-new-age-1.1.7e+forge-mc1.20.1.jar: 131 KB
+- AdvancedAE-1.3.2-1.20.1.jar: 95 KB
+- create_hypertube-0.3.0-FORGE.jar: 95 KB
+- gtmutils-2.6.0.jar: 90 KB
+- ExtendedAE-1.20-1.4.9-forge.jar: 89 KB
+- DynamicTrees-1.20.1-1.4.9.jar: 86 KB
+- waystones-forge-1.20.1-14.1.17.jar: 70 KB
+- toms_storage-1.20-1.7.1.jar: 65 KB
+- sophisticatedbackpacks-1.20.1-3.24.18.1488.jar: 64 KB
+- notreepunching-forge-1.20-7.1.0.jar: 61 KB
+Misc 42 packs: 369 KB

@@ -1,0 +1,61 @@
+[22:52:31] [INIT] KubeJS 2001.6.5-build.16; MC 2001 forge
+[22:52:31] [INIT] Loaded plugins:
+[22:52:31] [INIT] - dev.latvian.mods.kubejs.forge.BuiltinKubeJSForgePlugin
+[22:52:31] [INIT] - dev.latvian.mods.kubejs.forge.BuiltinKubeJSForgeClientPlugin
+[22:52:31] [INIT] - com.lowdragmc.lowdraglib.kjs.LDLibKubeJSPlugin
+[22:52:31] [INIT] - dev.ftb.mods.ftbxmodcompat.ftbquests.kubejs.KubeJSIntegration
+[22:52:31] [INIT] - dev.ftb.mods.ftbxmodcompat.ftbchunks.kubejs.FTBChunksKubeJSPlugin
+[22:52:31] [INIT] - dev.ftb.mods.ftbxmodcompat.ftbteams.kubejs.FTBTeamsKubeJSPlugin
+[22:52:31] [INIT] - com.bobvarioa.kubejsarsnouveau.KubeJSArsNouveauPlugin
+[22:52:31] [INIT] - dev.latvian.mods.kubejs.create.KubeJSCreatePlugin
+[22:52:31] [INIT] - dev.latvian.kubejs.mekanism.MekanismKubeJSPlugin
+[22:52:31] [INIT] - com.almostreliable.lootjs.kube.LootJSPlugin
+[22:52:31] [INIT] - com.probejs.ProbeJSPlugin
+[22:52:31] [INIT] - com.gregtechceu.gtceu.integration.kjs.GregTechKubeJSPlugin
+[22:52:31] [INIT] - com.prunoideae.KubeJSBotaniaPlugin
+[22:52:32] [INFO] Loaded script startup_scripts:MultiblockShit/framework/framework.js in 0.054 s
+[22:52:32] [INFO] conST_conST.js#4: Loaded Java class 'com.gregtechceu.gtceu.common.machine.multiblock.steam.SteamParallelMultiblockMachine'
+[22:52:32] [INFO] conST_conST.js#5: Loaded Java class 'com.gregtechceu.gtceu.api.machine.multiblock.CoilWorkableElectricMultiblockMachine'
+[22:52:32] [INFO] conST_conST.js#6: Loaded Java class 'com.gregtechceu.gtceu.api.recipe.GTRecipe'
+[22:52:32] [INFO] conST_conST.js#7: Loaded Java class 'com.gregtechceu.gtceu.api.machine.MetaMachine'
+[22:52:32] [INFO] conST_conST.js#11: Loaded Java class 'com.gregtechceu.gtceu.api.data.chemical.material.properties.IngotProperty'
+[22:52:32] [INFO] conST_conST.js#12: Loaded Java class 'com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidProperty'
+[22:52:32] [INFO] conST_conST.js#13: Loaded Java class 'com.gregtechceu.gtceu.api.fluids.attribute.FluidAttributes'
+[22:52:32] [INFO] conST_conST.js#14: Loaded Java class 'com.gregtechceu.gtceu.api.fluids.store.FluidStorageKeys'
+[22:52:32] [INFO] conST_conST.js#15: Loaded Java class 'com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidPipeProperties'
+[22:52:32] [INFO] conST_conST.js#16: Loaded Java class 'com.gregtechceu.gtceu.api.data.chemical.material.properties.WireProperties'
+[22:52:32] [INFO] conST_conST.js#17: Loaded Java class 'com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty'
+[22:52:32] [INFO] conST_conST.js#18: Loaded Java class 'com.gregtechceu.gtceu.api.data.chemical.material.properties.OreProperty'
+[22:52:32] [INFO] conST_conST.js#19: Loaded Java class 'com.gregtechceu.gtceu.api.fluids.FluidBuilder'
+[22:52:32] [INFO] conST_conST.js#20: Loaded Java class 'com.gregtechceu.gtceu.api.data.chemical.material.properties.DustProperty'
+[22:52:32] [INFO] conST_conST.js#21: Loaded Java class 'com.gregtechceu.gtceu.api.data.chemical.material.properties.GemProperty'
+[22:52:32] [INFO] conST_conST.js#22: Loaded Java class 'com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey'
+[22:52:32] [INFO] Loaded script startup_scripts:conST_conST.js in 0.044 s
+[22:52:32] [INFO] MultiblockShit/helpers/ui_builder.js#3: Loaded Java class 'com.gregtechceu.gtceu.api.gui.editor.EditableMachineUI'
+[22:52:32] [INFO] MultiblockShit/helpers/ui_builder.js#4: Loaded Java class 'com.gregtechceu.gtceu.api.gui.widget.SlotWidget'
+[22:52:32] [INFO] MultiblockShit/helpers/ui_builder.js#5: Loaded Java class 'com.gregtechceu.gtceu.api.gui.widget.TankWidget'
+[22:52:32] [INFO] Loaded script startup_scripts:MultiblockShit/helpers/ui_builder.js in 0.012 s
+[22:52:32] [INFO] Loaded script startup_scripts:MultiblockShit/helpers.js in 0.004 s
+[22:52:32] [INFO] materials.js#2: Loaded Java class 'com.gregtechceu.gtceu.api.data.chemical.material.properties.ToolProperty'
+[22:52:32] [INFO] Loaded script startup_scripts:materials.js in 0.028 s
+[22:52:32] [INFO] Loaded script startup_scripts:MultiblockShit/helpers/functions/pressure_recipe_modifier.js in 0.001 s
+[22:52:32] [INFO] Loaded script startup_scripts:MultiblockShit/helpers/functions/temperature_recipe_modifier.js in 0.0 s
+[22:52:32] [INFO] Loaded script startup_scripts:MultiblockShit/large_cubes.js in 0.002 s
+[22:52:32] [INFO] Loaded script startup_scripts:MultiblockShit/large_cube_casings.js in 0.001 s
+[22:52:32] [INFO] Loaded script startup_scripts:MultiblockShit/progression/chemical_reaction_vat.js in 0.003 s
+[22:52:32] [INFO] Loaded script startup_scripts:MultiblockShit/progression/echoversal_space_complex.js in 0.009 s
+[22:52:32] [INFO] Loaded script startup_scripts:MultiblockShit/progression/echo_imbuement_chamber.js in 0.002 s
+[22:52:32] [INFO] Loaded script startup_scripts:MultiblockShit/progression/effervescent_echoite_exile.js in 0.001 s
+[22:52:32] [INFO] Loaded script startup_scripts:MultiblockShit/progression/industrial_refraction_kiln.js in 0.001 s
+[22:52:32] [INFO] Loaded script startup_scripts:MultiblockShit/progression/mechanical_conjuration_institute.js in 0.001 s
+[22:52:32] [INFO] Loaded script startup_scripts:MultiblockShit/progression/metaphysical_metallurgy_tainter.js in 0.001 s
+[22:52:32] [INFO] Loaded script startup_scripts:MultiblockShit/progression/nuclear_multis.js in 0.004 s
+[22:52:32] [INFO] Loaded script startup_scripts:MultiblockShit/progression/primitve_alloyment_kiln.js in 0.001 s
+[22:52:32] [INFO] Loaded script startup_scripts:MultiblockShit/progression/rare_earth_cyclotron.js in 0.0 s
+[22:52:32] [INFO] Loaded script startup_scripts:MultiblockShit/progression/superphasic_mixer.js in 0.0 s
+[22:52:32] [INFO] Loaded script startup_scripts:random_stuff.js in 0.0 s
+[22:52:32] [INFO] Loaded script startup_scripts:singleblock_machines.js in 0.001 s
+[22:52:32] [INFO] Loaded script startup_scripts:gregtech_crafting_components.js in 0.002 s
+[22:52:32] [INFO] Loaded script startup_scripts:MultiblockShit/framework/finalize.js in 0.001 s
+[22:52:32] [INFO] Loaded 24/24 KubeJS startup scripts in 1.366 s with 0 errors and 0 warnings
+[22:52:33] [INFO] MultiblockShit/progression/nuclear_multis.js#186: Loaded Java class 'com.gregtechceu.gtceu.common.machine.multiblock.generator.LargeTurbineMachine'

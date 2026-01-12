@@ -1,0 +1,6 @@
+{
+  "parent": "gtceu:item/material_sets/omnium/ingot",
+  "textures": {
+    "layer0": "gtceu:item/material_sets/omnium/hot_ingot"
+  }
+}

@@ -1,0 +1,892 @@
+{
+	consume_items: false
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "steam"
+	group: "4B637402490FA38D"
+	id: "20F5EE4D2290F500"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["5CE5E43312F2E152"]
+			id: "09FA905D049E4A70"
+			tasks: [{
+				id: "4893232BD12F4CFD"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["09FA905D049E4A70"]
+			id: "6CB5FBD33E69672A"
+			tasks: [{
+				id: "1031B38C00BFB694"
+				item: "minecraft:furnace"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["6CB5FBD33E69672A"]
+			id: "57C67447D2F16921"
+			tasks: [{
+				id: "5ABF796005FE90BF"
+				item: "gtceu:sticky_resin"
+				type: "item"
+			}]
+			x: -5.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["5D023EE41EB9D1F2"]
+			id: "711C0559236BB4D6"
+			tasks: [{
+				id: "5A4B8168A20652E4"
+				item: "minecraft:crafting_table"
+				type: "item"
+			}]
+			x: -2.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["63335DD3BE12D871"]
+			id: "5D023EE41EB9D1F2"
+			tasks: [{
+				id: "5BE324FA2ECFF7EB"
+				item: {
+					Count: 1
+					id: "gtceu:flint_axe"
+					tag: {
+						Damage: 0
+						DisallowContainerItem: 0b
+						GT.Behaviours: {
+							DisableShields: 1b
+							TreeFelling: 1b
+						}
+						GT.Tool: {
+							DefaultEnchantments: [ ]
+							HarvestLevel: 1
+							MaxDamage: 63
+							ToolSpeed: 2.0f
+						}
+						HideFlags: 2
+					}
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["09FA905D049E4A70"]
+			id: "15BD75B58C5DA7C5"
+			tasks: [{
+				id: "184BE9C17146164C"
+				item: {
+					Count: 1
+					id: "kubejs:primitive_glue_tube"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -3.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["449DB524E8DA8C78"]
+			id: "63335DD3BE12D871"
+			subtitle: "Jamster some flint onto hard rocks to get flint shards"
+			tasks: [{
+				id: "24E034D57FF1C1B2"
+				item: "notreepunching:flint_shard"
+				type: "item"
+			}]
+			x: 2.5d
+			y: -6.0d
+		}
+		{
+			dependencies: [
+				"15BD75B58C5DA7C5"
+				"6CB5FBD33E69672A"
+				"2ED55A4F3F48167C"
+				"0C0981B247F09D5D"
+			]
+			id: "5800B0DA724D79DF"
+			tasks: [{
+				id: "572FA8FFC2A1B73B"
+				item: "gtceu:andesite_alloy_ingot"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["6CB5FBD33E69672A"]
+			id: "3929571D762B4FF6"
+			tasks: [{
+				id: "2E90FDCCD689DFAE"
+				item: "gtceu:coke_oven"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["5CB274CD3FA086BD"]
+			id: "3DA95A4963452477"
+			tasks: [{
+				dimension: "minecraft:the_nether"
+				id: "7BA24D09CE8FFC4C"
+				type: "dimension"
+			}]
+			x: -7.5d
+			y: 2.5d
+		}
+		{
+			dependencies: [
+				"614269BB3A46BABE"
+				"63379AA9B73F3113"
+			]
+			id: "42E22E7143849D9F"
+			tasks: [{
+				id: "357DCE7264BF8944"
+				item: "gtceu:lv_machine_hull"
+				type: "item"
+			}]
+			x: -13.5d
+			y: -8.0d
+		}
+		{
+			dependencies: [
+				"614269BB3A46BABE"
+				"4A7419803D1D9CF5"
+				"2BEC9DB70EC7F5A2"
+				"7B6715182109ECC1"
+			]
+			id: "6F08874E4DD9E1CD"
+			tasks: [{
+				id: "68F6C2335051E174"
+				item: "gtceu:basic_electronic_circuit"
+				type: "item"
+			}]
+			x: -11.5d
+			y: -8.0d
+		}
+		{
+			dependencies: [
+				"002C43B687A4709F"
+				"376F69450B6F4587"
+			]
+			id: "614269BB3A46BABE"
+			tasks: [{
+				id: "5314FAEF2284CD7D"
+				item: "gtceu:nexus_steel_ingot"
+				type: "item"
+			}]
+			x: -13.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["0FF321A29F2BC5D7"]
+			id: "5CB274CD3FA086BD"
+			tasks: [{
+				id: "55BF6959A90812FC"
+				item: "gtceu:primitive_blast_furnace"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 2.5d
+		}
+		{
+			dependencies: [
+				"3929571D762B4FF6"
+				"5800B0DA724D79DF"
+			]
+			id: "0FF321A29F2BC5D7"
+			tasks: [{
+				id: "7CE49396C314CB86"
+				item: "create:mechanical_press"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["3DA95A4963452477"]
+			id: "2DB119B457955E2D"
+			tasks: [{
+				id: "0E6D9FA03C0898E5"
+				item: "create:blaze_burner"
+				type: "item"
+			}]
+			x: -9.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["5800B0DA724D79DF"]
+			id: "407DD81158918951"
+			tasks: [{
+				id: "0CBCB255B7B5F0FB"
+				item: "create:mechanical_mixer"
+				type: "item"
+			}]
+			x: -7.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["5800B0DA724D79DF"]
+			id: "0E939916D05EA598"
+			tasks: [{
+				id: "5C898206249AE570"
+				item: "create:encased_fan"
+				type: "item"
+			}]
+			x: -7.5d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"46D657F441D9AB4C"
+				"6D1658B0C42E82DF"
+				"2E6497AB5BF312D9"
+			]
+			id: "002C43B687A4709F"
+			tasks: [{
+				id: "670F1049A97E2A3F"
+				item: "gtceu:primitive_alloyment_kiln"
+				type: "item"
+			}]
+			x: -11.5d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"407DD81158918951"
+				"2DB119B457955E2D"
+			]
+			id: "0D2850921DB3A253"
+			tasks: [{
+				id: "5B1BAE903B22A6E4"
+				item: "gtceu:igneous_bronze_ingot"
+				type: "item"
+			}]
+			x: -11.5d
+			y: 2.5d
+		}
+		{
+			dependencies: [
+				"0E939916D05EA598"
+				"2DB119B457955E2D"
+				"407DD81158918951"
+			]
+			id: "46D657F441D9AB4C"
+			tasks: [{
+				id: "113F78BD0BD194D1"
+				item: "create:electron_tube"
+				type: "item"
+			}]
+			x: -9.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["0D2850921DB3A253"]
+			id: "2E6497AB5BF312D9"
+			tasks: [{
+				id: "775EC624EE68F3D6"
+				item: "gtceu:bronze_machine_casing"
+				type: "item"
+			}]
+			x: -11.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["350D6E4A6B91EBEC"]
+			id: "5B35D2FC7FB06155"
+			tasks: [{
+				id: "5D70FAED549B822A"
+				item: "ars_nouveau:imbuement_chamber"
+				type: "item"
+			}]
+			x: -15.5d
+			y: 2.5d
+		}
+		{
+			dependencies: [
+				"2D59B58CE6C2D3FB"
+				"5B35D2FC7FB06155"
+			]
+			id: "00DD741254C2C90E"
+			tasks: [{
+				id: "297DF491D2AE0C65"
+				item: "gtceu:source_gem"
+				type: "item"
+			}]
+			x: -13.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["6FB10F6F1097A40D"]
+			id: "478493C9374C3888"
+			tasks: [{
+				id: "7E7C6E16FF71F7F2"
+				item: "botania:pure_daisy"
+				type: "item"
+			}]
+			x: -13.5d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"46D657F441D9AB4C"
+				"478493C9374C3888"
+				"00DD741254C2C90E"
+			]
+			id: "6D1658B0C42E82DF"
+			tasks: [{
+				id: "7B66B978A36CD2D6"
+				item: "ars_nouveau:water_essence"
+				type: "item"
+			}]
+			x: -11.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["46D657F441D9AB4C"]
+			id: "083A12BD571AC840"
+			tasks: [{
+				id: "64D0FF9D9C376AEC"
+				item: "create:deployer"
+				type: "item"
+			}]
+			x: -9.5d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"083A12BD571AC840"
+				"3C61358887ED8E2C"
+				"596E049C49A06A36"
+			]
+			id: "4A7419803D1D9CF5"
+			tasks: [{
+				id: "56A243B829A87293"
+				item: "gtceu:resistor"
+				type: "item"
+			}]
+			x: -9.5d
+			y: -6.0d
+		}
+		{
+			dependencies: [
+				"614269BB3A46BABE"
+				"083A12BD571AC840"
+			]
+			id: "2BEC9DB70EC7F5A2"
+			tasks: [{
+				id: "66AEA12F0452B729"
+				item: "gtceu:vacuum_tube"
+				type: "item"
+			}]
+			x: -11.5d
+			y: -6.0d
+		}
+		{
+			dependencies: [
+				"57C67447D2F16921"
+				"6E981CC3211F3AE4"
+			]
+			id: "3C61358887ED8E2C"
+			tasks: [{
+				id: "7E7D2838E03B08CA"
+				item: "gtceu:primitive_glue_bucket"
+				type: "item"
+			}]
+			x: -7.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["2DB119B457955E2D"]
+			hide_dependency_lines: true
+			id: "6E981CC3211F3AE4"
+			tasks: [{
+				id: "66DCD80F6D391C88"
+				item: "create:blaze_burner"
+				type: "item"
+			}]
+			x: -7.5d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"321E0B7C6A9934D3"
+				"6D1658B0C42E82DF"
+				"6E4F0E920F1B1DBD"
+			]
+			id: "376F69450B6F4587"
+			tasks: [{
+				id: "3150A6AB0F0ACFD3"
+				item: "gtceu:condensed_mana_dust"
+				type: "item"
+			}]
+			x: -15.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["00DD741254C2C90E"]
+			id: "321E0B7C6A9934D3"
+			tasks: [{
+				id: "2AA9023F36A3E9A1"
+				item: "create:blaze_cake"
+				type: "item"
+			}]
+			x: -15.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1F8680BBE40C298B"]
+			id: "6E4F0E920F1B1DBD"
+			tasks: [{
+				id: "0AEFC39E994E3C52"
+				item: "blasmatech:mana_bucket"
+				type: "item"
+			}]
+			x: -17.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["6FB10F6F1097A40D"]
+			id: "1F8680BBE40C298B"
+			tasks: [{
+				id: "684D0E3C4C4C089A"
+				item: "botania:endoflame"
+				type: "item"
+			}]
+			x: -17.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["00DD741254C2C90E"]
+			id: "6FB10F6F1097A40D"
+			tasks: [{
+				id: "425F21A74C834F3F"
+				item: "botania:apothecary_default"
+				type: "item"
+			}]
+			x: -15.5d
+			y: 0.5d
+		}
+		{
+			dependencies: [
+				"614269BB3A46BABE"
+				"63379AA9B73F3113"
+			]
+			id: "6DFF5C5C6A0C3436"
+			tasks: [{
+				id: "54C75CA1691E2627"
+				item: "gtceu:lv_electric_motor"
+				type: "item"
+			}]
+			x: -15.5d
+			y: -8.0d
+		}
+		{
+			dependencies: ["6D1658B0C42E82DF"]
+			id: "63379AA9B73F3113"
+			tasks: [{
+				id: "108B2B18F1750B28"
+				item: "gtceu:source_attuned_copper_ingot"
+				type: "item"
+			}]
+			x: -15.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["6E4F0E920F1B1DBD"]
+			dependency_requirement: "all_started"
+			hide_dependency_lines: true
+			id: "1DFD9043B0AB0821"
+			tasks: [{
+				id: "77D9E84CC464212E"
+				item: "blasmatech:mana_bucket"
+				type: "item"
+			}]
+			x: -5.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["1DFD9043B0AB0821"]
+			id: "596E049C49A06A36"
+			tasks: [{
+				id: "3CAE5DCD9027700B"
+				item: "gtceu:elementally_purified_carbon_dust"
+				type: "item"
+			}]
+			x: -7.5d
+			y: -8.0d
+		}
+		{
+			dependencies: ["64D6EFF5EB614DBD"]
+			id: "449DB524E8DA8C78"
+			tasks: [{
+				id: "458304CA63CCEF06"
+				item: "minecraft:flint"
+				type: "item"
+			}]
+			x: 5.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["7E540687B0FD9D9B"]
+			id: "7CE36FB4FBF55212"
+			subtitle: "Get yourself a hammer, for only six ingots!! You'll wanna get wrought iron tools anyways"
+			tasks: [{
+				id: "3A10C97EE10DD0E4"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:tools/hammers"
+					}
+				}
+				type: "item"
+			}]
+			title: "#welovegreggyhammers"
+			x: -5.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["09FA905D049E4A70"]
+			id: "7E540687B0FD9D9B"
+			subtitle: "Wrought Iron. Iron but Wrought?"
+			tasks: [{
+				id: "52FC50DD08709BD2"
+				item: "gtceu:wrought_iron_ingot"
+				type: "item"
+			}]
+			x: -3.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["7CE36FB4FBF55212"]
+			id: "0C0981B247F09D5D"
+			tasks: [{
+				id: "7C81A9AF3ADB811A"
+				item: "gtceu:iron_dust"
+				type: "item"
+			}]
+			x: -4.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["7CE36FB4FBF55212"]
+			id: "2ED55A4F3F48167C"
+			tasks: [{
+				id: "4638FB40BB025920"
+				item: "gtceu:andesite_dust"
+				type: "item"
+			}]
+			x: -5.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["711C0559236BB4D6"]
+			dependency_requirement: "one_started"
+			id: "5CE5E43312F2E152"
+			tasks: [{
+				id: "2BB305D04A45618B"
+				item: "minecraft:campfire"
+				type: "item"
+			}]
+			x: -3.0d
+			y: -4.5d
+		}
+		{
+			id: "64D6EFF5EB614DBD"
+			subtitle: "Achieve Gravel"
+			tasks: [{
+				id: "729B556ECB8F7964"
+				item: "minecraft:gravel"
+				type: "item"
+			}]
+			x: 7.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["711C0559236BB4D6"]
+			id: "215FBF17DA4753CB"
+			rewards: [
+				{
+					id: "64B7C14FF2306268"
+					item: "sophisticatedbackpacks:backpack"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "539B969544B24E98"
+					item: "farmersdelight:rice_roll_medley_block"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "3B4A575275BC9E04"
+					item: "minecraft:torch"
+					type: "item"
+				}
+			]
+			subtitle: "Get yo Chezt"
+			tasks: [{
+				id: "27CD4B1A9652220F"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "balm:wooden_chests"
+					}
+				}
+				type: "item"
+			}]
+			title: "Chests!!"
+			x: -3.5d
+			y: -7.0d
+		}
+		{
+			dependencies: [
+				"4A7419803D1D9CF5"
+				"57C67447D2F16921"
+				"6E981CC3211F3AE4"
+			]
+			id: "7B6715182109ECC1"
+			tasks: [{
+				id: "76B2BE3057351A5F"
+				item: "gtceu:resin_printed_circuit_board"
+				type: "item"
+			}]
+			x: -9.5d
+			y: -8.0d
+		}
+		{
+			dependencies: ["1BC3681C67B6A022"]
+			id: "2D59B58CE6C2D3FB"
+			subtitle: "INFINITE OPAL!!!!"
+			tasks: [{
+				id: "6ACE27311F38A6F1"
+				item: "gtceu:opal_gem"
+				type: "item"
+			}]
+			x: -13.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["2DB119B457955E2D"]
+			hide_dependency_lines: true
+			id: "5B0DEB73BFE8F7B8"
+			tasks: [{
+				amount: 200L
+				fluid: "gtceu:wood_leachate"
+				id: "75CD1967ABE5758C"
+				type: "fluid"
+			}]
+			x: -15.0d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"0641A5C15881AE0F"
+				"5B0DEB73BFE8F7B8"
+				"6C50DBD2962242B8"
+			]
+			id: "1BC3681C67B6A022"
+			tasks: [{
+				amount: 200L
+				fluid: "gtceu:crude_ethyl_silicate"
+				id: "2BF1878923132867"
+				type: "fluid"
+			}]
+			x: -14.0d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"407DD81158918951"
+				"2DB119B457955E2D"
+			]
+			hide_dependency_lines: true
+			id: "0641A5C15881AE0F"
+			tasks: [{
+				amount: 1000L
+				fluid: "gtceu:ethanol"
+				id: "3D5CE63974183661"
+				type: "fluid"
+			}]
+			x: -14.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["7CE36FB4FBF55212"]
+			hide_dependency_lines: true
+			id: "6C50DBD2962242B8"
+			tasks: [{
+				count: 15L
+				id: "70A2CBB800CB6B1E"
+				item: { Count: 15, id: "gtceu:nether_quartz_dust" }
+				type: "item"
+			}]
+			x: -13.0d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"7CE36FB4FBF55212"
+				"7E540687B0FD9D9B"
+			]
+			hide_dependent_lines: true
+			id: "350D6E4A6B91EBEC"
+			rewards: [{
+				count: 64
+				id: "4C61B40D233DADA9"
+				item: {
+					Count: 1
+					id: "rusticdelight:cherry_blossom_cookie"
+					tag: {
+						display: {
+							Lore: ["[\"\",{\"text\":\"Very special cookies :3\",\"italic\":false}]"]
+							Name: "[\"\",{\"text\":\"You smart cookie\",\"italic\":false}]"
+						}
+					}
+				}
+				type: "item"
+			}]
+			subtitle: "This is what you should have"
+			tasks: [
+				{
+					id: "24BD4A5E7342A811"
+					item: {
+						Count: 1
+						id: "gtceu:wrought_iron_file"
+						tag: {
+							Damage: 0
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								DefaultEnchantments: [ ]
+								MaxDamage: 383
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "1EB7854A98FA5FC6"
+					item: {
+						Count: 1
+						id: "gtceu:wrought_iron_mortar"
+						tag: {
+							Damage: 0
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								DefaultEnchantments: [ ]
+								MaxDamage: 383
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "2AC162E1AE7699D9"
+					item: {
+						Count: 1
+						id: "gtceu:wrought_iron_hammer"
+						tag: {
+							Damage: 0
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								DefaultEnchantments: [ ]
+								HarvestLevel: 2
+								MaxDamage: 383
+								ToolSpeed: 6.0f
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "468B4BA8FC210FC3"
+					item: {
+						Count: 1
+						id: "gtceu:wrought_iron_wrench"
+						tag: {
+							Damage: 0
+							DisallowContainerItem: 0b
+							GT.Behaviours: {
+								Mode: 2b
+							}
+							GT.Tool: {
+								DefaultEnchantments: [ ]
+								HarvestLevel: 2
+								MaxDamage: 383
+								ToolSpeed: 6.0f
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "117003399BBD879D"
+					item: {
+						Count: 1
+						id: "gtceu:wrought_iron_saw"
+						tag: {
+							Damage: 0
+							DisallowContainerItem: 0b
+							GT.Behaviours: {
+								HarvestIce: 1b
+							}
+							GT.Tool: {
+								DefaultEnchantments: [ ]
+								MaxDamage: 383
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "6ECCC90BEB210537"
+					item: {
+						Count: 1
+						id: "gtceu:wrought_iron_wire_cutter"
+						tag: {
+							Damage: 0
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								DefaultEnchantments: [ ]
+								HarvestLevel: 2
+								MaxDamage: 383
+								ToolSpeed: 6.0f
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Wrought Tools Set"
+			x: -5.0d
+			y: -4.0d
+		}
+	]
+	title: "Steam"
+}

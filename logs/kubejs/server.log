@@ -1,0 +1,116 @@
+[22:50:40] [INIT] KubeJS 2001.6.5-build.16; MC 2001 forge
+[22:50:40] [INIT] Loaded plugins:
+[22:50:40] [INIT] - dev.latvian.mods.kubejs.forge.BuiltinKubeJSForgePlugin
+[22:50:40] [INIT] - dev.latvian.mods.kubejs.forge.BuiltinKubeJSForgeClientPlugin
+[22:50:40] [INIT] - com.lowdragmc.lowdraglib.kjs.LDLibKubeJSPlugin
+[22:50:40] [INIT] - dev.ftb.mods.ftbxmodcompat.ftbquests.kubejs.KubeJSIntegration
+[22:50:40] [INIT] - dev.ftb.mods.ftbxmodcompat.ftbchunks.kubejs.FTBChunksKubeJSPlugin
+[22:50:40] [INIT] - dev.ftb.mods.ftbxmodcompat.ftbteams.kubejs.FTBTeamsKubeJSPlugin
+[22:50:40] [INIT] - com.bobvarioa.kubejsarsnouveau.KubeJSArsNouveauPlugin
+[22:50:40] [INIT] - dev.latvian.mods.kubejs.create.KubeJSCreatePlugin
+[22:50:40] [INIT] - dev.latvian.kubejs.mekanism.MekanismKubeJSPlugin
+[22:50:40] [INIT] - com.almostreliable.lootjs.kube.LootJSPlugin
+[22:50:40] [INIT] - com.probejs.ProbeJSPlugin
+[22:50:40] [INIT] - com.gregtechceu.gtceu.integration.kjs.GregTechKubeJSPlugin
+[22:50:40] [INIT] - com.prunoideae.KubeJSBotaniaPlugin
+[22:50:40] [INFO] Loaded script server_scripts:const.const.js in 0.002 s
+[22:50:40] [INFO] Loaded script server_scripts:tags'n'shit.js in 0.001 s
+[22:50:40] [INFO] Loaded script server_scripts:gregification/ae2.js in 0.006 s
+[22:50:40] [INFO] Loaded script server_scripts:gregification/botania_ars_early.js in 0.001 s
+[22:50:40] [INFO] Loaded script server_scripts:gregification/create.js in 0.001 s
+[22:50:40] [INFO] Loaded script server_scripts:gregification/mekanism.js in 0.001 s
+[22:50:40] [INFO] Loaded script server_scripts:gregification/ores/blue_zircon.js in 0.0 s
+[22:50:40] [INFO] Loaded script server_scripts:gregification/ores/general_ores.js in 0.002 s
+[22:50:40] [INFO] Loaded script server_scripts:gregification/ores/nexus.js in 0.0 s
+[22:50:40] [INFO] Loaded script server_scripts:gregification/ores/resonite.js in 0.0 s
+[22:50:40] [INFO] Loaded script server_scripts:gregification/ores/xenotime.js in 0.0 s
+[22:50:40] [INFO] Loaded script server_scripts:gregification/progression/early_game.js in 0.003 s
+[22:50:40] [INFO] Loaded script server_scripts:gregification/progression/end_game.js in 0.0 s
+[22:50:40] [INFO] Loaded script server_scripts:gregification/progression/late_game.js in 0.0 s
+[22:50:40] [INFO] Loaded script server_scripts:gregification/progression/mid_game.js in 0.008 s
+[22:50:40] [INFO] Loaded script server_scripts:hooledally.js in 0.002 s
+[22:50:40] [INFO] Loaded script server_scripts:removal/removal.js in 0.001 s
+[22:50:40] [INFO] Loaded script server_scripts:removal/removal2.js in 0.001 s
+[22:50:40] [INFO] Loaded 18/18 KubeJS server scripts in 0.044 s with 0 errors and 0 warnings
+[22:50:40] [INFO] Scripts loaded
+[22:50:40] [INFO] Initializing recipe event...
+[22:50:41] [INFO] [minecraft:block] Found 1486 tags, added 66 objects, removed 0 objects
+[22:50:42] [INFO] [minecraft:item] Found 6089 tags, added 402 objects, removed 8 objects
+[22:50:49] [INFO] Processing recipes...
+[22:50:49] [WARN] Failed to parse recipe 'mekanism:rotary/superheated_sodium[mekanism:rotary]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:49] [WARN] Failed to parse recipe 'mekanism:processing/gold/slurry/clean[mekanism:washing]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:49] [WARN] Failed to parse recipe 'mekanism:processing/lategame/polonium_pellet/from_reaction[mekanism:reaction]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:49] [WARN] Failed to parse recipe 'botania:brew/feather_feet[botania:brew]'! Falling back to vanilla: Cannot invoke "net.minecraft.core.Registry.m_7745_(net.minecraft.resources.ResourceLocation)" because "com.prunoideae.custom.brew.BotaniaRegistryObjectBuilderTypes.BREW_REGISTRY" is null
+[22:50:49] [WARN] Failed to parse recipe 'mekanism:reaction/coal_gasification/dusts_coals[mekanism:reaction]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:49] [WARN] Failed to parse recipe 'mekanism:rotary/hydrogen[mekanism:rotary]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:49] [WARN] Failed to parse recipe 'mekanism:rotary/water_vapor[mekanism:rotary]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:49] [WARN] Failed to parse recipe 'mekanism:rotary/uranium_oxide[mekanism:rotary]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:49] [WARN] Failed to parse recipe 'mekanism:reaction/substrate/ethene_oxygen[mekanism:reaction]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:49] [WARN] Failed to parse recipe 'botania:brew/overload[botania:brew]'! Falling back to vanilla: Cannot invoke "net.minecraft.core.Registry.m_7745_(net.minecraft.resources.ResourceLocation)" because "com.prunoideae.custom.brew.BotaniaRegistryObjectBuilderTypes.BREW_REGISTRY" is null
+[22:50:49] [WARN] Failed to parse recipe 'mekanism:rotary/ethene[mekanism:rotary]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:49] [WARN] Failed to parse recipe 'botania:brew/healing[botania:brew]'! Falling back to vanilla: Cannot invoke "net.minecraft.core.Registry.m_7745_(net.minecraft.resources.ResourceLocation)" because "com.prunoideae.custom.brew.BotaniaRegistryObjectBuilderTypes.BREW_REGISTRY" is null
+[22:50:49] [WARN] Failed to parse recipe 'mekanism:reaction/substrate/water_hydrogen[mekanism:reaction]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:49] [WARN] Failed to parse recipe 'mekanism:reaction/wood_gasification/wooden_stairs[mekanism:reaction]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:49] [WARN] Failed to parse recipe 'mekanism:processing/uranium/slurry/clean[mekanism:washing]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:49] [WARN] Failed to parse recipe 'mekanism:rotary/uranium_hexafluoride[mekanism:rotary]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:49] [WARN] Failed to parse recipe 'mekanism:separator/brine[mekanism:separating]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:49] [WARN] Failed to parse recipe 'botania:brew/water_breathing[botania:brew]'! Falling back to vanilla: Cannot invoke "net.minecraft.core.Registry.m_7745_(net.minecraft.resources.ResourceLocation)" because "com.prunoideae.custom.brew.BotaniaRegistryObjectBuilderTypes.BREW_REGISTRY" is null
+[22:50:49] [WARN] Failed to parse recipe 'mekanism:rotary/hydrofluoric_acid[mekanism:rotary]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:49] [WARN] Failed to parse recipe 'botania:brew/fire_resistance[botania:brew]'! Falling back to vanilla: Cannot invoke "net.minecraft.core.Registry.m_7745_(net.minecraft.resources.ResourceLocation)" because "com.prunoideae.custom.brew.BotaniaRegistryObjectBuilderTypes.BREW_REGISTRY" is null
+[22:50:49] [WARN] Failed to parse recipe 'mekanism:rotary/sulfur_trioxide[mekanism:rotary]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'botania:brew/bloodthirst[botania:brew]'! Falling back to vanilla: Cannot invoke "net.minecraft.core.Registry.m_7745_(net.minecraft.resources.ResourceLocation)" because "com.prunoideae.custom.brew.BotaniaRegistryObjectBuilderTypes.BREW_REGISTRY" is null
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:rotary/chlorine[mekanism:rotary]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'botania:brew/absorption[botania:brew]'! Falling back to vanilla: Cannot invoke "net.minecraft.core.Registry.m_7745_(net.minecraft.resources.ResourceLocation)" because "com.prunoideae.custom.brew.BotaniaRegistryObjectBuilderTypes.BREW_REGISTRY" is null
+[22:50:50] [WARN] Failed to parse recipe 'botania:brew/night_vision[botania:brew]'! Falling back to vanilla: Cannot invoke "net.minecraft.core.Registry.m_7745_(net.minecraft.resources.ResourceLocation)" because "com.prunoideae.custom.brew.BotaniaRegistryObjectBuilderTypes.BREW_REGISTRY" is null
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:rotary/sulfur_dioxide[mekanism:rotary]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:rotary/oxygen[mekanism:rotary]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:rotary/lithium[mekanism:rotary]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'createbb:misc/smelt_zinc_dust[minecraft:smelting]'! Falling back to vanilla: Ingredient 'ingredient' can't be empty!
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:reaction/wood_gasification/rods_wooden[mekanism:reaction]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:reaction/wood_gasification/dusts_wood[mekanism:reaction]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:reaction/wood_gasification/logs[mekanism:reaction]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'botania:brew/clear[botania:brew]'! Falling back to vanilla: Cannot invoke "net.minecraft.core.Registry.m_7745_(net.minecraft.resources.ResourceLocation)" because "com.prunoideae.custom.brew.BotaniaRegistryObjectBuilderTypes.BREW_REGISTRY" is null
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:processing/lategame/plutonium_pellet/from_reaction[mekanism:reaction]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:reaction/coal_gasification/blocks_coals[mekanism:reaction]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'botania:brew/emptiness[botania:brew]'! Falling back to vanilla: Cannot invoke "net.minecraft.core.Registry.m_7745_(net.minecraft.resources.ResourceLocation)" because "com.prunoideae.custom.brew.BotaniaRegistryObjectBuilderTypes.BREW_REGISTRY" is null
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:processing/osmium/slurry/clean[mekanism:washing]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'botania:brew/jump_boost[botania:brew]'! Falling back to vanilla: Cannot invoke "net.minecraft.core.Registry.m_7745_(net.minecraft.resources.ResourceLocation)" because "com.prunoideae.custom.brew.BotaniaRegistryObjectBuilderTypes.BREW_REGISTRY" is null
+[22:50:50] [WARN] Failed to parse recipe 'botania:brew/weak_regeneration[botania:brew]'! Falling back to vanilla: Cannot invoke "net.minecraft.core.Registry.m_7745_(net.minecraft.resources.ResourceLocation)" because "com.prunoideae.custom.brew.BotaniaRegistryObjectBuilderTypes.BREW_REGISTRY" is null
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:rotary/steam[mekanism:rotary]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:reaction/coal_gasification/coals[mekanism:reaction]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:processing/lead/slurry/clean[mekanism:washing]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'botania:brew/strength[botania:brew]'! Falling back to vanilla: Cannot invoke "net.minecraft.core.Registry.m_7745_(net.minecraft.resources.ResourceLocation)" because "com.prunoideae.custom.brew.BotaniaRegistryObjectBuilderTypes.BREW_REGISTRY" is null
+[22:50:50] [WARN] Failed to parse recipe 'botania:brew/haste[botania:brew]'! Falling back to vanilla: Cannot invoke "net.minecraft.core.Registry.m_7745_(net.minecraft.resources.ResourceLocation)" because "com.prunoideae.custom.brew.BotaniaRegistryObjectBuilderTypes.BREW_REGISTRY" is null
+[22:50:50] [WARN] Failed to parse recipe 'botania:brew/soul_cross[botania:brew]'! Falling back to vanilla: Cannot invoke "net.minecraft.core.Registry.m_7745_(net.minecraft.resources.ResourceLocation)" because "com.prunoideae.custom.brew.BotaniaRegistryObjectBuilderTypes.BREW_REGISTRY" is null
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:rotary/brine[mekanism:rotary]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:evaporating/brine[mekanism:evaporating]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:reaction/substrate/water_ethene[mekanism:reaction]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'botania:brew/resistance[botania:brew]'! Falling back to vanilla: Cannot invoke "net.minecraft.core.Registry.m_7745_(net.minecraft.resources.ResourceLocation)" because "com.prunoideae.custom.brew.BotaniaRegistryObjectBuilderTypes.BREW_REGISTRY" is null
+[22:50:50] [WARN] Failed to parse recipe 'createbb:misc/smelt_copper_dust[minecraft:smelting]'! Falling back to vanilla: Ingredient 'ingredient' can't be empty!
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:processing/tin/slurry/clean[mekanism:washing]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:rotary/sulfuric_acid[mekanism:rotary]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:rotary/hydrogen_chloride[mekanism:rotary]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:processing/copper/slurry/clean[mekanism:washing]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'botania:brew/invisibility[botania:brew]'! Falling back to vanilla: Cannot invoke "net.minecraft.core.Registry.m_7745_(net.minecraft.resources.ResourceLocation)" because "com.prunoideae.custom.brew.BotaniaRegistryObjectBuilderTypes.BREW_REGISTRY" is null
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:reaction/wood_gasification/wooden_slabs[mekanism:reaction]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'botania:brew/regeneration[botania:brew]'! Falling back to vanilla: Cannot invoke "net.minecraft.core.Registry.m_7745_(net.minecraft.resources.ResourceLocation)" because "com.prunoideae.custom.brew.BotaniaRegistryObjectBuilderTypes.BREW_REGISTRY" is null
+[22:50:50] [WARN] Failed to parse recipe 'botania:brew/speed[botania:brew]'! Falling back to vanilla: Cannot invoke "net.minecraft.core.Registry.m_7745_(net.minecraft.resources.ResourceLocation)" because "com.prunoideae.custom.brew.BotaniaRegistryObjectBuilderTypes.BREW_REGISTRY" is null
+[22:50:50] [WARN] Failed to parse recipe 'botania:brew/allure[botania:brew]'! Falling back to vanilla: Cannot invoke "net.minecraft.core.Registry.m_7745_(net.minecraft.resources.ResourceLocation)" because "com.prunoideae.custom.brew.BotaniaRegistryObjectBuilderTypes.BREW_REGISTRY" is null
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:separator/water[mekanism:separating]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:evaporating/lithium[mekanism:evaporating]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:reaction/wood_gasification/planks[mekanism:reaction]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:processing/iron/slurry/clean[mekanism:washing]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [WARN] Failed to parse recipe 'mekanism:rotary/sodium[mekanism:rotary]'! Falling back to vanilla: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+[22:50:50] [INFO] Found 62607 recipes in 1.172 s
+[22:50:50] [ERROR] ! gregification/ae2.js#45: Failed to create recipe for type 'kubejs:shapeless': ItemStack 'result' can't be empty!
+[22:50:50] [ERROR] ! gregification/ae2.js#49: Failed to create recipe for type 'kubejs:shapeless': ItemStack 'result' can't be empty!
+[22:50:50] [ERROR] ! gregification/ae2.js#69: Failed to create recipe for type 'ars_nouveau:enchanting_apparatus': ItemStack 'output' can't be empty!
+[22:50:50] [ERROR] ! Error in 'ServerEvents.recipes': Invalid or empty output item (recipe ID: gtceu:energistics_assembler/mega_source_cell_housing_assembly)
+[22:50:50] [INFO] Posted recipe events in 194.5 ms
+[22:50:51] [WARN] Error parsing recipe createbb:misc/smelt_zinc_dust[minecraft:smelting]: {"type":"minecraft:smelting","ingredient":{"item":"createbb:zinc_dust"},"result":"create:zinc_ingot","experience":0.1,"cookingtime":200}: Unknown item 'createbb:zinc_dust'
+[22:50:51] [WARN] Error parsing recipe createbb:misc/smelt_copper_dust[minecraft:smelting]: {"type":"minecraft:smelting","ingredient":{"item":"createbb:copper_dust"},"result":"minecraft:copper_ingot","experience":0.1,"cookingtime":200}: Unknown item 'createbb:copper_dust'
+[22:50:51] [WARN] Error parsing recipe farmersrespite:chilidog_alt[minecraft:crafting_shapeless]: {"type":"minecraft:crafting_shapeless","ingredients":[{"item":"farmersrespite:blazing_chili"},{"item":"mynethersdelight:hotdog"},{"item":"mynethersdelight:hotdog"}],"result":{"count":2,"item":"mynethersdelight:chilidog"}}: Unknown item 'farmersrespite:blazing_chili'
+[22:50:51] [WARN] Error parsing recipe nethersdelight:cutting/hoglin_sausage_alt[farmersdelight:cutting]: {"type":"farmersdelight:cutting","ingredients":[{"item":"nethersdelight:hoglin_loin"}],"result":[{"count":2,"item":"mynethersdelight:hoglin_sausage"}],"tool":{"tag":"forge:tools/knives"}}: Unknown item 'nethersdelight:hoglin_loin'
+[22:50:51] [WARN] Error parsing recipe gtceu:energistics_assembler/mega_source_cell_housing_assembly[gtceu:energistics_assembler]: {"type":"gtceu:energistics_assembler","inputs":{"item":[{"content":{"type":"gtceu:sized","count":3,"ingredient":{"item":"gtceu:metallurgically_enhanced_source_ingot"}},"chance":10000,"maxChance":10000,"tierChanceBoost":0},{"content":{"type":"gtceu:sized","count":2,"ingredient":{"item":"ae2:quartz_vibrant_glass"}},"chance":10000,"maxChance":10000,"tierChanceBoost":0}],"fluid":[{"content":{"amount":432,"value":[{"fluid":"gtceu:redstone"}]},"chance":10000,"maxChance":10000,"tierChanceBoost":0}]}}: No key duration in MapLike[{"type":"gtceu:energistics_assembler","inputs":{"item":[{"content":{"type":"gtceu:sized","count":3,"ingredient":{"item":"gtceu:metallurgically_enhanced_source_ingot"}},"chance":10000,"maxChance":10000,"tierChanceBoost":0},{"content":{"type":"gtceu:sized","count":2,"ingredient":{"item":"ae2:quartz_vibrant_glass"}},"chance":10000,"maxChance":10000,"tierChanceBoost":0}],"fluid":[{"content":{"amount":432,"value":[{"fluid":"gtceu:redstone"}]},"chance":10000,"maxChance":10000,"tierChanceBoost":0}]}}]
+[22:50:52] [INFO] Added 17 recipes, removed 0 recipes, modified 4 recipes, with 8 failed recipes in 1.750 s
+[22:50:54] [INFO] Server resource reload complete!

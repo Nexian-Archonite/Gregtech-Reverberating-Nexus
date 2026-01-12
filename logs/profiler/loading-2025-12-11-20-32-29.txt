@@ -1,0 +1,154 @@
+Summary:
+
+Game takes 20 seconds to bootstrap
+ 5. Transformer Class Loader Working: 4,219 ms
+11. Constructing Mods: 3,760 ms
+15. Loading Registries: 3,023 ms
+--------------------
+Reload Manager takes 21 seconds, loading 77 tasks
+Tasks are processed in parallel using multiple threads.
+Off thread utilization: 28.28%
+--------------------
+Mods use 7 seconds to initialize
+Mod init happens in parallel as part of Game Bootstrap, in stage <Constructing Mods> ~ <Loading Registries>
+Mods use 2 seconds to load
+Mod init takes 27.80 seconds CPU time. Thread utilization: 360.18%
+- railways: 1,941 ms
+- ars_nouveau: 1,702 ms
+- kubejs: 1,636 ms
+- ad_astra: 1,489 ms
+- quark: 1,030 ms
+- botania: 1,007 ms
+--------------------
+------------------------------------------------------------
+
+Details:
+
+Game takes 20 seconds to bootstrap
+ 1. Services Initializing: 2 ms
+ 2. Services Loading: 43 ms
+ 3. Mod Scanning: 1,286 ms
+ 4. Launch Plugin Working: 477 ms
+ 5. Transformer Class Loader Working: 4,219 ms
+ 6. Client Early Initialization: 1,105 ms
+ 7. Vanilla Bootstrap Start: 943 ms
+ 8. Loading User / Options: 1,884 ms
+ 9. Minecraft Client Initialization: 1,606 ms
+10. Loading Languages: 11 ms
+11. Constructing Mods: 3,760 ms
+12. Creating Registries: 297 ms
+13. Gathering Object Holders: 220 ms
+14. Injecting Capabilities: 419 ms
+15. Loading Registries: 3,023 ms
+16. Gather Modded Resource Packs: 32 ms
+17. Gather Tasks: 501 ms
+18. Setup GUI: 27 ms
+19. Dispatch Client Events: 320 ms
+20. Vanilla Client Setup: 86 ms
+21. Initializing Tasks: 9 ms
+22. Setup Loading Screen: 2 ms
+--------------------
+Reload Manager takes 21 seconds, loading 77 tasks
+Tasks are processed in parallel using multiple threads.
+<Task>: <main thread time> / <total time>
+- ClientModLoader: 0 ms / 1,874 ms
+- TextureManager: 0 ms / 1,776 ms
+- SoundManager: 0 ms / 149 ms
+- FontManager: 0 ms / 122 ms
+- geckolib: 0 ms / 1,222 ms
+- ctm: 0 ms / 436 ms
+- ftbchunks: 0 ms / 350 ms
+Misc 69 Tasks: 0 ms / 64 ms
+Model Analyzer: 0 ms / 0 ms
+Main thread utilization: 0.00%
+Off thread utilization: 28.28%
+Idle time: 0 ms
+--------------------
+Mods use 7 seconds to initialize
+Mod init happens in parallel as part of Game Bootstrap, in stage <Constructing Mods> ~ <Loading Registries>
+Mods use 2 seconds to load
+Mod init takes 27.80 seconds CPU time. Thread utilization: 360.18%
+- railways: 1,941 ms
+  | - Construct: 1,881 ms
+  | - Others: 60 ms
+- ars_nouveau: 1,702 ms
+  | - Construct: 1,429 ms
+  | - FMLCommonSetupEvent: 149 ms
+  | - Others: 123 ms
+- kubejs: 1,636 ms
+  | - Construct: 1,622 ms
+  | - Others: 13 ms
+- ad_astra: 1,489 ms
+  | - Construct: 1,148 ms
+  | - RegisterEvent: 325 ms
+  | - Others: 15 ms
+- quark: 1,030 ms
+  | - Construct: 653 ms
+  | - RegisterEvent: 338 ms
+  | - Others: 38 ms
+- botania: 1,007 ms
+  | - Construct: 593 ms
+  | - FMLCommonSetupEvent: 140 ms
+  | - RegisterEvent: 126 ms
+  | - EntityRenderersEvent$RegisterRenderers: 102 ms
+  | - Others: 43 ms
+- create: 955 ms
+- ldlib: 797 ms
+- framework: 748 ms
+- gtceu: 737 ms
+- draconicevolution: 670 ms
+- dynamictrees: 640 ms
+- guideme: 614 ms
+- copycats: 573 ms
+- create_new_age: 550 ms
+- structure_gel: 517 ms
+- zeta: 492 ms
+- sophisticatedbackpacks: 484 ms
+- undergarden: 482 ms
+- waystones: 464 ms
+- avaritia: 449 ms
+- jei: 448 ms
+- ftbquests: 410 ms
+- fzzy_config: 406 ms
+- particle_core: 389 ms
+- modernfix: 346 ms
+- ae2: 320 ms
+- ars_elemental: 316 ms
+- balm: 308 ms
+- create_extra_casing: 290 ms
+- ftbchunks: 281 ms
+- farmersdelight: 279 ms
+- accessories: 260 ms
+- moonlight: 258 ms
+- cofh_core: 256 ms
+- mythicbotany: 256 ms
+- toms_storage: 253 ms
+- codechickenlib: 224 ms
+- sophisticatedcore: 222 ms
+- ctm: 212 ms
+- ad_astra_giselle_addon: 207 ms
+- arseng: 204 ms
+- brandonscore: 194 ms
+- megacells: 181 ms
+- glodium: 176 ms
+- buildinggadgets2: 167 ms
+- mynethersdelight: 166 ms
+- architectury: 165 ms
+- fabric_screen_api_v1: 163 ms
+- gtmutils: 162 ms
+- functionalstorage: 145 ms
+- embeddium: 142 ms
+- craftingtweaks: 142 ms
+- forge: 141 ms
+- libx: 135 ms
+- probejs: 127 ms
+- createaddition: 124 ms
+- ratatouille: 123 ms
+- journeymap: 115 ms
+- fusion: 113 ms
+- botarium: 113 ms
+- ftbultimine: 109 ms
+- undergardendelight: 104 ms
+- appflux: 103 ms
+Misc 140 mods: 2,794 ms
+--------------------

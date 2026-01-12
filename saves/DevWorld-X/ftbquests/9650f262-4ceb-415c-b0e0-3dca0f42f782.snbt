@@ -1,0 +1,19 @@
+{
+	version: 1
+	uuid: "9650f2624ceb415cb0e03dca0f42f782"
+	name: "Mirakuru_Myuujik#9650f262"
+	lock: false
+	rewards_blocked: false
+	task_progress: { }
+	started: {
+		20F5EE4D2290F500: 1766242437916L
+		0000000000000001: 1766242437916L
+	}
+	completed: { }
+	claimed_rewards: { }
+	player_data: {
+		9650f2624ceb415cb0e03dca0f42f782: {
+			can_edit: 1b
+		}
+	}
+}

@@ -1,0 +1,888 @@
+{
+  "comforts:sleeping_bag_light_blue": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:clay_tool": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:diorite_cobblestone_wall": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:sleeping_bag_black": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:hammock_purple": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:hammock_lime": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:stonecutting/granite_cobblestone_stairs": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:sleeping_bag_pink": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:granite_cobblestone_stairs": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:hammock_magenta": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:flint_axe": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:leather_from_leggings_with_knife": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:sleeping_bag_red": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:sleeping_bag_orange": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:hammock_red": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:stonecutting/diorite_cobblestone_stairs": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:hammock_blue": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:hammock_white": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "toms_storage:unlock_netherite": {
+    "criteria": {
+      "inv_changed-netherite": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:diamond_saw": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:cobblestone_from_rocks": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:hammock_light_gray": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:sleeping_bag_white": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:flint_pickaxe": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:sleeping_bag_brown": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:sleeping_bag_gray": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:sandstone_from_rocks": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:netherite_mattock": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:rope_and_nail": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "lootr:root": {
+    "criteria": {
+      "always_true": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:granite_cobblestone_slab": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "toms_storage:unlock_glowstone": {
+    "criteria": {
+      "inv_changed-glowstone": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:sleeping_bag_cyan": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:plant_fiber_from_small_flowers_with_knife": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:andesite_cobblestone_wall": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:stonecutting/andesite_cobblestone_stairs": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:hammock_pink": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:diorite_cobblestone_stairs": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:gold_mattock": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:hammock_brown": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:diorite_cobblestone_from_rocks": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:leather_from_chestplate_with_knife": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:sleeping_bag_light_gray": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:andesite_cobblestone_from_rocks": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:hammock_black": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:sleeping_bag_lime": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:hammock_yellow": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:iron_saw": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:gold_saw": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:granite_cobblestone_from_rocks": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:leather_from_boots_with_knife": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:leather_from_helmet_with_knife": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:red_sandstone_from_rocks": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:diorite_cobblestone_slab": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:plant_string": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:sleeping_bag_blue": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:plant_fiber_from_tall_flowers_with_knife": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:fire_starter": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:plant_fiber_from_saplings_with_knife": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "ars_nouveau:root": {
+    "criteria": {
+      "ars_nouveau:worn_notebook": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:andesite_cobblestone_stairs": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:plant_fiber_from_wheat_with_knife": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:sticks_from_logs_with_flint_axe": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "farmersdelight:main/root": {
+    "criteria": {
+      "seeds": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:diamond_mattock": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:sticks_from_planks_with_flint_axe": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "toms_storage:unlock_chest": {
+    "criteria": {
+      "inv_changed-chest": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "create:root": {
+    "criteria": {
+      "0": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:hammock_gray": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:clay_brick_from_balls": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:granite_cobblestone_wall": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "undergarden:undergarden/root": {
+    "criteria": {
+      "tick": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:hammock_cyan": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:sleeping_bag_purple": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:string_from_web_with_knife": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:plant_fiber_from_leaves_with_knife": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:sleeping_bag_yellow": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:flint_hoe": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:sleeping_bag_green": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:melon_slices_with_knife": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:flint_from_gravel": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:clay_brick_from_blocks": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:andesite_cobblestone_slab": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:hammock_light_blue": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:macuahuitl": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:string_from_wool_with_knife": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:plant_fiber_from_vines_with_knife": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:plant_fiber_from_cactus_with_knife": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "toms_storage:unlock_dia_pearl": {
+    "criteria": {
+      "inv_changed-ender_pearl": "2025-12-20 14:16:22 +0100",
+      "inv_changed-diamond": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:hammock_orange": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:sleeping_bag_magenta": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "comforts:hammock_green": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:iron_mattock": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:flint_shovel": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:plant_fiber_from_sugarcane_with_knife": {
+    "criteria": {
+      "has_the_recipe": "2025-12-20 14:16:22 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:deep_ocean": "2025-12-22 17:05:32 +0100",
+      "minecraft:beach": "2025-12-20 14:18:06 +0100",
+      "minecraft:swamp": "2025-12-20 14:16:23 +0100",
+      "minecraft:forest": "2025-12-20 14:18:08 +0100",
+      "minecraft:deep_frozen_ocean": "2026-01-02 19:49:44 +0100",
+      "minecraft:ocean": "2025-12-20 14:18:09 +0100",
+      "minecraft:plains": "2026-01-02 20:00:19 +0100"
+    },
+    "done": false
+  },
+  "botania:main/runic_altar_pickup": {
+    "criteria": {
+      "rune": "2025-12-20 16:07:52 +0100"
+    },
+    "done": true
+  },
+  "mythicbotany:mythicbotany/all_runes": {
+    "criteria": {
+      "inventory_changed7": "2025-12-20 16:07:52 +0100"
+    },
+    "done": false
+  },
+  "botania:main/rune_pickup": {
+    "criteria": {
+      "rune": "2025-12-20 16:07:52 +0100"
+    },
+    "done": true
+  },
+  "minecraft:end/root": {
+    "criteria": {
+      "entered_end": "2025-12-20 19:02:20 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/enter_the_end": {
+    "criteria": {
+      "entered_end": "2025-12-20 19:02:20 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:story/find_loose_rock": {
+    "criteria": {
+      "has_loose_rock": "2025-12-20 22:12:26 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:story/root": {
+    "criteria": {
+      "has_loose_rock": "2025-12-20 22:12:26 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2025-12-21 00:09:02 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:iron_knife": {
+    "criteria": {
+      "has_item": "2025-12-21 00:09:30 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/smelt_iron": {
+    "criteria": {
+      "iron": "2025-12-21 00:09:30 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/obtain_ancient_debris": {
+    "criteria": {
+      "ancient_debris": "2025-12-21 10:07:27 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/root": {
+    "criteria": {
+      "entered_nether": "2025-12-21 12:05:19 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/enter_the_nether": {
+    "criteria": {
+      "entered_nether": "2025-12-21 12:05:19 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/explore_nether": {
+    "criteria": {
+      "minecraft:nether_wastes": "2025-12-21 12:05:53 +0100",
+      "minecraft:basalt_deltas": "2025-12-21 12:05:47 +0100"
+    },
+    "done": false
+  },
+  "minecraft:adventure/kill_all_mobs": {
+    "criteria": {
+      "minecraft:zombie": "2025-12-21 16:55:34 +0100"
+    },
+    "done": false
+  },
+  "minecraft:adventure/kill_a_mob": {
+    "criteria": {
+      "minecraft:zombie": "2025-12-21 16:55:34 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:sticks_from_planks_with_saw": {
+    "criteria": {
+      "has_item": "2025-12-21 16:55:38 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:sticks_from_logs_with_saw": {
+    "criteria": {
+      "has_item": "2025-12-22 16:20:16 +0100"
+    },
+    "done": true
+  },
+  "create:wrench_goggles": {
+    "criteria": {
+      "0": "2025-12-22 16:20:32 +0100"
+    },
+    "done": false
+  },
+  "create:super_glue": {
+    "criteria": {
+      "0": "2025-12-22 16:25:57 +0100"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2025-12-22 17:00:29 +0100"
+    },
+    "done": true
+  },
+  "ad_astra:tier_1_rocket": {
+    "criteria": {
+      "has_tier_1_rocket": "2025-12-23 12:55:43 +0100"
+    },
+    "done": true
+  },
+  "ad_astra:tier_2_rocket": {
+    "criteria": {
+      "has_tier_2_rocket": "2025-12-23 12:55:44 +0100"
+    },
+    "done": true
+  },
+  "ad_astra:tier_3_rocket": {
+    "criteria": {
+      "has_tier_3_rocket": "2026-01-01 21:23:34 +0100"
+    },
+    "done": true
+  },
+  "ad_astra:tier_4_rocket": {
+    "criteria": {
+      "has_tier_4_rocket": "2026-01-01 21:23:37 +0100"
+    },
+    "done": true
+  },
+  "ad_astra:moon": {
+    "criteria": {
+      "entered_moon": "2026-01-02 19:45:31 +0100"
+    },
+    "done": true
+  },
+  "ad_astra:rocket_man": {
+    "criteria": {
+      "has_jet_suit": "2026-01-02 20:18:57 +0100"
+    },
+    "done": true
+  },
+  "minecraft:end/elytra": {
+    "criteria": {
+      "elytra": "2026-01-02 20:19:57 +0100"
+    },
+    "done": true
+  },
+  "lootr:1chest": {
+    "criteria": {
+      "opened_chest": "2026-01-02 20:20:10 +0100"
+    },
+    "done": true
+  },
+  "lootr:social": {
+    "criteria": {
+      "opened_chest": "2026-01-02 20:20:10 +0100"
+    },
+    "done": false
+  },
+  "undergarden:undergarden/enter_undergarden": {
+    "criteria": {
+      "enter_undergarden": "2026-01-02 22:02:49 +0100"
+    },
+    "done": true
+  },
+  "undergarden:undergarden/all_undergarden_biomes": {
+    "criteria": {
+      "undergarden:forgotten_field": "2026-01-03 16:23:44 +0100",
+      "undergarden:wigglewood_forest": "2026-01-02 22:02:49 +0100",
+      "undergarden:frostfields": "2026-01-03 17:02:47 +0100",
+      "undergarden:icy_sea": "2026-01-03 17:56:20 +0100",
+      "undergarden:ancient_sea": "2026-01-02 22:02:51 +0100"
+    },
+    "done": false
+  },
+  "undergarden:undergarden/catalyst": {
+    "criteria": {
+      "has_catalyst": "2026-01-03 16:22:07 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/mine_stone": {
+    "criteria": {
+      "get_stone": "2026-01-03 16:24:07 +0100"
+    },
+    "done": true
+  },
+  "undergarden:undergarden/kill_scintling": {
+    "criteria": {
+      "kill_scintling": "2026-01-03 16:27:53 +0100"
+    },
+    "done": true
+  },
+  "undergarden:undergarden/kill_all_rotspawn": {
+    "criteria": {
+      "kill_rotbeast": "2026-01-03 16:32:24 +0100"
+    },
+    "done": false
+  },
+  "minecraft:story/obtain_armor": {
+    "criteria": {
+      "iron_boots": "2026-01-03 16:32:27 +0100"
+    },
+    "done": true
+  },
+  "undergarden:undergarden/mine_ore": {
+    "criteria": {
+      "has_shiverstone_froststeel": "2026-01-03 17:53:31 +0100"
+    },
+    "done": true
+  },
+  "ae2:main/presses": {
+    "criteria": {
+      "calculation": "2026-01-03 19:41:55 +0100",
+      "silicon": "2026-01-03 19:42:00 +0100",
+      "engineering": "2026-01-03 19:41:55 +0100",
+      "logic": "2026-01-03 19:41:54 +0100"
+    },
+    "done": true
+  },
+  "ae2:main/root": {
+    "criteria": {
+      "copper": "2026-01-05 19:51:25 +0100"
+    },
+    "done": true
+  },
+  "create:copper": {
+    "criteria": {
+      "0": "2026-01-05 19:51:25 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:diamond_knife": {
+    "criteria": {
+      "has_the_recipe": "2026-01-12 13:41:24 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:netherite_knife": {
+    "criteria": {
+      "has_the_recipe": "2026-01-12 13:41:24 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:netherite_saw": {
+    "criteria": {
+      "has_the_recipe": "2026-01-12 13:41:24 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:flint_knife": {
+    "criteria": {
+      "has_the_recipe": "2026-01-12 13:41:24 +0100"
+    },
+    "done": true
+  },
+  "notreepunching:gold_knife": {
+    "criteria": {
+      "has_the_recipe": "2026-01-12 13:41:24 +0100"
+    },
+    "done": true
+  },
+  "mekanism:root": {
+    "criteria": {
+      "automatic": "2026-01-12 14:58:55 +0100"
+    },
+    "done": true
+  },
+  "mekanism:energy_cube": {
+    "criteria": {
+      "basic_energy_cube": "2026-01-12 15:05:41 +0100"
+    },
+    "done": true
+  },
+  "mekanism:metallurgic_infuser": {
+    "criteria": {
+      "metallurgic_infuser": "2026-01-12 15:05:59 +0100"
+    },
+    "done": true
+  },
+  "DataVersion": 3465
+}

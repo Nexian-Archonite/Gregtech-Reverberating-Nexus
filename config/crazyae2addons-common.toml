@@ -1,0 +1,147 @@
+
+#Crazy AE2 Addons - Config
+[general]
+
+	[general.Features]
+		#Enable Pattern Providers to set GregTech machine circuit when pushing
+		enableCPP = true
+		#Allow Spawner Controller to work in Peaceful mode
+		enablePeacefullSpawner = true
+		#Enable/disable Entity Ticker
+		enableEntityTicker = true
+		#Power cost multiplier for Entity Ticker
+		#Range: > 0
+		EntityTickerCost = 512
+		#Blocks on which Entity Ticker should not work
+		EntityTickerBlackList = []
+		#Allow routing P2P tunnels through a Wormhole tunnel
+		nestedP2Pwormhole = false
+
+	[general.Machines]
+		#XP cost multiplier for Auto Enchanter
+		#Range: 0 ~ 100
+		autoEnchanterCost = 10
+		#Allow Energy Exporter part to export EU if a GregTech battery is inserted
+		energyExporterGT = false
+
+	[general.Autobuilder]
+		#FE cost multiplier for Autobuilder
+		#Range: 0 ~ 100
+		autobuilderCost = 5
+		#Ticks to wait after each broken block
+		#Range: 0 ~ 10
+		autobuilderMineDelay = 2
+		#Operations per tick Autobuilder can perform
+		#Range: > 0
+		autobuilderSpeed = 128
+		#How many preview blocks Autobuilder can show at once
+		#Range: > 0
+		autobuilderPreviewLimit = 8192
+
+	[general.CrazyPatternProvider]
+		#How many times player can upgrade the provider; -1 to disable limit
+		#Range: > -1
+		crazyProviderMaxAddRows = -1
+
+	[general.EntropyCradle]
+		#How much FE Entropy Cradle can store
+		#Range: > 0
+		cradleCapacity = 600000000
+		#How much FE the cradle uses per operation
+		#Range: > 0
+		cradleCost = 600000000
+		#How much FE per second the cradle can receive
+		#Range: > 0
+		cradleChargingSpeed = 50000000
+
+	[general.PenroseSphere]
+
+		[general.PenroseSphere.Meltdown]
+			#Enable/disable meltdown world effect (explosions + black hole field).
+			#Default: true.
+			penroseMeltdownExplosionsEnabled = true
+			#Radius used by BlackHoleManager.start(...) after meltdown.
+			#Set to 0 to disable the field entirely.
+			#Range: 0 ~ 4096
+			penroseMeltdownFieldRadius = 768
+
+		[general.PenroseSphere.Startup]
+			#How many Super Singularity items are consumed to start the black hole.
+			#Units: items. Default: 32512.
+			#Range: 0 ~ 9223372036854775807
+			penroseStartupCostSingu = 32512
+
+		[general.PenroseSphere.Balance]
+			#Initial black hole mass at startup.
+			#Units: MU (internal mass unit). Default matches old hardcoded value.
+			#Range: 0 ~ 9223372036854775807
+			penroseInitialMassMu = 268435456
+			#Allowed mass window above initial mass before meltdown triggers.
+			#Max mass = initialMassMu + massWindowMu.
+			#Units: MU. Default: 1113600.
+			#Range: 0 ~ 9223372036854775807
+			penroseMassWindowMu = 1113600
+			#Max mass factor multiplier at the sweet-spot (peak of the mass curve).
+			#massFactorSweet(): 1.0 .. massFactorMax.
+			#Default: 2.0 (matches current).
+			#Range: 1.0 ~ 64.0
+			penroseMassFactorMax = 2.0
+			#Duty-cycle compensation multiplier used in energy calculations.
+			#Default: 4/3 (~1.3333333).
+			#Range: 0.0 ~ 1000.0
+			penroseDutyCompensation = 1.3333333333333333
+			#Base FE produced per 1.0 singu/t disk flow at heatEff=1 and massFactor=1.
+			#Units: FE per tick per (singu/t).
+			#Default equals current PenroseControllerBE FE_BASE_PER_SINGU.
+			#Range: 0.0 ~ 1.0E18
+			penroseFeBasePerSinguFlow = 6.7108864E7
+			#Heat added per tick per 1.0 singu/t disk flow at massFactor=1.
+			#Units: MK per tick per (singu/t).
+			#Range: 0.0 ~ 1.0E12
+			penroseHeatPerSinguFlow = 0.5
+			#Heat value where the efficiency curve peaks (heatEff reaches 1.0 at heat=peak).
+			#Used by computeHeatEff(): x=heat/peak; eff=2x-x^2 clamped to [0..1].
+			#Units: MK. Default: 50000.
+			#Range: 1.0 ~ 1.0E12
+			penroseHeatPeakMK = 50000.0
+			#Overheat threshold. If heat >= maxHeat -> meltdown.
+			#Units: MK. Default: 100000.
+			#Range: 0.0 ~ 1.0E12
+			penroseMaxHeatMK = 100000.0
+			#Hard cap on how many singularities per tick can be injected into the disk.
+			#Units: items/t. Default: 4096.
+			#Range: > 0
+			penroseMaxFeedPerTick = 4096
+
+	[general.Research]
+		#Enable research mechanic (if false: Recipe Fabricator works without data drive)
+		researchEnabled = true
+		#Extra blocks allowed in the Research Unit multiblock in 'Q' slots.
+		#Format: TOML map of "namespace:block" -> integer.
+		#The integer is currently used as a multiplier for computation (count * value).
+		#Keys with ':' must be quoted, e.g. { "minecraft:glass" = 1 }.
+		#Default: empty map.
+		researchUnitExtraQBlocks = {}
+
+	[general."Portable Spatial IO"]
+		#FE cost multiplier for Portable Spatial IO
+		#Range: 0 ~ 100
+		nokiaCost = 5
+
+	[general.EnergyParts]
+		#Enable Energy Exporter
+		energyExporterEnabled = true
+		#Enable Energy Interface
+		energyInterfaceEnabled = true
+
+	[general.P2PSpeeds]
+		#Extract speed for FE P2P (FE/t)
+		#Range: > 0
+		fep2pSpeed = 2147483647
+		#Extract speed for Fluid P2P (mB/t)
+		#Range: > 0
+		fluidp2pSpeed = 250
+		#Extract speed for Item P2P (items/t)
+		#Range: > 0
+		itemp2pSpeed = 4
+
