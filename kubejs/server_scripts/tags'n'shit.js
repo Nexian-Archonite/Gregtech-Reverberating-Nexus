@@ -68,6 +68,8 @@ event.add('forge:spawn_eggs', /minecraft:.*_spawn_egg/)
 event.add('notreepunching:weak_saws', /gtceu:.*_axe/)
 
 event.add('c:hidden_from_recipe_viewers', /ad_astra:.*_(nugget|ingot|plate|rod)/)
+event.add('forge:tools/sickle', /gtceu:.*_scythe/)
+event.add('forge:tools/sickle', /.*:.*(_.*)?_hoe/)
 
 event.removeAllTagsFrom('ad_astra:oil_bucket')
 event.removeAllTagsFrom('ad_astra:hydrogen_bucket')
