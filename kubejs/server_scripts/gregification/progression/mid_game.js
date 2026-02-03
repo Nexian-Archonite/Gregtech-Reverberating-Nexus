@@ -399,6 +399,53 @@ energisticsassembly.forEach(([componenttier, cablematerial, circuittier]) => {
     }).id(`gtceu:shaped/${componenttier}_energistics_assembler`)
 })
 
+const biomechanicalmachines = [
+    ["iv", "auralloy-omega"],
+    ["luv", "rhodipalladic-desnite"],
+    ["zpm", "naquadah_alloy"],
+    ["uv", "darmstadtium"]
+]
+
+Object.entries({
+    mixer: (tier, material) => [
+        ['GRG', 'GPG', 'CSC'],
+        {
+            'C': `#gtceu:circuits/${tier}`,
+            'P': `gtceu:${tier}_electric_motor`,
+            'S': 'gtceu:flesh_alloy_casing',
+            'G': '#forge:glass',
+            'R': `gtceu:${material}_rotor`
+        }
+    ],
+    extruder: (tier, material) => [
+        ['WAC', 'PHP', 'WAC'],
+        {
+            'C': `#gtceu:circuits/${tier}`,
+            'P': `gtceu:${tier}_electric_piston`,
+            'H': `gtceu:${tier}_machine_hull`,
+            'A': `gtceu:double_${material}_plate`,
+            'W': 'gtceu:samarium_iron_arsenic_oxide_quadruple_wire'
+        }
+    ],
+    recycler: (tier) => [
+        ['GCG', 'PSW', 'FCF'],
+        {
+            'W': `gtceu:${tier}_electric_pump`,
+            'C': `#gtceu:circuits/${tier}`,
+            'S': 'gtceu:flesh_alloy_casing',
+            'F': `gtceu:electrum_single_cable`,
+            'P': `gtceu:${tier}_electric_piston`,
+            'G': '#forge:glass'
+        }
+    ]
+}).forEach(([type, recipeFn]) => {
+    biomechanicalmachines.forEach(([tier, material]) => {
+        const [pattern, keys] = recipeFn(tier, material)
+        event.shaped(`gtceu:${tier}_biomechanical_${type}`, pattern, keys)
+            .id(`gtceu:shaped/${tier}_biomechanical_${type}`)
+    })
+})
+
 GTM.sculk_crafter(('ancient_debris'))
 .itemInputs('ars_nouveau:fire_essence', 'gtceu:source_gem', 'gtceu:netherite_scrap')
 .chancedInput('botania:rune_greed', 1000, 0)
@@ -604,8 +651,8 @@ GTM.assembler(('nuclear_reactor_assembly'))
 GTM.nuclear_fission(('uranium_238_burning'))
 .itemInputs('gtceu:uranium_oxide_fuel_rod')
 .perTick(true)
-.inputFluids(Fluid.of('gtceu:distilled_water 20'))
-.outputFluids(Fluid.of('gtceu:nuclear_steam 340'))
+.inputFluids(Fluid.of('gtceu:distilled_water 100'))
+.outputFluids(Fluid.of('gtceu:nuclear_steam 1700'))
 .perTick(false)
 .itemOutputs('gtceu:spent_uranium_oxide_fuel_rod')
 .duration(20000)
@@ -613,8 +660,8 @@ GTM.nuclear_fission(('uranium_238_burning'))
 GTM.nuclear_fission(('uranium_235_burning'))
 .itemInputs('gtceu:uranium_235_oxide_fuel_rod')
 .perTick(true)
-.inputFluids(Fluid.of('gtceu:distilled_water 40'))
-.outputFluids(Fluid.of('gtceu:nuclear_steam 680'))
+.inputFluids(Fluid.of('gtceu:distilled_water 200'))
+.outputFluids(Fluid.of('gtceu:nuclear_steam 3400'))
 .perTick(false)
 .itemOutputs('gtceu:spent_uranium_235_oxide_fuel_rod')
 .duration(12500)
@@ -623,8 +670,8 @@ GTM.nuclear_fission(('uranium_235_burning'))
 GTM.nuclear_fission(('plutonium_239_burning'))
 .itemInputs('gtceu:plutonium_oxide_fuel_rod')
 .perTick(true)
-.inputFluids(Fluid.of('gtceu:distilled_water 160'))
-.outputFluids(Fluid.of('gtceu:nuclear_steam 2720'))
+.inputFluids(Fluid.of('gtceu:distilled_water 800'))
+.outputFluids(Fluid.of('gtceu:nuclear_steam 13600'))
 .perTick(false)
 .itemOutputs('gtceu:spent_plutonium_oxide_fuel_rod')
 .duration(2083)
@@ -632,8 +679,8 @@ GTM.nuclear_fission(('plutonium_239_burning'))
 GTM.nuclear_fission(('mox_burning'))
 .itemInputs('gtceu:mox_fuel_rod')
 .perTick(true)
-.inputFluids(Fluid.of('gtceu:distilled_water 160'))
-.outputFluids(Fluid.of('gtceu:nuclear_steam 2720'))
+.inputFluids(Fluid.of('gtceu:distilled_water 800'))
+.outputFluids(Fluid.of('gtceu:nuclear_steam 13600'))
 .perTick(false)
 .itemOutputs('gtceu:spent_mox_fuel_rod')
 .duration(10000)
@@ -650,11 +697,20 @@ GTM.nuclear_fission(('plutonium_241_oxide_burning'))
 GTM.nuclear_fission(('thorium_oxide_burning'))
 .itemInputs('gtceu:thorium_oxide_fuel_rod')
 .perTick(true)
-.inputFluids(Fluid.of('gtceu:distilled_water 1'))
-.outputFluids(Fluid.of('gtceu:steam 17'))
+.inputFluids(Fluid.of('water 25'))
+.outputFluids(Fluid.of('gtceu:steam 3400'))
 .perTick(false)
 .itemOutputs('gtceu:spent_thorium_oxide_fuel_rod')
 .duration(80000)
+
+GTM.nuclear_fission(('thorium_oxide_burning_distilled'))
+.itemInputs('gtceu:thorium_oxide_fuel_rod')
+.perTick(true)
+.inputFluids(Fluid.of('gtceu:distilled_water 50'))
+.outputFluids(Fluid.of('gtceu:steam 6800'))
+.perTick(false)
+.itemOutputs('gtceu:spent_thorium_oxide_fuel_rod')
+.duration(60000)
 
 GTM.nuclear_turbine(('nuclear_steam'))
 .perTick(true)
@@ -740,21 +796,18 @@ GTM.electrolyzer(('mox_fuel_recycling'))
 .duration(2820)
 .EUt(60)
 
-// SUPPORT RECIPE: TBP SOLUTION MIXING
 GTM.mixer('tbp_solution_mixing')
     .inputFluids('gtceu:tributyl_phosphate 3000', 'gtceu:kerosene 7000')
     .outputFluids('gtceu:tbp_solution 10000')
     .duration(100)
     .EUt(30)
 
-// SUPPORT RECIPE: DILUTE NITRIC ACID
 GTM.mixer('dilute_nitric_acid_mixing')
     .inputFluids('gtceu:nitric_acid 1000', 'minecraft:water 3000')
     .outputFluids('gtceu:dilute_nitric_acid 4000')
     .duration(40)
     .EUt(30)
 
-// SUPPORT RECIPE: KEROSENE
 GTM.chemical_reactor('naphtha_to_kerosene')
     .inputFluids('gtceu:naphtha 2000', 'gtceu:hydrogen 1000')
     .outputFluids('gtceu:kerosene 1500')
@@ -763,63 +816,54 @@ GTM.chemical_reactor('naphtha_to_kerosene')
     .EUt(512)
 
 
-// STEP 3: FEED ADJUSTMENT
 GTM.chemical_reactor('purex_feed_adjustment')
     .inputFluids('gtceu:fuel_dissolver_solution 4000', 'gtceu:nitric_acid 1000')
     .outputFluids('gtceu:adjusted_feed_solution 5000')
     .duration(200)
     .EUt(480)
 
-// STEP 4: CO-EXTRACTION
 GTM.extraction_column('purex_coextraction')
     .inputFluids('gtceu:adjusted_feed_solution 5000', 'gtceu:tbp_solution 5000')
     .outputFluids('gtceu:organic_phase_u_pu 3000', 'gtceu:purex_raffinate 7000')
     .duration(600)
     .EUt(1024)
 
-// STEP 5: SCRUBBING
 GTM.scrubbing_column('purex_scrubbing')
     .inputFluids('gtceu:organic_phase_u_pu 3000', 'gtceu:dilute_nitric_acid 1000')
     .outputFluids('gtceu:scrubbed_organic_phase 3000', 'gtceu:scrub_waste 1000')
     .duration(400)
     .EUt(1024)
 
-// STEP 6: PARTITIONING
 GTM.partition_column('purex_partitioning')
     .inputFluids('gtceu:scrubbed_organic_phase 3000', 'gtceu:hydroxylamine_nitrate 500')
     .outputFluids('gtceu:aqueous_plutonium_solution 1000', 'gtceu:organic_uranium_phase 2000')
     .duration(800)
     .EUt(1024)
 
-// STEP 7A: URANIUM STRIPPING
 GTM.stripping_column('purex_uranium_stripping')
     .inputFluids('gtceu:organic_uranium_phase 2000', 'gtceu:dilute_nitric_acid 1000')
     .outputFluids('gtceu:uranyl_nitrate_solution 2000', 'gtceu:spent_tbp 1000')
     .duration(500)
     .EUt(1024)
 
-// STEP 7B: PLUTONIUM CONCENTRATION
 GTM.stripping_column('purex_plutonium_concentration')
     .inputFluids('gtceu:aqueous_plutonium_solution 1000', 'gtceu:tbp_solution 1000')
     .outputFluids('gtceu:organic_plutonium_phase 500', 'gtceu:medium_active_waste 1500')
     .duration(600)
     .EUt(1024)
 
-// STEP 8A: URANIUM CONCENTRATION
 GTM.distillery('purex_uranium_concentration')
     .inputFluids('gtceu:uranyl_nitrate_solution 2000')
     .outputFluids('gtceu:concentrated_uranyl_nitrate 500', 'minecraft:water 1500')
     .duration(400)
     .EUt(480)
 
-// STEP 8B: PLUTONIUM STRIPPING
 GTM.stripping_column('purex_plutonium_stripping')
     .inputFluids('gtceu:organic_plutonium_phase 500', 'gtceu:hydroxylamine_nitrate 200')
     .outputFluids('gtceu:plutonium_nitrate_solution 500', 'gtceu:spent_tbp 200')
     .duration(500)
     .EUt(1024)
 
-// STEP 9A: URANIUM TRIOXIDE DECOMPOSITION
 GTM.chemical_vat('purex_uranium_trioxide')
     .inputFluids('gtceu:concentrated_uranyl_nitrate 500')
     .itemOutputs('4x gtceu:uranium_trioxide_dust')
@@ -830,7 +874,6 @@ GTM.chemical_vat('purex_uranium_trioxide')
     .addData("Temp", 673)
     
 
-// STEP 9A-2: URANIUM DIOXIDE REDUCTION
 GTM.chemical_reactor('uranium_dioxide_reduction')
     .itemInputs('gtceu:uranium_trioxide_dust')
     .inputFluids('gtceu:hydrogen 2000')
@@ -839,7 +882,6 @@ GTM.chemical_reactor('uranium_dioxide_reduction')
     .duration(200)
     .EUt(120)
 
-// STEP 9B: PLUTONIUM PRECIPITATION
 GTM.chemical_reactor('purex_plutonium_oxalate')
     .inputFluids('gtceu:plutonium_nitrate_solution 500')
     .itemInputs('gtceu:oxalic_acid_dust')
@@ -848,7 +890,6 @@ GTM.chemical_reactor('purex_plutonium_oxalate')
     .duration(400)
     .EUt(480)
 
-// STEP 9B-2: PLUTONIUM DIOXIDE CALCINATION
 GTM.chemical_vat('plutonium_dioxide_calcination')
     .itemInputs('gtceu:plutonium_oxalate_dust')
     .itemOutputs('2x gtceu:mixed_plutonium_dioxide_dust', 'gtceu:americium_dust')
@@ -859,7 +900,6 @@ GTM.chemical_vat('plutonium_dioxide_calcination')
     .addData("Temp", 873)
     
 
-// STEP 10: SOLVENT RECOVERY
 GTM.chemical_reactor('purex_solvent_recovery')
     .inputFluids('gtceu:spent_tbp 1000')
     .itemInputs('2x gtceu:sodium_carbonate_dust')
@@ -938,7 +978,6 @@ GTM.chemical_vat(('hydroxylamine_nitrate'))
 .EUt(2048)
 
 // Tributyl Phosphate
-
 GTM.large_chemical_reactor(('phosphorus_trichloride'))
 .itemInputs('gtceu:phosphorus_dust')
 .inputFluids('gtceu:chlorine 3000')

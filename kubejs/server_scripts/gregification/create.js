@@ -1,4 +1,3 @@
-// Electron tube as a ULV circuit
 ServerEvents.tags("item", event => {
     event.add("gtceu:circuits/ulv", "create:electron_tube")
 })
@@ -8,10 +7,8 @@ const CRT = event.recipes.create
 const GTM = event.recipes.gtceu
 CRT.mixing('6x gtceu:igneous_bronze_ingot', ['3x gtceu:copper_dust', '2x gtceu:andesite_alloy_dust', 'gtceu:tin_dust']).heated()
 
-//lossier soldering alloy recipe for mystery project
 CRT.mixing(Fluid.of('gtceu:soldering_alloy 540'), ['3x gtceu:tin_dust', '6x gtceu:small_lead_dust', '2x gtceu:small_antimony_dust']).heated()
 
-// Solid idea, but you gotta commit to it! Removing all other resistor recipes
 event.remove({ output: "gtceu:resistor" })
 
 event.recipes.create.sequenced_assembly(
@@ -41,7 +38,6 @@ event.recipes.create.sequenced_assembly(
     .loops(4)
 
 
-// Moving assembler resistor recipe to MV, pure carbon only
 event.recipes.gtceu.assembler('resistor')
     .itemInputs("gtceu:elementally_purified_carbon_dust", "4x gtceu:fine_source_attuned_copper_wire")
     .inputFluids(Fluid.of('gtceu:glue 100'))
@@ -50,7 +46,6 @@ event.recipes.gtceu.assembler('resistor')
     .EUt(GTValues.VA[GTValues.MV])
 
 
-// Blaze Cake, adding some magic to it
 event.remove({ output: "create:blaze_cake" })
 event.remove({ output: "create:blaze_cake_base" })
 event.recipes.create.compacting("create:blaze_cake_base", ["#forge:eggs", "2x minecraft:sugar", "create:cinder_flour"]).heated()
@@ -70,10 +65,8 @@ event.recipes.create.sequenced_assembly(
 .transitionalItem("create:blaze_cake_base")
 .loops(2)
 
-// Gregifying the electron tube
 event.replaceInput({ input: "create:electron_tube" }, "create:electron_tube", "#gtceu:circuits/ulv")
 
-// Removing old recipes
 event.remove({ output: "create:rose_quartz"})
 event.remove({ output: "create:polished_rose_quartz"})
 event.remove({ output: "create:electron_tube"})

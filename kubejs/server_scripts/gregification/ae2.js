@@ -109,7 +109,8 @@ Object.entries(cellhousings).forEach(([x, y]) => {
         .inputFluids('gtceu:redstone 432')
         .itemOutputs(new RegExp(`^.*:${x}$`))
         .duration(80)
-        .EUt(2048)} else
+        .EUt(2048)
+    } else
 
         GTM.energistics_assembler((`${x}_assembly`))
         .itemInputs(`3x ${y}`, '2x ae2:quartz_vibrant_glass')
@@ -429,7 +430,6 @@ GTM.packer(('fluix_covered_cable_decompressing'))
 .duration(20)
 .EUt(128)
 
-GTM.chemical_bath(('covered_fluix_cable'))
 var colorsofae2cables = ['white', 'light_gray', 'gray', 'black', 'red', 'orange', 'yellow', 'lime', 'green', 'cyan', 'blue', 'light_blue', 'pink', 'magenta', 'purple']
 colorsofae2cables.forEach((color) => {
 GTM.chemical_bath((`${color}_glass_cable_dying`))

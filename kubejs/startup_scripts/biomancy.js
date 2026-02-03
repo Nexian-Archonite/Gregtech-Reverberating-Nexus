@@ -16,7 +16,7 @@ bio.create('flesh_alloy')
 
 GTCEuStartupEvents.registry('gtceu:material', bio => {
 bio.create('flesh_alloy')
-.components('2x tungsten_steel', '1x collagen', '2x mysterymystery')
+.components('2x tungsten_steel', '1x collagen')
 .iconSet(GTMaterialIconSet.getByName("flesh_alloy"))
 .ingot()
 .color(0xffffff)

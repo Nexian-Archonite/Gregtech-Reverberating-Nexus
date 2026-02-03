@@ -427,14 +427,14 @@ GTM.alloying_kiln(('igneous_bronze'))
 .duration(30)
 
 GTM.chemical_bath(('condensed_mana_gem'))
-.inputFluids(Fluid.of('blasmatech:mana 3000')) // Equivalent mana to 1 Manasteel Ingot
+.inputFluids(Fluid.of('blasmatech:mana 3000'))
 .itemInputs('gtceu:source_gem')
 .itemOutputs('gtceu:condensed_mana_gem')
 .EUt(16)
 .duration(25)
 
 event.recipes.create.mixing("gtceu:small_condensed_mana_dust", [
-    Fluid.of('blasmatech:mana 1000'), // Equivalent of 1/3 manasteel ingots, can't add more in a single basin
+    Fluid.of('blasmatech:mana 1000'),
     "gtceu:source_dust"
 ]).superheated()
 
@@ -765,12 +765,26 @@ GTM.chemical_reactor(('tetrachlorosilane'))
 .EUt(128)
 
 GTM.chemical_reactor(('tetraethyl_orthosilicate'))
-.inputFluids(Fluid.of('gtceu:tetrachlorosilane 1000'), Fluid.of('gtceu:ethanol 1000'))
+.inputFluids(Fluid.of('gtceu:tetrachlorosilane 1000'), Fluid.of('gtceu:ethanol 4000'))
 .outputFluids(Fluid.of('gtceu:tetraethyl_orthosilicate 1000'), Fluid.of('gtceu:hydrochloric_acid 4000'))
 .duration(40)
 .EUt(128)
 
 GTM.autoclave(('tetraethyl_orthosilicate_catalystic_reaction_with_silicon_dioxide_like_quartzite'))
+.itemInputs('gtceu:quartzite_dust')
+.inputFluidsRanged(Fluid.of('gtceu:tetraethyl_orthosilicate'), 10, 30)
+.itemOutputsRanged('gtceu:opal_gem', 1, 3)
+.duration(40)
+.EUt(128)
+
+GTM.autoclave(('tetraethyl_orthosilicate_catalystic_reaction_with_silicon_dioxide_like_nether_quartz'))
+.itemInputs('gtceu:nether_quartz_dust')
+.inputFluidsRanged(Fluid.of('gtceu:tetraethyl_orthosilicate'), 10, 30)
+.itemOutputsRanged('gtceu:opal_gem', 1, 3)
+.duration(40)
+.EUt(128)
+
+GTM.autoclave(('tetraethyl_orthosilicate_catalystic_reaction_with_silicon_dioxide_like_certus_quartz'))
 .itemInputs('gtceu:quartzite_dust')
 .inputFluidsRanged(Fluid.of('gtceu:tetraethyl_orthosilicate'), 10, 30)
 .itemOutputsRanged('gtceu:opal_gem', 1, 3)

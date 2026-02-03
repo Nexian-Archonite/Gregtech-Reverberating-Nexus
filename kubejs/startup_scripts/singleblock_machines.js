@@ -14,9 +14,11 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .setSlotOverlay(false, false, GuiTextures.CIRCUIT_OVERLAY)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE, FillDirection.DOWN_TO_UP)
         .setSound(GTSoundEntries.ASSEMBLER)
+
+
 })
 
-// GT Atomic Reconstructor machine
+
 GTCEuStartupEvents.registry("gtceu:machine", event => {
     event.create("automatic_sculk_crafter", "simple")
         .tiers(GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM)

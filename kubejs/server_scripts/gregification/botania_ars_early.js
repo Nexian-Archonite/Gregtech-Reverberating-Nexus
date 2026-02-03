@@ -1,13 +1,12 @@
 ServerEvents.recipes(event => {
-    // TODO: Gregify stuff like imbuement chamber and all that stuff
     event.remove({ output: "ars_nouveau:imbuement_chamber" })
 
     event.remove({ output: "ars_nouveau:enchanting_apparatus" }) // Probably save for LV/MV
 
     event.remove({ mod: "ars_nouveau", output: "gtceu:source_gem"})
-    // Early source gem recipe (TODO: why no work?)
+
     event.recipes.ars_nouveau.imbuement("gtceu:opal_gem", "gtceu:source_gem", 500, [])
-    // Amethyst recipe once you get some Botania + Ars progress
+    
     event.recipes.ars_nouveau.imbuement("minecraft:amethyst_shard", "gtceu:source_gem", 500, ["gtceu:condensed_mana_dust", "ars_nouveau:manipulation_essence", "ars_nouveau:conjuration_essence"])
 
 
@@ -31,14 +30,12 @@ ServerEvents.recipes(event => {
         8000,
         ["ars_nouveau:conjuration_essence", "gtceu:source_gem", "#gtceu:circuits/ulv"]
     )
-    // Faster with annealed copper
     event.recipes.ars_nouveau.imbuement("gtceu:annealed_copper_ingot",
         "gtceu:source_attuned_copper_ingot",
         2000,
         ["ars_nouveau:conjuration_essence", "gtceu:source_gem", "#gtceu:circuits/ulv"]
     )
 
-    // TODO: Find a recipe for those in LV/MV
     event.remove({ output: "botania:mana_pool" })
     event.remove({ output: "botania:diluted_pool"})
 
@@ -72,9 +69,7 @@ ServerEvents.recipes(event => {
         '2x botania:diluted_pool'
     ])
 
-    // Special carbon for resistors
     thecarbonboys.forEach(input => {
-        // Evil 
         event.custom({
             "type": "ae2:transform",
             "circumstance": {
@@ -95,7 +90,6 @@ ServerEvents.recipes(event => {
             }
         })
 
-        // Better dust recipe unlocked later
         event.recipes.botania.mana_infusion('gtceu:elementally_purified_carbon_dust', input, 300) // 1/10th of a manasteel ingot, really dirt cheap
     })
 

@@ -252,7 +252,17 @@
     "material.gtceu.harmonic_impurities": "§5Harmonic Impurities",
     "material.gtceu.sublimation_residue": "§5Sublimation Residue",
 
-
+    "material.gtceu.flesh_alloy": "§4Flesh Alloy",
+    "material.gtceu.human_serum_albumin": "§eAlbumin",
+    "material.gtceu.hemoglobin": "§cHemoglobin",
+    "material.gtceu.fibrinogen": "§eFibrinogen",
+    "material.gtceu.cellulose": "§7Cellulose",
+    "material.gtceu.blood_electrolytes": "§fBlood Electrolytes",
+    "material.gtceu.natural_blood": "§cBlood",
+    "material.gtceu.amino_acid_solution": "§7Amino Acid Solution",
+    "material.gtceu.blood_plasma": "§6Blood Plasma",
+    "material.gtceu.blood_proteins": "§eBlood Proteins",
+    "material.gtceu.artificial_blood": "§4Artificial Blood",
 
 
 
@@ -306,6 +316,12 @@
     "gtceu.partition_column": "§5Partition Column",
     "gtceu.stripping_column": "§5Stripping Column",
     "gtceu.energistics_assembler": "§5Energistics Assembler",
+    "gtceu.biomechanical_extruder": "§4Biomechanical Extruder",
+    "gtceu.biomechanical_recycler": "§4Biomechanical Recycler",
+    "gtceu.biomechanical_mixer": "§4Biomechanical Mixer",
+    "gtceu.star_forge": "§4Organism Assembly Line",
+    "gtceu.organism_incubation_chamber": "§4Organism Incubation Chamber",
+    "gtceu.spawn_simulator": "§cSpawn Simulator",
     "block.gtceu.echo_imbuement_chamber": "§1Echonite Imbuement Chamber",
     "block.gtceu.primitive_alloyment_kiln": "§6Primitive Alloyment Kiln",
     "block.gtceu.effervescent_echoite_exile": "§1Effervescent Echonite Exile",

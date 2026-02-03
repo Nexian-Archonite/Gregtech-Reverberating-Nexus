@@ -11,6 +11,11 @@
 		{
 			dependencies: ["614269BB3A46BABE"]
 			id: "3A8C2C4178E31D86"
+			rewards: [{
+				id: "3D14DE77F91B0D49"
+				item: "rusticdelight:cherry_blossom_pancake"
+				type: "item"
+			}]
 			subtitle: "Welcome to LV"
 			tasks: [{
 				id: "511FC620E3D26C82"

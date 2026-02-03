@@ -16,6 +16,7 @@ GTCEuStartupEvents.registry('gtceu:material_icon_set', event => {
 
 })
 
+
 GTCEuStartupEvents.registry("gtceu:element", event => {
     event.create("infinity")
     .protons(999)
@@ -44,7 +45,7 @@ GTCEuStartupEvents.registry("gtceu:element", event => {
 
     event.create('source')
     .protons(0)
-    .neutrons(1) // Can't be 0 and 0 or some recipes don't have a real duration
+    .neutrons(1)
     .symbol('Sr')
 
     event.create('echo')
@@ -75,7 +76,7 @@ GTCEuStartupEvents.registry("gtceu:element", event => {
     event.create('desh')
     .protons(27)
     .neutrons(58)
-    .symbol('Ds')
+    .symbol('Dh')
 
     event.create('ostrum')
     .protons(33)
@@ -91,11 +92,6 @@ GTCEuStartupEvents.registry("gtceu:element", event => {
     .protons(0)
     .neutrons(0)
     .symbol('Cy')
-
-    event.create('purified_netherite')
-    .protons(83)
-    .neutrons(135)
-    .symbol('Nh*')
 
     event.create('resonance')
     .protons(82)
@@ -138,6 +134,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     .cableProperties(GTValues.V[GTValues.UIV], 32, 0, true)
     .blastTemp(10799, "higher", GTValues.VA[GTValues.UIV], 1600)
     .flags(bolt_and_screw, gear, small_gear, plates, ring, rod, long_rod, round, frame)
+    .ignoredTagPrefixes([TagPrefix.dustSmall, TagPrefix.dustTiny, TagPrefix.nugget])
 
     event.create('mana')
     .element('mana')
@@ -468,7 +465,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     .formula('CyDy')
 
     event.create('purified_netherite')
-    .components('1x platinum', '1x purified_netherite', '4x gold')
+    .components('1x platinum', '1x netherite', '4x gold')
     .ingot()
     .color(0x441f45)
     .iconSet(GTMaterialIconSet.METALLIC)
@@ -544,7 +541,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
 //resonance chain
 
-// STEP 1: Resonite Dissolution - removes remaining metal impurities
+
 event.create('resonite_slurry')
     .liquid()
     .color(0x4A0E4E) // Deep purple sludge
@@ -553,10 +550,10 @@ event.create('resonite_slurry')
 
 event.create('resonite_ore_waste')
     .dust()
-    .color(0x3D3D3D) // Dark grey tailings (trace desh, uranium, aluminium)
+    .color(0x3D3D3D)
     .components('1x desh', '1x pitchblende', '1x aluminium', '1x sulfur')
 
-// STEP 2: Harmonic Filtration - removes non-resonant particulates
+
 event.create('filtered_resonite_solution')
     .liquid()
     .color(0x6B1B6E) // Lighter purple
@@ -565,50 +562,50 @@ event.create('filtered_resonite_solution')
 
 event.create('resonite_filter_cake')
     .dust()
-    .color(0x8B4789) // Purple-grey sediment
+    .color(0x8B4789)
     .components('1x iron', '1x sulfur', '1x silicon')
 
-// STEP 3: Vibrational Extraction - extracts resonant compounds into organic phase
+
 event.create('resonant_organic_phase')
     .liquid()
-    .color(0x9D4EDD) // Vibrant purple (resonite in organic solvent)
+    .color(0x9D4EDD)
     .components('2x resonite', '3x chloroform', '2x acetone')
     .flags(no_decomp)
 
 event.create('extraction_raffinate')
     .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID))
-    .color(0x8B7D6B) // Muddy brown waste
+    .color(0x8B7D6B)
     .components('1x sulfuric_acid', '1x iron', '1x copper')
 
-// STEP 4: Crystallization - precipitates resonite crystals
+
 event.create('resonite_crystal_suspension')
     .liquid()
-    .color(0xC77DFF) // Bright crystalline purple
+    .color(0xC77DFF)
     .components('2x resonite', '2x acetone')
     .flags(no_decomp)
 
 event.create('crude_resonite_crystal')
     .dust()
-    .color(0x9D4EDD) // Purple crystals (still contains oxygen/carbon)
+    .color(0x9D4EDD)
     .components('2x resonite', '1x oxygen', '1x carbon')
     .iconSet(SHINY)
     .flags(no_decomp)
 
-// STEP 5: Frequency Washing - removes organic residues
+
 event.create('washed_resonite_solution')
     .liquid()
-    .color(0xE0AAFF) // Pale purple (very pure)
+    .color(0xE0AAFF)
     .components('2x resonite', '1x ethanol')
     .flags(no_decomp)
 
 event.create('harmonic_impurities')
     .liquid()
-    .color(0x704264) // Dark purple-brown
+    .color(0x704264)
     .components('1x chloroform', '1x carbon', '1x oxygen')
 
-// STEP 6: Sublimation & Condensation
+
 event.create('resonance')
-    .color(0xBB86FC) // Pure glowing purple
+    .color(0xBB86FC)
     .element('pure_resonance')
     .iconSet(SHINY)
     .ingot()
@@ -616,7 +613,7 @@ event.create('resonance')
 
 event.create('sublimation_residue')
     .dust()
-    .color(0x4A148C) // Very dark purple ash
+    .color(0x4A148C)
     .components('1x carbon', '1x oxygen')
 
 //welcome back to reality everyone
@@ -705,7 +702,7 @@ event.create('sublimation_residue')
         .ingot()
         .components('1x titanium', '1x perfected_taint')
         .color(0x3e2a58).iconSet(GTMaterialIconSet.METALLIC)
-        .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, no_decomp, no_abs_recipe)
+        .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, no_decomp)
         .blastTemp(2200, "mid", GTValues.VA[GTValues.EV], 600)
         .liquid(2200)
         .fluidPipeProperties(2200, 200, true, true, true, false)
@@ -774,89 +771,6 @@ event.create('sublimation_residue')
     .color(0xdb4646)
     .ignoredTagPrefixes([TagPrefix.dustTiny, TagPrefix.dustSmall, TagPrefix.nugget, TagPrefix.block])
     .gem()
-
-    
-
-    
-    GTMaterials.Dysprosium.setProperty($PropertyKey.INGOT, new $IngotProperty())
-    GTMaterials.Dysprosium.setMaterialARGB(0xb87200)
-    GTMaterials.Dysprosium.setProperty($PropertyKey.BLAST, new $BlastProperty(2850, "mid", 2000, 900, -1, -1))
-    
-    
-    GTMaterials.Dysprosium.setProperty(PropertyKey.ORE, new $OreProperty())
-    GTMaterials.Arsenic.setProperty(PropertyKey.ORE, new $OreProperty())
-    GTMaterials.Yttrium.setProperty(PropertyKey.ORE, new $OreProperty())
-    GTMaterials.Phosphate.setProperty(PropertyKey.ORE, new $OreProperty())
-    GTMaterials.Zirconium.setProperty(PropertyKey.ORE, new $OreProperty())
-    GTMaterials.Silicon.setProperty(PropertyKey.ORE, new $OreProperty())
-    GTMaterials.SiliconDioxide.setProperty(PropertyKey.ORE, new $OreProperty())
-    GTMaterials.Rutile.setProperty(PropertyKey.ORE, new $OreProperty())
-    GTMaterials.Europium.setProperty(PropertyKey.ORE, new $OreProperty())
-    
-    
-    
-    GTMaterials.Zirconium.setProperty($PropertyKey.INGOT, new $IngotProperty())
-    GTMaterials.Zirconium.setProperty($PropertyKey.BLAST, new $BlastProperty(4500, "mid", 1560, 650, -1, -1))
-    GTMaterials.Zirconium.setMaterialARGB(0x8addff)
-    GTMaterials.Zirconium.addFlags(rod, frame, plates)
-
-    GTMaterials.Hafnium.setProperty($PropertyKey.INGOT, new $IngotProperty())
-    GTMaterials.Hafnium.setProperty($PropertyKey.BLAST, new $BlastProperty(3600, "mid", 1240, 450, -1, -1))
-    GTMaterials.Hafnium.setMaterialARGB(0x520089)
-    GTMaterials.Hafnium.addFlags(rod, frame, plates)
-    GTMaterials.Hafnium.setProperty(PropertyKey.ORE, new $OreProperty())
-
-    GTMaterials.Lanthanum.setProperty($PropertyKey.INGOT, new $IngotProperty())
-    GTMaterials.Lanthanum.setProperty($PropertyKey.BLAST, new $BlastProperty(1200, "low", 400, 350, -1, -1))
-    GTMaterials.Lanthanum.addFlags(rod, frame, plates)
-    GTMaterials.Lanthanum.setProperty(PropertyKey.ORE, new $OreProperty())
-
-
-    GTMaterials.Helium3.setProperty(PropertyKey.ORE, new $OreProperty)
-    GTMaterials.Helium3.setProperty(PropertyKey.GEM, new $GemProperty)
-    GTMaterials.Helium3.setMaterialARGB(0xe8eb87)
-    GTMaterials.Helium.setMaterialARGB(0xe8eb87)
-    
-    GTMaterials.SiliconeRubber.addFlags(frame)
-    GTMaterials.Brass.addFlags(frame)
-    GTMaterials.Copper.addFlags(frame)
-    GTMaterials.Sculk.setComponents('1x deepslate', '2x echo')
-    GTMaterials.Sapphire.addFlags(frame)
-    GTMaterials.GreenSapphire.addFlags(frame)
-    GTMaterials.Osmiridium.addFlags(frame)
-    GTMaterials.Gold.addFlags(small_gear)
-    GTMaterials.Plutonium239.addFlags(rod)
-    GTMaterials.Bronze.addFlags(fine_wire)
-
-    addFluid(GTMaterials.EchoShard, $FluidStorageKeys.LIQUID)
-    addFluid(GTMaterials.Dysprosium, $FluidStorageKeys.LIQUID)
-
-    GTMaterials.Glowstone.setComponents("1x tricalcium_phosphate", "1x gold")
-    GTMaterials.Glowstone.setFormula("AuCa3(PO4)2", true)
-
-    GTMaterials.BorosilicateGlass.setComponents("1x boron", '14x glass', '1x lanthanum')
-    GTMaterials.BorosilicateGlass.setFormula("B(SiO2)14La")
-
-    GTMaterials.StainlessSteel.setComponents('6x iron', '1x chromium', '1x manganese', '1x nickel', '2x lanthanum')
-    GTMaterials.StainlessSteel.setFormula('Fe6CrMnNiLa2')
-    GTMaterials.RedSteel.setComponents('1x rose_gold', '1x brass', '2x lanthanum', '4x black_steel', '2x steel')
-    GTMaterials.RedSteel.setFormula('(CuAu4)(ZnCu3)La2Fe2(NI(AuAgCu3)Fe3)4')
-    GTMaterials.BlueSteel.setComponents('1x sterling_silver', '1x bismuth_bronze', '2x lanthanum', '4x black_steel', '2x steel')
-    GTMaterials.BlueSteel.setFormula('(CuAg4)(BiZnCu3)La2Fe2(Ni(AuAgCu3)Fe3)4')
-    GTMaterials.TungstenSteel.setComponents('1x steel', '2x tungsten', '1x lanthanum')
-    GTMaterials.TungstenSteel.setFormula('LaFeW2')
-    
-    // Change materials' components
-    GTMaterials.EchoShard.setFormula('(SiO2)7(KMg3Al3F2Si3O10)Ec2')
-    GTMaterials.Sculk.setFormula('(SiO2)4(KMg3Al3F2Si3O10)Ec2')
-    GTMaterials.Netherite.setFormula('PtNhAu4')
-    GTMaterials.Netherite.setComponents('1x platinum', '1x scrap', '4x gold')
-    GTMaterials.Netherite.addFlags(frame, rod, dense_plate)
-    GTMaterials.Lapotron.setComponents('3x energium', '2x lapis')
-    GTMaterials.Lapotron.setFormula('((Si(FeS2)5(CrAl2O3)Hg3)5(CrAl2O3)4)(Al6Si6Ca8Na8)12(Al3Si3Na4Cl)2(FeS2)(CaCO3))')
-
-
-
 
     const compIngot = (name, elements, color, icon, blasting, flags) => {
         if (blasting.includes(blasting[0])){
@@ -1205,19 +1119,11 @@ event.create('sublimation_residue')
     .dust()
 
     event.create('thorium_dioxide')
-    .color(0x002200) // Dark gray-green
+    .color(0x002200)
     .components('1x thorium', '2x oxygen')
     .formula('ThO2')
     .flags(rod)
     .iconSet(SHINY)
-    .ingot()
-
-    event.create('mixed_oxide_fuel')
-    .color(0xf26e2f) // Bright Orange
-    .components('8x plutonium', '5x uranium_233', '2x plutonium_241')
-    .formula('(U²³³)5(Pu²³⁹)8(Pu²⁴¹)2O30')
-    .iconSet(SHINY)
-    .flags(rod, no_decomp)
     .ingot()
 
     event.create('uranium_233')
@@ -1228,6 +1134,14 @@ event.create('sublimation_residue')
     .flags(rod)
     .ingot()
 
+    event.create('mixed_oxide_fuel')
+    .color(0xf26e2f)
+    .components('8x plutonium', '5x uranium_233', '2x plutonium_241')
+    .formula('(U²³³)5(Pu²³⁹)8(Pu²⁴¹)2O30')
+    .iconSet(SHINY)
+    .flags(rod, no_decomp)
+    .ingot()
+    
     event.create("radioactive_bronze_ore")
     .iconSet(GTMaterialIconSet.RADIOACTIVE)
     .components('999x uranium_233', '1x bronze')
@@ -1248,114 +1162,105 @@ event.create('sublimation_residue')
 // PUREX CHAIN - MATERIALS (In Process Order)
 // ========================================
 
-// SUPPORT MATERIALS (make these first)
+
 event.create('tbp_solution')
     .liquid()
-    .color(0xFFEFD5) // Papaya whip (light organic)
+    .color(0xFFEFD5)
     .components('3x tributyl_phosphate', '7x kerosene')
 
 event.create('dilute_nitric_acid')
-    .color(0xE0FFFF) // Light cyan
+    .color(0xE0FFFF)
     .components('1x nitric_acid', '3x water')
     .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID))
 
 event.create('kerosene')
     .gas()
-    .color(0xFFE4B5) // Light petroleum/tan color
+    .color(0xFFE4B5)
     .components('12x carbon', '26x hydrogen')
 
-// STEP 2: Dissolution
 event.create('fuel_dissolver_solution')
     .liquid()
-    .color(0x8B4513) // Brown/muddy - radioactive sludge
+    .color(0x8B4513)
     .components('4x uranium', '1x plutonium', '2x caesium')
     .flags(no_decomp)
 
-// STEP 3: Feed Adjustment
 event.create('adjusted_feed_solution')
     .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID))
-    .color(0x996633) // Slightly lighter brown
+    .color(0x996633)
     .components('4x uranium', '1x plutonium', '2x caesium', '1x nitric_acid')
     .flags(no_decomp)
 
-// STEP 4: Co-Extraction
 event.create('organic_phase_u_pu')
     .liquid()
-    .color(0xCCCC00) // Yellow-green (organic solvent with U+Pu)
+    .color(0xCCCC00)
     .components('3x uranium', '1x plutonium', '4x tributyl_phosphate')
     .flags(no_decomp)
 
 event.create('purex_raffinate')
     .liquid()
-    .color(0xFF4500) // Bright orange-red (HIGH LEVEL WASTE)
+    .color(0xFF4500)
     .components('2x caesium', '1x lanthanum', '1x cerium', '1x neodymium')
 
-// STEP 5: Scrubbing
 event.create('scrubbed_organic_phase')
     .liquid()
-    .color(0xCCDD00) // Brighter yellow (cleaner)
+    .color(0xCCDD00)
     .components('3x uranium', '1x plutonium', '4x tributyl_phosphate')
     .flags(no_decomp)
 
 event.create('scrub_waste')
     .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID))
-    .color(0xFF6347) // Tomato red (medium-active waste)
+    .color(0xFF6347)
     .components('1x caesium', '1x nitric_acid')
 
-// STEP 6: Partitioning
 event.create('aqueous_plutonium_solution')
     .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID))
-    .color(0x00CED1) // Dark turquoise (Pu(III) in aqueous)
+    .color(0x00CED1)
     .components('1x plutonium', '1x nitric_acid', '1x americium')
     .flags(no_decomp)
 
 event.create('organic_uranium_phase')
     .liquid()
-    .color(0xFFFF00) // Bright yellow (U in organic)
+    .color(0xFFFF00)
     .components('3x uranium', '3x tributyl_phosphate')
     .flags(no_decomp)
 
-// STEP 7A: Uranium Stripping
 event.create('uranyl_nitrate_solution')
     .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID))
-    .color(0xFFD700) // Gold (uranyl ion is yellow)
+    .color(0xFFD700)
     .components('3x uranium', '2x nitric_acid')
     .flags(no_decomp)
 
 event.create('spent_tbp')
     .liquid()
-    .color(0x8B7355) // Dirty brown (degraded solvent)
+    .color(0x8B7355)
     .components('3x tributyl_phosphate', '1x carbon')
     .flags(no_decomp)
 
-// STEP 7B: Plutonium Concentration
 event.create('organic_plutonium_phase')
     .liquid()
-    .color(0x4682B4) // Steel blue (Pu in organic)
+    .color(0x4682B4)
     .components('1x plutonium', '1x americium', '2x tributyl_phosphate')
     .flags(no_decomp)
 
 event.create('medium_active_waste')
     .liquid()
-    .color(0xFFA500) // Orange (medium-level waste)
+    .color(0xFFA500)
     .components('1x caesium', '1x americium')
 
-// STEP 8A: Uranium Concentration
 event.create('concentrated_uranyl_nitrate')
     .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID))
     .color(0xFFB700) // Deep gold (concentrated)
     .components('4x uranium', '2x nitric_acid')
     .flags(no_decomp)
 
-// STEP 9A: Uranium Oxide Chain
 event.create('uranium_trioxide')
     .dust()
-    .color(0xFF8C00) // Dark orange
+    .color(0xFF8C00)
     .components('1x uranium', '3x oxygen')
     .formula('UO3')
 
 event.create('uranium_dioxide')
-    .color(0x2F4F2F) // Dark gray-green
+    .color(0x2F4F2F)
     .components('1x uranium', '2x oxygen')
     .iconSet(METALLIC)
     .formula('UO2')
@@ -1363,29 +1268,27 @@ event.create('uranium_dioxide')
     .ingot()
 
 event.create('uranium_235_dioxide')
-    .color(0x366736) // Dark gray-green
+    .color(0x366736)
     .components('1x uranium_235', '2x oxygen')
     .iconSet(SHINY)
     .formula('U²³⁵O2')
     .flags(rod)
     .ingot()
 
-// STEP 8B: Plutonium Stripping
 event.create('plutonium_nitrate_solution')
     .liquid()
-    .color(0x1E90FF) // Dodger blue (Pu(IV) nitrate)
+    .color(0x1E90FF)
     .components('1x plutonium', '1x americium', '2x nitric_acid')
     .flags(no_decomp)
 
-// STEP 9B: Plutonium Oxide Chain
 event.create('plutonium_oxalate')
     .dust()
-    .color(0x87CEEB) // Sky blue
+    .color(0x87CEEB)
     .components('1x plutonium', '1x americium', '1x oxalic_acid')
     .flags(no_decomp)
 
 event.create('plutonium_dioxide')
-    .color(0x8B0000) // Dark red
+    .color(0x8B0000)
     .components('1x plutonium', '2x oxygen')
     .iconSet(METALLIC)
     .formula('Pu²³⁹O2')
@@ -1393,7 +1296,7 @@ event.create('plutonium_dioxide')
     .ingot()
 
 event.create('plutonium_241_dioxide')
-    .color(0x8B0000) // Dark red
+    .color(0x8B0000)
     .components('1x plutonium_241', '2x oxygen')
     .iconSet(SHINY)
     .formula('Pu²⁴¹O2')
@@ -1401,29 +1304,171 @@ event.create('plutonium_241_dioxide')
     .ingot()
 
 event.create('mixed_plutonium_dioxide')
-    .color(0xfe1b1b) // Brightish red
+    .color(0xfe1b1b)
     .components('3x plutonium_dioxide', '1x plutonium_241_dioxide')
     .formula('(Pu²³⁹)₃(Pu²⁴¹)O₈')
     .flags(rod)
     .ingot()
 
-// STEP 10: Solvent Recovery
 event.create('regenerated_tbp')
     .liquid()
-    .color(0xF0E68C) // Khaki (clean TBP)
+    .color(0xF0E68C)
     .components('3x tributyl_phosphate')
     
 event.create('sodium_carbonate')
-    .color(0xFFFFFF) // White powder
+    .color(0xFFFFFF)
     .components('2x sodium', '1x carbon', '3x oxygen')
     .dust()
 
 event.create('solvent_wash_waste')
     .liquid()
-    .color(0xCD853F) // Peru brown (low-level waste)
+    .color(0xCD853F)
     .components('1x sodium_carbonate', '1x carbon')
 
 //return to sender
+
+// blood line
+event.create('amino_acid_solution')
+    .liquid()
+    .color(0xE8DCC8)
+    .components('2x carbon', '4x hydrogen', '1x nitrogen', '2x oxygen')
+
+
+event.create('human_serum_albumin')
+    .dust()
+    .color(0xFFF8DC)
+    .components('4x amino_acid_solution', '2x sulfur', '1x zinc')
+    .flags(no_decomp)
+
+
+event.create('hemoglobin')
+    .dust()
+    .color(0xDC143C)
+    .components('6x amino_acid_solution', '4x iron', '4x nitrogen', '2x oxygen')
+    .flags(no_decomp)
+
+
+event.create('fibrinogen')
+    .dust()
+    .color(0xF5DEB3)
+    .components('5x amino_acid_solution', '1x calcium', '2x phosphorus')
+    .flags(no_decomp)
+
+
+event.create('blood_proteins')
+    .gas()
+    .color(0xffe9bf)
+    .components('2x human_serum_albumin', '2x hemoglobin', '1x fibrinogen')
+    .flags(no_decomp)
+
+event.create('blood_plasma')
+    .gas()
+    .color(0xfac45b)
+    .components('8x water', '1x blood_proteins', '1x blood_electrolytes')
+    .flags(no_decomp)
+
+event.create('natural_blood')
+    .gas()
+    .color(0xB30E08)
+
+// Blood electrolytes - the ion soup that keeps your cells from fucking dying
+event.create('blood_electrolytes')
+    .dust()
+    .gas()
+    .color(0xF0F8FF)
+    .components('3x sodium', '2x potassium', '2x calcium', '1x magnesium', '4x chlorine', '1x phosphorus')
+    .flags(no_decomp)
+
+event.create('cellulose')
+    .dust()
+    .color(0xFAF0E6)
+    .components('6x carbon', '10x hydrogen', '5x oxygen')
+    .formula('(C₆H₁₀O₅)ₙ')
+
+event.create('artificial_blood')
+    .gas()
+    .color(0x4e0e04)
+    .components('55x blood_plasma', '40x water', '5x blood_electrolytes')
+
+
+    //material changes go brrbrrbrbrb
+
+    GTMaterials.Dysprosium.setProperty($PropertyKey.INGOT, new $IngotProperty())
+    GTMaterials.Dysprosium.setMaterialARGB(0xb87200)
+    GTMaterials.Dysprosium.setProperty($PropertyKey.BLAST, new $BlastProperty(2850, "mid", 2000, 900, -1, -1))
+    
+    
+    GTMaterials.Dysprosium.setProperty(PropertyKey.ORE, new $OreProperty())
+    GTMaterials.Arsenic.setProperty(PropertyKey.ORE, new $OreProperty())
+    GTMaterials.Yttrium.setProperty(PropertyKey.ORE, new $OreProperty())
+    GTMaterials.Phosphate.setProperty(PropertyKey.ORE, new $OreProperty())
+    GTMaterials.Zirconium.setProperty(PropertyKey.ORE, new $OreProperty())
+    GTMaterials.Silicon.setProperty(PropertyKey.ORE, new $OreProperty())
+    GTMaterials.SiliconDioxide.setProperty(PropertyKey.ORE, new $OreProperty())
+    GTMaterials.Rutile.setProperty(PropertyKey.ORE, new $OreProperty())
+    GTMaterials.Europium.setProperty(PropertyKey.ORE, new $OreProperty())
+    
+    
+    
+    GTMaterials.Zirconium.setProperty($PropertyKey.INGOT, new $IngotProperty())
+    GTMaterials.Zirconium.setProperty($PropertyKey.BLAST, new $BlastProperty(4500, "mid", 1560, 650, -1, -1))
+    GTMaterials.Zirconium.setMaterialARGB(0x8addff)
+    GTMaterials.Zirconium.addFlags(rod, frame, plates)
+
+    GTMaterials.Hafnium.setProperty($PropertyKey.INGOT, new $IngotProperty())
+    GTMaterials.Hafnium.setProperty($PropertyKey.BLAST, new $BlastProperty(3600, "mid", 1240, 450, -1, -1))
+    GTMaterials.Hafnium.setMaterialARGB(0x520089)
+    GTMaterials.Hafnium.addFlags(rod, frame, plates)
+    GTMaterials.Hafnium.setProperty(PropertyKey.ORE, new $OreProperty())
+
+    GTMaterials.Lanthanum.setProperty($PropertyKey.INGOT, new $IngotProperty())
+    GTMaterials.Lanthanum.setProperty($PropertyKey.BLAST, new $BlastProperty(1200, "low", 400, 350, -1, -1))
+    GTMaterials.Lanthanum.addFlags(rod, frame, plates)
+    GTMaterials.Lanthanum.setProperty(PropertyKey.ORE, new $OreProperty())
+
+
+    GTMaterials.Helium3.setProperty(PropertyKey.ORE, new $OreProperty)
+    GTMaterials.Helium3.setProperty(PropertyKey.GEM, new $GemProperty)
+    GTMaterials.Helium3.setMaterialARGB(0xe8eb87)
+    GTMaterials.Helium.setMaterialARGB(0xe8eb87)
+    
+    GTMaterials.SiliconeRubber.addFlags(frame)
+    GTMaterials.Brass.addFlags(frame)
+    GTMaterials.Copper.addFlags(frame)
+    GTMaterials.Sapphire.addFlags(frame)
+    GTMaterials.GreenSapphire.addFlags(frame)
+    GTMaterials.Osmiridium.addFlags(frame)
+    GTMaterials.Gold.addFlags(small_gear)
+    GTMaterials.Plutonium239.addFlags(rod)
+    GTMaterials.Bronze.addFlags(fine_wire)
+    GTMaterials.Trinium.addFlags(frame)
+     GTMaterials.Netherite.addFlags(frame, rod, dense_plate)
+
+    addFluid(GTMaterials.EchoShard, $FluidStorageKeys.LIQUID)
+    addFluid(GTMaterials.Dysprosium, $FluidStorageKeys.LIQUID)
+
+    GTMaterials.Glowstone.setComponents("1x tricalcium_phosphate", "1x gold")
+    GTMaterials.Glowstone.setFormula("AuCa3(PO4)2", true)
+
+    GTMaterials.BorosilicateGlass.setComponents("1x boron", '14x glass', '1x lanthanum')
+    GTMaterials.BorosilicateGlass.setFormula("B(SiO2)14La")
+    
+    // Change materials' components
+    GTMaterials.EchoShard.setFormula('(SiO2)7(KMg3Al3F2Si3O10)Ec2')
+    GTMaterials.Sculk.setFormula('(SiO2)4(KMg3Al3F2Si3O10)Ec2')
+    GTMaterials.Netherite.setFormula('PtNhAu4')
+    GTMaterials.Netherite.setComponents('1x platinum', '4x gold')
+    GTMaterials.Lapotron.setComponents('3x energium', '2x lapis')
+    GTMaterials.Lapotron.setFormula('((Si(FeS2)5(CrAl2O3)Hg3)5(CrAl2O3)4)(Al6Si6Ca8Na8)12(Al3Si3Na4Cl)2(FeS2)(CaCO3))')
+    GTMaterials.Sculk.setComponents('1x deepslate', '2x echo')
+    GTMaterials.StainlessSteel.setComponents('6x iron', '1x chromium', '1x manganese', '1x nickel', '2x lanthanum')
+    GTMaterials.StainlessSteel.setFormula('Fe6CrMnNiLa2')
+    GTMaterials.RedSteel.setComponents('1x rose_gold', '1x brass', '2x lanthanum', '4x black_steel', '2x steel')
+    GTMaterials.RedSteel.setFormula('(CuAu4)(ZnCu3)La2Fe2(NI(AuAgCu3)Fe3)4')
+    GTMaterials.BlueSteel.setComponents('1x sterling_silver', '1x bismuth_bronze', '2x lanthanum', '4x black_steel', '2x steel')
+    GTMaterials.BlueSteel.setFormula('(CuAg4)(BiZnCu3)La2Fe2(Ni(AuAgCu3)Fe3)4')
+    GTMaterials.TungstenSteel.setComponents('1x steel', '2x tungsten', '1x lanthanum')
+    GTMaterials.TungstenSteel.setFormula('LaFeW2')
 
 })
 
@@ -1474,6 +1519,10 @@ StartupEvents.registry('item', event => {
     event
     .create('gtceu:empty_fuel_rod')
     .textureJson({ layer0: `gtceu:item/rod/ready/empty_fuel_rod`})
+
+    event
+    .create("gtceu:organism_amalgam")
+    
 
 var yumyumrods = ["uranium_235_oxide", "uranium_oxide", "plutonium_241_oxide", "plutonium_oxide", 'thorium_oxide']
         yumyumrods.forEach((type) => {
@@ -1763,6 +1812,23 @@ event
     .requiresTool(true)
     .defaultCutout()
     .transparent(true)
+
+event
+    .create('gtceu:organism_glass')
+    .soundType('glass')
+    .hardness(10)
+    .resistance(6)
+    .requiresTool(true)
+    .defaultCutout()
+    .transparent(true)
+
+event
+    .create('gtceu:gastrointestinal_acid_block')
+    .soundType('sculk_sensor')
+    .hardness(1)
+    .resistance(0.5)
+    .tagBlock('minecraft:mineable/shovel')
+    .tagBlock('minecraft:needs_wooden_tool')
 
 event
     .create('gtceu:fuel_assembly', "gtceu:active")

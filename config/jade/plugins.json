@@ -54,15 +54,10 @@
   "ars_nouveau": {
     "mob_jar": true
   },
-  "mekanism": {
-    "infuse_type": true,
-    "gas": true,
-    "remove_builtin": true,
-    "pigment": true,
-    "fluid": true,
-    "slurry": true,
-    "energy": true,
-    "tooltip_renderer": true
+  "phoenixcore": {
+    "source_hatch_info": true,
+    "fission_machine_info": true,
+    "plasma_furnace_info": true
   },
   "gtceu": {
     "primitive_pump": true,

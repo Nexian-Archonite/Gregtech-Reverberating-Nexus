@@ -1,8 +1,5 @@
 // priority: 999
 var Ihide = [
-    "gtceu:nullium_nugget",
-    "gtceu:small_nullium_dust",
-    "gtceu:tiny_nullium_dust",
     "notreepunching:flint_axe",
     "notreepunching:flint_pickaxe",
     "notreepunching:flint_hoe",
