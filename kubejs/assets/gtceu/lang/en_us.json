@@ -339,6 +339,8 @@
     "block.gtceu.scrubbing_column": "§5Scrubbing Column",
     "block.gtceu.partition_column": "§5Partition Column",
     "block.gtceu.stripping_column": "§5Stripping Column",
+    "block.gtceu.organism_assembly_line": "4Organism Assembly Line",
+    "block.gtceu.incubation_chamber": "§8Incubative Multi-Purpose™ Chamber",
 
     "block.gtceu.bronze_brick_casing": "Bricked §6Igneous Bronze §rCasing",
     "block.gtceu.steam_casing_bricked_bronze": "Bricked §6Igneous Bronze §rHull",

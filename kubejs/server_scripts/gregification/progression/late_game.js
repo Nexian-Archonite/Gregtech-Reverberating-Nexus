@@ -409,6 +409,13 @@ GTM.star_forge('filter_casing')
 .duration(1600)
 .EUt(8192)
 
+GTM.star_forge('incubation_chamber')
+.itemInputs('gtceu:chemical_reaction_vat', '48x gtceu:flesh_alloy_plate', '24x gtceu:flesh_alloy_rod', '16x #gtceu:circuits/luv', '2x gtceu:luv_world_accelerator')
+.inputFluids('gtceu:artificial_blood 10000', 'gtceu:mutagen 6000', 'gtceu:polyethyl_cyanoacrylate 4000', 'gtceu:trinium 2500')
+.itemOutputs('gtceu:incubation_chamber')
+.duration(1600)
+.EUt(131072)
+.cleanroom(CleanroomType.STERILE_CLEANROOM)
 
 
 

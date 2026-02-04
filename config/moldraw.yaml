@@ -21,7 +21,7 @@ alloy:
 
   pieChartRadius: 32
 
-  recursive: false
+  recursive: true
 
   partsByMass: false
 

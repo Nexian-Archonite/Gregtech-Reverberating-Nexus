@@ -208,6 +208,8 @@ event.campfireCooking('gtceu:wrought_iron_ingot', 'minecraft:iron_ingot', 1, 200
 
 event.smelting('minecraft:leather', 'minecraft:brown_mushroom_block', 0.1, 100)
 event.smelting('minecraft:leather', 'minecraft:red_mushroom_block', 0.1, 100)
+event.blasting('4x quark:clear_shard', '#forge:sandstone', 0, 200)
+event.smelting('3x glass_pane', 'sand', 0, 60)
 
 event.shaped('minecraft:red_mushroom_block', [
 'MM',
@@ -224,9 +226,9 @@ M: "minecraft:brown_mushroom"
 })
 
 ferricminerals.forEach((type) => {
-    event.campfireCooking('iron_ingot', new RegExp(`^(gtceu|minecraft):raw_${type}$`), 0.15, 300)
-    event.campfireCooking('iron_ingot', new RegExp(`^(gtceu|minecraft):${type}_dust$`), 0.15, 300)
-    event.campfireCooking('6x iron_nugget', `gtceu:crushed_${type}_ore`, 0.1, 250)
+    event.campfireCooking('iron_ingot', new RegExp(`^(gtceu|minecraft):raw_${type}$`), 0.15, 160)
+    event.campfireCooking('iron_ingot', new RegExp(`^(gtceu|minecraft):${type}_dust$`), 0.15, 160)
+    event.campfireCooking('6x iron_nugget', `gtceu:crushed_${type}_ore`, 0.1, 120)
 })
 
 event.shaped('minecraft:furnace', [
@@ -293,6 +295,13 @@ G: 'gtceu:charged_certus_quartz_gem'
 event.shapeless('4x gtceu:charged_certus_quartz_gem', [
 'gtceu:charged_certus_quartz_block'
 ]).id('gtceu:shapeless/block_decompress_charged_certus_quartz')
+
+event.shapeless('9x cobblestone', ['kubejs:compressed_cobblestone'])
+
+event.shaped('2x gtceu:wrought_iron_bolt', ['S ', ' I'], {S: '#forge:tools/saws', I: 'gtceu:wrought_iron_rod'})
+event.shaped('2x gtceu:iron_bolt', ['S ', ' I'], {S: '#forge:tools/saws', I: 'gtceu:iron_rod'})
+
+event.shapeless('gtceu:manasteel_ingot', ['botania:manasteel_ingot'])
 
 // G - R - E - G - T - E - C - H from here
 

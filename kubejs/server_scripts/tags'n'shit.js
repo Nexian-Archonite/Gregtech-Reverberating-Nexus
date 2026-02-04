@@ -71,6 +71,8 @@ event.add('c:hidden_from_recipe_viewers', /ad_astra:.*_(nugget|ingot|plate|rod)/
 event.add('forge:tools/sickle', /gtceu:.*_scythe/)
 event.add('forge:tools/sickle', /.*:.*(_.*)?_hoe/)
 
+event.add('minecraft:mineable/hoe', /botania:.*(_.*)?_mystical_flower/)
+
 event.removeAllTagsFrom('ad_astra:oil_bucket')
 event.removeAllTagsFrom('ad_astra:hydrogen_bucket')
 

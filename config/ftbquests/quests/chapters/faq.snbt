@@ -6,16 +6,52 @@
 	id: "4D2152BEB6540CA7"
 	order_index: 0
 	quest_links: [ ]
-	quests: [{
-		id: "306928B5B6E7792F"
-		subtitle: "Plant some flowers on Potted Soil and extract it that way :D"
-		tasks: [{
-			id: "72A23BAD65A34C50"
-			title: "How do i get mana plasma?"
-			type: "checkmark"
-		}]
-		x: 0.0d
-		y: 0.0d
-	}]
+	quests: [
+		{
+			id: "306928B5B6E7792F"
+			subtitle: "Plant some flowers on Potted Soil and extract it that way :D"
+			tasks: [{
+				id: "72A23BAD65A34C50"
+				title: "How do i get mana plasma?"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "4FFBC48C27F5D2A7"
+			optional: true
+			rewards: [{
+				id: "6436891F8C28B17F"
+				item: {
+					Count: 1
+					id: "gtceu:blue_steel_pickaxe"
+					tag: {
+						Damage: 0
+						DisallowContainerItem: 0b
+						GT.Behaviours: {
+							TorchPlacing: 1b
+						}
+						GT.Tool: {
+							DefaultEnchantments: [ ]
+							HarvestLevel: 3
+							MaxDamage: 1023
+							ToolSpeed: 19.0f
+						}
+						HideFlags: 2
+						Unbreakable: 1
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "4D47B85B6AF3A36A"
+				title: "peekaboo :O"
+				type: "checkmark"
+			}]
+			x: 42.5d
+			y: 0.0d
+		}
+	]
 	title: "FAQ"
 }

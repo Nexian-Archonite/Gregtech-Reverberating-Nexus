@@ -638,6 +638,17 @@
 					item: "minecraft:torch"
 					type: "item"
 				}
+				{
+					id: "19FC79C77BE6F5DF"
+					item: {
+						Count: 1
+						id: "gtceu:prospector.hv"
+						tag: {
+							Charge: 1600000L
+						}
+					}
+					type: "item"
+				}
 			]
 			subtitle: "Get yo Chezt"
 			tasks: [{

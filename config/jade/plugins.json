@@ -51,13 +51,12 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
+  "compactmachines": {
+    "machine": true,
+    "tunnel": true
+  },
   "ars_nouveau": {
     "mob_jar": true
-  },
-  "phoenixcore": {
-    "source_hatch_info": true,
-    "fission_machine_info": true,
-    "plasma_furnace_info": true
   },
   "gtceu": {
     "primitive_pump": true,
