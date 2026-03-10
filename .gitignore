@@ -1,0 +1,14 @@
+# Ignore everything
+*
+
+# But allow these
+!kubejs/
+!kubejs/**
+!mods/
+!mods/**
+!config/
+!config/**
+!.gitignore
+
+# Keep the gitignore itself
+!.gitignore

@@ -216,30 +216,6 @@ GTM.chemical_reactor('ruthenium_phosphate_reduction')
     .EUt(7680)
     .duration(300)
 
-GTM.chemical_reactor('rhenium_fluorosulfate_processing')
-    .itemInputs('1x gtceu:rhenium_fluorosulfate_dust')
-    .inputFluids('gtceu:sulfuric_acid 1000', 'water 1000')
-    .itemOutputs('1x gtceu:rhenium_iii_sulfate_dust')
-    .outputFluids('gtceu:hydrofluoric_acid 3000')
-    .EUt(7680)
-    .duration(200)
-
-GTM.chemical_reactor('rhenium_sulfate_processing')
-    .itemInputs('1x gtceu:rhenium_iii_sulfate_dust')
-    .inputFluids('water 3000')
-    .itemOutputs('1x gtceu:rhenium_heptoxide_dust')
-    .outputFluids('gtceu:sulfuric_acid 3000')
-    .EUt(7680)
-    .duration(300)
-
-GTM.chemical_reactor('rhenium_heptoxide_reduction')
-    .itemInputs('1x gtceu:rhenium_heptoxide_dust')
-    .inputFluids('gtceu:hydrogen 7000')
-    .itemOutputs('2x gtceu:rhenium_dust')
-    .outputFluids('water 7000')
-    .EUt(7680)
-    .duration(400)
-
 GTM.chemical_reactor('rhodium_chloride_processing')
     .itemInputs('1x gtceu:rhodium_chloride_dust')
     .inputFluids('gtceu:sulfuric_acid 1000')
@@ -261,6 +237,133 @@ GTM.chemical_reactor('osmium_chloride_oxidation')
     .outputFluids('gtceu:chlorine 3000')
     .EUt(7680)
     .duration(300)
+
+GTM.chemical_reactor('rhenium_fluorosulfate_to_perrhenate')
+    .itemInputs('3x gtceu:rhenium_fluorosulfate_dust')
+    .inputFluids('gtceu:ammonia 3000')
+    .itemOutputs('3x gtceu:ammonium_perrhenate_dust')
+    .outputFluids('gtceu:sulfuryl_fluoride 9000')
+    .EUt(1920)
+    .duration(300)
+
+GTM.electric_blast_furnace('ammonium_perrhenate_decomposition')
+    .itemInputs('2x gtceu:ammonium_perrhenate_dust')
+    .itemOutputs('1x gtceu:rhenium_heptoxide_dust')
+    .outputFluids('gtceu:ammonia 2000', 'water 2000')
+    .blastFurnaceTemp(365)
+    .EUt(480)
+    .duration(250)
+
+GTM.electric_blast_furnace('rhenium_heptoxide_to_dioxide')
+    .itemInputs('1x gtceu:rhenium_heptoxide_dust')
+    .itemOutputs('2x gtceu:rhenium_dioxide_dust')
+    .outputFluids('gtceu:oxygen 1500')
+    .blastFurnaceTemp(500)
+    .EUt(960)
+    .duration(200)
+
+GTM.electric_blast_furnace('rhenium_dioxide_reduction')
+    .itemInputs('1x gtceu:rhenium_dioxide_dust')
+    .inputFluids('gtceu:hydrogen 2000')
+    .itemOutputs('1x gtceu:rhenium_dust')
+    .outputFluids('water 2000')
+    .blastFurnaceTemp(700)
+    .EUt(1920)
+    .duration(400)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
