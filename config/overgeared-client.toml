@@ -1,0 +1,12 @@
+
+["Minigame Config"]
+	#Vertical position of the minigame overlay
+	#Range: -10000 ~ 10000
+	overlayHeight = 55
+	#If minigame's pop up appear during minigame.
+	PopupVisible = true
+
+["Anvil Config"]
+	#Toggle Recipe Book for Smithing Anvils
+	enableRecipeBookAnvils = true
+

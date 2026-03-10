@@ -1,0 +1,5 @@
+{
+    "ldlib": {
+        "connection": "kubejs:block/enderium_glass_ctm"
+    }
+}

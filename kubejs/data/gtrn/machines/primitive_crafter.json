@@ -1,0 +1,168 @@
+{
+  "name": {
+    "text": "Primitive Crafter",
+    "color": "dark_green"
+  },
+  "appearance": {
+    "custommachinery:block": "kubejs:primitive_table",
+    "custommachinery:item": "kubejs:primitive_table"
+  },
+  "components": [
+    {
+      "type": "custommachinery:item",
+      "id": "i1",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "i2",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "i3",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "i4",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "i5"
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "i6",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "i7",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "i8",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "i9",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "o",
+      "mode": "output",
+      "variant": "custommachinery:result"
+    },
+    {
+      "type": "custommachinery:source",
+      "mode": "input",
+      "capacity": 8000,
+      "max_input": 8000,
+      "max_output": 8000
+    }
+  ],
+  "gui": [
+    {
+      "type": "custommachinery:slot",
+      "id": "i1",
+      "x": 44,
+      "y": 45
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "i2",
+      "x": 64,
+      "y": 45
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "i3",
+      "x": 84,
+      "y": 45
+    },
+    {
+      "type": "custommachinery:text",
+      "x": 82,
+      "y": 32,
+      "text": {
+        "text": "Primitive Crafter",
+        "color": "dark_green"
+      }
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "i4",
+      "x": 44,
+      "y": 65
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "i5",
+      "x": 64,
+      "y": 65
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "i6",
+      "x": 84,
+      "y": 65
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "i7",
+      "x": 44,
+      "y": 85
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "i8",
+      "x": 64,
+      "y": 85
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "i9",
+      "x": 84,
+      "y": 85
+    },
+    {
+      "type": "custommachinery:progress",
+      "x": 111,
+      "y": 66,
+      "width": 45,
+      "texture_filled": "custommachinery:textures/gui/base_progress_empty.png"
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "o",
+      "x": 166,
+      "y": 66
+    },
+    {
+      "type": "custommachinery:source",
+      "x": 196,
+      "y": 46,
+      "height": 57
+    },
+    {
+      "type": "custommachinery:player_inventory",
+      "x": 44,
+      "y": 114
+    },
+    {
+      "type": "custommachinery:texture",
+      "texture": "custommachinery:textures/gui/base_background.png",
+      "x": 0,
+      "y": 20,
+      "priority": 1
+    }
+  ],
+  "processor": {
+    "type": "custommachinery:craft"
+  }
+}

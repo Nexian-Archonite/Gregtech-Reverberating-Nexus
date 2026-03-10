@@ -1,0 +1,13 @@
+{
+  "name": "Aluminium",
+  "colors": [
+    "a6fce9",
+    "57b8bc"
+  ],
+  "timeRequired": 240,
+  "ingredient": {
+    "tag": "forge:ingots/aluminium"
+  },
+  "enabled": true,
+  "recipeDisabled": false
+}

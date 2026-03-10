@@ -1,0 +1,5 @@
+{
+    "ldlib": {
+        "connection": "kubejs:block/signalum_glass_ctm"
+    }
+}

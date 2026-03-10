@@ -1,0 +1,17 @@
+filename = 'overgeared-1.20.1-1.6.16.jar'
+name = 'Overgeared'
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'overgeared-1.20.1-1.6.16.jar'
+
+[download]
+hash = 'd18b1233fe49e9b0fe2fa1320fcb25c878ff8fce'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 7681346
+project-id = 1277786

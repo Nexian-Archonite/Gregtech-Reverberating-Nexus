@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "gtceu:block/wizarding_steel_casing"
+    },
+    "active=true": {
+      "model": "gtceu:block/wizarding_steel_casing_bloom"
+    }
+  }
+}

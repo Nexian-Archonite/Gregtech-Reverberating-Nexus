@@ -1,0 +1,25 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"north": "gtceu:block/dim_markers/undergarden/north",
+		"east": "gtceu:block/dim_markers/undergarden/east",
+		"south": "gtceu:block/dim_markers/undergarden/south",
+		"west": "gtceu:block/dim_markers/undergarden/west",
+		"up": "gtceu:block/dim_markers/undergarden/up",
+		"down": "gtceu:block/dim_markers/undergarden/down"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#north", "cullface": "north"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#east", "cullface": "east"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#south", "cullface": "south"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#west", "cullface": "west"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#up", "cullface": "up"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#down", "cullface": "down"}
+			}
+		}
+	]
+}

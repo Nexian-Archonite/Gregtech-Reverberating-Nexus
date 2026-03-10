@@ -1,0 +1,6 @@
+{
+  "parent": "gtceu:item/material_sets/dull/plate",
+  "textures": {
+    "layer1": "gtceu:item/material_sets/naquadrium/plate_secondary"
+  }
+}
