@@ -14,4 +14,6 @@ Herein lies no lesson, no moral, no mercy, only the soft whirr of gears and the 
 
 An amusement, an archive, an accident of design, and by any other name thou mightst give it, a marvelous mechanism that ought never have been switched on.
 The place where gods, devils, and every other omnipotent being don't dare to take their fucking shot
-Welcome
+
+
+welcome
