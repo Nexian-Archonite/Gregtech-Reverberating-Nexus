@@ -1,0 +1,99 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"parent": "heat_core",
+	"texture_size": [64, 64],
+	"textures": {
+		"0": "kubejs:block/everlasting_heat_core",
+		"2": "kubejs:block/everlasting_heat_core_bottom",
+		"3": "kubejs:block/everlasting_heat_core_top",
+		"particle": "kubejs:block/everlasting_heat_core"
+	},
+	"elements": [
+		{
+			"from": [4, 4, 4],
+			"to": [12, 12, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [4, 4, 4]},
+			"faces": {
+				"east": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#0"}
+			}
+		},
+		{
+			"from": [4, 4, 4],
+			"to": [12, 12, 8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"down": {"uv": [0, 8, 16, 16], "texture": "#2"}
+			}
+		},
+		{
+			"from": [4, 4, 4],
+			"to": [12, 12, 8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"up": {"uv": [0, 0, 16, 8], "texture": "#3"}
+			}
+		},
+		{
+			"from": [4, 4, 8],
+			"to": [12, 12, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 10]},
+			"faces": {
+				"up": {"uv": [0, 8, 16, 16], "texture": "#3"}
+			}
+		},
+		{
+			"from": [4, 4, 8],
+			"to": [12, 12, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 10]},
+			"faces": {
+				"down": {"uv": [0, 8, 16, 16], "rotation": 180, "texture": "#2"}
+			}
+		},
+		{
+			"from": [4, 4, 4],
+			"to": [12, 12, 5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [4, 4, 4]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#0"}
+			}
+		},
+		{
+			"from": [4, 4, 11],
+			"to": [12, 12, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [12, 4, 12]},
+			"faces": {
+				"south": {"uv": [0, 0, 16, 16], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, -2, -1.5],
+			"scale": [0.33, 0.33, 0.33]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, -2, -1.5],
+			"scale": [0.33, 0.33, 0.33]
+		},
+		"firstperson_righthand": {
+			"rotation": [90, 128, 44.5],
+			"translation": [-9, 8.25, 0]
+		},
+		"firstperson_lefthand": {
+			"rotation": [90, 128, 44.5],
+			"translation": [-9, 8.25, 0]
+		},
+		"gui": {
+			"rotation": [30, 45, 0],
+			"scale": [1.75, 1.75, 1.75]
+		},
+		"head": {
+			"scale": [1.66, 1.66, 1.66]
+		},
+		"on_shelf": {
+			"rotation": [90, 0, 0]
+		}
+	}
+}

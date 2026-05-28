@@ -1,0 +1,13 @@
+
+["anvil cost"]
+	#Cost to apply a Dragonforged Codex to an item already at Max +1 (e.g. Quark Limit Breaker -> +2) {Default:50}
+	#Range: 1 ~ 1000
+	equipment_limit_decimator_cost = 50
+	#XP cost for powering up a Draconic Codex with an enchantment from an Ancient Tome {Default:30}
+	#Range: 1 ~ 1000
+	dragonforged_book_application_cost = 30
+
+["valid enchantments"]
+	#List of valid enchantments for the Draconic Codex. Paste from Quark or add your own.
+	valid_enchantments = ["minecraft:feather_falling", "minecraft:thorns", "minecraft:sharpness", "minecraft:smite", "minecraft:bane_of_arthropods", "minecraft:knockback", "minecraft:fire_aspect", "minecraft:looting", "minecraft:sweeping", "minecraft:efficiency", "minecraft:unbreaking", "minecraft:fortune", "minecraft:power", "minecraft:punch", "minecraft:luck_of_the_sea", "minecraft:lure", "minecraft:loyalty", "minecraft:riptide", "minecraft:impaling", "minecraft:piercing"]
+

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "gtceu:block/fuel_assembly"
+    },
+    "active=true": {
+      "model": "gtceu:block/fuel_assembly_active"
+    }
+  }
+}
