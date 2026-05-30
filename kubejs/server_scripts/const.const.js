@@ -101,7 +101,8 @@ const tiers = [
 
     ]
     // Map of tier replacements
-    const tierReplacements = {
+     global.tierReplacements = {
+        copper: 'source_attuned_copper',
         steel: "nexus_steel",
         magnetic_steel: "magnetic_nexus_steel",
         aluminium: "echolumium",

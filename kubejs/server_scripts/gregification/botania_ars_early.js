@@ -28,12 +28,12 @@ ServerEvents.recipes(event => {
     event.recipes.ars_nouveau.imbuement("minecraft:copper_ingot",
         "gtceu:source_attuned_copper_ingot",
         8000,
-        ["ars_nouveau:conjuration_essence", "gtceu:source_gem", "#gtceu:circuits/ulv"]
+        ["ars_nouveau:conjuration_essence", "gtceu:source_gem", "ars_nouveau:water_essence"]
     )
     event.recipes.ars_nouveau.imbuement("gtceu:annealed_copper_ingot",
         "gtceu:source_attuned_copper_ingot",
         2000,
-        ["ars_nouveau:conjuration_essence", "gtceu:source_gem", "#gtceu:circuits/ulv"]
+        ["ars_nouveau:conjuration_essence", "gtceu:source_gem", "ars_nouveau:water_essence"]
     )
 
     event.remove({ output: "botania:mana_pool" })

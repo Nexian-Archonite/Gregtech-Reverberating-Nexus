@@ -486,7 +486,7 @@ Object.entries(animalspawnegglistforthereasonsaboveme).forEach(([victim, data]) 
         recipe.circuit(circuit);
     }
 
-    const recipe2 = GTM.organism_incubation_chamber(`${victim}_spawn_egg_incubation`)
+    const recipe2 = GTM.spawn_simulator(`${victim}_spawn_egg_incubation`)
         .itemInputs('2x minecraft:egg', `6x ${drops[0]}`, `6x ${drops[1]}`)
         .itemOutputs(`2x minecraft:${victim}_spawn_egg`)
         .inputFluids('gtceu:artificial_blood 1000')

@@ -4,7 +4,16 @@
 	default_quest_shape: ""
 	filename: "steam"
 	group: "4B637402490FA38D"
+	icon: "gtceu:igneous_bronze_ingot"
 	id: "20F5EE4D2290F500"
+	images: [{
+		height: 8.0d
+		image: "gtceu:textures/gui/packicon.png"
+		rotation: 0.0d
+		width: 8.0d
+		x: -7.5d
+		y: -12.0d
+	}]
 	order_index: 0
 	quest_links: [ ]
 	quests: [
@@ -121,7 +130,7 @@
 				item: "gtceu:coke_oven"
 				type: "item"
 			}]
-			x: -2.5d
+			x: 0.0d
 			y: 0.5d
 		}
 		{
@@ -192,8 +201,8 @@
 		}
 		{
 			dependencies: [
-				"3929571D762B4FF6"
 				"5800B0DA724D79DF"
+				"30FFFC5F0DA6024E"
 			]
 			id: "0FF321A29F2BC5D7"
 			tasks: [{
@@ -387,8 +396,9 @@
 		{
 			dependencies: [
 				"57C67447D2F16921"
-				"6E981CC3211F3AE4"
+				"2DB119B457955E2D"
 			]
+			hide_dependency_lines: true
 			id: "3C61358887ED8E2C"
 			tasks: [{
 				id: "7E7D2838E03B08CA"
@@ -397,18 +407,6 @@
 			}]
 			x: -7.5d
 			y: -6.0d
-		}
-		{
-			dependencies: ["2DB119B457955E2D"]
-			hide_dependency_lines: true
-			id: "6E981CC3211F3AE4"
-			tasks: [{
-				id: "66DCD80F6D391C88"
-				item: "create:blaze_burner"
-				type: "item"
-			}]
-			x: -7.5d
-			y: -4.0d
 		}
 		{
 			dependencies: [
@@ -636,7 +634,7 @@
 			dependencies: [
 				"4A7419803D1D9CF5"
 				"57C67447D2F16921"
-				"6E981CC3211F3AE4"
+				"2DB119B457955E2D"
 			]
 			id: "7B6715182109ECC1"
 			tasks: [{
@@ -648,8 +646,9 @@
 			y: -8.0d
 		}
 		{
-			dependencies: ["1BC3681C67B6A022"]
+			dependencies: ["0758470FBEF9851A"]
 			id: "2D59B58CE6C2D3FB"
+			optional: true
 			subtitle: "INFINITE OPAL!!!!"
 			tasks: [{
 				id: "6ACE27311F38A6F1"
@@ -660,62 +659,18 @@
 			y: 2.5d
 		}
 		{
-			dependencies: ["2DB119B457955E2D"]
-			hide_dependency_lines: true
-			id: "5B0DEB73BFE8F7B8"
-			tasks: [{
-				amount: 200L
-				fluid: "gtceu:wood_leachate"
-				id: "75CD1967ABE5758C"
-				type: "fluid"
-			}]
-			x: -15.0d
-			y: 4.5d
-		}
-		{
-			dependencies: [
-				"0641A5C15881AE0F"
-				"5B0DEB73BFE8F7B8"
-				"6C50DBD2962242B8"
-			]
-			id: "1BC3681C67B6A022"
-			tasks: [{
-				amount: 200L
-				fluid: "gtceu:crude_ethyl_silicate"
-				id: "2BF1878923132867"
-				type: "fluid"
-			}]
-			x: -14.0d
-			y: 3.5d
-		}
-		{
-			dependencies: [
-				"407DD81158918951"
-				"2DB119B457955E2D"
-			]
-			hide_dependency_lines: true
-			id: "0641A5C15881AE0F"
-			tasks: [{
-				amount: 1000L
-				fluid: "gtceu:ethanol"
-				id: "3D5CE63974183661"
-				type: "fluid"
-			}]
-			x: -14.0d
-			y: 5.0d
-		}
-		{
 			dependencies: ["7CE36FB4FBF55212"]
 			hide_dependency_lines: true
 			id: "6C50DBD2962242B8"
+			optional: true
 			tasks: [{
 				count: 15L
 				id: "70A2CBB800CB6B1E"
 				item: { Count: 15, id: "gtceu:nether_quartz_dust" }
 				type: "item"
 			}]
-			x: -13.0d
-			y: 4.5d
+			x: -12.5d
+			y: 5.0d
 		}
 		{
 			dependencies: [
@@ -910,6 +865,7 @@
 			y: -7.0d
 		}
 		{
+			dependencies: ["3C2656A3CB46E432"]
 			id: "26EEED0F0464BCEF"
 			tasks: [{
 				id: "28C4104A12594CD1"
@@ -918,6 +874,91 @@
 			}]
 			x: -7.5d
 			y: 4.5d
+		}
+		{
+			dependencies: [
+				"27FD26F7DD9E3E16"
+				"30FFFC5F0DA6024E"
+				"535D5D2D5E74D6F3"
+			]
+			id: "3C2656A3CB46E432"
+			tasks: [{
+				id: "3CF2FC069B8C7662"
+				item: "gtceu:phosphoric_acid_bucket"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["2DB119B457955E2D"]
+			id: "092E72DE4A521E3E"
+			tasks: [{
+				id: "6EFDBE1A88C1BC19"
+				item: "gtceu:wood_leachate_bucket"
+				type: "item"
+			}]
+			x: -14.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["2DB119B457955E2D"]
+			id: "29118A40DB24056D"
+			tasks: [{
+				id: "0BF98444A3EADD6D"
+				item: "gtceu:ethanol_bucket"
+				type: "item"
+			}]
+			x: -13.5d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"092E72DE4A521E3E"
+				"29118A40DB24056D"
+				"6C50DBD2962242B8"
+			]
+			id: "0758470FBEF9851A"
+			tasks: [{
+				id: "72EB052EB79AAD33"
+				item: "gtceu:crude_ethyl_silicate_bucket"
+				type: "item"
+			}]
+			x: -13.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["6CB5FBD33E69672A"]
+			id: "27FD26F7DD9E3E16"
+			tasks: [{
+				id: "537994F82EF37ACF"
+				item: "gtceu:primitive_coking_array"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["7CE36FB4FBF55212"]
+			id: "535D5D2D5E74D6F3"
+			tasks: [{
+				id: "50282862813F9611"
+				item: "gtceu:apatite_dust"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["3929571D762B4FF6"]
+			id: "30FFFC5F0DA6024E"
+			tasks: [{
+				id: "7B3DB65C850ACB2B"
+				item: "gtceu:coke_gem"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 0.5d
 		}
 	]
 	title: "Steam"

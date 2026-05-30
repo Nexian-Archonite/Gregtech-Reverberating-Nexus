@@ -1,6 +1,6 @@
 /// <reference path="./globals.d.ts" />
 declare const HOUR: 3600000.0;
-declare const global: {"f_add": {}, "jeiRuntime": Internal.JeiRuntime, "ui_builder": {}, "blocks": {}, "blastProperty": {}, "flags": {}, "periodicTableElement": {}, "iconSets": {}, "va": {}, "vha": {}, "vh": {}, "materials": {}, "v": {}, "elements": {}, "recipe_types": {}, "finalize": {}, "machines": {}, "items": {}, "world_layers": {}};
+declare const global: {"f_add": {}, "jeiRuntime": Internal.JeiRuntime, "ui_builder": {}, "blocks": {}, "blastProperty": {}, "flags": {}, "periodicTableElement": {}, "iconSets": {}, "va": {}, "vha": {}, "vh": {}, "materials": {}, "tierReplacements": {}, "v": {}, "elements": {}, "recipe_types": {}, "finalize": {}, "machines": {}, "items": {}, "world_layers": {}};
 declare const IngredientHelper: Internal.IngredientForgeHelper;
 declare const ForgeModEvents: Internal.ForgeEventWrapper;
 declare const Painter: Internal.Painter;

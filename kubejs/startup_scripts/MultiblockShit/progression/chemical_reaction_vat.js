@@ -27,7 +27,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
     .rotationState(RotationState.NON_Y_AXIS)
     .machine((holder) => new $CoilWorkableElectricMultiblockMachine(holder)) 
     .recipeTypes([GTRecipeTypes.get('chemical_vat'), GTRecipeTypes.get('large_chemical_reactor'), GTRecipeTypes.get('chemical_reactor')])
-    .recipeModifiers([(machine, recipe) => GTRecipeModifiers.pyrolyseOvenOverclock(machine, recipe), GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe) => TemperatureModifier(machine, recipe), (machine, recipe) => PressureModifier(machine, recipe)])
+    .recipeModifiers([GTRecipeModifiers.OC_PERFECT_SUBTICK, GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe) => TemperatureModifier(machine, recipe), (machine, recipe) => PressureModifier(machine, recipe)])
     .appearanceBlock(() => Block.getBlock("gtceu:inert_machine_casing"))
     .pattern(definition => FactoryBlockPattern.start()
     .aisle("AABBBBBAA", "AABAAABAA", "ABBAAABBA", "ABAAAAABA", "ABAAAAABA", "ABAAAAABA", "ABBAAABBA", "AABAAABAA", "AABBBBBAA")

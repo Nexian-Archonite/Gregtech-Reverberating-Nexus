@@ -33,8 +33,7 @@ const Ihide = [
     "createaddition:electrum_nugget",
     "createaddition:electrum_block",
     "minecraft:netherite_scrap",
-    "gtceu:energium_dust",
-    "gtceu:wood_plate"
+    "gtceu:energium_dust"
 ]
 
 ServerEvents.tags('item', event =>{
@@ -48,13 +47,11 @@ event.add('botania:mana_dusts', 'gtceu:mana_dust')
 event.add('botania:manasteel_blocks', 'gtceu:manasteel_block')
 event.add('botania:manasteel_nuggets', 'gtceu:manasteel_nugget')
 event.add('ae2:all_fluix', 'gtceu:fluix_gem')
-event.add('minecraft:planks', 'gtceu:wooden_bonka_plonk_plate')
 
 event.removeAllTagsFrom('ars_nouveau:source_gem_block')
 event.removeAllTagsFrom('ars_nouveau:source_gem')
 event.removeAllTagsFrom('botania:manasteel_block')
 event.removeAllTagsFrom('botania:mana_powder')
-event.removeAllTagsFrom('gtceu:wood_plate')
 
 event.add('forge:spawn_eggs', /minecraft:.*_spawn_egg/)
 
@@ -66,7 +63,7 @@ event.add('minecraft:mineable/hoe', /botania:.*(_.*)?_mystical_flower/)
 
 event.removeAllTagsFrom('ad_astra:oil_bucket')
 event.removeAllTagsFrom('ad_astra:hydrogen_bucket')
-
+event.add('forge:dusts/arcane', 'irons_spellbooks:arcane_essence')
 })
 
 ServerEvents.tags('item', event => {

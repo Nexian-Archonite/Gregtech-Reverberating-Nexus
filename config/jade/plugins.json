@@ -92,15 +92,17 @@
     "jade_chamber": true,
     "jade_wireless": true
   },
+  "apotheosis": {
+    "adventure": true,
+    "ench": true,
+    "spawner": true
+  },
   "compactcrafting": {
     "field_proxy": true,
     "field_projector": true
   },
   "balm": {
     "jade": true
-  },
-  "custommachinery": {
-    "machine_component_provider": true
   },
   "ae2": {
     "part_icon": true,

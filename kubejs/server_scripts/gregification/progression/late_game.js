@@ -202,6 +202,7 @@ GTM.distillation_tower('naquadrium_waste_separation')
 GTM.assembler('coil_naquadrium')
 .inputFluids('gtceu:auralloy-omega 144')
 .itemInputs('8x gtceu:naquadrium_double_wire', '8x gtceu:tri-osmic_matrix_foil')
+.itemOutputs('gtceu:naquadrium_coil_block')
 .EUt(30720)
 .duration(725)
 

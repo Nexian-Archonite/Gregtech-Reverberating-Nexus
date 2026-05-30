@@ -247,9 +247,9 @@ const compIngot = (name, elements, color, icon, blasting, flags, cabel) => {
     }
 }
 
-    compIngot('tri-osmic_matrix', ['4x osmium', 'selenium', 'tungsten'], 0x4849c4, SHINY, [6300, 'high', va.zpm, 1800], [ring, gear, small_gear, plates, rod, long_rod, rotor, round, bolt_and_screw, foil], null)
+    compIngot('tri-osmic_matrix', ['4x osmium', 'selenium', 'tungsten'], 0x4849c4, SHINY, [6300, 'high', va.zpm, 1800], [ring, gear, small_gear, plates, rod, long_rod, rotor, round, bolt_and_screw, foil, fine_wire], null)
     compIngot('axiom-re', ['gallium', 'rhenium'], 0xeebe80, SHINY, [4650, 'mid', va.luv, 1400], [plates, long_rod, rod, spring, small_spring, foil], [va.zpm, 6, 3, false])
-    compIngot('pentarch-v', ['trinium', 'perfected_taint', 'titanium', 'tantalum', 'tellurium'], 0x9b7e99, METALLIC, [6500, 'high', va.zpm, 1650], [spring, foil, long_rod, plates, bolt_and_screw, gear, rod], [va.zpm, 8, 6, false])
+    compIngot('pentarch-v', ['trinium', 'taint', 'titanium', 'tantalum', 'tellurium'], 0x9b7e99, METALLIC, [6500, 'high', va.zpm, 1650], [spring, foil, long_rod, plates, bolt_and_screw, gear, rod], [va.zpm, 8, 6, false])
     compIngot('astazine-e', ['3x europium', '2x cobalt', 'titanium', 'lutetium'], 0X4FB5FB, METALLIC, [6500, 'high', va.luv, 300], [long_rod, rod, plates, spring, small_spring, fine_wire, frame], null)
 
     //mmh smores (i meant ores)

@@ -84,4 +84,5 @@ ServerEvents.recipes(e => {
     e.remove({id: 'advanced_ae:reactionchamber'})
     e.remove({id: 'minecraft:netherite_ingot'})
     e.remove({id: 'gtceu:smelting/smelt_dust_netherite_to_ingot'})
+    e.remove({type: 'createaddition:rolling'})
 })

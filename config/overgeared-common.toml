@@ -2,6 +2,8 @@
 ["General Configs"]
 	#Toggle for the mod's custom tooltips
 	enableModTooltips = true
+	#Toggle for the mod's items to appear in vanilla creative tabs
+	enableCreativeTabItems = true
 
 ["Anvil Conversion"]
 	#Allow shift-right-clicking stone to convert into Stone Smithing Anvil
@@ -33,6 +35,8 @@
 	#How many arrows can a bottle of potion tip before it's depleted
 	#Range: > 0
 	maxPotionTipping = 8
+	#Enable or disable arrow tipping into potion arrow
+	enableTipping = true
 
 ["Minigame Common Settings"]
 	#Toggle for the forging minigame
@@ -283,4 +287,35 @@
 	materialTypes = ["iron", "gold", "copper", "steel"]
 	#Material Source Items: [item_id or item_tag, material_id, material_value]
 	materialSetting = [["minecraft:iron_nugget", "iron", 1], ["minecraft:iron_ingot", "iron", 9], ["minecraft:iron_block", "iron", 81], ["minecraft:gold_nugget", "gold", 1], ["minecraft:gold_ingot", "gold", 9], ["minecraft:gold_block", "gold", 81], ["minecraft:copper_ingot", "copper", 9], ["#forge:nuggets/copper", "copper", 1], ["minecraft:copper_block", "copper", 81], ["#forge:ingots/steel", "steel", 9], ["#forge:nuggets/steel", "steel", 1], ["#forge:storage_blocks/steel", "steel", 81], ["#forge:ingots/silver", "silver", 9], ["#forge:nuggets/silver", "silver", 1], ["#forge:storage_blocks/silver", "silver", 81]]
+
+["Mining Speed Bonuses"]
+	#Range: -5.0 ~ 5.0
+	masterMiningSpeedBonus = 1.5
+	#Range: -5.0 ~ 5.0
+	perfectMiningSpeedBonus = 1.3
+	#Range: -5.0 ~ 5.0
+	expertMiningSpeedBonus = 1.15
+	#Range: -5.0 ~ 5.0
+	wellMiningSpeedBonus = 1.0
+	#Range: 0.0 ~ 5.0
+	poorMiningSpeedBonus = 0.7
+
+["Item Break Chance"]
+	#Enable quality-based break chance system
+	enableQualityBreakSystem = true
+	#Break chance at 0 durability for POOR quality
+	#Range: 0.0 ~ 1.0
+	breakChancePoor = 1.0
+	#Break chance for WELL quality
+	#Range: 0.0 ~ 1.0
+	breakChanceWell = 0.5
+	#Break chance for EXPERT quality
+	#Range: 0.0 ~ 1.0
+	breakChanceExpert = 0.75
+	#Break chance for PERFECT quality
+	#Range: 0.0 ~ 1.0
+	breakChancePerfect = 0.0
+	#Break chance for MASTER quality
+	#Range: 0.0 ~ 1.0
+	breakChanceMaster = 0.0
 

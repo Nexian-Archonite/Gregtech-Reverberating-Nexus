@@ -1,6 +1,5 @@
-// priority: 0
-
-// Visit the wiki for more info - https://kubejs.com/
-
-console.info('Hello, World! (Loaded client scripts)')
-
+JEIEvents.addItems(event => {
+event.add('gtceu:overweorld_marker')
+event.add('gtceu:the_nether_marker')
+event.add('gtceu:the_end_marker')
+})

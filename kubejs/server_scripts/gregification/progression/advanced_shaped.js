@@ -1,4 +1,4 @@
-ServerEvents.recipes(e => {
+/*ServerEvents.recipes(e => {
 const createCrafterRecipe = (output, inputs, source) => {
   const recipe = e.recipes.custommachinery.custom_craft('gtrn:primitive_crafter', output);
   
@@ -44,4 +44,4 @@ createCrafterRecipe(
 );
 
 
-})
+})*/

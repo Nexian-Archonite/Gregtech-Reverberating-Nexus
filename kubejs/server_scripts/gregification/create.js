@@ -323,7 +323,7 @@ GTM.cutter(('alloy_to_shaft'))
 .duration(200)
 
 const ahshitherewegoagain = {
-    'wooden_bonka_plonk_plate': 1,
+    'wood_plate': 1,
     'iron_plate': 2,
     'wrought_iron_plate': 3,
     'steel_plate': 4,
@@ -393,11 +393,22 @@ C: 'create:andesite_casing',
 W: '#forge:tools/wrenches',
 H: '#forge:tools/hammers'
 })
-
-const pressingmaterials = ['lead', 'silver', 'bronze', 'zinc', 'red_alloy', 'blue_alloy', 'rubber', 'andesite_alloy']
+CRT.cutting('createaddition:straw', 'bamboo')
+const pressingmaterials = ['lead', 'silver', 'bronze', 'zinc', 'red_alloy', 'blue_alloy', 'rubber', 'andesite_alloy', 'brass']
+const easportsitsinthesaw = ['gold', 'iron', 'copper']
+const reeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeewire = ['copper', 'iron', 'gold', 'electrum']
 pressingmaterials.forEach(input => {
 CRT.pressing(`gtceu:${input}_plate`, `gtceu:${input}_ingot`)
 CRT.cutting(`2x gtceu:${input}_rod`, `gtceu:${input}_ingot`)
 })
+easportsitsinthesaw.forEach(input => {
+CRT.pressing(`gtceu:${input}_plate`, `${input}_ingot`).id(`create:pressing/${input}_ingot`)
+CRT.cutting(`2x gtceu:${input}_rod`, `${input}_ingot`)
+reeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeewire.forEach(input => {
+CRT.cutting(new RegExp(`.*:${input}_plate`), `2x createaddition:${input}_wire`)
+})
 
+})
+
+CRT.mixing([Item.of('gtceu:phosphorus_dust'), 'water 3000'], 'gtceu:phosphoric_acid 1000').heated()
 })

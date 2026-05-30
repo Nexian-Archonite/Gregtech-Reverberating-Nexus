@@ -26,6 +26,7 @@ GTM.distillation_tower(('unpure_source_from_tainted'))
     .itemOutputsRanged(Item.of('gtceu:ruby_dust'), 1, 5)
     .itemOutputsRanged(Item.of('gtceu:sapphire_dust'), 1, 4)
     .itemOutputsRanged(Item.of('gtceu:aluminium_dust'), 0, 2)
+    .itemOutputsRanged(Item.of('gtceu:arcane_dust'), 3,7)
     .outputFluids(Fluid.of('gtceu:source 100'))
     .duration(600)
     .EUt(64)
@@ -345,7 +346,7 @@ GTM.chemical_bath(('whydoesthisnotautocompletethisgoddamncoolingrecipe'))
     .itemOutputs('gtceu:mechanical_stainless_ingot')
     .duration(300)
     .EUt(120)
-/*
+
  const tiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev"]
     tiers.forEach((level) => {
         event.recipes.gtceu.assembler(`kubejs:${level}_universal_circuit`)
@@ -453,7 +454,7 @@ GTM.sculk_crafter(('ancient_debris'))
 .itemOutputs('2x minecraft:ancient_debris')
 .duration(100)
 .EUt(512)
-*/
+
 GTM.cyclotron(('rare_earth_cycling'))
 .inputFluids(Fluid.of('gtceu:tributyl_phosphate 50'))
 .itemInputs('4x gtceu:rare_earth_dust')
@@ -1072,11 +1073,18 @@ GTM.mixer(('nitinol_dust'))
 //rocketry and shit
 
 GTM.assembler(('echoversal_space_complex'))
-.itemInputs('64x gtceu:double_echolumium_plate', '64x gtceu:tainted_titanium_plate', '32x gtceu:cryosporsite_block' , '24x kubejs:iv_universal_circuit', '16x gtceu:ev_robot_arm', '12x gtceu:ev_conveyor_module', 'gtceu:ev_assembler')
+.itemInputs('64x gtceu:double_echolumium_plate', '64x gtceu:tainted_titanium_plate', '32x gtceu:cryosporsite_block' , '24x #gtceu:circuits/iv', '16x gtceu:ev_robot_arm', '12x gtceu:ev_conveyor_module', 'gtceu:ev_assembler')
 .inputFluids('gtceu:polytetrafluoroethylene 32000')
 .itemOutputs('gtceu:echoversal_space_complex')
-.duration(16000)
+.duration(1600)
 .EUt(2048)
+
+GTM.assembler(('interstellar_miner'))
+.itemInputs('64x gtceu:double_resonite_plate', '64x gtceu:tainted_titanium_plate', '32x gtceu:cryosporsite_block' , '24x #gtceu:circuits/luv', '16x gtceu:iv_robot_arm', '12x gtceu:iv_conveyor_module', 'gtceu:iv_assembler')
+.inputFluids('gtceu:polytetrafluoroethylene 32000')
+.itemOutputs('gtceu:interstellar_miner')
+.duration(1600)
+.EUt(8192)
 
 GTM.space_factory(('engine_frame'))
 .itemInputs('32x gtceu:nexus_steel_rod', '8x gtceu:nexus_steel_plate')
@@ -1324,588 +1332,258 @@ GTM.mixer(('caesium_hydroxide'))
 .duration(600)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+const thelisttoendalllists = {
+    overworld: {
+        ores: [
+            ['chalcopyrite', 'vanadium_magnetite', 'redstone', 'galena', 'cobaltite'],
+            ['diamond', 'graphite', 'sapphire', 'lepidolite', 'tantalite'],
+            ['pyrochlore', 'apatite', 'pentlandite', 'realgar', 'cassiterite'],
+            ['gold', 'silver', 'coal', 'lapis', 'gypsum']
+        ],
+        fluids: [
+            'gtceu:oil_light 50000',
+            'gtceu:oil_medium 50000',
+            'gtceu:oil_heavy 50000',
+            'gtceu:oil 50000'
+        ]
+    },
+    nether: {
+        ores: [
+            ['monazite', 'electrotine', 'saltpeter', 'emerald'],
+            ['thorium', 'wulfenite', 'certus_quartz', 'tetrahedrite'],
+            ['netherrack_stibnite', 'netherrack_blue_zircon', 'netherrack_hafnium', 'netherrack_silicon']
+        ],
+        fluids: [
+            'lava 100000',
+            'gtceu:natural_gas 75000',
+            'lava 100000'
+        ]
+    },
+    end: {
+        ores: [
+            ['endstone_xenotime', 'endstone_dysprosium', 'endstone_naquadah'],
+            ['endstone_uraninite', 'endstone_chromite', 'endstone_gold'],
+            ['endstone_vanadium_magnetite', 'endstone_tungstate', 'endstone_ilmenite'],
+            ['endstone_bauxite', 'endstone_cooperite', 'endstone_pitchblende']
+        ],
+        fluids: [
+            'gtceu:krypton 50000',
+            'gtceu:xenon 50000',
+            'gtceu:deuterium 50000',
+            'gtceu:tritium 50000'
+        ]
+    },
+    moon: {
+        ores: [
+            ['moon_xenotime', 'moon_bastnasite', 'moon_monazite', 'moon_helium_3'],
+            ['moon_silicon_dioxide', 'moon_enstatite', 'moon_chromite', 'moon_extraterrestrial_resonite'],
+            ['lunar_desh', 'moon_aluminium', 'moon_ilmenite', 'moon_rutile'],
+            ['moon_europium', 'moon_hafnium', 'moon_dysprosium', 'moon_lanthanum']
+        ],
+        fluids: [
+            'gtceu:helium_3 5000',
+            'gtceu:helium_3 5000',
+            'gtceu:helium_3 5000',
+            'gtceu:helium_3 5000'
+        ]
+    },
+    undergarden: {
+    ores: [
+        ['berzelianite', 'clausthalite', 'tiemannite', 'nexus'],
+        ['hessite', 'altaite', 'calaverite', 'condensed_mana']
+    ],
+    fluids: [
+        'gtceu:tainted_magmatic_mineral_sludge 50000',
+        'gtceu:virulence_tainted_source 75000'
+    ]
+}
+}
+
+Object.entries(thelisttoendalllists).forEach(function(dimEntry) {
+    var dimension = dimEntry[0]
+    var data = dimEntry[1]
+
+    data.ores.forEach(function(ores, circuit) {
+        var recipe = GTM.chemical_vat(dimension + '_amalgam_separation_' + circuit)
+            .itemInputs('gtceu:' + dimension + '_ore_amalgam')
+            .inputFluids('gtceu:infernal_acid 1000')
+            .circuit(circuit)
+            .addData("HeatPressure", 6)
+            .addData("Temp", 600)
+            .duration(200)
+            .EUt(2048)
+
+        ores.forEach(function(ore) {
+            recipe.itemOutputs('64x gtceu:' + ore + '_ore')
+        })
+
+        var fluid = data.fluids[circuit]
+        if (fluid) {
+            recipe.outputFluids(fluid)
+        }
+    })
+})
+
+const markerDimensions = {
+    'overworld': 'minecraft:stone',
+    'the_nether': 'minecraft:netherrack',
+    'the_end': 'minecraft:end_stone',
+    'undergarden': 'undergarden:depthrock'
+}
+
+const globeDimensions = ['moon', 'mars', 'mercury', 'venus', 'glacio']
+
+Object.entries(markerDimensions).forEach(function(entry) {
+    var dimension = entry[0]
+    var researchItem = entry[1]
+
+    event.recipes.gtceu.assembly_line('marker_' + dimension)
+        .itemInputs(`64x ${researchItem}`)
+        .itemOutputs('gtceu:' + dimension + '_marker')
+        .duration(10000)
+        .inputFluids('gtceu:resonance_plasma 10000')
+        .EUt(GTValues.VA[GTValues.EV])
+        ["scannerResearch(java.util.function.UnaryOperator)"](function(b) {
+            return b.researchStack(Item.of(researchItem)).EUt(GTValues.VA[GTValues.EV]).duration(420)
+        })
+})
+
+globeDimensions.forEach(function(dimension) {
+    event.recipes.gtceu.assembly_line('marker_' + dimension)
+        .itemInputs(`64x ad_astra:${dimension}_stone`)
+        .itemOutputs('ad_astra:' + dimension + '_globe')
+        .duration(10000)
+        .inputFluids('gtceu:resonance_plasma 10000')
+        .EUt(GTValues.VA[GTValues.EV])
+        ["scannerResearch(java.util.function.UnaryOperator)"](function(b) {
+            return b.researchStack(Item.of('ad_astra:' + dimension + '_stone')).EUt(GTValues.VA[GTValues.EV]).duration(420)
+        })
+})
+
+const tierData = [
+    { tier: 1, rocket: 'ad_astra:tier_1_rocket', rocketChance: 1000, amalgams: 64, duration: 12000, EUt: GTValues.VA[GTValues.IV] },
+    { tier: 2, rocket: 'ad_astra:tier_2_rocket', rocketChance: 500,  amalgams: 80, duration: 10500, EUt: GTValues.VA[GTValues.LuV] },
+    { tier: 3, rocket: 'ad_astra:tier_3_rocket', rocketChance: 200,  amalgams: 96, duration: 9000,  EUt: GTValues.VA[GTValues.ZPM] },
+    { tier: 4, rocket: 'ad_astra:tier_4_rocket', rocketChance: 100,  amalgams: 112, duration: 7500, EUt: GTValues.VA[GTValues.UHV] }
+]
+
+const dimensions = [
+    { id: 'overworld',   minTier: 1, notConsumable: 'gtceu:overworld_marker' },
+    { id: 'nether',  minTier: 1, notConsumable: 'gtceu:the_nether_marker' },
+    { id: 'end',     minTier: 1, notConsumable: 'gtceu:the_end_marker' },
+    { id: 'undergarden', minTier: 1, notConsumable: 'gtceu:undergarden_marker' },
+    { id: 'moon',        minTier: 1, notConsumable: 'ad_astra:moon_globe' },
+    { id: 'mars',        minTier: 2, notConsumable: 'ad_astra:mars_globe' },
+    { id: 'mercury',     minTier: 3, notConsumable: 'ad_astra:mercury_globe' },
+    { id: 'venus',       minTier: 3, notConsumable: 'ad_astra:venus_globe' },
+    { id: 'glacio',      minTier: 4, notConsumable: 'ad_astra:glacio_globe' }
+]
+
+tierData.forEach(function(tierEntry) {
+    var tier = tierEntry.tier
+    var rocket = tierEntry.rocket
+    var amalgams = tierEntry.amalgams
+    var duration = tierEntry.duration
+    var rocketChance = tierEntry.rocketChance
+    var EUt = tierEntry.EUt
+
+    dimensions.forEach(function(dimEntry) {
+        var dimId = dimEntry.id
+        var minTier = dimEntry.minTier
+        var notConsumable = dimEntry.notConsumable
+
+        if (tier < minTier) return
+
+        GTM.interstellar_miner('interstellar_' + dimId + '_t' + tier)
+            .notConsumable(notConsumable)
+            .chancedInput('1x ' + rocket, rocketChance, 0)
+            .itemInputs(tier + 'x gtceu:tungsten_grinding_head')
+            .inputFluids('gtceu:harmonical_fuel 2500')
+            .itemOutputs(amalgams + 'x gtceu:' + dimId + '_ore_amalgam')
+            .duration(duration)
+            .EUt(EUt)
+    })
+})
+GTM.mixer('harmonical_fuel')
+.itemInputs('9x gtceu:resonance_dust')
+.inputFluids('gtceu:dinitrogen_trioxide 2000', 'gtceu:dimethylhydrazine 2000')
+.outputFluids('gtceu:harmonical_fuel 3000')
+.duration(120)
+.EUt(2048)
+
+GTM.combustion_generator('harmonical_fuel')
+.inputFluids("gtceu:harmonical_fuel 1")
+.duration(1200)
+.EUt(-512)
+
+GTM.electric_blast_furnace('naquadrium_boride_separation')
+    .itemInputs('gtceu:naquadrium_boride_dust')
+    .inputFluids('gtceu:chlorine 3000')
+    .itemOutputs('gtceu:hot_naquadrium_ingot')
+    .outputFluids('gtceu:boron_trichloride 1000')
+    .blastFurnaceTemp(400)
+    .duration(100)
+    .EUt(1920)
+
+GTM.electric_blast_furnace('enriched_naquadrium_boride_separation')
+    .itemInputs('gtceu:enriched_naquadrium_boride_dust')
+    .inputFluids('gtceu:chlorine 3000')
+    .itemOutputs('gtceu:hot_enriched_naquadrium_ingot')
+    .outputFluids('gtceu:boron_trichloride 1000')
+    .blastFurnaceTemp(400)
+    .duration(100)
+    .EUt(1920)
+
+GTM.phase_alternator('hypothermic_helium-3_plasma')
+.inputFluids('gtceu:taint 100000', 'gtceu:helium_3 10000')
+.outputFluids('gtceu:heat_treated_taint 100000', 'gtceu:hypothermic_helium_3_plasma 100')
+.duration(20)
+.EUt(8192)
+
+GTM.centrifuge('arcane_essence_to_dust')
+.itemInputs('4x irons_spellbooks:arcane_essence')
+.itemOutputs('4x gtceu:arcane_dust', 'irons_spellbooks:mithril_scrap')
+.duration(20)
+.EUt(128)
+
+GTM.alloy_smelter('arcane_dust_to_essence')
+.itemInputs('4x gtceu:arcane_dust', 'irons_spellbooks:mithril_scrap')
+.itemOutputs('4x irons_spellbooks:arcane_essence')
+.duration(20)
+.EUt(128)
+
+GTM.brewery('irons_spellbooks_compat/common_ink')
+.inputFluids('gtceu:black_dye 1000')
+.itemInputs('#forge:dusts/arcane')
+.outputFluids('irons_spellbooks:common_ink 750')
+.duration(20)
+.EUt(32)
+
+GTM.brewery('irons_spellbooks_compat/uncommon_ink')
+.inputFluids('irons_spellbooks:uncommon_ink  1000')
+.itemInputs('copper_ingot')
+.outputFluids('irons_spellbooks:uncommon_ink 750')
+.duration(20)
+.EUt(64)
+
+GTM.brewery('irons_spellbooks_compat/rare_ink')
+.inputFluids('irons_spellbooks:uncommon_ink  1000')
+.itemInputs('iron_ingot')
+.outputFluids('irons_spellbooks:rare_ink 750')
+.duration(20)
+.EUt(128)
+
+GTM.brewery('irons_spellbooks_compat/epic_ink')
+.inputFluids('irons_spellbooks:rare_ink  1000')
+.itemInputs('gold_ingot')
+.outputFluids('irons_spellbooks:epic_ink 750')
+.duration(20)
+.EUt(256)
+
+GTM.brewery('irons_spellbooks_compat/legendar_ink')
+.inputFluids('irons_spellbooks:epic_ink  1000')
+.itemInputs('amethyst_shard')
+.outputFluids('irons_spellbooks:legendary_ink 750')
+.duration(20)
+.EUt(512)
 })

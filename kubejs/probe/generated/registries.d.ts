@@ -233,27 +233,27 @@ declare namespace Registry {
         create(id: string, type: "basic"): Internal.BasicBrewJS$Builder;
         create(id: string): Internal.BasicBrewJS$Builder;
     }
-    class FanProcessingType extends Internal.RegistryEventJS<any> {
-    }
-    class DisplayTarget extends Internal.RegistryEventJS<any> {
-    }
-    class ArmInteractionPointType extends Internal.RegistryEventJS<any> {
-    }
     class MountedFluidStorageType extends Internal.RegistryEventJS<any> {
-    }
-    class PotatoProjectileBlockHitAction extends Internal.RegistryEventJS<any> {
-    }
-    class ItemAttributeType extends Internal.RegistryEventJS<any> {
     }
     class PotatoProjectileRenderMode extends Internal.RegistryEventJS<any> {
     }
     class ContraptionType extends Internal.RegistryEventJS<any> {
     }
+    class FanProcessingType extends Internal.RegistryEventJS<any> {
+    }
+    class ItemAttributeType extends Internal.RegistryEventJS<any> {
+    }
     class MountedItemStorageType extends Internal.RegistryEventJS<any> {
     }
-    class DisplaySource extends Internal.RegistryEventJS<any> {
+    class ArmInteractionPointType extends Internal.RegistryEventJS<any> {
+    }
+    class PotatoProjectileBlockHitAction extends Internal.RegistryEventJS<any> {
+    }
+    class DisplayTarget extends Internal.RegistryEventJS<any> {
     }
     class PotatoProjectileEntityHitAction extends Internal.RegistryEventJS<any> {
+    }
+    class DisplaySource extends Internal.RegistryEventJS<any> {
     }
     class Keytypes extends Internal.RegistryEventJS<any> {
     }
@@ -301,26 +301,32 @@ declare namespace Registry {
     }
     class StructureModifierSerializers extends Internal.RegistryEventJS<any> {
     }
-    class StructureRepaletters extends Internal.RegistryEventJS<any> {
+    class Schools extends Internal.RegistryEventJS<any> {
     }
-    class BiomeSurface extends Internal.RegistryEventJS<any> {
-    }
-    class ModdedBiomeSlices extends Internal.RegistryEventJS<any> {
-    }
-    class StructureModifier extends Internal.RegistryEventJS<any> {
-    }
-    class PotatoProjectileType extends Internal.RegistryEventJS<any> {
-    }
-    class BiomeModifier extends Internal.RegistryEventJS<any> {
+    class Spells extends Internal.RegistryEventJS<any> {
     }
     class MapMarkers extends Internal.RegistryEventJS<any> {
     }
     class BiomeLayer extends Internal.RegistryEventJS<any> {
     }
+    class BiomeModifier extends Internal.RegistryEventJS<any> {
+    }
     class TemplatePoolExtension extends Internal.RegistryEventJS<any> {
+    }
+    class ModdedBiomeSlices extends Internal.RegistryEventJS<any> {
+    }
+    class UpgradeOrbType extends Internal.RegistryEventJS<any> {
+    }
+    class SurfaceRuleSet extends Internal.RegistryEventJS<any> {
+    }
+    class BiomeSurface extends Internal.RegistryEventJS<any> {
+    }
+    class StructureModifier extends Internal.RegistryEventJS<any> {
+    }
+    class StructureRepaletters extends Internal.RegistryEventJS<any> {
     }
     class SoftFluids extends Internal.RegistryEventJS<any> {
     }
-    class SurfaceRuleSet extends Internal.RegistryEventJS<any> {
+    class PotatoProjectileType extends Internal.RegistryEventJS<any> {
     }
 }

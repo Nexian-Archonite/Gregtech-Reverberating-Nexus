@@ -61,12 +61,6 @@ ServerEvents.recipes(event => {
         'kubejs:primitive_glue_tube'
     ]).damageIngredient('kubejs:primitive_glue_tube')
 
-event.shaped(
-    'gtceu:wooden_bonka_plonk_plate', [
-        'SSS'
-    ], {
-        S: '#minecraft:wooden_slabs'
-    })
 
     event.shaped(
     'gtceu:treated_wood_plate', [
@@ -397,42 +391,10 @@ event.shaped('gtceu:primitive_coking_array', [
 ], {
 B: 'gtceu:coke_oven_bricks',
 H: '#forge:tools/hammers',
-D: 'gtceu:bronze_drum',
+D: 'gtceu:wood_drum',
 C: 'gtceu:coke_oven',
 W: '#forge:tools/wrenches'
 })
-
-event.shaped('gtceu:primitive_coking_array_1', [
-'  W',
-' A ',
-'H  '
-], {
-W: '#forge:tools/wrenches',
-H: '#forge:tools/hammers',
-A: 'gtceu:primitive_coking_array'
-})
-
-event.shaped('gtceu:primitive_coking_array_2', [
-'HAW'
-], {
-W: '#forge:tools/wrenches',
-H: '#forge:tools/hammers',
-A: 'gtceu:primitive_coking_array_1'
-})
-
-event.shaped('gtceu:primitive_coking_array_3', [
-'H  ',
-' A ',
-'  W'
-], {
-W: '#forge:tools/wrenches',
-H: '#forge:tools/hammers',
-A: 'gtceu:primitive_coking_array_2'
-})
-
-event.shapeless('gtceu:primitive_coking_array', ['gtceu:primitive_coking_array_1'])
-event.shapeless('gtceu:primitive_coking_array', ['gtceu:primitive_coking_array_2'])
-event.shapeless('gtceu:primitive_coking_array', ['gtceu:primitive_coking_array_3'])
 // G - R - E - G - T - E - C - H from here
 
 
@@ -561,13 +523,6 @@ GTM.centrifuge(('unpure_source_purification'))
 .EUt(128)
 .duration(40)
 
-GTM.assembler(('basic_circuit_board'))
-.itemInputs('4x gtceu:copper_foil', 'gtceu:wooden_bonka_plonk_plate')
-.inputFluids(Fluid.of('gtceu:glue 100'))
-.itemOutputs('gtceu:resin_printed_circuit_board')
-.EUt(28)
-.duration(100)
-
 GTM.macerator(('sky_dust'))
 .itemInputs('ae2:sky_stone_block')
 .itemOutputs('ae2:sky_dust')
@@ -689,7 +644,11 @@ GTM.alloy_smelter(('andesite_alloy'))
 .duration(20)
 .EUt(64)
 
-
+GTM.compressor(('compress_plate_dust_wood'))
+.itemInputs('gtceu:wood_dust')
+.itemOutputs('gtceu:wood_plate')
+.duration(200)
+.EUt(2)
 
 const assemblymachines = ['assembler', 'bender', 'centrifuge', 'electrolyzer', 'extruder', 'forming_press', 'lathe', 'mixer', 'ore_washer', 'sifter', 'thermal_centrifuge', 'wiremill', 'macerator', 'autoclave']
 assemblymachines.forEach((machine) => {
@@ -1146,8 +1105,6 @@ PhosphateRecipes.forEach(recipe => {
     if (recipe.fuel !== 'gtceu:coke_gem' && recipe.fuel !== 'minecraft:charcoal') {builder.EUt(8)}
   })
 })
-
-
 
 })
 

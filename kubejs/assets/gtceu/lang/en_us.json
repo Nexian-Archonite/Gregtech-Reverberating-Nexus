@@ -274,7 +274,7 @@
     "material.gtceu.alkalized_mechanical_sludge": "§4Alkalized Mechanical Sludge",
     "material.gtceu.mechanical_concentrate": "§4Mechanical Concentrate",
 
-    "material.gtceu.resonite_ore_waste": "8Resonite Ore Waste",
+    "material.gtceu.resonite_ore_waste": "§8Resonite Ore Waste",
     "material.gtceu.resonite_slurry": "§5Resonite Slurry",
     "material.gtceu.resonite_filter_cake": "§5Resonite Filter Cake",
     "material.gtceu.filtered_resonite_solution": "§5Filtered Resonite Solution",
@@ -297,6 +297,32 @@
     "material.gtceu.blood_plasma": "§6Blood Plasma",
     "material.gtceu.blood_proteins": "§eBlood Proteins",
     "material.gtceu.artificial_blood": "§4Artificial Blood",
+    "material.gtceu.raw_ascendine": "§dRaw Ascendine",
+    "material.gtceu.ascendine": "§dAscendine",
+    "material.gtceu.transcending_ascendine": "§5Transcending Ascendine",
+    "material.gtceu.transcendentine": "§5Transcendentine",
+    "material.gtceu.arcane": "§5Arcane",
+    "material.gtceu.ferroarcane": "§5Ferroarcane",
+    "material.gtceu.hypothermic_helium_3_plasma": "§eHypothermic Helium 3",
+    "material.gtceu.harmonical_fuel": "§dHarmonical Fuel",
+
+    "material.gtceu.cupronickel": "§6Cupronickel",
+    "material.gtceu.kanthal": "§bKanthal",
+    "material.gtceu.nichrome": "§dNichrome",
+    "material.gtceu.rtm_alloy": "§9RTM Alloy",
+    "material.gtceu.hssg": "§3HSS-G",
+    "material.gtceu.naquadah": "§7Naquadah",
+    "material.gtceu.trinium": "§dTrinium",
+    "material.gtceu.tritanium": "§4Tritanium",
+
+    "block.gtceu.cupronickel_coil_block": "§6Cupronickel",
+    "block.gtceu.kanthal_coil_block": "§bKanthal",
+    "block.gtceu.nichrome_coil_block": "§dNichrome",
+    "block.gtceu.rtm_alloy_coil_block": "§9RTM Alloy",
+    "block.gtceu.hssg_coil_block": "§3HSS-G",
+    "block.gtceu.naquadah_coil_block": "§7Naquadah",
+    "block.gtceu.trinium_coil_block": "§dTrinium",
+    "block.gtceu.tritanium_coil_block": "§4Tritanium",
 
 
 
@@ -360,6 +386,8 @@
     "gtceu.ore_processing_plant": "6PPrimitive Ore Processor",
     "gtceu.electric_ore_processing_plant": "§7Ore Processing Factory",
     "gtceu.plant_ore_processing": "§7Advanced Processing Plant",
+    "gtceu.primitive_coking_array": "§6Primitive Coking Array",
+    "gtceu.interstellar_miner": "§2Interstellar Miner",
     "block.gtceu.echo_imbuement_chamber": "§1Echonite Imbuement Chamber",
     "block.gtceu.primitive_alloyment_kiln": "§6Primitive Alloyment Kiln",
     "block.gtceu.effervescent_echoite_exile": "§1Effervescent Echonite Exile",
@@ -383,6 +411,8 @@
     "block.gtceu.primitive_processing_factory": "§6Primitive Processing Factory",
     "block.gtceu.ore_processing_factory": "§7Ore Processing Factory",
     "block.gtceu.ore_processing_plant": "§7Ore Processing Plant",
+    "block.gtceu.primitive_coking_array": "§6Primitive Coking Array",
+    "block.gtceu.interstellar_miner": "§2Interstellar Miner",
 
     
     "block.gtceu.steel_gearbox": "§bNexus Steel §rGearbox Casing",

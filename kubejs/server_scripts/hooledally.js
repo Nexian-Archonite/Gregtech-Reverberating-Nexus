@@ -1,18 +1,22 @@
 ServerEvents.recipes(event => {
 
-const RegexList =/^gtceu:(shaped|assembler|assembly_line)\/(ring_.*|small_gear_.*|drill_head_.*|tiny_dust_.*|screwdriver_.*|plate_.*|screwdriver_.*|small_dust_.*|stick_.*|chainsaw_.*|plate_.*|nugget_.*|rotor_.*|spring_.*|foil_.*|bolt_.*|block_.*|gear_.*|fine_wire_.*|screw_.*|buzzsaw_.*|turbine_.*|wrench_.*|frame_.*|cover_.*_wire_gt_.*|(tiny|small|medium|large|huge|quadruple|nonuple)_.*_pipe|fluid_cell_.*|assemble_.*|coil_.*|scythe_.*|pickaxe_.*|shovel_.*|axe_.*|file_.*|wire_cutter_.*|_.*_hammer_.*|saw_.*|spade_.*|sword_.*|knife_.*|butchery_.*|crowbar_.*|hoe_.*|.*_wire_.*|wetware_.*)$/
+const RegexList =/^gtceu:(shaped|assembler|assembly_line)\/(ring_.*|small_gear_.*|drill_head_.*|tiny_dust_.*|plate_.*|screwdriver_.*|small_dust_.*|stick_.*|chainsaw_.*|plate_.*|nugget_.*|rotor_.*|spring_.*|foil_.*|bolt_.*|block_.*|gear_.*|fine_wire_.*|screw_.*|buzzsaw_.*|turbine_.*|wrench_.*|frame_.*|cover_.*_wire_gt_.*|(tiny|small|medium|large|huge|quadruple|nonuple)_.*_pipe|fluid_cell_.*|assemble_.*|coil_.*|scythe_.*|pickaxe_.*|shovel_.*|axe_.*|file_.*|wire_cutter_.*|_.*_hammer_.*|saw_.*|spade_.*|sword_.*|knife_.*|butchery_.*|crowbar_.*|hoe_.*|.*_wire_.*|wetware_.*)$/
 const RecTyp = ["gtceu:assembler", 'gtceu:assembly_line', 'gtceu:shaped', 'crafting_shaped']
 
 const itemTypes = [
     'rod', 'round', 'plate', 'gear', 'rotor', 'frame', 'ring', 'bolt', 'screw', 'foil',
     'tiny_fluid_pipe', 'small_fluid_pipe', 'normal_fluid_pipe', 'large_fluid_pipe', 'huge_fluid_pipe',
+    'single_cable'
 ]
 
 const prefixedTypes = [
-    'long_{}_rod', 'small_{}_gear', 'fine_{}_wire'
+    'long_{}_rod', 'small_{}_gear', 'fine_{}_wire', 'double_{}_plate'
 ]
 
+console.log("tierReplacements:", JSON.stringify(global.tierReplacements))
+console.log("first entry test:", Object.entries(global.tierReplacements)[0])
 
+const tierReplacements = global.tierReplacements
 Object.entries(tierReplacements).forEach(([inputs, replacement]) => {
         // Handle standard items: gtceu:{material}_{type}
         itemTypes.forEach(type => {
@@ -66,7 +70,6 @@ event.replaceInput(
     "gtceu:nexus_steel_bolt"
 )
 
-/*
 event.replaceInput(
     {id: 'gtceu:shaped/steam_miner_bronze'},
     "gtceu:bronze_normal_fluid_pipe",
@@ -86,23 +89,11 @@ event.replaceInput(
 )
 
 event.replaceInput(
-    {not: {id: 'gtceu:shaped/quadruple_bronze_pipe'}, not: {id: /^gtceu:shaped\/.*_bronze_pipe/}, type: 'crafting_shaped', input: 'gtceu:bronze_small_fluid_pipe' },
-    'gtceu:bronze_small_fluid_pipe',
-    'gtceu:igneous_bronze_small_fluid_pipe'
-)
-
-event.replaceInput(
     {id: 'gtceu:assembler/casing_aluminium_frostproof'},
     'gtceu:aluminium_frame',
     'gtceu:echolumium_frame'
 )
 
-event.replaceInput(
-    {id: 'gtceu:assembler/casing_aluminium_frostproof'},
-    'gtceu:aluminium_plate',
-    'gtceu:echolumium_plate'
-)
-*/
 
 event.replaceInput(
     {id: 'ae2:inscriber/silicon_print'},
@@ -310,50 +301,6 @@ event.replaceOutput(
     'gtceu:energium_dust',
     'gtceu:energite_dust'
 )
-
-event.replaceInput(
-    {id: 'gtceu:shaped/gear_wood'},
-    'gtceu:wood_plate',
-    'gtceu:wooden_bonka_plonk_plate'
-)
-
-event.replaceInput(
-    {id: 'gtceu:shaped/powderbarrel'},
-    'gtceu:wood_plate',
-    'gtceu:wooden_bonka_plonk_plate'
-)
-
-event.replaceInput(
-    {id: 'gtceu:shaped/ulv_machine_hull'},
-    'gtceu:wood_plate',
-    'gtceu:wooden_bonka_plonk_plate'
-)
-
-event.replaceInput(
-    {id: 'gtceu:shaped/opv_machine_hull'},
-    'gtceu:wood_plate',
-    'gtceu:wooden_bonka_plonk_plate'
-)
-
-event.replaceInput(
-    {id: 'gtceu:shaped/max_machine_hull'},
-    'gtceu:wood_plate',
-    'gtceu:wooden_bonka_plonk_plate'
-)
-
-
-
-event.replaceOutput(
-    {},
-    'gtceu:wood_plate',
-    'gtceu:wooden_bonka_plonk_plate'
-)
-event.recipes.gtceu.compressor(('compress_plate_dust_wood'))
-.itemInputs('gtceu:wood_dust')
-.itemOutputs('gtceu:wooden_bonka_plonk_plate')
-.duration(399)
-.EUt(2)
-
 
 event.replaceOutput(
     {output: 'gtceu:tiny_magnetic_nexus_steel_dust'},

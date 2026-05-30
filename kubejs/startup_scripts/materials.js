@@ -85,6 +85,14 @@ GTCEuStartupEvents.registry("gtceu:element", event => {
     event.create('uranium_233')
     .isIsotope(true)
     .symbol('U²³³')
+
+    event.create('arcane')
+    .symbol('ÆΨ')
+
+    event.create('transcendentine')
+    .protons(198)
+    .neutrons(228)
+    .symbol('ℵi')
 })
 
 GTCEuStartupEvents.registry('gtceu:material', event => {
@@ -433,8 +441,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     .blastTemp(4450, "high", GTValues.VA[GTValues.IV], 600)
 
     event.create('tainted_zircalloy')
-    .components('83x zirconium', '10x hafnium','2x titanium', '2x dysprosium','1x carbon', '1x chromium', '1x taint')
-    .formula('ZrHf(TiDyCCrTn)')
+    .components('93x zirconium','2x titanium', '2x dysprosium','1x carbon', '1x chromium', '1x taint')
     .ingot()
     .iconSet(GTMaterialIconSet.METALLIC)
     .liquid(2200)
@@ -619,7 +626,7 @@ event.create('sublimation_residue')
         .color(0x99ccff).iconSet(GTMaterialIconSet.METALLIC)
         .liquid(1300)
         .secondaryColor(0x0066cc)
-        .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear)
+        .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, fine_wire)
         .blastTemp(1400, "low", GTValues.VA[GTValues.LV], 450)
         .fluidPipeProperties(1300, 75, true, true, true, false)
         .polarizesInto('magnetic_nexus_steel')
@@ -1419,12 +1426,49 @@ event.create('crystal_methamphetamine')
     .ignoredTagPrefixes([TagPrefix.dustSmall, TagPrefix.dustTiny])
     .flags(no_decomp)
 
-// return to shitpostia
-event.create('wooden_bonka_plonk')
-    .ingot()
-    .flags(plates)
-    .ignoredTagPrefixes([TagPrefix.dustSmall, TagPrefix.dustTiny, TagPrefix.ingot, TagPrefix.plateDouble, TagPrefix.nugget, TagPrefix.block, TagPrefix.dust])
-    .color(0xb69566).iconSet(WOOD)
+// return to non-meth
+
+event.create('arcane')
+    .element('arcane')
+    .dust()
+    .color(0x2E1A6B)
+    .flags(no_decomp)
+
+event.create('ferroarcane')
+    .components('3x arcane', '2x iron')
+    .color(0x564D76)
+    .dust()
+
+event.create('hypothermic_helium_3_plasma')
+    .element('helium_3')
+    .color(0xfdffc7)
+    .liquid(1)
+
+event.create('raw_ascendine')
+    .element('transcendentine')
+    .color(0x5C4A7F)
+    .dust()
+
+event.create('ascendine')
+    .element('transcendentine')
+    .color(0x624888)
+    .dust()
+
+event.create('transcending_ascendine')
+    .element('transcendentine')
+    .color(0x673090)
+    .dust()
+
+event.create('transcendentine')
+    .element('transcendentine')
+    .color(0x6B2D8B)
+    .dust()
+    .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, no_decomp)
+
+event.create('harmonical_fuel')
+    .components('3x resonance', '4x rocket_fuel')
+    .color(0x9E84A5)
+    .liquid(400)
 
 
     //material changes go brrbrrbrbrb
@@ -1586,6 +1630,12 @@ const yumyumrods = ["uranium_235_oxide", "uranium_oxide", "plutonium_241_oxide",
     event.create(`gtceu:chopped_mox_fuel_rod`)
     .textureJson({ layer0: `gtceu:item/rod/chopped/chopped_mixed_oxide_fuel_rod`})
     .displayName('Chopped MOX Fuel Rod')
+
+const oreamalgamcreation3000 = ['overworld', 'nether', 'end', 'undergarden', 'moon', 'mars', 'mercury', 'venus', 'glacio']
+oreamalgamcreation3000.forEach(name => {
+event.create(`gtceu:${name}_ore_amalgam`)
+.textureJson({ layer0: `gtceu:item/ore_amalgam/${name}_ore_amalgam`})
+})
 })
 
 
@@ -1883,32 +1933,22 @@ event
     .property(BlockProperties.AXIS)
     .placementState(state => { state.setValue(BlockProperties.AXIS, state.clickedFace.axis) })
 
-event
+/* event
     .create('primitive_table')
     .model('kubejs:block/primitive_table')
     .hardness(4)
     .tagBlock('mineable/axe')
     .tagBlock('mineable/pickaxe')
     .tagBlock('cucumber:mineable/paxel')
-    .defaultCutout()
+    .defaultCutout() */
 
 event
     .create('gtceu:undergarden_marker')
 })
 
 ItemEvents.modification(event => {
-    event.modify('gtceu:uranium_ingot', item => {
-        item.foodProperties = food => {
-            food.hunger(2)
-            food.saturation(360000)
-            food.effect('minecraft:wither', 400, 4, 0.5)
-            food.effect('minecraft:nausea', 400, 4, 0.5)
-            food.effect('minecraft:poison', 400, 4, 1)
-            food.effect('minecraft:weakness', 800, 16, 1)
-        }
     event.modify('minecraft:experience_bottle', item => {
         item.craftingRemainder = Item.of('glass_bottle')
-    })
     })
 })
 

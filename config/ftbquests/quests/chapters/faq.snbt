@@ -4,6 +4,14 @@
 	filename: "faq"
 	group: ""
 	id: "4D2152BEB6540CA7"
+	images: [{
+		height: 8.0d
+		image: "gtceu:textures/gui/packicon.png"
+		rotation: 0.0d
+		width: 8.0d
+		x: 0.0d
+		y: -5.0d
+	}]
 	order_index: 0
 	quest_links: [ ]
 	quests: [
