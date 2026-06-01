@@ -596,7 +596,7 @@ GTM.mixer(('nexus_steel_mixer'))
 .duration(40)
 
 GTM.alloying_kiln(('mes_ingot'))
-.itemInputs('13x gtceu:source_dust', '8x gtceu:mana_dust', '3x gtceu:igneous_bronze_dust')
+.itemInputs('13x gtceu:source_dust', '8x gtceu:mana_dust', '6x gtceu:ferroarcane_dust', '3x gtceu:igneous_bronze_dust')
 .itemOutputs('24x gtceu:wizarding_steel_dust')
 .EUt(64)
 .duration(40)
@@ -1106,6 +1106,17 @@ PhosphateRecipes.forEach(recipe => {
   })
 })
 
+GTM.alloying_kiln('electrum')
+.itemInputs('2x gtceu:silver_ingot', '2x gold_ingot')
+.itemOutputs('3x gtceu:electrum_ingot')
+.duration(100)
+.EUt(4)
+
+GTM.alloying_kiln('invar')
+.itemInputs('3x iron_ingot', 'gtceu:nickel_ingot')
+.itemOutputs('3x gtceu:invar_ingot')
+.duration(100)
+.EUt(4)
 })
 
 GTCEuServerEvents.fluidVeins(event => {

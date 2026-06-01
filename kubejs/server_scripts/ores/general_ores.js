@@ -332,4 +332,149 @@ event.add("gtceu:berzelianite_vein", vein => {
         .density(0.5)
         .radius(4))
 })
+
+
+
+//MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARS. you're not you when yrou'e hangry
+
+// Vein 1: Oxidized Iron Flats
+event.add("gtceu:martian_iron_flats", vein => {
+    vein.weight(40)
+    vein.clusterSize(30)
+    vein.density(0.30)
+    vein.discardChanceOnAirExposure(0)
+
+    vein.layer('mars')
+    vein.dimensions('ad_astra:mars')
+
+    vein.heightRangeUniform(20, 80)
+
+    vein.layeredVeinGenerator(generator => generator
+        .buildLayerPattern(pattern => pattern
+            .layer(l => l.weight(3).mat(GTMaterials.get("jarosite")).size(2, 3))
+            .layer(l => l.weight(3).mat(GTMaterials.get("wustite")).size(2, 3))
+            .layer(l => l.weight(2).mat(GTMaterials.get("ulvospinel")).size(1, 2))
+        )
+    )
+
+    vein.surfaceIndicatorGenerator(indicator => indicator
+        .surfaceRock(GTMaterials.get("jarosite"))
+        .placement('above')
+        .density(0.5)
+        .radius(6)
+    )
+})
+
+// Vein 2: Evaporite Phosphate Beds
+event.add("gtceu:martian_phosphate_beds", vein => {
+    vein.weight(25)
+    vein.clusterSize(22)
+    vein.density(0.22)
+    vein.discardChanceOnAirExposure(0)
+
+    vein.layer('mars')
+    vein.dimensions('ad_astra:mars')
+
+    vein.heightRangeUniform(5, 50)
+
+    vein.layeredVeinGenerator(generator => generator
+        .buildLayerPattern(pattern => pattern
+            .layer(l => l.weight(3).mat(GTMaterials.get("fluorapatite")).size(2, 3))
+            .layer(l => l.weight(2).mat(GTMaterials.get("merrillite")).size(1, 2))
+            .layer(l => l.weight(1).mat(GTMaterials.get("kernite")).size(0, 1))
+        )
+    )
+
+    vein.surfaceIndicatorGenerator(indicator => indicator
+        .surfaceRock(GTMaterials.get("fluorapatite"))
+        .placement('above')
+        .density(0.3)
+        .radius(5)
+    )
+})
+
+// Vein 3: Meteoritic Impact Craters
+event.add("gtceu:martian_meteoritic_pgm", vein => {
+    vein.weight(10)
+    vein.clusterSize(15)
+    vein.density(0.15)
+    vein.discardChanceOnAirExposure(0)
+
+    vein.layer('mars')
+    vein.dimensions('ad_astra:mars')
+
+    vein.heightRangeUniform(10, 60)
+
+    vein.layeredVeinGenerator(generator => generator
+        .buildLayerPattern(pattern => pattern
+            .layer(l => l.weight(3).mat(GTMaterials.get("taenite")).size(2, 3))
+            .layer(l => l.weight(2).mat(GTMaterials.get("sperrylite")).size(1, 2))
+            .layer(l => l.weight(2).mat(GTMaterials.get("laurite")).size(1, 2))
+            .layer(l => l.weight(1).mat(GTMaterials.get("rhodite")).size(0, 1))
+        )
+    )
+
+    vein.surfaceIndicatorGenerator(indicator => indicator
+        .surfaceRock(GTMaterials.get("taenite"))
+        .placement('above')
+        .density(0.2)
+        .radius(4)
+    )
+})
+
+// Vein 4: Hydrothermal Sulfide Veins
+event.add("gtceu:martian_hydrothermal_sulfides", vein => {
+    vein.weight(15)
+    vein.clusterSize(18)
+    vein.density(0.18)
+    vein.discardChanceOnAirExposure(0)
+
+    vein.layer('mars')
+    vein.dimensions('ad_astra:mars')
+
+    vein.heightRangeUniform(5, 40)
+
+    vein.layeredVeinGenerator(generator => generator
+        .buildLayerPattern(pattern => pattern
+            .layer(l => l.weight(3).mat(GTMaterials.Molybdenite).size(2, 3))
+            .layer(l => l.weight(2).mat(GTMaterials.Sphalerite).size(1, 2))
+            .layer(l => l.weight(1).mat(GTMaterials.get("roquesite")).size(0, 1))
+            .layer(l => l.weight(1).mat(GTMaterials.get("gallite")).size(0, 1))
+        )
+    )
+
+    vein.surfaceIndicatorGenerator(indicator => indicator
+        .surfaceRock(GTMaterials.get("molybdenite"))
+        .placement('above')
+        .density(0.25)
+        .radius(4)
+    )
+})
+
+// Vein 5: Deep Pegmatite Intrusions
+event.add("gtceu:martian_pegmatite_intrusions", vein => {
+    vein.weight(8)
+    vein.clusterSize(12)
+    vein.density(0.12)
+    vein.discardChanceOnAirExposure(0)
+
+    vein.layer('mars')
+    vein.dimensions('ad_astra:mars')
+
+    vein.heightRangeUniform(5, 30)
+
+    vein.layeredVeinGenerator(generator => generator
+        .buildLayerPattern(pattern => pattern
+            .layer(l => l.weight(3).mat(GTMaterials.get("phenakite")).size(2, 3))
+            .layer(l => l.weight(2).mat(GTMaterials.get("dilithium")).size(1, 2))
+        )
+    )
+
+    vein.surfaceIndicatorGenerator(indicator => indicator
+        .surfaceRock(GTMaterials.get("dilithium"))
+        .placement('above')
+        .density(0.15)
+        .radius(3)
+    )
+})
 })

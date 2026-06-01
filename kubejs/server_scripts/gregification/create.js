@@ -5,7 +5,7 @@ ServerEvents.tags("item", event => {
 ServerEvents.recipes(event => {
 const CRT = event.recipes.create
 const GTM = event.recipes.gtceu
-CRT.mixing('6x gtceu:igneous_bronze_ingot', ['3x gtceu:copper_dust', '2x gtceu:andesite_alloy_dust', 'gtceu:tin_dust']).heated()
+CRT.mixing('6x gtceu:igneous_bronze_ingot', ['3x gtceu:copper_dust', '2x gtceu:andesite_alloy_dust', 'gtceu:tin_dust', 'ars_nouveau:fire_essence']).superheated()
 
 CRT.mixing(Fluid.of('gtceu:soldering_alloy 540'), ['3x gtceu:tin_dust', '6x gtceu:small_lead_dust', '2x gtceu:small_antimony_dust']).heated()
 
@@ -96,6 +96,27 @@ GTM.cutter(("rose_quartz_polishing_water"))
 .EUt(16)
 .duration(20)
 
+GTM.macerator('rose_quartz_unpolishing')
+.itemInputs('create:polished_rose_quartz')
+.itemOutputs('create:rose_quartz')
+.EUt(16)
+.duration(20)
+
+GTM.macerator('rose_quartz_untiling')
+.itemInputs('2x create:rose_quartz_tiles')
+.itemOutputs('create:polished_rose_quartz')
+.EUt(16)
+.duration(20)
+
+GTM.chemical_reactor('rose_quartz_recycling')
+.inputFluids('gtceu:acetic_acid 100')
+.itemInputs('create:rose_quartz')
+.itemOutputs('minecraft:quartz')
+.outputFluids('gtceu:redstone 288', 'gtceu:acetic_acid 50')
+.EUt(16)
+.duration(20)
+
+
 event.shaped("create:electron_tube",
 [
     "BTB",
@@ -145,7 +166,7 @@ CRT.mechanical_crafting('gtceu:primitive_alloyment_kiln', [
 F: 'gtceu:firebricks',
 B: 'gtceu:bronze_frame',
 A: 'ars_nouveau:air_essence',
-D: 'gtceu:double_bronze_plate',
+D: 'gtceu:double_igneous_bronze_plate',
 E: 'ars_nouveau:earth_essence',
 S: "gtceu:lp_steam_alloy_smelter",
 I: "ars_nouveau:fire_essence",
@@ -162,7 +183,7 @@ CRT.mechanical_crafting('gtceu:primitive_alloyment_kiln', [
 F: 'gtceu:firebricks',
 B: 'gtceu:bronze_frame',
 A: 'ars_nouveau:air_essence',
-D: 'gtceu:double_bronze_plate',
+D: 'gtceu:double_igneous_bronze_plate',
 E: 'ars_nouveau:earth_essence',
 S: "gtceu:hp_steam_alloy_smelter",
 I: "ars_nouveau:fire_essence",
@@ -408,7 +429,8 @@ reeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeewir
 CRT.cutting(new RegExp(`.*:${input}_plate`), `2x createaddition:${input}_wire`)
 })
 
+CRT.mixing('3x gtceu:cupronickel_ingot', ['2x copper_ingot', '2x gtceu:nickel_ingot']).heated()
 })
 
-CRT.mixing([Item.of('gtceu:phosphorus_dust'), 'water 3000'], 'gtceu:phosphoric_acid 1000').heated()
+CRT.mixing([Item.of('gtceu:phosphorus_dust'), 'water 3000'], Fluid.of('gtceu:phosphoric_acid', 1000)).heated()
 })

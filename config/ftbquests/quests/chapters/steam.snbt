@@ -141,6 +141,7 @@
 				id: "7BA24D09CE8FFC4C"
 				type: "dimension"
 			}]
+			title: "Visit the Nether"
 			x: -7.5d
 			y: 2.5d
 		}
@@ -176,8 +177,8 @@
 		}
 		{
 			dependencies: [
-				"002C43B687A4709F"
 				"376F69450B6F4587"
+				"597A5622C447C4F4"
 			]
 			id: "614269BB3A46BABE"
 			tasks: [{
@@ -251,6 +252,8 @@
 				"46D657F441D9AB4C"
 				"6D1658B0C42E82DF"
 				"2E6497AB5BF312D9"
+				"21CF9CCB54A45613"
+				"234448F6286B0F87"
 			]
 			id: "002C43B687A4709F"
 			tasks: [{
@@ -335,8 +338,8 @@
 				item: "botania:pure_daisy"
 				type: "item"
 			}]
-			x: -13.5d
-			y: -2.0d
+			x: -15.0d
+			y: -1.0d
 		}
 		{
 			dependencies: [
@@ -415,12 +418,13 @@
 				"6E4F0E920F1B1DBD"
 			]
 			id: "376F69450B6F4587"
+			optional: true
 			tasks: [{
 				id: "3150A6AB0F0ACFD3"
 				item: "gtceu:condensed_mana_dust"
 				type: "item"
 			}]
-			x: -15.5d
+			x: -19.5d
 			y: -4.0d
 		}
 		{
@@ -431,8 +435,8 @@
 				item: "create:blaze_cake"
 				type: "item"
 			}]
-			x: -15.5d
-			y: -2.0d
+			x: -18.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["1F8680BBE40C298B"]
@@ -442,8 +446,8 @@
 				item: "blasmatech:mana_bucket"
 				type: "item"
 			}]
-			x: -17.5d
-			y: -2.0d
+			x: -19.5d
+			y: -1.0d
 		}
 		{
 			dependencies: ["6FB10F6F1097A40D"]
@@ -453,7 +457,7 @@
 				item: "botania:endoflame"
 				type: "item"
 			}]
-			x: -17.5d
+			x: -19.5d
 			y: 0.5d
 		}
 		{
@@ -464,7 +468,7 @@
 				item: "botania:apothecary_default"
 				type: "item"
 			}]
-			x: -15.5d
+			x: -16.5d
 			y: 0.5d
 		}
 		{
@@ -959,6 +963,55 @@
 			}]
 			x: -2.5d
 			y: 0.5d
+		}
+		{
+			dependencies: ["002C43B687A4709F"]
+			id: "17804617E074F188"
+			tasks: [{
+				id: "12CBDDA3F5493812"
+				item: "undergarden:catalyst"
+				type: "item"
+			}]
+			x: -13.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["17804617E074F188"]
+			id: "597A5622C447C4F4"
+			tasks: [{
+				dimension: "undergarden:undergarden"
+				id: "0E3D7160EE89AB8D"
+				type: "dimension"
+			}]
+			title: "Visit the Undergarden"
+			x: -15.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["21CF9CCB54A45613"]
+			id: "234448F6286B0F87"
+			tasks: [{
+				id: "4C1A1FF032930DA3"
+				item: "gtceu:igneous_bronze_ingot"
+				type: "item"
+			}]
+			x: -13.5d
+			y: -2.5d
+		}
+		{
+			dependencies: [
+				"478493C9374C3888"
+				"321E0B7C6A9934D3"
+			]
+			hide_until_deps_complete: false
+			id: "21CF9CCB54A45613"
+			tasks: [{
+				id: "5738B33A3C867EE3"
+				item: "ars_nouveau:fire_essence"
+				type: "item"
+			}]
+			x: -16.5d
+			y: -2.0d
 		}
 	]
 	title: "Steam"

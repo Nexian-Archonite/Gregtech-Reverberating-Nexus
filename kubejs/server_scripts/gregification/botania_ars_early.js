@@ -35,6 +35,7 @@ ServerEvents.recipes(event => {
         2000,
         ["ars_nouveau:conjuration_essence", "gtceu:source_gem", "ars_nouveau:water_essence"]
     )
+    event.recipes.ars_nouveau.imbuement("gtceu:source_gem", 'ars_nouveau:fire_essence', 2000, ['create:blaze_cake', 'gunpowder', 'gtceu:oilsands_dust'])
 
     event.remove({ output: "botania:mana_pool" })
     event.remove({ output: "botania:diluted_pool"})
@@ -93,7 +94,7 @@ ServerEvents.recipes(event => {
         event.recipes.botania.mana_infusion('gtceu:elementally_purified_carbon_dust', input, 300) // 1/10th of a manasteel ingot, really dirt cheap
     })
 
-    event.replaceInput({ output: "botania:manasteel_ingot" }, "minecraft:iron_ingot", "gtceu:nexus_steel_ingot")
+    event.replaceInput({ output: "botania:manasteel_ingot" }, "minecraft:iron_ingot", "gtceu:steel_ingot")
     event.replaceOutput({ id: "botania:mana_infusion/manasteel"}, "botania:manasteel_ingot", "gtceu:manasteel_ingot")
 
     event.replaceInput({ output: "botania:manasteel_block" }, "minecraft:iron_block", "gtceu:nexus_steel_block")

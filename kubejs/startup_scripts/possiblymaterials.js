@@ -35,13 +35,13 @@ event.create("infinity")
 
     event.create('naquadrium')
     .protons(182)
-    .neutrons(378)
+    .neutrons(368)
     .halfLifeSeconds(140)
     .decayTo('trinium')
     .symbol('Qx')
 
     event.create('enriched_naquadrium')
-    .protons(170)
+    .protons(182)
     .neutrons(378)
     .halfLifeSeconds(40)
     .decayTo('naquadrium')
@@ -230,7 +230,7 @@ Object.entries(naquadriumadjacentpartsheheha).forEach(([type, chezmix]) => {
     event.create(`acidic_${type}_solution`).color(chezmix[2]).liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID))
     event.create(`${type}_waste`).color(chezmix[4]).liquid()
 
-    event.create(`${type}_boride`).color(chezmix[3]).dust().flags(no_decomp).components(`1x ${type}`, '1x boron')
+    event.create(`${type}_boride`).color(chezmix[3]).dust().flags(no_decomp, rod).components(`1x ${type}`, '1x boron')
 })
 //return to sender: ZPM alloys
 

@@ -31,7 +31,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         )
 
     event.create("energistics_assembler", "simple")
-        .tiers(GTValues.MV, GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV, GTValues.UHV)
+        .tiers(GTValues.MV, GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM)
         .definition((tier, builder) =>
             builder
                 .langValue(`${GTValues.VLVH[tier]} Energistics Assembler`)

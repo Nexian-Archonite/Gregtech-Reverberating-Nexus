@@ -383,8 +383,6 @@ const energisticsassembly = [
     ["iv", "platinum", 'luv'],
     ["luv", "vintanium", 'zpm'],
     ["zpm", "vanadium_gallium", 'uv'],
-    ["uv", "yttrium_barium_cuprate", 'uhv'],
-    ["uhv", "tritanium", 'uev'],
 ]
 energisticsassembly.forEach(([componenttier, cablematerial, circuittier]) => {
     event.shaped(`gtceu:${componenttier}_energistics_assembler`, [
@@ -403,7 +401,7 @@ energisticsassembly.forEach(([componenttier, cablematerial, circuittier]) => {
 const biomechanicalmachines = [
     ["iv", "auralloy-omega"],
     ["luv", "rhodipalladic-desnite"],
-    ["zpm", "naquadah_alloy"],
+    ["zpm", "transuranic_naquadrium"],
     ["uv", "darmstadtium"]
 ]
 
@@ -499,8 +497,8 @@ GTM.metaphysical_metallurgy_tainter(('cryosporsite_tainting'))
 //chemistry part: ii (haha get the refer- GET OUT) ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 GTM.chemical_reactor(('hydroxy'))
-.inputFluids(Fluid.of('water 1000'))
-.outputFluids(Fluid.of('gtceu:hydroxy 945'), Fluid.of('gtceu:hydrogen 55'))
+.inputFluids(Fluid.of('gtceu:hydroxy 945'), Fluid.of('gtceu:hydrogen 55'))
+.outputFluids(Fluid.of('water 1000'))
 .daytime(false)
 .duration(600)
 .EUt(512)
@@ -618,7 +616,7 @@ GTM.alloy_blast_smelter(('purified_netherite_alloyment'))
 
 //snap back to reality  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- wait nvm this is radiology or smth
 
-const yumyumrods = ["uranium_235", "uranium", "plutonium_241", "plutonium"]
+const yumyumrods = ["uranium_235", "plutonium_241", "plutonium", "thorium_uranium"]
 yumyumrods.forEach(type => {
 GTM.assembler((`${type}_fuel_rod_assembly`))
 .itemInputs('gtceu:empty_fuel_rod', `32x gtceu:${type}_dioxide_rod`, '4x kubejs:enderium_glass')
@@ -635,10 +633,10 @@ GTM.assembler((`mixed_oxide_fuel_rod_assembly`))
 .duration(400)
 .EUt(8192)
 
-GTM.assembler(('thorium_oxide_fuel_rod_assembly'))
-.itemInputs('gtceu:empty_fuel_rod', `32x gtceu:thorium_dioxide_rod`, '4x kubejs:enderium_glass')
+GTM.assembler(('enriched_naquadrium_boride_fuel_rod_assembly'))
+.itemInputs('gtceu:empty_fuel_rod', `32x gtceu:enriched_naquadrium_boride_rod`, '4x kubejs:enderium_glass')
 .inputFluids(Fluid.of('gtceu:polytetrafluoroethylene 100'))
-.itemOutputs(`gtceu:thorium_oxide_fuel_rod`)
+.itemOutputs(`gtceu:enriched_naquadrium_boride_fuel_rod`)
 .duration(400)
 .EUt(512)
 
@@ -648,15 +646,6 @@ GTM.assembler(('nuclear_reactor_assembly'))
 .itemOutputs('gtceu:nuclear_fission_reactor')
 .duration(12000)
 .EUt(2048)
-
-GTM.nuclear_fission(('uranium_238_burning'))
-.itemInputs('gtceu:uranium_oxide_fuel_rod')
-.perTick(true)
-.inputFluids(Fluid.of('gtceu:distilled_water 100'))
-.outputFluids(Fluid.of('gtceu:nuclear_steam 1700'))
-.perTick(false)
-.itemOutputs('gtceu:spent_uranium_oxide_fuel_rod')
-.duration(20000)
 
 GTM.nuclear_fission(('uranium_235_burning'))
 .itemInputs('gtceu:uranium_235_oxide_fuel_rod')
@@ -695,22 +684,22 @@ GTM.nuclear_fission(('plutonium_241_oxide_burning'))
 .itemOutputs('gtceu:spent_plutonium_241_oxide_fuel_rod')
 .duration(556)
 
-GTM.nuclear_fission(('thorium_oxide_burning'))
-.itemInputs('gtceu:thorium_oxide_fuel_rod')
+GTM.nuclear_fission(('thorium_uranium_oxide_burning'))
+.itemInputs('gtceu:thorium_uranium_oxide_fuel_rod')
 .perTick(true)
 .inputFluids(Fluid.of('water 25'))
 .outputFluids(Fluid.of('gtceu:steam 3400'))
 .perTick(false)
-.itemOutputs('gtceu:spent_thorium_oxide_fuel_rod')
+.itemOutputs('gtceu:spent_thorium_uranium_oxide_fuel_rod')
 .duration(80000)
 
-GTM.nuclear_fission(('thorium_oxide_burning_distilled'))
-.itemInputs('gtceu:thorium_oxide_fuel_rod')
+GTM.nuclear_fission(('thorium_uranium_oxide_burning_distilled'))
+.itemInputs('gtceu:thorium_uranium_oxide_fuel_rod')
 .perTick(true)
 .inputFluids(Fluid.of('gtceu:distilled_water 50'))
 .outputFluids(Fluid.of('gtceu:steam 6800'))
 .perTick(false)
-.itemOutputs('gtceu:spent_thorium_oxide_fuel_rod')
+.itemOutputs('gtceu:spent_thorium_uranium_oxide_fuel_rod')
 .duration(60000)
 
 GTM.nuclear_turbine(('nuclear_steam'))
@@ -774,13 +763,13 @@ GTM.macerator((`mox_fuel_rod_chopping`))
 .EUt(8192)
 
 GTM.macerator((`thorium_fuel_rod_chopping`))
-.itemInputs(`gtceu:spent_thorium_oxide_fuel_rod`)
-.itemOutputs(`gtceu:chopped_thorium_oxide_fuel_rod`, 'gtceu:radioactive_fuel_cladding_scrap_dust', '2x gtceu:small_radioactive_fuel_cladding_scrap_dust')
+.itemInputs(`gtceu:spent_thorium_uranium_oxide_fuel_rod`)
+.itemOutputs(`gtceu:chopped_thorium_uranium_oxide_fuel_rod`, 'gtceu:radioactive_fuel_cladding_scrap_dust', '2x gtceu:small_radioactive_fuel_cladding_scrap_dust')
 .duration(200)
 .EUt(512)
 
 GTM.centrifuge(('thorium_fuel_rod_centrifuging'))
-.itemInputs('gtceu:chopped_thorium_oxide_fuel_rod')
+.itemInputs('gtceu:chopped_thorium_uranium_oxide_fuel_rod')
 .itemOutputs('2x gtceu:small_radioactive_fuel_cladding_scrap_dust', '16x gtceu:mixed_thorium_uranium_233_mass_dust')
 .duration(200)
 .EUt(512)
@@ -1061,6 +1050,12 @@ GTM.chemical_reactor(`${type}_oxidizing`)
 .duration(60)
 .EUt(32)
 })
+
+GTM.mixer('thorium_uranium_dioxide_mixing')
+.itemInputs('9x gtceu:thorium_dioxide_dust', 'gtceu:uranium_dioxide_dust')
+.itemOutputs('10x gtceu:thorium_uranium_dioxide_dust')
+.duration(60)
+.EUt(128)
 
 //snap back to reality
 
@@ -1349,8 +1344,8 @@ const thelisttoendalllists = {
     },
     nether: {
         ores: [
-            ['monazite', 'electrotine', 'saltpeter', 'emerald'],
-            ['thorium', 'wulfenite', 'certus_quartz', 'tetrahedrite'],
+            ['netherrack_monazite', 'netherrack_electrotine', 'netherrack_saltpeter', 'netherrack_emerald'],
+            ['netherrack_thorium', 'netherrack_wulfenite', 'netherrack_certus_quartz', 'netherrack_tetrahedrite'],
             ['netherrack_stibnite', 'netherrack_blue_zircon', 'netherrack_hafnium', 'netherrack_silicon']
         ],
         fluids: [
@@ -1388,15 +1383,29 @@ const thelisttoendalllists = {
         ]
     },
     undergarden: {
-    ores: [
-        ['berzelianite', 'clausthalite', 'tiemannite', 'nexus'],
-        ['hessite', 'altaite', 'calaverite', 'condensed_mana']
-    ],
-    fluids: [
-        'gtceu:tainted_magmatic_mineral_sludge 50000',
-        'gtceu:virulence_tainted_source 75000'
-    ]
-}
+        ores: [
+            ['depthrock_berzelianite', 'depthrock_clausthalite', 'depthrock_tiemannite', 'depthrock_nexus'],
+        [   'depthrock_hessite', 'depthrock_altaite', 'depthrock_calaverite', 'depthrock_condensed_mana']
+        ],
+        fluids: [
+            'gtceu:tainted_magmatic_mineral_sludge 50000',
+            'gtceu:virulence_tainted_source 75000'
+        ],
+    },
+    mars: {
+        ores: [
+            ['mars_jarosite', 'mars_fluorapatite', 'mars_rhodite', 'mars_dilithium'],
+            ['mars_phenakite', 'mars_kernite', 'mars_molybdenite', 'mars_martian_ostrum'],
+            ['mars_ulvospinel', 'mars_sphalerite', 'mars_merrillite', 'mars_laurite'],
+            ['mars_taenite', 'mars_roquesite', 'mars_gallite', 'mars_sperrylite']
+        ],
+        fluids: [
+            'gtceu:dilithium_zirconoaluminophosphocalcioferrisilicate 50000',
+            'gtceu:martian_bacterial_sludge 50000',
+            'gtceu:dilithium_zirconoaluminophosphocalcioferrisilicate 50000',
+            'gtceu:martian_bacterial_sludge 50000',
+        ]
+    },
 }
 
 Object.entries(thelisttoendalllists).forEach(function(dimEntry) {
@@ -1517,7 +1526,7 @@ GTM.combustion_generator('harmonical_fuel')
 .EUt(-512)
 
 GTM.electric_blast_furnace('naquadrium_boride_separation')
-    .itemInputs('gtceu:naquadrium_boride_dust')
+    .itemInputs('2x gtceu:naquadrium_boride_dust')
     .inputFluids('gtceu:chlorine 3000')
     .itemOutputs('gtceu:hot_naquadrium_ingot')
     .outputFluids('gtceu:boron_trichloride 1000')
@@ -1526,13 +1535,30 @@ GTM.electric_blast_furnace('naquadrium_boride_separation')
     .EUt(1920)
 
 GTM.electric_blast_furnace('enriched_naquadrium_boride_separation')
-    .itemInputs('gtceu:enriched_naquadrium_boride_dust')
+    .itemInputs('2x gtceu:enriched_naquadrium_boride_dust')
     .inputFluids('gtceu:chlorine 3000')
     .itemOutputs('gtceu:hot_enriched_naquadrium_ingot')
     .outputFluids('gtceu:boron_trichloride 1000')
     .blastFurnaceTemp(400)
     .duration(100)
     .EUt(1920)
+
+
+GTM.autoclave('enriched_naquadrium_boriding')
+.itemInputs('gtceu:enriched_naquadrium_dust')
+.inputFluids('gtceu:boron_trichloride 1000')
+.itemOutputs('gtceu:enriched_naquadrium_boride_dust')
+.outputFluids('gtceu:chlorine 3000')
+.duration(40)
+.EUt(8192)
+
+GTM.autoclave('naquadrium_boriding')
+.itemInputs('gtceu:naquadrium_dust')
+.inputFluids('gtceu:boron_trichloride 1000')
+.itemOutputs('gtceu:naquadrium_boride_dust')
+.outputFluids('gtceu:chlorine 3000')
+.duration(40)
+.EUt(7680)
 
 GTM.phase_alternator('hypothermic_helium-3_plasma')
 .inputFluids('gtceu:taint 100000', 'gtceu:helium_3 10000')
@@ -1552,38 +1578,518 @@ GTM.alloy_smelter('arcane_dust_to_essence')
 .duration(20)
 .EUt(128)
 
-GTM.brewery('irons_spellbooks_compat/common_ink')
+GTM.brewery('irons_spellbooks:compat/common_ink')
 .inputFluids('gtceu:black_dye 1000')
 .itemInputs('#forge:dusts/arcane')
 .outputFluids('irons_spellbooks:common_ink 750')
 .duration(20)
 .EUt(32)
 
-GTM.brewery('irons_spellbooks_compat/uncommon_ink')
-.inputFluids('irons_spellbooks:uncommon_ink  1000')
+GTM.brewery('irons_spellbooks:compat/uncommon_ink')
+.inputFluids('irons_spellbooks:common_ink  1000')
 .itemInputs('copper_ingot')
 .outputFluids('irons_spellbooks:uncommon_ink 750')
 .duration(20)
 .EUt(64)
 
-GTM.brewery('irons_spellbooks_compat/rare_ink')
+GTM.brewery('irons_spellbooks:compat/rare_ink')
 .inputFluids('irons_spellbooks:uncommon_ink  1000')
 .itemInputs('iron_ingot')
 .outputFluids('irons_spellbooks:rare_ink 750')
 .duration(20)
 .EUt(128)
 
-GTM.brewery('irons_spellbooks_compat/epic_ink')
+GTM.brewery('irons_spellbooks:compat/epic_ink')
 .inputFluids('irons_spellbooks:rare_ink  1000')
 .itemInputs('gold_ingot')
 .outputFluids('irons_spellbooks:epic_ink 750')
 .duration(20)
 .EUt(256)
 
-GTM.brewery('irons_spellbooks_compat/legendar_ink')
+GTM.brewery('irons_spellbooks:compat/legendary_ink')
 .inputFluids('irons_spellbooks:epic_ink  1000')
 .itemInputs('amethyst_shard')
 .outputFluids('irons_spellbooks:legendary_ink 750')
 .duration(20)
 .EUt(512)
+
+GTM.autoclave('arcane_dust_to_ferroarcane')
+.itemInputs('gtceu:arcane_dust')
+.inputFluids('gtceu:iron_iii_chloride 250')
+.itemOutputs('gtceu:ferroarcane_dust')
+.duration(20)
+.EUt(512)
+
+GTM.alloy_smelter('irons_spellbooks:compat/cinder_essence')
+.itemInputs('7x gtceu:ferroarcane_dust', 'gtceu:purified_netherite_dust')
+.itemOutputs('8x irons_spellbooks:cinder_essence')
+.duration(20)
+.EUt(2048)
+
+GTM.metaphysical_metallurgy_tainter('ferroarcane_to_raw_ascendine')
+.itemInputs('4x gtceu:ferroarcane_dust')
+.inputFluids('gtceu:heat_treated_taint 100', 'gtceu:hypothermic_helium_3_plasma 100', 'gtceu:resonance_plasma 100')
+.itemOutputs('5x gtceu:raw_ascendine_dust')
+.duration(20)
+.EUt(8192)
+
+GTM.metaphysical_metallurgy_tainter('raw_ascendine_to_ascendine')
+.itemInputs('4x gtceu:raw_ascendine_dust')
+.inputFluids('gtceu:chromatically_mutated_taint 100', 'gtceu:hypothermic_helium_3_plasma 100', 'gtceu:resonance_plasma 100')
+.itemOutputs('5x gtceu:ascendine_dust')
+.duration(20)
+.EUt(8192)
+
+GTM.metaphysical_metallurgy_tainter('ascendine_to_transcending_ascendine')
+.itemInputs('4x gtceu:ascendine_dust')
+.inputFluids('gtceu:alloyed_taint 100', 'gtceu:hypothermic_helium_3_plasma 100', 'gtceu:resonance_plasma 100')
+.itemOutputs('5x gtceu:transcending_ascendine_dust')
+.duration(20)
+.EUt(8192)
+
+GTM.metaphysical_metallurgy_tainter('transcending_ascendine_to_transcendentine')
+.itemInputs('4x gtceu:transcending_ascendine_dust')
+.inputFluids('gtceu:perfected_taint 100', 'gtceu:hypothermic_helium_3_plasma 100', 'gtceu:resonance_plasma 100')
+.itemOutputs('5x gtceu:transcendentine_dust')
+.duration(20)
+.EUt(8192)
+
+GTM.implosion_compressor('auralloy-omega_transcendentine_alloying')
+.itemInputs('8x gtceu:transcendentine_dust', '2x gtceu:auralloy-omega_dust', '4x gtceu:industrial_tnt')
+.itemOutputs('10x gtceu:auralloy-omega_over_transcendentine_dust')
+.duration(20)
+.EUt(8192)
+
+// Pu-239
+GTM.supercritical_fission('pu239_burning')
+    .itemInputs('gtceu:plutonium_oxide_fuel_rod')
+    .perTick(true)
+    .chancedInput('gtceu:resonite_dust', 100, 0)
+    .chancedFluidOutput('gtceu:resonance_plasma 120', 100, 0)
+    .perTick(false)
+    .itemOutputs('gtceu:spent_plutonium_oxide_fuel_rod')
+    .duration(2400)
+    .EUt(-GTValues.VA[GTValues.ZPM], 1)
+
+// MOX
+GTM.supercritical_fission('mox_burning')
+    .itemInputs('gtceu:mox_fuel_rod')
+    .perTick(true)
+    .chancedInput('gtceu:resonite_dust', 100, 0)
+    .chancedFluidOutput('gtceu:resonance_plasma 120', 100, 0)
+    .perTick(false)
+    .itemOutputs('gtceu:spent_mox_fuel_rod')
+    .duration(12000)
+    .EUt(-GTValues.VA[GTValues.ZPM], 1)
+
+// Pu-241
+GTM.supercritical_fission('pu241_burning')
+    .itemInputs('gtceu:plutonium_241_oxide_fuel_rod')
+    .perTick(true)
+    .chancedInput('gtceu:resonite_dust', 100, 0)
+    .chancedFluidOutput('gtceu:resonance_plasma 120', 100, 0)
+    .perTick(false)
+    .itemOutputs('gtceu:spent_plutonium_241_oxide_fuel_rod')
+    .duration(600)
+    .EUt(-GTValues.VA[GTValues.ZPM], 2)
+
+// Enriched Naquadrium Boride
+GTM.supercritical_fission('enriched_naquadrium_boride_burning')
+    .itemInputs('gtceu:enriched_naquadrium_boride_fuel_rod')
+    .perTick(true)
+    .chancedInput('gtceu:resonite_dust', 100, 0)
+    .chancedFluidOutput('gtceu:resonance_plasma 120', 100, 0)
+    .perTick(false)
+    .itemOutputs('gtceu:spent_enriched_naquadrium_boride_fuel_rod')
+    .duration(24000)
+    .EUt(-GTValues.VA[GTValues.ZPM], 40)
+
+GTM.phase_alternator('cryothetic_zero_through_hypothermic_helium-3')
+.inputFluids('gtceu:supercooled_ice 100000', 'gtceu:hypothermic_helium_3_plasma 1000')
+.outputFluids('gtceu:cryothetic_zero 10000', 'gtceu:helium_3 100000')
+.duration(100)
+.EUt(131072)
+//the particle guy goes HAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+GTM.particle_accelerator('cryosporsite_ionization')
+.inputFluids('gtceu:cryosporsite 432')
+.perTick(true)
+.chancedOutput('gtceu:rare_earth_dust', 100, 0)
+.outputFluids('gtceu:electron 400')
+.perTick(false)
+.fusionStartEU(524288)
+.EUt(8192)
+.duration(500)
+
+GTM.particle_accelerator('hydrogen_ionization')
+.perTick(true)
+.inputFluids('gtceu:hydrogen 100')
+.outputFluids('gtceu:electron 50', 'gtceu:proton 50')
+.fusionStartEU(524288)
+.EUt(8192)
+.duration(1000)
+
+GTM.particle_accelerator('positron_pair_production')
+.perTick(true)
+.inputFluids('gtceu:electron 100')
+.outputFluids('gtceu:electron 51', 'gtceu:positron 49')
+.perTick(false)
+.fusionStartEU(2097152)
+.EUt(32768)
+.duration(1000)
+.circuit(3)
+
+GTM.particle_accelerator('nulltron_pair_production')
+.perTick(true)
+.inputFluids('gtceu:neutron 100')
+.outputFluids('gtceu:neutron 51', 'gtceu:nulltron 49')
+.perTick(false)
+.fusionStartEU(4194304)
+.EUt(65536)
+.duration(1000)
+.circuit(3)
+
+GTM.particle_accelerator('negatron_pair_production')
+.perTick(true)
+.inputFluids('gtceu:proton 100')
+.outputFluids('gtceu:proton 51', 'gtceu:negatron 49')
+.perTick(false)
+.fusionStartEU(4404019)
+.EUt(72000)
+.duration(1000)
+.circuit(3)
+
+GTM.particle_accelerator('enriched_naquadrium_bombardment')
+.perTick(true)
+.inputFluids('gtceu:enriched_naquadrium 5')
+.inputFluids('gtceu:proton 50')
+.chancedFluidOutputLogic('and')
+.chancedFluidOutput('gtceu:naquadrium 5', 2500, 0)
+.chancedFluidOutput('gtceu:naquadah 5', 2500, 0)
+.chancedFluidOutput('gtceu:naquadria 5', 2500, 0)
+.chancedFluidOutput('gtceu:trinium 5', 2500, 0)
+.fusionStartEU(6291456)
+.EUt(65535)
+.duration(1000)
+.circuit(4)
+
+//im quarking it so hard im about to gluon
+
+GTM.particle_accelerator('proton_quark_disintegration')
+.perTick(true)
+.inputFluids('gtceu:proton 100')
+.outputFluids('gtceu:up_quark 67', 'gtceu:down_quark 33')
+.perTick(false)
+.fusionStartEU(8388608)
+.EUt(524288)
+.duration(1000)
+.circuit(6)
+
+GTM.particle_accelerator('negatron_antiquark_disintegration')
+.perTick(true)
+.inputFluids('gtceu:negatron 100')
+.outputFluids('gtceu:sub_quark 67', 'gtceu:sur_quark 33')
+.perTick(false)
+.fusionStartEU(8388608)
+.EUt(524288)
+.duration(1000)
+.circuit(7)
+
+GTM.particle_accelerator('neutron_nulltron_annihilation')
+.perTick(true)
+.inputFluids('gtceu:neutron 50', 'gtceu:nulltron 50')
+.chancedFluidOutput('gtceu:up_quark 25', 1500, 0)
+.chancedFluidOutput('gtceu:down_quark 25', 1500, 0)
+.chancedFluidOutput('gtceu:sub_quark 25', 1500, 0)
+.chancedFluidOutput('gtceu:sur_quark 25', 1500, 0)
+.chancedFluidOutput('gtceu:bottom_quark 10', 500, 0)
+.chancedFluidOutput('gtceu:superior_quark 10', 500, 0)
+.perTick(false)
+.fusionStartEU(8388608)
+.EUt(524288)
+.duration(1000)
+.circuit(8)
+
+GTM.particle_accelerator('strange_pair_production')
+.perTick(true)
+.inputFluids('gtceu:electron 50', 'gtceu:positron 50')
+.outputFluids('gtceu:strange_quark 49', 'gtceu:ordinary_quark 49')
+.perTick(false)
+.fusionStartEU(8388608)
+.EUt(524288)
+.duration(1000)
+.circuit(9)
+
+GTM.particle_accelerator('charm_pair_production')
+.perTick(true)
+.inputFluids('gtceu:proton 50', 'gtceu:negatron 50')
+.outputFluids('gtceu:charm_quark 49', 'gtceu:curse_quark 49')
+.perTick(false)
+.fusionStartEU(8388608)
+.EUt(524288)
+.duration(1000)
+.circuit(10)
+
+GTM.particle_accelerator('top_inferior_production')
+.perTick(true)
+.inputFluids('gtceu:glueball 10')
+.chancedFluidOutput('gtceu:top_quark 5', 500, 0)
+.chancedFluidOutput('gtceu:inferior_quark 5', 500, 0)
+.perTick(false)
+.fusionStartEU(8388608)
+.EUt(524288)
+.duration(1000)
+.circuit(11)
+
+//quark annihilation goes brr
+
+GTM.particle_accelerator('up_sub_annihilation')
+.perTick(true)
+.inputFluids('gtceu:up_quark 1', 'gtceu:sub_quark 1')
+.chancedFluidOutput('gtceu:glueball 1', 1, 0)
+.perTick(false)
+.fusionStartEU(8388608)
+.EUt(524288)
+.duration(1000)
+.circuit(12)
+
+GTM.particle_accelerator('down_sur_annihilation')
+.perTick(true)
+.inputFluids('gtceu:down_quark 1', 'gtceu:sur_quark 1')
+.chancedFluidOutput('gtceu:glueball 1', 1, 0)
+.perTick(false)
+.fusionStartEU(8388608)
+.EUt(524288)
+.duration(1000)
+.circuit(13)
+
+GTM.particle_accelerator('strange_ordinary_annihilation')
+.perTick(true)
+.inputFluids('gtceu:strange_quark 1', 'gtceu:ordinary_quark 1')
+.chancedFluidOutput('gtceu:glueball 1', 1, 0)
+.perTick(false)
+.fusionStartEU(8388608)
+.EUt(524288)
+.duration(1000)
+.circuit(14)
+
+GTM.particle_accelerator('charm_curse_annihilation')
+.perTick(true)
+.inputFluids('gtceu:charm_quark 1', 'gtceu:curse_quark 1')
+.chancedFluidOutput('gtceu:glueball 1', 1, 0)
+.perTick(false)
+.fusionStartEU(8388608)
+.EUt(524288)
+.duration(1000)
+.circuit(15)
+
+GTM.particle_accelerator('bottom_superior_annihilation')
+.perTick(true)
+.inputFluids('gtceu:bottom_quark 1', 'gtceu:superior_quark 1')
+.chancedFluidOutput('gtceu:glueball 1', 10, 0)
+.perTick(false)
+.fusionStartEU(8388608)
+.EUt(524288)
+.duration(1000)
+.circuit(16)
+
+GTM.particle_accelerator('top_inferior_annihilation')
+.perTick(true)
+.inputFluids('gtceu:top_quark 1', 'gtceu:inferior_quark 1')
+.chancedFluidOutput('gtceu:glueball 1', 100, 0)
+.perTick(false)
+.fusionStartEU(8388608)
+.EUt(524288)
+.duration(1000)
+.circuit(17)
+
+// more material annihilation. HowToBasic could never
+//Naquadrium-560
+GTM.particle_accelerator('enriched_naquadrium_ionization')
+.perTick(true)
+.inputFluids('gtceu:enriched_naquadrium 1')
+.outputFluids('gtceu:neutron 189', 'gtceu:proton 91', 'gtceu:electron 91')
+.chancedFluidOutput('gtceu:glueball 3', 10, 0)
+.fusionStartEU(524288)
+.EUt(8192)
+.duration(1000)
+
+// Helium-4
+GTM.particle_accelerator('helium_ionization')
+.perTick(true)
+.inputFluids('gtceu:helium 1')
+.outputFluids('gtceu:neutron 2', 'gtceu:proton 2', 'gtceu:electron 2')
+.fusionStartEU(524288)
+.EUt(8192)
+.duration(1000)
+
+// Lithium-7
+GTM.particle_accelerator('lithium_ionization')
+.perTick(true)
+.inputFluids('gtceu:lithium 1')
+.outputFluids('gtceu:neutron 4', 'gtceu:proton 3', 'gtceu:electron 3')
+.fusionStartEU(524288)
+.EUt(8192)
+.duration(1000)
+
+// Nitrogen-14
+GTM.particle_accelerator('nitrogen_ionization')
+.perTick(true)
+.inputFluids('gtceu:nitrogen 1')
+.outputFluids('gtceu:neutron 7', 'gtceu:proton 7', 'gtceu:electron 7')
+.fusionStartEU(524288)
+.EUt(8192)
+.duration(1000)
+
+// Oxygen-16
+GTM.particle_accelerator('oxygen_ionization')
+.perTick(true)
+.inputFluids('gtceu:oxygen 1')
+.outputFluids('gtceu:neutron 8', 'gtceu:proton 8', 'gtceu:electron 8')
+.fusionStartEU(524288)
+.EUt(8192)
+.duration(1000)
+
+// Aluminum-27
+GTM.particle_accelerator('aluminum_ionization')
+.perTick(true)
+.inputFluids('gtceu:aluminium 1')
+.outputFluids('gtceu:neutron 14', 'gtceu:proton 13', 'gtceu:electron 13')
+.fusionStartEU(524288)
+.EUt(8192)
+.duration(1000)
+
+// Silicon-28
+GTM.particle_accelerator('silicon_ionization')
+.perTick(true)
+.inputFluids('gtceu:silicon 1')
+.outputFluids('gtceu:neutron 14', 'gtceu:proton 14', 'gtceu:electron 14')
+.fusionStartEU(524288)
+.EUt(8192)
+.duration(1000)
+
+// Iron-56
+GTM.particle_accelerator('iron_ionization')
+.perTick(true)
+.inputFluids('gtceu:iron 1')
+.outputFluids('gtceu:neutron 30', 'gtceu:proton 26', 'gtceu:electron 26')
+.fusionStartEU(524288)
+.EUt(8192)
+.duration(1000)
+
+// Nickel-58
+GTM.particle_accelerator('nickel_ionization')
+.perTick(true)
+.inputFluids('gtceu:nickel 1')
+.outputFluids('gtceu:neutron 30', 'gtceu:proton 28', 'gtceu:electron 28')
+.fusionStartEU(524288)
+.EUt(8192)
+.duration(1000)
+
+// Copper-63
+GTM.particle_accelerator('copper_ionization')
+.perTick(true)
+.inputFluids('gtceu:copper 1')
+.outputFluids('gtceu:neutron 34', 'gtceu:proton 29', 'gtceu:electron 29')
+.fusionStartEU(524288)
+.EUt(8192)
+.duration(1000)
+
+// Zinc-64
+GTM.particle_accelerator('zinc_ionization')
+.perTick(true)
+.inputFluids('gtceu:zinc 1')
+.outputFluids('gtceu:neutron 34', 'gtceu:proton 30', 'gtceu:electron 30')
+.fusionStartEU(524288)
+.EUt(8192)
+.duration(1000)
+
+// Silver-107
+GTM.particle_accelerator('silver_ionization')
+.perTick(true)
+.inputFluids('gtceu:silver 1')
+.outputFluids('gtceu:neutron 60', 'gtceu:proton 47', 'gtceu:electron 47')
+.fusionStartEU(524288)
+.EUt(8192)
+.duration(1000)
+
+// Tin-120
+GTM.particle_accelerator('tin_ionization')
+.perTick(true)
+.inputFluids('gtceu:tin 1')
+.outputFluids('gtceu:neutron 70', 'gtceu:proton 50', 'gtceu:electron 50')
+.fusionStartEU(524288)
+.EUt(8192)
+.duration(1000)
+
+// Gold-197
+GTM.particle_accelerator('gold_ionization')
+.perTick(true)
+.inputFluids('gtceu:gold 1')
+.outputFluids('gtceu:neutron 118', 'gtceu:proton 79', 'gtceu:electron 79')
+.fusionStartEU(524288)
+.EUt(8192)
+.duration(1000)
+
+// Lead-208
+GTM.particle_accelerator('lead_ionization')
+.perTick(true)
+.inputFluids('gtceu:lead 1')
+.outputFluids('gtceu:neutron 126', 'gtceu:proton 82', 'gtceu:electron 82')
+.fusionStartEU(524288)
+.EUt(8192)
+.duration(1000)
+
+// Uranium-238
+GTM.particle_accelerator('uranium_ionization')
+.perTick(true)
+.inputFluids('gtceu:uranium 1')
+.outputFluids('gtceu:neutron 146', 'gtceu:proton 92', 'gtceu:electron 92')
+.fusionStartEU(524288)
+.EUt(8192)
+.duration(1000)
+
+// Thorium-232
+GTM.particle_accelerator('thorium_ionization')
+.perTick(true)
+.inputFluids('gtceu:thorium 1')
+.outputFluids('gtceu:neutron 142', 'gtceu:proton 90', 'gtceu:electron 90')
+.fusionStartEU(524288)
+.EUt(8192)
+.duration(1000)
+
+// Bismuth-209
+GTM.particle_accelerator('bismuth_ionization')
+.perTick(true)
+.inputFluids('gtceu:bismuth 1')
+.outputFluids('gtceu:neutron 126', 'gtceu:proton 83', 'gtceu:electron 83')
+.fusionStartEU(524288)
+.EUt(8192)
+.duration(1000)
+
+// Platinum-195
+GTM.particle_accelerator('platinum_ionization')
+.perTick(true)
+.inputFluids('gtceu:platinum 1')
+.outputFluids('gtceu:neutron 117', 'gtceu:proton 78', 'gtceu:electron 78')
+.fusionStartEU(524288)
+.EUt(8192)
+.duration(1000)
+
+// Osmium-192
+GTM.particle_accelerator('osmium_ionization')
+.perTick(true)
+.inputFluids('gtceu:osmium 1')
+.outputFluids('gtceu:neutron 116', 'gtceu:proton 76', 'gtceu:electron 76')
+.fusionStartEU(524288)
+.EUt(8192)
+.duration(1000)
+
+// Iridium-193
+GTM.particle_accelerator('iridium_ionization')
+.perTick(true)
+.inputFluids('gtceu:iridium 1')
+.outputFluids('gtceu:neutron 116', 'gtceu:proton 77', 'gtceu:electron 77')
+.fusionStartEU(524288)
+.EUt(8192)
+.duration(1000)
 })

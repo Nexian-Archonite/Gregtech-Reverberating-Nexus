@@ -3,7 +3,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     event.create('metaphysical_metallurgy_tainter')
     .category('doyouseebananamanhoppingoveronthewhitehotsand')
     .setEUIO('in')
-    .setMaxIOSize(1, 1, 2, 1)
+    .setMaxIOSize(1, 1, 3, 1)
     .setSlotOverlay(false, false, GuiTextures.SLOT)
     .setProgressBar(GuiTextures.PROGRESS_BAR_CRYSTALLIZATION, FillDirection.LEFT_TO_RIGHT)
     .setSound(GTSoundEntries.BATH)

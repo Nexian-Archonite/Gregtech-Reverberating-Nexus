@@ -574,12 +574,12 @@ const vanillaSimulations = [
     {
         id: 'witch', egg: 'minecraft:witch_spawn_egg',
         guaranteed: [
-            ['minecraft:glass_bottle', 1], ['minecraft:glowstone_dust', 1], ['minecraft:gunpowder', 1],
-            ['minecraft:redstone', 1], ['minecraft:spider_eye', 1], ['minecraft:sugar', 1], ['minecraft:stick', 1]
+            ['minecraft:glowstone_dust', 1], ['minecraft:gunpowder', 1],
+            ['minecraft:redstone', 1], ['minecraft:spider_eye', 1], ['minecraft:sugar', 1]
         ],
         chanced: [
-            ['minecraft:glass_bottle', 2500], ['minecraft:glowstone_dust', 2500], ['minecraft:gunpowder', 2500],
-            ['minecraft:redstone', 2500], ['minecraft:spider_eye', 2500], ['minecraft:sugar', 2500], ['minecraft:stick', 2500]
+            ['minecraft:glowstone_dust', 2500], ['minecraft:gunpowder', 2500],
+            ['minecraft:redstone', 2500], ['minecraft:spider_eye', 2500], ['minecraft:sugar', 2500]
         ]
     },
     {

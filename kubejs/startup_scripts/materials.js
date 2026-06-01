@@ -93,6 +93,105 @@ GTCEuStartupEvents.registry("gtceu:element", event => {
     .protons(198)
     .neutrons(228)
     .symbol('ℵi')
+//atomic physics / chemistry
+
+    event.create('neutron')
+    .protons(0)
+    .neutrons(1)
+    .symbol('n₀')
+
+    event.create('nulltron')
+    .protons(0)
+    .neutrons(0)
+    .symbol('n₀')
+
+    event.create('proton')
+    .protons(1)
+    .neutrons(0)
+    .symbol('p₊₁')
+
+    event.create('negatron')
+    .protons(0)
+    .neutrons(0)
+    .symbol('p₋₁')
+
+    event.create('electron')
+    .protons(0)
+    .neutrons(0)
+    .symbol('e₋₁')
+
+    event.create('positron')
+    .protons(0)
+    .neutrons(0)
+    .symbol('e₊₁')
+
+
+    event.create('glueball')
+    .protons(0)
+    .neutrons(0)
+    .symbol('g₀')
+
+//quark-antiquarks
+
+event.create('up_quark')
+    .protons(0)
+    .neutrons(0)
+    .symbol('u₊²⁄₃')
+
+event.create('sub_quark')
+    .protons(0)
+    .neutrons(0)
+    .symbol('u₋²⁄₃')
+
+event.create('down_quark')
+    .protons(0)
+    .neutrons(0)
+    .symbol('d₋¹⁄₃')
+
+event.create('sur_quark')
+    .protons(0)
+    .neutrons(0)
+    .symbol('d₊¹⁄₃')
+
+event.create('charm_quark')
+    .protons(0)
+    .neutrons(0)
+    .symbol('c₊²⁄₃')
+
+event.create('curse_quark')
+    .protons(0)
+    .neutrons(0)
+    .symbol('c₋²⁄₃')
+
+event.create('strange_quark')
+    .protons(0)
+    .neutrons(0)
+    .symbol('s₋¹⁄₃')
+
+event.create('ordinary_quark')
+    .protons(0)
+    .neutrons(0)
+    .symbol('s₊¹⁄₃')
+
+event.create('top_quark')
+    .protons(0)
+    .neutrons(0)
+    .symbol('t₊²⁄₃')
+
+event.create('inferior_quark')
+    .protons(0)
+    .neutrons(0)
+    .symbol('t₋²⁄₃')
+
+event.create('bottom_quark')
+    .protons(0)
+    .neutrons(0)
+    .symbol('b₋¹⁄₃')
+
+event.create('superior_quark')
+    .protons(0)
+    .neutrons(0)
+    .symbol('b₊¹⁄₃')
 })
 
 GTCEuStartupEvents.registry('gtceu:material', event => {
@@ -147,6 +246,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     .iconSet(GTMaterialIconSet.DIAMOND)
     .gem()
     .flags(plates)
+    .washedIn('source')
 
     event
     .create('precision')
@@ -197,6 +297,17 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     .flags(no_decomp)
     .addOreByproducts('dysprosium', 'hafnium', 'hafnium')
 
+    event.create('arcane')
+    .element('arcane')
+    .dust()
+    .color(0x2E1A6B)
+    .flags(no_decomp)
+
+    event.create('ferroarcane')
+    .components('3x arcane', '2x iron')
+    .color(0x564D76)
+    .dust()
+
     event.create('igneous_bronze')
         .ingot()
         .components('4x bronze', '2x andesite_alloy')
@@ -216,7 +327,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     event
     .create('wizarding_steel')
-    .components('13x source', '8x mana', '3x igneous_bronze')
+    .components('13x source', '8x mana', '6x ferroarcane', '3x igneous_bronze')
     .formula('Wsg')
     .color(0xdc00ff).iconSet(GTMaterialIconSet.SHINY)
     .ingot()
@@ -502,9 +613,171 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     .ore(2, 2, true)
     .addOreByproducts('magnesium', 'silicon', 'iron')
     .washedIn('sodium_persulfate')
+//moar ores
 
+// Jarosite - KFe3(SO4)2(OH)6 - yellow-brown, dull
+event.create('jarosite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0xc8a832).secondaryColor(0x8a6a1a)
+    .iconSet(DULL)
+    .components('1x potassium', '3x iron', '2x sulfur')
+    .formula('KFe3(SO4)2(OH)6')
+    .addOreByproducts('iron', 'sulfur', 'potassium')
+
+// Fluorapatite - Ca5(PO4)3F - sea green to purple, gem
+event.create('fluorapatite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0x4ab88a).secondaryColor(0x9b7fbd)
+    .iconSet(GEM_VERTICAL)
+    .components('5x calcium', '3x phosphate', '1x fluorine')
+    .formula('Ca5(PO4)3F')
+    .addOreByproducts('calcium', 'fluorine', 'phosphate')
+
+// Rhodite - rhodium alloy - silvery metallic
+event.create('rhodite')
+    .dust()
+    .ore(1, 2, true)
+    .color(0xc8c8d4).secondaryColor(0x9898a8)
+    .iconSet(SHINY)
+    .components('3x rhodium', '1x iron')
+    .formula('Rh3Fe')
+    .addOreByproducts('rhodium', 'iridium', 'platinum')
+
+// Dilithium - sci-fi lithium gem - orange yellow
+event.create('dilithium')
+    .gem()
+    .ore(3, 2, true)
+    .color(0xf0a030).secondaryColor(0xc87010)
+    .iconSet(GEM_HORIZONTAL)
+    .components('2x lithium')
+    .formula('Li2')
+    .addOreByproducts('lithium', 'helium_3', 'lithium')
+    .flags(no_decomp)
+
+// Phenakite - Be2SiO4 - colorless/pale pink, gem
+event.create('phenakite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0xf0e8e0).secondaryColor(0xd4b8b0)
+    .iconSet(GEM_VERTICAL)
+    .components('2x beryllium', '1x silicon', '4x oxygen')
+    .formula('Be2SiO4')
+    .addOreByproducts('beryllium', 'silicon', 'beryllium')
+
+// Kernite - Na2B4O6(OH)2·3H2O - colorless/white, dull
+event.create('kernite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0xe8e8e0).secondaryColor(0xc0c0b8)
+    .iconSet(DULL)
+    .components('2x sodium', '4x boron')
+    .formula('Na2B4O7')
+    .addOreByproducts('boron', 'sodium', 'boron')
+
+
+// Wustite - FeO - iron black
+event.create('wustite')
+    .dust()
+    .ore(3, 2, true)
+    .color(0x303030).secondaryColor(0x181818)
+    .iconSet(DULL)
+    .components('1x iron', '1x oxygen')
+    .formula('FeO')
+    .addOreByproducts('iron', 'iron', 'manganese')
+
+// Ulvospinel - TiFe2O4 - iron black/brown, metallic
+event.create('ulvospinel')
+    .dust()
+    .ore(2, 2, true)
+    .color(0x3a2810).secondaryColor(0x1a1008)
+    .iconSet(METALLIC)
+    .components('1x titanium', '2x iron', '4x oxygen')
+    .formula('TiFe2O4')
+    .addOreByproducts('titanium', 'iron', 'titanium')
+
+
+// Merrillite - Ca9NaMg(PO4)7 - colorless/white, dull
+event.create('merrillite')
+    .dust()
+    .ore(1, 2, true)
+    .color(0xe0ddd8).secondaryColor(0xb8b5b0)
+    .iconSet(DULL)
+    .components('9x calcium', '1x sodium', '1x magnesium')
+    .formula('Ca9NaMg(PO4)7')
+    .addOreByproducts('calcium', 'sodium', 'phosphate')
+
+// Laurite - RuS2 - iron black, metallic
+event.create('laurite')
+    .dust()
+    .ore(1, 2, true)
+    .color(0x202020).secondaryColor(0x404858)
+    .iconSet(METALLIC)
+    .components('1x ruthenium', '2x sulfur')
+    .formula('RuS2')
+    .addOreByproducts('ruthenium', 'osmium', 'iridium')
+
+// Taenite - (Ni,Fe) - metallic gray/white
+event.create('taenite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0xc0c0b8).secondaryColor(0x909088)
+    .iconSet(METALLIC)
+    .components('1x nickel', '1x iron')
+    .formula('(Ni,Fe)')
+    .addOreByproducts('nickel', 'iron', 'platinum')
+
+// Roquesite - CuInS2 - gray, metallic
+event.create('roquesite')
+    .dust()
+    .ore(1, 2, true)
+    .color(0x707878).secondaryColor(0x505858)
+    .iconSet(METALLIC)
+    .components('1x copper', '1x indium', '2x sulfur')
+    .formula('CuInS2')
+    .addOreByproducts('indium', 'copper', 'tin')
+
+// Gallite - CuGaS2 - gray, metallic
+event.create('gallite')
+    .dust()
+    .ore(1, 2, true)
+    .color(0x686860).secondaryColor(0x484840)
+    .iconSet(METALLIC)
+    .components('1x copper', '1x gallium', '2x sulfur')
+    .formula('CuGaS2')
+    .addOreByproducts('gallium', 'copper', 'zinc')
+
+// Sperrylite - PtAs2 - tin white, metallic
+event.create('sperrylite')
+    .dust()
+    .ore(1, 2, true)
+    .color(0xe8e8e0).secondaryColor(0xb0b0a8)
+    .iconSet(SHINY)
+    .components('1x platinum', '2x arsenic')
+    .formula('PtAs2')
+    .addOreByproducts('platinum', 'palladium', 'rhodium')
+
+event.create('dilithium_zirconoaluminophosphocalcioferrisilicate')
+.components(
+    '2x dilithium',
+    '3x silicon_dioxide',
+    '2x aluminium_oxide',
+    '1x iron',
+    '1x zirconium',
+    '1x calcium_phosphate'
+)
+.liquid(330)
+.dust()
+.flags(no_decomp)
+.color(0xC4622D)
+.iconSet(SHINY)
+
+// Deinococcus radiodurans
+event.create('martian_bacterial_sludge')
+.color(0xD43D2A)
+.liquid(293)
 //resonance chain
-
 
 event.create('resonite_slurry')
     .liquid()
@@ -955,7 +1228,7 @@ event.create('sublimation_residue')
     .color(0xa5a5aa)
     
     event.create('phosphor_carboleachate')
-    .components('2x wood_leachate', '1x phosphor', '2x sand_waste')
+    .components('2x wood_leachate', '1x phosphorus', '2x sand_waste')
     .dust()
     .color(0xa06d20)
 
@@ -1284,6 +1557,14 @@ event.create('uranium_235_dioxide')
     .flags(rod)
     .ingot()
 
+event.create('thorium_uranium_dioxide')
+    .color(0x002200)
+    .components('9x thorium_dioxide', '1x uranium_235_dioxide')
+    .formula('(Th,U)O₂')
+    .flags(rod)
+    .iconSet(SHINY)
+    .ingot()
+
 event.create('plutonium_nitrate_solution')
     .liquid()
     .color(0x1E90FF)
@@ -1428,17 +1709,6 @@ event.create('crystal_methamphetamine')
 
 // return to non-meth
 
-event.create('arcane')
-    .element('arcane')
-    .dust()
-    .color(0x2E1A6B)
-    .flags(no_decomp)
-
-event.create('ferroarcane')
-    .components('3x arcane', '2x iron')
-    .color(0x564D76)
-    .dust()
-
 event.create('hypothermic_helium_3_plasma')
     .element('helium_3')
     .color(0xfdffc7)
@@ -1465,11 +1735,96 @@ event.create('transcendentine')
     .dust()
     .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, no_decomp)
 
+event.create('auralloy-omega_over_transcendentine')
+    .components('8x transcendentine', '2x auralloy-omega')
+    .color(0x8150A2)
+    .dust()
+    .flags(bolt_and_screw, small_gear, plates, long_rod, frame)
+    .fluidPipeProperties(2147483647, 200, true, true, true, true)
+
 event.create('harmonical_fuel')
     .components('3x resonance', '4x rocket_fuel')
     .color(0x9E84A5)
     .liquid(400)
 
+//Subatomic / Atomic Physics here:
+event.create('neutron')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(1000000))
+.color(0x0000FF)
+
+event.create('nulltron')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(750000))
+.color(0xBB00FF)
+
+event.create('proton')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(1000000))
+.color(0xFF0000)
+
+event.create('negatron')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(750000))
+.color(0xFF00BB)
+
+event.create('electron')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(500000))
+.color(0xFFBB00)
+
+event.create('positron')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(500000))
+.color(0x00BBFF)
+
+event.create('glueball')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(2000000000))
+.color(0xFFFFFF)
+
+//quarks
+
+event.create('up_quark')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(500000000))
+.color(0x00AA00)
+
+event.create('sub_quark')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(500000000))
+.color(0xAA00AA)
+
+event.create('down_quark')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(500000000))
+.color(0xAA0000)
+
+event.create('sur_quark')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(500000000))
+.color(0x0000AA)
+
+event.create('charm_quark')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(1000000000))
+.color(0xA0A000)
+
+event.create('curse_quark')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(1000000000))
+.color(0x000A0A)
+
+event.create('strange_quark')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(800000000))
+.color(0xAAAAAA)
+
+event.create('ordinary_quark')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(800000000))
+.color(0x666666)
+
+event.create('top_quark')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(2000000000))
+.color(0xA6666A)
+
+event.create('inferior_quark')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(2000000000))
+.color(0x6AAAA6)
+
+event.create('bottom_quark')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(1500000000))
+.color(0xB01108)
+
+event.create('superior_quark')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(1500000000))
+.color(0x80110B)
 
     //material changes go brrbrrbrbrb
 
@@ -1559,7 +1914,7 @@ StartupEvents.registry("item", event => {
         .tooltip('§7Used to upgrade some HV machines into multiblocks capable of §6Perfect Overclock');
 
 
-const universalcircuittiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv"];
+const universalcircuittiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "zpm", "uv", "uhv", "uev", "uiv", "uxv"];
 universalcircuittiers.forEach((universal_circuit) => {
         event.create(`${universal_circuit}_universal_circuit`)
             .tag(`gtceu:circuits/${universal_circuit}`)
@@ -1568,6 +1923,14 @@ universalcircuittiers.forEach((universal_circuit) => {
             .tooltip(`§7${universal_circuit.toUpperCase()} Universal Circuit`)
             .textureJson({ layer0: `kubejs:item/circuits/universal/${universal_circuit}_universal_circuit` })
     })
+
+    event.create(`luv_universal_circuit`)
+            .tag(`gtceu:circuits/luv`)
+            .tag("gtceu:circuits/universal")
+            .displayName(`LuV Universal Circuit`)
+            .tooltip(`§7LuV Universal Circuit`)
+            .textureJson({ layer0: `kubejs:item/circuits/universal/luv_universal_circuit` })
+
 
 event.create("uxpic_wafer").texture("kubejs:item/uxpic/uxpic_wafer").displayName("UXPIC Wafer").tooltip("§7Raw Ultra Extreme Power Circuit")
     event.create("uxpic_chip").texture("kubejs:item/uxpic/uxpic_chip").displayName("UXPIC Chip").tooltip("§7Ultra Extreme Power IC")
@@ -1605,7 +1968,7 @@ StartupEvents.registry('item', event => {
     .create("gtceu:organism_amalgam")
     
 
-const yumyumrods = ["uranium_235_oxide", "uranium_oxide", "plutonium_241_oxide", "plutonium_oxide", 'thorium_oxide']
+const yumyumrods = ["uranium_235_oxide", "enriched_naquadrium_boride", "plutonium_241_oxide", "plutonium_oxide", 'thorium_uranium_oxide']
         yumyumrods.forEach((type) => {
         let displayType = type.replace('_oxide', '')
     
@@ -1824,6 +2187,17 @@ event
     .tagBlock('minecraft:mineable/pickaxe')
     .tagBlock('minecraft:needs_diamond_tool')
 
+event
+    .create('gtceu:auralloy-omega_over_transcendentine_casing')
+    .displayName('§dTerakelvin Resilient §6Aura§7lloy-Ω §r Over §dTranscendentine §r Particle Accelerator Casing')
+    .textureAll('gtceu:block/casings/solid/tp-da/transcendentine_over_auralloy_casing')
+    .soundType('metal')
+    .hardness(13)
+    .resistance(30)
+    .requiresTool(true)
+    .tagBlock('minecraft:mineable/pickaxe')
+    .tagBlock('minecraft:needs_diamond_tool')
+
 
 event
     .create('eternal_heat_core')
@@ -1971,10 +2345,6 @@ GTCEuStartupEvents.registry("gtceu:world_gen_layer", event => {
 
     event.create("glacio")
         .targets("#ad_astra:glacio_stone_replaceables")
-        .dimensions("ad_astra:glacio")
-
-    event.create("glacio_deepslate")
-        .targets("#minecraft:deepslate_ore_replaceables")
         .dimensions("ad_astra:glacio")
 
     event.create('endocrite')

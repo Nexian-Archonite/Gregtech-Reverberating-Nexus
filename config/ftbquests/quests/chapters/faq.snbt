@@ -28,6 +28,8 @@
 		}
 		{
 			id: "4FFBC48C27F5D2A7"
+			invisible: true
+			invisible_until_tasks: 15
 			optional: true
 			rewards: [{
 				id: "6436891F8C28B17F"
@@ -57,8 +59,24 @@
 				title: "peekaboo :O"
 				type: "checkmark"
 			}]
-			x: 42.5d
-			y: 0.0d
+			x: 0.0d
+			y: -5.0d
+		}
+		{
+			id: "084A5B4889E9B054"
+			rewards: [{
+				id: "26F330DAA6A01674"
+				item: "apotheotic_additions:mythicapple"
+				type: "item"
+			}]
+			subtitle: "The only pack both sane and insane at once! Now comes with Particle Accelerators, moar nuclear power, a bunch of other shit and most importantly.... it fixes early game bugs that made it impossible to progress"
+			tasks: [{
+				id: "458B3D41EBB0ABB5"
+				title: "Welcome to Gregtech: Reverberating Nexus"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 2.0d
 		}
 	]
 	title: "FAQ"
