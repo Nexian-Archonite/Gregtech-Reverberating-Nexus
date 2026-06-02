@@ -50,75 +50,6 @@ ae.shapeless('expandedae:dual_cell_housing', [
 'ae2:item_cell_housing',
 'ae2:fluid_cell_housing'
 ])
-
-const cellhousings = {
-   "mega_item_cell_housing": "gtceu:naquadah_ingot",
-   "mega_fluid_cell_housing": "gtceu:iridium_ingot",
-   "item_cell_housing": "gtceu:stainless_steel_ingot",
-   "fluid_cell_housing": "gtceu:source_attuned_copper_ingot",
-   "mega_source_cell_housing": "gtceu:wizarding_steel_ingot",
-   "source_cell_housing": "gtceu:source_gem",
-   "disk_housing": "gtceu:purified_netherite_ingot",
-   "mega_item_disk_housing": "gtceu:hssg_ingot",
-   "fluid_disk_housing": "gtceu:red_steel_ingot",
-   "mega_fluid_disk_housing": "gtceu:osmiridium_ingot"
-}
-
-Object.entries(cellhousings).forEach(([x, y]) => {
-    if (x === 'mega_source_cell_housing') {
-        ae.recipes.ars_nouveau.enchanting_apparatus(
-            [
-                y,
-                y,
-                y,
-                "ars_nouveau:manipulation_essence",
-                "ars_nouveau:manipulation_essence",
-                "ars_nouveau:manipulation_essence",
-                "gtceu:wizarding_steel_block",
-                "gtceu:wizarding_steel_block"
-            ],
-            "arseng:source_cell_housing",
-            "megacells:mega_source_cell_housing",
-            4000,
-            true)
-        GTM.energistics_assembler((`${x}_assembly`))
-        .itemInputs(`3x ${y}`, '2x ae2:quartz_vibrant_glass')
-        .inputFluids('gtceu:redstone 432')
-        .itemOutputs(new RegExp(`^.*:${x}$`))
-        .duration(80)
-        .EUt(8192)} 
-        else if (x === 'source_cell_housing') {
-        ae.recipes.ars_nouveau.enchanting_apparatus(
-            [
-                y,
-                y,
-                y,
-                y,
-                "ars_nouveau:manipulation_essence",
-                "ars_nouveau:manipulation_essence",
-                "gtceu:source_block",
-                "gtceu:source_block"
-            ],
-            "ae2:item_cell_housing",
-            "arseng:source_cell_housing",
-            1000,
-            true
-        )
-        GTM.energistics_assembler((`${x}_assembly`))
-        .itemInputs(`3x ${y}`, '2x ae2:quartz_vibrant_glass')
-        .inputFluids('gtceu:redstone 432')
-        .itemOutputs(new RegExp(`^.*:${x}$`))
-        .duration(80)
-        .EUt(2048)
-    } else
-
-        GTM.energistics_assembler((`${x}_assembly`))
-        .itemInputs(`3x ${y}`, '2x ae2:quartz_vibrant_glass')
-        .inputFluids('gtceu:redstone 432')
-        .itemOutputs(new RegExp(`^.*:${x}$`))
-        .duration(80)
-        .EUt(128)
-})
 GTM.polarizer(('certus_charging'))
 .itemInputs('gtceu:certus_quartz_gem')
 .itemOutputs('gtceu:charged_certus_quartz_gem')
@@ -136,83 +67,6 @@ GTM.polarizer(('certus_block_charging'))
 .itemOutputs('gtceu:charged_certus_quartz_block')
 .EUt(128)
 .duration(200)
-
-GTM.energistics_assembler(('1k_component_assembly'))
-.itemInputs('2x #forge:chests/wooden', '4x gtceu:charged_certus_quartz_gem', 'ae2:logic_processor', '#gtceu:circuits/lv')
-.itemOutputs('ae2:cell_component_1k')
-.inputFluids('gtceu:redstone 576')
-.EUt(128)
-.duration(200)
-
-GTM.energistics_assembler(('4k_component_assembly'))
-.itemInputs('2x ae2:cell_component_1k', '4x gtceu:charged_certus_quartz_gem', 'ae2:logic_processor', '#gtceu:circuits/mv')
-.itemOutputs('ae2:cell_component_4k')
-.inputFluids('gtceu:redstone 576')
-.EUt(128)
-.duration(400)
-
-GTM.energistics_assembler(('16k_component_assembly'))
-.itemInputs('2x ae2:cell_component_4k', '4x gtceu:charged_certus_quartz_gem', 'ae2:logic_processor', '#gtceu:circuits/hv')
-.itemOutputs('ae2:cell_component_16k')
-.inputFluids('gtceu:redstone 576')
-.EUt(128)
-.duration(800)
-
-GTM.energistics_assembler(('64k_component_assembly'))
-.itemInputs('2x ae2:cell_component_16k', '4x gtceu:charged_certus_quartz_gem', 'ae2:logic_processor', '#gtceu:circuits/ev')
-.itemOutputs('ae2:cell_component_64k')
-.inputFluids('gtceu:redstone 576')
-.EUt(128)
-.duration(1600)
-
-GTM.energistics_assembler(('256k_component_assembly'))
-.itemInputs('2x ae2:cell_component_64k', '4x gtceu:charged_certus_quartz_gem', 'ae2:logic_processor', '#gtceu:circuits/iv')
-.itemOutputs('ae2:cell_component_256k')
-.inputFluids('gtceu:redstone 576')
-.EUt(128)
-.duration(3200)
-
-GTM.energistics_assembler(('1m_component_assembly'))
-.itemInputs('2x ae2:cell_component_256k', '4x gtceu:charged_certus_quartz_gem', 'ae2:logic_processor', '#gtceu:circuits/luv')
-.itemOutputs('megacells:cell_component_1m')
-.inputFluids('gtceu:redstone 576')
-.EUt(128)
-.duration(6400)
-
-GTM.energistics_assembler(('4m_component_assembly'))
-.itemInputs('2x megacells:cell_component_1m', '4x gtceu:charged_certus_quartz_gem', 'ae2:logic_processor', '#gtceu:circuits/zpm')
-.itemOutputs('megacells:cell_component_4m')
-.inputFluids('gtceu:redstone 576')
-.EUt(128)
-.duration(12800)
-
-GTM.energistics_assembler(('16m_component_assembly'))
-.itemInputs('2x megacells:cell_component_4m', '4x gtceu:charged_certus_quartz_gem', 'ae2:logic_processor', '#gtceu:circuits/uv')
-.itemOutputs('megacells:cell_component_16m')
-.inputFluids('gtceu:redstone 576')
-.EUt(128)
-.duration(25600)
-
-GTM.energistics_assembler(('64m_component_assembly'))
-.itemInputs('2x megacells:cell_component_16m', '4x gtceu:charged_certus_quartz_gem', 'ae2:logic_processor', '#gtceu:circuits/uhv')
-.itemOutputs('megacells:cell_component_64m')
-.inputFluids('gtceu:redstone 576')
-.EUt(128)
-.duration(51200)
-
-GTM.energistics_assembler(('256m_component_assembly'))
-.itemInputs('2x megacells:cell_component_64m', '4x gtceu:charged_certus_quartz_gem', 'ae2:logic_processor', '#gtceu:circuits/uev')
-.itemOutputs('megacells:cell_component_256m')
-.inputFluids('gtceu:redstone 576')
-.EUt(128)
-.duration(25600)
-
-GTM.energistics_assembler(('quantum_storage_component'))
-.itemInputs('2x ae2:cell_component_256k', '4x advanced_ae:quantum_alloy', 'advanced_ae:quantum_processor', '#gtceu:circuits/iv')
-.itemOutputs('advanced_ae:quantum_storage_component')
-.inputFluids('gtceu:redstone 576')
-.EUt(128)
-.duration(3200)
 
 GTM.implosion_compressor(('singularity_shattering'))
 .itemInputs('2x ae2:singularity', 'gtceu:industrial_tnt')
@@ -376,31 +230,12 @@ ae.replaceInput(
 })
 
 
-GTM.energistics_assembler('reaction_chamber')
-.itemInputs('12x gtceu:fluix_dust', '8x gtceu:echoing_fluxum_steel_plate', 'ae2:condenser', 'gtceu:ev_lapotronic_battery')
-.inputFluids('gtceu:polytetrafluoroethylene 1152')
-.itemOutputs('advanced_ae:reaction_chamber')
-.EUt(2048)
-.duration(100)
-
-GTM.energistics_assembler(('fluix_glass_cable'))
-.itemInputs('ae2:quartz_fiber', '2x gtceu:fluix_gem')
-.itemOutputs('6x ae2:fluix_glass_cable')
-.duration(20)
-.EUt(32)
-
 GTM.fluid_solidifier(('fluix_glass_covering'))
 .itemInputs('ae2:fluix_glass_cable')
 .inputFluids('gtceu:polyvinyl_butyral 25')
 .itemOutputs('ae2:fluix_covered_cable')
 .duration(20)
 .EUt(32)
-
-GTM.energistics_assembler(('fluix_smart_cable'))
-.itemInputs('4x ae2:fluix_covered_cable', '#gtceu:circuits/ulv', 'gtceu:redstone_plate')
-.itemOutputs('4x ae2:fluix_smart_cable')
-.duration(20)
-.EUt(128)
 
 GTM.packer(('fluix_smart_cable_compressing'))
 .itemInputs('4x ae2:fluix_smart_cable')
@@ -474,8 +309,6 @@ GTM.chemical_bath((`${color}_smart_cable_bleaching`))
 .duration(20)
 .EUt(32)
 
-
-
 GTM.chemical_bath((`${color}_covered__dense_cable_dying`))
 .itemInputs('ae2:fluix_covered_cable')
 .inputFluids(`gtceu:${color}_dye 100`)
@@ -504,60 +337,155 @@ GTM.chemical_bath((`${color}_smart_dense_cable_bleaching`))
 .duration(20)
 .EUt(32)
 })
+//Applied Enigma from here on
+const appliedAssembly = (outputId, outputCount, fluidMultiplier, inputs, energy, duration, circuit, extraFluid) => {
+    const recipe = GTM.applied_enigma(outputId)
+        .itemInputs(inputs)
+        .inputFluids(`gtceu:hypothermic_helium_3_plasma ${10 * fluidMultiplier}`)
+        .itemOutputs(`${outputCount}x ${outputId}`)
+        .EUt(energy)
+        .duration(duration)
 
-Object.entries(cellcanningdotcom).forEach(([component, types]) => {
-    const size = component.replace('cell_component_', '')
+    if (circuit != null) recipe.circuit(circuit)
+    if (extraFluid != null) recipe.inputFluids(extraFluid)
+
+        const recipe2 = GTM.energistics_assembler(outputId)
+        .itemInputs(inputs)
+        .inputFluids(`gtceu:hypothermic_helium_3_plasma ${10 * fluidMultiplier}`)
+        .itemOutputs(`${outputCount}x ${outputId}`)
+        .EUt(energy)
+        .duration(duration)
+
+    if (circuit != null) recipe2.circuit(circuit)
+    if (extraFluid != null) recipe2.inputFluids(extraFluid)
+}
+
+// cell housings
+
+appliedAssembly('ae2:item_cell_housing', 1, 16, ['3x gtceu:stainless_steel_ingot', '2x ae2:quartz_vibrant_glass'], 128, 80)
+appliedAssembly('ae2:fluid_cell_housing', 1, 16, ['3x gtceu:source_attuned_copper_ingot', '2x ae2:quartz_vibrant_glass'], 128, 80)
+appliedAssembly('ae2things:disk_housing', 1, 16, ['3x gtceu:purified_netherite_ingot', '2x ae2:quartz_vibrant_glass'], 128, 80)
+appliedAssembly('arseng:source_cell_housing', 1, 16, ['3x gtceu:source_gem', '2x ae2:quartz_vibrant_glass'], 2048, 80)
+
+
+// cell components
+appliedAssembly('ae2:cell_component_1k', 1, 1, ['2x #forge:chests/wooden', '4x gtceu:charged_certus_quartz_gem', 'ae2:logic_processor', '#gtceu:circuits/lv'], 128, 200, null, 'gtceu:redstone 576')
+appliedAssembly('ae2:cell_component_4k', 1, 10, ['2x ae2:cell_component_1k', '4x gtceu:charged_certus_quartz_gem', 'ae2:logic_processor', '#gtceu:circuits/mv'], 128, 400, null, 'gtceu:redstone 576')
+appliedAssembly('ae2:cell_component_16k', 1, 100, ['2x ae2:cell_component_4k', '4x gtceu:charged_certus_quartz_gem', 'ae2:logic_processor', '#gtceu:circuits/hv'], 128, 800, null, 'gtceu:redstone 576')
+appliedAssembly('ae2:cell_component_64k', 1, 200, ['2x ae2:cell_component_16k', '4x gtceu:charged_certus_quartz_gem', 'ae2:logic_processor', '#gtceu:circuits/ev'], 128, 1600, null, 'gtceu:redstone 576')
+appliedAssembly('ae2:cell_component_256k', 1, 400, ['2x ae2:cell_component_64k', '4x gtceu:charged_certus_quartz_gem', 'ae2:logic_processor', '#gtceu:circuits/iv'], 128, 3200, null, 'gtceu:redstone 576')
+
+
+// misc assembler recipes
+appliedAssembly('advanced_ae:reaction_chamber', 1, 1, ['12x gtceu:fluix_dust', '8x gtceu:echoing_fluxum_steel_plate', 'ae2:condenser', 'gtceu:ev_lapotronic_battery'], 2048, 100, null, 'gtceu:polytetrafluoroethylene 1152')
+appliedAssembly('ae2:fluix_glass_cable', 16, 1, ['ae2:quartz_fiber', '2x gtceu:fluix_gem'], 32, 20)
+appliedAssembly('ae2:fluix_smart_cable', 12, 1, ['4x ae2:fluix_covered_cable', '#gtceu:circuits/ulv', 'gtceu:redstone_plate'], 128, 20)
+appliedAssembly('ae2:interface', 1, 1, ['4x gtceu:echoing_fluxum_steel_plate', 'ae2:annihilation_core', 'ae2:formation_core', '2x #forge:glass'], 512, 200)
+appliedAssembly('ae2:pattern_provider', 1, 1, ['4x gtceu:echoing_fluxum_steel_plate', 'ae2:annihilation_core', 'ae2:formation_core', '2x crafting_table'], 512, 200)
+appliedAssembly('ae2:molecular_assembler', 1, 1, ['4x gtceu:double_echoing_fluxum_steel_plate', '2x ae2:quartz_glass', 'ae2:annihilation_core', 'ae2:formation_core', 'crafting_table'], 512, 400)
+
+
+// k-tier portable cells
+appliedAssembly('ae2:portable_item_cell_1k', 1, 1, ['ae2:item_cell_housing', 'ae2:cell_component_1k', 'ae2:energy_cell', '2x #gtceu:circuits/hv'], 512, 200)
+appliedAssembly('ae2:portable_fluid_cell_1k', 1, 1, ['ae2:fluid_cell_housing', 'ae2:cell_component_1k', 'ae2:energy_cell', '2x #gtceu:circuits/hv'], 512, 200)
+appliedAssembly('arseng:portable_source_cell_1k', 1, 1, ['arseng:source_cell_housing', 'ae2:cell_component_1k', 'ae2:energy_cell', '2x #gtceu:circuits/hv'], 512, 200)
+
+appliedAssembly('ae2:portable_item_cell_4k', 1, 1, ['ae2:item_cell_housing', 'ae2:cell_component_4k', 'ae2:energy_cell', '2x #gtceu:circuits/hv'], 512, 200)
+appliedAssembly('ae2:portable_fluid_cell_4k', 1, 1, ['ae2:fluid_cell_housing', 'ae2:cell_component_4k', 'ae2:energy_cell', '2x #gtceu:circuits/hv'], 512, 200)
+appliedAssembly('arseng:portable_source_cell_4k', 1, 1, ['arseng:source_cell_housing', 'ae2:cell_component_4k', 'ae2:energy_cell', '2x #gtceu:circuits/hv'], 512, 200)
+
+appliedAssembly('ae2:portable_item_cell_16k', 1, 1, ['ae2:item_cell_housing', 'ae2:cell_component_16k', 'ae2:energy_cell', '2x #gtceu:circuits/hv'], 512, 200)
+appliedAssembly('ae2:portable_fluid_cell_16k', 1, 1, ['ae2:fluid_cell_housing', 'ae2:cell_component_16k', 'ae2:energy_cell', '2x #gtceu:circuits/hv'], 512, 200)
+appliedAssembly('arseng:portable_source_cell_16k', 1, 1, ['arseng:source_cell_housing', 'ae2:cell_component_16k', 'ae2:energy_cell', '2x #gtceu:circuits/hv'], 512, 200)
+
+appliedAssembly('ae2:portable_item_cell_64k', 1, 1, ['ae2:item_cell_housing', 'ae2:cell_component_64k', 'ae2:energy_cell', '2x #gtceu:circuits/hv'], 512, 200)
+appliedAssembly('ae2:portable_fluid_cell_64k', 1, 1, ['ae2:fluid_cell_housing', 'ae2:cell_component_64k', 'ae2:energy_cell', '2x #gtceu:circuits/hv'], 512, 200)
+appliedAssembly('arseng:portable_source_cell_64k', 1, 1, ['arseng:source_cell_housing', 'ae2:cell_component_64k', 'ae2:energy_cell', '2x #gtceu:circuits/hv'], 512, 200)
+
+appliedAssembly('ae2:portable_item_cell_256k', 1, 1, ['ae2:item_cell_housing', 'ae2:cell_component_256k', 'ae2:energy_cell', '2x #gtceu:circuits/hv'], 512, 200)
+appliedAssembly('ae2:portable_fluid_cell_256k', 1, 1, ['ae2:fluid_cell_housing', 'ae2:cell_component_256k', 'ae2:energy_cell', '2x #gtceu:circuits/hv'], 512, 200)
+appliedAssembly('arseng:portable_source_cell_256k', 1, 1, ['arseng:source_cell_housing', 'ae2:cell_component_256k', 'ae2:energy_cell', '2x #gtceu:circuits/hv'], 512, 200)
+
+
+
+
+
+//only AE recipes
+const appliedEnigma = (outputId, outputCount, fluidMultiplier, inputs, energy, duration, circuit, extraFluid) => {
+    const recipe = GTM.applied_enigma(outputId)
+        .itemInputs(inputs)
+        .inputFluids(`gtceu:hypothermic_helium_3_plasma ${10 * fluidMultiplier}`)
+        .itemOutputs(`${outputCount}x ${outputId}`)
+        .EUt(energy)
+        .duration(duration)
     
-    if (component.endsWith('m')) {
-        types.forEach(type => {
-            if (type === 'dual') return
-            
-            GTM.energistics_assembler(`${component}_${type}_portable_cell_assembly`)
-                .itemInputs(`megacells:mega_${type}_cell_housing`, `megacells:${component}`, 'ae2:dense_energy_cell', '2x #gtceu:circuits/iv')
-                .itemOutputs(`megacells:portable_${type}_cell_${size}`)
-                .duration(200)
-                .EUt(2048)
+    if (circuit != null) recipe.circuit(circuit)
+    if (extraFluid != null) recipe.inputFluids(extraFluid)
+}
 
-            GTM.centrifuge(`${component}_${type}_portable_cell_disassembly`)
-                .itemOutputs(`megacells:mega_${type}_cell_housing`, `megacells:${component}`, 'ae2:dense_energy_cell', '2x #gtceu:circuits/iv')
-                .itemInputs(`megacells:portable_${type}_cell_${size}`)
-                .duration(200)
-                .EUt(128)
-        })
-    } else if (component.endsWith('k')) {
-        types.forEach(type => {
-            if (type === 'dual') return
+// cell housings
+appliedEnigma('ae2_mega_things:mega_item_disk_housing', 1, 16, ['3x gtceu:hssg_ingot', '2x ae2:quartz_vibrant_glass'], 8192, 80)
+appliedEnigma('ae2_mega_things:fluid_disk_housing', 1, 16, ['3x gtceu:red_steel_ingot', '2x ae2:quartz_vibrant_glass'], 128, 80)
+appliedEnigma('ae2_mega_things:mega_fluid_disk_housing', 1, 16, ['3x gtceu:osmiridium_ingot', '2x ae2:quartz_vibrant_glass'], 8192, 80)
+appliedEnigma('megacells:mega_source_cell_housing', 1, 16, ['3x gtceu:wizarding_steel_ingot', '2x ae2:quartz_vibrant_glass'], 8192, 80)
+appliedEnigma('megacells:mega_item_cell_housing', 1, 16, ['3x gtceu:naquadah_ingot', '2x ae2:quartz_vibrant_glass'], 8192, 80)
+appliedEnigma('megacells:mega_fluid_cell_housing', 1, 16, ['3x gtceu:iridium_ingot', '2x ae2:quartz_vibrant_glass'], 8192, 80)
 
-            GTM.energistics_assembler(`${component}_${type}_portable_cell_assembly`)
-                .itemInputs(new RegExp(`.*:${type}_cell_housing`), `ae2:${component}`, 'ae2:energy_cell', '2x #gtceu:circuits/hv')
-                .itemOutputs(new RegExp(`.*:portable_${type}_cell_${size}`))
-                .duration(200)
-                .EUt(512)
+// cell components
+appliedEnigma('megacells:cell_component_1m', 1, 800, ['2x ae2:cell_component_256k', '4x gtceu:charged_certus_quartz_gem', 'ae2:logic_processor', '#gtceu:circuits/luv'], 128, 6400, null, 'gtceu:redstone 576')
+appliedEnigma('megacells:cell_component_4m', 1, 800, ['2x megacells:cell_component_1m', '4x gtceu:charged_certus_quartz_gem', 'ae2:logic_processor', '#gtceu:circuits/zpm'], 128, 12800, null, 'gtceu:redstone 576')
+appliedEnigma('megacells:cell_component_16m', 1, 800, ['2x megacells:cell_component_4m', '4x gtceu:charged_certus_quartz_gem', 'ae2:logic_processor', '#gtceu:circuits/uv'], 128, 25600, null, 'gtceu:redstone 576')
+appliedEnigma('megacells:cell_component_64m', 1, 800, ['2x megacells:cell_component_16m', '4x gtceu:charged_certus_quartz_gem', 'ae2:logic_processor', '#gtceu:circuits/uhv'], 128, 51200, null, 'gtceu:redstone 576')
+appliedEnigma('megacells:cell_component_256m', 1, 1600, ['2x megacells:cell_component_64m', '4x gtceu:charged_certus_quartz_gem', 'ae2:logic_processor', '#gtceu:circuits/uev'], 128, 102400, null, 'gtceu:redstone 576')
+appliedEnigma('advanced_ae:quantum_storage_component', 1, 800, ['2x ae2:cell_component_256k', '4x advanced_ae:quantum_alloy', 'advanced_ae:quantum_processor', '#gtceu:circuits/iv'], 128, 3200, null, 'gtceu:redstone 576')
 
-                GTM.centrifuge(`${component}_${type}_portable_cell_disassembly`)
-                .itemOutputs(new RegExp(`.*:${type}_cell_housing`), `ae2:${component}`, 'ae2:energy_cell', '2x #gtceu:circuits/hv')
-                .itemInputs(new RegExp(`.*:portable_${type}_cell_${size}`))
-                .duration(200)
-                .EUt(32)
-        })
-    }
-})
+// misc assembler recipes
+appliedEnigma('expatternprovider:ex_molecular_assembler', 1, 4, ['4x ae2:molecular_assembler', '4x gtceu:fluix_gem', 'ae2:engineering_processor'], 8192, 100, null, 'gtceu:redstone 144')
+appliedEnigma('expatternprovider:ex_pattern_provider', 1, 4, ['ae2:pattern_provider', '2x ae2:capacity_card', 'ae2:engineering_processor'], 8192, 100, null, 'gtceu:redstone 144')
+appliedEnigma('expatternprovider:ex_interface', 1, 4, ['#ae2:interface', '2x ae2:capacity_card', 'ae2:logic_processor'], 8192, 100, null, 'gtceu:redstone 144')
+appliedEnigma('expatternprovider:ex_drive', 1, 6, ['ae2:drive', '2x #ae2:glass_cable', '2x gtceu:fluix_dust', 'ae2:capacity_card'], 8192, 100)
+appliedEnigma('expatternprovider:ex_io_port', 1, 6, ['ae2:io_port', '4x ae2:speed_card', '2x ae2:engineering_processor', '2x ae2:logic_processor', 'ae2:io_port'], 8192, 100)
 
-GTM.energistics_assembler('interface')
-.itemInputs('4x gtceu:echoing_fluxum_steel_plate', 'ae2:annihilation_core', 'ae2:formation_core', '2x #forge:glass')
-.itemOutputs('ae2:interface')
-.EUt(512)
-.duration(200)
+//upgrades
+appliedEnigma('expatternprovider:pattern_provider_upgrade', 1, 4, ['2x ae2:capacity_card', 'ae2:engineering_processor'], 8192, 100, null, 'gtceu:redstone 144')
+appliedEnigma('expatternprovider:interface_upgrade', 1, 4, ['2x ae2:capacity_card', 'ae2:logic_processor'], 8192, 100, null, 'gtceu:redstone 144')
+appliedEnigma('expatternprovider:drive_upgrade', 1, 6, ['2x #ae2:glass_cable', '2x gtceu:fluix_dust', 'ae2:capacity_card'], 8192, 100, null, 'gtceu:redstone 144')
+appliedEnigma('expatternprovider:io_bus_upgrade', 1, 4, ['2x ae2:speed_card', 'ae2:calculation_processor'], 8192, 100, null, 'gtceu:redstone 144')
+appliedEnigma('expatternprovider:pattern_terminal_upgrade', 1, 4, ['3x ae2:capacity_card', 'redstone_lamp'], 8192, 100, null, 'gtceu:redstone 144')
 
-GTM.energistics_assembler('pattern_provider')
-.itemInputs('4x gtceu:echoing_fluxum_steel_plate', 'ae2:annihilation_core', 'ae2:formation_core', '2x crafting_table')
-.itemOutputs('ae2:pattern_provider')
-.EUt(512)
-.duration(200)
+// processors (from forming_press loop,
+appliedEnigma('ae2:engineering_processor', 4, 4, ['ae2:printed_engineering_processor', 'ae2:printed_silicon'], 480, 40)
+appliedEnigma('ae2:calculation_processor', 4, 4, ['ae2:printed_calculation_processor', 'ae2:printed_silicon'], 480, 40)
+appliedEnigma('ae2:logic_processor', 4, 4, ['ae2:printed_logic_processor', 'ae2:printed_silicon'], 480, 40)
+appliedEnigma('megacells:accumulation_processor', 4, 4, ['megacells:printed_accumulation_processor', 'ae2:printed_silicon'], 480, 40)
+appliedEnigma('advanced_ae:quantum_processor', 4, 4, ['advanced_ae:printed_quantum_processor', 'ae2:printed_silicon'], 1920, 80)
 
-GTM.energistics_assembler('molecular_assembler')
-.itemInputs('4x gtceu:double_echoing_fluxum_steel_plate', '2x ae2:quartz_glass','ae2:annihilation_core', 'ae2:formation_core', 'crafting_table')
-.itemOutputs('ae2:molecular_assembler')
-.EUt(512)
-.duration(400)
+// m-tier portable cells
+appliedEnigma('megacells:portable_item_cell_1m', 1, 1, ['megacells:mega_item_cell_housing', 'megacells:cell_component_1m', 'ae2:dense_energy_cell', '2x #gtceu:circuits/iv'], 2048, 200)
+appliedEnigma('megacells:portable_fluid_cell_1m', 1, 1, ['megacells:mega_fluid_cell_housing', 'megacells:cell_component_1m', 'ae2:dense_energy_cell', '2x #gtceu:circuits/iv'], 2048, 200)
+appliedEnigma('megacells:portable_source_cell_1m', 1, 1, ['megacells:mega_source_cell_housing', 'megacells:cell_component_1m', 'ae2:dense_energy_cell', '2x #gtceu:circuits/iv'], 2048, 200)
+
+appliedEnigma('megacells:portable_item_cell_4m', 1, 1, ['megacells:mega_item_cell_housing', 'megacells:cell_component_4m', 'ae2:dense_energy_cell', '2x #gtceu:circuits/iv'], 2048, 200)
+appliedEnigma('megacells:portable_fluid_cell_4m', 1, 1, ['megacells:mega_fluid_cell_housing', 'megacells:cell_component_4m', 'ae2:dense_energy_cell', '2x #gtceu:circuits/iv'], 2048, 200)
+appliedEnigma('megacells:portable_source_cell_4m', 1, 1, ['megacells:mega_source_cell_housing', 'megacells:cell_component_4m', 'ae2:dense_energy_cell', '2x #gtceu:circuits/iv'], 2048, 200)
+
+appliedEnigma('megacells:portable_item_cell_16m', 1, 1, ['megacells:mega_item_cell_housing', 'megacells:cell_component_16m', 'ae2:dense_energy_cell', '2x #gtceu:circuits/iv'], 2048, 200)
+appliedEnigma('megacells:portable_fluid_cell_16m', 1, 1, ['megacells:mega_fluid_cell_housing', 'megacells:cell_component_16m', 'ae2:dense_energy_cell', '2x #gtceu:circuits/iv'], 2048, 200)
+appliedEnigma('megacells:portable_source_cell_16m', 1, 1, ['megacells:mega_source_cell_housing', 'megacells:cell_component_16m', 'ae2:dense_energy_cell', '2x #gtceu:circuits/iv'], 2048, 200)
+
+appliedEnigma('megacells:portable_item_cell_64m', 1, 1, ['megacells:mega_item_cell_housing', 'megacells:cell_component_64m', 'ae2:dense_energy_cell', '2x #gtceu:circuits/iv'], 2048, 200)
+appliedEnigma('megacells:portable_fluid_cell_64m', 1, 1, ['megacells:mega_fluid_cell_housing', 'megacells:cell_component_64m', 'ae2:dense_energy_cell', '2x #gtceu:circuits/iv'], 2048, 200)
+appliedEnigma('megacells:portable_source_cell_64m', 1, 1, ['megacells:mega_source_cell_housing', 'megacells:cell_component_64m', 'ae2:dense_energy_cell', '2x #gtceu:circuits/iv'], 2048, 200)
+
+appliedEnigma('megacells:portable_item_cell_256m', 1, 1, ['megacells:mega_item_cell_housing', 'megacells:cell_component_256m', 'ae2:dense_energy_cell', '2x #gtceu:circuits/iv'], 2048, 200)
+appliedEnigma('megacells:portable_fluid_cell_256m', 1, 1, ['megacells:mega_fluid_cell_housing', 'megacells:cell_component_256m', 'ae2:dense_energy_cell', '2x #gtceu:circuits/iv'], 2048, 200)
+appliedEnigma('megacells:portable_source_cell_256m', 1, 1, ['megacells:mega_source_cell_housing', 'megacells:cell_component_256m', 'ae2:dense_energy_cell', '2x #gtceu:circuits/iv'], 2048, 200)
+
+//quantum computer / assembler matrix
+appliedEnigma('expatternprovider:assembler_matrix_frame', 1, 4, ['4x lapis_lazuli', '4x gtceu:echoing_fluxum_steel_plate', 'ae2:quartz_glass'], 8192, 100, null, 'gtceu:redstone 144')
+appliedEnigma('expatternprovider:assembler_matrix_wall', 1, 4, ['4x #ae2:smart_cable', '4x quartz', 'ae2:logic_processor'], 8192, 100, null, 'gtceu:redstone 144')
+appliedEnigma('expatternprovider:assembler_matrix_pattern', 1, 4, ['6x ae2:blue_lumen_paint_ball', '2x #expatternprovider:extended_pattern_provider', 'expatternprovider:assembler_matrix_wall'], 8192, 100, null, 'gtceu:redstone 144')
+appliedEnigma('expatternprovider:assembler_matrix_crafter', 1, 4, ['6x ae2:purple_lumen_paint_ball', '2x expatternprovider:ex_molecular_assembler', 'expatternprovider:assembler_matrix_wall'], 8192, 100, null, 'gtceu:redstone 144')
+appliedEnigma('expatternprovider:assembler_matrix_speed', 1, 4, ['6x ae2:red_lumen_paint_ball', '2x ae2:speed_card', 'expatternprovider:assembler_matrix_wall'], 8192, 100, null, 'gtceu:redstone 144')
+appliedEnigma('expatternprovider:assembler_matrix_glass', 1, 4, ['4x #ae2:smart_cable', '4x ae2:quartz_glass', 'ae2:logic_processor'], 8192, 100, null, 'gtceu:redstone 144')
 })

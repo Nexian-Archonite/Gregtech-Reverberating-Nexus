@@ -638,7 +638,7 @@ GTM.assembler(('enriched_naquadrium_boride_fuel_rod_assembly'))
 .inputFluids(Fluid.of('gtceu:polytetrafluoroethylene 100'))
 .itemOutputs(`gtceu:enriched_naquadrium_boride_fuel_rod`)
 .duration(400)
-.EUt(512)
+.EUt(2048)
 
 GTM.assembler(('nuclear_reactor_assembly'))
 .itemInputs('gtceu:ev_chemical_reactor', '64x gtceu:tainted_zircalloy_plate','48x kubejs:mechanical_essence_ampule','32x gtceu:lead_plate', '16x #gtceu:circuits/iv','8x gtceu:tainted_titanium_normal_fluid_pipe', '4x gtceu:duct_tape')
@@ -688,7 +688,7 @@ GTM.nuclear_fission(('thorium_uranium_oxide_burning'))
 .itemInputs('gtceu:thorium_uranium_oxide_fuel_rod')
 .perTick(true)
 .inputFluids(Fluid.of('water 25'))
-.outputFluids(Fluid.of('gtceu:steam 3400'))
+.outputFluids(Fluid.of('gtceu:nuclear_steam 3400'))
 .perTick(false)
 .itemOutputs('gtceu:spent_thorium_uranium_oxide_fuel_rod')
 .duration(80000)
@@ -697,7 +697,7 @@ GTM.nuclear_fission(('thorium_uranium_oxide_burning_distilled'))
 .itemInputs('gtceu:thorium_uranium_oxide_fuel_rod')
 .perTick(true)
 .inputFluids(Fluid.of('gtceu:distilled_water 50'))
-.outputFluids(Fluid.of('gtceu:steam 6800'))
+.outputFluids(Fluid.of('gtceu:nuclear_steam 6800'))
 .perTick(false)
 .itemOutputs('gtceu:spent_thorium_uranium_oxide_fuel_rod')
 .duration(60000)
@@ -766,7 +766,7 @@ GTM.macerator((`thorium_fuel_rod_chopping`))
 .itemInputs(`gtceu:spent_thorium_uranium_oxide_fuel_rod`)
 .itemOutputs(`gtceu:chopped_thorium_uranium_oxide_fuel_rod`, 'gtceu:radioactive_fuel_cladding_scrap_dust', '2x gtceu:small_radioactive_fuel_cladding_scrap_dust')
 .duration(200)
-.EUt(512)
+.EUt(2048)
 
 GTM.centrifuge(('thorium_fuel_rod_centrifuging'))
 .itemInputs('gtceu:chopped_thorium_uranium_oxide_fuel_rod')
@@ -1057,7 +1057,7 @@ GTM.mixer('thorium_uranium_dioxide_mixing')
 .duration(60)
 .EUt(128)
 
-//snap back to reality
+//snap back to reality OPE there goes reality
 
 GTM.mixer(('nitinol_dust'))
 .itemInputs('3x gtceu:nickel_dust', '3x gtceu:titanium_dust', '3x gtceu:niobium_dust')
@@ -1088,20 +1088,14 @@ GTM.space_factory(('engine_frame'))
 .duration(1000)
 .EUt(2048)
 
+//tier 1
+
 GTM.space_factory(('tainted_titanium_tank'))
 .itemInputs('gtceu:lv_super_tank', '16x gtceu:tainted_titanium_plate', '8x gtceu:tainted_titanium_rod', '4x gtceu:tainted_titanium_small_fluid_pipe')
 .itemOutputs('ad_astra:steel_tank')
 .inputFluids('gtceu:polytetrafluoroethylene 4000')
 .duration(2400)
 .EUt(8192)
-
-GTM.space_factory(('desnium_tank'))
-.itemInputs('gtceu:mv_super_tank', '16x gtceu:desnium_plate', '8x gtceu:desnium_rod', '4x gtceu:desnium_small_fluid_pipe')
-.itemOutputs('ad_astra:desh_tank')
-.inputFluids('gtceu:polybenzimidazole 4000')
-.duration(2400)
-.EUt(32768)
-//...
 
 GTM.space_factory(('tainted_titanium_engine'))
 .itemInputs('3x ad_astra:engine_frame', '3x ad_astra:steel_tank', '3x gtceu:advanced_power_thruster', '16x gtceu:tainted_titanium_plate', '6x gtceu:tainted_titanium_small_fluid_pipe')
@@ -1110,14 +1104,6 @@ GTM.space_factory(('tainted_titanium_engine'))
 .duration(3200)
 .EUt(8192)
 
-GTM.space_factory(('desnium_engine'))
-.itemInputs('3x ad_astra:engine_frame', '3x ad_astra:desh_tank', '4x gtceu:advanced_power_thruster', '16x gtceu:desnium_plate', '6x gtceu:desnium_small_fluid_pipe')
-.itemOutputs('ad_astra:desh_engine')
-.inputFluids('gtceu:polybenzimidazole 4000')
-.duration(3200)
-.EUt(32768)
-//...
-
 GTM.space_factory(('tier-1_rocket'))
 .itemInputs('2x ad_astra:steel_engine', '4x ad_astra:steel_tank', '96x gtceu:tainted_titanium_plate', '32x gtceu:tainted_zircalloy_rod', '24x gtceu:echolumium_plate', '16x kubejs:iv_universal_circuit')
 .itemOutputs('ad_astra:tier_1_rocket')
@@ -1125,12 +1111,29 @@ GTM.space_factory(('tier-1_rocket'))
 .duration(4800)
 .EUt(8192)
 
+//tier 2
+GTM.space_factory(('desnium_tank'))
+.itemInputs('gtceu:mv_super_tank', '16x gtceu:desnium_plate', '8x gtceu:desnium_rod', '4x gtceu:desnium_small_fluid_pipe')
+.itemOutputs('ad_astra:desh_tank')
+.inputFluids('gtceu:polybenzimidazole 4000')
+.duration(2400)
+.EUt(32768)
+
+
+GTM.space_factory(('desnium_engine'))
+.itemInputs('3x ad_astra:engine_frame', '3x ad_astra:desh_tank', '4x gtceu:advanced_power_thruster', '16x gtceu:desnium_plate', '6x gtceu:desnium_small_fluid_pipe')
+.itemOutputs('ad_astra:desh_engine')
+.inputFluids('gtceu:polybenzimidazole 4000')
+.duration(3200)
+.EUt(32768)
+
+
 GTM.space_factory(('tier-2_rocket'))
 .itemInputs('3x ad_astra:desh_engine', '6x ad_astra:desh_tank', '96x gtceu:desnium_plate', '32x gtceu:tainted_zircalloy_rod', '24x gtceu:echolumium_plate', '16x kubejs:luv_universal_circuit')
 .itemOutputs('ad_astra:tier_2_rocket')
 .inputFluids('gtceu:polybenzimidazole 16000')
 .duration(4800)
-.EUt(8192)
+.EUt(32768)
 
 //return to wherever the fuck i was
 
@@ -1239,7 +1242,7 @@ GTM.mixer('tungstensteel')
 .duration(180)
 .EUt(1920)
 
-//return from Lanthanum Arc
+//return from the Great Lanthanum Arc :(
 
 GTM.mixer('netherite')
 .itemInputs('gtceu:platinum_dust', 'gtceu:netherite_scrap', '4x gtceu:gold_dust')
@@ -1326,7 +1329,7 @@ GTM.mixer(('caesium_hydroxide'))
 .EUt(128)
 .duration(600)
 
-
+// Interstellar Miner progression
 const thelisttoendalllists = {
     overworld: {
         ores: [
@@ -1368,6 +1371,16 @@ const thelisttoendalllists = {
             'gtceu:tritium 50000'
         ]
     },
+    undergarden: {
+        ores: [
+            ['depthrock_berzelianite', 'depthrock_clausthalite', 'depthrock_tiemannite', 'depthrock_nexus'],
+        [   'depthrock_hessite', 'depthrock_altaite', 'depthrock_calaverite', 'depthrock_condensed_mana']
+        ],
+        fluids: [
+            'gtceu:tainted_magmatic_mineral_sludge 50000',
+            'gtceu:virulence_tainted_source 75000'
+        ],
+    },
     moon: {
         ores: [
             ['moon_xenotime', 'moon_bastnasite', 'moon_monazite', 'moon_helium_3'],
@@ -1381,16 +1394,6 @@ const thelisttoendalllists = {
             'gtceu:helium_3 5000',
             'gtceu:helium_3 5000'
         ]
-    },
-    undergarden: {
-        ores: [
-            ['depthrock_berzelianite', 'depthrock_clausthalite', 'depthrock_tiemannite', 'depthrock_nexus'],
-        [   'depthrock_hessite', 'depthrock_altaite', 'depthrock_calaverite', 'depthrock_condensed_mana']
-        ],
-        fluids: [
-            'gtceu:tainted_magmatic_mineral_sludge 50000',
-            'gtceu:virulence_tainted_source 75000'
-        ],
     },
     mars: {
         ores: [
@@ -1722,8 +1725,8 @@ GTM.particle_accelerator('cryosporsite_ionization')
 
 GTM.particle_accelerator('hydrogen_ionization')
 .perTick(true)
-.inputFluids('gtceu:hydrogen 100')
-.outputFluids('gtceu:electron 50', 'gtceu:proton 50')
+.inputFluids('gtceu:hydrogen 2')
+.outputFluids('gtceu:electron 1', 'gtceu:proton 1')
 .fusionStartEU(524288)
 .EUt(8192)
 .duration(1000)

@@ -2,5 +2,8 @@
     "search.exclude": {
     "**/probe/generated/**": true,
     "**/probe/cached/**": true
+},
+"[javascript]": {
+    "editor.colorDecorators": false
 }
 }

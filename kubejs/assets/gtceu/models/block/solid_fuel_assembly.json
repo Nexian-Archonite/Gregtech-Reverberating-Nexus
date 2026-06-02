@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "gtceu:block/casings/solid/atomic_casing",
+    "north": "gtceu:block/solid_fuel_assembly/sides",
+    "south": "gtceu:block/solid_fuel_assembly/sides",
+    "east":  "gtceu:block/solid_fuel_assembly/sides",
+    "west":  "gtceu:block/solid_fuel_assembly/sides",
+    "up":    "gtceu:block/solid_fuel_assembly/top_down",
+    "down":  "gtceu:block/solid_fuel_assembly/top_down"
+  }
+}

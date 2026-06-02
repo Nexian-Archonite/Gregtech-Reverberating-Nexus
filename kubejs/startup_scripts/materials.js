@@ -2053,7 +2053,6 @@ ore.create("gtceu:cracked_ancient_debris")
 
 })
 
-
 StartupEvents.registry('block', event => {
     event
     .create('gtceu:nexus_steel_casing')
@@ -2189,7 +2188,7 @@ event
 
 event
     .create('gtceu:auralloy-omega_over_transcendentine_casing')
-    .displayName('§dTerakelvin Resilient §6Aura§7lloy-Ω §r Over §dTranscendentine §r Particle Accelerator Casing')
+    .displayName('§dTerakelvin Resilient §6Aura§7lloy-Ω §rOver§dTranscendentine §rParticle Accelerator Casing')
     .textureAll('gtceu:block/casings/solid/tp-da/transcendentine_over_auralloy_casing')
     .soundType('metal')
     .hardness(13)
@@ -2306,6 +2305,15 @@ event
     .texture('down', 'kubejs:block/carbonized_log_top')
     .property(BlockProperties.AXIS)
     .placementState(state => { state.setValue(BlockProperties.AXIS, state.clickedFace.axis) })
+
+event
+    .create('gtceu:solid_fuel_assembly', "gtceu:active")
+    .hardness(35)
+    .resistance(16000)
+    .requiresTool(true)
+    .tagBlock('minecraft:mineable/pickaxe')
+    .tagBlock('minecraft:needs_diamond_tool')
+    .soundType('metal')
 
 /* event
     .create('primitive_table')

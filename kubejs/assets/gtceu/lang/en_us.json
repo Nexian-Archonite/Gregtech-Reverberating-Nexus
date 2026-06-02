@@ -148,7 +148,7 @@
     "material.gtceu.naquadrium_waste": "§3Naquadrium Waste",
     "material.gtceu.enriched_naquadrium_waste": "§2Enriched Naquadrium Waste",
     "material.gtceu.acidic_naquadrium_solution": "§aAcidic Naquadrium Solution",
-    "material.gtceu.acidic_enriched_naquadrium_solution": "§aAcidic Enriched Naquadrium SolutionA",
+    "material.gtceu.acidic_enriched_naquadrium_solution": "§aAcidic Enriched Naquadrium Solution",
     "material.gtceu.naquadrium_solution": "§aNaquadrium Solution",
     "material.gtceu.enriched_naquadrium_solution": "§2Naquadrium Solution",
     "material.gtceu.impure_naquadrium_solution": "§2Impure Naquadrium Solution",
@@ -195,7 +195,7 @@
     "material.gtceu.tetraethyl_orthosilicate": "Tetraethyl Orthosilicate",
     "material.gtceu.crude_ethyl_silicate": "Crude Ethyl Silicate",
     "material.gtceu.wood_leachate": "Wood Leachate",
-    "material.gtceu.infernal_acid": "Phthoraquareghydroxyl-Inferna",
+    "material.gtceu.infernal_acid": "§6Phthoraquareghydroxyl-Inferna",
     "material.gtceu.supercooled_ice": "§bSupercooled Ice",
     "material.gtceu.cryothetic_zero": "§l§1Cryothetic §kZERO",
 
@@ -410,7 +410,7 @@
     "gtceu.plant_ore_processing": "§7Advanced Processing Plant",
     "gtceu.primitive_coking_array": "§6Primitive Coking Array",
     "gtceu.interstellar_miner": "§2Interstellar Miner",
-    "gtceu.heart_of_harmonia": "§7Heart of Harmonia",
+    "gtceu.supercritical_fission": "§7Heart of Harmonia",
     "gtceu.transcendental_polydimensional_accelerator": "§dTranscendentine Polydimensional Accelerator",
 
     "block.gtceu.echo_imbuement_chamber": "§1Echonite Imbuement Chamber",

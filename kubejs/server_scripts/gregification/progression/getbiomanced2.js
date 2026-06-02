@@ -83,7 +83,7 @@ GTM.biomechanical_extruder('cellulose_extraction')
     .EUt(120)
     .cleanroom(CleanroomType.STERILE_CLEANROOM)
 
-// random heebie-jeebie
+// random heebie-jeebies
 GTM.biomechanical_extruder('cellulose_to_paper')
     .inputFluids('minecraft:water 2000')
     .perTick(true)
@@ -570,6 +570,7 @@ GTM.biomechanical_mixer('flesh_alloy')
 .perTick(true)
 .inputFluids('gtceu:artificial_blood 10')
 .perTick(false)
+.itemOutputs('6x gtceu:flesh_alloy_dust')
 .duration(400)
 .EUt(122880)
 })
