@@ -337,14 +337,15 @@
     "material.gtceu.trinium": "§dTrinium",
     "material.gtceu.tritanium": "§4Tritanium",
 
-    "block.gtceu.cupronickel_coil_block": "§6Cupronickel",
-    "block.gtceu.kanthal_coil_block": "§bKanthal",
-    "block.gtceu.nichrome_coil_block": "§dNichrome",
-    "block.gtceu.rtm_alloy_coil_block": "§9RTM Alloy",
-    "block.gtceu.hssg_coil_block": "§3HSS-G",
-    "block.gtceu.naquadah_coil_block": "§7Naquadah",
-    "block.gtceu.trinium_coil_block": "§dTrinium",
-    "block.gtceu.tritanium_coil_block": "§4Tritanium",
+    "block.gtceu.cupronickel_coil_block": "§6Cupronickel Coil",
+    "block.gtceu.kanthal_coil_block": "§bKanthal Coil",
+    "block.gtceu.nichrome_coil_block": "§dNichrome Coil",
+    "block.gtceu.rtm_alloy_coil_block": "§9RTM Alloy Coil",
+    "block.gtceu.hssg_coil_block": "§3HSS-G Coil",
+    "block.gtceu.naquadah_coil_block": "§7Naquadah Coil",
+    "block.gtceu.naquadrium_coil_block": "§7Naquadrium Coil",
+    "block.gtceu.trinium_coil_block": "§dTrinium Coil",
+    "block.gtceu.tritanium_coil_block": "§4Tritanium Coil",
 
 
 

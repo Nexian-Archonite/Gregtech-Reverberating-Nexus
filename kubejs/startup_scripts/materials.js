@@ -921,7 +921,7 @@ event.create('sublimation_residue')
         .components('2x aluminium', '1x echo', '1x nexus', '1x chromium', '1x nickel', '1x tantalum') 
         .color(0x24d8e7).iconSet(GTMaterialIconSet.METALLIC)
         .liquid(1500)
-        .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, fine_wire)
+        .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, fine_wire, dense_plate)
         .blastTemp(1050, "low", GTValues.VA[GTValues.MV], 500)
         .fluidPipeProperties(1050, 250, true, true, true, false)
         .cableProperties(GTValues.V[GTValues.EV], 2,2, false)
@@ -1747,6 +1747,28 @@ event.create('harmonical_fuel')
     .color(0x9E84A5)
     .liquid(400)
 
+event.create('ostrite')
+    .color(0x687478)
+    .flags(rod, plates, frame, long_rod, dense_plate)
+    .components('4x martian_calorite', '1x transuranic_naquadrium', '1x desnium')
+    .liquid()
+    .blastTemp(8100, "high", GTValues.VA[GTValues.LuV], 2800)
+    .liquid(6800)
+
+event.create('calenite')
+    .color(0x9C3A58)
+    .flags(rod, plates, frame, long_rod, dense_plate)
+    .components('4x venian_calorite', '1x neutronium', '1x ostrite')
+    .liquid()
+    .blastTemp(10799, "higher", GTValues.VA[GTValues.UV], 3400)
+    .liquid(10000)
+
+event.create('hafnium_carbide')
+    .color(0x0E4E0E)
+    .flags(plates, dense_plate)
+    .components('1x hafnium', '1x carbon')
+    .blastTemp(8632, 'higher', GTValues.VA[GTValues.LuV], 6000)
+
 //Subatomic / Atomic Physics here:
 event.create('neutron')
 .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(1000000))
@@ -1852,7 +1874,7 @@ event.create('superior_quark')
 
     GTMaterials.Hafnium.setProperty($PropertyKey.INGOT, new $IngotProperty())
     GTMaterials.Hafnium.setProperty($PropertyKey.BLAST, new $BlastProperty(3600, "mid", 1240, 450, -1, -1))
-    GTMaterials.Hafnium.setMaterialARGB(0x520089)
+    GTMaterials.Hafnium.setMaterialARGB(0x008000)
     GTMaterials.Hafnium.addFlags(rod, frame, plates)
     GTMaterials.Hafnium.setProperty(PropertyKey.ORE, new $OreProperty())
 
@@ -1878,6 +1900,10 @@ event.create('superior_quark')
     GTMaterials.Bronze.addFlags(fine_wire)
     GTMaterials.Trinium.addFlags(frame)
     GTMaterials.Netherite.addFlags(frame, rod, dense_plate)
+
+    GTMaterials.Invar.addFlags(dense_plate)
+    GTMaterials.Electrum.addFlags(dense_plate)
+    GTMaterials.
 
     addFluid(GTMaterials.EchoShard, $FluidStorageKeys.LIQUID)
     addFluid(GTMaterials.Dysprosium, $FluidStorageKeys.LIQUID)
@@ -1967,6 +1993,25 @@ StartupEvents.registry('item', event => {
     event
     .create("gtceu:organism_amalgam")
     
+const rocketTiers = [
+    'tainted_titanium',
+    'desnium',
+    'ostrite',
+    'calenite',
+]
+
+rocketTiers.forEach(tier => {
+    const displayName = tier.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
+
+    event.create(`gtceu:rocket_plating_${tier}`)
+        .displayName(`${displayName} Rocket Plating`)
+        .textureJson({ layer0: `gtceu:item/rocket/${tier}_plating` })
+
+    event.create(`gtceu:engine_casing_${tier}`)
+        .displayName(`${displayName} Engine Casing`)
+        .textureJson({ layer0: `gtceu:item/rocket/${tier}_engine_casing` })
+})
+
 
 const yumyumrods = ["uranium_235_oxide", "enriched_naquadrium_boride", "plutonium_241_oxide", "plutonium_oxide", 'thorium_uranium_oxide']
         yumyumrods.forEach((type) => {

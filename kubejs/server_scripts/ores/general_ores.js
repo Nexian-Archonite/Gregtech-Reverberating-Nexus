@@ -466,6 +466,7 @@ event.add("gtceu:martian_pegmatite_intrusions", vein => {
     vein.layeredVeinGenerator(generator => generator
         .buildLayerPattern(pattern => pattern
             .layer(l => l.weight(3).mat(GTMaterials.get("phenakite")).size(2, 3))
+            .layer(l => l.weight(2).mat(GTMaterials.get("martian_ostrum")).size(1, 3))
             .layer(l => l.weight(2).mat(GTMaterials.get("dilithium")).size(1, 2))
         )
     )
