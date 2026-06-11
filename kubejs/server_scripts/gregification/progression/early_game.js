@@ -466,11 +466,10 @@ GTM.mixer(('echoite_mixer'))
 
 GTM.echo_imbuement_chamber(('echolumium_imbuement'))
 .itemInputs('gtceu:aluminium_ingot')
-.inputFluids(Fluid.of('gtceu:echoite', 72))
+.inputFluids(Fluid.of('gtceu:echoite', 144))
 .itemOutputs('gtceu:echolumium_ingot')
 .EUt(32)
 .duration(100)
-.blastFurnaceTemp(1700)
 
 GTM.echoite_exile(('echoite'))
 .itemInputs('16x gtceu:nexus_dust', '16x gtceu:echo_dust', '16x gtceu:chromium_dust')
@@ -828,6 +827,23 @@ casingalloysgregtechonlylimitededition.forEach((material) => {
     .circuit(14)
     .EUt(16)
 
+event.shaped(Item.of(`2x gtceu:echoing_fluxum_casing`), [
+            'PHP',
+            'PFP',
+            'PWP'
+        ], {
+            P: `gtceu:echoing_fluxum_steel_plate`,
+            F: `gtceu:echoing_fluxum_steel_frame`,
+            H: '#forge:tools/hammers',
+            W: '#forge:tools/wrenches'
+        }).id(`gtceu:shaped/echoing_fluxum_steel_casing`)
+
+        GTM.assembler((`echoing_fluxum_steel_casing`))
+            .itemInputs(`6x gtceu:echoing_fluxum_steel_plate`, `gtceu:echoing_fluxum_steel_frame`)
+            .itemOutputs(`2x gtceu:echoing_fluxum_casing`)
+            .duration(50)
+            .EUt(16)
+            .circuit(6)
 
     //chemistry arc
 

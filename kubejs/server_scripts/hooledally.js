@@ -330,7 +330,17 @@ event.replaceOutput(
     `gtceu:nexus_steel_ingot`
 )
 
+event.replaceInput(
+    {mod: 'overgeared'},
+    'overgeared:steel_ingot',
+    'gtceu:steel_ingot'
+)
 
+event.replaceOutput(
+    {mod: 'overgeared'},
+    'overgeared:steel_ingot',
+    'gtceu:steel_ingot'
+)
 
 materials.forEach((material) => {
     types.forEach((type) => {

@@ -1,7 +1,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 event.create('space_factory')
 .category('MAYONNAISEONAESCALATOR_ITSGOINGUPSTAIRSSOSEEYOULATER')
-.setMaxIOSize(12, 4, 4, 0)
+.setMaxIOSize(6, 4, 2, 0)
 .setEUIO('in')
 .setSlotOverlay(true, true, GuiTextures.ATOMIC_OVERLAY_2)
 .setProgressBar(GuiTextures.PROGRESS_BAR_ASSEMBLER, FillDirection.LEFT_TO_RIGHT)

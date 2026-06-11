@@ -64,6 +64,10 @@ event.add('minecraft:mineable/hoe', /botania:.*(_.*)?_mystical_flower/)
 event.removeAllTagsFrom('ad_astra:oil_bucket')
 event.removeAllTagsFrom('ad_astra:hydrogen_bucket')
 event.add('forge:dusts/arcane', 'irons_spellbooks:arcane_essence')
+
+event.add('ad_astra:calorite_plates', 'gtceu:venian_calorite_plate')
+event.add('ad_astra:ostrum_plates', 'gtceu:martian_calorite_plate')
+event.add('ad_astra:desh_plates', 'gtceu:lunar_desh_plate')
 })
 
 ServerEvents.tags('item', event => {

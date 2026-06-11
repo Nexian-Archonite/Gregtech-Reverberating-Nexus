@@ -1,12 +1,5 @@
 ServerEvents.recipes(e => {
-    e.remove({output: 'gtceu:nullium_nugget'})
-    e.remove({output: 'gtceu:tiny_nullium_dust'})
-    e.remove({output: 'gtceu:small_nullium_dust'})
     e.remove({input: 'iron_block', type: 'ae2:inscriber'})
-
-    e.remove({input: 'gtceu:nullium_nugget'})
-    e.remove({input: 'gtceu:tiny_nullium_dust'})
-    e.remove({input: 'gtceu:small_nullium_dust'})
     e.remove({not: {mod: 'gtceu'}, output: 'gtceu:andesite_alloy_ingot'})
 
     e.remove({id: 'create:item_application/andesite_casing_from_log'})
@@ -35,6 +28,7 @@ ServerEvents.recipes(e => {
     e.remove({id: 'ars_nouveau:source_gem_block'})
     e.remove({id: 'ars_nouveau:source_gem_block_2'})
     e.remove({id: 'botania:mana_ring'})
+    e.remove({id: 'ad_astra_giselle_addon:crafting/fuel_loader'})
 
     e.remove({output: /gtceu:.*_solar_panel/})
     e.remove({id: 'minecraft:ancient_debris'})
@@ -85,4 +79,5 @@ ServerEvents.recipes(e => {
     e.remove({id: 'minecraft:netherite_ingot'})
     e.remove({id: 'gtceu:smelting/smelt_dust_netherite_to_ingot'})
     e.remove({type: 'createaddition:rolling'})
+    e.remove({id: 'ad_astra:engine_frame'})
 })

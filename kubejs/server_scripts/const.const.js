@@ -18,6 +18,12 @@ const VHA = (voltage) => {
     return global.vha[voltage]
 }
 
+
+const v = global.v
+const va = global.va
+const vh = global.vh
+const vha = global.vha
+
 const voltagetierexpensive = {
         "uev": "omnium",
         "uiv": "nullium",
@@ -43,21 +49,21 @@ const allthevoltage1 = [
 ]
 
 const allthevoltage2 = {
-    'ulv': "bronze",
-    'lv': "nexus_steel",
-    'mv': "echolumium",
-    'hv': "mechanical_stainless",
-    'ev': "tainted_titanium",
-    'iv': "auralloy-omega",
-    'luv': "rhodipalladic-desnite",
-    'zpm': "transuranic_naquadrium_alloy",
-    'uv':  "ephemeral_mekanite",
-    'uhv': "chronosite_naquaneutronate",
-    'uev': "accelerated_omnium_compound",
-    'uiv': "nullium",
-    'uxv': "infinity",
-    'opv': "activated_nexus",
-    'max': "reverberating_nexus"
+    'ulv': "bronze", //8 EU/t
+    'lv': "nexus_steel", //32 EU/t
+    'mv': "echolumium",  //128 EU/t
+    'hv': "mechanical_stainless", //512 EU/t
+    'ev': "tainted_titanium", //2048 EU/t
+    'iv': "auralloy-omega", //8192 EU/t
+    'luv': "rhodipalladic-desnite",//32768 EU/t
+    'zpm': "transuranic_naquadrium_alloy", //131072 EU/t
+    'uv':  "ephemeral_naquadite", //524288 EU/t
+    'uhv': "stellarite", //2097152 EU/t
+    'uev': "polydimensional_omnium_nexite", //8388608 EU/t
+    'uiv': "omniated_n-p_higgs-nulliate", //33554432 EU/t
+    'uxv': "absolute_infinity", //134217728 EU/t
+    'opv': "nexian_infinity", //536870912 EU/t
+    'max': "reverberating_nexus" //2147483648 EU/t
 }
 
 const tiers = [
@@ -97,7 +103,18 @@ const tiers = [
         "rotor",
         "small_fluid_pipe",
         "normal_fluid_pipe",
-        "large_fluid_pipe"
+        "large_fluid_pipe",
+        "buzz_saw_blade",
+        "single_wire",
+        "double_wire",
+        "quadruple_wire",
+        "octal_wire",
+        "hex_wire",
+        "single_cable",
+        "double_cable",
+        "quadruple_cable",
+        "octal_cable",
+        "hex_cable"
 
     ]
     // Map of tier replacements
@@ -120,7 +137,9 @@ const tiers = [
         vanadium_gallium: "axiom-re",
         naquadah: "naquadrium",
         naquadah_alloy: "transuranic_naquadrium_alloy",
-        europium: "astazine-e"
+        europium: "astazine-e",
+        neutronium: "stellarite",
+        darmstadtium: "ephemeral_naquadite"
         
         // Add more replacements as needed
     }
@@ -154,11 +173,12 @@ const thecarbonboys = ['gtceu:carbon_dust', 'gtceu:charcoal_dust', 'gtceu:coal_d
 const thermalityalloys = ['enderium', 'lumium', 'signalum']
 const ferricminerals = ['iron', 'granitic_mineral_sand', 'magnetite', 'basaltic_mineral_sand', 'pyrite', 'yellow_limonite', 'hematite', 'goethite']
 
-const mods = ['create', 'botania', 'ars_nouveau', 'ad_astra', 'ae2', 'advanced_ae', 'expatternprovider', 'vs_clockwork', 'overgeared']
+const mods = ['create', 'botania', 'ars_nouveau', 'ad_astra', 'ae2', 'advanced_ae', 'expatternprovider', 'vs_clockwork', 'overgeared', 'draconicevolution']
 const materials = [
   'manasteel', 'steel', 'copper', 'gold', 'iron', 'source', 
   'desh', 'ostrum', 'calorite', 'uranium', 'zinc', 'brass', 
-  'andesite_alloy', 'obsidian', 'fluix', 'certus_quartz', 'charged_certus_quartz'
+  'andesite_alloy', 'obsidian', 'fluix', 'certus_quartz', 
+  'charged_certus_quartz', 'draconium', 'awakened_draconium'
 ]
 const types = [
   'ingot', 'plate', 'gem', 'dust', 'rod', 'nugget', 

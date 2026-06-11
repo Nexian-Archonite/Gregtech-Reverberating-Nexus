@@ -2,9 +2,25 @@
 Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey')
 Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.ToolProperty')
 
+const v = global.v
+const va = global.va
+const vh = global.vh
+const vha = global.vha
+
 GTCEuStartupEvents.registry('gtceu:material_icon_set', event => {
     event.create("energium")
     .parent('rough')
+
+    event.create('infinity')
+    .parent('shiny')
+
+    event.create('omnium')
+    .parent('shiny')
+
+    event.create('nullium')
+    .parent('dull')
+
+    event.create('naquadrium')
 
 })
 
@@ -93,105 +109,218 @@ GTCEuStartupEvents.registry("gtceu:element", event => {
     .protons(198)
     .neutrons(228)
     .symbol('ℵi')
+
+    event.create("infinity")
+    .protons(999)
+    .neutrons(999)
+    .symbol("Ω")
+
+    event.create("omnium")
+    .protons(279)
+    .neutrons(461)
+    .symbol("ℵ₁")
+
+    event.create('nullium')
+    .protons(397)
+    .neutrons(761)
+    .symbol("ℵ₋₁")
+
+    event.create('naquadrium')
+    .protons(182)
+    .neutrons(368)
+    .halfLifeSeconds(140)
+    .decayTo('trinium')
+    .symbol('Qx')
+
+    event.create('enriched_naquadrium')
+    .protons(182)
+    .neutrons(378)
+    .halfLifeSeconds(40)
+    .decayTo('naquadrium')
+    .symbol('*Qx*')
+
+    event.create('dilithium')
+    .protons(6)
+    .neutrons(8)
+    .symbol('2Li')
+
+    event.create('anti-dilithide')
+    .protons(6)
+    .neutrons(8)
+    .symbol('2Li̅')
 //atomic physics / chemistry
 
-    event.create('neutron')
+event.create('neutron')
     .protons(0)
     .neutrons(1)
-    .symbol('n₀')
+    .symbol('[n₀]')
 
     event.create('nulltron')
     .protons(0)
     .neutrons(0)
-    .symbol('n₀')
+    .symbol('[n₀]')
 
     event.create('proton')
     .protons(1)
     .neutrons(0)
-    .symbol('p₊₁')
+    .symbol('[p₊₁]')
 
     event.create('negatron')
     .protons(0)
     .neutrons(0)
-    .symbol('p₋₁')
+    .symbol('[p₋₁]')
 
     event.create('electron')
     .protons(0)
     .neutrons(0)
-    .symbol('e₋₁')
+    .symbol('[e₋₁]')
 
     event.create('positron')
     .protons(0)
     .neutrons(0)
-    .symbol('e₊₁')
-
+    .symbol('[e₊₁]')
 
     event.create('glueball')
     .protons(0)
     .neutrons(0)
-    .symbol('g₀')
+    .symbol('[g₀]')
 
 //quark-antiquarks
 
 event.create('up_quark')
     .protons(0)
     .neutrons(0)
-    .symbol('u₊²⁄₃')
+    .symbol('[u₊²⁄₃]')
 
 event.create('sub_quark')
     .protons(0)
     .neutrons(0)
-    .symbol('u₋²⁄₃')
+    .symbol('[u₋²⁄₃]')
 
 event.create('down_quark')
     .protons(0)
     .neutrons(0)
-    .symbol('d₋¹⁄₃')
+    .symbol('[d₋¹⁄₃]')
 
 event.create('sur_quark')
     .protons(0)
     .neutrons(0)
-    .symbol('d₊¹⁄₃')
+    .symbol('[d₊¹⁄₃]')
 
 event.create('charm_quark')
     .protons(0)
     .neutrons(0)
-    .symbol('c₊²⁄₃')
+    .symbol('[c₊²⁄₃]')
 
 event.create('curse_quark')
     .protons(0)
     .neutrons(0)
-    .symbol('c₋²⁄₃')
+    .symbol('[c₋²⁄₃]')
 
 event.create('strange_quark')
     .protons(0)
     .neutrons(0)
-    .symbol('s₋¹⁄₃')
+    .symbol('[s₋¹⁄₃]')
 
 event.create('ordinary_quark')
     .protons(0)
     .neutrons(0)
-    .symbol('s₊¹⁄₃')
+    .symbol('[s₊¹⁄₃]')
 
 event.create('top_quark')
     .protons(0)
     .neutrons(0)
-    .symbol('t₊²⁄₃')
+    .symbol('[t₊²⁄₃]')
 
 event.create('inferior_quark')
     .protons(0)
     .neutrons(0)
-    .symbol('t₋²⁄₃')
+    .symbol('[t₋²⁄₃]')
 
 event.create('bottom_quark')
     .protons(0)
     .neutrons(0)
-    .symbol('b₋¹⁄₃')
+    .symbol('[b₋¹⁄₃]')
 
 event.create('superior_quark')
     .protons(0)
     .neutrons(0)
-    .symbol('b₊¹⁄₃')
+    .symbol('[b₊¹⁄₃]')
+
+event.create('stellarite')
+    .protons(0)
+    .neutrons(999)
+    .symbol('S☼Ψ⌬⍣t')
+
+//almost  fictional particles
+event.create('muon')
+    .protons(0)
+    .neutrons(0)
+    .symbol('[μ⁻]')
+
+event.create('tau')
+    .protons(0)
+    .neutrons(0)
+    .symbol('[τ⁻]')
+
+event.create('electron_neutrino')
+    .protons(0)
+    .neutrons(0)
+    .symbol('[νₑ]')
+
+event.create('muon_neutrino')
+    .protons(0)
+    .neutrons(0)
+    .symbol('[ν_μ]')
+
+event.create('tau_neutrino')
+    .protons(0)
+    .neutrons(0)
+    .symbol('[ν_τ]')
+
+//basically fictional particles
+
+event.create('antimuon')
+    .protons(0)
+    .neutrons(0)
+    .symbol('[μ⁺]')
+
+event.create('antitau')
+    .protons(0)
+    .neutrons(0)
+    .symbol('[τ⁺]')
+
+event.create('electron_antineutrino')
+    .protons(0)
+    .neutrons(0)
+    .symbol('[ν̄ₑ]')
+
+event.create('muon_antineutrino')
+    .protons(0)
+    .neutrons(0)
+    .symbol('[ν̄_μ]')
+
+event.create('tau_antineutrino')
+    .protons(0)
+    .neutrons(0)
+    .symbol('[ν̄_τ]')
+
+event.create('gamma_photon')
+    .protons(0)
+    .neutrons(0)
+    .symbol('[γ]')
+
+//return to regularity ig
+
+event.create('draconium')
+    .protons(300)
+    .neutrons(300)
+    .symbol('Dr')
+
+event.create('awakened_draconium')
+    .protons(350)
+    .neutrons(350)
+    .symbol('AwkDr')
 })
 
 GTCEuStartupEvents.registry('gtceu:material', event => {
@@ -548,7 +677,8 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     .color(0x441f45)
     .iconSet(GTMaterialIconSet.METALLIC)
     .liquid(4400)
-    .flags(rod, plates, frame, no_abs_recipe)
+    .flags(rod, plates, frame, no_abs_recipe, no_decomp)
+    .formula('PtNh*Au4')
     .blastTemp(4450, "high", GTValues.VA[GTValues.IV], 600)
 
     event.create('tainted_zircalloy')
@@ -601,7 +731,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     event.create('echoing_fluxum_steel')
     .components('1x echoite', '1x fluix', '2x steel', '1x lanthanum')
     .ingot()
-    .flags(plates, rod)
+    .flags(plates, rod, frame)
     .color(0x120a6b)
     .iconSet(GTMaterialIconSet.DULL)
     .blastTemp(1400, "low", GTValues.VA[GTValues.MV], 400)
@@ -651,9 +781,16 @@ event.create('dilithium')
     .ore(3, 2, true)
     .color(0xf0a030).secondaryColor(0xc87010)
     .iconSet(GEM_HORIZONTAL)
-    .components('2x lithium')
-    .formula('Li2')
+    .element('dilithium')
     .addOreByproducts('lithium', 'helium_3', 'lithium')
+    .flags(no_decomp)
+
+//Anti-Dilithide - sci-ahhellnay blueish blue
+event.create('anti-dilithide')
+    .gem()
+    .color(0x0f5fcf).secondaryColor(0x378fef)
+    .iconSet(GEM_HORIZONTAL)
+    .element('anti-dilithide')
     .flags(no_decomp)
 
 // Phenakite - Be2SiO4 - colorless/pale pink, gem
@@ -758,18 +895,23 @@ event.create('sperrylite')
     .formula('PtAs2')
     .addOreByproducts('platinum', 'palladium', 'rhodium')
 
+//random gabazool
+
+event.create('aluminium_oxide')
+.dust()
+.color(0xccffff)
+.components('2x aluminium', '3x oxygen')
+
 event.create('dilithium_zirconoaluminophosphocalcioferrisilicate')
 .components(
-    '2x dilithium',
+    '4x dilithium',
     '3x silicon_dioxide',
     '2x aluminium_oxide',
     '1x iron',
     '1x zirconium',
-    '1x calcium_phosphate'
+    '1x tricalcium_phosphate'
 )
 .liquid(330)
-.dust()
-.flags(no_decomp)
 .color(0xC4622D)
 .iconSet(SHINY)
 
@@ -882,7 +1024,294 @@ event.create('sublimation_residue')
     .fluidPipeProperties(5450, 150, true, true, true, true)
     .liquid(4450)
 
+        //the ZPM chain of totalitarian doom
+    event.create('naquadrium')
+    .element('naquadrium')
+    .color(0x1f1f1f).secondaryColor(0x00ffff).iconSet(DULL)
+    .ingot(4)
+    .flags(foil, spring, fine_wire, bolt_and_screw, rod)
+    .cableProperties(v.zpm, 5, 2, false)
+    .rotorStats(180, 110, 4, 1600)
+    .fluidPipeProperties(4000, 225, true, false, true, true)
+    .blastTemp(5400, "high", va.iv, 550)
+    .liquid(5350)
+    .radioactiveHazard(1)
+
+    event.create('enriched_naquadrium')
+    .element('enriched_naquadrium')
+    .color(0x192919).secondaryColor(0x00ffcc).iconSet(SHINY)
+    .ingot(4)
+    .flags(rod, foil)
+    .blastTemp(7200, "high", va.iv, 900)
+    .liquid(7100)
+    .radioactiveHazard(2)
+
+    event.create('transuranic_naquadrium')
+    .components('3x naquadrium', '1x uranium_233')
+    .color(0x103710).secondaryColor(0x00ffaa).iconSet(DULL)
+    .ingot(4)
+    .blastTemp(7200, "high", va.iv, 900)
+    .liquid(7100)
+
+    event.create("omnium")
+    .element("omnium")
+    .ingot()
+    .iconSet(GTMaterialIconSet.getByName("omnium"))
+    .cableProperties(v.uev, 24, 0, true)
+    .blastTemp(19449, "high", va.uhv, 1600)
+    .flags(bolt_and_screw, gear, small_gear, plates, ring, rod, long_rod, round, frame)
+    .plasma(262144)
+
+    event.create("nullium")
+    .element("nullium")
+    .ingot()
+    .iconSet(GTMaterialIconSet.getByName("nullium"))
+    .cableProperties(v.uiv, 32, 0, true)
+    .blastTemp(29600, "higher", va.uev, 2400)
+    .flags(bolt_and_screw, gear, small_gear, plates, ring, rod, long_rod, round, frame)
+    .plasma(0)
+
+    event.create("infinity")
+    .element("infinity")
+    .ingot()
+    .color(0xffffff)
+    .cableProperties(v.uxv, 48, 0, true)
+    .iconSet(GTMaterialIconSet.getByName("infinity"))
+    .flags(bolt_and_screw, gear, small_gear, plates, ring, rod, long_rod, round, frame, rotor)
+    .blastTemp(29600, "higher", va.uiv, 3200)
+    .plasma(999999)
+
     
+event.create('hypothermic_helium_3_plasma')
+    .element('helium_3')
+    .color(0xfdffc7)
+    .liquid(1)
+
+event.create('raw_ascendine')
+    .element('transcendentine')
+    .color(0x5C4A7F)
+    .dust()
+
+event.create('ascendine')
+    .element('transcendentine')
+    .color(0x624888)
+    .dust()
+
+event.create('transcending_ascendine')
+    .element('transcendentine')
+    .color(0x673090)
+    .dust()
+
+event.create('harmonical_fuel')
+    .components('3x resonance', '4x rocket_fuel')
+    .color(0x9E84A5)
+    .liquid(400)
+
+event.create('ostrite')
+    .color(0x687478).iconSet(SHINY)
+    .flags(rod, plates, frame, long_rod, dense_plate)
+    .components('4x martian_ostrum', '1x transuranic_naquadrium', '1x desnium')
+    .blastTemp(8100, "high", va.luv, 2800)
+    .liquid(6800)
+
+
+event.create('calenite')
+    .color(0x9C3A58).iconSet(SHINY)
+    .flags(rod, plates, frame, long_rod, dense_plate)
+    .components('4x venian_calorite', '1x stellarite', '1x ostrite')
+    .blastTemp(10799, "higher", va.uv, 3400)
+    .liquid(10000)
+
+event.create('hafnium_carbide')
+    .color(0x0E4E0E).iconSet(SHINY)
+    .flags(plates, dense_plate)
+    .components('1x hafnium', '1x carbon')
+    .blastTemp(8632, 'higher', va.luv, 6000)
+
+event.create('hssd')
+    .ingot()
+    .components('3x desnium', '13x osmium_steel', '4x vintanium')
+    .color(0x6F579C).iconSet(GTMaterialIconSet.METALLIC)
+    .flags(bolt_and_screw, gear, small_gear, ring, long_rod, rod, frame, rotor, plates, round, foil)
+    .blastTemp(5250, "high", GTValues.VA[GTValues.EV], 700)
+    .liquid(5250)
+
+//Subatomic / Atomic Physics here:
+event.create('neutron')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(1000000))
+.color(0x0000FF)
+.element('neutron')
+
+event.create('nulltron')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(750000))
+.color(0xBB00FF)
+.element('nulltron')
+
+event.create('proton')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(1000000))
+.color(0xFF0000)
+.element('proton')
+
+event.create('negatron')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(750000))
+.color(0xFF00BB)
+.element('negatron')
+
+event.create('electron')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(500000))
+.color(0xFFBB00)
+.element('electron')
+
+event.create('positron')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(500000))
+.color(0x00BBFF)
+.element('positron')
+
+event.create('glueball')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(2000000000))
+.color(0xFFFFFF)
+.element('glueball')
+
+//quarks
+
+event.create('up_quark')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(500000000))
+.color(0x00AA00)
+.element('up_quark')
+
+event.create('sub_quark')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(500000000))
+.color(0xAA00AA)
+.element('sub_quark')
+
+event.create('down_quark')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(500000000))
+.color(0xAA0000)
+.element('down_quark')
+
+event.create('sur_quark')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(500000000))
+.color(0x0000AA)
+.element('sur_quark')
+
+event.create('charm_quark')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(1000000000))
+.color(0xA0A000)
+.element('charm_quark')
+
+event.create('curse_quark')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(1000000000))
+.color(0x000A0A)
+.element('curse_quark')
+
+event.create('strange_quark')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(800000000))
+.color(0xAAAAAA)
+.element('strange_quark')
+
+event.create('ordinary_quark')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(800000000))
+.color(0x666666)
+.element('ordinary_quark')
+
+event.create('top_quark')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(2000000000))
+.color(0xA6666A)
+.element('top_quark')
+
+event.create('inferior_quark')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(2000000000))
+.color(0x6AAAA6)
+.element('inferior_quark')
+
+event.create('bottom_quark')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(1500000000))
+.color(0xB01108)
+.element('bottom_quark')
+
+event.create('superior_quark')
+.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(1500000000))
+.color(0x80110B)
+.element('superior_quark')
+
+// Matter Lepton Suite
+event.create('muon')
+    .element('muon')
+    .color(0x89CFF0) // Soft Cyan
+    .plasma(986500000)
+
+event.create('tau')
+    .element('tau')
+    .color(0xFF4500) // Orange-Red
+    .plasma(1986500000)
+
+event.create('electron_neutrino')
+    .element('electron_neutrino')
+    .color(0x00FF33) // Neon Lime Green
+    .plasma(2050000000)
+
+event.create('muon_neutrino')
+    .element('muon_neutrino')
+    .color(0x00E5FF) // Electric Cyan
+    .plasma(2100000000)
+
+event.create('tau_neutrino')
+    .element('tau_neutrino')
+    .color(0xFF007F) // Hot Magenta
+    .plasma(2147000000)
+
+
+// Antimatter Lepton Suite (The Fictional Counterparts)
+event.create('antimuon')
+    .element('antimuon')
+    .color(0x76300F) // Inverted Cyan -> Deep Rusty Copper
+    .plasma(986500000)
+
+event.create('antitau')
+    .element('antitau')
+    .color(0x00BAFF) // Inverted Orange-Red -> Ice Blue
+    .plasma(1986500000)
+
+event.create('electron_antineutrino')
+    .element('electron_antineutrino')
+    .color(0xFF00CC) // Cursed Purple
+    .plasma(2050000000)
+
+event.create('muon_antineutrino')
+    .element('muon_antineutrino')
+    .color(0xFF1A00) // Angry Crimson Orange
+    .plasma(2100000000)
+
+event.create('tau_antineutrino')
+    .element('tau_antineutrino')
+    .color(0x00FF80) // Toxic Matrix Yellow-Green
+    .plasma(2147000000)
+
+event.create('gamma_photon')
+    .element('gamma_photon')
+    .color(0xFFFFAA)
+    .plasma(2000000000)
+//2 6 3 3
+event.create('lepton-dense_matter-antimatter-complex')
+    .color(0x9B30FF)
+    .plasma(2000000000)
+    .components('tau', 'muon', 'electron', 'positron')
+    .flags(no_decomp)
+
+//ah yes, draconium
+event.create('draconium')
+    .color(0x702880).iconSet(METALLIC)
+    .dust()
+    .element('draconium')
+    .blastTemp(7200, "mid", va.zpm, 1000)
+
+event.create('awakened_draconium')
+    .color(0xd9400b).iconSet(METALLIC)
+    .ingot()
+    .flags(plates, bolt_and_screw, long_rod, rod, ring, round)
+    .element('awakened_draconium')
+    .liquid(13650)
+    .blastTemp(13200, "mid", va.uhv, 1000)
 
 
        let addFluid = (mat, key) => {
@@ -900,7 +1329,7 @@ event.create('sublimation_residue')
         .liquid(1300)
         .secondaryColor(0x0066cc)
         .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, fine_wire)
-        .blastTemp(1400, "low", GTValues.VA[GTValues.LV], 450)
+        .blastTemp(1400, "low", va.lv, 450)
         .fluidPipeProperties(1300, 75, true, true, true, false)
         .polarizesInto('magnetic_nexus_steel')
 
@@ -940,7 +1369,7 @@ event.create('sublimation_residue')
         .ingot()
         .components('1x titanium', '1x perfected_taint')
         .color(0x3e2a58).iconSet(GTMaterialIconSet.METALLIC)
-        .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, no_decomp)
+        .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, no_decomp, dense_plate)
         .blastTemp(2200, "mid", GTValues.VA[GTValues.EV], 600)
         .liquid(2200)
         .fluidPipeProperties(2200, 200, true, true, true, false)
@@ -994,14 +1423,6 @@ event.create('sublimation_residue')
     .build()
 )
 
-    event.create('hssd')
-        .ingot()
-        .components('3x desnium', '13x osmium_steel', '4x vintanium')
-        .color(0x6F579C).iconSet(GTMaterialIconSet.METALLIC)
-        .flags(bolt_and_screw, gear, small_gear, ring, long_rod, rod, frame, rotor, plates, round, foil)
-        .blastTemp(5250, "high", GTValues.VA[GTValues.EV], 700)
-        .liquid(5250)
-
     event.create('rhodipalladic-desnite')
         .ingot()
         .components('4x rhodium_plated_palladium', '4x mana','3x desnium')
@@ -1010,15 +1431,84 @@ event.create('sublimation_residue')
         .blastTemp(5100, "high", GTValues.VA[GTValues.IV], 700)
         .liquid(5100)
         .fluidPipeProperties(5100, 1450, true, true, true, true)
+
+    event.create('transuranic_naquadrium_alloy')
+    .components('4x transuranic_naquadrium', '2x osmiridium', '1x trinium')
+    .color(0x239366).secondaryColor(0x00aaff).iconSet(DULL)
+    .flags(plates, rod, gear, small_gear, frame, small_gear, spring, bolt_and_screw, rotor)
+    .blastTemp(8100, "high", va.luv, 800)
+    .liquid(8000)
+    .ingot(4)
+    .toolStats(
+        ToolProperty.Builder.of(56, 13, 10240, 5)
+        .types(
+            GTToolType.HARD_HAMMER,
+            GTToolType.DRILL_LV,
+            GTToolType.DRILL_MV,
+            GTToolType.DRILL_HV,
+            GTToolType.DRILL_EV,
+            GTToolType.DRILL_IV,
+            GTToolType.CHAINSAW_LV,
+            GTToolType.CHAINSAW_HV,
+            GTToolType.CHAINSAW_IV,
+            GTToolType.PICKAXE,
+            GTToolType.SHOVEL,
+            GTToolType.BUZZSAW,
+            GTToolType.AXE,
+            GTToolType.FILE,
+            GTToolType.WIRE_CUTTER_LV,
+            GTToolType.WIRE_CUTTER_HV,
+            GTToolType.WIRE_CUTTER_IV,
+            GTToolType.WIRE_CUTTER,
+            GTToolType.WRENCH_LV,
+            GTToolType.WRENCH_HV,
+            GTToolType.WRENCH_IV,
+            GTToolType.MINING_HAMMER,
+            GTToolType.SAW,
+            GTToolType.SCREWDRIVER,
+            GTToolType.SPADE,
+            GTToolType.WRENCH,
+            GTToolType.SCREWDRIVER_LV,
+            GTToolType.SCREWDRIVER_HV,
+            GTToolType.SCREWDRIVER_IV,
+            GTToolType.SWORD,
+            GTToolType.KNIFE,
+            GTToolType.BUTCHERY_KNIFE,
+            GTToolType.CROWBAR,
+            GTToolType.HOE
+        )
+        .build()
+    )
     
+    event.create('ephemeral_naquadite')
+    .components('8x transuranic_naquadrium_alloy', '2x lepton-dense_matter-antimatter-complex', '1x darmstadium')
+    .secondaryColor(0x119eb2).color(0xB07958).iconSet(DULL)
+    .flags(rotor, bolt_and_screw, rod, long_rod, dense_plate, plates, small_gear)
+    .flags(no_abs_recipe, no_decomp)
+    .blastTemp(9000, "highest", va.uv, 800)
+
+    // Transcendental Polydimensionalized N-P Dilithide for UHV coils, max temp 21600
+
+    const stellaritevariantscuzfuckme = {
+    matrix: 0x4B0000,
+    grid: 0x001F00,
+    lattice: 0x00006F
+    }
+    Object.entries(stellaritevariantscuzfuckme).forEach(([name, color]) => {
+    event.create(`stellarite_${name}`)
+    .color(color)
+    .plasma(12600)
+    .element('stellarite')
+    })
 
 
-
-
-
-
-
-
+    event.create('stellarite')
+    .color(0x4B1F6F).iconSet(SHINY)
+    .element('stellarite')
+    .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, dense_plate)
+    .fluidPipeProperties(1000000, 8150, true, true, true, true)
+    .plasma(126000)
+    .blastTemp(18400, "higher", va.uhv, 1500)
 
 
 
@@ -1049,30 +1539,46 @@ event.create('sublimation_residue')
     .ignoredTagPrefixes([TagPrefix.dustTiny, TagPrefix.dustSmall, TagPrefix.nugget, TagPrefix.block])
     .gem()
 
-    const compIngot = (name, elements, color, icon, blasting, flags) => {
-        if (blasting.includes(blasting[0])){
-            event.create(name).ingot().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3])
-        } else {
-            event.create(name).ingot().fluid().components(elements).color(color).iconSet(icon).flags(flags)
-        }
+    event.create('transcendentine')
+    .element('transcendentine')
+    .color(0x6B2D8B)
+    .ingot()
+    .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, no_decomp)
+
+event.create('auralloy-omega_over_transcendentine')
+    .components('8x transcendentine', '2x auralloy-omega')
+    .color(0x8150A2)
+    .dust()
+    .flags(bolt_and_screw, small_gear, plates, long_rod, frame)
+    .fluidPipeProperties(2147483647, 200, true, true, true, true)
+
+const compIngot = (name, elements, color, icon, blasting, flags, cabel) => {
+    if (blasting.includes(blasting[0])){
+        if (cabel !== null) {
+            event.create(name).ingot().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]).cableProperties(cabel[0], cabel[1], cabel[2], cabel[3]).liquid(blasting[0])
+        } else
+        event.create(name).ingot().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]).liquid(blasting[0])
+    } 
+    else 
+    {
+        event.create(name).ingot().fluid().components(elements).color(color).iconSet(icon).flags(flags).liquid(1200)
     }
+}
 
 
     // Large Multis
-    const largeMulti = (name,components,color) => {
-        compIngot(name, components, color, DULL, [2200, 'low', GTValues.VA[GTValues.MV], 2000], [plates, frame, rod])
-    }
-    const Transplatine = (name,components,color) => {
-        compIngot(name, components, color, DULL, [2900, 'mid', GTValues.VA[GTValues.HV], 1900], [plates, frame, rod])
-    }
+const largeMulti = (name, components, color) => {
+    compIngot(name, components, color, DULL, [2200, 'low', GTValues.VA[GTValues.MV], 2000], 
+        name == 'beryllium_bronze' ? [plates, frame, rod, dense_plate] : [plates, frame, rod], null)
+}
 
-    const matGen = (name, components, color ) => {
-        compIngot(name, components, color, DULL, [1900, 'low', GTValues.VA[GTValues.MV], 1600], [plates, frame, gear, rod])
-    }
+const Transplatine = (name, components, color) => {
+    compIngot(name, components, color, DULL, [2900, 'mid', GTValues.VA[GTValues.HV], 1900], [plates, frame, rod], null) 
+}
 
-    const matGenD = (name, components, color ) => {
-        compIngot(name, components, color, DULL, [1900, 'low', GTValues.VA[GTValues.MV], 1600], [plates, frame, gear, rod])
-    }
+const matGenD = (name, components, color) => {
+    compIngot(name, components, color, DULL, [1900, 'low', GTValues.VA[GTValues.MV], 1600], [plates, frame, gear, rod], null)
+}
 
 
     largeMulti('birmabright', ['7x aluminium', '2x magnesium', '1x manganese'], 0xbfbfbf)
@@ -1096,84 +1602,101 @@ event.create('sublimation_residue')
 
 
 
+// PEEEEEEEEEEEEEEEEKaboo
 
 
+event.create('aniline')
+    .liquid(457)
+    .color(0xC8B84A)
+    .components('6x carbon', '7x hydrogen', '1x nitrogen')
+ 
+event.create('fluorobenzene')
+    .liquid(358)
+    .color(0xB8D4E8)
+    .components('6x carbon', '5x hydrogen', '1x fluorine')
+ 
+event.create('hydroquinone')
+    .dust()
+    .iconSet(DULL)
+    .color(0xE8E0C8)
+    .components('6x carbon', '6x hydrogen', '2x oxygen')
+ 
+event.create('difluorobenzophenone')
+    .dust()
+    .iconSet(DULL)
+    .color(0xD8D0B8)
+    .components('13x carbon', '8x hydrogen', '2x fluorine', '1x oxygen')
+ 
+event.create('diphenyl_sulfone')
+    .dust()
+    .iconSet(DULL)
+    .color(0xE0DCE0)
+    .components('12x carbon', '10x hydrogen', '2x oxygen', '1x sulfur')
+ 
+event.create('maleic_anhydride')
+    .dust()
+    .iconSet(DULL)
+    .color(0xF0E8C0)
+    .components('4x carbon', '2x hydrogen', '3x oxygen')
+ 
+event.create('gamma_butyrolactone')
+    .liquid(477)
+    .color(0xC8E0D0)
+    .components('4x carbon', '6x hydrogen', '2x oxygen')
+ 
+event.create('n_methylpyrrolidone')
+    .liquid(475)
+    .color(0xC0D8E8)
+    .components('5x carbon', '9x hydrogen', '1x nitrogen', '1x oxygen')
+ 
+event.create('pseudocumene')
+    .liquid(441)
+    .color(0xD4C89C)
+    .components('9x carbon', '12x hydrogen')
+ 
+event.create('trimellitic_anhydride')
+    .dust()
+    .iconSet(DULL)
+    .color(0xE8E0B8)
+    .components('9x carbon', '4x hydrogen', '5x oxygen')
+ 
+event.create('trimellitic_anhydride_chloride')
+    .dust()
+    .iconSet(DULL)
+    .color(0xD4C870)
+    .components('9x carbon', '4x hydrogen', '1x chlorine', '4x oxygen')
+ 
+event.create('methylenedianiline')
+    .dust()
+    .iconSet(DULL)
+    .color(0xC8B060)
+    .components('13x carbon', '14x hydrogen', '2x nitrogen')
+ 
+event.create('thionyl_chloride')
+    .liquid(352)
+    .color(0xD8E8A0)
+    .components('2x chlorine', '1x oxygen', '1x sulfur')
+    .formula('Cl2OS')
 
-    event.create("sodium_cyanide")
-        .dust()
-        .color(0x7FB4C7)
-        .components("1x sodium", "1x carbon", "1x nitrogen")
+event.create('polyether_ether_ketone')
+    .polymer()
+    .liquid(616)
+    .iconSet(DULL)
+    .color(0xD4C4A0)
+    .components('19x carbon', '12x hydrogen', '3x oxygen')
+    .flags(rod, plates, frame, foil)
+    .formula('(C19H12O3)n')
+    .fluidPipeProperties(630, 400, true, true, false, false)
 
-    event.create("chloroacetic_mixture")
-        .fluid()
-        .color(0x2D80B5)
-
-    event.create("chloroacetate")
-        .dust()
-        .color(0x2D8BAE)
-        .components("1x chlorine", "2x carbon", "3x hydrogen", "2x oxygen")
-        .flags(no_decomp)
-        .formula("ClCH2CO2H")
-
-    event.create("dichloroacetate")
-        .fluid()
-        .color(0x2D8BBE)
-        .components("1x chlorine", "1x chloroacetate")
-        .formula("Cl2CH2CO2H")
-
-    event.create("trichloroacetate")
-        .fluid()
-        .color(0x2D8BCE)
-        .components("1x chlorine", "1x dichloroacetate")
-        .formula("Cl3CH2CO2H")
-
-    event.create("cyanoacetic_acid")
-        .dust()
-        .color(0x5B8988)
-        .components("1x nitrogen", "3x carbon", "3x hydrogen", "2x oxygen")
-        .flags(no_decomp)
-        .formula("C3H3NO2")
-        .ignoredTagPrefixes([TagPrefix.dustTiny, TagPrefix.dustSmall])
-
-    event.create("ethyl_cyanoacetate")
-        .liquid()
-        .color(0x488176)
-        .components("1x nitrogen", "5x carbon", "7x hydrogen", "2x oxygen")
-        .flags(no_decomp)
-        .formula("C5H7NO2")
-
-    event.create("uncracked_ethyl_cyanoacrylate")
-        .liquid()
-        .color(0x616863)
-        .components("1x nitrogen", "6x carbon", "7x hydrogen", "2x oxygen")
-        .flags(no_decomp)
-
-    event.create("ethyl_cyanoacrylate")
-        .liquid()
-        .color(0x516863)
-        .components("1x nitrogen", "6x carbon", "7x hydrogen", "2x oxygen")
-        .flags(no_decomp)
-        .formula("C6H7NO2")
-
-    event.create("polyethyl_cyanoacrylate")
-        .polymer()
-        .liquid()
-        .color(0x708787)
-        .components("1x nitrogen", "6x carbon", "7x hydrogen", "2x oxygen")
-        .fluidPipeProperties(3000, 12000, true, true, true, false)
-        .flags(no_decomp, plates, foil, sticky)
-        .formula("C6H7NO2")
-
-    // Dimethyl sulfoxide sub-chain (PECA catalyst)
-    event.create("dimethyl_sulfoxide")
-        .liquid()
-        .color(0xBFB178)
-        .components("2x carbon", "6x hydrogen", "1x sulfur", "1x oxygen")
-
-    event.create("dimethyl_sulfide")
-        .liquid()
-        .color(0xACB279)
-        .components("2x carbon", "6x hydrogen", "1x sulfur")
+event.create('torlon')
+    .polymer()
+    .liquid(633)
+    .iconSet(DULL)
+    .color(0xCCFF00)
+    .components('22x carbon', '13x hydrogen', '2x nitrogen', '5x oxygen', '1x chlorine')
+    .flags(rod, plates, frame, foil)
+    .formula('(C22H13N2O5Cl)n')
+    .fluidPipeProperties(700, 600, true, true, false, false)
 
 
      // my chenisy shit here:
@@ -1402,6 +1925,14 @@ event.create('sublimation_residue')
     .gas()
 
     //return to sender
+    //idk anymoer broski
+
+    event.create('cryostatic-antilithide')
+    .liquid(10)
+    .components('4x resonance', '1x dilithium', '1x anti-dilithide', '1x cryothetic_zero')
+    .color(0x0f5fcf)
+    .flags(no_decomp)
+
     // Nuclear Processing pt.2
 
     event.create('radioactive_fuel_cladding_scrap')
@@ -1679,6 +2210,7 @@ event.create('artificial_blood')
     .gas()
     .color(0x4e0e04)
     .components('55x blood_plasma', '40x water', '5x blood_electrolytes')
+    .flags(no_decomp)
 
 //a lil methamphetamine chain, if you will
 
@@ -1708,145 +2240,6 @@ event.create('crystal_methamphetamine')
     .flags(no_decomp)
 
 // return to non-meth
-
-event.create('hypothermic_helium_3_plasma')
-    .element('helium_3')
-    .color(0xfdffc7)
-    .liquid(1)
-
-event.create('raw_ascendine')
-    .element('transcendentine')
-    .color(0x5C4A7F)
-    .dust()
-
-event.create('ascendine')
-    .element('transcendentine')
-    .color(0x624888)
-    .dust()
-
-event.create('transcending_ascendine')
-    .element('transcendentine')
-    .color(0x673090)
-    .dust()
-
-event.create('transcendentine')
-    .element('transcendentine')
-    .color(0x6B2D8B)
-    .dust()
-    .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, no_decomp)
-
-event.create('auralloy-omega_over_transcendentine')
-    .components('8x transcendentine', '2x auralloy-omega')
-    .color(0x8150A2)
-    .dust()
-    .flags(bolt_and_screw, small_gear, plates, long_rod, frame)
-    .fluidPipeProperties(2147483647, 200, true, true, true, true)
-
-event.create('harmonical_fuel')
-    .components('3x resonance', '4x rocket_fuel')
-    .color(0x9E84A5)
-    .liquid(400)
-
-event.create('ostrite')
-    .color(0x687478)
-    .flags(rod, plates, frame, long_rod, dense_plate)
-    .components('4x martian_calorite', '1x transuranic_naquadrium', '1x desnium')
-    .liquid()
-    .blastTemp(8100, "high", GTValues.VA[GTValues.LuV], 2800)
-    .liquid(6800)
-
-event.create('calenite')
-    .color(0x9C3A58)
-    .flags(rod, plates, frame, long_rod, dense_plate)
-    .components('4x venian_calorite', '1x neutronium', '1x ostrite')
-    .liquid()
-    .blastTemp(10799, "higher", GTValues.VA[GTValues.UV], 3400)
-    .liquid(10000)
-
-event.create('hafnium_carbide')
-    .color(0x0E4E0E)
-    .flags(plates, dense_plate)
-    .components('1x hafnium', '1x carbon')
-    .blastTemp(8632, 'higher', GTValues.VA[GTValues.LuV], 6000)
-
-//Subatomic / Atomic Physics here:
-event.create('neutron')
-.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(1000000))
-.color(0x0000FF)
-
-event.create('nulltron')
-.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(750000))
-.color(0xBB00FF)
-
-event.create('proton')
-.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(1000000))
-.color(0xFF0000)
-
-event.create('negatron')
-.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(750000))
-.color(0xFF00BB)
-
-event.create('electron')
-.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(500000))
-.color(0xFFBB00)
-
-event.create('positron')
-.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(500000))
-.color(0x00BBFF)
-
-event.create('glueball')
-.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(2000000000))
-.color(0xFFFFFF)
-
-//quarks
-
-event.create('up_quark')
-.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(500000000))
-.color(0x00AA00)
-
-event.create('sub_quark')
-.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(500000000))
-.color(0xAA00AA)
-
-event.create('down_quark')
-.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(500000000))
-.color(0xAA0000)
-
-event.create('sur_quark')
-.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(500000000))
-.color(0x0000AA)
-
-event.create('charm_quark')
-.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(1000000000))
-.color(0xA0A000)
-
-event.create('curse_quark')
-.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(1000000000))
-.color(0x000A0A)
-
-event.create('strange_quark')
-.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(800000000))
-.color(0xAAAAAA)
-
-event.create('ordinary_quark')
-.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(800000000))
-.color(0x666666)
-
-event.create('top_quark')
-.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(2000000000))
-.color(0xA6666A)
-
-event.create('inferior_quark')
-.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(2000000000))
-.color(0x6AAAA6)
-
-event.create('bottom_quark')
-.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(1500000000))
-.color(0xB01108)
-
-event.create('superior_quark')
-.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(1500000000))
-.color(0x80110B)
 
     //material changes go brrbrrbrbrb
 
@@ -1903,7 +2296,6 @@ event.create('superior_quark')
 
     GTMaterials.Invar.addFlags(dense_plate)
     GTMaterials.Electrum.addFlags(dense_plate)
-    GTMaterials.
 
     addFluid(GTMaterials.EchoShard, $FluidStorageKeys.LIQUID)
     addFluid(GTMaterials.Dysprosium, $FluidStorageKeys.LIQUID)
@@ -1930,6 +2322,128 @@ event.create('superior_quark')
     GTMaterials.BlueSteel.setFormula('(CuAg4)(BiZnCu3)La2Fe2(Ni(AuAgCu3)Fe3)4')
     GTMaterials.TungstenSteel.setComponents('1x steel', '2x tungsten', '1x lanthanum')
     GTMaterials.TungstenSteel.setFormula('LaFeW2')
+
+    //return from greece
+
+    event.create('osmium_chloride')
+    .components('1x osmium', '3x chlorine')
+    .color(0x7d7d20).iconSet(SHINY)
+    .dust()
+    .flags(no_decomp)
+
+    event.create('rhodium_chloride')
+    .components('1x rhodium', '3x chlorine')
+    .color(0x5a2050).iconSet(SHINY)
+    .dust()
+    .flags(no_decomp)
+
+    event.create('rhenium_fluorosulfate')
+    .components('1x rhenium', '1x sulfur', '3x oxygen', '1x fluorine')
+    .formula('Re(SO3F⁻)')
+    .color(0xbfbc61).iconSet(SHINY)
+    .dust()
+    .flags(no_decomp)
+
+    event.create('ruthenium_phosphate')
+    .components('1x ruthenium', '2x phosphate')
+    .color(0x78d066).iconSet(SHINY)
+    .dust()
+    .flags(no_decomp)
+
+    event.create('rhenium_iii_sulfate')
+    .components('2x rhenium', 'sulfur', '4x oxygen')
+    .formula('Re2(SO4)3')
+    .color(0x3e6e9b).iconSet(DULL)
+    .dust()
+    .flags(no_decomp)
+
+    event.create('rhenium_heptoxide')
+    .components('2x rhenium', '7x oxygen')
+    .color(0xc39557).iconSet(SHINY)
+    .dust()
+    .flags(no_decomp)
+
+    event.create('boron_trichloride')
+    .components('1x boron', '3x chlorine')
+    .color(0x3f6b6e)
+    .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID))
+
+
+    event.create('carborane_acid')
+    .components('1x hydrogen', '1x carbon','11x boron', '11x chlorine')
+    .color(0x2b8f80)
+    .gas(new GTFluidBuilder().attribute($FluidAttributes.ACID))
+
+    event.create('proto-carborane_acid')
+    .components('1x carborane_acid', '11x chlorine')
+    .color(0x075040)
+    .gas(new GTFluidBuilder().attribute($FluidAttributes.ACID))
+    .flags(no_decomp)
+
+    GTMaterials.RhodiumSulfate.setProperty($PropertyKey.DUST, new $DustProperty)
+    GTMaterials.Rhenium.setProperty($PropertyKey.DUST, new $DustProperty)
+    GTMaterials.Tellurium.setProperty($PropertyKey.DUST, new $DustProperty)
+    GTMaterials.Selenium.setProperty($PropertyKey.DUST, new $DustProperty)
+    GTMaterials.Rhenium.setMaterialARGB(0xff8901)
+    GTMaterials.Tellurium.setMaterialARGB(0xc5c70a)
+    GTMaterials.Selenium.setMaterialARGB(0xba2d3a)
+
+    GTMaterials.Tellurium.setProperty($PropertyKey.ORE, new $OreProperty)
+    GTMaterials.Bismuth.setProperty($PropertyKey.ORE, new $OreProperty)
+    GTMaterials.Selenium.setProperty($PropertyKey.ORE, new $OreProperty)
+    GTMaterials.Cadmium.setProperty($PropertyKey.ORE, new $OreProperty)
+
+    const naquadriumadjacentpartsheheha = {
+    naquadrium : [0x426b42, 0x457a45, 0x3aad3a, 0x1dde1d, 0x274227, ],
+    enriched_naquadrium: [0x235223, 0x297a29, 0x61ad61, 0xb1621a, 0x304230]
+    }
+Object.entries(naquadriumadjacentpartsheheha).forEach(([type, chezmix]) => {
+    event.create(`impure_${type}_solution`).color(chezmix[0]).liquid()
+    event.create(`${type}_solution`).color(chezmix[1]).liquid()
+    event.create(`acidic_${type}_solution`).color(chezmix[2]).liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID))
+    event.create(`${type}_waste`).color(chezmix[4]).liquid()
+
+    event.create(`${type}_boride`).color(chezmix[3]).dust().flags(no_decomp, rod).components(`1x ${type}`, '1x boron')
+})
+//return to sender: ZPM alloys
+
+
+    compIngot('tri-osmic_matrix', ['4x osmium', 'selenium', 'tungsten'], 0x4849c4, SHINY, [6300, 'high', va.zpm, 1800], [ring, gear, small_gear, plates, rod, long_rod, rotor, round, bolt_and_screw, foil, fine_wire], null)
+    compIngot('axiom-re', ['gallium', 'rhenium'], 0xeebe80, SHINY, [4650, 'mid', va.luv, 1400], [plates, long_rod, rod, spring, small_spring, foil], [va.zpm, 6, 3, false])
+    compIngot('pentarch-v', ['trinium', 'taint', 'titanium', 'tantalum', 'tellurium'], 0x9b7e99, SHINY, [6500, 'high', va.zpm, 1650], [spring, foil, long_rod, plates, bolt_and_screw, gear, rod], [va.zpm, 8, 6, false])
+    compIngot('astazine-e', ['3x europium', '2x cobalt', 'titanium', 'lutetium'], 0X4FB5FB, METALLIC, [6500, 'high', va.luv, 300], [long_rod, rod, plates, spring, small_spring, fine_wire, frame], [va.uhv, 4, 16, false])
+
+    //mmh smores (i meant ores)
+
+    const compOreD = (name, elements, color, icon, oreShit) => {
+        event.create(name)
+        .dust()
+        .components(elements)
+        .color(color)
+        .iconSet(icon)
+        .ore(3, 2)
+        .addOreByproducts(oreShit[0])
+        .separatedInto(elements[0].replace(/\d+x\s*/g, ''), elements[1].replace(/\d+x\s*/g, ''))
+        .washedIn(oreShit[1])
+        .oreSmeltInto(elements[1].replace(/\d+x\s*/g, ''))
+    }
+
+    const rareorespleasefuckingkillme = {
+        //the big boy tellurides
+        calaverite: [['gold', '2x tellurium'], 0xd4af37, SHINY, ['platinum', 'copper', 'sulfur'], 'hydrogen_cyanide'],
+        hessite: [['2x silver', 'tellurium'], 0x8c8c8c, METALLIC, ['sulfur', 'palladium', 'selenium'], 'hydrogen_cyanide'],
+        altaite: [['lead', 'tellurium'], 0x7a4a7a, DULL, ['bismuth', 'zinc', 'tin'], 'hydrogen_cyanide'],
+        // the big boy selenides
+        clausthalite: [['lead', 'selenium'], 0x8a3a5a, DULL, ['gold', 'platinum', 'tungsten'], 'aqua_regia'],
+        tiemannite: [['mercury', 'selenium'], 0x9a2d35, METALLIC, ['cadmium', 'tellurium', 'sulfur'], 'aqua_regia'],
+        berzelianite: [['2x copper', 'selenium'], 0xc84a50, METALLIC, ['silver', 'gold', 'sulfur'], 'aqua_regia']
+    }
+
+Object.entries(rareorespleasefuckingkillme).forEach(([ore, [elements, color, icon, funkyshit, fluid]]) => {
+    compOreD(ore, elements, color, icon, [funkyshit, fluid])
+})
+
+
 
 })
 
@@ -2371,6 +2885,18 @@ event
 
 event
     .create('gtceu:undergarden_marker')
+
+        event.create('gtceu:naquadrium_coil_block', 'gtceu:coil')
+        .temperature(8100)
+        .level(10)
+        .energyDiscount(6)
+        .tier(5)
+        .coilMaterial(() => GTMaterials.get('naquadrium'))
+        .texture('gtceu:block/casings/coils/naquadrium_coil')
+        .hardness(40)
+        .requiresTool(true)
+        .tagBlock('forge:requires_duranium_tool')
+        .soundType('metal')
 })
 
 ItemEvents.modification(event => {

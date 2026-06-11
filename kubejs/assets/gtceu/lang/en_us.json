@@ -59,9 +59,6 @@
     "block.gtceu.large_rock_crusher.tooltip.1": "Has §6Perfect Overclock",
     "block.gtceu.large_rock_crusher.tooltip.2": "Can up to have §bone§r Energy Hatch",
 
-    "block.gtceu.echo_imbuement_chamber.tooltip.0": "§1The only machine magitech enough to imbue Echonite.",
-    "block.gtceu.echo_imbuement_chamber.tooltip.1": "§rCan work with up to TWO energy hatches",
-
     
     "material.gtceu.infinity": "§fI§en§df§ci§bn§ai§9t§fy",
     "material.gtceu.omnium": "§aO§bm§cn§di§eu§6m",
@@ -117,6 +114,8 @@
     "material.gtceu.enstatite": "§7Enstatite",
     "material.gtceu.resonance": "§5§kResonance",
     "material.gtceu.desnium": "§5Desnium",
+    "material.gtceu.ostrite": "§7Ostrite",
+    "material.gtceu.calenite": "§cCalenite",
     "material.gtceu.hssd": "§5HSS-DOV",
     "material.gtceu.osmium_steel": "§1Osmium Steel",
     "material.gtceu.vintanium": "§4Vintanium",
@@ -142,7 +141,7 @@
     "material.gtceu.clausthalite": "§4Clausthalite",
     "material.gtceu.osmium_chloride": "§2Osmium Chloride",
     "material.gtceu.rhenium_iii_sulfate": "§9Rhenium (III) Sulfate",
-    "material.gtceu.transuranic_naquadrium": "§2Tranuranic Naquadrium",
+    "material.gtceu.transuranic_naquadrium": "§2Transuranic Naquadrium",
     "material.gtceu.enriched_naquadrium": "§2Enriched Naquadrium",
     "material.gtceu.naquadrium": "§3Naquadrium",
     "material.gtceu.naquadrium_waste": "§3Naquadrium Waste",
@@ -150,12 +149,17 @@
     "material.gtceu.acidic_naquadrium_solution": "§aAcidic Naquadrium Solution",
     "material.gtceu.acidic_enriched_naquadrium_solution": "§aAcidic Enriched Naquadrium Solution",
     "material.gtceu.naquadrium_solution": "§aNaquadrium Solution",
-    "material.gtceu.enriched_naquadrium_solution": "§2Naquadrium Solution",
+    "material.gtceu.enriched_naquadrium_solution": "§2Enriched Naquadrium Solution",
     "material.gtceu.impure_naquadrium_solution": "§2Impure Naquadrium Solution",
     "material.gtceu.impure_enriched_naquadrium_solution": "§2Impure Enriched Naquadrium Solution",
     "material.gtceu.proto-carborane_acid": "§3Proto-Carborane",
     "material.gtceu.carborane_acid": "§bCarborane Acid",
     "material.gtceu.boron_trichloride": "§bBoron Trichloride",
+
+    "material.gtceu.tri-osmic_matrix": "§9Tri-Osmic Matrix",
+    "material.gtceu.astazine-e": "§bAstrazine-E",
+    "material.gtceu.pentarch-v": "§2Pentarch-V",
+    "material.gtceu.axiom-re": "§6Axiom-Re",
 
     "material.gtceu.radioactive_bronze_ore": "Radioactive.. Radioactive Bronze? How the fuck is that even possible? Like... according to my knowledge, there is not even a natural source of Bronze, let alone Radioactive‽",
     "material.gtceu.bullshit": "Bullshit",
@@ -170,10 +174,11 @@
     "material.gtceu.auralloy-omega": "§6Aura§7lloy-Ω",
     "material.gtceu.rhodipalladic-desnite": "§bῬοδιπαλλαδοδεσνίτης",
     "material.gtceu.transuranic_naquadrium_alloy": "§3Transuranic Naquadrium Alloy",
-    "material.gtceu.tri-osmic_matrix": "§9Tri-Osmic Matrix",
-    "material.gtceu.astazine-e": "§bAstrazine-E",
-    "material.gtceu.pentarch-v": "§2Pentarch-V",
-    "material.gtceu.axiom-re": "§6Axiom-Re",
+
+    "material.gtceu.stellarite_grid": "§2Stellarite Grid",
+    "material.gtceu.stellarite_lattice": "§1Stellarite Lattice",
+    "material.gtceu.stellarite_matrix": "§4Stellarite Matrix",
+    "material.gtceu.stellarite": "§5Stellarite",
     
     
 
@@ -190,19 +195,21 @@
     "material.gtceu.dimethyl_sulfoxide": "Dimethyl Sulfoxide",
     "material.gtceu.dimethyl_sulfide": "Dimethyl Sulfide",
 
+    "material.gtceu.hafnium_carbide": "§6Hafnium Carbide",
+
     "material.gtceu.ammonium_hydroxide": "Ammonium Hydroxide",
     "material.gtceu.tetrachlorosilane": "Silicon Tetrachloride",
     "material.gtceu.tetraethyl_orthosilicate": "Tetraethyl Orthosilicate",
     "material.gtceu.crude_ethyl_silicate": "Crude Ethyl Silicate",
     "material.gtceu.wood_leachate": "Wood Leachate",
-    "material.gtceu.infernal_acid": "§6Phthoraquareghydroxyl-Inferna",
+    "material.gtceu.infernal_acid": "§6P§4h§6t§4h§6o§4r§6a§4q§6u§4a§6r§4e§6g§4h§6y§4d§6r§4o§6x§4y§6l-Inferna",
     "material.gtceu.supercooled_ice": "§bSupercooled Ice",
     "material.gtceu.cryothetic_zero": "§l§1Cryothetic §kZERO",
 
 
     "material.gtceu.hydroxy": "Hydroxy",
-    "material.gtceu.aqua_regihydroxide": "Aqua RegiHydroxide",
-    "material.gtceu.hydrofluoric_hydroxicide": "Hydrofluoric Hydroxicide",
+    "material.gtceu.aqua_regihydroxide": "Hydroxic Regius Aquae",
+    "material.gtceu.hydrofluoric_hydroxicide": "Hydrohydroxic Fluoride",
     "material.gtceu.sodium_oxalate": "Sodium Oxalate",
     "material.gtceu.sodium_formate": "Sodium Formate",
     "material.gtceu.sodium_sulfate": "Sodium Sulfate",
@@ -311,7 +318,7 @@
     "material.gtceu.neutron": "§9Neutron Flux",
     "material.gtceu.proton": "§cProton Stream",
     "material.gtceu.electron": "§6Electron Plasma",
-    "material.gtceu.nulltron": "§4Nulltron Flux",
+    "material.gtceu.nulltron": "§dNulltron Flux",
     "material.gtceu.negatron": "§dNegatron Stream",
     "material.gtceu.positron": "§bPositron Plasma",
     "material.gtceu.glueball": "§7Gluon Plasma",
@@ -328,6 +335,42 @@
     "material.gtceu.bottom_quark": "§cBottom Quark",
     "material.gtceu.superior_quark": "§4Superior Quark",
 
+
+    "material.gtceu.jarosite": "§6Jarosite",
+    "material.gtceu.fluorapatite": "§aFluorapatite",
+    "material.gtceu.rhodite": "§7Rhodite",
+    "material.gtceu.dilithium": "§6Dilithium",
+    "material.gtceu.anti-dilitide": "§9Anti-Dilithide",
+    "material.gtceu.cryostatic-antilithide": "§9Cryostatic-Antilithide",
+    "material.gtceu.phenakite": "§fPhenakite",
+    "material.gtceu.kernite": "§fKernite",
+    "material.gtceu.wustite": "§8Wüstite",
+    "material.gtceu.ulvospinel": "§8Ulvöspinel",
+    "material.gtceu.merrillite": "§fMerrillite",
+    "material.gtceu.laurite": "§8Laurite",
+    "material.gtceu.taenite": "§7Taenite",
+    "material.gtceu.roquesite": "§7Roquesite",
+    "material.gtceu.gallite": "§7Gallite",
+    "material.gtceu.sperrylite": "§fSperrylite",
+    "material.gtceu.dilithium_zirconoaluminophosphocalcioferrisilicate": "§cDilithium Zirconoaluminophosphocalcioferrisilicate",
+    "material.gtceu.martian_bacterial_sludge": "§6Martian Bacterial Sludge",
+
+    "material.gtceu.aniline": "§eAniline",
+    "material.gtceu.fluorobenzene": "§bFluorobenzene",
+    "material.gtceu.hydroquinone": "§fHydroquinone",
+    "material.gtceu.difluorobenzophenone": "§7Difluorobenzophenone",
+    "material.gtceu.diphenyl_sulfone": "§fDiphenyl Sulfone",
+    "material.gtceu.maleic_anhydride": "§fMaleic Anhydride",
+    "material.gtceu.gamma_butyrolactone": "§aGamma-Butyrolactone",
+    "material.gtceu.n_methylpyrrolidone": "§bN-Methylpyrrolidone",
+    "material.gtceu.pseudocumene": "§6Pseudocumene",
+    "material.gtceu.trimellitic_anhydride": "§fTrimellitic Anhydride",
+    "material.gtceu.trimellitic_anhydride_chloride": "§eTrimellitic Anhydride Chloride",
+    "material.gtceu.methylenedianiline": "§6Methylenedianiline",
+    "material.gtceu.thionyl_chloride": "§aThionyl Chloride",
+    "material.gtceu.polyether_ether_ketone": "§6Polyether Ether Ketone",
+    "material.gtceu.torlon": "§aTorlon",
+
     "material.gtceu.cupronickel": "§6Cupronickel",
     "material.gtceu.kanthal": "§bKanthal",
     "material.gtceu.nichrome": "§dNichrome",
@@ -343,7 +386,7 @@
     "block.gtceu.rtm_alloy_coil_block": "§9RTM Alloy Coil",
     "block.gtceu.hssg_coil_block": "§3HSS-G Coil",
     "block.gtceu.naquadah_coil_block": "§7Naquadah Coil",
-    "block.gtceu.naquadrium_coil_block": "§7Naquadrium Coil",
+    "block.gtceu.naquadrium_coil_block": "§0Naquadrium Coil",
     "block.gtceu.trinium_coil_block": "§dTrinium Coil",
     "block.gtceu.tritanium_coil_block": "§4Tritanium Coil",
 
@@ -398,7 +441,7 @@
     "gtceu.scrubbing_column": "§5Scrubbing Column",
     "gtceu.partition_column": "§5Partition Column",
     "gtceu.stripping_column": "§5Stripping Column",
-    "gtceu.energistics_assembler": "§5Energistics Assembler",
+    "gtceu.energistics_assembler": "§bEnergistics Assembler",
     "gtceu.biomechanical_extruder": "§4Biomechanical Extruder",
     "gtceu.biomechanical_recycler": "§4Biomechanical Recycler",
     "gtceu.biomechanical_mixer": "§4Biomechanical Mixer",
@@ -412,7 +455,9 @@
     "gtceu.primitive_coking_array": "§6Primitive Coking Array",
     "gtceu.interstellar_miner": "§2Interstellar Miner",
     "gtceu.supercritical_fission": "§7Heart of Harmonia",
-    "gtceu.transcendental_polydimensional_accelerator": "§dTranscendentine Polydimensional Accelerator",
+    "gtceu.particle_accelerator": "§dParticle Accelerator",
+    "gtceu.fusion_accelerator": "§dFusion Accelerator",
+    "gtceu.applied_enigma": "§dApplied Enigma",
 
     "block.gtceu.echo_imbuement_chamber": "§1Echonite Imbuement Chamber",
     "block.gtceu.primitive_alloyment_kiln": "§6Primitive Alloyment Kiln",
@@ -441,6 +486,7 @@
     "block.gtceu.interstellar_miner": "§2Interstellar Miner",
     "block.gtceu.heart_of_harmonia": "§7Heart of Harmonia",
     "block.gtceu.transcendental_polydimensional_accelerator": "§dTranscendentine Polydimensional Accelerator",
+    "block.gtceu.applied_enigma": "§dApplied Enigma",
 
     
     "block.gtceu.steel_gearbox": "§bNexus Steel §rGearbox Casing",
@@ -515,7 +561,7 @@
     "gtceu.jei.ore_vein.blue_zircon": "Blue Zircon",
     "gtceu.jei.ore_vein.xenotime": "Xenotime",
     "gtceu.jei.ore_vein.resonite": "Resonite",
-    "gtceu.jei.ore_vein.nexus": "§bNexus",
+    "gtceu.jei.ore_vein.nexus": "Nexus",
 
     "gtceu.jei.ore_vein.magnesium_silicate_lowlands": "Magnesium Silicate Lowlands",
     "gtceu.jei.ore_vein.lunar_titanium_cluster": "Lunar Titanium Cluster",
@@ -543,6 +589,17 @@
     "tagprefix.depthrock": "Depthrock %s Ore",
     "tagprefix.shiverstone": "Shiverstone %s Ore",
     "tagprefix.tremblecrust": "Tremblecrust %s Ore",
+
+    "item.gtceu.engine_casing_tainted_titanium": "§5Tainted Titanium§r Engine Casing",
+    "item.gtceu.engine_casing_desnium": "§5Desnium§r Engine Casing",
+    "item.gtceu.engine_casing_ostrite": "§7Ostrite§r Engine Casing",
+    "item.gtceu.engine_casing_calenite": "§cCalenite§r Engine Casing",
+
+    "item.gtceu.rocket_plating_tainted_titanium": "§5Tainted Titanium§r Rocket Plating",
+    "item.gtceu.rocket_plating_desnium": "§5Desnium§r Rocket Plating",
+    "item.gtceu.rocket_plating_ostrite": "§7Ostrite§r Rocket Plating",
+    "item.gtceu.rocket_plating_calenite": "§cCalenite§r Rocket Plating",
+
     
     "material.gtceu.diluted_sulfuric_acid": "Weakened orange spicy water",
     "material.gtceu.sulfuric_acid": "Orange spicy water",

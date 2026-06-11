@@ -140,6 +140,14 @@ GTM.biomechanical_recycler('blood_plasma_recycling')
     .inputFluids('gtceu:blood_electrolytes 25')
     .duration(250)
     .EUt(480)
+
+GTM.biomechanical_mixer('artificial_blood')
+    .inputFluids('gtceu:blood_plasma 5500', 'gtceu:blood_electrolytes 3500', 'water 1000')
+    .outputFluids('gtceu:artificial_blood 10000')
+    .perTick(true)
+    .inputFluids('gtceu:blood_electrolytes 25')
+    .duration(250)
+    .EUt(480)
    
    
 // return from blood... to flesh alloy
@@ -354,7 +362,7 @@ GTM.star_forge('filter_casing')
 
 GTM.star_forge('incubation_chamber')
 .itemInputs('gtceu:chemical_reaction_vat', '48x gtceu:flesh_alloy_plate', '24x gtceu:flesh_alloy_rod', '2x gtceu:zpm_world_accelerator', '16x #gtceu:circuits/zpm')
-.inputFluids('gtceu:artificial_blood 10000', 'gtceu:mutagen 6000', 'gtceu:polyethyl_cyanoacrylate 4000', 'gtceu:trinium 2500')
+.inputFluids('gtceu:artificial_blood 10000', 'gtceu:mutagen 6000', 'gtceu:polyether_ether_ketone 4000', 'gtceu:trinium 2500')
 .itemOutputs('gtceu:incubation_chamber')
 .duration(1600)
 .EUt(131072)

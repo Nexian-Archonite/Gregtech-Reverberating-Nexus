@@ -259,7 +259,8 @@ const beltconnectorrubberparts = {
     "polyethylene": 6,
     "polytetrafluoroethylene": 8,
     "polybenzimidazole": 16,
-    "polyethyl_cyanoacrylate": 32
+    "polyether_ether_ketone": 32,
+    "torlon": 64
 }
 Object.entries(beltconnectorrubberparts).forEach(([tier, count]) => {
     event.shaped(`${count}x create:belt_connector`, [
