@@ -211,8 +211,8 @@ GTM.space_factory('tier_3_rocket')
 
 GTM.chemical_bath('tier_3_rocket_fueling')
 .itemInputs('ad_astra:tier_3_rocket')
-.inputFluids('gtceu:cryostatic-antidilithide 3000')
-.itemOutputs(Item.of('ad_astra:tier_3_rocket', '{BotariumData:{StoredFluids:[{Amount:3000L,Fluid:"ad_astra:fuel"}]}}'))
+.inputFluids('gtceu:cryostatic-antilithide 3000')
+.itemOutputs(Item.of('ad_astra:tier_3_rocket', '{BotariumData:{StoredFluids:[{Amount:3000L,Fluid:"gtceu:cryostatic-antilithide"}]}}'))
 .duration(100)
 .EUt(512)
 
@@ -252,7 +252,7 @@ GTM.space_factory('tier_4_rocket')
 GTM.chemical_bath('tier_4_rocket_fueling')
 .itemInputs('ad_astra:tier_4_rocket')
 .inputFluids('gtceu:cryostatic-antilithide 3000')
-.itemOutputs(Item.of('ad_astra:tier_4_rocket', '{BotariumData:{StoredFluids:[{Amount:3000L,Fluid:"ad_astra:fuel"}]}}'))
+.itemOutputs(Item.of('ad_astra:tier_4_rocket', '{BotariumData:{StoredFluids:[{Amount:3000L,Fluid:"gtceu:cryostatic-antilithide"}]}}'))
 .duration(100)
 .EUt(512)
 
@@ -269,10 +269,11 @@ GTM.chemical_vat('cryostatic_antilithide_synthesis')
 
 GTM.assembly_line('transcendentine-polydimensional_accelerator')
 .itemInputs('gtceu:luv_fusion_reactor', '32x #gtceu:circuits/uv', '64x gtceu:auralloy-omega_over_transcendentine_plate', '64x gtceu:auralloy-omega_over_transcendentine_plate', '8x gtceu:superconducting_coil', '32x gtceu:cryosporsite_rod')
-.inputFluids('gtceu:polybenzimidazole 32000', 'gtceu:draconium 24000')
+.inputFluids('gtceu:polybenzimidazole 32000', 'gtceu:purified_draconium 24000')
 .itemOutputs('gtceu:transcendental_polydimensional_accelerator')
-.stationResearch(b => b.researchStack(Item.of('gtceu:auralloy-omega-over_transcendentine_casing')).EUt(va.zpm).CWUt(48))
-
+.stationResearch(b => b.researchStack('gtceu:auralloy-omega_over_transcendentine_casing').EUt(va.zpm).CWUt(48))
+.duration(4000)
+.EUt(131072)
 
 
 

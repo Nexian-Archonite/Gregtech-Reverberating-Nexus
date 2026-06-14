@@ -130,6 +130,8 @@ const tiers = [
         tungsten_steel: "auralloy-omega",
         rhodium_plated_palladium: "rhodipalladic-desnite",
         hsss: "hssd",
+        americium: "cericite",
+        tritanium: "triconite",
         osmium: "osmium_steel",
         niobium_titanium: "vintanium",
         trinium: "pentarch-v",
@@ -178,7 +180,7 @@ const materials = [
   'manasteel', 'steel', 'copper', 'gold', 'iron', 'source', 
   'desh', 'ostrum', 'calorite', 'uranium', 'zinc', 'brass', 
   'andesite_alloy', 'obsidian', 'fluix', 'certus_quartz', 
-  'charged_certus_quartz', 'draconium', 'awakened_draconium'
+  'charged_certus_quartz', 'awakened_draconium'
 ]
 const types = [
   'ingot', 'plate', 'gem', 'dust', 'rod', 'nugget', 

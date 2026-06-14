@@ -673,6 +673,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     event.create('purified_netherite')
     .components('1x platinum', '1x netherite', '4x gold')
+    .formula('PtNh*Au4')
     .ingot()
     .color(0x441f45)
     .iconSet(GTMaterialIconSet.METALLIC)
@@ -1299,11 +1300,12 @@ event.create('lepton-dense_matter-antimatter-complex')
     .flags(no_decomp)
 
 //ah yes, draconium
-event.create('draconium')
+event.create('purified_draconium')
     .color(0x702880).iconSet(METALLIC)
     .dust()
     .element('draconium')
     .blastTemp(7200, "mid", va.zpm, 1000)
+    .liquid(7000)
 
 event.create('awakened_draconium')
     .color(0xd9400b).iconSet(METALLIC)
@@ -1312,6 +1314,22 @@ event.create('awakened_draconium')
     .element('awakened_draconium')
     .liquid(13650)
     .blastTemp(13200, "mid", va.uhv, 1000)
+
+event.create('triconite')
+    .color(0x702880).secondaryColor(0x600000)
+    .components('1x tritanium', '1x purified_draconium')
+    .ingot()
+    .flags(ring, small_gear, foil, bolt_and_screw, rod, long_rod, plates, fine_wire, frame, round, gear)
+    .cableProperties(va.uv, 4, 12, false)
+    .blastTemp(10799, "mid", va.uv, 600)
+    .liquid(11000)
+
+event.create('cericite')
+    .color(0xC8A028).secondaryColor(0x8B4513)
+    .components('4x cerium', '3x cadmium', '1x americium')
+    .flags(plates, fine_wire)
+    .ingot()
+    .blastTemp(1600, "mid", va.iv, 400)
 
 
        let addFluid = (mat, key) => {
@@ -1544,6 +1562,7 @@ event.create('awakened_draconium')
     .color(0x6B2D8B)
     .ingot()
     .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, no_decomp)
+    .liquid(303)
 
 event.create('auralloy-omega_over_transcendentine')
     .components('8x transcendentine', '2x auralloy-omega')
@@ -1551,6 +1570,7 @@ event.create('auralloy-omega_over_transcendentine')
     .dust()
     .flags(bolt_and_screw, small_gear, plates, long_rod, frame)
     .fluidPipeProperties(2147483647, 200, true, true, true, true)
+    .liquid(303)
 
 const compIngot = (name, elements, color, icon, blasting, flags, cabel) => {
     if (blasting.includes(blasting[0])){

@@ -98,3 +98,11 @@ ServerEvents.tags('item', event => {
 Ihide.forEach((item) => event.add("c:hidden_from_recipe_viewers", item))
 event.remove('c:hidden_from_recipe_viewers', /ad_astra:(steel|desh|ostrum|calorite)_(tank|engine)/)
 })
+
+ServerEvents.tags('fluid', event => {
+event.add('ad_astra:tier_1_rocket_fuel', 'gtceu:harmonical_fuel')
+event.add('ad_astra:tier_2_rocket_fuel', 'gtceu:harmonical_fuel')
+event.add('ad_astra:tier_3_rocket_fuel', 'gtceu:cryostatic-antilithide')
+event.add('ad_astra:tier_4_rocket_fuel', 'gtceu:cryostatic-antilithide')
+event.removeAllTagsFrom('ad_astra:fuel')
+})

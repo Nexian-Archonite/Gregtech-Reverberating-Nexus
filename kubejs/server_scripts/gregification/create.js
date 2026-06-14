@@ -9,7 +9,6 @@ CRT.mixing('6x gtceu:igneous_bronze_ingot', ['3x gtceu:copper_dust', '2x gtceu:a
 
 CRT.mixing(Fluid.of('gtceu:soldering_alloy 540'), ['3x gtceu:tin_dust', '6x gtceu:small_lead_dust', '2x gtceu:small_antimony_dust']).heated()
 
-event.remove({ output: "gtceu:resistor" })
 
 event.recipes.create.sequenced_assembly(
     [
@@ -67,9 +66,6 @@ event.recipes.create.sequenced_assembly(
 
 event.replaceInput({ input: "create:electron_tube" }, "create:electron_tube", "#gtceu:circuits/ulv")
 
-event.remove({ output: "create:rose_quartz"})
-event.remove({ output: "create:polished_rose_quartz"})
-event.remove({ output: "create:electron_tube"})
 
 CRT.mixing(Fluid.of('gtceu:redstone 72'), "minecraft:redstone").heated() // lossy recipe
 CRT.filling("create:rose_quartz", ["minecraft:quartz", Fluid.of('gtceu:redstone 576')])

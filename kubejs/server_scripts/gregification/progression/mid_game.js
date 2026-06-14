@@ -1135,7 +1135,7 @@ GTM.space_factory('tier_1_rocket')
 GTM.chemical_bath('tier_1_rocket_fueling')
 .itemInputs('ad_astra:tier_1_rocket')
 .inputFluids('gtceu:harmonical_fuel 3000')
-.itemOutputs(Item.of('ad_astra:tier_1_rocket', '{BotariumData:{StoredFluids:[{Amount:3000L,Fluid:"ad_astra:fuel"}]}}'))
+.itemOutputs(Item.of('ad_astra:tier_1_rocket', '{BotariumData:{StoredFluids:[{Amount:3000L,Fluid:"gtceu:harmonical_fuel"}]}}'))
 .duration(100)
 .EUt(32)
 
@@ -1174,7 +1174,7 @@ GTM.space_factory('tier_2_rocket')
 GTM.chemical_bath('tier_2_rocket_fueling')
 .itemInputs('ad_astra:tier_2_rocket')
 .inputFluids('gtceu:harmonical_fuel 3000')
-.itemOutputs(Item.of('ad_astra:tier_2_rocket', '{BotariumData:{StoredFluids:[{Amount:3000L,Fluid:"ad_astra:fuel"}]}}'))
+.itemOutputs(Item.of('ad_astra:tier_2_rocket', '{BotariumData:{StoredFluids:[{Amount:3000L,Fluid:"gtceu:harmonical_fuel"}]}}'))
 .duration(100)
 .EUt(128)
 
@@ -1261,7 +1261,7 @@ GTM.mixer(('stainless_steel_from_invar'))
 
 GTM.mixer(('echoing_fluxum_steel'))
 .itemInputs('gtceu:fluix_dust', '2x gtceu:steel_dust', 'gtceu:lanthanum_dust')
-.inputFluids('gtceu:echoite 1000')
+.inputFluids('gtceu:echoite 144')
 .itemOutputs('5x gtceu:echoing_fluxum_steel_dust')
 .duration(220)
 .EUt(96)
@@ -2128,8 +2128,6 @@ GTM.particle_accelerator('iridium_ionization')
 .EUt(8192)
 .duration(1000)
 
-// particle fusion!!!
-
 //adding the processing recipes cuz i forgor 1 bajillzion years aho
 
 GTM.large_chemical_reactor('rhenium_fluorosulfate_hydrolysis')
@@ -2380,8 +2378,9 @@ GTM.assembler('coil_naquadrium')
 
 //QoL that i didn't add yet
 
-GTM.assembler('applied_enigma')
+GTM.assembly_line('applied_enigma')
 .itemInputs('16x gtceu:iv_robot_arm', '12x gtceu:vintanium_octal_cable', '8x #gtceu:circuits/luv', '6x gtceu:iv_conveyor_module', 'gtceu:echoing_fluxum_casing')
+.inputFluids('gtceu:transcendentine 16000', 'gtceu:auralloy-omega 4000')
 .itemOutputs('gtceu:applied_enigma')
 .EUt(30720)
 .duration(600)
