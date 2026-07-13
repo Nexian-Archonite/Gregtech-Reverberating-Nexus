@@ -419,7 +419,6 @@ GTM.particle_accelerator('positron-negatron_degeneracy')
 .duration(10000)
 .circuit(16)
 
-
 GTM.particle_accelerator('pair_production')
 .perTick(true)
 .inputFluids('gtceu:gamma_photon 2')
