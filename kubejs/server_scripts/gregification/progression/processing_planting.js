@@ -14,7 +14,12 @@ const oreProcessableTiers = {
     { material: 'realgar', secondary: 'sulfur', tertiary: 'antimony', quaternary: 'barite' },
     { material: 'pentlandite', secondary: 'cobalt', tertiary: 'iron', quaternary: 'sulfur' },
     { material: 'silver', secondary: 'gold', tertiary: 'lead', quaternary: 'sulfur' },
-    { material: 'gold', secondary: 'silver', tertiary: 'copper', quaternary: 'nickel' }
+    { material: 'gold', secondary: 'silver', tertiary: 'copper', quaternary: 'nickel' },
+    { material: 'nexus', secondary: 'lanthanum', tertiary: 'nexus', quaternary: 'gold' },
+    { material: 'condensed_mana', secondary: 'mana', tertiary: 'mana', quaternary: 'mana' },
+    { material: 'extraterrestrial_resonite', secondary: 'pitchblende', tertiary: 'extraterrestrial_resonite', quaternary: 'aluminium' },
+    { material: 'enstatite', secondary: 'magnesium', tertiary: 'silicon', quaternary: 'iron' },
+
   ],
 
   ElectricProcessing: [
@@ -47,7 +52,14 @@ const oreProcessableTiers = {
     { material: 'barite', secondary: 'pyrite', tertiary: 'pyrite', quaternary: 'chalcopyrite' },
     { material: 'cassiterite', secondary: 'tin', tertiary: 'tin', quaternary: 'bismuth' },
     { material: 'tantalite', secondary: 'manganese', tertiary: 'niobium', quaternary: 'niobium' },
-    { material: 'pollucite', secondary: 'caesium', tertiary: 'aluminium', quaternary: 'aluminium' }
+    { material: 'pollucite', secondary: 'caesium', tertiary: 'aluminium', quaternary: 'aluminium' },
+    { material: 'lunar_desh', secondary: 'lunar_desh', tertiary: 'lunar_desh', quaternary: 'lunar_desh' },
+    { material: 'martian_ostrum', secondary: 'martian_ostrum', tertiary: 'martian_ostrum', quaternary: 'martian_ostrum' },
+    { material: 'venian_calorite', secondary: 'venian_calorite', tertiary: 'venian_calorite', quaternary: 'venian_calorite' },
+    { material: 'blue_zircon', secondary: 'zirconium', tertiary: 'hafnium', quaternary: 'silicon' },  
+    { material: 'xenotime', secondary: 'dysprosium', tertiary: 'hafnium', quaternary: 'hafnium' },
+
+
   ],
 
   AdvancedProcessing: [
@@ -64,7 +76,22 @@ const oreProcessableTiers = {
     { material: 'cobaltite', secondary: 'cobalt', tertiary: 'sulfur', quaternary: 'cobalt' },
     { material: 'chromite', secondary: 'iron', tertiary: 'magnesium', quaternary: 'iron' },
     { material: 'scheelite', secondary: 'manganese', tertiary: 'manganese', quaternary: 'molybdenum' },
-    { material: 'naquadah', secondary: 'barium', tertiary: 'sulfur', quaternary: 'enriched_naquadah', quinary: 'enriched_naquadah' }
+    { material: 'naquadah', secondary: 'barium', tertiary: 'sulfur', quaternary: 'enriched_naquadah', quinary: 'enriched_naquadah' },
+    { material: 'jarosite', secondary: 'iron', tertiary: 'sulfur', quaternary: 'potassium' },
+    { material: 'fluorapatite', secondary: 'calcium', tertiary: 'fluorine', quaternary: 'phosphate' },
+    { material: 'rhodite', secondary: 'rhodium', tertiary: 'iridium', quaternary: 'platinum' },
+    { material: 'dilithium', secondary: 'lithium', tertiary: 'helium_3', quaternary: 'lithium' },
+    { material: 'phenakite', secondary: 'beryllium', tertiary: 'silicon', quaternary: 'beryllium' },
+    { material: 'kernite', secondary: 'boron', tertiary: 'sodium', quaternary: 'boron' },
+    { material: 'wustite', secondary: 'iron', tertiary: 'iron', quaternary: 'manganese' },
+    { material: 'ulvospinel', secondary: 'titanium', tertiary: 'iron', quaternary: 'titanium' },
+    { material: 'merrillite', secondary: 'calcium', tertiary: 'sodium', quaternary: 'phosphate' },
+    { material: 'laurite', secondary: 'ruthenium', tertiary: 'osmium', quaternary: 'iridium' },
+    { material: 'taenite', secondary: 'nickel', tertiary: 'iron', quaternary: 'platinum' },
+    { material: 'roquesite', secondary: 'indium', tertiary: 'copper', quaternary: 'tin' },
+    { material: 'gallite', secondary: 'gallium', tertiary: 'copper', quaternary: 'zinc' },
+    { material: 'sperrylite', secondary: 'platinum', tertiary: 'palladium', quaternary: 'rhodium' }
+
   ]
 };
 

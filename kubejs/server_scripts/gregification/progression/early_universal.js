@@ -486,6 +486,87 @@ GTM.alloying_kiln('invar')
 .itemOutputs('3x gtceu:invar_ingot')
 .duration(100)
 .EUt(4)
+
+event.shaped('iron_door', ['PP', 'PR', 'PP'], {P: 'gtceu:iron_plate', R: 'gtceu:iron_round'})
+event.shapeless('create:wheat_flour', ['wheat'])
+
+event.shaped('8x create:redstone_link', ['T', 'C'], {T: 'create:transmitter', C: 'create:andesite_casing'}).id('create:crafting/logistics/redstone_link')
+event.shaped('2x create:redstone_link', ['T', 'C'], {T: 'create:transmitter', C: '#minecraft:planks'})
+
+GTM.chemical_reactor('pink_salt')
+.itemInputs('13x galosphere:pink_salt')
+.inputFluids('gtceu:sulfuric_acid 4000')
+.itemOutputs('8x gtceu:salt_dust', '2x gtceu:hematite_dust', '3x gtceu:calcium_carbonate_dust')
+.duration(200)
+.EUt(32)
+
+GTM.chemical_reactor('rose_pink_salt')
+.itemInputs('13x galosphere:rose_pink_salt')
+.inputFluids('gtceu:sulfuric_acid 4000')
+.itemOutputs('9x gtceu:salt_dust', '1x gtceu:hematite_dust', '3x gtceu:calcium_carbonate_dust')
+.duration(200)
+.EUt(32)
+
+GTM.chemical_reactor('pastel_salt')
+.itemInputs('13x galosphere:pastel_pink_salt')
+.inputFluids('gtceu:sulfuric_acid 4000')
+.itemOutputs('11x gtceu:salt_dust', '2x gtceu:calcium_carbonate_dust')
+.duration(200)
+.EUt(32)
+
+GTM.extractor('allurite_shard_to_echonite')
+.itemInputs('galosphere:allurite_shard')
+.outputFluids('gtceu:echoite 2')
+.itemOutputs('echo_shard')
+.duration(200)
+.EUt(32)
+
+GTM.extractor('allurite_to_echonite')
+.itemInputs('galosphere:allurite_block')
+.outputFluids('gtceu:echoite 8')
+.itemOutputs('gtceu:echo_shard_block')
+.duration(200)
+.EUt(32)
+
+GTM.extractor('lumiere_shard_to_argentostannum')
+.itemInputs('galosphere:lumiere_shard')
+.outputFluids('gtceu:glowstone 72')
+.itemOutputs('gtceu:argentostannum_dust')
+.duration(200)
+.EUt(32)
+
+GTM.extractor('lumiere_to_argentostannum')
+.itemInputs('galosphere:lumiere_block')
+.outputFluids('gtceu:glowstone 288')
+.itemOutputs('4x gtceu:argentostannum_dust')
+.duration(200)
+.EUt(32)
+
+GTM.autoclave('argentostannum_to_lumium')
+.itemInputs('gtceu:argentostannum_dust')
+.inputFluids('gtceu:glowstone 72')
+.itemOutputs('gtceu:lumium_dust')
+.duration(200)
+.EUt(32)
+
+event.shaped(Item.of('gtceu:cupronickel_coil_block'), [
+'WWW',
+'WTW',
+'WWW'
+], {
+W: 'gtceu:cupronickel_double_wire',
+T: '#forge:tools/wrenches'
+})
+
+event.shaped('chest', [
+'PPP',
+'P P',
+'PPP'
+], {
+P: '#minecraft:planks'
+})
+
+event.blasting('kubejs:carbonized_log', '#minecraft:logs', 0.1, 60)
 })
 
 GTCEuServerEvents.fluidVeins(event => {

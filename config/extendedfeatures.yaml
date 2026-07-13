@@ -1,0 +1,43 @@
+# Configuration values for Multiblocks
+Multiblocks:
+  # Whether the Robust Alloy Materializer is Enabled.
+  RamEnabled: true
+
+  # Whether the Advanced Cracking Unit is Enabled.
+  AcuEnabled: true
+
+  # Whether the Enlarged Reaction Chamber is Enabled.
+  ErcEnabled: true
+
+  # Whether the Large Pyrolysis Unit is Enabled.
+  LpuEnabled: true
+
+  # Whether the Advanced Fusion Reactors are Enabled.
+  AfrEnabled: true
+
+  # Whether the Compact Assembly Line is Enabled.
+  CalEnabled: true
+
+  # Whether the Rock Processing Facility is Enabled.
+  RpfEnabled: true
+
+  # Whether the Industrial Greenhouse is Enabled.
+  IghEnabled: true
+
+  # Whether the Tree Growing Chamber is Enabled.
+  TgcEnabled: true
+
+  # Whether the Disassembler is Enabled.
+  DaEnabled: true
+
+  # Whether the Expanded Data Bank is Enabled.
+  EdaEnabled: true
+
+# Configuration Values for Machines and Items
+Items:
+  # Whether the Universal Circuits are Enabled.
+  universalCircuits: true
+
+  # Whether the Expanded Data Access Hatches are Enabled.
+  expandedDataAccessHatches: true
+

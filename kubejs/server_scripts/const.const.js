@@ -65,7 +65,6 @@ const allthevoltage2 = {
     'opv': "nexian_infinity", //536870912 EU/t
     'max': "reverberating_nexus" //2147483648 EU/t
 }
-
 const tiers = [
         "steel",
         "aluminium",
@@ -119,7 +118,6 @@ const tiers = [
     ]
     // Map of tier replacements
      global.tierReplacements = {
-        copper: 'source_attuned_copper',
         steel: "nexus_steel",
         magnetic_steel: "magnetic_nexus_steel",
         aluminium: "echolumium",

@@ -1,0 +1,1060 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "oresn_shit"
+	group: "4B637402490FA38D"
+	id: "3E48BE3BDE5A1062"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["568D9E322C9011A8"]
+			icon: "gtceu:overworld_marker"
+			id: "573BB768D27D66AE"
+			subtitle: "All IMPORTANT ores that spawn in the Overworld"
+			tasks: [{
+				id: "6214DE1AFD338837"
+				title: "Overworld"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["573BB768D27D66AE"]
+			id: "1A3A5E1EC26A6B63"
+			subtitle: "Pwetty good, gives diamondes and a chucklefuck of coal"
+			tasks: [
+				{
+					id: "7317E6379CA61838"
+					item: "gtceu:raw_graphite"
+					type: "item"
+				}
+				{
+					id: "09291F72C99B175D"
+					item: "gtceu:raw_diamond"
+					type: "item"
+				}
+				{
+					id: "7136016E79ACB867"
+					item: "gtceu:raw_coal"
+					type: "item"
+				}
+			]
+			title: "Diamond Vein"
+			x: 0.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["573BB768D27D66AE"]
+			id: "6918E9DA7973B92F"
+			subtitle: "The best iron vein in-game, by far. moar iron than the Chalcopyrite vein, more common aswell"
+			tasks: [
+				{
+					id: "21756764C3FE0350"
+					item: "gtceu:raw_goethite"
+					type: "item"
+				}
+				{
+					id: "34D414A5DF77A311"
+					item: "gtceu:raw_yellow_limonite"
+					type: "item"
+				}
+				{
+					id: "6C9B5F913E3AEDE5"
+					item: "gtceu:raw_hematite"
+					type: "item"
+				}
+				{
+					id: "139B80F90FA023A2"
+					item: "gtceu:raw_malachite"
+					type: "item"
+				}
+			]
+			title: "Goethite Vein"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["573BB768D27D66AE"]
+			id: "47E763A1D054031E"
+			subtitle: "The Chalco'iest of them all — and yes, before you ask, that does just mean 'copper,' we're not being clever, the Greeks just really liked this rock."
+			tasks: [
+				{
+					id: "59D3C55E4BE2E01D"
+					item: "gtceu:raw_chalcopyrite"
+					type: "item"
+				}
+				{
+					id: "24330D19D549B0A7"
+					item: "minecraft:raw_iron"
+					type: "item"
+				}
+				{
+					id: "3D8EBDF6FEA348FD"
+					item: "gtceu:raw_pyrite"
+					type: "item"
+				}
+				{
+					id: "464DA38C2BD3EBBF"
+					item: "minecraft:raw_copper"
+					type: "item"
+				}
+			]
+			title: "Copper Vein"
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["573BB768D27D66AE"]
+			id: "1BE3930951A17C8A"
+			subtitle: "Nickelass Almandine or whatever, i don't watch crime series"
+			tasks: [
+				{
+					id: "430C3C52843241C7"
+					item: "gtceu:raw_garnierite"
+					type: "item"
+				}
+				{
+					id: "4CE93C0661BCF03C"
+					item: "gtceu:raw_nickel"
+					type: "item"
+				}
+				{
+					id: "5332531B6335694C"
+					item: "gtceu:raw_cobaltite"
+					type: "item"
+				}
+				{
+					id: "5A9545E4B55E032C"
+					item: "gtceu:raw_pentlandite"
+					type: "item"
+				}
+			]
+			title: "Nickel Vein"
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["573BB768D27D66AE"]
+			id: "16152BFCA3A17089"
+			subtitle: "Coalcoalcoalcoal coalcoalcoalcoal coalcoal coalcoalcoalcoal Coalcoalcoalcoal"
+			tasks: [{
+				id: "2D40CD01866144A4"
+				item: "gtceu:raw_coal"
+				type: "item"
+			}]
+			title: "Coalcoalcoalcoal"
+			x: -2.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["573BB768D27D66AE"]
+			id: "57EA8A1DF2BDF8AD"
+			subtitle: "The Redstoners are currently going batshit over this"
+			tasks: [
+				{
+					id: "24549A22E7FB3ECC"
+					item: "gtceu:raw_redstone"
+					type: "item"
+				}
+				{
+					id: "1F99F7B92A513A27"
+					item: "gtceu:raw_ruby"
+					type: "item"
+				}
+				{
+					id: "158B90D589CAB8C4"
+					item: "gtceu:raw_cinnabar"
+					type: "item"
+				}
+			]
+			title: "Redstone Vein"
+			x: 2.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["573BB768D27D66AE"]
+			id: "4A3B0F8BC2C7C587"
+			subtitle: "Stannum vile est, neque ferrum neque aes, sed metallum molle quod statim in stagnum fluit, quid utilitatis in eo qui vix solidus manet?"
+			tasks: [
+				{
+					id: "0AD3FA57B83F7249"
+					item: "gtceu:raw_cassiterite"
+					type: "item"
+				}
+				{
+					id: "72063EF51D0DCDE1"
+					item: "gtceu:raw_tin"
+					type: "item"
+				}
+			]
+			title: "Cassiterite Vein"
+			x: 2.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["573BB768D27D66AE"]
+			id: "67696A6910852FED"
+			subtitle: "Multi-source Brain Damage"
+			tasks: [
+				{
+					id: "188DD2D2DDE6AF3F"
+					item: "gtceu:raw_galena"
+					type: "item"
+				}
+				{
+					id: "549C14EA97EE021D"
+					item: "gtceu:raw_silver"
+					type: "item"
+				}
+				{
+					id: "0A8CE35AC41DCFF1"
+					item: "gtceu:raw_lead"
+					type: "item"
+				}
+			]
+			title: "Galena Vein"
+			x: -2.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["573BB768D27D66AE"]
+			id: "277FECDE807BE33D"
+			subtitle: "#fuckzeolite"
+			tasks: [
+				{
+					id: "6BE40536111F15F3"
+					item: "gtceu:raw_chalcopyrite"
+					type: "item"
+				}
+				{
+					id: "1E432A929CF84582"
+					item: "gtceu:raw_zeolite"
+					type: "item"
+				}
+				{
+					id: "42EC66B0F9B34CA4"
+					item: "gtceu:raw_cassiterite"
+					type: "item"
+				}
+				{
+					id: "3C3DFFF36D987CDD"
+					item: "gtceu:raw_realgar"
+					type: "item"
+				}
+			]
+			title: "Copper Tin Vein"
+			x: -3.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["573BB768D27D66AE"]
+			id: "1FFFBB5AB3495AF2"
+			subtitle: "Get some shades of blue and green"
+			tasks: [
+				{
+					id: "79CA9D53221EA99C"
+					item: "gtceu:raw_grossular"
+					type: "item"
+				}
+				{
+					id: "7CE4A99CB48DDFCC"
+					item: "gtceu:raw_spessartine"
+					type: "item"
+				}
+				{
+					id: "05117688EB0D1048"
+					item: "gtceu:raw_pyrolusite"
+					type: "item"
+				}
+				{
+					id: "4DAE1C7A6AE1F301"
+					item: "gtceu:raw_tantalite"
+					type: "item"
+				}
+			]
+			title: "Manganese Vein"
+			x: -1.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["573BB768D27D66AE"]
+			id: "6B826D0780856CC9"
+			subtitle: "mmhmmmmm. Niob and Phosphorus"
+			tasks: [
+				{
+					id: "1C89DBB39B08E8E4"
+					item: "gtceu:raw_apatite"
+					type: "item"
+				}
+				{
+					id: "7FB4A26961D3A687"
+					item: "gtceu:raw_tricalcium_phosphate"
+					type: "item"
+				}
+				{
+					id: "56D8733E44DA68C9"
+					item: "gtceu:raw_pyrochlore"
+					type: "item"
+				}
+			]
+			title: "Apatite Vein"
+			x: 1.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["573BB768D27D66AE"]
+			id: "0630FC1D4A473CF8"
+			subtitle: "Shine bright like a.. uh. Sapphire!"
+			tasks: [
+				{
+					id: "39AFD801BBF326F2"
+					item: "gtceu:raw_almandine"
+					type: "item"
+				}
+				{
+					id: "6098D4E305E13D1D"
+					item: "gtceu:raw_pyrope"
+					type: "item"
+				}
+				{
+					id: "23C0536CFF4A9235"
+					item: "gtceu:raw_sapphire"
+					type: "item"
+				}
+				{
+					id: "4223CC51C3063461"
+					item: "gtceu:raw_green_sapphire"
+					type: "item"
+				}
+			]
+			title: "Sapphire Vein"
+			x: 3.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["573BB768D27D66AE"]
+			id: "41A12D0FBD3F0FE3"
+			subtitle: "Im running out of creative titles. Lapis is usually blue and tastes like blueberries"
+			tasks: [
+				{
+					id: "299036884095F0B3"
+					item: "gtceu:raw_lazurite"
+					type: "item"
+				}
+				{
+					id: "1DF725895262D734"
+					item: "gtceu:raw_sodalite"
+					type: "item"
+				}
+				{
+					id: "5F7D1C9DD7BF5D8A"
+					item: "gtceu:raw_lapis"
+					type: "item"
+				}
+				{
+					id: "3770CE08C9A420E3"
+					item: "gtceu:raw_calcite"
+					type: "item"
+				}
+			]
+			title: "Lapis Vein"
+			x: 3.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["573BB768D27D66AE"]
+			id: "596024E0C6C4BA86"
+			subtitle: "Don't be too salty about finding this vein. It's good and has some spicy components for later"
+			tasks: [
+				{
+					id: "21E1041B60C3F024"
+					item: "gtceu:raw_rock_salt"
+					type: "item"
+				}
+				{
+					id: "1F38A9929490A69E"
+					item: "gtceu:raw_salt"
+					type: "item"
+				}
+				{
+					id: "7592BE7BFE221085"
+					item: "gtceu:raw_lepidolite"
+					type: "item"
+				}
+				{
+					id: "17977FB5D8EE5320"
+					item: "gtceu:raw_spodumene"
+					type: "item"
+				}
+			]
+			title: "Salts Vein"
+			x: 1.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["573BB768D27D66AE"]
+			id: "5C72DFAAA6FCFA26"
+			subtitle: "America, fuck yeah! Comin' again to save the motherfuckin' day, yeah! MURRRIIICCAAAAA, fuck yeah! Freedom is the only way, yeah"
+			tasks: [
+				{
+					id: "263A76418AC3DA75"
+					item: "gtceu:raw_oilsands"
+					type: "item"
+				}
+				{
+					id: "0E4C895C4712A493"
+					item: "gtceu:raw_oilsands"
+					type: "item"
+				}
+				{
+					id: "6687BF82BF083AB4"
+					item: "gtceu:raw_oilsands"
+					type: "item"
+				}
+			]
+			title: "MURRRIIIICCAAAAAAA"
+			x: -1.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["573BB768D27D66AE"]
+			id: "56A97B383205A7EF"
+			subtitle: "Three aluminum ores and one cesium ore wearing an aluminum trenchcoat. Welcome to Electric Boogaloo."
+			tasks: [
+				{
+					id: "7A37ED0748100B84"
+					item: "gtceu:raw_kyanite"
+					type: "item"
+				}
+				{
+					id: "7E5F19D02AE5F5CA"
+					item: "gtceu:raw_mica"
+					type: "item"
+				}
+				{
+					id: "1EF842969F51611F"
+					item: "gtceu:raw_bauxite"
+					type: "item"
+				}
+				{
+					id: "06C0988203FD34F1"
+					item: "gtceu:raw_pollucite"
+					type: "item"
+				}
+			]
+			title: "Mica Vein"
+			x: -3.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1F43A0729D266DB2"]
+			icon: "gtceu:undergarden_marker"
+			id: "438632B22DF16A24"
+			subtitle: "The weird side"
+			tasks: [{
+				id: "05C93C1CDB27CFC9"
+				title: "Undergarden"
+				type: "checkmark"
+			}]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["438632B22DF16A24"]
+			id: "1C61FC00EC531692"
+			subtitle: "The Auriest Telluride"
+			tasks: [
+				{
+					id: "46E67C384311C6BC"
+					item: "gtceu:raw_calaverite"
+					type: "item"
+				}
+				{
+					id: "56F9A6E16B579481"
+					item: "minecraft:raw_gold"
+					type: "item"
+				}
+				{
+					id: "0835FBBA48B55CC4"
+					item: "minecraft:raw_copper"
+					type: "item"
+				}
+				{
+					id: "32CC116137A00273"
+					item: "gtceu:raw_platinum"
+					type: "item"
+				}
+			]
+			title: "Calaverite Vein"
+			x: 8.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["438632B22DF16A24"]
+			id: "1F8753F36E3B75D2"
+			subtitle: "The Argentiest Telluride"
+			tasks: [
+				{
+					id: "652A2B4087306E50"
+					item: "gtceu:raw_hessite"
+					type: "item"
+				}
+				{
+					id: "7DFF548D0C658391"
+					item: "gtceu:raw_silver"
+					type: "item"
+				}
+				{
+					id: "4791DBB9C7C236E4"
+					item: "gtceu:raw_tellurium"
+					type: "item"
+				}
+				{
+					id: "1B82A2C8EE6C7142"
+					item: "gtceu:raw_palladium"
+					type: "item"
+				}
+			]
+			title: "Hessite Vein"
+			x: 6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["438632B22DF16A24"]
+			id: "2665CB10107CDA1B"
+			subtitle: "The Plumbiest Telluride"
+			tasks: [
+				{
+					id: "63EF15A59C2FC1D7"
+					item: "gtceu:raw_altaite"
+					type: "item"
+				}
+				{
+					id: "121699B773243AA8"
+					item: "gtceu:raw_lead"
+					type: "item"
+				}
+				{
+					id: "66FD5E9D24E87CF5"
+					item: "gtceu:raw_bismuth"
+					type: "item"
+				}
+				{
+					id: "5B6FC32C172391FD"
+					item: "create:raw_zinc"
+					type: "item"
+				}
+			]
+			title: "Altaite Vein"
+			x: 10.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["438632B22DF16A24"]
+			id: "7DE1C38615EC69E8"
+			subtitle: "The Plumbiest Selenide"
+			tasks: [
+				{
+					id: "147A7E1826DC78F6"
+					item: "gtceu:raw_clausthalite"
+					type: "item"
+				}
+				{
+					id: "608ABB5CC33FBA23"
+					item: "gtceu:raw_lead"
+					type: "item"
+				}
+				{
+					id: "4CA49402A61A9738"
+					item: "minecraft:raw_gold"
+					type: "item"
+				}
+				{
+					id: "01D5AA9BA70A3238"
+					item: "gtceu:raw_platinum"
+					type: "item"
+				}
+			]
+			title: "Clausthalite Vein"
+			x: 6.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["438632B22DF16A24"]
+			id: "5E49898DAC0F4DAE"
+			subtitle: "The hydragyrumiest Selenide"
+			tasks: [
+				{
+					id: "215461ADCB9A5360"
+					item: "gtceu:raw_tiemannite"
+					type: "item"
+				}
+				{
+					id: "3DE38ABA9BDDEE0B"
+					item: "gtceu:raw_selenium"
+					type: "item"
+				}
+				{
+					id: "6DD66900E5BFE835"
+					item: "gtceu:raw_sulfur"
+					type: "item"
+				}
+				{
+					id: "0E23652AB86C8F36"
+					item: "gtceu:raw_cadmium"
+					type: "item"
+				}
+			]
+			title: "Tiemannite Vein"
+			x: 10.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["438632B22DF16A24"]
+			id: "28F270B04511BEDC"
+			subtitle: "The Chalco'iest Selenide"
+			tasks: [
+				{
+					id: "183C90C5427E13D5"
+					item: "gtceu:raw_berzelianite"
+					type: "item"
+				}
+				{
+					id: "66F8DE7344F6258C"
+					item: "minecraft:raw_copper"
+					type: "item"
+				}
+				{
+					id: "40D0938BBFA7E886"
+					item: "gtceu:raw_silver"
+					type: "item"
+				}
+				{
+					id: "03B19AF250F3A2A0"
+					item: "minecraft:raw_gold"
+					type: "item"
+				}
+			]
+			title: "Berzelianite Vein"
+			x: 8.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["438632B22DF16A24"]
+			id: "30217A6502010810"
+			subtitle: "Ah yes. Blue Powder"
+			tasks: [
+				{
+					id: "5519DA10C8D7A095"
+					item: "gtceu:raw_nexus"
+					type: "item"
+				}
+				{
+					id: "1F073E7F9C5150C6"
+					item: "minecraft:raw_copper"
+					type: "item"
+				}
+				{
+					id: "20B9DF09E8974187"
+					item: "gtceu:raw_tin"
+					type: "item"
+				}
+				{
+					id: "37110C624E956669"
+					item: "gtceu:raw_condensed_mana"
+					type: "item"
+				}
+			]
+			title: "Nexus Vein"
+			x: 11.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["486E0CD8F4E8D06E"]
+			icon: "gtceu:the_nether_marker"
+			id: "0464487DB008A1D0"
+			subtitle: "H e l l"
+			tasks: [{
+				id: "207211D61259BCC9"
+				title: "The Nether"
+				type: "checkmark"
+			}]
+			title: "Nether"
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0464487DB008A1D0"]
+			id: "239B61678F54A17C"
+			subtitle: "The best sulfur vein because it contains pure sulfur. Plus good Zinc source"
+			tasks: [
+				{
+					id: "1E0E58AB5A531910"
+					item: "gtceu:raw_sulfur"
+					type: "item"
+				}
+				{
+					id: "3E8646C2B4AD9ADA"
+					item: "gtceu:raw_pyrite"
+					type: "item"
+				}
+				{
+					id: "02CE1318012F4305"
+					item: "gtceu:raw_sphalerite"
+					type: "item"
+				}
+			]
+			title: "Sulfur Vein"
+			x: -8.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["0464487DB008A1D0"]
+			id: "57A1D5B09DC68DCA"
+			subtitle: "Used in HV-IV for Tainted Zircalloy-X"
+			tasks: [
+				{
+					id: "560496A92C448B1E"
+					item: "gtceu:raw_blue_zircon"
+					type: "item"
+				}
+				{
+					id: "1143A9F81257C467"
+					item: "gtceu:raw_silicon"
+					type: "item"
+				}
+				{
+					id: "3828C5EAD843129D"
+					item: "gtceu:raw_hafnium"
+					type: "item"
+				}
+			]
+			title: "Blue Zircon Vein"
+			x: -6.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["0464487DB008A1D0"]
+			id: "3C49CC7E1DFF85CD"
+			subtitle: "Funny Energistics Vein"
+			tasks: [
+				{
+					id: "24D54D839997A9AC"
+					item: "gtceu:raw_quartzite"
+					type: "item"
+				}
+				{
+					id: "14661982EF64982B"
+					item: "gtceu:raw_certus_quartz"
+					type: "item"
+				}
+				{
+					id: "503AC6A27BB5588E"
+					item: "gtceu:raw_barite"
+					type: "item"
+				}
+			]
+			title: "Certus Quartz"
+			x: -6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0464487DB008A1D0"]
+			id: "6B650D272E6D3C11"
+			subtitle: "100% Molybdenum"
+			tasks: [
+				{
+					id: "2A787F7A056EFB19"
+					item: "gtceu:raw_wulfenite"
+					type: "item"
+				}
+				{
+					id: "08B1AF5DC49E0A0E"
+					item: "gtceu:raw_molybdenite"
+					type: "item"
+				}
+				{
+					id: "78564793BC16971F"
+					item: "gtceu:raw_molybdenum"
+					type: "item"
+				}
+				{
+					id: "4936415C625514E5"
+					item: "gtceu:raw_powellite"
+					type: "item"
+				}
+			]
+			title: "Molybdenum Vein"
+			x: -8.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0464487DB008A1D0"]
+			id: "1162767307F078C6"
+			subtitle: "Delightfully Tantalum containing"
+			tasks: [
+				{
+					id: "725282D8B05D2516"
+					item: "gtceu:raw_grossular"
+					type: "item"
+				}
+				{
+					id: "5BAAC61743B3D605"
+					item: "gtceu:raw_pyrolusite"
+					type: "item"
+				}
+				{
+					id: "76C5691EBA22227D"
+					item: "gtceu:raw_tantalite"
+					type: "item"
+				}
+			]
+			title: "Manganese Vein"
+			x: -10.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0464487DB008A1D0"]
+			id: "51DF87007B67D693"
+			subtitle: "mmhm lung cancer"
+			tasks: [
+				{
+					id: "2AA1C567044F0E6C"
+					item: "gtceu:raw_beryllium"
+					type: "item"
+				}
+				{
+					id: "7977BBA3961B0797"
+					item: "gtceu:raw_emerald"
+					type: "item"
+				}
+				{
+					id: "76DD38DCF201C9EE"
+					item: "gtceu:raw_thorium"
+					type: "item"
+				}
+			]
+			title: "Beryllium Vein"
+			x: -10.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["0464487DB008A1D0"]
+			id: "65CE27BB6636BCD4"
+			subtitle: "Yummers (Neodymium removed from there cuz Dysprosium kinda replaced)"
+			tasks: [
+				{
+					id: "2F2DB486144B9C19"
+					item: "gtceu:raw_bastnasite"
+					type: "item"
+				}
+				{
+					id: "08AC86D16F258FA8"
+					item: "gtceu:raw_monazite"
+					type: "item"
+				}
+				{
+					id: "6B202C7998E2FD13"
+					item: "gtceu:raw_dysprosium"
+					type: "item"
+				}
+			]
+			title: "Monazite Vein"
+			x: -11.0d
+			y: 0.0d
+		}
+		{
+			id: "78DF1009821550E4"
+			tasks: [{
+				id: "76A6902AE028337F"
+				item: "gtceu:the_end_marker"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["78DF1009821550E4"]
+			id: "5172A019F7F3F6C9"
+			subtitle: "Thats a lot of Uraninite"
+			tasks: [
+				{
+					id: "653367704570DF7D"
+					item: "gtceu:raw_pitchblende"
+					type: "item"
+				}
+				{
+					id: "611B6801C15A0ADB"
+					item: "gtceu:raw_uraninite"
+					type: "item"
+				}
+			]
+			title: "Pitchblende Vein"
+			x: -2.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["78DF1009821550E4"]
+			id: "7615D0F1E520BAAB"
+			subtitle: "Why is Sheldon Cooper here?? 😭"
+			tasks: [
+				{
+					id: "1F4871F518F6A101"
+					item: "gtceu:raw_bornite"
+					type: "item"
+				}
+				{
+					id: "4A454F4BD6E7A495"
+					item: "gtceu:raw_cooperite"
+					type: "item"
+				}
+				{
+					id: "21CC7D580977F4A6"
+					item: "gtceu:raw_platinum"
+					type: "item"
+				}
+				{
+					id: "399FFE990EA00C30"
+					item: "gtceu:raw_palladium"
+					type: "item"
+				}
+			]
+			title: "Sheldonite Vein"
+			x: -3.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["78DF1009821550E4"]
+			id: "02C3022D6A9B8286"
+			subtitle: "Good source of Aluminininininium (and Rutile)"
+			tasks: [
+				{
+					id: "41E3A42C1370003F"
+					item: "gtceu:raw_bauxite"
+					type: "item"
+				}
+				{
+					id: "49C3E1120BEC2CAD"
+					item: "gtceu:raw_ilmenite"
+					type: "item"
+				}
+				{
+					id: "30DC9CABCA71689E"
+					item: "gtceu:raw_aluminium"
+					type: "item"
+				}
+			]
+			title: "Bauxite Vein"
+			x: -2.0d
+			y: -10.0d
+		}
+		{
+			dependencies: ["78DF1009821550E4"]
+			id: "585110DDF237712D"
+			subtitle: "The best tungsten vein that has ever lived"
+			tasks: [
+				{
+					id: "08BAF286CFBE142F"
+					item: "gtceu:raw_scheelite"
+					type: "item"
+				}
+				{
+					id: "57BC2CB4B32F8FF7"
+					item: "gtceu:raw_tungstate"
+					type: "item"
+				}
+				{
+					id: "6212327A2AE337B4"
+					item: "gtceu:raw_lithium"
+					type: "item"
+				}
+			]
+			title: "Scheelite Vein"
+			x: 2.0d
+			y: -10.0d
+		}
+		{
+			dependencies: ["78DF1009821550E4"]
+			id: "6DD1ECC52D8AC82B"
+			subtitle: "Idk what to say about it. Yummers Dysprosium?"
+			tasks: [
+				{
+					id: "26FF1AF1F77E4207"
+					item: "gtceu:raw_xenotime"
+					type: "item"
+				}
+				{
+					id: "7CC9D182A3F5EABA"
+					item: "gtceu:raw_yttrium"
+					type: "item"
+				}
+				{
+					id: "5979BA711E281AF0"
+					item: "gtceu:raw_phosphate"
+					type: "item"
+				}
+				{
+					id: "6D8F6D0AF28AE3E6"
+					item: "gtceu:raw_dysprosium"
+					type: "item"
+				}
+			]
+			title: "Xenotime Vein"
+			x: 0.0d
+			y: -11.0d
+		}
+		{
+			dependencies: ["78DF1009821550E4"]
+			id: "1A9393F56F429A1B"
+			subtitle: "The Stargatest of Materials (Plutonium was replaced by Uraninite for PUREX reasons)"
+			tasks: [
+				{
+					id: "376FC59C455BC75D"
+					item: "gtceu:raw_naquadah"
+					type: "item"
+				}
+				{
+					id: "02396754FD8EB305"
+					item: "gtceu:raw_uraninite"
+					type: "item"
+				}
+			]
+			title: "Naquadah Vein"
+			x: 3.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["78DF1009821550E4"]
+			id: "024F7CACA2B48409"
+			subtitle: "Buncha Iron, some Vanadium, Chromium (yummers lung cancer) and Gold"
+			tasks: [
+				{
+					id: "648F883901B90BC4"
+					item: "gtceu:raw_magnetite"
+					type: "item"
+				}
+				{
+					id: "313710FB686DBDF5"
+					item: "gtceu:raw_vanadium_magnetite"
+					type: "item"
+				}
+				{
+					id: "580CF4B2F20DCFA1"
+					item: "gtceu:raw_chromite"
+					type: "item"
+				}
+				{
+					id: "31072144E8D5A23C"
+					item: "minecraft:raw_gold"
+					type: "item"
+				}
+			]
+			title: "Magnetite Vein"
+			x: 2.0d
+			y: -6.0d
+		}
+	]
+	title: "Ores'n Shit"
+}

@@ -1,5 +1,4 @@
 GTCEuServerEvents.oreVeins(event => {
-event.modify("gtceu:naquadah_vein", vein => {
     event.modify("gtceu:naquadah_vein", vein => {
     vein.cuboidVeinGenerator(generator => generator
         .top(b => b.mat(GTMaterials.Naquadah).size(2))
@@ -7,6 +6,16 @@ event.modify("gtceu:naquadah_vein", vein => {
         .bottom(b => b.mat(GTMaterials.Naquadah).size(2))
         .spread(b => b.mat(GTMaterials.Uraninite)))
 })
+
+event.modify('gtceu:monazite_vein', vein => {
+    vein.layeredVeinGenerator(generator => generator
+        .buildLayerPattern(pattern => pattern
+        .layer(l => l.weight(3).mat(GTMaterials.Bastnasite).size(2, 4))
+        .layer(l => l.weight(1).mat(GTMaterials.Monazite).size(1, 1))
+        .layer(l => l.weight(1).mat(GTMaterials.Dysprosium).size(1, 1))
+    
+        )
+    )
 })
 
  event.add("gtceu:lunar_titanium_cluster", vein => {

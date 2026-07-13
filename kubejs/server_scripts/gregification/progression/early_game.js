@@ -166,14 +166,6 @@ L: '#minecraft:logs',
 C: '#forge:glass'
 })
 
-event.shaped(Item.of('gtceu:cupronickel_coil_block'), [
-'WWW',
-'WTW',
-'WWW'
-], {
-W: 'gtceu:cupronickel_double_wire',
-T: '#forge:tools/wrenches'
-})
 
 event.shaped('gtceu:empty_wooden_form', [
     'AA',
@@ -272,18 +264,6 @@ event.shapeless('4x gtceu:charged_certus_quartz_gem', [
 ]).id('gtceu:shapeless/block_decompress_charged_certus_quartz')
 
 event.shapeless('9x cobblestone', ['kubejs:compressed_cobblestone'])
-
-event.shaped('2x gtceu:wrought_iron_bolt', ['S ', ' I'], {S: '#forge:tools/saws', I: 'gtceu:wrought_iron_rod'})
-event.shaped('2x gtceu:iron_bolt', ['S ', ' I'], {S: '#forge:tools/saws', I: 'gtceu:iron_rod'})
-
-event.shapeless('gtceu:manasteel_ingot', ['botania:manasteel_ingot'])
-event.shapeless('gtceu:source_gem', ['ars_nouveau:source_gem'])
-
-event.shaped('iron_door', ['PP', 'PR', 'PP'], {P: 'gtceu:iron_plate', R: 'gtceu:iron_round'})
-event.shapeless('create:wheat_flour', ['wheat'])
-
-event.shaped('8x create:redstone_link', ['T', 'C'], {T: 'create:transmitter', C: 'create:andesite_casing'}).id('create:crafting/logistics/redstone_link')
-event.shaped('2x create:redstone_link', ['T', 'C'], {T: 'create:transmitter', C: '#minecraft:planks'})
 
 event.shaped('oak_planks', ['SS', 'SS'], {S: 'stick'})
 event.shaped('wooden_axe', ['PR', ' S'], {P: '#minecraft:planks', R: 'farmersdelight:rope', S: 'stick'})
@@ -479,12 +459,6 @@ GTM.echoite_exile(('echoite'))
 .EUt(32)
 .duration(800)
 
-GTM.alloying_kiln(('nexus_dust'))
-.itemInputs('4x gtceu:condensed_mana_dust', '2x gtceu:bronze_dust')
-.itemOutputs('4x gtceu:nexus_dust')
-.EUt(4)
-.duration(20)
-
 GTM.alloying_kiln(('nexus_steel'))
 .itemInputs('2x gtceu:nexus_dust', '6x gtceu:steel_dust')
 .itemOutputs('8x gtceu:nexus_steel_ingot')
@@ -590,12 +564,12 @@ GTM.forming_press(('quantum_press_formature'))
 .duration(100)
 
 GTM.mixer(('nexus_steel_mixer'))
-.itemInputs('2x gtceu:nexus_dust', '6x gtceu:steel_dust')
-.itemOutputs('8x gtceu:nexus_steel_dust')
+.itemInputs('4x gtceu:nexus_dust', '12x gtceu:steel_dust')
+.itemOutputs('16x gtceu:nexus_steel_dust')
 .EUt(128)
 .duration(40)
 
-GTM.alloying_kiln(('mes_ingot'))
+GTM.alloying_kiln(('wizarding_steel'))
 .itemInputs('13x gtceu:source_dust', '8x gtceu:mana_dust', '6x gtceu:ferroarcane_dust', '3x gtceu:igneous_bronze_dust')
 .itemOutputs('24x gtceu:wizarding_steel_dust')
 .EUt(64)
@@ -650,5 +624,181 @@ GTM.compressor(('compress_plate_dust_wood'))
 .duration(200)
 .EUt(2)
 
+event.shaped('create:millstone', [
+'PGP',
+'SCS',
+'WAH'
+], {
+P: 'gtceu:andesite_alloy_plate',
+G: 'create:cogwheel',
+S: '#minecraft:wooden_slabs',
+C: 'create:andesite_casing',
+W: "#forge:tools/wrenches",
+A: "create:shaft",
+H: "#forge:tools/hammers"
+})
 
+CRT.mechanical_crafting('2x create:crushing_wheel', [
+    ' AAA ',
+    'AAPAA',
+    'APSPA',
+    'AAPAA',
+    ' AAA '
+], {
+A: "gtceu:andesite_alloy_plate",
+P: 'gtceu:wrought_iron_plate',
+S: 'create:shaft'
+})
+
+const yeahiguessthisisalsoaconstdotavif = {
+    'create:mechanical_press': 'gtceu:andesite_alloy_block',
+    'create:encased_fan': 'gtceu:andesite_alloy_rotor',
+    'create:mechanical_mixer': 'create:whisk',
+    'create:mechanical_saw': 'create:shaft',
+}
+Object.entries(yeahiguessthisisalsoaconstdotavif).forEach(([block, funnypart]) => {
+event.shaped(block, [
+'PSP',
+'WCW',
+'RBH'
+], {
+P: 'gtceu:wrought_iron_plate',
+S: block === 'create:mechanical_saw' ? 'gtceu:iron_buzzsaw' 
+ : 'create:shaft',
+W: block === 'create:mechanical_saw' ? 'gtceu:andesite_alloy_plate': 'gtceu:wrought_iron_plate',
+C: 'create:andesite_casing',
+R: block === 'create:mechanical_saw' ? 'gtceu:wrought_iron_plate' : '#forge:tools/wrenches',
+B: funnypart || 'create:shaft',
+H: block === 'create:mechanical_saw' ? 'gtceu:wrought_iron_plate' : '#forge:tools/hammers'
+})
+})
+
+event.shaped(
+    'create:andesite_casing',
+    [
+        ' G ',
+        'HFW',
+        ' P '
+    ], {
+        G: 'kubejs:primitive_glue_tube',
+        H: '#forge:tools/hammers',
+        F: 'gtceu:andesite_alloy_frame',
+        W: '#forge:tools/wrenches',
+        P: 'gtceu:treated_wood_plate'
+    }
+).damageIngredient('kubejs:primitive_glue_tube')
+const CRT = event.recipes.create
+CRT.mixing(['4x gtceu:bronze_dust'], ['3x gtceu:copper_dust', 'gtceu:tin_dust', 'gtceu:tiny_phosphorus_dust']).heated()
+
+CRT.mechanical_crafting('gtceu:primitive_alloyment_kiln', [
+'FFBFF',
+'FADEF',
+'BDSDB',
+'FIDWF',
+'FFBFF'
+], {
+F: 'gtceu:firebricks',
+B: 'gtceu:bronze_frame',
+A: 'ars_nouveau:air_essence',
+D: 'gtceu:double_igneous_bronze_plate',
+E: 'ars_nouveau:earth_essence',
+S: "gtceu:lp_steam_alloy_smelter",
+I: "ars_nouveau:fire_essence",
+W: "ars_nouveau:water_essence"
+})
+
+CRT.mechanical_crafting('gtceu:primitive_alloyment_kiln', [
+'FFBFF',
+'FADEF',
+'BDSDB',
+'FIDWF',
+'FFBFF'
+], {
+F: 'gtceu:firebricks',
+B: 'gtceu:bronze_frame',
+A: 'ars_nouveau:air_essence',
+D: 'gtceu:double_igneous_bronze_plate',
+E: 'ars_nouveau:earth_essence',
+S: "gtceu:hp_steam_alloy_smelter",
+I: "ars_nouveau:fire_essence",
+W: "ars_nouveau:water_essence"
+})
+
+event.shaped('create:gearbox', [
+' S ',
+'SCS',
+'WSH'
+], {
+S: 'create:shaft',
+C: 'create:andesite_casing',
+W: '#forge:tools/wrenches',
+H: '#forge:tools/hammers'
+})
+
+event.shaped('create:vertical_gearbox', [
+'S S',
+'WCH',
+'S S'
+], {
+S: 'create:shaft',
+C: 'create:andesite_casing',
+W: '#forge:tools/wrenches',
+H: '#forge:tools/hammers'
+})
+
+event.recipes.ars_nouveau.imbuement("gtceu:source_gem", 'ars_nouveau:fire_essence', 2000, ['create:blaze_cake', 'gunpowder', 'gtceu:oilsands_dust'])
+
+event.shaped("create:electron_tube",
+[
+    "BTB",
+    "WQW",
+    "BWB"
+], {
+    B: "gtceu:brass_screw",
+    T: "gtceu:glass_tube",
+    W: "gtceu:lead_quadruple_cable",
+    Q: "create:polished_rose_quartz"
+})
+
+event.shaped('undergarden:catalyst', [
+'EIE',
+'IMI',
+'EIE'
+], {
+E: "gtceu:electrum_block",
+I: "gtceu:invar_block",
+M: "gtceu:manasteel_block"
+})
+
+event.recipes.create.sequenced_assembly(
+    [
+        Item.of('2x gtceu:resistor')
+    ],
+    "gtceu:elementally_purified_carbon_dust",
+    [
+        event.recipes.createDeploying("gtceu:elementally_purified_carbon_dust", ["gtceu:elementally_purified_carbon_dust", 'gtceu:fine_copper_wire']),
+        event.recipes.createFilling("gtceu:elementally_purified_carbon_dust", ["gtceu:elementally_purified_carbon_dust", Fluid.of('gtceu:primitive_glue 100')])
+    ]
+    )
+    .transitionalItem("gtceu:elementally_purified_carbon_dust")
+    .loops(4)
+
+event.recipes.create.sequenced_assembly(
+    [
+        Item.of('4x gtceu:resistor')
+    ],
+    "gtceu:elementally_purified_carbon_dust",
+    [
+        event.recipes.createDeploying("gtceu:elementally_purified_carbon_dust", ["gtceu:elementally_purified_carbon_dust", 'gtceu:fine_source_attuned_copper_wire']),
+        event.recipes.createFilling("gtceu:elementally_purified_carbon_dust", ["gtceu:elementally_purified_carbon_dust", Fluid.of('gtceu:primitive_glue 100')])
+    ]
+    )
+    .transitionalItem("gtceu:elementally_purified_carbon_dust")
+    .loops(4)
+
+    event.recipes.ars_nouveau.imbuement("gtceu:resin_circuit_board",
+        "gtceu:resin_printed_circuit_board",
+        1000,
+        ["gtceu:source_gem", '#gtceu:circuits/ulv', 'gtceu:fine_source_attuned_copper_wire', 'gtceu:small_condensed_mana_dust']
+    )
 })

@@ -310,6 +310,36 @@ event.create('gamma_photon')
     .neutrons(0)
     .symbol('[γ]')
 
+// --- PREON ---
+event.create('preon')
+    .protons(0)
+    .neutrons(0)
+    .symbol('[P⁰]')
+ 
+// --- HIGGS BOSON ---
+event.create('higgs_boson')
+    .protons(0)
+    .neutrons(0)
+    .symbol('[H⁰]')
+ 
+// --- OMEGA BARYON ---
+event.create('omega_baryon')
+    .protons(0)
+    .neutrons(0)
+    .symbol('[Ω⁻]')
+ 
+// --- ANTI-OMEGA BARYON ---
+event.create('anti_omega_baryon')
+    .protons(0)
+    .neutrons(0)
+    .symbol('[Ω⁺]')
+ 
+// --- OMNIPARTICLE ---
+event.create('omniparticle')
+    .protons(0)
+    .neutrons(0)
+    .symbol('[Ω⁰]')
+    
 //return to regularity ig
 
 event.create('draconium')
@@ -673,13 +703,12 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     event.create('purified_netherite')
     .components('1x platinum', '1x netherite', '4x gold')
-    .formula('PtNh*Au4')
+    .formula('PtNr*Au4')
     .ingot()
     .color(0x441f45)
     .iconSet(GTMaterialIconSet.METALLIC)
     .liquid(4400)
     .flags(rod, plates, frame, no_abs_recipe, no_decomp)
-    .formula('PtNh*Au4')
     .blastTemp(4450, "high", GTValues.VA[GTValues.IV], 600)
 
     event.create('tainted_zircalloy')
@@ -902,6 +931,13 @@ event.create('aluminium_oxide')
 .dust()
 .color(0xccffff)
 .components('2x aluminium', '3x oxygen')
+
+event.create('argentostannum')
+.dust()
+.components('3x tin', '1x silver')
+.color(0xdcdcff)
+.iconSet(METALLIC)
+.blastTemp(540, "low", GTValues.LV, 200)
 
 event.create('dilithium_zirconoaluminophosphocalcioferrisilicate')
 .components(
@@ -1239,65 +1275,94 @@ event.create('superior_quark')
 event.create('muon')
     .element('muon')
     .color(0x89CFF0) // Soft Cyan
-    .plasma(986500000)
+    .liquid(986500000)
 
 event.create('tau')
     .element('tau')
     .color(0xFF4500) // Orange-Red
-    .plasma(1986500000)
+    .liquid(1986500000)
 
 event.create('electron_neutrino')
     .element('electron_neutrino')
     .color(0x00FF33) // Neon Lime Green
-    .plasma(2050000000)
+    .liquid(2050000000)
 
 event.create('muon_neutrino')
     .element('muon_neutrino')
     .color(0x00E5FF) // Electric Cyan
-    .plasma(2100000000)
+    .liquid(2100000000)
 
 event.create('tau_neutrino')
     .element('tau_neutrino')
     .color(0xFF007F) // Hot Magenta
-    .plasma(2147000000)
+    .liquid(2147000000)
 
 
 // Antimatter Lepton Suite (The Fictional Counterparts)
 event.create('antimuon')
     .element('antimuon')
     .color(0x76300F) // Inverted Cyan -> Deep Rusty Copper
-    .plasma(986500000)
+    .liquid(986500000)
 
 event.create('antitau')
     .element('antitau')
     .color(0x00BAFF) // Inverted Orange-Red -> Ice Blue
-    .plasma(1986500000)
+    .liquid(1986500000)
 
-event.create('electron_antineutrino')
+event.create('electron_antrino')
     .element('electron_antineutrino')
     .color(0xFF00CC) // Cursed Purple
-    .plasma(2050000000)
+    .liquid(2050000000)
 
-event.create('muon_antineutrino')
+event.create('muon_antrino')
     .element('muon_antineutrino')
     .color(0xFF1A00) // Angry Crimson Orange
-    .plasma(2100000000)
+    .liquid(2100000000)
 
-event.create('tau_antineutrino')
+event.create('tau_antrino')
     .element('tau_antineutrino')
     .color(0x00FF80) // Toxic Matrix Yellow-Green
-    .plasma(2147000000)
+    .liquid(2147000000)
 
 event.create('gamma_photon')
     .element('gamma_photon')
     .color(0xFFFFAA)
-    .plasma(2000000000)
+    .liquid(2000000000)
 //2 6 3 3
-event.create('lepton-dense_matter-antimatter-complex')
+event.create('lepton-dense_complex')
     .color(0x9B30FF)
     .plasma(2000000000)
     .components('tau', 'muon', 'electron', 'positron')
     .flags(no_decomp)
+
+event.create('preon')
+    .liquid(2147000000)
+    .color(0x9900FF)
+    .element('preon')
+ 
+// --- HIGGS BOSON ---
+event.create('higgs_boson')
+    .liquid(2147000000)
+    .color(0xFFD700)
+    .element('higgs_boson')
+ 
+// --- OMEGA BARYON ---
+event.create('omega_baryon')
+    .liquid(2147000000)
+    .color(0xFF6600)
+    .element('omega_baryon')
+ 
+// --- ANTI-OMEGA BARYON ---
+event.create('anti_omega_baryon')
+    .liquid(2147000000)
+    .color(0x0066FF)
+    .element('anti_omega_baryon')
+ 
+// --- OMNIPARTICLE ---
+event.create('omniparticle')
+    .plasma(2147483647)
+    .color(0xFFFFFF)
+    .element('omniparticle')
 
 //ah yes, draconium
 event.create('purified_draconium')
@@ -1317,9 +1382,9 @@ event.create('awakened_draconium')
 
 event.create('triconite')
     .color(0x702880).secondaryColor(0x600000)
-    .components('1x tritanium', '1x purified_draconium')
+    .components('1x tritanium', '3x purified_draconium')
     .ingot()
-    .flags(ring, small_gear, foil, bolt_and_screw, rod, long_rod, plates, fine_wire, frame, round, gear)
+    .flags(ring, small_gear, foil, bolt_and_screw, rod, long_rod, plates, fine_wire, frame, round, gear, no_abs_recipe)
     .cableProperties(va.uv, 4, 12, false)
     .blastTemp(10799, "mid", va.uv, 600)
     .liquid(11000)
@@ -1327,7 +1392,7 @@ event.create('triconite')
 event.create('cericite')
     .color(0xC8A028).secondaryColor(0x8B4513)
     .components('4x cerium', '3x cadmium', '1x americium')
-    .flags(plates, fine_wire)
+    .flags(plates, fine_wire, no_abs_recipe)
     .ingot()
     .blastTemp(1600, "mid", va.iv, 400)
 
@@ -1499,33 +1564,23 @@ event.create('cericite')
     )
     
     event.create('ephemeral_naquadite')
-    .components('8x transuranic_naquadrium_alloy', '2x lepton-dense_matter-antimatter-complex', '1x darmstadium')
+    .components('8x transuranic_naquadrium_alloy', '2x lepton-dense_complex', '1x darmstadium')
     .secondaryColor(0x119eb2).color(0xB07958).iconSet(DULL)
+    .liquid(9000)
     .flags(rotor, bolt_and_screw, rod, long_rod, dense_plate, plates, small_gear)
     .flags(no_abs_recipe, no_decomp)
     .blastTemp(9000, "highest", va.uv, 800)
 
     // Transcendental Polydimensionalized N-P Dilithide for UHV coils, max temp 21600
 
-    const stellaritevariantscuzfuckme = {
-    matrix: 0x4B0000,
-    grid: 0x001F00,
-    lattice: 0x00006F
-    }
-    Object.entries(stellaritevariantscuzfuckme).forEach(([name, color]) => {
-    event.create(`stellarite_${name}`)
-    .color(color)
-    .plasma(12600)
-    .element('stellarite')
-    })
 
 
     event.create('stellarite')
     .color(0x4B1F6F).iconSet(SHINY)
     .element('stellarite')
     .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, dense_plate)
-    .fluidPipeProperties(1000000, 8150, true, true, true, true)
-    .plasma(126000)
+    .fluidPipeProperties(2147000000, 8150, true, true, true, true)
+    .liquid(126000)
     .blastTemp(18400, "higher", va.uhv, 1500)
 
 
@@ -2473,25 +2528,6 @@ StartupEvents.registry("item", event => {
         .texture('kubejs:item/upgrade_kit')
         .tooltip('§7Used to upgrade some HV machines into multiblocks capable of §6Perfect Overclock');
 
-
-const universalcircuittiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "zpm", "uv", "uhv", "uev", "uiv", "uxv"];
-universalcircuittiers.forEach((universal_circuit) => {
-        event.create(`${universal_circuit}_universal_circuit`)
-            .tag(`gtceu:circuits/${universal_circuit}`)
-            .tag("gtceu:circuits/universal")
-            .displayName(`${universal_circuit.toUpperCase()} Universal Circuit`)
-            .tooltip(`§7${universal_circuit.toUpperCase()} Universal Circuit`)
-            .textureJson({ layer0: `kubejs:item/circuits/universal/${universal_circuit}_universal_circuit` })
-    })
-
-    event.create(`luv_universal_circuit`)
-            .tag(`gtceu:circuits/luv`)
-            .tag("gtceu:circuits/universal")
-            .displayName(`LuV Universal Circuit`)
-            .tooltip(`§7LuV Universal Circuit`)
-            .textureJson({ layer0: `kubejs:item/circuits/universal/luv_universal_circuit` })
-
-
 event.create("uxpic_wafer").texture("kubejs:item/uxpic/uxpic_wafer").displayName("UXPIC Wafer").tooltip("§7Raw Ultra Extreme Power Circuit")
     event.create("uxpic_chip").texture("kubejs:item/uxpic/uxpic_chip").displayName("UXPIC Chip").tooltip("§7Ultra Extreme Power IC")
 
@@ -2512,12 +2548,12 @@ StartupEvents.registry('item', event => {
 
     event.create('gtceu:purified_netherite_scrap')
     .displayName("§8Purified Netherite §rScrap")
-    .tooltip("§eNh*")
+    .tooltip("§eNr*")
     .texture('gtceu:item/netherite_line/purified_scrap')
 
     event.create('gtceu:netherite_scrap')
     .displayName("§8Netherite §rScrap")
-    .tooltip("§eNh")
+    .tooltip("§eNr")
     .texture('gtceu:item/netherite_line/scrap')
 
     event
@@ -2526,6 +2562,12 @@ StartupEvents.registry('item', event => {
 
     event
     .create("gtceu:organism_amalgam")
+
+    event
+    .create("gtceu:lumium_solar_panel")
+
+    event
+    .create("gtceu:enderium_solar_panel")
     
 const rocketTiers = [
     'tainted_titanium',
@@ -2865,6 +2907,7 @@ event
 
 event
     .create('gtceu:fuel_assembly', "gtceu:active")
+    .defaultCutout()
     .hardness(35)
     .resistance(16000)
     .requiresTool(true)
@@ -2894,19 +2937,13 @@ event
     .tagBlock('minecraft:needs_diamond_tool')
     .soundType('metal')
 
-/* event
-    .create('primitive_table')
-    .model('kubejs:block/primitive_table')
-    .hardness(4)
-    .tagBlock('mineable/axe')
-    .tagBlock('mineable/pickaxe')
-    .tagBlock('cucumber:mineable/paxel')
-    .defaultCutout() */
+
 
 event
     .create('gtceu:undergarden_marker')
 
-        event.create('gtceu:naquadrium_coil_block', 'gtceu:coil')
+event
+.create('gtceu:naquadrium_coil_block', 'gtceu:coil')
         .temperature(8100)
         .level(10)
         .energyDiscount(6)
@@ -2916,8 +2953,31 @@ event
         .hardness(40)
         .requiresTool(true)
         .tagBlock('forge:requires_duranium_tool')
+        .tagBlock('minecraft:mineable/pickaxe')
         .soundType('metal')
+
+event
+    .create('gtceu:lumium_solar_collector')
+        .hardness(10)
+        .fullBlock(false)
+        .requiresTool(true)
+        .tagBlock('forge:requires_iron_tool')
+        .tagBlock('minecraft:mineable/pickaxe')
+        .soundType('metal')
+        .box(0,8,0,16,12,16)
+
+event
+    .create('gtceu:enderium_solar_collector')
+        .hardness(10)
+        .fullBlock(false)
+        .requiresTool(true)
+        .tagBlock('forge:requires_iron_tool')
+        .tagBlock('minecraft:mineable/pickaxe')
+        .soundType('metal')
+        .box(0,8,0,16,12,16)
 })
+
+
 
 ItemEvents.modification(event => {
     event.modify('minecraft:experience_bottle', item => {

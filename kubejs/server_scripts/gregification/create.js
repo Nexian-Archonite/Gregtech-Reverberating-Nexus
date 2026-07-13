@@ -10,37 +10,11 @@ CRT.mixing('6x gtceu:igneous_bronze_ingot', ['3x gtceu:copper_dust', '2x gtceu:a
 CRT.mixing(Fluid.of('gtceu:soldering_alloy 540'), ['3x gtceu:tin_dust', '6x gtceu:small_lead_dust', '2x gtceu:small_antimony_dust']).heated()
 
 
-event.recipes.create.sequenced_assembly(
-    [
-        Item.of('2x gtceu:resistor')
-    ],
-    "gtceu:elementally_purified_carbon_dust",
-    [
-        event.recipes.createDeploying("gtceu:elementally_purified_carbon_dust", ["gtceu:elementally_purified_carbon_dust", 'gtceu:fine_copper_wire']),
-        event.recipes.createFilling("gtceu:elementally_purified_carbon_dust", ["gtceu:elementally_purified_carbon_dust", Fluid.of('gtceu:primitive_glue 100')])
-    ]
-    )
-    .transitionalItem("gtceu:elementally_purified_carbon_dust")
-    .loops(4)
-
-event.recipes.create.sequenced_assembly(
-    [
-        Item.of('4x gtceu:resistor')
-    ],
-    "gtceu:elementally_purified_carbon_dust",
-    [
-        event.recipes.createDeploying("gtceu:elementally_purified_carbon_dust", ["gtceu:elementally_purified_carbon_dust", 'gtceu:fine_source_attuned_copper_wire']),
-        event.recipes.createFilling("gtceu:elementally_purified_carbon_dust", ["gtceu:elementally_purified_carbon_dust", Fluid.of('gtceu:primitive_glue 100')])
-    ]
-    )
-    .transitionalItem("gtceu:elementally_purified_carbon_dust")
-    .loops(4)
-
 
 event.recipes.gtceu.assembler('resistor')
     .itemInputs("gtceu:elementally_purified_carbon_dust", "4x gtceu:fine_source_attuned_copper_wire")
     .inputFluids(Fluid.of('gtceu:glue 100'))
-    .itemOutputs("4x gtceu:resistor")
+    .itemOutputs("16x gtceu:resistor")
     .duration(80)
     .EUt(GTValues.VA[GTValues.MV])
 
@@ -113,18 +87,6 @@ GTM.chemical_reactor('rose_quartz_recycling')
 .duration(20)
 
 
-event.shaped("create:electron_tube",
-[
-    "BTB",
-    "WQW",
-    "BWB"
-], {
-    B: "gtceu:brass_screw",
-    T: "gtceu:glass_tube",
-    W: "gtceu:lead_quadruple_cable",
-    Q: "create:polished_rose_quartz"
-})
-
 CRT.mixing(Fluid.of('gtceu:mechanical_essence 10'), ['4x kubejs:mechanical_hands', 'gtceu:small_source_dust', Fluid.of('gtceu:precision 25')]).superheated()
 // And NOW you get a neat vac tube recipe later on as an upgrade
 event.remove({ output: "gtceu:vacuum_tube"})
@@ -151,40 +113,6 @@ event.recipes.gtceu.assembler('vac_tube')
     .duration(80)
     .EUt(GTValues.VA[GTValues.MV])
 
-
-CRT.mechanical_crafting('gtceu:primitive_alloyment_kiln', [
-'FFBFF',
-'FADEF',
-'BDSDB',
-'FIDWF',
-'FFBFF'
-], {
-F: 'gtceu:firebricks',
-B: 'gtceu:bronze_frame',
-A: 'ars_nouveau:air_essence',
-D: 'gtceu:double_igneous_bronze_plate',
-E: 'ars_nouveau:earth_essence',
-S: "gtceu:lp_steam_alloy_smelter",
-I: "ars_nouveau:fire_essence",
-W: "ars_nouveau:water_essence"
-})
-
-CRT.mechanical_crafting('gtceu:primitive_alloyment_kiln', [
-'FFBFF',
-'FADEF',
-'BDSDB',
-'FIDWF',
-'FFBFF'
-], {
-F: 'gtceu:firebricks',
-B: 'gtceu:bronze_frame',
-A: 'ars_nouveau:air_essence',
-D: 'gtceu:double_igneous_bronze_plate',
-E: 'ars_nouveau:earth_essence',
-S: "gtceu:hp_steam_alloy_smelter",
-I: "ars_nouveau:fire_essence",
-W: "ars_nouveau:water_essence"
-})
 
 const EIC = 'gtceu:echo_imbuement_chamber'
 event.recipes.create.sequenced_assembly(
@@ -221,7 +149,6 @@ CRT.sequenced_assembly(
 .loops(4)
 
 CRT.mixing(Fluid.of('gtceu:precision 100'), 'create:precision_mechanism').heated()
-CRT.mixing(['4x gtceu:bronze_dust'], ['3x gtceu:copper_dust', 'gtceu:tin_dust', 'gtceu:tiny_phosphorus_dust']).heated()
 
 CRT.filling('kubejs:primitive_glue_tube', [Fluid.of('gtceu:primitive_glue 100'),'kubejs:empty_glue_tube'])
 
@@ -270,54 +197,6 @@ Object.entries(beltconnectorrubberparts).forEach(([tier, count]) => {
     })
 })
 
-event.shaped('create:millstone', [
-'PGP',
-'SCS',
-'WAH'
-], {
-P: 'gtceu:andesite_alloy_plate',
-G: 'create:cogwheel',
-S: '#minecraft:wooden_slabs',
-C: 'create:andesite_casing',
-W: "#forge:tools/wrenches",
-A: "create:shaft",
-H: "#forge:tools/hammers"
-})
-
-CRT.mechanical_crafting('2x create:crushing_wheel', [
-    ' AAA ',
-    'AAPAA',
-    'APSPA',
-    'AAPAA',
-    ' AAA '
-], {
-A: "gtceu:andesite_alloy_plate",
-P: 'gtceu:wrought_iron_plate',
-S: 'create:shaft'
-})
-
-const yeahiguessthisisalsoaconstdotavif = {
-    'create:mechanical_press': 'gtceu:andesite_alloy_block',
-    'create:encased_fan': 'gtceu:andesite_alloy_rotor',
-    'create:mechanical_mixer': 'create:whisk',
-    'create:mechanical_saw': 'create:shaft',
-}
-Object.entries(yeahiguessthisisalsoaconstdotavif).forEach(([block, funnypart]) => {
-event.shaped(block, [
-'PSP',
-'WCW',
-'RBH'
-], {
-P: 'gtceu:wrought_iron_plate',
-S: block === 'create:mechanical_saw' ? 'gtceu:iron_buzzsaw' 
- : 'create:shaft',
-W: block === 'create:mechanical_saw' ? 'gtceu:andesite_alloy_plate': 'gtceu:wrought_iron_plate',
-C: 'create:andesite_casing',
-R: block === 'create:mechanical_saw' ? 'gtceu:wrought_iron_plate' : '#forge:tools/wrenches',
-B: funnypart || 'create:shaft',
-H: block === 'create:mechanical_saw' ? 'gtceu:wrought_iron_plate' : '#forge:tools/hammers'
-})
-})
 
 GTM.cutter(('alloy_to_shaft_water'))
 .itemInputs('gtceu:andesite_alloy_ingot')
@@ -389,28 +268,6 @@ W: '#forge:tools/wrenches',
 P: 'create:fluid_pipe',
 C: 'create:cogwheel'
 })
-
-event.shaped('create:gearbox', [
-' S ',
-'SCS',
-'WSH'
-], {
-S: 'create:shaft',
-C: 'create:andesite_casing',
-W: '#forge:tools/wrenches',
-H: '#forge:tools/hammers'
-})
-
-event.shaped('create:vertical_gearbox', [
-'S S',
-'WCH',
-'S S'
-], {
-S: 'create:shaft',
-C: 'create:andesite_casing',
-W: '#forge:tools/wrenches',
-H: '#forge:tools/hammers'
-})
 CRT.cutting('createaddition:straw', 'bamboo')
 const pressingmaterials = ['lead', 'silver', 'bronze', 'zinc', 'red_alloy', 'blue_alloy', 'rubber', 'andesite_alloy', 'brass']
 const easportsitsinthesaw = ['gold', 'iron', 'copper']
@@ -430,4 +287,5 @@ CRT.mixing('3x gtceu:cupronickel_ingot', ['2x copper_ingot', '2x gtceu:nickel_in
 })
 
 CRT.mixing([Item.of('gtceu:phosphorus_dust'), 'water 3000'], Fluid.of('gtceu:phosphoric_acid', 1000)).heated()
+CRT.mixing('3x gtceu:brass_ingot', ['3x gtceu:copper_dust', 'gtceu:zinc_dust'])
 })

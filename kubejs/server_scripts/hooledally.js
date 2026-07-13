@@ -1,20 +1,17 @@
 ServerEvents.recipes(event => {
 
 const RegexList =/^gtceu:(shaped|assembler|assembly_line)\/(ring_.*|small_gear_.*|drill_head_.*|tiny_dust_.*|plate_.*|screwdriver_.*|small_dust_.*|stick_.*|chainsaw_.*|plate_.*|nugget_.*|rotor_.*|spring_.*|foil_.*|bolt_.*|block_.*|gear_.*|fine_wire_.*|screw_.*|buzzsaw_.*|turbine_.*|wrench_.*|frame_.*|cover_.*_wire_gt_.*|(tiny|small|medium|large|huge|quadruple|nonuple)_.*_pipe|fluid_cell_.*|assemble_.*|coil_.*|scythe_.*|pickaxe_.*|shovel_.*|axe_.*|file_.*|wire_cutter_.*|_.*_hammer_.*|saw_.*|spade_.*|sword_.*|knife_.*|butchery_.*|crowbar_.*|hoe_.*|.*_wire_.*|wetware_.*)$/
+
 const RecTyp = ["gtceu:assembler", 'gtceu:assembly_line', 'gtceu:shaped', 'crafting_shaped']
 
 const itemTypes = [
     'rod', 'round', 'plate', 'gear', 'rotor', 'frame', 'ring', 'bolt', 'screw', 'foil',
     'tiny_fluid_pipe', 'small_fluid_pipe', 'normal_fluid_pipe', 'large_fluid_pipe', 'huge_fluid_pipe',
-    'single_cable'
+    'single_cable', 'single_wire', 'double_cable', 'double_wire', 'quadruple_cable', 'quadruple_wire',
+    'octal_cable', 'octal_wire', 'hex_cable', 'hex_wire'
 ]
 
-const prefixedTypes = [
-    'long_{}_rod', 'small_{}_gear', 'fine_{}_wire', 'double_{}_plate'
-]
-
-console.log("tierReplacements:", JSON.stringify(global.tierReplacements))
-console.log("first entry test:", Object.entries(global.tierReplacements)[0])
+const prefixedTypes = ['long_{}_rod', 'small_{}_gear', 'fine_{}_wire', 'double_{}_plate', 'dense_{}_plate']
 
 const tierReplacements = global.tierReplacements
 Object.entries(tierReplacements).forEach(([inputs, replacement]) => {
@@ -43,6 +40,9 @@ Object.entries(tierReplacements).forEach(([inputs, replacement]) => {
             })
         })
 }) 
+
+// recycling expansion!!!!
+
 
 // I have no idea how it works, but it works, so im not touching this shit
 

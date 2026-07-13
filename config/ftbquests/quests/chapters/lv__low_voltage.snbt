@@ -5,11 +5,11 @@
 	group: "4B637402490FA38D"
 	icon: "gtceu:nexus_steel_ingot"
 	id: "794BCEDCC46401C0"
-	order_index: 1
+	order_index: 2
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["614269BB3A46BABE"]
+			dependencies: ["7E7FD2B3ECE8E9EC"]
 			id: "3A8C2C4178E31D86"
 			rewards: [{
 				id: "3D14DE77F91B0D49"
@@ -26,7 +26,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["6F08874E4DD9E1CD"]
+			dependencies: ["77813CB4026F0C88"]
 			id: "27E0B77DD8F5790E"
 			tasks: [{
 				id: "4CCB09D615375B81"
@@ -35,6 +35,133 @@
 			}]
 			x: 0.0d
 			y: -2.0d
+		}
+		{
+			id: "73FA9C3BA9F77C54"
+			subtitle: "what if Nexus.. but c u b e"
+			tasks: [{
+				id: "508C8ADD6385DFF6"
+				item: "gtceu:lv_machine_hull"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["73FA9C3BA9F77C54"]
+			id: "04091C5B37FC08F0"
+			subtitle: "Electric Smelter go brr"
+			tasks: [{
+				id: "3904C0A22CE7125C"
+				item: "gtceu:lv_electric_furnace"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["73FA9C3BA9F77C54"]
+			id: "71CB2D83D39B8A8E"
+			subtitle: "Make it double and give it trouble"
+			tasks: [{
+				id: "058F4BFA16B4140A"
+				item: "gtceu:lv_alloy_smelter"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["73FA9C3BA9F77C54"]
+			id: "7234923E7B34CA8E"
+			subtitle: "Who needs a blast furnace?"
+			tasks: [{
+				id: "12BDE214D5942046"
+				item: "gtceu:lv_arc_furnace"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["73FA9C3BA9F77C54"]
+			id: "297E0180405DE05B"
+			tasks: [{
+				id: "38AE755E0C89F7F1"
+				item: "gtceu:lv_electric_furnace"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["73FA9C3BA9F77C54"]
+			id: "25D290B436ECC111"
+			tasks: [{
+				id: "0CE58B47A71F6E6E"
+				item: "gtceu:lv_electric_furnace"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["73FA9C3BA9F77C54"]
+			id: "201188B294BE13DA"
+			tasks: [{
+				id: "31C14FE28B7E28F4"
+				item: "gtceu:lv_electric_furnace"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["73FA9C3BA9F77C54"]
+			id: "5CF0911A3B343116"
+			tasks: [{
+				id: "52B9265DAD7F2A1C"
+				item: "gtceu:lv_electric_furnace"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["73FA9C3BA9F77C54"]
+			id: "3AAB7DCC8C07B86D"
+			subtitle: "The Greatest Engineer that has ever lived?"
+			tasks: [{
+				id: "60EE7A1BE3BC261A"
+				item: "gtceu:lv_assembler"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["73FA9C3BA9F77C54"]
+			id: "2A3A5CA7CE8A9FC5"
+			subtitle: "mhmm fuzzy"
+			tasks: [{
+				id: "37C48A8884D89C60"
+				item: "gtceu:lv_chemical_reactor"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 7.0d
+		}
+		{
+			dependencies: ["73FA9C3BA9F77C54"]
+			id: "3FD69BEB24943F88"
+			subtitle: "Turning your shit into many"
+			tasks: [{
+				id: "5CBB5C876CFF3BA1"
+				item: "gtceu:lv_centrifuge"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 7.0d
 		}
 	]
 	title: "LV - Low Voltage"

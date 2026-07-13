@@ -59,7 +59,8 @@
     "block.gtceu.large_rock_crusher.tooltip.1": "Has §6Perfect Overclock",
     "block.gtceu.large_rock_crusher.tooltip.2": "Can up to have §bone§r Energy Hatch",
 
-    
+    "recipe.capability.cwu.name": "§3CWU/t",    
+
     "material.gtceu.infinity": "§fI§en§df§ci§bn§ai§9t§fy",
     "material.gtceu.omnium": "§aO§bm§cn§di§eu§6m",
     "material.gtceu.nullium": "§0Nullium",
@@ -119,6 +120,11 @@
     "material.gtceu.hssd": "§5HSS-DOV",
     "material.gtceu.osmium_steel": "§1Osmium Steel",
     "material.gtceu.vintanium": "§4Vintanium",
+    "material.gtceu.triconite": "§5Triconite",
+    "material.gtceu.awakened_draconium": "§6Awakened Draconium",
+    "material.gtceu.purified_draconium": "§5Purified Draconium",
+    "material.gtceu.argentostannum": "Argentostannum",
+    "material.gtceu.cericite": "§6Cericite",
     "material.gtceu.radioactive_fuel_cladding_scrap": "Radioactive Fuel Cladding Scrap",
     "material.gtceu.methylamine": "Methylamine",
     "material.gtceu.phenylacetone": "Phenylacetone",
@@ -155,6 +161,7 @@
     "material.gtceu.proto-carborane_acid": "§3Proto-Carborane",
     "material.gtceu.carborane_acid": "§bCarborane Acid",
     "material.gtceu.boron_trichloride": "§bBoron Trichloride",
+    "material.gtceu.aluminium_oxide": "§bAluminium Oxide",
 
     "material.gtceu.tri-osmic_matrix": "§9Tri-Osmic Matrix",
     "material.gtceu.astazine-e": "§bAstrazine-E",
@@ -174,10 +181,7 @@
     "material.gtceu.auralloy-omega": "§6Aura§7lloy-Ω",
     "material.gtceu.rhodipalladic-desnite": "§bῬοδιπαλλαδοδεσνίτης",
     "material.gtceu.transuranic_naquadrium_alloy": "§3Transuranic Naquadrium Alloy",
-
-    "material.gtceu.stellarite_grid": "§2Stellarite Grid",
-    "material.gtceu.stellarite_lattice": "§1Stellarite Lattice",
-    "material.gtceu.stellarite_matrix": "§4Stellarite Matrix",
+    "material.gtceu.ephemeral_naquadite": "§6Ephemeral §bNaquadite",
     "material.gtceu.stellarite": "§5Stellarite",
     
     
@@ -334,13 +338,33 @@
     "material.gtceu.inferior_quark": "§bInferior Quark",
     "material.gtceu.bottom_quark": "§cBottom Quark",
     "material.gtceu.superior_quark": "§4Superior Quark",
+    "material.gtceu.muon": "§bMuon Plasma",
+    "material.gtceu.tau": "§6Tau Plasma",
+    "material.gtceu.antimuon": "§6Antimuon Plasma",
+    "material.gtceu.antitau": "§bAntitau Plasma",
+    "material.gtceu.neutrino": "§fNeutrino Plasma",
+    "material.gtceu.antrino": "§fAnti Neutrino Plasma",
+    "material.gtceu.electron_neutrino": "§aElectron Neutrino Plasma",
+    "material.gtceu.muon_neutrino": "§bMuon Neutrino Plasma",
+    "material.gtceu.tau_neutrino": "§dTau Neutrino Plasma",
+    "material.gtceu.electron_antrino": "§dElectron Antineutrino Plasma",
+    "material.gtceu.muon_antrino": "§cMuon Antineutrino Plasma",
+    "material.gtceu.tau_antrino": "§aTau Antineutrino Plasma",
+    "material.gtceu.higgs_boson": "§6Higgs Boson",
+    "material.gtceu.gamma_photon": "§eGamma Photon",
+    "material.gtceu.omniparticle": "§fOmniparticle",
+    "material.gtceu.omega_baryon": "§6Omega Baryon",
+    "material.gtceu.anti_omega_baryon": "§9Anti-Omega Baryon",
+    "material.gtceu.preon": "§5Preon",
+
+    "material.gtceu.lepton-dense_complex": "§dLepton-Dense Complex",
 
 
     "material.gtceu.jarosite": "§6Jarosite",
     "material.gtceu.fluorapatite": "§aFluorapatite",
     "material.gtceu.rhodite": "§7Rhodite",
     "material.gtceu.dilithium": "§6Dilithium",
-    "material.gtceu.anti-dilitide": "§9Anti-Dilithide",
+    "material.gtceu.anti-dilithide": "§9Anti-Dilithide",
     "material.gtceu.cryostatic-antilithide": "§9Cryostatic-Antilithide",
     "material.gtceu.phenakite": "§fPhenakite",
     "material.gtceu.kernite": "§fKernite",
@@ -458,6 +482,7 @@
     "gtceu.particle_accelerator": "§dParticle Accelerator",
     "gtceu.fusion_accelerator": "§dFusion Accelerator",
     "gtceu.applied_enigma": "§dApplied Enigma",
+    "gtceu.solar_collection": "§7Solar Collection",
 
     "block.gtceu.echo_imbuement_chamber": "§1Echonite Imbuement Chamber",
     "block.gtceu.primitive_alloyment_kiln": "§6Primitive Alloyment Kiln",
@@ -487,6 +512,7 @@
     "block.gtceu.heart_of_harmonia": "§7Heart of Harmonia",
     "block.gtceu.transcendental_polydimensional_accelerator": "§dTranscendentine Polydimensional Accelerator",
     "block.gtceu.applied_enigma": "§dApplied Enigma",
+    "block.gtceu.solar_collector": "§7Solar Collector",
 
     
     "block.gtceu.steel_gearbox": "§bNexus Steel §rGearbox Casing",
@@ -552,6 +578,7 @@
 
     "material.gtceu.primitive_glue": "Primitive Glue",
     "material.gtceu.lapotron": "§bLapotron",
+    "material.gtceu.glowstone": "Aurophosphorite",
 
     "fluid.gtceu.resonant_ender": "§1Resonant Ender",
     

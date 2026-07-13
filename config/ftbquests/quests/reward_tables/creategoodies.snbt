@@ -1,0 +1,16 @@
+{
+	id: "2A6012D221C52549"
+	loot_size: 1
+	order_index: 0
+	rewards: [
+		{ item: "create:andesite_casing", random_bonus: 3 }
+		{ count: 2, item: "gtceu:andesite_alloy_ingot", random_bonus: 6 }
+		{ item: "create:wrench", weight: 0.25f }
+		{ item: "ars_technica:runic_spanner", weight: 0.25f }
+		{ item: "create:precision_mechanism", random_bonus: 1 }
+		{ item: "create:electron_tube", random_bonus: 1 }
+		{ count: 2, item: "gtceu:brass_ingot", random_bonus: 4 }
+		{ item: "gtceu:obsidian_plate", random_bonus: 5, weight: 0.75f }
+	]
+	title: "create-goodies"
+}

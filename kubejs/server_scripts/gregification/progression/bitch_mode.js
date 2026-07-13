@@ -1,6 +1,7 @@
 //packmode: easy
 ServerEvents.recipes(event => {
     const GTM = event.recipes.gtceu
+    const CRT = event.recipes.create
     event.shaped(
     '3x gtceu:small_andesite_dust',
     [
@@ -70,21 +71,6 @@ ServerEvents.recipes(event => {
     ], {
         S: 'gtceu:treated_wood_slab'
     })
-
-event.shaped(
-    'create:andesite_casing',
-    [
-        ' G ',
-        'HFW',
-        ' P '
-    ], {
-        G: 'kubejs:primitive_glue_tube',
-        H: '#forge:tools/hammers',
-        F: 'gtceu:andesite_alloy_frame',
-        W: '#forge:tools/wrenches',
-        P: 'gtceu:treated_wood_plate'
-    }
-).damageIngredient('kubejs:primitive_glue_tube')
 
 event.shapeless(Item.of('4x kubejs:primitive_glue_tube'), [
     '2x #forge:flour',
@@ -168,40 +154,11 @@ ferricminerals.forEach((type) => {
     event.campfireCooking('iron_ingot', new RegExp(`^(gtceu|minecraft):${type}_dust$`), 0.15, 160)
     event.campfireCooking('6x iron_nugget', `gtceu:crushed_${type}_ore`, 0.1, 120)
 })
-
-event.shaped('minecraft:furnace', [
-'COC',
-'OGO',
-'COC'
-], {
-C: 'kubejs:compressed_cobblestone',
-O: 'minecraft:cobblestone_slab',
-G: 'gtceu:stone_gear'
-})
-
-event.shaped('minecraft:crafting_table', [
-'FL',
-'LA'
-], {
-F: 'minecraft:flint',
-L: '#minecraft:logs',
-A: '#minecraft:axes'
-}).damageIngredient('#minecraft:axes')
 event.shaped('4x kubejs:glass_ampule', [
 'P',
 'P'
 ], {
 P: '#forge:glass_panes'
-})
-
-event.shaped('undergarden:catalyst', [
-'EIE',
-'IMI',
-'EIE'
-], {
-E: "gtceu:electrum_block",
-I: "gtceu:invar_block",
-M: "gtceu:manasteel_block"
 })
 
 event.shaped('gtceu:charged_certus_quartz_block', [
@@ -215,22 +172,11 @@ event.shapeless('4x gtceu:charged_certus_quartz_gem', [
 'gtceu:charged_certus_quartz_block'
 ]).id('gtceu:shapeless/block_decompress_charged_certus_quartz')
 
-event.shapeless('9x cobblestone', ['kubejs:compressed_cobblestone'])
-
-event.shaped('2x gtceu:wrought_iron_bolt', ['S ', ' I'], {S: '#forge:tools/saws', I: 'gtceu:wrought_iron_rod'})
-event.shaped('2x gtceu:iron_bolt', ['S ', ' I'], {S: '#forge:tools/saws', I: 'gtceu:iron_rod'})
-
 event.shapeless('gtceu:manasteel_ingot', ['botania:manasteel_ingot'])
 event.shapeless('gtceu:source_gem', ['ars_nouveau:source_gem'])
 
-event.shaped('iron_door', ['PP', 'PR', 'PP'], {P: 'gtceu:iron_plate', R: 'gtceu:iron_round'})
-event.shapeless('create:wheat_flour', ['wheat'])
 
-event.shaped('8x create:redstone_link', ['T', 'C'], {T: 'create:transmitter', C: 'create:andesite_casing'}).id('create:crafting/logistics/redstone_link')
-event.shaped('2x create:redstone_link', ['T', 'C'], {T: 'create:transmitter', C: '#minecraft:planks'})
 
-event.shaped('oak_planks', ['SS', 'SS'], {S: 'stick'})
-event.shaped('wooden_axe', ['PR', ' S'], {P: '#minecraft:planks', R: 'farmersdelight:rope', S: 'stick'})
 
 event.shaped('2x gtceu:bronze_gearbox', [
 'PHP',
@@ -309,22 +255,13 @@ H: '#forge:tools/hammers',
 R: 'gtceu:sticky_resin'
 })
 
-event.shaped('4x experience_bottle', [
-' L ',
-'LBL',
-' L '
-], {
-L: 'glass_bottle',
-B: 'lapis_lazuli'
-})
-
 event.shaped('4x farmersdelight:rich_soil', [
 ' L ',
 'LBL',
 ' L '
 ], {
 L: 'farmersdelight:organic_compost',
-B: 'experience_bottle'
+B: 'lapis_lazuli'
 })
 
 event.shapeless('stone_button', ['stone'])
@@ -593,6 +530,35 @@ GTM.compressor(('compress_plate_dust_wood'))
 .duration(200)
 .EUt(2)
 
+CRT.mixing(['4x gtceu:bronze_ingot'], ['3x gtceu:copper_dust', 'gtceu:tin_dust']).heated()
+
+event.blasting('gtceu:steel_ingot', 'gtceu:wrought_iron_ingot', 0.35, 100)
+
+CRT.mechanical_crafting('gtceu:primitive_alloyment_kiln', [
+'FFBFF',
+'FBDBF',
+'BDSDB',
+'FBDBF',
+'FFBFF'
+], {
+F: 'gtceu:firebricks',
+B: 'gtceu:bronze_frame',
+D: 'gtceu:double_igneous_bronze_plate',
+S: "gtceu:lp_steam_alloy_smelter",
+})
+
+CRT.mechanical_crafting('gtceu:primitive_alloyment_kiln', [
+'FFBFF',
+'FBDBF',
+'BDSDB',
+'FBDBF',
+'FFBFF'
+], {
+F: 'gtceu:firebricks',
+B: 'gtceu:bronze_frame',
+D: 'gtceu:double_igneous_bronze_plate',
+S: "gtceu:hp_steam_alloy_smelter",
+})
 })
 
 

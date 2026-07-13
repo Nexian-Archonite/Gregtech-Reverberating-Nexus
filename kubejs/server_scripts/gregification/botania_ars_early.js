@@ -35,16 +35,10 @@ ServerEvents.recipes(event => {
         2000,
         ["ars_nouveau:conjuration_essence", "gtceu:source_gem", "ars_nouveau:water_essence"]
     )
-    event.recipes.ars_nouveau.imbuement("gtceu:source_gem", 'ars_nouveau:fire_essence', 2000, ['create:blaze_cake', 'gunpowder', 'gtceu:oilsands_dust'])
 
     event.remove({ output: "botania:mana_pool" })
     event.remove({ output: "botania:diluted_pool"})
 
-    event.recipes.ars_nouveau.imbuement("gtceu:resin_circuit_board",
-        "gtceu:resin_printed_circuit_board",
-        1000,
-        ["gtceu:source_gem", '#gtceu:circuits/ulv', 'gtceu:fine_source_attuned_copper_wire', 'gtceu:small_condensed_mana_dust']
-    )
 
     event.shaped('botania:mana_pool', 
     [

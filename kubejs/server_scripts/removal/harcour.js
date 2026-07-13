@@ -24,6 +24,26 @@ ServerEvents.recipes(e => {
     e.remove({ output: "create:rose_quartz"})
     e.remove({ output: "create:polished_rose_quartz"})
     e.remove({ output: "create:electron_tube"})
+
+    e.remove({id: 'create:crafting/kinetics/millstone'})
+e.remove({id: 'create:crafting/kinetics/mechanical_press'})
+e.remove({id: 'create:crafting/kinetics/mechanical_mixer'})
+e.remove({id: 'create:crafting/kinetics/belt_connector'})
+e.remove({id: 'create:crafting/kinetics/cogwheel'})
+e.remove({id: 'create:crafting/kinetics/large_cogwheel'})
+e.remove({id: 'create:crafting/kinetics/large_cogwheel_from_little'})
+e.remove({id: 'create:deploying/large_cogwheel'})
+e.remove({id: 'create:deploying/cogwheel'})
+e.remove({id: 'create:mechanical_crafting/crushing_wheel'})
+e.remove({id: 'create:crafting/kinetics/shaft'})
+e.remove({id: 'create:cutting/andesite_alloy'})
+e.remove({id: 'create:crafting/kinetics/gearbox'})
+e.remove({id: 'create:crafting/kinetics/vertical_gearbox'})
+e.remove({id: 'create:crafting/kinetics/mechanical_pump'})
+e.remove({id: 'create:crafting/kinetics/encased_fan'})
+
+e.remove({id: 'create:crafting/kinetics/mechanical_saw'})
+
     e.remove({id: 'undergarden:catalyst'})
 
 })

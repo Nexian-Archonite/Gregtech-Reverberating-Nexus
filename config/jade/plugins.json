@@ -116,8 +116,20 @@
     "crafting_monitor": true,
     "part_name": true
   },
+  "jade_vs": {
+    "block_velocity.display_mode": "SPEED_ONLY",
+    "ship_angular_velocity.degrees_mode": true,
+    "ship_mass": true,
+    "ship_angular_velocity.display_mode": "SPEED_ONLY",
+    "ship_angular_velocity": true,
+    "block_velocity": true,
+    "block_mass": true
+  },
   "ars_nouveau": {
     "mob_jar": true
+  },
+  "betternether": {
+    "plant_growth": true
   },
   "dynamictrees": {
     "rooty_water": true,
