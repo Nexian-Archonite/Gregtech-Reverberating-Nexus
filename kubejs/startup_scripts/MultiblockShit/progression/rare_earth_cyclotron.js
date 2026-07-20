@@ -1,7 +1,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 event.create('cyclotron')
 .category('imthescatmanbebobebobeboeboboeoebobeoboebboeboeboeboeboeboeboeobeobeboebooeboeeoboeboeboebo')
-.setMaxIOSize(1, 9, 1, 1)
+.setMaxIOSize(1, 9, 1, 3)
 .setSlotOverlay(true, true, GuiTextures.CENTRIFUGE_OVERLAY)
 .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE, FillDirection.LEFT_TO_RIGHT)
 .setSound(GTSoundEntries.CENTRIFUGE)

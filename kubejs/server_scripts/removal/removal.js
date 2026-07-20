@@ -10,7 +10,6 @@ ServerEvents.recipes(e => {
     e.remove({id: 'ars_nouveau:source_gem_block'})
     e.remove({id: 'ars_nouveau:source_gem_block_2'})
     e.remove({id: 'botania:mana_ring'})
-    e.remove({id: 'ad_astra_giselle_addon:crafting/fuel_loader'})
 
     e.remove({output: /gtceu:.*_solar_panel/})
     e.remove({id: 'minecraft:ancient_debris'})
@@ -61,4 +60,32 @@ ServerEvents.recipes(e => {
     e.remove({id: 'gtceu:smelting/smelt_dust_netherite_to_ingot'})
     e.remove({type: 'createaddition:rolling'})
     e.remove({id: 'ad_astra:engine_frame'})
+
+    e.remove({id: 'draconicevolution:compress/awakened_draconium_ingot'})
+    e.remove({id: 'draconicevolution:decompress/awakened_draconium_ingot'})
+    e.remove({id: 'draconicevolution:decompress/awakened_draconium_nugget'})
+    e.remove({id: 'draconicevolution:compress/awakened_draconium_block'})
+
+    e.remove({id: 'ad_astra:desh_ingot'})
+    e.remove({id: 'ad_astra:ostrum_ingot'})
+    e.remove({id: 'ad_astra:calorite_ingot'})
+
+    e.remove({id: 'ad_astra:desh_block'})
+    e.remove({id: 'ad_astra:ostrum_block'})
+    e.remove({id: 'ad_astra:calorite_block'})
+
+    e.remove({input: 'ad_astra:raw_desh'})
+    e.remove({input: 'ad_astra:raw_ostrum'})
+    e.remove({input: 'ad_astra:raw_calorite'})
+
+    e.remove({input: 'ad_astra:raw_desh_block'})
+    e.remove({input: 'ad_astra:raw_ostrum_block'})
+    e.remove({input: 'ad_astra:raw_calorite_block'})
+
+    e.remove({id: 'ad_astra:coal_generator'})
+    e.remove({id: 'ad_astra:water_pump'})
+    e.remove({id: 'ad_astra:solar_panel'})
+    e.remove({id: 'ad_astra_giselle_addon:crafting/automation_nasa_workbench'})
+
+    e.remove({id: 'draconicevolution:awakened_draconium_block'})
 })

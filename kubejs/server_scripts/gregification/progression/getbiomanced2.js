@@ -1,6 +1,6 @@
 ServerEvents.recipes(biomanced =>{
 const GTM = biomanced.recipes.gtceu
-// blood chain ;)
+// blood chain
 
 GTM.mixer('blood_electrolytes_synthesis')
     .itemInputs('3x gtceu:sodium_dust', '2x gtceu:potassium_dust', '2x gtceu:calcium_dust', 'gtceu:magnesium_dust', 'gtceu:phosphorus_dust')
@@ -178,50 +178,97 @@ biomanced.custom(
     "item": "gtceu:flesh_alloy_dust"
   }})
    
-const fleshAlloyParts = [
-    ['small_gear', 'small_gear', 'small_flesh_alloy_gear', 1, 1],
-    ['plate', 'plate', 'flesh_alloy_plate', 1, 1],
-    ['double_plate', 'plate', 'double_flesh_alloy_plate', null, 1],
-    ['nugget', 'nugget', 'flesh_alloy_nugget', 1, 9],
-    ['ingot', 'ingot', 'flesh_alloy_ingot', 1, 1],
-    ['gear', 'gear', 'flesh_alloy_gear', 4, 1],
-]
+const alloyParts = {
+    flesh_alloy: [
+        ['small_gear', 'small_gear', 1, 1],
+        ['plate', 'plate', 1, 1],
+        ['double_plate', null, 2, 1],
+        ['nugget', 'nugget', 1, 9],
+        ['gear', 'gear', 4, 1],
+        ['rod', 'rod_extruder', 1, 2],
+    ],
+    sentient_alloy: [
+        ['small_gear', 'small_gear', 1, 1],
+        ['plate', 'plate', 1, 1],
+        ['double_plate', null, 2, 1],
+        ['nugget', 'nugget', 1, 9],
+        ['gear', 'gear', 4, 1],
+        ['rod', 'rod_extruder', 1, 2],
+    ]
+}
 
-fleshAlloyParts.forEach((entry) => {
-    const part = entry[0]
-    const mold = entry[1]
-    const itemName = entry[2]
-    const inputCount = entry[3] || 1
-    const outputCount = entry[4] || 1
+const getItemName = (alloy, part) => {
+    if (part === 'small_gear') return `small_${alloy}_gear`
+    if (part === 'double_plate') return `double_${alloy}_plate`
+    return `${alloy}_${part}`
+}
 
-    
-    const recipe = GTM.biomechanical_extruder(`flesh_alloy_${part}`)
-        .duration(40)
-        .perTick(true)
-        .inputFluids('gtceu:blood_electrolytes 100')
-        .perTick(false)
-        .EUt(GTValues.VA[GTValues.IV])
-        .cleanroom(CleanroomType.STERILE_CLEANROOM)
-    
-    if (part === 'double_plate') {
-        recipe.itemInputs('2x gtceu:flesh_alloy_plate')
-    } else {
-        recipe.itemInputs(`${inputCount}x gtceu:flesh_alloy_dust`)
-    }
-    
-    recipe.itemOutputs(`${outputCount}x gtceu:${itemName}`)
-    recipe.notConsumable(`gtceu:${mold}_casting_mold`)
+const getMoldName = (mold) => {
+    if (mold === 'rod_extruder') return `gtceu:rod_extruder_mold`
+    return `gtceu:${mold}_casting_mold`
+}
+
+Object.entries(alloyParts).forEach(([alloy, parts]) => {
+    parts.forEach(([part, mold, inputCount, outputCount]) => {
+        const ingotInput = inputCount || 1
+        const itemName = getItemName(alloy, part)
+        const isDoublePlate = part === 'double_plate'
+
+        const recipe = GTM.biomechanical_extruder(`${alloy}_${part}`)
+            .duration(40)
+            .perTick(true)
+            .inputFluids('gtceu:blood_electrolytes 100')
+            .perTick(false)
+            .EUt(GTValues.VA[GTValues.IV])
+            .cleanroom(CleanroomType.STERILE_CLEANROOM)
+            .itemInputs(isDoublePlate
+                ? `${ingotInput}x gtceu:${alloy}_plate`
+                : `${ingotInput}x gtceu:${alloy}_ingot`)
+            .itemOutputs(`${outputCount || 1}x gtceu:${itemName}`)
+
+        if (mold) recipe.notConsumable(getMoldName(mold))
+
+        GTM.biomechanical_recycler(`${alloy}_${part}_recycle`)
+            .itemInputs(`${outputCount || 1}x gtceu:${itemName}`)
+            .itemOutputs(`${ingotInput}x gtceu:${alloy}_dust`)
+            .duration(40)
+            .perTick(true)
+            .inputFluids('gtceu:blood_electrolytes 100')
+    })
 })
 
-GTM.biomechanical_extruder('flesh_alloy_rod')
-.itemInputs('gtceu:flesh_alloy_dust')
-.notConsumable('gtceu:rod_extruder_mold')
-.itemOutputs('2x gtceu:flesh_alloy_rod')
+GTM.biomechanical_recycler('flesh_alloy_ingot_recycle')
+.itemInputs('gtceu:flesh_alloy_ingot')
+.itemOutputs('gtceu:flesh_alloy_dust')
+.duration(40)
 .perTick(true)
 .inputFluids('gtceu:blood_electrolytes 100')
+
+GTM.biomechanical_recycler('sentient_alloy_ingot_recycle')
+.itemInputs('gtceu:sentient_alloy_ingot')
+.itemOutputs('gtceu:sentient_alloy_dust')
+.duration(50)
+.perTick(true)
+.inputFluids('gtceu:blood_electrolytes 125')
+
+GTM.biomechanical_extruder('flesh_alloy_ingot')
+.itemInputs('gtceu:flesh_alloy_dust')
+.notConsumable('gtceu:ingot_extruder_mold')
+.itemOutputs('gtceu:flesh_alloy_ingot')
 .duration(40)
-.EUt(GTValues.VA[GTValues.IV])
-.cleanroom(CleanroomType.STERILE_CLEANROOM)
+.perTick(true)
+.inputFluids('gtceu:blood_electrolytes 100')
+
+GTM.biomechanical_extruder('sentient_alloy_ingot')
+.itemInputs('gtceu:sentient_alloy_dust')
+.notConsumable('gtceu:ingot_extruder_mold')
+.itemOutputs('gtceu:sentient_alloy_ingot')
+.duration(50)
+.perTick(true)
+.inputFluids('gtceu:blood_electrolytes 125')
+
+biomanced.remove({id: 'gtceu:biomechanical_recycler/flesh_alloy_dust_recycle'})
+biomanced.remove({id: 'gtceu:biomechanical_recycler/sentient_alloy_dust_recycle'})
    
 GTM.biomechanical_extruder('flesh_alloy_casing')
 .itemInputs('gtceu:tungsten_steel_frame', '4x gtceu:flesh_alloy_plate', '4x gtceu:flesh_alloy_rod')
@@ -238,15 +285,15 @@ GTM.assembly_line('organism_assembly_line')
 .inputFluids('gtceu:artificial_blood 8000', 'gtceu:sterilized_growth_medium 6000', 'gtceu:mutagen 4000', 'gtceu:polybenzimidazole 2500')
 .itemOutputs('gtceu:organism_assembly_line')
 .duration(12000)
-.EUt(GTValues.VA[GTValues.LuV])
+.EUt(32768)
 ["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack(Item.of('gtceu:luv_assembler')).EUt(GTValues.VA[GTValues.IV]).duration(2400))
    
 GTM.star_forge('organism_assembly_line')
-.itemInputs('2x gtceu:flesh_alloy_casing', '24x gtceu:flesh_alloy_plate', '16x gtceu:flesh_alloy_rod', '12x gtceu:double_flesh_alloy_plate', 'biomancy:bio_forge', 'biomancy:bio_lab', 'biomancy:primordial_cradle', '64x gtceu:stem_cells', '8x gtceu:crystal_methamphetamine_dust')
-.inputFluids('gtceu:artificial_blood 8000', 'gtceu:sterilized_growth_medium 6000', 'gtceu:mutagen 4000', 'gtceu:polybenzimidazole 2500')
+.itemInputs('2x gtceu:flesh_alloy_casing', '24x gtceu:flesh_alloy_plate', '16x gtceu:flesh_alloy_rod', '12x gtceu:double_flesh_alloy_plate', 'biomancy:bio_forge', 'biomancy:bio_lab', 'biomancy:primordial_cradle', '64x gtceu:stem_cells')
+.inputFluids('gtceu:artificial_blood 8000', 'gtceu:sterilized_growth_medium 6000', 'gtceu:mutagen 4000', 'gtceu:polybenzimidazole 2500', 'gtceu:crystal_methamphetamine 1152')
 .itemOutputs('gtceu:organism_assembly_line')
 .duration(2000)
-.EUt(32768)
+.EUt(2048)
 .cleanroom(CleanroomType.STERILE_CLEANROOM)
    
 
@@ -300,7 +347,7 @@ const nutrientRecipes = [
 ["minecraft:warped_wart_block", 3, 409, 3],
 ["minecraft:weeping_vines", 2, 332, 2],
 ["minecraft:wheat", 2, 200, 1]
-];
+]
    
 nutrientRecipes.forEach((entry) => {
 const input = entry[0]
@@ -308,7 +355,7 @@ const nutrientsCost = entry[1]
 const processingTime = entry[2]
 const outputCount = entry[3]
 
-const recipeId = input.replace('#', '');
+const recipeId = input.replace('#', '')
 GTM.biomechanical_recycler(`${recipeId}_recycling`)
 .itemInputs(input)
 .perTick(true)
@@ -365,7 +412,7 @@ GTM.star_forge('incubation_chamber')
 .inputFluids('gtceu:artificial_blood 10000', 'gtceu:mutagen 6000', 'gtceu:polyether_ether_ketone 4000', 'gtceu:trinium 2500')
 .itemOutputs('gtceu:incubation_chamber')
 .duration(1600)
-.EUt(131072)
+.EUt(2097152)
 .cleanroom(CleanroomType.STERILE_CLEANROOM)
 
 //actual meth synthesis (what has my life came to)
@@ -482,16 +529,16 @@ const animalspawnegglistforthereasonsaboveme = {
 }
 
 Object.entries(animalspawnegglistforthereasonsaboveme).forEach(([victim, data]) => {
-    const { drops, circuit } = data;  // Extract from the value object
+    const { drops, circuit } = data  // Extract from the value object
     
     const recipe = GTM.assembler(`${victim}_spawn_egg_assembly`)
         .itemInputs('minecraft:egg', `4x ${drops[0]}`, `4x ${drops[1]}`)
         .itemOutputs(`minecraft:${victim}_spawn_egg`)
         .duration(2000)
-        .EUt(32);
+        .EUt(32)
 
     if (circuit !== null) {
-        recipe.circuit(circuit);
+        recipe.circuit(circuit)
     }
 
     const recipe2 = GTM.spawn_simulator(`${victim}_spawn_egg_incubation`)
@@ -502,12 +549,12 @@ Object.entries(animalspawnegglistforthereasonsaboveme).forEach(([victim, data]) 
         .inputFluids('gtceu:blood_electrolytes 100')
         .perTick(false)
         .duration(100)
-        .EUt(2048);
+        .EUt(2048)
 
     if (circuit !== null) {
-        recipe2.circuit(circuit);
+        recipe2.circuit(circuit)
     }
-});
+})
 
 GTM.mixer('organism_amalgam')
 .itemInputs('biomancy:flesh_bits', 'biomancy:elastic_fibers', 'biomancy:tough_fibers', 'biomancy:withering_ooze', 'biomancy:toxin_extract', 'biomancy:volatile_fluid')

@@ -16,8 +16,8 @@ const AE2hit = {
 }
 
 Object.entries(AE2hit).forEach(([type, material]) => {
-    const duration = 40
-    const EUt = 480
+    let duration = 40
+    let EUt = 480
     
     if (type === 'silicon') {
         duration = duration / 2  // 20

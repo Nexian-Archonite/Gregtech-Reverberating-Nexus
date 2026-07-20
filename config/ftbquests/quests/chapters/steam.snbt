@@ -389,7 +389,7 @@
 		{
 			dependencies: ["5C02C7A98C0440C6"]
 			id: "34574D735AC1F086"
-			subtitle: "It's gettin hot in here"
+			subtitle: "It's gettin' hot in here"
 			tasks: [{
 				id: "44971333BF5815D2"
 				item: "ars_nouveau:fire_essence"
@@ -488,7 +488,7 @@
 				"33370DE35A2A0E87"
 			]
 			id: "113285DFC36BE1D8"
-			subtitle: "The spinni boi"
+			subtitle: "the spinni boi"
 			tasks: [{
 				id: "0BD8A9CAD426E70F"
 				item: "create:mechanical_mixer"
@@ -500,7 +500,7 @@
 		{
 			dependencies: ["7A927D950ABFE048"]
 			id: "753C1FE6BF7E0ED1"
-			subtitle: "The heavy boi"
+			subtitle: "the heavy boi"
 			tasks: [{
 				id: "1FD543904B735C77"
 				item: "create:mechanical_press"
@@ -512,7 +512,7 @@
 		{
 			dependencies: ["7A927D950ABFE048"]
 			id: "5FC2A8E092B0F168"
-			subtitle: "The movey boi"
+			subtitle: "the movey boi"
 			tasks: [{
 				id: "6BAAD1253017E62D"
 				item: "create:belt_connector"
@@ -524,7 +524,7 @@
 		{
 			dependencies: ["7A927D950ABFE048"]
 			id: "3A71264BE5103005"
-			subtitle: "The sharp boi"
+			subtitle: "the sharp boi"
 			tasks: [{
 				id: "3D5F8300435D7C9A"
 				item: "create:mechanical_saw"
@@ -552,7 +552,7 @@
 				"753C1FE6BF7E0ED1"
 			]
 			id: "622006B0C6C521E8"
-			subtitle: "its getting hotter in here"
+			subtitle: "It's gettin' hotter in here"
 			tasks: [{
 				id: "0CAD8C9AD02220AF"
 				item: "create:blaze_cake"
@@ -567,7 +567,7 @@
 				"113285DFC36BE1D8"
 			]
 			id: "3344DBE1BF63813A"
-			subtitle: "make messing"
+			subtitle: "why did you make mess"
 			tasks: [{
 				id: "34024FF5081F9A71"
 				item: "gtceu:brass_ingot"
@@ -738,6 +738,7 @@
 		{
 			dependencies: ["2714C54AF8063466"]
 			id: "2EBA5834628DCE27"
+			subtitle: "bruh i paid the cables to strip and they put their coats back on 😩"
 			tasks: [{
 				id: "485098CFC148ED0A"
 				item: "gtceu:red_alloy_single_cable"
@@ -826,7 +827,7 @@
 		{
 			dependencies: ["26A559AB94DC0CA2"]
 			id: "072B0424E2F4A875"
-			subtitle: "The lowest boiler tier. Burns shit like coal!"
+			subtitle: "The lowest boiler tier. Burns shit like coal! (and objectively IS shit)"
 			tasks: [{
 				id: "1E1313DF48B8563F"
 				item: "gtceu:lp_steam_solid_boiler"
@@ -898,7 +899,7 @@
 		{
 			dependencies: ["33CC8FDFA0BA1C26"]
 			id: "7390081A67D75B35"
-			subtitle: "Uses Steam to Compress shit"
+			subtitle: "Uses Steam to compress shit"
 			tasks: [{
 				id: "25732D6837B8DA2A"
 				item: "gtceu:lp_steam_compressor"
@@ -910,7 +911,7 @@
 		{
 			dependencies: ["33CC8FDFA0BA1C26"]
 			id: "4650ECB028D092C7"
-			subtitle: "Makes plates about 50% cheaper"
+			subtitle: "Uses Steam to plate shit"
 			tasks: [{
 				id: "05DC90665FFBBFBD"
 				item: "gtceu:lp_steam_forge_hammer"
@@ -957,6 +958,7 @@
 		{
 			dependencies: ["23F4DFE308064EAA"]
 			id: "4CDDB67A0DD1B343"
+			subtitle: "What is this. Project Red?"
 			tasks: [{
 				id: "0A2B3648BDCA3993"
 				item: "gtceu:red_alloy_ingot"
@@ -968,6 +970,7 @@
 		{
 			dependencies: ["4CDDB67A0DD1B343"]
 			id: "2714C54AF8063466"
+			subtitle: "Hey wait a minute. Doesn't conduct redstone? Sounds like Misinformation super duper.. uh Station"
 			tasks: [{
 				id: "064AF315E1ACAACB"
 				item: "gtceu:red_alloy_single_wire"
@@ -1039,6 +1042,7 @@
 		{
 			dependencies: ["06E1788A7496368D"]
 			id: "30E0F3A1D8F67957"
+			subtitle: "Fined for being too Cupric"
 			tasks: [{
 				id: "4C390AE1B8060BCC"
 				item: "gtceu:fine_copper_wire"

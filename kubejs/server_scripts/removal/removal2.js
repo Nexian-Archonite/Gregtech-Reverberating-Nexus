@@ -10,15 +10,9 @@ ServerEvents.recipes(e => {
         e.remove({output: `ad_astra:${type}`})
     })
 
-e.remove({output: /gtceu:(tiny_|small_|double_)?flesh_alloy_.*/, type: 'gtceu:extruder'})
-e.remove({output: /gtceu:(tiny_|small_|double_)?flesh_alloy_.*/, type: 'gtceu:alloy_smelter'})
-e.remove({output: /gtceu:(tiny_|small_|double_)?flesh_alloy_.*/, type: 'gtceu:forge_hammer'})
-e.remove({output: /gtceu:(tiny_|small_|double_)?flesh_alloy_.*/, type: 'gtceu:macerator'})
-e.remove({output: /gtceu:(tiny_|small_|double_)?flesh_alloy_.*/, type: 'gtceu:lathe'})
-e.remove({output: /gtceu:(tiny_|small_|double_)?flesh_alloy_.*/, type: 'gtceu:compressor'})
-e.remove({output: /gtceu:(tiny_|small_|double_)?flesh_alloy_.*/, type: 'gtceu:bender'})
-e.remove({id: 'gtceu:smelting/smelt_dust_flesh_alloy_to_ingot'})
-e.remove({id: 'gtceu:electrolyzer/decomposition_electrolyzing_flesh_alloy_dust'})
+e.remove({output: /gtceu:(tiny_|small_|double_)?flesh_alloy_.*/})
+e.remove({output: /gtceu:(tiny_|small_|double_)?sentient_alloy_.*/})
+
 e.remove({output: 'gtceu:plutonium_241', type: 'gtceu:fusion_reactor'})
 e.remove({output: 'gtceu:uranium_235', type: 'gtceu:fusion_reactor'})
 e.remove({output: 'gtceu:plutonium', type: 'gtceu:fusion_reactor'})

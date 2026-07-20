@@ -19,9 +19,9 @@ const Ihide = [
     "ae2:fluix_block",
     /ad_astra:iron_.*/,
     /ad_astra:steel_.*/,
-    /ad_astra:desh_.*/,
-    /ad_astra:ostrum_.*/,
-    /ad_astra:calorite_.*/,
+    /ad_astra:(raw_)?desh_.*/,
+    /ad_astra:(raw_)?ostrum_.*/,
+    /ad_astra:(raw_)?calorite_.*/,
     /ad_astra:etrionic_.*/,
     /ad_astra:(.*_)?etrium_.*/,
     /ad_astra:raw_.*_(block)?/,
@@ -33,7 +33,11 @@ const Ihide = [
     "createaddition:electrum_nugget",
     "createaddition:electrum_block",
     "minecraft:netherite_scrap",
-    "gtceu:energium_dust"
+    "gtceu:energium_dust",
+    "draconicevolution:awakened_draconium_dust",
+    "draconicevolution:awakened_draconium_ingot",
+    "draconicevolution:awakened_draconium_block",
+    "draconicevolution:awakened_draconium_nugget",
 ]
 
 ServerEvents.tags('item', event =>{
@@ -66,8 +70,25 @@ event.removeAllTagsFrom('ad_astra:hydrogen_bucket')
 event.add('forge:dusts/arcane', 'irons_spellbooks:arcane_essence')
 
 event.add('ad_astra:calorite_plates', 'gtceu:venian_calorite_plate')
-event.add('ad_astra:ostrum_plates', 'gtceu:martian_calorite_plate')
+event.add('ad_astra:ostrum_plates', 'gtceu:martian_ostrum_plate')
 event.add('ad_astra:desh_plates', 'gtceu:lunar_desh_plate')
+
+event.add('ad_astra:calorite_ingots', 'gtceu:venian_calorite_ingot')
+event.add('ad_astra:ostrum_ingots', 'gtceu:martian_ostrum_ingot')
+event.add('ad_astra:desh_ingots', 'gtceu:lunar_desh_ingot')
+
+event.add('ad_astra:calorite_blocks', 'gtceu:venian_calorite_block')
+event.add('ad_astra:ostrum_blocks', 'gtceu:martian_ostrum_block')
+event.add('ad_astra:desh_blocks', 'gtceu:lunar_desh_block')
+
+event.add('forge:nuggets/draconium', 'gtceu:purified_draconium_nugget')
+event.add('forge:nuggets/draconium_awakened', 'gtceu:awakened_draconium_nugget')
+
+event.add('forge:ingots/draconium', 'gtceu:purified_draconium_ingot')
+event.add('forge:ingots/draconium_awakened', 'gtceu:awakened_draconium_ingot')
+
+event.add('forge:storage_blocks/draconium', 'gtceu:purified_draconium_block')
+event.add('forge:storage_blocks/awakened_draconium', 'gtceu:awakened_draconium_block')
 })
 
 ServerEvents.tags('item', event => {

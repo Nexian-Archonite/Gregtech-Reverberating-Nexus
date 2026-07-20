@@ -93,21 +93,21 @@ const oreProcessableTiers = {
     { material: 'sperrylite', secondary: 'platinum', tertiary: 'palladium', quaternary: 'rhodium' }
 
   ]
-};
+}
 
 ServerEvents.recipes(function (event) {
-  const GTM = event.recipes.gtceu;
+  const GTM = event.recipes.gtceu
 
   // Build tier lists
-  oreProcessableTiers.primitive = oreProcessableTiers.PrimitiveProcessing.slice();
+  oreProcessableTiers.primitive = oreProcessableTiers.PrimitiveProcessing.slice()
 
   oreProcessableTiers.electric = oreProcessableTiers.primitive.concat(
     oreProcessableTiers.ElectricProcessing
-  );
+  )
 
   oreProcessableTiers.advanced = oreProcessableTiers.electric.concat(
     oreProcessableTiers.AdvancedProcessing
-  );
+  )
 
   // Primitive tier - ore_processing_plant
   oreProcessableTiers.primitive.forEach(function (ore) {
@@ -119,7 +119,7 @@ ServerEvents.recipes(function (event) {
       .inputFluids('water 500')
       .duration(100)
       .EUt(32)
-  });
+  })
 
   // Electric tier - electric_ore_processing_plant
   oreProcessableTiers.electric.forEach(function (ore) {
@@ -134,7 +134,7 @@ ServerEvents.recipes(function (event) {
       if (ore.quaternary) {
         recipe.chancedOutput('gtceu:' + ore.quaternary + '_dust', 2500, 0)
         }
-  });
+  })
 
   // Advanced tier - plant_ore_processing
   oreProcessableTiers.advanced.forEach(function (ore) {
@@ -145,14 +145,14 @@ ServerEvents.recipes(function (event) {
       .chancedOutput('3x gtceu:' + ore.tertiary + '_dust', 4500, 0)
       .inputFluids('gtceu:steam 1000')
       .duration(50)
-      .EUt(2048);
+      .EUt(2048)
     if (ore.quaternary) {
         recipe.chancedOutput('2x gtceu:' + ore.quaternary + '_dust', 3500, 0)
     }
     if (ore.quinary) {
-         recipe.chancedOutput('gtceu:' + ore.quinary + '_dust', 1500, 0);
+         recipe.chancedOutput('gtceu:' + ore.quinary + '_dust', 1500, 0)
     }
-  });
+  })
 
   event.shaped(Item.of('gtceu:primitive_processing_factory'), [
         'HRS',
@@ -165,7 +165,7 @@ ServerEvents.recipes(function (event) {
         P: 'gtceu:brass_plate',
         B: 'gtceu:firebricks',
         F: '#forge:tools/screwdrivers'
-    }).id('gtceu:shaped/primitive_ore_factory');
+    }).id('gtceu:shaped/primitive_ore_factory')
 
     event.shaped(Item.of('gtceu:ore_processing_factory'), [
         'GCG', 
@@ -177,7 +177,7 @@ ServerEvents.recipes(function (event) {
         P: 'gtceu:steel_plate',
         L: 'gtceu:lv_machine_hull',
         W: 'gtceu:tin_single_cable'
-    }).id('gtceu:shaped/electric_ore_factory');
+    }).id('gtceu:shaped/electric_ore_factory')
 
   event.shaped(Item.of('gtceu:ore_processing_plant'), [
         'GCG',
@@ -189,5 +189,5 @@ ServerEvents.recipes(function (event) {
         P: 'gtceu:tungsten_carbide_plate',
         L: 'gtceu:iv_machine_hull',
         W: 'gtceu:platinum_single_cable'
-    }).id('gtceu:shaped/ore_processing_plant');
-});
+    }).id('gtceu:shaped/ore_processing_plant')
+})

@@ -1,14 +1,14 @@
 ServerEvents.recipes(event => {
 
-const RegexList =/^gtceu:(shaped|assembler|assembly_line)\/(ring_.*|small_gear_.*|drill_head_.*|tiny_dust_.*|plate_.*|screwdriver_.*|small_dust_.*|stick_.*|chainsaw_.*|plate_.*|nugget_.*|rotor_.*|spring_.*|foil_.*|bolt_.*|block_.*|gear_.*|fine_wire_.*|screw_.*|buzzsaw_.*|turbine_.*|wrench_.*|frame_.*|cover_.*_wire_gt_.*|(tiny|small|medium|large|huge|quadruple|nonuple)_.*_pipe|fluid_cell_.*|assemble_.*|coil_.*|scythe_.*|pickaxe_.*|shovel_.*|axe_.*|file_.*|wire_cutter_.*|_.*_hammer_.*|saw_.*|spade_.*|sword_.*|knife_.*|butchery_.*|crowbar_.*|hoe_.*|.*_wire_.*|wetware_.*)$/
+const RegexList =/^gtceu:(shaped|assembler|assembly_line)\/(ring_.*|small_gear_.*|drill_head_.*|tiny_dust_.*|screwdriver_.*|small_dust_.*|stick_.*|chainsaw_.*|plate_.*|nugget_.*|rotor_.*|spring_.*|foil_.*|bolt_.*|block_.*|gear_.*|fine_wire_.*|screw_.*|buzzsaw_.*|turbine_.*|wrench_.*|frame_.*|cover_.*_wire_gt_.*|(tiny|small|medium|large|huge|quadruple|nonuple)_.*_pipe|fluid_cell_.*|assemble_.*|coil_.*|scythe_.*|pickaxe_.*|shovel_.*|axe_.*|file_.*|wire_cutter_.*|_.*_hammer_.*|saw_.*|spade_.*|sword_.*|knife_.*|butchery_.*|crowbar_.*|hoe_.*|.*_wire_.*|wetware_.*)$/
 
-const RecTyp = ["gtceu:assembler", 'gtceu:assembly_line', 'gtceu:shaped', 'crafting_shaped']
+const RecTyp = ["gtceu:assembler", 'gtceu:assembly_line', 'gtceu:circuit_assembler', 'gtceu:shaped', 'crafting_shaped']
 
 const itemTypes = [
     'rod', 'round', 'plate', 'gear', 'rotor', 'frame', 'ring', 'bolt', 'screw', 'foil',
     'tiny_fluid_pipe', 'small_fluid_pipe', 'normal_fluid_pipe', 'large_fluid_pipe', 'huge_fluid_pipe',
     'single_cable', 'single_wire', 'double_cable', 'double_wire', 'quadruple_cable', 'quadruple_wire',
-    'octal_cable', 'octal_wire', 'hex_cable', 'hex_wire'
+    'octal_cable', 'octal_wire', 'hex_cable', 'hex_wire', 'spring'
 ]
 
 const prefixedTypes = ['long_{}_rod', 'small_{}_gear', 'fine_{}_wire', 'double_{}_plate', 'dense_{}_plate']
@@ -40,9 +40,6 @@ Object.entries(tierReplacements).forEach(([inputs, replacement]) => {
             })
         })
 }) 
-
-// recycling expansion!!!!
-
 
 // I have no idea how it works, but it works, so im not touching this shit
 
@@ -331,17 +328,28 @@ event.replaceOutput(
 )
 
 event.replaceInput(
-    {mod: 'overgeared'},
-    'overgeared:steel_ingot',
-    'gtceu:steel_ingot'
+    {mod: 'ad_astra'},
+    'gtceu:steel_rod',
+    'gtceu:nexus_steel_rod'
 )
 
-event.replaceOutput(
-    {mod: 'overgeared'},
-    'overgeared:steel_ingot',
-    'gtceu:steel_ingot'
+event.replaceInput(
+    {mod: 'ad_astra_giselle_addon'},
+    'gtceu:steel_rod',
+    'gtceu:nexus_steel_rod'
 )
 
+event.replaceInput(
+    {mod: 'ad_astra'},
+    'gtceu:steel_block',
+    'gtceu:nexus_steel_block'
+)
+
+event.replaceInput(
+    {mod: 'ad_astra_giselle_addon'},
+    'gtceu:steel_block',
+    'gtceu:nexus_steel_block'
+)
 materials.forEach((material) => {
     types.forEach((type) => {
         event.replaceInput(
@@ -358,11 +366,62 @@ event.replaceOutput(
     'gtceu:treated_wood_dust'
 )
 
+event.shaped('draconicevolution:draconium_ingot', [
+'NNN',
+'NNN',
+'NNN'
+], {
+N: 'draconicevolution:draconium_nugget'
+})
 
+event.shaped('draconicevolution:draconium_block', [
+'III',
+'III',
+'III'
+], {
+I: 'draconicevolution:draconium_ingot'
+})
 
-
-
-
+event.custom(
+    {
+  "type": "draconicevolution:fusion_crafting",
+  "catalyst": {
+    "type": "draconicevolution:ingredient_stack",
+    "count": 8,
+    "items": [
+      {
+        "item": "gtceu:purified_draconium_block"
+      }
+    ]
+  },
+  "ingredients": [
+    {
+      "item": "apotheotic_additions:gemboundsigil"
+    },
+    {
+      "item": "irons_spellbooks:cinder_essence"
+    },
+    {
+      "item": "draconicevolution:wyvern_core"
+    },
+    {
+      "item": "draconicevolution:dragon_heart"
+    },
+    {
+      "item": "gtceu:exquisite_echo_shard_gem"
+    },
+    {
+      "item": "irons_spellbooks:dragonskin"
+    }
+  ],
+  "result": {
+    "count": 8,
+    "item": "gtceu:awakened_draconium_block"
+  },
+  "tier": "WYVERN",
+  "total_energy": 5000000
+}
+)
 
 
 

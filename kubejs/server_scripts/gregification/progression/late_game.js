@@ -159,6 +159,7 @@ GTM.particle_accelerator('enriched_naquadrium_bombardment')
 .circuit(4)
 
 //I'm Atomicing it so hard I'm about to Preon
+//Rebirth of the "Im Quarking it so hard, I'm about to Gluon 😩"
 
 // ============================================================
 // GT:RN: Holy CERN-Crusade
@@ -168,7 +169,6 @@ GTM.particle_accelerator('up_down_to_proton')
     .perTick(true)
     .inputFluids('gtceu:up_quark 2', 'gtceu:down_quark 1')
     .outputFluids('gtceu:proton 1')
-    .perTick(false)
     .fusionStartEU(8388608)
     .EUt(524288)
     .duration(200)
@@ -178,59 +178,53 @@ GTM.particle_accelerator('sub_sur_to_negatron')
     .perTick(true)
     .inputFluids('gtceu:sub_quark 2', 'gtceu:sur_quark 1')
     .outputFluids('gtceu:negatron 1')
-    .perTick(false)
     .fusionStartEU(8388608)
     .EUt(524288)
     .duration(200)
     .circuit(1)
 
-GTM.particle_accelerator('charm_strange_to_neutron')
+GTM.particle_accelerator('up_down_to_neutron')
     .perTick(true)
-    .inputFluids('gtceu:charm_quark 1', 'gtceu:strange_quark 1')
+    .inputFluids('gtceu:down_quark 1', 'gtceu:up_quark 2')
     .outputFluids('gtceu:neutron 1')
-    .perTick(false)
     .fusionStartEU(8388608)
     .EUt(524288)
     .duration(200)
-    .circuit(1)
+    .circuit(2)
 
-GTM.particle_accelerator('curse_ordinary_to_nulltron')
+GTM.particle_accelerator('sub_sur_to_nulltron')
     .perTick(true)
-    .inputFluids('gtceu:curse_quark 1', 'gtceu:ordinary_quark 1')
+    .inputFluids('gtceu:sur_quark 1', 'gtceu:sub_quark 2')
     .outputFluids('gtceu:nulltron 1')
-    .perTick(false)
     .fusionStartEU(8388608)
     .EUt(524288)
     .duration(200)
-    .circuit(1)
+    .circuit(2)
 
-GTM.particle_accelerator('top_bottom_to_omega_baryon')
+GTM.particle_accelerator('top_bottom_to_omega_hadron')
     .perTick(true)
-    .inputFluids('gtceu:top_quark 1', 'gtceu:bottom_quark 1')
-    .outputFluids('gtceu:omega_baryon 1')
-    .perTick(false)
+    .inputFluids('gtceu:top_quark 1', 'gtceu:bottom_quark 1', 'gtceu:strange_quark 1')
+    .outputFluids('gtceu:omega_hadron 1')
     .fusionStartEU(134217728)
-    .EUt(33554432)
+    .EUt(8388608)
     .duration(200)
     .circuit(1)
 
-GTM.particle_accelerator('inferior_superior_to_anti_omega_baryon')
+GTM.particle_accelerator('inferior_superior_to_null_hadron')
     .perTick(true)
-    .inputFluids('gtceu:inferior_quark 1', 'gtceu:superior_quark 1')
-    .outputFluids('gtceu:anti_omega_baryon 1')
-    .perTick(false)
+    .inputFluids('gtceu:inferior_quark 1', 'gtceu:superior_quark 1', 'gtceu:ordinary_quark 1')
+    .outputFluids('gtceu:null_hadron 1')
     .fusionStartEU(134217728)
-    .EUt(33554432)
+    .EUt(8388608)
     .duration(200)
     .circuit(1)
 
 GTM.particle_accelerator('omega_annihilation_to_omniparticle')
     .perTick(true)
-    .inputFluids('gtceu:omega_baryon 1', 'gtceu:anti_omega_baryon 1')
+    .inputFluids('gtceu:omega_hadron 1', 'gtceu:null_hadron 1')
     .outputFluids('gtceu:omniparticle_plasma 1')
-    .perTick(false)
     .fusionStartEU(536870912)
-    .EUt(134217728)
+    .EUt(33554432)
     .duration(200)
     .circuit(2)
 
@@ -239,7 +233,6 @@ GTM.particle_accelerator('first_gen_lepton_production')
     .perTick(true)
     .inputFluids('gtceu:up_quark 1', 'gtceu:sub_quark 1')
     .outputFluids('gtceu:electron 1', 'gtceu:gamma_photon 1')
-    .perTick(false)
     .fusionStartEU(8388608)
     .EUt(524288)
     .duration(500)
@@ -249,7 +242,6 @@ GTM.particle_accelerator('first_gen_lepton_production_alt')
     .perTick(true)
     .inputFluids('gtceu:down_quark 1', 'gtceu:sur_quark 1')
     .outputFluids('gtceu:positron 1', 'gtceu:gamma_photon 1')
-    .perTick(false)
     .fusionStartEU(8388608)
     .EUt(524288)
     .duration(500)
@@ -261,8 +253,7 @@ GTM.particle_accelerator('second_gen_lepton_production')
     .outputFluids('gtceu:muon 1', 'gtceu:antimuon 1')
     .chancedFluidOutput('gtceu:up_quark 1', 500, 0)
     .chancedFluidOutput('gtceu:sub_quark 1', 500, 0)
-    .perTick(false)
-    .fusionStartEU(33554432)
+    .fusionStartEU(8388608)
     .EUt(524288)
     .duration(500)
     .circuit(3)
@@ -273,8 +264,7 @@ GTM.particle_accelerator('second_gen_lepton_production_alt')
     .outputFluids('gtceu:muon 1', 'gtceu:antimuon 1')
     .chancedFluidOutput('gtceu:down_quark 1', 500, 0)
     .chancedFluidOutput('gtceu:sur_quark 1', 500, 0)
-    .perTick(false)
-    .fusionStartEU(33554432)
+    .fusionStartEU(8388608)
     .EUt(524288)
     .duration(500)
     .circuit(3)
@@ -285,9 +275,8 @@ GTM.particle_accelerator('third_gen_lepton_production')
     .outputFluids('gtceu:tau 1', 'gtceu:antitau 1')
     .chancedFluidOutput('gtceu:charm_quark 1', 500, 0)
     .chancedFluidOutput('gtceu:curse_quark 1', 500, 0)
-    .chancedFluidOutput('gtceu:glueball 1', 10, 0)
-    .perTick(false)
-    .fusionStartEU(134217728)
+    .chancedFluidOutput('gtceu:glueball 1', 100, 0)
+    .fusionStartEU(8388608)
     .EUt(524288)
     .duration(500)
     .circuit(3)
@@ -298,184 +287,320 @@ GTM.particle_accelerator('third_gen_lepton_production_alt')
     .outputFluids('gtceu:tau 1', 'gtceu:antitau 1')
     .chancedFluidOutput('gtceu:strange_quark 1', 500, 0)
     .chancedFluidOutput('gtceu:ordinary_quark 1', 500, 0)
-    .chancedFluidOutput('gtceu:glueball 1', 10, 0)
-    .perTick(false)
-    .fusionStartEU(134217728)
+    .chancedFluidOutput('gtceu:glueball 1', 100, 0)
+    .fusionStartEU(8388608)
     .EUt(524288)
     .duration(500)
     .circuit(3)
-/*
-GTM.particle_accelerator('up_sub_annihilation')
-    .perTick(true)
-    .inputFluids('gtceu:up_quark 1', 'gtceu:sub_quark 1')
-    .chancedFluidOutput('gtceu:glueball 1', 1, 0)
-    .perTick(false)
-    .fusionStartEU(8388608)
-    .EUt(524288)
-    .duration(1000)
-    .circuit(12)
-
-GTM.particle_accelerator('down_sur_annihilation')
-    .perTick(true)
-    .inputFluids('gtceu:down_quark 1', 'gtceu:sur_quark 1')
-    .chancedFluidOutput('gtceu:glueball 1', 1, 0)
-    .perTick(false)
-    .fusionStartEU(8388608)
-    .EUt(524288)
-    .duration(1000)
-    .circuit(13)
-
-GTM.particle_accelerator('strange_ordinary_annihilation')
-    .perTick(true)
-    .inputFluids('gtceu:strange_quark 1', 'gtceu:ordinary_quark 1')
-    .chancedFluidOutput('gtceu:glueball 2', 10, 0)
-    .perTick(false)
-    .fusionStartEU(8388608)
-    .EUt(524288)
-    .duration(1000)
-    .circuit(14)
-
-GTM.particle_accelerator('charm_curse_annihilation')
-    .perTick(true)
-    .inputFluids('gtceu:charm_quark 1', 'gtceu:curse_quark 1')
-    .chancedFluidOutput('gtceu:glueball 2', 10, 0)
-    .perTick(false)
-    .fusionStartEU(8388608)
-    .EUt(524288)
-    .duration(1000)
-    .circuit(15)
-
-GTM.particle_accelerator('bottom_superior_annihilation')
-    .perTick(true)
-    .inputFluids('gtceu:bottom_quark 1', 'gtceu:superior_quark 1')
-    .chancedFluidOutput('gtceu:glueball 3', 100, 0)
-    .perTick(false)
-    .fusionStartEU(8388608)
-    .EUt(524288)
-    .duration(1000)
-    .circuit(16)
-
-GTM.particle_accelerator('top_inferior_annihilation')
-    .perTick(true)
-    .inputFluids('gtceu:top_quark 1', 'gtceu:inferior_quark 1')
-    .chancedFluidOutput('gtceu:glueball 3', 100, 0)
-    .perTick(false)
-    .fusionStartEU(8388608)
-    .EUt(524288)
-    .duration(1000)
-    .circuit(17)
-*/
 
 GTM.particle_accelerator('glueball_collision_preon')
     .perTick(true)
     .inputFluids('gtceu:glueball 2')
     .outputFluids('gtceu:preon 1')
     .chancedFluidOutput('gtceu:higgs_boson 1', 100, 0)
-    .perTick(false)
-    .fusionStartEU(134217728)
+    .fusionStartEU(33554432)
     .EUt(2097152)
     .duration(1000)
     .circuit(20)
 
 GTM.fusion_accelerator('stellarite_synthesis')
+    .perTick(true)
     .inputFluids('gtceu:preon 10', 'gtceu:neutronium 1')
     .outputFluids('gtceu:stellarite 10')
-    .fusionStartEU(134217728)
+    .fusionStartEU(33554432)
     .EUt(2097152)
-    .duration(2000)
+    .duration(1000)
 
 GTM.solar_collection('pasive_neutrinos')
 .perTick(true)
 .inputFluids('gtceu:hypothermic_helium_3_plasma 1')
+.chancedFluidOutput('gtceu:gamma_photon 5', 1000, 0)
 .chancedFluidOutput('gtceu:electron_neutrino 1', 10, 0)
 .chancedFluidOutput('gtceu:muon_neutrino 1', 5, 0)
 .chancedFluidOutput('gtceu:tau_neutrino 1', 1, 0)
 .daytime(false)
 .duration(10000)
+.dimension('ad_astra:moon')
+
+GTM.lunar_collection('passive_antrinos')
+.perTick(true)
+.inputFluids('gtceu:hypothermic_helium_3_plasma 1')
+.chancedFluidOutput('gtceu:neutron 3', 100, 0)
+.chancedFluidOutput('gtceu:electron_antrino 1', 10, 0)
+.chancedFluidOutput('gtceu:muon_antrino 1', 5, 0)
+.chancedFluidOutput('gtceu:tau_antrino 1', 1, 0)
+.daytime(true)
+.duration(10000)
+.dimension('ad_astra:moon')
 
 GTM.particle_accelerator('hydrogen_ionization')
 .perTick(true)
 .inputFluids('gtceu:hydrogen 1')
 .outputFluids('gtceu:proton 1', 'gtceu:electron 1')
-.fusionStartEU(524288)
+.fusionStartEU(131072)
 .EUt(8192)
-.duration(10000)
+.duration(1000)
 
 GTM.particle_accelerator('electron-proton_degeneracy')
 .perTick(true)
 .inputFluids('gtceu:proton 1', 'gtceu:electron 1')
 .outputFluids('gtceu:neutron 1', 'gtceu:electron_neutrino 1')
-.fusionStartEU(524288)
+.fusionStartEU(131072)
 .EUt(8192)
-.duration(10000)
+.duration(1000)
 .circuit(16)
 
 GTM.particle_accelerator('positron-negatron_degeneracy')
 .perTick(true)
 .inputFluids('gtceu:negatron 1', 'gtceu:positron 1')
 .outputFluids('gtceu:nulltron 1', 'gtceu:electron_antrino 1')
-.fusionStartEU(524288)
+.fusionStartEU(131072)
 .EUt(8192)
-.duration(10000)
+.duration(1000)
 .circuit(16)
 
 GTM.particle_accelerator('pair_production')
 .perTick(true)
 .inputFluids('gtceu:gamma_photon 2')
 .outputFluids('gtceu:electron 1', 'gtceu:positron 1')
-.fusionStartEU(524288)
+.fusionStartEU(131072)
 .EUt(8192)
-.duration(10000)
+.duration(1000)
+
+GTM.particle_accelerator('pair_annihilation')
+.perTick(true)
+.inputFluids('gtceu:electron 1', 'gtceu:positron 1')
+.outputFluids('gtceu:gamma_photon 2')
+.fusionStartEU(131072)
+.EUt(8192)
+.duration(1000)
 
 GTM.particle_accelerator('proton_annihilation')
 .perTick(true)
-.inputFluids('gtceu:proton', 'gtceu:gamma_photon 1')
+.inputFluids('gtceu:proton 1', 'gtceu:gamma_photon 1')
 .outputFluids('gtceu:up_quark 2', 'gtceu:down_quark 1')
 .fusionStartEU(524288)
 .EUt(32768)
-.duration(10000)
+.duration(1000)
 
 GTM.particle_accelerator('negatron_annihilation')
 .perTick(true)
-.inputFluids('gtceu:negatron', 'gtceu:gamma_photon 1')
+.inputFluids('gtceu:negatron 1', 'gtceu:gamma_photon 1')
 .outputFluids('gtceu:sub_quark 2', 'gtceu:sur_quark 1')
 .fusionStartEU(524288)
 .EUt(32768)
-.duration(10000)
+.duration(1000)
 
 GTM.particle_accelerator('neutron_annihilation')
 .perTick(true)
-.inputFluids('gtceu:neutron', 'gtceu:gamma_photon 1')
-.outputFluids('gtceu:strange_quark 2', 'gtceu:strange_quark 1')
+.inputFluids('gtceu:neutron 1', 'gtceu:gamma_photon 1')
+.outputFluids('gtceu:down_quark 2', 'gtceu:up_quark 1')
 .fusionStartEU(524288)
-.EUt(65535)
-.duration(10000)
+.EUt(32768)
+.duration(1000)
 
 GTM.particle_accelerator('nulltron_annihilation')
 .perTick(true)
-.inputFluids('gtceu:nulltron', 'gtceu:gamma_photon 1')
-.outputFluids('gtceu:ordinary_quark 2', 'gtceu:curse_quark 1')
+.inputFluids('gtceu:nulltron 1', 'gtceu:gamma_photon 1')
+.outputFluids('gtceu:sur_quark 2', 'gtceu:sub_quark 1')
 .fusionStartEU(524288)
-.EUt(65535)
-.duration(10000)
+.EUt(32768)
+.duration(1000)
 
+const gen1to2list = [
+    { input: 'up_quark', output: 'charm_quark', boson: 'pm_boson' },
+    { input: 'down_quark', output: 'strange_quark', boson: 'pm_boson' },
+    { input: 'sub_quark', output: 'ordinary_quark', boson: 'inverse_pm_boson' },
+    { input: 'sur_quark', output: 'curse_quark', boson: 'inverse_pm_boson' },
+]
 const gen2to3list = {
 "gtceu:charm_quark": "gtceu:top_quark",
 "gtceu:curse_quark": "gtceu:inferior_quark",
 "gtceu:strange_quark": "gtceu:bottom_quark",
 "gtceu:ordinary_quark": "gtceu:superior_quark"
 }
+gen1to2list.forEach(t => {
+    GTM.particle_accelerator(`quark_gen1_to_2_${t.input}`)
+        .perTick(true)
+        .inputFluids(`gtceu:${t.input} 1`)
+        .chancedFluidInput(`gtceu:${t.boson} 1`, 2500, 0)
+        .outputFluids(`gtceu:${t.output} 1`)
+        .duration(1000)
+        .EUt(524288)
+        .fusionStartEU(33554432)
+})
 
 Object.entries(gen2to3list).forEach(([gen2, gen3]) => {
-const recipeID1 = gen2.replace('_quark', '')
-GTM.particle_accelerator(`${recipeID1}-gamma_ascension`)
+const recipeID = gen2.replace('_quark', '')
+GTM.particle_accelerator(`${recipeID}-gamma_ascension`)
 .perTick(true)
 .inputFluids(`${gen2} 1`, 'gtceu:gamma_photon 1')
 .chancedFluidOutput(`${gen3} 1`, 2500, 0)
 .fusionStartEU(2097152)
 .EUt(131072)
-.duration(10000)
+.duration(1000)
 })
+
+const neutrino_to_lepton = {
+    'gtceu:electron_neutrino': 'gtceu:electron',
+    'gtceu:muon_neutrino': 'gtceu:muon',
+    'gtceu:tau_neutrino': 'gtceu:tau',
+    'gtceu:electron_antrino': 'gtceu:positron',
+    'gtceu:muon_antrino': 'gtceu:antimuon',
+    'gtceu:tau_antrino': 'gtceu:antitau',
+}
+Object.entries(neutrino_to_lepton).forEach(([neutrino, lipton]) => {
+const recipeID = lipton.replace('gtceu:', '') 
+let EUt = 131072
+if (neutrino === 'gtceu:tau_neutrino' || neutrino === 'gtceu:tau_antrino') { EUt = EUt * 16}  else 
+if (neutrino === 'gtceu:muon_neutrino' || neutrino === 'gtceu:muon_antrino') { EUt = EUt * 4 }
+GTM.particle_accelerator(`inverse_${recipeID}_compton_reaction`)
+.perTick(true)
+.inputFluids(`${neutrino} 1`, (neutrino === 'gtceu:tau_neutrino' || neutrino === 'gtceu:tau_antrino') ? 'gtceu:gamma_photon 2' : 'gtceu:gamma_photon 1')
+.outputFluids(`${lipton} 1`)
+.EUt(EUt)
+.fusionStartEU(EUt * 4)
+.duration(1000)
+.circuit(6)
+
+GTM.particle_accelerator(`inverse_${recipeID}_compton_reaction_bosonated`)
+    .perTick(true)
+    .inputFluids(`${neutrino} 1`, 'gtceu:gamma_photon 1')
+    .chancedFluidInput('gtceu:catalytic_boson 1', 500, 0)
+    .outputFluids(`${lipton} 2`)
+    .EUt(EUt)
+    .fusionStartEU(EUt * 6)
+    .duration(1000)
+    .circuit(7)
+
+})
+
+GTM.particle_accelerator('higgs_muon_decay')
+    .perTick(true)
+    .inputFluids('gtceu:higgs_boson 1', 'gtceu:muon_neutrino 1')
+    .outputFluids('gtceu:m_boson 1', 'gtceu:catalytic_boson 1', 'gtceu:muon 1')
+    .fusionStartEU(33554432)
+    .EUt(2097152)
+    .duration(1000)
+
+GTM.particle_accelerator('higgs_antimuon_decay')
+    .perTick(true)
+    .inputFluids('gtceu:higgs_boson 1', 'gtceu:muon_antrino 1')
+    .outputFluids('gtceu:inverse_m_boson 1', 'gtceu:catalytic_boson 1', 'gtceu:antimuon 1')
+    .fusionStartEU(33554432)
+    .EUt(2097152)
+    .duration(1000)
+
+GTM.chemical_reactor('m_boson_polarity_flip')
+    .notConsumableFluid('gtceu:cryosporsite 1296')
+    .perTick(true)
+    .inputFluids('gtceu:m_boson 1')
+    .outputFluids('gtceu:inverse_m_boson 1')
+    .EUt(2048)
+    .duration(200)
+
+GTM.chemical_reactor('inverse_m_boson_polarity_flip')
+    .notConsumableFluid('gtceu:cryosporsite 1296')
+    .perTick(true)
+    .inputFluids('gtceu:inverse_m_boson 1')
+    .outputFluids('gtceu:m_boson 1')
+    .EUt(2048)
+    .duration(200)
+
+const quarkDoublets = {
+    'gtceu:up_quark': 'gtceu:down_quark',
+    'gtceu:sur_quark': 'gtceu:sub_quark',
+    'gtceu:charm_quark': 'gtceu:strange_quark',
+    'gtceu:ordinary_quark': 'gtceu:curse_quark',
+    'gtceu:top_quark': 'gtceu:bottom_quark',
+    'gtceu:superior_quark': 'gtceu:inferior_quark'
+}
+
+Object.entries(quarkDoublets).forEach(([top, bottom]) => {
+    const topID = top.replace('gtceu:', '').replace('_quark', '')
+    const bottomID = bottom.replace('gtceu:', '').replace('_quark', '')
+
+    GTM.particle_accelerator(`m_boson_${topID}_to_${bottomID}`)
+        .perTick(true)
+        .inputFluids(`${top} 1`)
+        .chancedFluidInput('gtceu:m_boson 1', 500, 0)
+        .outputFluids(`${bottom} 1`, 'gtceu:tau_antrino 1')
+        .fusionStartEU(8388608)
+        .EUt(524288)
+        .duration(1000)
+
+    GTM.particle_accelerator(`inverse_m_boson_${bottomID}_to_${topID}`)
+        .perTick(true)
+        .inputFluids(`${bottom} 1`)
+        .chancedFluidInput('gtceu:inverse_m_boson 1', 500, 0)
+        .outputFluids(`${top} 1`, 'gtceu:tau_neutrino 1')
+        .fusionStartEU(8388608)
+        .EUt(524288)
+        .duration(1000)
+})
+
+GTM.particle_accelerator('pm_boson_electron')
+    .perTick(true)
+    .inputFluids('gtceu:electron_neutrino 1', 'gtceu:electron_antrino 1')
+    .chancedFluidOutput('gtceu:pm_boson 1', 500, 0)
+    .chancedFluidOutput('gtceu:inverse_pm_boson 1', 500, 0)
+    .fusionStartEU(8388608)
+    .EUt(524288)
+    .duration(1000)
+
+GTM.particle_accelerator('pm_boson_muon')
+    .perTick(true)
+    .inputFluids('gtceu:muon_neutrino 1', 'gtceu:muon_antrino 1')
+    .chancedFluidOutput('gtceu:pm_boson 1', 2000, 0)
+    .chancedFluidOutput('gtceu:inverse_pm_boson 1', 2000, 0)
+    .fusionStartEU(8388608)
+    .EUt(524288)
+    .duration(1000)
+
+GTM.particle_accelerator('pm_boson_tau')
+    .perTick(true)
+    .inputFluids('gtceu:tau_neutrino 1', 'gtceu:tau_antrino 1')
+    .chancedFluidOutput('gtceu:pm_boson 1', 4000, 0)
+    .chancedFluidOutput('gtceu:inverse_pm_boson 1', 4000, 0)
+    .chancedFluidOutput('gtceu:m_boson 1', 50, 0)
+    .chancedFluidOutput('gtceu:inverse_m_boson 1', 50, 0)
+    .fusionStartEU(8388608)
+    .EUt(524288)
+    .duration(1000)
+
+GTM.fusion_accelerator('lepton-dense_complex_synthesis')
+    .perTick(true)
+    .inputFluids('gtceu:tau 2', 'gtceu:muon 6', 'gtceu:electron 3', 'gtceu:positron 3')
+    .outputFluids('gtceu:lepton-dense_complex 16')
+    .fusionStartEU(8388608)
+    .EUt(524288)
+    .duration(1000)
+
+GTM.fusion_accelerator('antilepton-dense_complex_synthesis')
+    .perTick(true)
+    .inputFluids('gtceu:antitau 2', 'gtceu:antimuon 6', 'gtceu:positron 3', 'gtceu:electron 3')
+    .outputFluids('gtceu:antilepton-dense_complex 16')
+    .fusionStartEU(8388608)
+    .EUt(524288)
+    .duration(1000)
+
+
+GTM.fusion_accelerator('neutronium_synthesis')
+    .perTick(true)
+    .inputFluids('gtceu:neutron 150')
+    .outputFluids('gtceu:neutronium 10')
+    .fusionStartEU(8388608)
+    .EUt(524288)
+    .duration(1000)
+
+GTM.fusion_accelerator('ephemeral_naquadite_synthesis')
+    .perTick(true)
+    .inputFluids('gtceu:transuranic_naquadrium_alloy 8', 'gtceu:darmstadtium 2', 'gtceu:lepton-dense_complex 1', 'gtceu:antilepton-dense_complex 1')
+    .outputFluids('gtceu:ephemeral_naquadite 12')
+    .fusionStartEU(8388608)
+    .EUt(524288)
+    .duration(1000)
+
 //rocketry part 12059710125091251920905190725
 
 //tier 3
@@ -510,12 +635,6 @@ GTM.space_factory('tier_3_rocket')
 .duration(1000)
 .EUt(32768)
 
-GTM.chemical_bath('tier_3_rocket_fueling')
-.itemInputs('ad_astra:tier_3_rocket')
-.inputFluids('gtceu:cryostatic-antilithide 3000')
-.itemOutputs(Item.of('ad_astra:tier_3_rocket', '{BotariumData:{StoredFluids:[{Amount:3000L,Fluid:"gtceu:cryostatic-antilithide"}]}}'))
-.duration(100)
-.EUt(512)
 
 //tier 4
 GTM.forming_press('tier_4_rocket_plating')
@@ -549,12 +668,6 @@ GTM.space_factory('tier_4_rocket')
 .duration(1000)
 .EUt(131072)
 
-GTM.chemical_bath('tier_4_rocket_fueling')
-.itemInputs('ad_astra:tier_4_rocket')
-.inputFluids('gtceu:cryostatic-antilithide 3000')
-.itemOutputs(Item.of('ad_astra:tier_4_rocket', '{BotariumData:{StoredFluids:[{Amount:3000L,Fluid:"gtceu:cryostatic-antilithide"}]}}'))
-.duration(100)
-.EUt(512)
 
 GTM.chemical_vat('cryostatic_antilithide_synthesis')
 .inputFluids('gtceu:resonance_plasma 4000', 'gtceu:cryothetic_zero 50')
@@ -571,41 +684,273 @@ GTM.assembly_line('transcendentine-polydimensional_accelerator')
 .itemInputs('gtceu:luv_fusion_reactor', '32x #gtceu:circuits/uv', '64x gtceu:auralloy-omega_over_transcendentine_plate', '64x gtceu:auralloy-omega_over_transcendentine_plate', '8x gtceu:superconducting_coil', '32x gtceu:cryosporsite_rod')
 .inputFluids('gtceu:polybenzimidazole 32000', 'gtceu:purified_draconium 24000')
 .itemOutputs('gtceu:transcendental_polydimensional_accelerator')
-.stationResearch(b => b.researchStack('gtceu:auralloy-omega_over_transcendentine_casing').EUt(va.zpm).CWUt(48))
+.stationResearch(b => b.researchStack('gtceu:auralloy-omega_over_transcendentine_casing').EUt(va.luv).CWUt(48))
 .duration(4000)
 .EUt(131072)
 
+GTM.compressor('enriched_naquadrium_boride_to_rod')
+.itemInputs('gtceu:enriched_naquadrium_boride_dust')
+.itemInputs('2x gtceu:enriched_naquadrium_boride_rod')
+.duration(10)
+.EUt(8192)
 
+GTM.macerator('draconium_to_dust')
+.itemInputs('draconicevolution:draconium_ingot')
+.itemOutputs('draconicevolution:draconium_dust')
+.duration(40)
+.EUt(128)
 
+GTM.cyclotron('draconium_purification')
+    .itemInputs('10x draconicevolution:draconium_dust')
+    .inputFluids('gtceu:carborane_acid 144')
+    .itemOutputs('7x gtceu:purified_draconium_dust', 'gtceu:titanium_dust', 'gtceu:rhenium_dust', 'gtceu:naquadah_dust')
+    .duration(200)
+    .EUt(131072)
 
+GTM.macerator('dragon_head_crushing')
+    .itemInputs('dragon_head')
+    .itemOutputs('16x irons_spellbooks:dragonskin', 'skeleton_skull')
+    .duration(40)
+    .EUt(128)
 
+GTM.macerator('dragon_egg_crushing')
+    .itemInputs('dragon_egg')
+    .itemOutputs('24x irons_spellbooks:dragonskin', 'draconicevolution:dragon_heart')
+    .duration(40)
+    .EUt(128)
 
+GTM.macerator('dragon_skin_crushing')
+    .itemInputs('irons_spellbooks:dragonskin')
+    .itemOutputs('16x quark:dragon_scale')
+    .duration(40)
+    .EUt(128)
 
+GTM.fluid_solidifier('liquid_to_crystal_dust')
+    .inputFluids('gtceu:crystal_methamphetamine 144')
+    .notConsumable('gtceu:ball_casting_mold')
+    .itemOutputs('gtceu:crystal_methamphetamine_dust')
+    .duration(40)
+    .EUt(128)
+// Biomechanical Age starts here (pleaase help me)
 
+GTM.star_forge('flesh_alloy_casing')
+.itemInputs('6x gtceu:tungsten_steel_frame', '36x gtceu:flesh_alloy_plate')
+.inputFluids('gtceu:artificial_blood 100', 'gtceu:refined_sentience 5')
+.itemOutputs('6x gtceu:flesh_alloy_casing')
+.duration(100)
+.cleanroom(CleanroomType.STERILE_CLEANROOM)
+.EUt(32768)
 
+GTM.cyclotron('sentience_extraction')
+.inputFluids('gtceu:martian_bacterial_sludge 100000')
+.outputFluids('gtceu:raw_growth_medium 24000', 'gtceu:mutagen 10000', 'gtceu:refined_sentience 1000')
+.itemOutputs('45x gtceu:organism_amalgam', '20x gtceu:collagen_dust')
+.duration(1000)
+.cleanroom(CleanroomType.STERILE_CLEANROOM)
+.EUt(524288)
 
+const bioPlastics = [
+    'polycaprolactam',
+    'polyethylene',
+    'styrene_butadiene_rubber',
+    'epoxy',
+    'polyvinyl_chloride',
+    'polytetrafluoroethylene',
+    'rubber',
+    'polyphenylene_sulfide',
+    'polybenzimidazole',
+    'reinforced_epoxy_resin',
+    'silicone_rubber',
+    'torlon',
+    'polyether_ether_ketone'
+]
 
+const noPipes = new Set(['polycaprolactam', 'epoxy', 'polyphenylene_sulfide', 'reinforced_epoxy_resin', 'styrene_butadiene_rubber', 'polyvinyl_chloride', 'rubber', 'silicone_rubber'])
+const noRods = new Set(['polycaprolactam', 'polyethylene', 'epoxy', 'reinforced_epoxy_resin', 'polybenzimidazole'])
+const noFoils = new Set(['epoxy', 'reinforced_epoxy_resin'])
 
+const pipeParts = [
+    ['large_fluid_pipe',  6,  1, 'large_pipe_extruder_mold'],
+    ['small_fluid_pipe',  1,  1, 'small_pipe_extruder_mold'],
+    ['tiny_fluid_pipe',   1,  2, 'tiny_pipe_extruder_mold'],
+    ['foil',              1,  4, 'foil_extruder_mold'],
+    ['huge_fluid_pipe',  12,  1, 'huge_pipe_extruder_mold'],
+    ['block',             9,  1, 'block_extruder_mold'],
+    ['normal_fluid_pipe', 3,  1, 'normal_pipe_extruder_mold'],
+    ['rod',               1,  2, 'rod_extruder_mold'],
+    ['plate',             1,  1, 'plate_extruder_mold'],
+]
 
+const pipeParts_names = new Set(['large_fluid_pipe', 'small_fluid_pipe', 'tiny_fluid_pipe', 'huge_fluid_pipe', 'normal_fluid_pipe'])
 
+bioPlastics.forEach(material => {
+    pipeParts.forEach(([part, inputCount, outputCount, mold]) => {
+        if (noPipes.has(material) && pipeParts_names.has(part)) return
+        if (noFoils.has(material) && part === 'foil') return
+        if (noRods.has(material) && part === 'rod') return
 
+        const recipe = GTM.biomechanical_extruder(`bio_plastic_${material}_${part}`)
+            .itemInputs(`${inputCount}x gtceu:${material}_dust`)
+            .itemOutputs(`${outputCount}x gtceu:${material}_${part}`)
+            .perTick(true)
+            .inputFluids('gtceu:artificial_blood 10')
+            .duration(10)
+            .EUt(512)
+            .cleanroom(CleanroomType.STERILE_CLEANROOM)
 
+        if (mold) recipe.notConsumable(`gtceu:${mold}`)
+    })
+})
 
+//pick your poison, pick your crime
+const greengobberfoo = [
+    ['player',  12],
+    ['dragon',   8],
+    ['piglin',   5],
+    ['creeper',  3],
+    ['zombie',   1],
+]
 
+greengobberfoo.forEach(([mob, thefitnessgrampacertestisamultistageaerobiccapacitytestthatprogressivelygetsmoredifficultasitcontinues]) => {
+    GTM.biomechanical_recycler(`skull_to_neurons_${mob}`)
+        .itemInputs(`1x ${mob}_head`, `${thefitnessgrampacertestisamultistageaerobiccapacitytestthatprogressivelygetsmoredifficultasitcontinues}x gtceu:petri_dish`)
+        .itemOutputs(`${thefitnessgrampacertestisamultistageaerobiccapacitytestthatprogressivelygetsmoredifficultasitcontinues}x gtceu:neuron_dish`, '1x skeleton_skull')
+        .inputFluids(`gtceu:artificial_blood ${10*thefitnessgrampacertestisamultistageaerobiccapacitytestthatprogressivelygetsmoredifficultasitcontinues}`)
+        .duration(200)
+        .EUt(131072)
+        .cleanroom(CleanroomType.STERILE_CLEANROOM)
+})
 
+GTM.biomechanical_imbuer('sentience_to_neuron')
+.itemInputs('gtceu:neuron_dish')
+.inputFluids('gtceu:refined_sentience 10')
+.itemOutputs('gtceu:sentient_neuron_dish')
+.perTick(true)
+.inputFluids('gtceu:artificial_blood 25')
+.EUt(131072)
+.duration(200)
+.cleanroom(CleanroomType.STERILE_CLEANROOM)
 
+GTM.organism_incubation_chamber('sentience_to_neuron')
+.itemInputs('16x gtceu:neuron_dish')
+.inputFluids('gtceu:refined_sentience 120')
+.itemOutputs('16x gtceu:sentient_neuron_dish')
+.perTick(true)
+.inputFluids('gtceu:artificial_blood 100')
+.EUt(131072)
+.duration(2000)
+.cleanroom(CleanroomType.STERILE_CLEANROOM)
 
+GTM.biomechanical_mixer('sentient_alloy_incubation')
+.itemInputs('30x gtceu:flesh_alloy_dust', '20x gtceu:iridium_dust')
+.inputFluids('gtceu:refined_sentience 1440')
+.itemOutputs('60x gtceu:sentient_alloy_dust')
+.perTick(true)
+.inputFluids('gtceu:artificial_blood 100')
+.EUt(524288)
+.duration(2000)
+.cleanroom(CleanroomType.STERILE_CLEANROOM)
 
+GTM.star_forge('sentient_smd_resistor')
+.itemInputs('gtceu:flesh_alloy_plate', '4x gtceu:triconite_foil', 'gtceu:sentient_alloy_plate')
+.inputFluids('gtceu:artificial_blood 1000', 'gtceu:refined_sentience 100', 'gtceu:polyether_ether_ketone 144', 'gtceu:crystal_methamphetamine 36')
+.itemOutputs('32x gtceu:sentient_smd_resistor')
+.cleanroom(CleanroomType.STERILE_CLEANROOM)
+.duration(200)
+.EUt(8388608)
 
+GTM.star_forge('sentient_smd_diode')
+.itemInputs('gtceu:indium_gallium_phosphide_dust', 'gtceu:sentient_neuron_dish', '16x gtceu:stem_cells')
+.inputFluids('gtceu:artificial_blood 1000', 'gtceu:refined_sentience 100', 'gtceu:polyether_ether_ketone 144', 'gtceu:crystal_methamphetamine 36')
+.itemOutputs('64x gtceu:sentient_smd_diode', 'gtceu:petri_dish')
+.cleanroom(CleanroomType.STERILE_CLEANROOM)
+.duration(800)
+.EUt(8388608)
 
+GTM.star_forge('sentient_smd_transistor')
+.itemInputs('gtceu:sentient_alloy_plate',  'gtceu:sentient_neuron_dish', 'gtceu:flesh_alloy_plate')
+.inputFluids('gtceu:artificial_blood 1000', 'gtceu:refined_sentience 100', 'gtceu:polyether_ether_ketone 144', 'gtceu:crystal_methamphetamine 36')
+.itemOutputs('32x gtceu:sentient_smd_transistor')
+.cleanroom(CleanroomType.STERILE_CLEANROOM)
+.duration(200)
+.EUt(8388608)
 
+GTM.star_forge('sentient_smd_capacitor')
+.itemInputs('gtceu:sentient_alloy_plate', '2x gtceu:triconite_foil', '16x gtceu:polyether_ether_ketone_foil', '2x gtceu:quantum_eye', 'gtceu:iv_field_generator', 'gtceu:flesh_alloy_plate')
+.inputFluids('gtceu:artificial_blood 1000', 'gtceu:refined_sentience 100', 'gtceu:polyether_ether_ketone 144', 'gtceu:crystal_methamphetamine 36')
+.itemOutputs('32x gtceu:sentient_smd_capacitor')
+.cleanroom(CleanroomType.STERILE_CLEANROOM)
+.duration(200)
+.EUt(8388608)
 
+GTM.star_forge('sentient_smd_inductor')
+.itemInputs('2x gtceu:flesh_alloy_plate', 'gtceu:titanium_fluid_cell', '2x gtceu:sentient_alloy_plate', '2x gtceu:sentient_neuron_dish')
+.inputFluids('gtceu:artificial_blood 1000', 'gtceu:cryosporsite 288','gtceu:refined_sentience 100', 'gtceu:polyether_ether_ketone 144', 'gtceu:crystal_methamphetamine 36')
+.itemOutputs('32x gtceu:sentient_smd_inductor')
+.cleanroom(CleanroomType.STERILE_CLEANROOM)
+.duration(200)
+.EUt(8388608)
 
+GTM.star_forge('sentient_circuit_board')
+.itemInputs('16x gtceu:wetware_circuit_board', '4x gtceu:sentient_neuron_dish', 'gtceu:uv_electric_pump', 'gtceu:zpm_sensor', '#gtceu:circuits/zpm', '16x gtceu:astazine-e_foil')
+.inputFluids('gtceu:sterilized_growth_medium 6000', 'gtceu:mutagen 2000', 'gtceu:refined_sentience 1000', 'gtceu:crystal_methamphetamine 72')
+.itemOutputs('16x gtceu:sentient_circuit_board', '4x gtceu:petri_dish')
+.perTick(true)
+.inputFluids('gtceu:artificial_blood 10')
+.cleanroom(CleanroomType.STERILE_CLEANROOM)
+.duration(1200)
+.EUt(8388608)
 
+GTM.biomechanical_imbuer('sentience_printed_circuit_board')
+.itemInputs('gtceu:sentient_circuit_board', '48x gtceu:axiom-re_foil')
+.inputFluids('gtceu:mutagen 200')
+.itemOutputs('gtceu:sentience_printed_circuit_board')
+.outputFluids('gtceu:refined_sentience 10')
+.perTick(true)
+.inputFluids('gtceu:artificial_blood 10')
+.cleanroom(CleanroomType.STERILE_CLEANROOM)
+.duration(1000)
+.EUt(2097152)
 
+GTM.star_forge('biomechanical_factory')
+.itemInputs('gtceu:uv_biomechanical_mixer', 'gtceu:uv_biomechanical_recycler', 'gtceu:uv_biomechanical_extruder', 'gtceu:uv_biomechanical_imbuer', '16x #gtceu:circuits/uhv', '64x gtceu:double_flesh_alloy_plate', '16x gtceu:dense_stellarite_plate')
+.inputFluids('gtceu:refined_sentience 16000', 'gtceu:artificial_blood 10000', 'gtceu:mutagen 8000', 'gtceu:polyether_ether_ketone 6000', 'gtceu:crystal_methamphetamine 4000')
+.itemOutputs('gtceu:biomechanical_factory')
+.cleanroom(CleanroomType.STERILE_CLEANROOM)
+.duration(1000)
+.EUt(8388608)
 
+GTM.organism_incubation_chamber('dragon_incubation')
+.notConsumable('dragon_egg')
+.itemInputs('256x gtceu:stem_cells')
+.inputFluids('gtceu:sterilized_growth_medium 4000', 'gtceu:refined_sentience 200')
+.itemOutputs('dragon_egg', 'draconicevolution:dragon_heart')
+.chancedOutput('dragon_egg', 2500, 0)
+.chancedOutput('draconicevolution:dragon_heart', 2500, 0)
+.chancedOutput('dragon_egg', 500, 0)
+.chancedOutput('draconicevolution:dragon_heart', 500, 0)
+.cleanroom(CleanroomType.STERILE_CLEANROOM)
+.duration(5000)
+.EUt(2097152)
 
+GTM.star_forge('sentience_processing_unit')
+.itemInputs('gtceu:sentience_printed_circuit_board', '64x gtceu:stem_cells', '8x gtceu:polyether_ether_ketone_small_fluid_pipe', '8x gtceu:tainted_titanium_plate', '24x gtceu:silicone_rubber_foil', '12x gtceu:hssd_bolt')
+.inputFluids('gtceu:sterilized_growth_medium 1000', 'gtceu:refined_sentience 100', 'gtceu:crystal_methamphetamine 72')
+.itemOutputs('gtceu:sentience_processing_unit')
+.cleanroom(CleanroomType.STERILE_CLEANROOM)
+.duration(5000)
+.EUt(8388608)
 
+GTM.organism_incubation_chamber('biological_boule')
+.notConsumable('gtceu:neutronium_boule')
+.itemInputs('16x gtceu:flesh_alloy_dust', '4x gtceu:sentient_alloy_dust', '4x gtceu:neuron_dish')
+.itemOutputs('gtceu:biological_boule', '3x gtceu:petri_dish')
+.chancedOutputLogic('or')
+.chancedOutput('gtceu:petri_dish', 7500, 0)
+.chancedOutput('gtceu:neuron_dish', 2500, 0)
+.cleanroom(CleanroomType.STERILE_CLEANROOM)
+.duration(4000)
+.EUt(8388608)
 
 
 // END of late game 

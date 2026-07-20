@@ -10,7 +10,7 @@ event.create('electric_ore_processing_plant')
         .setEUIO('in')
         .setMaxIOSize(1, 6, 1, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW , FillDirection.LEFT_TO_RIGHT)
-		.setSound(GTSoundEntries.FURNACE);
+		.setSound(GTSoundEntries.FURNACE)
 })
 GTCEuStartupEvents.registry('gtceu:machine', event => {
     event.create('ore_processing_factory', 'multiblock')
@@ -65,5 +65,5 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
     .where('B', Predicates.blocks('gtceu:stable_machine_casing'))
     .where(' ', Predicates.any())
     .build())
-    .workableCasingModel('gtceu:block/casings/solid/machine_casing_robust_tungstensteel', 'kubejs:block/multiblock/primitive_blast_furnace');
+    .workableCasingModel('gtceu:block/casings/solid/machine_casing_robust_tungstensteel', 'kubejs:block/multiblock/primitive_blast_furnace')
 })

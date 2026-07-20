@@ -29,139 +29,299 @@
 			dependencies: ["77813CB4026F0C88"]
 			id: "27E0B77DD8F5790E"
 			tasks: [{
-				id: "4CCB09D615375B81"
-				item: "kubejs:lv_universal_circuit"
+				id: "1BBA6D0E19EB08B7"
+				item: "extendedfeatures:lv_universal_circuit"
 				type: "item"
 			}]
 			x: 0.0d
 			y: -2.0d
 		}
 		{
+			dependencies: ["3A8C2C4178E31D86"]
 			id: "73FA9C3BA9F77C54"
-			subtitle: "what if Nexus.. but c u b e"
+			subtitle: "what if Nexus Steel.. but c u b e"
 			tasks: [{
 				id: "508C8ADD6385DFF6"
 				item: "gtceu:lv_machine_hull"
 				type: "item"
 			}]
+			x: 2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"31761652BF80FB59"
+				"6A67743FA727794F"
+				"5C4B8AB146FC7BAD"
+			]
+			id: "44FB2FBBFB649E40"
+			tasks: [{
+				id: "4D86B951AF2E7455"
+				item: "gtceu:echolumium_ingot"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 10.0d
+		}
+		{
+			id: "56C26F1C6FC99267"
+			tasks: [{
+				id: "03DD7A6A41D4F460"
+				item: "gtceu:good_electronic_circuit"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 10.0d
+		}
+		{
+			dependencies: [
+				"5C4B8AB146FC7BAD"
+				"0C820FC3F0D940DA"
+				"67278F0AF2F57A93"
+			]
+			id: "31761652BF80FB59"
+			tasks: [{
+				id: "403C5C24ADA3A69F"
+				item: "gtceu:echo_imbuement_chamber"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 8.5d
+		}
+		{
+			dependencies: [
+				"6D48D9683539D539"
+				"5D0E141D787F05BC"
+				"7A5930218FF70FDE"
+				"6AB92D8EF4F6B766"
+				"68E4164A4494A063"
+			]
+			hide_dependent_lines: true
+			id: "6A67743FA727794F"
+			tasks: [{
+				id: "67D23C4DAD8EC279"
+				item: "gtceu:echoite_bucket"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 8.5d
+		}
+		{
+			id: "5C4B8AB146FC7BAD"
+			tasks: [{
+				id: "5AF56B3FCAFF7509"
+				item: "gtceu:aluminium_ingot"
+				type: "item"
+			}]
 			x: 0.0d
-			y: 4.0d
+			y: 8.5d
 		}
 		{
-			dependencies: ["73FA9C3BA9F77C54"]
-			id: "04091C5B37FC08F0"
-			subtitle: "Electric Smelter go brr"
+			dependencies: ["0D32B8536CC3B492"]
+			id: "68E4164A4494A063"
 			tasks: [{
-				id: "3904C0A22CE7125C"
-				item: "gtceu:lv_electric_furnace"
+				id: "647EE0FF4EE4EC1A"
+				item: "gtceu:echo_dust"
 				type: "item"
 			}]
-			x: 3.0d
-			y: 4.0d
+			x: 5.0d
+			y: 8.5d
 		}
 		{
-			dependencies: ["73FA9C3BA9F77C54"]
-			id: "71CB2D83D39B8A8E"
-			subtitle: "Make it double and give it trouble"
+			dependencies: [
+				"1667DD8E7FB47EE3"
+				"12611F5980739BE7"
+			]
+			dependency_requirement: "one_completed"
+			id: "6D48D9683539D539"
 			tasks: [{
-				id: "058F4BFA16B4140A"
-				item: "gtceu:lv_alloy_smelter"
+				id: "4F298F51CD827158"
+				item: "gtceu:chromium_dust"
 				type: "item"
 			}]
-			x: 3.0d
-			y: 5.0d
+			x: 6.0d
+			y: 7.5d
 		}
 		{
-			dependencies: ["73FA9C3BA9F77C54"]
-			id: "7234923E7B34CA8E"
-			subtitle: "Who needs a blast furnace?"
+			dependencies: ["1BE3930951A17C8A"]
+			id: "5D0E141D787F05BC"
 			tasks: [{
-				id: "12BDE214D5942046"
-				item: "gtceu:lv_arc_furnace"
+				id: "0DF23C0E5D5AB13E"
+				item: "gtceu:nickel_dust"
 				type: "item"
 			}]
-			x: 2.5d
-			y: 6.0d
+			x: 6.0d
+			y: 9.5d
 		}
 		{
-			dependencies: ["73FA9C3BA9F77C54"]
-			id: "297E0180405DE05B"
+			dependencies: ["1162767307F078C6"]
+			id: "6AB92D8EF4F6B766"
 			tasks: [{
-				id: "38AE755E0C89F7F1"
-				item: "gtceu:lv_electric_furnace"
+				id: "09004C154E03387C"
+				item: "gtceu:tantalum_dust"
 				type: "item"
 			}]
-			x: -3.0d
-			y: 4.0d
+			x: 7.0d
+			y: 10.0d
 		}
 		{
-			dependencies: ["73FA9C3BA9F77C54"]
-			id: "25D290B436ECC111"
+			dependencies: ["405E6C37CE552C7D"]
+			id: "7A5930218FF70FDE"
 			tasks: [{
-				id: "0CE58B47A71F6E6E"
-				item: "gtceu:lv_electric_furnace"
+				id: "2A4B8C9908D70A85"
+				item: "gtceu:nexus_dust"
 				type: "item"
 			}]
-			x: -3.0d
-			y: 5.0d
+			x: 7.0d
+			y: 7.0d
 		}
 		{
-			dependencies: ["73FA9C3BA9F77C54"]
-			id: "201188B294BE13DA"
+			dependencies: [
+				"0636985F9BE79C9D"
+				"35A66DEF91567186"
+			]
+			id: "0D32B8536CC3B492"
 			tasks: [{
-				id: "31C14FE28B7E28F4"
-				item: "gtceu:lv_electric_furnace"
+				id: "4B642BECC93F6B29"
+				item: "gtceu:sculk_dust"
 				type: "item"
 			}]
-			x: -2.5d
-			y: 6.0d
+			x: 7.0d
+			y: 8.5d
 		}
 		{
-			dependencies: ["73FA9C3BA9F77C54"]
-			id: "5CF0911A3B343116"
+			dependencies: ["698F868F018DD2FC"]
+			id: "35A66DEF91567186"
 			tasks: [{
-				id: "52B9265DAD7F2A1C"
-				item: "gtceu:lv_electric_furnace"
+				id: "369036FC58FC0B09"
+				item: "gtceu:echo_shard_dust"
 				type: "item"
 			}]
-			x: -1.5d
+			x: 9.0d
+			y: 8.5d
+		}
+		{
+			dependencies: [
+				"68568645655319BD"
+				"413BAE7652F9B2ED"
+			]
+			id: "698F868F018DD2FC"
+			tasks: [{
+				id: "3104B3AE8BC8086A"
+				item: "minecraft:echo_shard"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 7.5d
+		}
+		{
+			id: "413BAE7652F9B2ED"
+			optional: true
+			subtitle: "Natural source of Echolumium :D (you need a lot of Allurite for this shit)"
+			tasks: [{
+				id: "5DBDBDCA3A8A8D6B"
+				item: "galosphere:allurite_shard"
+				type: "item"
+			}]
+			x: 9.5d
 			y: 6.5d
 		}
 		{
-			dependencies: ["73FA9C3BA9F77C54"]
-			id: "3AAB7DCC8C07B86D"
-			subtitle: "The Greatest Engineer that has ever lived?"
+			dependencies: ["3DC5BCE4306EA810"]
+			id: "68568645655319BD"
 			tasks: [{
-				id: "60EE7A1BE3BC261A"
+				amount: 1000L
+				fluid: "cofh_core:experience"
+				id: "2C3C82C33D2FF04C"
+				type: "fluid"
+			}]
+			x: 10.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5E0DC8D87CBA06E9"]
+			id: "3DC5BCE4306EA810"
+			tasks: [{
+				id: "2209A9BBFADC7BDF"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:spawn_eggs"
+					}
+				}
+				type: "item"
+			}]
+			title: "Spawn Eggs"
+			x: 10.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["73FA9C3BA9F77C54"]
+			id: "5E0DC8D87CBA06E9"
+			tasks: [{
+				id: "4BA1EB984CD78014"
 				item: "gtceu:lv_assembler"
 				type: "item"
 			}]
-			x: 1.5d
+			x: 9.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["73FA9C3BA9F77C54"]
+			id: "0636985F9BE79C9D"
+			tasks: [{
+				id: "71024964E13DBE88"
+				item: "gtceu:lv_electrolyzer"
+				type: "item"
+			}]
+			x: 8.0d
 			y: 6.5d
 		}
 		{
 			dependencies: ["73FA9C3BA9F77C54"]
-			id: "2A3A5CA7CE8A9FC5"
-			subtitle: "mhmm fuzzy"
+			id: "1667DD8E7FB47EE3"
+			subtitle: "Weeeeeeeeeeeeeeeeeeee"
 			tasks: [{
-				id: "37C48A8884D89C60"
-				item: "gtceu:lv_chemical_reactor"
-				type: "item"
-			}]
-			x: -0.5d
-			y: 7.0d
-		}
-		{
-			dependencies: ["73FA9C3BA9F77C54"]
-			id: "3FD69BEB24943F88"
-			subtitle: "Turning your shit into many"
-			tasks: [{
-				id: "5CBB5C876CFF3BA1"
+				id: "2AF1D3334BD7F897"
 				item: "gtceu:lv_centrifuge"
 				type: "item"
 			}]
-			x: 0.5d
+			x: 5.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["73FA9C3BA9F77C54"]
+			id: "12611F5980739BE7"
+			subtitle: "Basically resource shower"
+			tasks: [{
+				id: "44BB2A4AB84B48CE"
+				item: "gtceu:lv_ore_washer"
+				type: "item"
+			}]
+			x: 4.0d
 			y: 7.0d
+		}
+		{
+			id: "67278F0AF2F57A93"
+			subtitle: "Erects liquids into shapes (pause)"
+			tasks: [{
+				id: "143EA4622687D9C1"
+				item: "gtceu:lv_fluid_solidifier"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 5.5d
+		}
+		{
+			id: "0C820FC3F0D940DA"
+			tasks: [{
+				id: "30EEE14CA1CBFDA4"
+				item: "gtceu:wizarding_steel_ingot"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 5.5d
 		}
 	]
 	title: "LV - Low Voltage"

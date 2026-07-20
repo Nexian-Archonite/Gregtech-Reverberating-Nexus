@@ -1,6 +1,6 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 event.create('interstellar_miner')
-.category('MAYONNAISEONAESCALATOR_ITSGOINGUPSTAIRSSOSEEYOULATER')
+.category('mayeodenoche')
 .setMaxIOSize(3, 4, 1, 0)
 .setEUIO('in')
 .setSlotOverlay(true, true, GuiTextures.ATOMIC_OVERLAY_2)

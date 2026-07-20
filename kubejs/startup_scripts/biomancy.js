@@ -20,6 +20,22 @@ bio.create('flesh_alloy')
 .iconSet(GTMaterialIconSet.getByName("flesh_alloy"))
 .ingot()
 .color(0xffffff)
-.flags(gear, small_gear, plates, rod)
+.flags(gear, small_gear, plates, rod, no_decomp)
+.ignoredTagPrefixes(TagPrefix.block)
+
+// Deinococcus radiodurans
+bio.create('martian_bacterial_sludge')
+.color(0xD43D2A)
+.liquid(293)
+
+bio.create('refined_sentience')
+.color(0x7de8f0)
+.liquid(283)
+
+bio.create('sentient_alloy')
+.components('3x flesh_alloy', '2x iridium', '1x refined_sentience')
+.color(0x7de8f0).secondaryColor(0xa1e4e4).iconSet(GTMaterialIconSet.getByName("flesh_alloy"))
+.ingot()
+.flags(gear, small_gear, plates, rod, no_decomp)
 .ignoredTagPrefixes(TagPrefix.block)
 })

@@ -128,6 +128,9 @@
   "ars_nouveau": {
     "mob_jar": true
   },
+  "extendedfeatures": {
+    "wireless_optical_hatch": true
+  },
   "betternether": {
     "plant_growth": true
   },

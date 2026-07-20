@@ -132,7 +132,7 @@ const tiers = [
         tritanium: "triconite",
         osmium: "osmium_steel",
         niobium_titanium: "vintanium",
-        trinium: "pentarch-v",
+        trinium: "pentarch-t",
         osmiridium: "tri-osmic_matrix",
         vanadium_gallium: "axiom-re",
         naquadah: "naquadrium",

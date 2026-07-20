@@ -1,0 +1,12 @@
+{
+    "animation": {
+        "frametime": 2
+    },
+    "ldlib": {
+        "connection": "gtceu:block/casings/coils/transcendental_dilithide_coil_bloom_ctm",
+        "emissive": true
+    },
+    "shimmer": {
+        "bloom": true
+    }
+}

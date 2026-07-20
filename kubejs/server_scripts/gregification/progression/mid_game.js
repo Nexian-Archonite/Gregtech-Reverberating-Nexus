@@ -347,14 +347,6 @@ GTM.chemical_bath(('whydoesthisnotautocompletethisgoddamncoolingrecipe'))
     .duration(300)
     .EUt(120)
 
- const tiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev"]
-    tiers.forEach((level) => {
-        event.recipes.gtceu.assembler(`kubejs:${level}_universal_circuit`)
-            .itemInputs(`#gtceu:circuits/${level}`)
-            .itemOutputs(`kubejs:${level}_universal_circuit`)
-            .EUt(32)
-            .duration(5)
-    })
 
     const sculkcrafterrecipe = [
         ["ev", "platinum"],
@@ -401,7 +393,7 @@ energisticsassembly.forEach(([componenttier, cablematerial, circuittier]) => {
 const biomechanicalmachines = [
     ["iv", "auralloy-omega"],
     ["luv", "rhodipalladic-desnite"],
-    ["zpm", "transuranic_naquadrium"],
+    ["zpm", "transuranic_naquadrium_alloy"],
     ["uv", "darmstadtium"]
 ]
 
@@ -435,6 +427,17 @@ Object.entries({
             'F': `gtceu:electrum_single_cable`,
             'P': `gtceu:${tier}_electric_piston`,
             'G': '#forge:glass'
+        }
+    ],
+    imbuer: (tier) => [
+        ['PGP', 'SHS', 'CWC'],
+        {
+            'P': `gtceu:${tier}_electric_pump`,
+            'G': 'gtceu:laminated_glass',
+            'S': 'gtceu:platinum_single_cable',
+            'H': 'gtceu:flesh_alloy_casing',
+            'C': `#gtceu:circuits/${tier}`,
+            'W': '#forge:chests/wooden'
         }
     ]
 }).forEach(([type, recipeFn]) => {
@@ -1068,6 +1071,9 @@ GTM.assembler('fuel_assembly')
 .duration(60)
 .EUt(128)
 
+event.shapeless('gtceu:solid_fuel_assembly', ['gtceu:fuel_assembly'])
+event.shapeless('gtceu:fuel_assembly', ['gtceu:solid_fuel_assembly'])
+
 //snap back to reality OPE there goes reality
 
 GTM.mixer(('nitinol_dust'))
@@ -1100,7 +1106,7 @@ GTM.forming_press('tier_1_rocket_plating')
 .EUt(128)
 
 GTM.space_factory('tainted_titanium_tank')
-.itemInputs('2x gtceu:dense_tainted_titanium_plate', 'gtceu:mv_super_tank', '6x gtceu:polytetrafluoroethylene_plate', '2x ad_astra:steel_tank')
+.itemInputs('2x gtceu:dense_tainted_titanium_plate', 'gtceu:mv_super_tank', '6x gtceu:polytetrafluoroethylene_plate')
 .itemOutputs('ad_astra:steel_tank')
 .duration(1000)
 .EUt(512)
@@ -1112,7 +1118,7 @@ GTM.space_factory('tainted_titanium_engine_casing')
 .EUt(512)
 
 GTM.space_factory('tainted_titanium_engine')
-.itemInputs('gtceu:engine_casing_tainted_titanium', '2x gtceu:advanced_power_thruster', '14x gtceu:tainted_titanium_tiny_fluid_pipe')
+.itemInputs('gtceu:engine_casing_tainted_titanium', '2x gtceu:advanced_power_thruster', '14x gtceu:tainted_titanium_tiny_fluid_pipe', '2x ad_astra:steel_tank')
 .inputFluids('gtceu:supercooled_ice 640')
 .itemOutputs('ad_astra:steel_engine')
 .duration(1000)
@@ -1123,13 +1129,6 @@ GTM.space_factory('tier_1_rocket')
 .itemOutputs('ad_astra:tier_1_rocket')
 .duration(1000)
 .EUt(512)
-
-GTM.chemical_bath('tier_1_rocket_fueling')
-.itemInputs('ad_astra:tier_1_rocket')
-.inputFluids('gtceu:harmonical_fuel 3000')
-.itemOutputs(Item.of('ad_astra:tier_1_rocket', '{BotariumData:{StoredFluids:[{Amount:3000L,Fluid:"gtceu:harmonical_fuel"}]}}'))
-.duration(100)
-.EUt(32)
 
 //tier 2
 GTM.forming_press('tier_2_rocket_plating')
@@ -1162,18 +1161,10 @@ GTM.space_factory('tier_2_rocket')
 .itemOutputs('ad_astra:tier_2_rocket')
 .duration(1000)
 .EUt(2048)
-
-GTM.chemical_bath('tier_2_rocket_fueling')
-.itemInputs('ad_astra:tier_2_rocket')
-.inputFluids('gtceu:harmonical_fuel 3000')
-.itemOutputs(Item.of('ad_astra:tier_2_rocket', '{BotariumData:{StoredFluids:[{Amount:3000L,Fluid:"gtceu:harmonical_fuel"}]}}'))
-.duration(100)
-.EUt(128)
-
 //return to wherever the fuck i was
 
 GTM.assembler(('chemical_reaction_vat'))
-.itemInputs('gtceu:large_chemical_reactor', '24x gtceu:tainted_titanium_plate', '32x gtceu:polytetrafluoroethylene_plate', '16x kubejs:ev_universal_circuit', '6x gtceu:ev_electric_pump')
+.itemInputs('gtceu:large_chemical_reactor', '24x gtceu:tainted_titanium_plate', '32x gtceu:polytetrafluoroethylene_plate', '16x #gtceu:circuits/ev', '6x gtceu:ev_electric_pump')
 .itemOutputs('gtceu:chemical_reaction_vat')
 .duration(4800)
 .EUt(2048)
@@ -1361,6 +1352,7 @@ GTM.mixer(('caesium_hydroxide'))
 .itemInputs('10x gtceu:caesium_dust')
 .inputFluids('water 10000')
 .itemOutputs('7x gtceu:caesium_hydroxide_dust')
+.outputFluids('gtceu:hydrogen 13000')
 .EUt(128)
 .duration(600)
 
@@ -1444,6 +1436,34 @@ const thelisttoendalllists = {
             'gtceu:martian_bacterial_sludge 50000',
         ]
     },
+    venus: {
+    ores: [
+        ['venus_pyrite', 'venus_cinnabar', 'venus_galena'],
+        ['venus_olivine', 'venus_ilmenite', 'venus_bastnasite'],
+        ['venus_molybdenite', 'venus_pyrite', 'venus_galena'],
+        ['venus_draconium', 'venus_pyrite', 'venus_cinnabar']
+    ],
+    fluids: [
+        'gtceu:nitric_acid 25000',
+        'gtceu:sulfuric_gas 500000',
+        'gtceu:nitric_acid 25000',
+        'gtceu:sulfuric_gas 500000',
+    ]
+},
+mercury: {
+    ores: [
+        ['mercury_graphite', 'mercury_enstatite', 'mercury_pyroxene'],
+        ['mercury_chromite', 'mercury_pyroxene', 'mercury_enstatite'],
+        ['mercury_rutile', 'mercury_pyroxene', 'mercury_chromite'],
+        ['mercury_cooperite', 'mercury_xenotime', 'mercury_bastnasite']
+    ],
+    fluids: [
+        'gtceu:nickel 50000',
+        'gtceu:iron 50000',
+        'gtceu:nickel 50000',
+        'gtceu:iron 50000',
+    ]
+},
 }
 
 Object.entries(thelisttoendalllists).forEach(function(dimEntry) {
@@ -1548,6 +1568,15 @@ tierData.forEach(function(tierEntry) {
             .inputFluids('gtceu:harmonical_fuel 2500')
             .itemOutputs(amalgams + 'x gtceu:' + dimId + '_ore_amalgam')
             .duration(duration)
+            .EUt(EUt)
+
+        GTM.interstellar_miner('interstellar_' + dimId + '_t' + tier + '_alt')
+            .notConsumable(notConsumable)
+            .chancedInput('1x ' + rocket, rocketChance, 0)
+            .itemInputs(tier + 'x gtceu:tungsten_grinding_head')
+            .inputFluids('gtceu:cryostatic-antilithide 2500')
+            .itemOutputs(amalgams*1.5 + 'x gtceu:' + dimId + '_ore_amalgam')
+            .duration(duration/1.1)
             .EUt(EUt)
     })
 })
@@ -1656,7 +1685,7 @@ GTM.autoclave('arcane_dust_to_ferroarcane')
 .inputFluids('gtceu:iron_iii_chloride 250')
 .itemOutputs('gtceu:ferroarcane_dust')
 .duration(20)
-.EUt(512)
+.EUt(32)
 
 GTM.alloy_smelter('irons_spellbooks:compat/cinder_essence')
 .itemInputs('7x gtceu:ferroarcane_dust', 'gtceu:purified_netherite_dust')
@@ -1995,6 +2024,12 @@ GTM.assembler('coil_naquadrium')
 .itemOutputs('gtceu:naquadrium_coil_block')
 .EUt(30720)
 .duration(725)
+
+GTM.cyclotron('platline_skip')
+.itemInputs('64x gtceu:platinum_group_sludge_dust')
+.inputFluids('gtceu:aqua_regia 8000')
+.itemOutputs('5x gtceu:platinum_dust', '5x gtceu:palladium_dust', '5x gtceu:ruthenium_dust', '5x gtceu:rhodium_dust', '5x gtceu:osmium_dust', '5x gtceu:iridium_dust')
+
 
 //QoL that i didn't add yet
 

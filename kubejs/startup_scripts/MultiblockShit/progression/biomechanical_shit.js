@@ -2,8 +2,9 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     const biomechanicaltypes = {
     biomechanical_mixer: [GTSoundEntries.COOLING, 6, 1, 4, 1],
     biomechanical_extruder: [GTSoundEntries.COMPRESSOR, 4, 2, 1, 0],
-    biomechanical_recycler: [GTSoundEntries.MACERATOR, 1, 6, 2, 4],
-    organism_incubation_chamber: [GTSoundEntries.CHEMICAL, 6, 15, 1, 4],
+    biomechanical_recycler: [GTSoundEntries.MACERATOR, 2, 6, 2, 4],
+    biomechanical_imbuer: [GTSoundEntries.COOLING, 2, 2, 2, 2],
+    organism_incubation_chamber: [GTSoundEntries.CHEMICAL, 6, 15, 2, 4],
     spawn_simulator: [GTSoundEntries.PORTAL_CLOSING, 4, 12, 1, 3]
 
 
@@ -36,6 +37,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
     event.create('organism_assembly_line', "multiblock")
         .rotationState(RotationState.ALL)
         .recipeTypes('star_forge')
+        .recipeModifiers(GTRecipeModifiers.OC_NON_PERFECT)
         .appearanceBlock(() => Block.getBlock("gtceu:flesh_alloy_casing"))
         .pattern(definition => FactoryBlockPattern.start("back", "up", "right")
                 .aisle("FIF", "RTR", "SAG", "#Y#")
@@ -63,6 +65,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
     event.create('incubation_chamber', "multiblock")
     .rotationState(RotationState.NON_Y_AXIS)
     .recipeTypes(['organism_incubation_chamber', 'spawn_simulator'])
+    .recipeModifiers(GTRecipeModifiers.OC_NON_PERFECT)
     .appearanceBlock(() => Block.getBlock("gtceu:inert_machine_casing"))
     .pattern(definition => FactoryBlockPattern.start()
         .aisle("BBAAAAABB", "BBBBBBBBB", "ABBAAABBA", "ABAAAAABA", "ABAAAAABA", "ABAAAAABA", "ABBAAABBA", "BBBBBBBBB", "BBAAAAABB")
@@ -88,9 +91,40 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
     .workableCasingModel(
             "gtceu:block/casings/solid/machine_casing_inert_ptfe",
             "gtceu:block/machines/incubation_chamber"
-        );
-   
-        
+        )
+
+    event.create('biomechanical_factory', "multiblock")
+    .rotationState(RotationState.NON_Y_AXIS)
+    .recipeTypes(['biomechanical_mixer', 'biomechanical_extruder', 'biomechanical_recycler', 'biomechanical_imbuer'])
+    .appearanceBlock(() => Block.getBlock("gtceu:flesh_alloy_casing"))
+    .recipeModifiers([GTRecipeModifiers.OC_PERFECT, GTRecipeModifiers.PARALLEL_HATCH])
+    .pattern(definition => FactoryBlockPattern.start()
+    .aisle("abbbaaaaaaaaabbba", "aabbaaaaaaaaabbaa", "aabbaaaaaaaaabbaa", "abbbaaaaaaaaabbba", "aabbaaaaaaaaabbaa", "aabaaaaaaaaaaabaa", "abbaaaaaaaaaaabba", "abaaaaaaaaaaaaaba", "abaaaaaaaaaaaaaba", "abaaaaaaaaaaaaaba", "aaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaa")
+    .aisle("bbbbbaaabaaabbbbb", "abaabbbbbbbbbaaba", "abaacccccccccaaba", "bbaacccccccccaabb", "abaaccaaaaaccaaba", "abaaccaaaaaccaaba", "bbaacaaaaaaacaabb", "bbaacaaaaaaacaabb", "bbaaccaaaaaccaabb", "bbaaccaaaaaccaabb", "abbacccccccccabba", "aabbcccccccccbbaa", "aaabbbbbbbbbbbaaa")
+    .aisle("bbbbbbbbbbbbbbbbb", "baaabaaaaaaabaaab", "baaacaaaaaaacaaab", "baaacaaacaaacaaab", "baaacacccccacaaab", "baaaaacccccaaaaab", "baaacccccccccaaab", "aaaacccccccccaaaa", "aaaaaacccccaaaaaa", "aaaacacccccacaaaa", "abaacaaacaaacaaba", "abaaaaaaaaaaaaaba", "aabbbbbbbbbbbbbaa")
+    .aisle("bbbbbbbbbbbbbbbbb", "baabaaaaaaaaabaab", "baacaaaaaaaaacaab", "baacaaaaaaaaacaab", "baacaaaaaaaaacaab", "aaaccaaaaaaaccaaa", "aaaacaaaaaaacaaaa", "aaaacaaaaaaacaaaa", "aaaccaaaaaaaccaaa", "aaacaaaaaaaaacaaa", "aaacaaaabaaaacaaa", "abacabbbbbbbacaba", "abbbbaaaaaaabbbba")
+    .aisle("abbbbbaabaabbbbba", "abbaaabbbbbaaabba", "accaaabababaaacca", "accaaabababaaacca", "accaaabbbbbaaacca", "acacaaababaaacaca", "acccaaababaaaccca", "acccaaabbbaaaccca", "acacaaaabaaaacaca", "accaaaaabaaaaacca", "accaaabbbbbaaacca", "acaabbaaaaabbaaca", "abbbaaaaaaaaabbba")
+    .aisle("aabbbaaaaaaabbbaa", "abaaabbbbbbbaaaba", "acaaaaadddaaaaaca", "acaaaaaaaaaaaaaca", "acaaaaaaaaaaaaaca", "acaaaaaaaaaaaaaca", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "acaaaaaaaaaaaaaca", "acaaaaaaaaaaaaaca", "acaaabbeeebbaaaca", "acabbaaaaaaabbaca", "abbaaaaaaaaaaabba")
+    .aisle("aabbaaaaaaaaabbaa", "abaabbbbbbbbbaaba", "acaabadaaadabaaca", "acaabaaaaaaabaaca", "aacabaaaaaaabacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "acaabbeeeeebbaaca", "acabaaaaaaaaabaca", "abbaaaaaaaaaaabba")
+    .aisle("aabbaaaaaaaaabbaa", "abaabbbbbbbbbaaba", "acaaadaaaaadaaaca", "acaaaaaaaaaaaaaca", "aacabaaaaaaabacaa", "aacabaaaaaaabacaa", "aacabaaaaaaabacaa", "aacabaaaaaaabacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "acaabeeeeeeebaaca", "acabaaaaaaaaabaca", "abbaaaaaaaaaaabba")
+    .aisle("abbbbaaaaaaabbbba", "abaabbbbbbbbbaaba", "acaabdaafaadbaaca", "accabaaaaaaabacca", "aacabaaaaaaabacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "aacabaaaaaaabacaa", "aacabaaaaaaabacaa", "aacabaaaaaaabacaa", "accbbeeeeeeebbcca", "acabaaaaaaaaabaca", "abbaaaaaaaaaaabba")
+    .aisle("aabbaaaaaaaaabbaa", "abaabbbbbbbbbaaba", "acaaadaaaaadaaaca", "acaaaaaaaaaaaaaca", "aacabaaaaaaabacaa", "aacabaaaaaaabacaa", "aacabaaaaaaabacaa", "aacabaaaaaaabacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "acaabeeeeeeebaaca", "acabaaaaaaaaabaca", "abbaaaaaaaaaaabba")
+    .aisle("aabbaaaaaaaaabbaa", "abaabbbbbbbbbaaba", "acaabaaaaaaabaaca", "acaabaaaaaaabaaca", "aacabaaaaaaabacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "acaabbeeeeebbaaca", "acabaaaaaaaaabaca", "abbaaaaaaaaaaabba")
+    .aisle("aabbbaaaaaaabbbaa", "abaaabbbbbbbaaaba", "acaaaaaaaaaaaaaca", "acaaaaaaaaaaaaaca", "acaaaaaaaaaaaaaca", "acaaaaaaaaaaaaaca", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "acaaaaaaaaaaaaaca", "acaaaaaaaaaaaaaca", "acaaabbeeebbaaaca", "acabbaaaaaaabbaca", "abbaaaaaaaaaaabba")
+    .aisle("abbbbbaabaabbbbba", "abbaaabbbbbaaabba", "accaaabababaaacca", "accaaabababaaacca", "accaaabbbbbaaacca", "acacaaababaaacaca", "acccaaababaaaccca", "acccaaabbbaaaccca", "acacaaaabaaaacaca", "accaaaaabaaaaacca", "accaaabbbbbaaacca", "acaabbaaaaabbaaca", "abbbaaaaaaaaabbba")
+    .aisle("bbbbbbbbbbbbbbbbb", "baabaaaaaaaaabaab", "baacaaaaaaaaacaab", "baacaaaaaaaaacaab", "baacaaaaaaaaacaab", "aaaccaaaaaaaccaaa", "aaaacaaaaaaacaaaa", "aaaacaaaaaaacaaaa", "aaaccaaaaaaaccaaa", "aaacaaaaaaaaacaaa", "aaacaaaabaaaacaaa", "abacabbbbbbbacaba", "abbbbaaaaaaabbbba")
+    .aisle("bbbbbbbbbbbbbbbbb", "baaabaaabaaabaaab", "baaacaaaaaaacaaab", "baaacaaaaaaacaaab", "baaacacccccacaaab", "baaaaacccccaaaaab", "baaacccccccccaaab", "aaaacccccccccaaaa", "aaaaaacccccaaaaaa", "aaaacacccccacaaaa", "abaacaaacaaacaaba", "abaaaaaaaaaaaaaba", "aabbbbbbbbbbbbbaa")
+    .aisle("bbbbbaaabaaabbbbb", "abaabbbbbbbbbaaba", "abaaccccaccccaaba", "bbaaccccaccccaabb", "abaaccaaaaaccaaba", "abaaccaaaaaccaaba", "bbaacaaaaaaacaabb", "bbaacaaaaaaacaabb", "bbaaccaaaaaccaabb", "bbaaccaaaaaccaabb", "abbacccccccccabba", "aabbcccccccccbbaa", "aaabbbbbbbbbbbaaa")
+    .aisle("abbbaaaaaaaaabbba", "aabbaaaaaaaaabbaa", "aabbaaaaaaaaabbaa", "abbbaaaaaaaaabbba", "aabbaaaaaaaaabbaa", "aabaaaaaaaaaaabaa", "abbaaaaaaaaaaabba", "abaaaaaaaaaaaaaba", "abaaaaaaaaaaaaaba", "abaaaaaaaaaaaaaba", "aaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaa")
+    .where("a", Predicates.any())
+    .where("b", Predicates.blocks("gtceu:flesh_alloy_casing"))
+    .where("c", Predicates.blocks("gtceu:organism_glass"))
+    .where("d", Predicates.blocks("gtceu:stable_machine_casing"))
+    .where("e", Predicates.blocks("gtceu:sterilizing_filter_casing"))
+    .where("f", Predicates.controller(Predicates.blocks(definition.get())))
+    .build())
+   .workableCasingModel("gtceu:block/casings/solid/flesh_alloy/casing", "gtceu:block/multiblock/fusion_reactor")
+    
 
     event.create(`biomechanical_mixer`, "simple")
     .tiers(GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV)
@@ -116,6 +150,14 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
                .recipeType(`biomechanical_extruder`)
                .workableTieredHullModel(`gtceu:block/machines/biomechanical_extruder`))
 
+    event.create(`biomechanical_imbuer`, "simple")
+    .tiers(GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV)
+    .definition((tier, builder) =>
+        builder
+               .langValue(`${GTValues.VLVH[tier]} Biomechanical Imbuer`)
+               .recipeType(`biomechanical_imbuer`)
+               .workableTieredHullModel(`gtceu:block/machines/biomechanical_imbuer`))
 
-});
+
+})
 

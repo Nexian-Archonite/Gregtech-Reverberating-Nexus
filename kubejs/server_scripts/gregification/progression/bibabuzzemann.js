@@ -1,7 +1,7 @@
 ServerEvents.recipes(biomanced => {
 const GTM = biomanced.recipes.gtceu
 
-// [egg, guaranteed outputs [[item, count]], chanced outputs [[item, chance]]]
+// my hands still haven't recovered, please pay my carpal tunnel billz
 const bloodSimulations = [
     {
         id: 'axolotl', egg: 'minecraft:axolotl_spawn_egg',

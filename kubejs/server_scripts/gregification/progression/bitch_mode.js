@@ -368,7 +368,7 @@ GTM.alloying_kiln(('nexus_dust'))
 
 GTM.alloying_kiln(('nexus_steel'))
 .itemInputs('2x gtceu:nexus_dust', '6x gtceu:steel_dust')
-.itemOutputs('10x gtceu:nexus_steel_ingot')
+.itemOutputs('8x gtceu:nexus_steel_ingot')
 .EUt(8)
 .duration(40)
 

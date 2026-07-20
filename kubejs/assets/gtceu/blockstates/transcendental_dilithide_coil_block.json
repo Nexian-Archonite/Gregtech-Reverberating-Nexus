@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "gtceu:block/transcendental_dilithide_coil"
+    },
+    "active=true": {
+      "model": "gtceu:block/transcendental_dilithide_coil_active"
+    }
+  }
+}
