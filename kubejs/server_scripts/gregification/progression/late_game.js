@@ -148,7 +148,7 @@ GTM.particle_accelerator('enriched_naquadrium_bombardment')
 .perTick(true)
 .inputFluids('gtceu:enriched_naquadrium 5')
 .inputFluids('gtceu:proton 50')
-.chancedFluidOutputLogic('or')
+.chancedFluidOutputLogic('xor')
 .chancedFluidOutput('gtceu:naquadrium 5', 2000, 0)
 .chancedFluidOutput('gtceu:naquadah 5', 2500, 0)
 .chancedFluidOutput('gtceu:trinium 5', 3000, 0)
@@ -298,6 +298,16 @@ GTM.particle_accelerator('glueball_collision_preon')
     .inputFluids('gtceu:glueball 2')
     .outputFluids('gtceu:preon 1')
     .chancedFluidOutput('gtceu:higgs_boson 1', 100, 0)
+    .fusionStartEU(33554432)
+    .EUt(2097152)
+    .duration(1000)
+    .circuit(20)
+
+GTM.particle_accelerator('glueball_collision_preon_bosonated')
+    .perTick(true)
+    .inputFluids('gtceu:glueball 2')
+    .outputFluids('gtceu:preon 5')
+    .chancedFluidOutput('gtceu:higgs_boson 2', 250, 0)
     .fusionStartEU(33554432)
     .EUt(2097152)
     .duration(1000)
@@ -690,7 +700,7 @@ GTM.assembly_line('transcendentine-polydimensional_accelerator')
 
 GTM.compressor('enriched_naquadrium_boride_to_rod')
 .itemInputs('gtceu:enriched_naquadrium_boride_dust')
-.itemInputs('2x gtceu:enriched_naquadrium_boride_rod')
+.itemOutputs('2x gtceu:enriched_naquadrium_boride_rod')
 .duration(10)
 .EUt(8192)
 
@@ -701,7 +711,7 @@ GTM.macerator('draconium_to_dust')
 .EUt(128)
 
 GTM.cyclotron('draconium_purification')
-    .itemInputs('10x draconicevolution:draconium_dust')
+    .itemInputs('10x #forge:dusts/draconium')
     .inputFluids('gtceu:carborane_acid 144')
     .itemOutputs('7x gtceu:purified_draconium_dust', 'gtceu:titanium_dust', 'gtceu:rhenium_dust', 'gtceu:naquadah_dust')
     .duration(200)
@@ -731,6 +741,89 @@ GTM.fluid_solidifier('liquid_to_crystal_dust')
     .itemOutputs('gtceu:crystal_methamphetamine_dust')
     .duration(40)
     .EUt(128)
+
+    /*
+const FLUIDS = new Set(['oxygen', 'sulfur_dioxide', 'carbon_dioxide', 'fluorine', 'mercury', 'radon'])
+
+const rollinrollinrollinrollin = [
+  { ore: 'cassiterite',          inCount: 15, main: ['10x', 'tin'],          secondary: ['5000', 'oxygen'],                    traces: [] },
+  { ore: 'cassiterite_sand',     inCount: 15, main: ['10x', 'tin'],          secondary: ['5000', 'oxygen'],                    traces: [] },
+  { ore: 'merrillite',           inCount: 18, main: ['9x', 'calcium'],       secondary: ['7x', 'phosphate'],                   traces: [['2x', 'magnesium'], ['1x', 'sodium'], ['1x', 'rare_earth']] },
+  { ore: 'goethite',             inCount: 10, main: ['6x', 'iron'],          secondary: ['2000', 'oxygen'],                    traces: [] },
+  { ore: 'olivine',              inCount: 12, main: ['6x', 'magnesium'],     secondary: ['3x', 'silicon'],                     traces: [['3000', 'oxygen']] },
+  { ore: 'redstone',             inCount: 20, main: ['4x', 'silicon'],       secondary: ['20x', 'pyrite'],                     traces: [['4x', 'ruby'], ['3000', 'mercury']] },
+  { ore: 'cooperite',            inCount: 10, main: ['5x', 'platinum'],      secondary: ['2x', 'palladium'],                   traces: [['1x', 'nickel'], ['1000', 'sulfur_dioxide']] },
+  { ore: 'pitchblende',          inCount: 12, main: ['6x', 'uranium'],       secondary: ['3x', 'lead'],                        traces: [['1x', 'thorium']] },
+  { ore: 'powellite',            inCount: 10, main: ['4x', 'calcium'],       secondary: ['4x', 'molybdenum'],                  traces: [['4000', 'oxygen']] },
+  { ore: 'enstatite',            inCount: 12, main: ['5x', 'magnesium'],     secondary: ['5x', 'silicon'],                     traces: [['3000', 'oxygen']] },
+  { ore: 'phenakite',            inCount: 10, main: ['6x', 'beryllium'],     secondary: ['3x', 'silicon'],                     traces: [['4000', 'oxygen']] },
+  { ore: 'laurite',              inCount: 8,  main: ['4x', 'ruthenium'],     secondary: ['2000', 'sulfur_dioxide'],            traces: [] },
+  { ore: 'bastnasite',           inCount: 15, main: ['6x', 'lanthanum'],     secondary: ['4x', 'cerium'],                      traces: [['2000', 'carbon_dioxide'], ['1000', 'fluorine']] },
+  { ore: 'ilmenite',             inCount: 12, main: ['5x', 'iron'],          secondary: ['5x', 'titanium'],                    traces: [['3000', 'oxygen']] },
+  { ore: 'electrotine',          inCount: 20, main: ['5x', 'redstone'],      secondary: ['5x', 'gold'],                        traces: [['3x', 'saltpeter'], ['1x', 'diatomite']] },
+  { ore: 'chromite',             inCount: 12, main: ['4x', 'iron'],          secondary: ['6x', 'chromium'],                    traces: [['4000', 'oxygen']] },
+  { ore: 'scheelite',            inCount: 10, main: ['3x', 'calcium'],       secondary: ['5x', 'tungsten'],                    traces: [['4000', 'oxygen']] },
+  { ore: 'sperrylite',           inCount: 10, main: ['4x', 'platinum'],      secondary: ['6x', 'arsenic'],                     traces: [] },
+  { ore: 'ulvospinel',           inCount: 12, main: ['6x', 'iron'],          secondary: ['4x', 'titanium'],                    traces: [['3000', 'oxygen']] },
+  { ore: 'monazite',             inCount: 15, main: ['4x', 'neodymium'],     secondary: ['3x', 'cerium'],                      traces: [['2x', 'lanthanum'], ['2x', 'thorium'], ['3x', 'phosphate'], ['1x', 'dysprosium']] },
+  { ore: 'taenite',              inCount: 15, main: ['9x', 'iron'],          secondary: ['5x', 'nickel'],                      traces: [['1x', 'cobalt']] },
+  { ore: 'roquesite',            inCount: 10, main: ['3x', 'copper'],        secondary: ['4x', 'indium'],                      traces: [['2000', 'sulfur_dioxide']] },
+  { ore: 'pollucite',            inCount: 12, main: ['5x', 'caesium'],       secondary: ['4x', 'silicon'],                     traces: [['2x', 'aluminium'], ['3000', 'oxygen']] },
+  { ore: 'chalcopyrite',         inCount: 15, main: ['5x', 'copper'],        secondary: ['4x', 'iron'],                        traces: [['3000', 'sulfur_dioxide']] },
+  { ore: 'bauxite',              inCount: 20, main: ['12x', 'aluminium'],    secondary: ['4000', 'oxygen'],                    traces: [['1x', 'gallium'], ['1x', 'titanium']] },
+  { ore: 'hessite',              inCount: 10, main: ['6x', 'silver'],        secondary: ['3x', 'tellurium'],                   traces: [] },
+  { ore: 'rhodite',              inCount: 10, main: ['4x', 'gold'],          secondary: ['3x', 'rhodium'],                     traces: [['2x', 'rhenium']] },
+  { ore: 'uraninite',            inCount: 12, main: ['7x', 'uranium'],       secondary: ['2x', 'lead'],                        traces: [['1000', 'radon']] },
+  { ore: 'altaite',              inCount: 10, main: ['5x', 'lead'],          secondary: ['4x', 'tellurium'],                   traces: [] },
+  { ore: 'wulfenite',            inCount: 10, main: ['4x', 'lead'],          secondary: ['4x', 'molybdenum'],                  traces: [['4000', 'oxygen']] },
+  { ore: 'berzelianite',         inCount: 10, main: ['6x', 'copper'],        secondary: ['3x', 'selenium'],                    traces: [] },
+  { ore: 'pyrochlore',           inCount: 12, main: ['6x', 'niobium'],       secondary: ['2x', 'tantalum'],                    traces: [['2x', 'calcium'], ['1x', 'sodium'], ['1000', 'fluorine']] },
+  { ore: 'calaverite',           inCount: 10, main: ['4x', 'gold'],          secondary: ['6x', 'tellurium'],                   traces: [] },
+  { ore: 'gallite',              inCount: 10, main: ['3x', 'copper'],        secondary: ['4x', 'gallium'],                     traces: [['2000', 'sulfur_dioxide']] },
+  { ore: 'tantalite',            inCount: 12, main: ['6x', 'tantalum'],      secondary: ['2x', 'niobium'],                     traces: [['2x', 'iron'], ['1x', 'manganese'], ['4000', 'oxygen']] },
+  { ore: 'blue_topaz',           inCount: 12, main: ['6x', 'aluminium'],     secondary: ['3x', 'silicon'],                     traces: [['2000', 'fluorine'], ['2000', 'oxygen']] },
+  { ore: 'tricalcium_phosphate', inCount: 12, main: ['6x', 'calcium'],       secondary: ['4x', 'phosphate'],                   traces: [] },
+  { ore: 'tiemannite',           inCount: 8,  main: ['4x', 'mercury'],       secondary: ['3x', 'selenium'],                    traces: [] },
+  { ore: 'rutile',               inCount: 12, main: ['7x', 'titanium'],      secondary: ['4000', 'oxygen'],                    traces: [] }
+]
+
+rollinrollinrollinrollin.forEach(function (recipeData) {
+  const inputItem = recipeData.ore === 'redstone' 
+    ? recipeData.inCount + 'x minecraft:redstone'
+    : recipeData.inCount + 'x gtceu:' + recipeData.ore + '_dust'
+
+  const recipe = GTM.cyclotron(recipeData.ore + '_cycling')
+    .itemInputs(inputItem)
+    .duration(200)
+    .EUt(va.iv, 3.75)
+
+  function addOutput(entry) {
+    if (!entry || entry.length < 2) return
+    const count = entry[0]
+    const mat = entry[1]
+
+    if (FLUIDS.has(mat)) {
+      let amount = count
+      if (typeof count === 'string' && count.endsWith('x')) {
+        amount = parseInt(count, 10) * 1000
+      }
+      recipe.outputFluids('gtceu:' + mat + ' ' + amount)
+    } else {
+      const itemOut = mat === 'redstone'
+        ? count + ' minecraft:redstone'
+        : count + ' gtceu:' + mat + '_dust'
+
+      recipe.itemOutputs(itemOut)
+    }
+  }
+
+  if (recipeData.main) addOutput(recipeData.main)
+  if (recipeData.secondary) addOutput(recipeData.secondary)
+  if (recipeData.traces && recipeData.traces.length > 0) {
+    recipeData.traces.forEach(addOutput)
+  }
+})
+  */
 // Biomechanical Age starts here (pleaase help me)
 
 GTM.star_forge('flesh_alloy_casing')
@@ -945,12 +1038,20 @@ GTM.organism_incubation_chamber('biological_boule')
 .notConsumable('gtceu:neutronium_boule')
 .itemInputs('16x gtceu:flesh_alloy_dust', '4x gtceu:sentient_alloy_dust', '4x gtceu:neuron_dish')
 .itemOutputs('gtceu:biological_boule', '3x gtceu:petri_dish')
-.chancedOutputLogic('or')
 .chancedOutput('gtceu:petri_dish', 7500, 0)
 .chancedOutput('gtceu:neuron_dish', 2500, 0)
 .cleanroom(CleanroomType.STERILE_CLEANROOM)
-.duration(4000)
+.duration(20000)
 .EUt(8388608)
+
+GTM.biomechanical_delaminator('biological_boule')
+    .itemInputs('gtceu:biological_boule')
+    .inputFluids('gtceu:mutagen 200')
+    .itemOutputs('128x gtceu:biological_wafer')
+    .outputFluids('gtceu:artificial_blood 100')
+    .cleanroom(CleanroomType.STERILE_CLEANROOM)
+    .duration(2400)
+    .EUt(8388608)
 
 
 // END of late game 
@@ -978,19 +1079,19 @@ GTM.organism_incubation_chamber('biological_boule')
     event.replaceInput(
     { output: /gtceu:uev_.*(_.*)?/ },
     'gtceu:red_alloy_single_cable',
-    'gtceu:tritanium_quadruple_cable'
+    'gtceu:transuranic_naquadrium_alloy_single_wire'
     )
 
     event.replaceInput(
     { output: /gtceu:uev_.*(_.*)?/ },
     'gtceu:red_alloy_quadruple_cable',
-    'gtceu:tritanium_hex_cable'
+    'gtceu:transuranic_naquadrium_alloy_quadruple_wire'
     )
 
     event.replaceInput(
     { output: /gtceu:uev_.*(_.*)?/ },
     'gtceu:tin_rotor',
-    'gtceu:naquadah_alloy_rotor'
+    'gtceu:transuranic_naquadrium_alloy_rotor'
     )
 
     event.replaceInput(
@@ -1002,13 +1103,13 @@ GTM.organism_incubation_chamber('biological_boule')
     event.replaceInput(
     { output: /gtceu:uev_.*(_.*)?/ },
     'gtceu:copper_quadruple_wire',
-    'gtceu:omnium_quadruple_wire'
+    'gtceu:awakened_draconium_quadruple_wire'
     )
     
     event.replaceInput(
     { output: /gtceu:uev_.*(_.*)?/ },
     'gtceu:copper_double_wire',
-    'gtceu:omnium_double_wire'
+    'gtceu:awakened_draconium_double_wire'
     )
 
     event.replaceInput(
@@ -1020,7 +1121,7 @@ GTM.organism_incubation_chamber('biological_boule')
     event.replaceInput(
     { output: /gtceu:uev_.*(_.*)?/ },
     'gtceu:iron_rod',
-    'gtceu:vanadium_gallium_rod'
+    'gtceu:axiom-re_rod'
     )
 
     event.replaceInput(

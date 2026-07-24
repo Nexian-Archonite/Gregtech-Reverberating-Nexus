@@ -1180,7 +1180,7 @@ GTM.cyclotron(('blue_zircon_cycling'))
 .itemOutputs('11x gtceu:zirconium_dust', '7x gtceu:silicon_dust', '3x gtceu:hafnium_dust', 'gtceu:uranium_dust')
 .outputFluids('gtceu:oxygen 1000')
 .duration(400)
-.EUt(1920)
+.EUt(va.hv, 3)
 
 GTM.chemical_reactor('sodium_hydroxide_causticization')
 .itemInputs('gtceu:sodium_carbonate_dust', '2x gtceu:calcium_hydroxide_dust')
@@ -2029,7 +2029,8 @@ GTM.cyclotron('platline_skip')
 .itemInputs('64x gtceu:platinum_group_sludge_dust')
 .inputFluids('gtceu:aqua_regia 8000')
 .itemOutputs('5x gtceu:platinum_dust', '5x gtceu:palladium_dust', '5x gtceu:ruthenium_dust', '5x gtceu:rhodium_dust', '5x gtceu:osmium_dust', '5x gtceu:iridium_dust')
-
+.EUt(va.iv, 3.75)
+.duration(725)
 
 //QoL that i didn't add yet
 

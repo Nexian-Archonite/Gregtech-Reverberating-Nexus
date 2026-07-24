@@ -24,6 +24,16 @@ Object.entries(biomechanicaltypes).forEach(([type, config]) => {
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE, FillDirection.LEFT_TO_RIGHT)
         .setSound(config[0])
 })
+    event.create('biomechanical_delaminator')
+        .category("biomechanical")
+        .setEUIO("in")
+        .setMaxIOSize(1, 1, 1, 1)
+        .setSlotOverlay(true, false, GuiTextures.BENDER_OVERLAY)
+        .setSlotOverlay(false, false, GuiTextures.BENDER_OVERLAY)
+        .setSlotOverlay(true, true, GuiTextures.VIAL_OVERLAY_1)
+        .setSlotOverlay(false, true, GuiTextures.VIAL_OVERLAY_2)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_BENDING, FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.MOTOR)
 
     event.create('star_forge') // this is STILL the Organism Assembly Line. this is all just for it to work
         .category('biomechanical')
@@ -95,7 +105,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 
     event.create('biomechanical_factory', "multiblock")
     .rotationState(RotationState.NON_Y_AXIS)
-    .recipeTypes(['biomechanical_mixer', 'biomechanical_extruder', 'biomechanical_recycler', 'biomechanical_imbuer'])
+    .recipeTypes(['biomechanical_mixer', 'biomechanical_extruder', 'biomechanical_recycler', 'biomechanical_imbuer', 'biomechanical_delaminator'])
     .appearanceBlock(() => Block.getBlock("gtceu:flesh_alloy_casing"))
     .recipeModifiers([GTRecipeModifiers.OC_PERFECT, GTRecipeModifiers.PARALLEL_HATCH])
     .pattern(definition => FactoryBlockPattern.start()

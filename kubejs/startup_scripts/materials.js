@@ -1100,7 +1100,6 @@ event.create('sublimation_residue')
     .element("omnium")
     .ingot()
     .iconSet(GTMaterialIconSet.getByName("omnium"))
-    .cableProperties(v.uev, 24, 0, true)
     .blastTemp(19449, "high", va.uhv, 1600)
     .flags(bolt_and_screw, gear, small_gear, plates, ring, rod, long_rod, round, frame)
     .plasma(262144)
@@ -1424,6 +1423,7 @@ event.create('awakened_draconium')
     .element('awakened_draconium')
     .liquid(13650)
     .blastTemp(13200, "mid", va.uhv, 1000)
+    .cableProperties(va.uhv, 24, 0, true)
 
 event.create('triconite')
     .color(0x702880).secondaryColor(0x600000)
@@ -1466,6 +1466,7 @@ event.create('transcendentine')
         .secondaryColor(0x0066cc)
         .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, fine_wire)
         .blastTemp(1400, "low", va.lv, 450)
+        .cableProperties(va.ev, 3, 3, false)
         .fluidPipeProperties(1300, 75, true, true, true, false)
         .polarizesInto('magnetic_nexus_steel')
 
@@ -1571,8 +1572,9 @@ event.create('transcendentine')
     event.create('transuranic_naquadrium_alloy')
     .components('4x transuranic_naquadrium', '2x osmiridium', '1x trinium')
     .color(0x239366).secondaryColor(0x00aaff).iconSet(DULL)
-    .flags(plates, rod, gear, small_gear, frame, small_gear, spring, bolt_and_screw, rotor)
+    .flags(plates, rod, gear, small_gear, frame, small_gear, spring, bolt_and_screw, rotor, dense_plate)
     .blastTemp(8100, "high", va.luv, 800)
+    .cableProperties(va.uev, 32, 0, true)
     .liquid(8000)
     .ingot(4)
     .toolStats(
@@ -2728,12 +2730,40 @@ event.create('gtceu:biological_boule')
 
 event.create('gtceu:biological_soc')
 .textureJson({layer0: 'gtceu:item/sentient_circuitry/biological_soc'})
+.displayName('Biological SoC')
 
 event.create('gtceu:biological_soc_wafer')
 .textureJson({layer0: 'gtceu:item/sentient_circuitry/biological_soc_wafer'})
+.displayName('Biological SoC Wafer')
 
 event.create('gtceu:preon_star')
 .displayName('Preon-Star')
+
+const biologicalComponents = [
+    'cpu',
+    'nano_cpu',
+    'qubit_cpu',
+    'nand_memory',
+    'nor_memory',
+    'ram',
+]
+
+const acronyms = new Set(['cpu', 'nand', 'nor', 'ram'])
+
+biologicalComponents.forEach(type => {
+    const name = type.split('_')
+        .map(word => acronyms.has(word) ? word.toUpperCase() : word[0].toUpperCase() + word.slice(1))
+        .join(' ')
+    event.create(`gtceu:b_${type}_chip`)
+        .textureJson({ layer0: `gtceu:item/sentient_circuitry/b_${type}_chip` })
+        .displayName(`Biological ${name} Chip`)
+    event.create(`gtceu:b_${type}_wafer`)
+        .textureJson({ layer0: `gtceu:item/sentient_circuitry/b_${type}_wafer` })
+        .displayName(`Biological ${name} Wafer`)
+})
+
+    event.create('gtceu:biological_wafer')
+    .textureJson({ layer0: `gtceu:item/sentient_circuitry/biological_wafer` })
 })
 
 

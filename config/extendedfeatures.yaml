@@ -1,51 +1,67 @@
-# Configuration values for Multiblocks
+# Configuration Toggles for Multiblocks
 Multiblocks:
-  # Whether the Robust Alloy Materializer is Enabled.
-  RamEnabled: true
+  # Whether the Robust Alloy Materializer is Enabled
+  # Default = True
+  RobustAlloyMaterializer: true
 
-  # Whether the Advanced Cracking Unit is Enabled.
-  AcuEnabled: true
+  # Whether the Large Cracking Machine is Enabled
+  # Default = True
+  LargeCrackingMachine: true
 
-  # Whether the Enlarged Reaction Chamber is Enabled.
-  ErcEnabled: false
+  # Whether the Synthesis Vessel is Enabled
+  # Default = True
+  SynthesisVessel: true
 
-  # Whether the Large Pyrolysis Unit is Enabled.
-  LpuEnabled: true
+  # Whether the Large Pyrolysis Oven is Enabled
+  # Default = True
+  LargePyrolysisOven: true
 
-  # Whether the Advanced Fusion Reactors are Enabled.
-  AfrEnabled: false
+  # Whether the Advanced Fusion Reactors are Enabled
+  # Default = True
+  AdvancedFusionReactors: true
 
-  # Whether the Compact Assembly Line is Enabled.
-  CalEnabled: true
+  # Whether the Compact Assembly Line is Enabled
+  # Tip: Controller recipe should contain 4 Assembly Line controllers
+  # Default = True
+  CompactAssemblyLine: true
 
-  # Whether the Rock Processing Facility is Enabled.
-  RpfEnabled: true
+  # Whether the Rock Processing Plant is Enabled
+  # Tip: Controller recipe should contain a macerator, a centrifuge and an electrolyzer
+  # Default = True
+  RockProcessingPlant: true
 
-  # Whether the Industrial Greenhouse is Enabled.
-  IghEnabled: true
+  # Whether the Industrial Greenhouse is Enabled
+  # Default = True
+  IndustrialGreenhouse: true
 
-  # Whether the Tree Growing Chamber is Enabled.
-  TgcEnabled: true
+  # Whether the Tree Growing Chamber is Enabled
+  # Default = True
+  TreeGrowingChamber: true
 
-  # Whether the Disassembler is Enabled.
-  DaEnabled: true
+  # Whether the Disassembler is enabled
+  # §cWarning: §rUniversal Circuits MUST be enabled
+  # otherwise it could lead to some issues with recipes
+  # Default = True
+  Disassembler: true
 
-  # Whether the Expanded Data Bank is Enabled.
-  EdaEnabled: true
+# Configuration Toggles for Optical Features
+OpticalMachines:
+  # Whether the Expanded Data Access Hatches are Enabled
+  # Default = True
+  ExpandedDataAccessHatches: true
 
-  # Whether the Cloud Transmission Database is Enabled.
-  CtdEnabled: true
+  # Whether the Wireless Optical Hatches & Cloud Transmission Database are Enabled
+  # Default = True
+  WirelessOptical: true
 
-# Configuration Values for Machines and Items
-Miscellaneous:
-  # Whether the Universal Circuits are Enabled.
-  universalCircuits: true
+  # Whether the Expanded Data Bank is Enabled
+  # Default = True
+  ExpandedDatabank: true
 
-  # Whether the Expanded Data Access Hatches are Enabled.
-  expandedDataAccessHatches: true
+  # Whether the Optical Tranmission Network is Enabled
+  # Default = True
+  OpticalTransmissionNetwork: true
 
-# Special section for Wireless Machines
-Wireless:
-  # Whether the Wireless Optical Hatches & Cloud Transmission Database are Enabled.
-  wirelessUtils: true
+# Whether the Universal Circuits are Enabled.
+UniversalCircuits: true
 
