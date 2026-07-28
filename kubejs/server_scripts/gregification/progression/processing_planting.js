@@ -107,7 +107,7 @@ const oreProcessableTiers = {
     { material: 'vorrexinite', secondary: 'osmium', tertiary: 'iridium', quaternary: 'ruthenium', quinary: 'platinum' },
     { material: 'thermastone', secondary: 'magnesium', tertiary: 'chromium', quaternary: 'titanium', quinary: 'vanadium' },
     { material: 'cindrax', secondary: 'silicon', tertiary: 'tin', quaternary: 'aluminium', quinary: 'gallium' },
-    { material: 'aetheric_scumite', secondary: 'niobium', tertiary: 'palladium', quaternary: 'rhodium', quinary: 'hafnium' },
+    { material: 'aetheric_palladite', secondary: 'niobium', tertiary: 'palladium', quaternary: 'rhodium', quinary: 'hafnium' },
     { material: 'pyrathite', secondary: 'titanium', tertiary: 'vanadium', quaternary: 'tungsten', quinary: 'molybdenum' }
   ]
 }

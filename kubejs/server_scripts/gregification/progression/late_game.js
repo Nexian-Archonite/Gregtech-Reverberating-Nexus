@@ -823,7 +823,7 @@ const rollinrollinrollinrollin = [
     { ore: 'vorrexinite', inCount: 24, main: ['6x', 'vorrexite'], secondary: ['4x', 'osmium'], traces: [['500', 'iridium']] },
     { ore: 'thermastone', inCount: 20, main: ['6x', 'thermavyte'], secondary: ['4x', 'chromium'], traces: [['1000', 'magnesium']] },
     { ore: 'cindrax', inCount: 14, main: ['6x', 'cindralite'], secondary: ['4x', 'tin'], traces: [['1000', 'silicon']] },
-    { ore: 'aetheric_scumite', inCount: 28, main: ['6x', 'aetherscum'], secondary: ['4x', 'niobium'], traces: [['500', 'palladium']] },
+    { ore: 'aetheric_palladite', inCount: 28, main: ['6x', 'aetherite'], secondary: ['4x', 'niobium'], traces: [['500', 'palladium']] },
     { ore: 'pyrathite', inCount: 18, main: ['6x', 'pyrathene'], secondary: ['4x', 'titanium'], traces: [['1000', 'vanadium']] },
    */
 rollinrollinrollinrollin.forEach(function (recipeData) {

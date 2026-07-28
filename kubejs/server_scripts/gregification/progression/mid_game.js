@@ -1522,8 +1522,8 @@ const thesecondlisttoendalllists = {
         ores: [
             ['venus_vaelthorite', 'venus_sulvarite', 'venus_sulfur', 'venus_gold'],
             ['venus_kethrenite', 'venus_cindrax', 'venus_copper', 'venus_nickel'],
-            ['venus_thermastone', 'venus_pyrathite', 'venus_magnesium', 'venus_titanium'],
-            ['venus_vorrexinite', 'venus_aetheric_scumite', 'venus_osmium', 'venus_iridium']
+            ['venus_thermastone', 'venus_pyrathite', 'venus_magnesite', 'venus_rutile'],
+            ['venus_vorrexinite', 'venus_aetheric_palladite', 'venus_osmium', 'venus_iridium']
         ],
         fluids: [
             'gtceu:xenon 10000',

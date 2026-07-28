@@ -865,8 +865,8 @@ event.add("gtceu:venusian_thermal_rift", vein => {
         .buildLayerPattern(pattern => pattern
             .layer(l => l.weight(4).mat(GTMaterials.get("thermastone")))
             .layer(l => l.weight(3).mat(GTMaterials.get("pyrathite")))
-            .layer(l => l.weight(2).mat(GTMaterials.Magnesium))
-            .layer(l => l.weight(1).mat(GTMaterials.Titanium))
+            .layer(l => l.weight(2).mat(GTMaterials.Magnesite))
+            .layer(l => l.weight(1).mat(GTMaterials.Rutile))
         )
     )
 })
@@ -886,7 +886,7 @@ event.add("gtceu:venusian_aetheric_abyss", vein => {
     vein.layeredVeinGenerator(generator => generator
         .buildLayerPattern(pattern => pattern
             .layer(l => l.weight(4).mat(GTMaterials.get("vorrexinite")))
-            .layer(l => l.weight(3).mat(GTMaterials.get("aetheric_scumite")))
+            .layer(l => l.weight(3).mat(GTMaterials.get("aetheric_palladite")))
             .layer(l => l.weight(2).mat(GTMaterials.Osmium))
             .layer(l => l.weight(1).mat(GTMaterials.Iridium))
         )

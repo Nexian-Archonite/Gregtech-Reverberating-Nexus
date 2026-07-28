@@ -176,28 +176,28 @@ GTM.electrolyzer('cindrax_cindralite_gallium_recovery')
     .EUt(16384)
 
 
-// --- AETHERIC SCUMITE (venus) ---
-// aetherscum + niobium + palladium | quinary: rhodium, hafnium
+// --- AETHERIC PALLADITE (venus) ---
+// aetherite + niobium + palladium | quinary: rhodium, hafnium
 // thematic: oxidative pressure leach + solvent extraction
 
-GTM.chemical_vat('aetheric_scumite_pressure_leach')
-    .itemInputs('4x gtceu:aetheric_scumite_dust')
+GTM.chemical_vat('aetheric_palladite_pressure_leach')
+    .itemInputs('4x gtceu:aetheric_palladite_dust')
     .inputFluids('gtceu:sulfuric_acid 2000', 'gtceu:oxygen 1000')
-    .outputFluids('gtceu:scumite_leachate 3000', 'gtceu:aetherscum_residue 500')
+    .outputFluids('gtceu:palladite_leachate 3000', 'gtceu:aetherite_residue 500')
     .duration(400)
     .addData('HeatPressure', 8.0)
     .addData('Temp', 1200)
     .EUt(16384)
 
-GTM.large_chemical_reactor('aetheric_scumite_pgm_strip')
-    .inputFluids('gtceu:scumite_leachate 3000', 'gtceu:ammonium_chloride 500')
+GTM.large_chemical_reactor('aetheric_palladite_pgm_strip')
+    .inputFluids('gtceu:palladite_leachate 3000', 'gtceu:ammonium_chloride 500')
     .itemOutputs('2x gtceu:palladium_dust', '2x gtceu:rhodium_dust', 'gtceu:niobium_dust')
     .duration(440)
     .EUt(16384)
 
-GTM.electrolyzer('aetheric_scumite_aetherscum_hafnium')
-    .inputFluids('gtceu:aetherscum_residue 500', 'gtceu:hydrofluoric_acid 500')
-    .itemOutputs('3x gtceu:aetherscum_dust', '2x gtceu:hafnium_dust')
+GTM.electrolyzer('aetheric_palladite_aetherite_hafnium')
+    .inputFluids('gtceu:aetherite_residue 500', 'gtceu:hydrofluoric_acid 500')
+    .itemOutputs('3x gtceu:aetherite_dust', '2x gtceu:hafnium_dust')
     .duration(240)
     .EUt(16384)
 

@@ -141,7 +141,7 @@ const tiers = [
         neutronium: "stellarite",
         darmstadtium: "ephemeral_naquadite",
         enriched_naquadah_trinium_europium_duranide: "chronocrytic-vhaelsalite",
-        ruthenium_trinium_americium_neutronate: "awakened_draconium"
+        ruthenium_trinium_americium_neutronate: "sulvarium-over-kraethite_steel"
         
         // Add more replacements as needed
     }

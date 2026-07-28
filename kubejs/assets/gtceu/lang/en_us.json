@@ -208,8 +208,8 @@
     "material.gtceu.thermavyte": "§6Thermavyte §r[A]",
     "material.gtceu.cindrax": "§7Cindrax §r[A]",
     "material.gtceu.cindralite": "§7Cindralite §r[A]",
-    "material.gtceu.aetheric_scumite": "§2Aetheric Scumite §r[A]",
-    "material.gtceu.aetherscum": "§2Aetherscum §r[A]",
+    "material.gtceu.aetheric_palladite": "§2Aetheric Palladite §r[A]",
+    "material.gtceu.aetherite": "§2Aetherite §r[A]",
     "material.gtceu.pyrathite": "§4Pyrathite §r[A]",
     "material.gtceu.pyrathene": "§4Pyrathene §r[A]",
 
@@ -239,8 +239,8 @@
     "material.gtceu.chromium_trioxide_solution": "§cChromium Trioxide Solution",
     "material.gtceu.cindrax_alkaline_melt": "§7Cindrax Alkaline Melt",
     "material.gtceu.sodium_chloride_solution": "§fSodium Chloride Solution",
-    "material.gtceu.scumite_leachate": "§2Scumite Leachate",
-    "material.gtceu.aetherscum_residue": "§2Aetherscum Residue",
+    "material.gtceu.palladite_leachate": "§2Palladite Leachate",
+    "material.gtceu.aetherite_residue": "§2Aetherite Residue",
     "material.gtceu.pyrathite_fluoride_vapor": "§cPyrathite Fluoride Vapor",
     "material.gtceu.vanadium_oxyfluoride": "§6Vanadium Oxyfluoride",
 
@@ -271,7 +271,15 @@
     "material.gtceu.organic_naquadria_phase": "§5Organic Naquadria Phase",
     "material.gtceu.naquadria_nitrate_solution": "§5Naquadria Nitrate Solution",
 
-    "material.gtceu.chronocrytic-vhaelsalite": "§1Chrono§dcrytic-§dVhael§bsalite, §r[A]",
+    "-------- Alien Alloys --------": "",
+
+    "material.gtceu.chronocrytic-vhaelsalite": "§1Chrono§dcrytic-§dVhael§bsalite §r[A]",
+    "material.gtceu.sulvarium--over-kraethite_steel": "§6Sulvarium§r-Over-§bKraethite Steel §r[A]",
+    "material.gtceu.indium-vor-dys-cad_supersolder_alloy": "§5Indium§r-§cVor§r-§6Dys§r-§7Cad§r Supersolder Alloy",
+
+
+
+
     "material.gtceu.primordial_essence": "§1Primordial §kEssence",
     "material.gtceu.erebus_essence": "§0Erebus §kEssence",
     "material.gtceu.aether_essence": "§fAether §kEssence",
