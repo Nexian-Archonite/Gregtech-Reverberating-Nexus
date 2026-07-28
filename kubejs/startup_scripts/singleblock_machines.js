@@ -1,7 +1,7 @@
 
 GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
     event.create("sculk_crafter")
-        .category("reconstruction")
+        .category("sculking")
         .setEUIO("in")
         .setMaxIOSize(6, 1, 2, 0)
         .setSlotOverlay(false, false, GuiTextures.COMPRESSOR_OVERLAY)

@@ -59,7 +59,6 @@ const oreProcessableTiers = {
     { material: 'blue_zircon', secondary: 'zirconium', tertiary: 'hafnium', quaternary: 'silicon' },  
     { material: 'xenotime', secondary: 'dysprosium', tertiary: 'hafnium', quaternary: 'hafnium' },
 
-
   ],
 
   AdvancedProcessing: [
@@ -90,8 +89,26 @@ const oreProcessableTiers = {
     { material: 'taenite', secondary: 'nickel', tertiary: 'iron', quaternary: 'platinum' },
     { material: 'roquesite', secondary: 'indium', tertiary: 'copper', quaternary: 'tin' },
     { material: 'gallite', secondary: 'gallium', tertiary: 'copper', quaternary: 'zinc' },
-    { material: 'sperrylite', secondary: 'platinum', tertiary: 'palladium', quaternary: 'rhodium' }
+    { material: 'sperrylite', secondary: 'platinum', tertiary: 'palladium', quaternary: 'rhodium' },
 
+  ],
+  
+  AlienProcessing: [
+    { material: 'nulledryte', secondary: 'chronosite', tertiary: 'oganesson', quaternary: 'rhenium_iii_sulfate' },
+    { material: 'xycrhovite', secondary: 'draconium', tertiary: 'echo', quaternary: 'dilithium' },
+    { material: 'vheszcryl', secondary: 'vhaelcryite', tertiary: 'transcendentine', quaternary: 'enstatite' },
+    { material: 'grothemite', secondary: 'rare_earth', tertiary: 'hafnium', quaternary: 'iron', quinary: 'potassium' },
+    { material: 'krethavine', secondary: 'kraethite', tertiary: 'lanthanum', quaternary: 'titanium', quinary: 'zirconium' },
+    { material: 'orvexite', secondary: 'rare_earth', tertiary: 'osmiridium', quaternary: 'plutonium', quinary: 'rhodium' },
+    { material: 'phazdurite', secondary: 'transcendentine', tertiary: 'naquadria', quaternary: 'radon' },
+    { material: 'vaelthorite', secondary: 'sulfur', tertiary: 'lead', quaternary: 'vanadium', quinary: 'molybdenum' },
+    { material: 'sulvarite', secondary: 'bismuth', tertiary: 'gold', quaternary: 'silver', quinary: 'tellurium' },
+    { material: 'kethrenite', secondary: 'copper', tertiary: 'nickel', quaternary: 'cobalt', quinary: 'chromium' },
+    { material: 'vorrexinite', secondary: 'osmium', tertiary: 'iridium', quaternary: 'ruthenium', quinary: 'platinum' },
+    { material: 'thermastone', secondary: 'magnesium', tertiary: 'chromium', quaternary: 'titanium', quinary: 'vanadium' },
+    { material: 'cindrax', secondary: 'silicon', tertiary: 'tin', quaternary: 'aluminium', quinary: 'gallium' },
+    { material: 'aetheric_scumite', secondary: 'niobium', tertiary: 'palladium', quaternary: 'rhodium', quinary: 'hafnium' },
+    { material: 'pyrathite', secondary: 'titanium', tertiary: 'vanadium', quaternary: 'tungsten', quinary: 'molybdenum' }
   ]
 }
 
@@ -107,6 +124,10 @@ ServerEvents.recipes(function (event) {
 
   oreProcessableTiers.advanced = oreProcessableTiers.electric.concat(
     oreProcessableTiers.AdvancedProcessing
+  )
+
+  oreProcessableTiers.alien = oreProcessableTiers.advanced.concat(
+    oreProcessableTiers.AlienProcessing
   )
 
   // Primitive tier - ore_processing_plant
@@ -152,7 +173,28 @@ ServerEvents.recipes(function (event) {
     if (ore.quinary) {
          recipe.chancedOutput('gtceu:' + ore.quinary + '_dust', 1500, 0)
     }
-  })
+    })
+    oreProcessableTiers.alien.forEach(function (ore) {
+
+      const recipe = GTM.array_ore_processing('array_' + ore.material + '_ore_processing')
+    .itemInputs('gtceu:crushed_' + ore.material + '_ore')
+      .itemOutputs('8x gtceu:' + ore.material + '_dust')
+      .chancedOutput('6x gtceu:' + ore.secondary + '_dust', 7500, 0)
+      .chancedOutput('4x gtceu:' + ore.tertiary + '_dust', 5000, 0)
+      .inputFluids('gtceu:carborane_acid 100', 'gtceu:resonance_plasma 5')
+      .duration(40)
+      .EUt(2048)
+    if (ore.quaternary) {
+        recipe.chancedOutput('3x gtceu:' + ore.quaternary + '_dust', 4500, 0)
+    }
+    if (ore.quinary) {
+         recipe.chancedOutput('2x gtceu:' + ore.quinary + '_dust', 2500, 0)
+    }
+    })
+  
+
+
+
 
   event.shaped(Item.of('gtceu:primitive_processing_factory'), [
         'HRS',

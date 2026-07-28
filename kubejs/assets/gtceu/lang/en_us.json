@@ -84,6 +84,7 @@
     "material.gtceu.nexus": "§bNexus",
     "material.gtceu.condensed_mana": "§9Condensed Mana",
     "material.gtceu.source": "§dSource",
+    "material.gtceu.antisource": "§aSource",
     "material.gtceu.taint": "§5Taint",
     "material.gtceu.unpure_source": "§5Unpure Source",
     "material.gtceu.wizarding_steel":"§dWizarding Steel",
@@ -167,7 +168,7 @@
 
     "material.gtceu.tri-osmic_matrix": "§9Tri-Osmic Matrix",
     "material.gtceu.astazine-e": "§bAstrazine-E",
-    "material.gtceu.pentarch-t": "§2Pentarch-t",
+    "material.gtceu.pentarch-t": "§2Pentarch-T",
     "material.gtceu.axiom-re": "§6Axiom-Re",
 
     "material.gtceu.radioactive_bronze_ore": "Radioactive.. Radioactive Bronze? How the fuck is that even possible? Like... according to my knowledge, there is not even a natural source of Bronze, let alone Radioactive‽",
@@ -185,8 +186,95 @@
     "material.gtceu.transuranic_naquadrium_alloy": "§3Transuranic Naquadrium Alloy",
     "material.gtceu.ephemeral_naquadite": "§6Ephemeral §bNaquadite",
     "material.gtceu.stellarite": "§5Stellarite",
+
     
     
+
+
+
+
+
+    "§7 -- VENUS ORES --": "",
+
+    "material.gtceu.vaelthorite": "§cVaelthorite §r[A]",
+    "material.gtceu.vaelthorium": "§cVaelthorium §r[A]",
+    "material.gtceu.sulvarite": "§6Sulvarite §r[A]",
+    "material.gtceu.sulvarium": "§6Sulvarium §r[A]",
+    "material.gtceu.kethrenite": "§4Kethrenite §r[A]",
+    "material.gtceu.kethrite": "§4Kethrite §r[A]",
+    "material.gtceu.vorrexinite": "§5Vorrexinite §r[A]",
+    "material.gtceu.vorrexite": "§5Vorrexite §r[A]",
+    "material.gtceu.thermastone": "§6Thermastone §r[A]",
+    "material.gtceu.thermavyte": "§6Thermavyte §r[A]",
+    "material.gtceu.cindrax": "§7Cindrax §r[A]",
+    "material.gtceu.cindralite": "§7Cindralite §r[A]",
+    "material.gtceu.aetheric_scumite": "§2Aetheric Scumite §r[A]",
+    "material.gtceu.aetherscum": "§2Aetherscum §r[A]",
+    "material.gtceu.pyrathite": "§4Pyrathite §r[A]",
+    "material.gtceu.pyrathene": "§4Pyrathene §r[A]",
+
+    "§7 -- MARTIAN ORES --": "",
+
+    "material.gtceu.dilithium": "§6Dilithium, §r[A]",
+    "material.gtceu.kraethite": "§3Kraethite, §r[A]",
+    "material.gtceu.xycrhovite": "§dXycrhovite, §r[A]",
+    "material.gtceu.vheszcryl": "§dVheszcryl, §r[A]",
+    "material.gtceu.nulledryte": "§1Nulle§2dryte, §r[A]",
+    "material.gtceu.grothemite": "§6Grothemite, §r[A]",
+    "material.gtceu.phazdurite": "§0Phaz§cdur§4ite, §r[A]",
+    "material.gtceu.orvexite": "§2Orvexite, §r[A]",
+    "material.gtceu.krethavine": "§9Kretha§bvine, §r[A]",
+    "material.gtceu.chronosite": "§1Chrono§bsite, §r[A]",
+    "material.gtceu.vhaelcryite": "§dVhaelcryite, §r[A]",
+
+    "§7 -- VENUS ORE PROCESSING INTERMEDIATES --": "",
+
+    "material.gtceu.vaelthorium_sulfate_solution": "§cVaelthorium Sulfate Solution",
+    "material.gtceu.vanadium_solution": "§eVanadium Solution",
+    "material.gtceu.sulvarite_leachate": "§6Sulvarite Leachate",
+    "material.gtceu.zinc_chloride_solution": "§fZinc Chloride Solution",
+    "material.gtceu.kethrenite_ammine_solution": "§4Kethrenite Ammine Solution",
+    "material.gtceu.pgm_chloride_solution": "§5PGM Chloride Solution",
+    "material.gtceu.thermavyte_oxide_dust": "§6Thermavyte Oxide",
+    "material.gtceu.chromium_trioxide_solution": "§cChromium Trioxide Solution",
+    "material.gtceu.cindrax_alkaline_melt": "§7Cindrax Alkaline Melt",
+    "material.gtceu.sodium_chloride_solution": "§fSodium Chloride Solution",
+    "material.gtceu.scumite_leachate": "§2Scumite Leachate",
+    "material.gtceu.aetherscum_residue": "§2Aetherscum Residue",
+    "material.gtceu.pyrathite_fluoride_vapor": "§cPyrathite Fluoride Vapor",
+    "material.gtceu.vanadium_oxyfluoride": "§6Vanadium Oxyfluoride",
+
+    "§7 -- MARTIAN ORE PROCESSING INTERMEDIATES --": "",
+
+    "material.gtceu.unstable_oganesson_solution": "§bUnstable Oganesson Solution",
+    "material.gtceu.cryostabilized_decay_matrix": "§bCryostabilized Decay Matrix",
+    "material.gtceu.xycrhovite_resonance_solution": "§dXycrhovite Resonance Solution",
+    "material.gtceu.echo_fluid": "§9Echo Fluid",
+    "material.gtceu.vheszcryl_extract": "§dVheszcryl Extract",
+    "material.gtceu.transcendentine_solution": "§5Transcendentine Solution",
+    "material.gtceu.grothemite_leachate": "§6Grothemite Leachate",
+    "material.gtceu.iron_sulfate_solution": "§6Iron Sulfate Solution",
+    "material.gtceu.krethavine_tetrachloride": "§3Krethavine Tetrachloride",
+    "material.gtceu.lanthanum_chloride_solution": "§3Lanthanum Chloride Solution",
+    "material.gtceu.magnesium_chloride_solution": "§fMagnesium Chloride Solution",
+    "material.gtceu.orvexite_nitrate_solution": "§aOrvexite Nitrate Solution",
+
+    "§7 -- PHAZDURITE PUREX CHAIN --": "",
+
+    "material.gtceu.phazdurite_feed_solution": "§5Phazdurite Feed Solution",
+    "material.gtceu.adjusted_phazdurite_feed": "§5Adjusted Phazdurite Feed",
+    "material.gtceu.phazdurite_organic_phase": "§5Phazdurite Organic Phase",
+    "material.gtceu.phazdurite_raffinate": "§8Phazdurite Raffinate",
+    "material.gtceu.phazdurite_scrubbed_phase": "§5Phazdurite Scrubbed Phase",
+    "material.gtceu.phazdurite_scrub_waste": "§8Phazdurite Scrub Waste",
+    "material.gtceu.aqueous_transcendentine_solution": "§5Aqueous Transcendentine Solution",
+    "material.gtceu.organic_naquadria_phase": "§5Organic Naquadria Phase",
+    "material.gtceu.naquadria_nitrate_solution": "§5Naquadria Nitrate Solution",
+
+    "material.gtceu.chronocrytic-vhaelsalite": "§1Chrono§dcrytic-§dVhael§bsalite, §r[A]",
+    "material.gtceu.primordial_essence": "§1Primordial §kEssence",
+    "material.gtceu.erebus_essence": "§0Erebus §kEssence",
+    "material.gtceu.aether_essence": "§fAether §kEssence",
 
     "material.gtceu.sodium_cyanide": "Sodium Cyanide",
     "material.gtceu.chloroacetic_mixture": "Chloroacetic Mixture",
@@ -324,7 +412,7 @@
     "material.gtceu.hypothermic_helium_3_plasma": "§eHypothermic Helium 3",
     "material.gtceu.harmonical_fuel": "§dHarmonical Fuel",
     "material.gtceu.auralloy-omega_over_transcendentine": "§6Aura§7lloy-Ω §rover §5Transcendentine",
-    "material.gtceu.transcendental_dilithide": "§5Transcendental §6Dilithide",
+    "material.gtceu.transcendent_dilithide": "§5Transcendent §6Dilithide",
 
     "material.gtceu.neutron": "§9Neutron Flux [n₀]",
     "material.gtceu.proton": "§cProton Stream [p₊₁]",
@@ -370,12 +458,16 @@
     "material.gtceu.catalytic_boson": "§7Catalytic-Boson [Z⁰]",
     "material.gtceu.lepton-dense_complex": "§dLepton-Dense Complex [ℒ⁺]",
     "material.gtceu.antilepton-dense_complex": "§aAntilepton-Dense Complex [ℒ⁻]",
+    "material.gtceu.bose-einstein_neutronium": "§aBose-Einstein Neutronium",
+
+    "material.gtceu.endo_quark": "§dEndo Quark [x±³⁄₄]",
+    "material.gtceu.exo_quark": "§bExo Quark [x±³⁄₂]",
+    "material.gtceu.exotron": "§eExotron [eₓ⁻]",
 
 
     "material.gtceu.jarosite": "§6Jarosite",
     "material.gtceu.fluorapatite": "§aFluorapatite",
     "material.gtceu.rhodite": "§7Rhodite",
-    "material.gtceu.dilithium": "§6Dilithium",
     "material.gtceu.anti-dilithide": "§9Anti-Dilithide",
     "material.gtceu.cryostatic-antilithide": "§9Cryostatic-Antilithide",
     "material.gtceu.phenakite": "§fPhenakite",
@@ -416,15 +508,16 @@
     "material.gtceu.trinium": "§dTrinium",
     "material.gtceu.tritanium": "§4Tritanium",
 
-    "block.gtceu.cupronickel_coil_block": "§6Cupronickel Coil",
-    "block.gtceu.kanthal_coil_block": "§bKanthal Coil",
-    "block.gtceu.nichrome_coil_block": "§dNichrome Coil",
-    "block.gtceu.rtm_alloy_coil_block": "§9RTM Alloy Coil",
-    "block.gtceu.hssg_coil_block": "§3HSS-G Coil",
-    "block.gtceu.naquadah_coil_block": "§7Naquadah Coil",
-    "block.gtceu.naquadrium_coil_block": "§0Naquadrium Coil",
-    "block.gtceu.trinium_coil_block": "§dTrinium Coil",
-    "block.gtceu.tritanium_coil_block": "§4Tritanium Coil",
+    "block.gtceu.cupronickel_coil_block": "§6Cupronickel §rCoil",
+    "block.gtceu.kanthal_coil_block": "§bKanthal §rCoil",
+    "block.gtceu.nichrome_coil_block": "§dNichrome §rCoil",
+    "block.gtceu.rtm_alloy_coil_block": "§9RTM Alloy §rCoil",
+    "block.gtceu.hssg_coil_block": "§3HSS-G §rCoil",
+    "block.gtceu.naquadah_coil_block": "§7Naquadah §rCoil",
+    "block.gtceu.naquadrium_coil_block": "§7Naquadrium §rCoil",
+    "block.gtceu.trinium_coil_block": "§dTrinium §rCoil",
+    "block.gtceu.tritanium_coil_block": "§4Tritanium §rCoil",
+    "block.gtceu.transcendental_dilithide_coil_block": "§5Transcendental §6Dilithide §rCoil",
 
 
 
@@ -483,7 +576,7 @@
     "gtceu.biomechanical_mixer": "§4Biomechanical Mixing",
     "gtceu.biomechanical_imbuer": "§4Biomechanical Imbuing",
     "gtceu.biomechanical_delaminator": "§4Biomechanical Delaminating",
-    "gtceu.star_forge": "§4Organism Line Assembly",
+    "gtceu.organism_assembly_line": "§4Organism Line Assembly",
     "gtceu.organism_incubation_chamber": "§4Organism Chamber Incubation",
     "gtceu.spawn_simulator": "§cSpawn Simulating",
     "gtceu.primitive_cylindrical_hearth": "§6Primitive Cylindrical Hearth",
@@ -498,6 +591,7 @@
     "gtceu.applied_enigma": "§dApplied Enigma",
     "gtceu.solar_collection": "§7Solar Collection",
     "gtceu.lunar_collection": "§7Lunar Collection",
+    "gtceu.component_part_assembly": "§dComponent Assembly",
 
     "block.gtceu.echo_imbuement_chamber": "§1Echonite Imbuement Chamber",
     "block.gtceu.primitive_alloyment_kiln": "§6Primitive Alloyment Kiln",
@@ -529,7 +623,8 @@
     "block.gtceu.transcendental_polydimensional_accelerator": "§dTranscendentine Polydimensional Accelerator",
     "block.gtceu.applied_enigma": "§dApplied Enigma",
     "block.gtceu.solar_collector": "§7Solar Collector",
-    "block.gtceu.lunar_collector": "§7lunar Collector",
+    "block.gtceu.lunar_collector": "§7Lunar Collector",
+    "block.gtceu.component_part_assembly": "§dComponent Part Assembler",
 
     
     "block.gtceu.steel_gearbox": "§bNexus Steel §rGearbox Casing",
@@ -629,8 +724,23 @@
     "gtceu.jei.ore_vein.venusian_draconium": "Venusian Draconium",
     "gtceu.jei.ore_vein.mercurian_graphite_surface": "Mercurian Graphite Surface",
     "gtceu.jei.ore_vein.mercurian_iron_chromite": "Mercurian Iron Chromite",
-    "gtceu.jei.ore_vein.mercurian_enstatite_mantle": "Mercurian Enstatite Mantle",
+    "gtceu.jei.ore_vein.mercurian_enstatite_mantle": "Mercurian Nexene Mantle",
     "gtceu.jei.ore_vein.mercurian_pgm_rare_earth": "Mercurian PGM & Rare Earth",
+
+    "gtceu.jei.ore_vein.mars_nulledryte_formation": "Nulledryte Formation",
+    "gtceu.jei.ore_vein.mars_xycrhovite_formation": "Xycrhovite Formation",
+    "gtceu.jei.ore_vein.mars_vheszcryl_formation": "Vheszcryl Formation",
+    "gtceu.jei.ore_vein.mars_grothemite_deposit": "Grothemite Deposit",
+    "gtceu.jei.ore_vein.mars_krethavine_deposit": "Krethavine Deposit",
+    "gtceu.jei.ore_vein.mars_orvexite_deposit": "Orvexite Deposit",
+    "gtceu.jei.ore_vein.mars_phazdurite_deposit": "Phazdurite Deposit",
+
+    
+    "gtceu.jei.ore_vein.venusian_vaelthor_sulfides": "Vaelthor Sulfide Deposits",
+    "gtceu.jei.ore_vein.venusian_kethren_complex": "Kethren Magmatic Complex",
+    "gtceu.jei.ore_vein.venusian_thermal_rift": "Thermal Rift Formation",
+    "gtceu.jei.ore_vein.venusian_aetheric_abyss": "Aetheric Abyss Deposit",
+
 
     "tagprefix.moon": "Moon %s Ore",
     "tagprefix.mars": "Mars %s Ore",

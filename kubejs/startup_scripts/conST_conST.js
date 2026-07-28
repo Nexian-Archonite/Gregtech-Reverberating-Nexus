@@ -22,7 +22,6 @@ const $GemProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.mat
 const $PropertyKey = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey")
 
 
-// Ignore this
 
 // Icon Sets
 const DULL = GTMaterialIconSet.DULL
@@ -100,3 +99,14 @@ const blast_furnace_triple = GTMaterialFlags.BLAST_FURNACE_CALCITE_TRIPLE
 const no_abs_recipe = GTMaterialFlags.DISABLE_ALLOY_BLAST
 const not_alloy = GTMaterialFlags.DISABLE_ALLOY_PROPERTY
 
+const stComponents =
+[
+    'catalyst_core',
+    'computational_matrix',
+    'high_strength_panel',
+    'microfluidic_flow_valve',
+    'micropower_router',
+    'precision_drive_mechanism',
+    'super_magnetic_core',
+    'transmission_assembly'
+]

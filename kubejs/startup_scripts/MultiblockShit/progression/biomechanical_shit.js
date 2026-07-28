@@ -3,7 +3,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     biomechanical_mixer: [GTSoundEntries.COOLING, 6, 1, 4, 1],
     biomechanical_extruder: [GTSoundEntries.COMPRESSOR, 4, 2, 1, 0],
     biomechanical_recycler: [GTSoundEntries.MACERATOR, 2, 6, 2, 4],
-    biomechanical_imbuer: [GTSoundEntries.COOLING, 2, 2, 2, 2],
+    biomechanical_imbuer: [GTSoundEntries.COOLING, 6, 2, 2, 2],
     organism_incubation_chamber: [GTSoundEntries.CHEMICAL, 6, 15, 2, 4],
     spawn_simulator: [GTSoundEntries.PORTAL_CLOSING, 4, 12, 1, 3]
 
@@ -35,18 +35,20 @@ Object.entries(biomechanicaltypes).forEach(([type, config]) => {
         .setProgressBar(GuiTextures.PROGRESS_BAR_BENDING, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.MOTOR)
 
-    event.create('star_forge') // this is STILL the Organism Assembly Line. this is all just for it to work
+
+        event.create('organism_assembly_line')
         .category('biomechanical')
         .setMaxIOSize(15, 5, 5, 0)
         .setEUIO("in")
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.CHEMICAL)
+        .setHasResearchSlot(true)
 })
 
 GTCEuStartupEvents.registry('gtceu:machine', event => {
     event.create('organism_assembly_line', "multiblock")
         .rotationState(RotationState.ALL)
-        .recipeTypes('star_forge')
+        .recipeTypes('organism_assembly_line')
         .recipeModifiers(GTRecipeModifiers.OC_NON_PERFECT)
         .appearanceBlock(() => Block.getBlock("gtceu:flesh_alloy_casing"))
         .pattern(definition => FactoryBlockPattern.start("back", "up", "right")
@@ -59,7 +61,8 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('O', Predicates.abilities(PartAbility.EXPORT_ITEMS))
             .where('Y', Predicates.blocks("gtceu:flesh_alloy_casing")
                 .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMinGlobalLimited(1).setMaxGlobalLimited(2))
-                .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)))
+                .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
+                .or(Predicates.abilities(PartAbility.DATA_ACCESS).setExactLimit(1)))
             .where('I', Predicates.blocks('gtceu:ulv_input_bus'))
             .where('G', Predicates.blocks("gtceu:flesh_alloy_casing"))
             .where('A', Predicates.blocks("gtceu:titanium_pipe_casing"))

@@ -9,7 +9,7 @@ function TemperatureModifier(machine, recipe) {
         let temp = machine.getCoilType().getCoilTemperature() // 
 
         let recipeTemp = recipe.data.getInt("Temp") // 
-        if ((recipeTemp * 3) > temp) {
+        if ((recipeTemp * 2.718) > temp) {
             return ModifierFunction.NULL
         }
         return ModifierFunction.IDENTITY // 

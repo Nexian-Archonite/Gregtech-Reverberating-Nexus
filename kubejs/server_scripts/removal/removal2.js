@@ -34,4 +34,6 @@ e.remove({id: 'gtceu:fusion_reactor/mercury_and_magnesium_to_uranium_238_plasma'
 e.remove({id: 'gtceu:fusion_reactor/gold_and_aluminium_to_uranium_235_plasma'})
 e.remove({id: 'gtceu:fusion_reactor/xenon_and_zinc_to_plutonium_239_plasma'})
 e.remove({id: 'gtceu:fusion_reactor/krypton_and_cerium_to_plutonium_241_plasma'})
+
+e.remove({id: /gtceu:chemical_skips\/.*/})
 })

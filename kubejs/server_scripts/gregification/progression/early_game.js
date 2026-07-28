@@ -176,16 +176,9 @@ event.shaped('gtceu:empty_wooden_form', [
 
 event.recipes.create.compacting('gtceu:compressed_fireclay', ['gtceu:fireclay_dust', Fluid.of('minecraft:water 125')])
 
-event.shaped(Item.of('2x gtceu:magikstone_casing'), [
-'PHP',
-'PFP',
-"PWP"
-], {
-P: 'gtceu:condensed_mana_plate',
-F: 'gtceu:source_frame',
-H: '#forge:tools/hammers',
-W: '#forge:tools/wrenches'
-})
+
+global.dualCasing('condensed_mana', 'source', 'magikstone_casing')
+
 
 event.campfireCooking('kubejs:boiling_water_bucket', 'minecraft:water_bucket', 0, 600)
 event.campfireCooking('minecraft:torch', 'minecraft:stick', 0, 100)
@@ -378,14 +371,6 @@ W: '#forge:tools/wrenches'
 })
 // G - R - E - G - T - E - C - H from here
 
-
-
-GTM.assembler(('magikstone_casing'))
-.itemInputs('6x gtceu:condensed_mana_plate', 'gtceu:source_frame')
-.itemOutputs('gtceu:magikstone_casing')
-.duration(50)
-.circuit(6)
-.EUt(16)
 
 GTM.electrolyzer(('decomposition_electrolyzing_sculk'))
 .itemInputs('gtceu:sculk_dust')

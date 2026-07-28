@@ -394,7 +394,7 @@ const biomechanicalmachines = [
     ["iv", "auralloy-omega"],
     ["luv", "rhodipalladic-desnite"],
     ["zpm", "transuranic_naquadrium_alloy"],
-    ["uv", "darmstadtium"]
+    ["uv", "ephemeral_naquadite"]
 ]
 
 Object.entries({
@@ -451,26 +451,38 @@ Object.entries({
 GTM.sculk_crafter(('ancient_debris'))
 .itemInputs('ars_nouveau:fire_essence', 'gtceu:source_gem', 'gtceu:netherite_scrap')
 .chancedInput('botania:rune_greed', 1000, 0)
-.inputFluids(Fluid.of('gtceu:mechanical_essence 30'))
+.inputFluids('gtceu:mechanical_essence 30')
 .itemOutputs('2x minecraft:ancient_debris')
 .duration(100)
 .EUt(512)
 
 GTM.cyclotron(('rare_earth_cycling'))
-.inputFluids(Fluid.of('gtceu:tributyl_phosphate 50'))
+.inputFluids('gtceu:tributyl_phosphate 50')
 .itemInputs('4x gtceu:rare_earth_dust')
-.chancedOutput('5x gtceu:small_europium_dust', 1500, 0)
-.chancedOutput('5x gtceu:small_neodymium_dust', 4500, 0)
-.chancedOutput('5x gtceu:small_samarium_dust', 3500, 0)
-.chancedOutput('5x gtceu:small_cerium_dust', 3500, 0)
-.chancedOutput('5x gtceu:small_yttrium_dust', 3500, 0)
-.chancedOutput('5x gtceu:small_lanthanum_dust', 2500, 0)
-.chancedOutput('5x gtceu:small_dysprosium_dust', 4500, 0)
-.chancedOutput('5x gtceu:small_lutetium_dust', 4500, 0)
-.outputFluids(Fluid.of('water 40'))
+.outputFluids('gtceu:rare_earth_sludge 500', 'water 40')
 .duration(64)
 .EUt(GTValues.V[GTValues.EV], 3)
 
+GTM.electric_blast_furnace('rare_earth_kidnapping')
+.inputFluids('gtceu:rare_earth_sludge')
+.itemInputs('6x gtceu:zirconium_tritelluride_dust')
+.outputFluids('gtceu:dissolved_rare_earth_sludge')
+.duration(200)
+.EUt(512)
+.blastFurnaceTemp(3300)
+
+GTM.alloy_smelter('zirconium_tritelluride')
+.itemInputs('gtceu:zirconium_dust', '3x gtceu:tellurium_dust')
+.itemOutputs('4x gtceu:zirconium_tritelluride_dust')
+.duration(100)
+.EUt(512)
+
+GTM.large_chemical_reactor('split_of_the_century')
+.inputFluids('gtceu:dissolved_rare_earth_sludge', 'gtceu:liquid_helium 100')
+.outputFluids('gtceu:rarer_earth_sludge 500', 'gtceu:helium 100')
+.itemOutputs('6x gtceu:zirconium_yttride_dust', '3x gtceu:tritellurium_cerolanthanide_dust')
+.duration(400)
+.EUt(512)
 
 GTM.vacuum_freezer(('supercooled_ice'))
 .inputFluids(Fluid.of('gtceu:ice 50000'))
@@ -491,7 +503,7 @@ GTM.phase_alternator(('cryothetic_zero'))
 .EUt(2048)
 
 GTM.echo_imbuement_chamber(('cryosporsite_imbuement'))
-.inputFluids(Fluid.of('gtceu:cryothetic_zero 144'))
+.inputFluids('gtceu:cryothetic_zero 144')
 .itemInputs('gtceu:dysprosium_dust')
 .itemOutputs('gtceu:cryosporsite_dust')
 .duration(20)
@@ -937,7 +949,7 @@ GTM.chemical_vat(('dinitrogen_trioxide'))
 .duration(40)
 .EUt(2048)
 
-GTM.large_chemical_reactor(('ammonium_nitrate'))
+GTM.large_chemical_reactor(('ammonium_nitrite'))
 .inputFluids('gtceu:ammonium_carbonate 1000', 'gtceu:dinitrogen_trioxide 1000')
 .outputFluids('gtceu:ammonium_nitrite 2000', 'gtceu:carbon_dioxide 1000', 'water 1000')
 .duration(20)
@@ -1427,13 +1439,13 @@ const thelisttoendalllists = {
             ['mars_jarosite', 'mars_fluorapatite', 'mars_rhodite', 'mars_dilithium'],
             ['mars_phenakite', 'mars_kernite', 'mars_molybdenite', 'mars_martian_ostrum'],
             ['mars_ulvospinel', 'mars_sphalerite', 'mars_merrillite', 'mars_laurite'],
-            ['mars_taenite', 'mars_roquesite', 'mars_gallite', 'mars_sperrylite']
+            ['mars_taenite', 'mars_roquesite', 'mars_gallite', 'mars_sperrylite'],
         ],
         fluids: [
-            'gtceu:dilithium_zirconoaluminophosphocalcioferrisilicate 50000',
-            'gtceu:martian_bacterial_sludge 50000',
-            'gtceu:dilithium_zirconoaluminophosphocalcioferrisilicate 50000',
-            'gtceu:martian_bacterial_sludge 50000',
+            'gtceu:dilithium_zirconoaluminophosphocalcioferrisilicate 10000',
+            'gtceu:martian_bacterial_sludge 10000',
+            'gtceu:dilithium_zirconoaluminophosphocalcioferrisilicate 10000',
+            'gtceu:martian_bacterial_sludge 10000',
         ]
     },
     venus: {
@@ -1463,7 +1475,67 @@ mercury: {
         'gtceu:nickel 50000',
         'gtceu:iron 50000',
     ]
-},
+}}
+
+const thesecondlisttoendalllists = {
+    overworld: {
+        ores: [],
+        fluids: []
+    },
+    nether: {
+        ores: [],
+        fluids: []
+    },
+    end: {
+        ores: [],
+        fluids: []
+    },
+    undergarden: {
+        ores: [],
+        fluids: []
+    },
+    moon: {
+        ores: [],
+        fluids: []
+    },
+    mars: {
+        ores: [
+            ['mars_nulledryte', 'mars_merrillite', 'mars_rhenium_iii_sulfate', 'mars_oganesson'],
+            ['mars_xycrhovite', 'mars_dilithium', 'mars_phenakite', 'mars_martian_ostrum'],
+            ['mars_vheszcryl', 'mars_enstatite', 'mars_ulvospinel', 'mars_martian_ostrum'],
+            ['mars_grothemite', 'mars_jarosite', 'mars_taenite', 'mars_xenotime'],
+            ['mars_krethavine', 'mars_ulvospinel', 'mars_pyroxene', 'mars_blue_zircon'],
+            ['mars_orvexite', 'mars_laurite', 'mars_rhodite', 'mars_sperrylite'],
+            ['mars_phazdurite', 'mars_wustite', 'mars_merrillite', 'mars_gold']
+        ],
+        fluids: [
+            'gtceu:oganesson_plasma 1000',
+            'gtceu:antisource 5000',
+            'gtceu:oganesson_plasma 1000',
+            'gtceu:antisource 5000',
+            'gtceu:oganesson_plasma 1000',
+            'gtceu:antisource 5000',
+            'gtceu:oganesson_plasma 1000',
+        ]
+    },
+    venus: {
+        ores: [
+            ['venus_vaelthorite', 'venus_sulvarite', 'venus_sulfur', 'venus_gold'],
+            ['venus_kethrenite', 'venus_cindrax', 'venus_copper', 'venus_nickel'],
+            ['venus_thermastone', 'venus_pyrathite', 'venus_magnesium', 'venus_titanium'],
+            ['venus_vorrexinite', 'venus_aetheric_scumite', 'venus_osmium', 'venus_iridium']
+        ],
+        fluids: [
+            'gtceu:xenon 10000',
+            'gtceu:infernal_acid 5000',
+            'gtceu:nitrogen 25000',
+            'gtceu:carborane_acid 5000'
+        ]
+    },
+    mercury: {
+        ores: [],
+        fluids: []
+    }
 }
 
 Object.entries(thelisttoendalllists).forEach(function(dimEntry) {
@@ -1478,10 +1550,35 @@ Object.entries(thelisttoendalllists).forEach(function(dimEntry) {
             .addData("HeatPressure", 6)
             .addData("Temp", 600)
             .duration(200)
-            .EUt(2048)
+            .EUt(32768)
 
         ores.forEach(function(ore) {
-            recipe.itemOutputs('64x gtceu:' + ore + '_ore')
+            recipe.itemOutputs('16x gtceu:' + ore + '_ore')
+        })
+
+        var fluid = data.fluids[circuit]
+        if (fluid) {
+            recipe.outputFluids(fluid)
+        }
+    })
+})
+
+Object.entries(thesecondlisttoendalllists).forEach(function(dimEntry) {
+    var dimension = dimEntry[0]
+    var data = dimEntry[1]
+
+    data.ores.forEach(function(ores, circuit) {
+        var recipe = GTM.chemical_vat(dimension + '_amalgam_separation_alt_' + circuit)
+            .itemInputs('gtceu:' + dimension + '_ore_amalgam')
+            .inputFluids('gtceu:carborane_acid 1000')
+            .circuit(circuit + 10)
+            .addData("HeatPressure", 10)
+            .addData("Temp", 6000)
+            .duration(200)
+            .EUt(131072)
+
+        ores.forEach(function(ore) {
+            recipe.itemOutputs('16x gtceu:' + ore + '_ore')
         })
 
         var fluid = data.fluids[circuit]
@@ -2031,6 +2128,7 @@ GTM.cyclotron('platline_skip')
 .itemOutputs('5x gtceu:platinum_dust', '5x gtceu:palladium_dust', '5x gtceu:ruthenium_dust', '5x gtceu:rhodium_dust', '5x gtceu:osmium_dust', '5x gtceu:iridium_dust')
 .EUt(va.iv, 3.75)
 .duration(725)
+
 
 //QoL that i didn't add yet
 

@@ -1,6 +1,6 @@
 ServerEvents.recipes(event => {
 
-const RegexList =/^gtceu:(shaped|assembler|assembly_line)\/(ring_.*|small_gear_.*|drill_head_.*|tiny_dust_.*|screwdriver_.*|small_dust_.*|stick_.*|chainsaw_.*|plate_.*|nugget_.*|rotor_.*|spring_.*|foil_.*|bolt_.*|block_.*|gear_.*|fine_wire_.*|screw_.*|buzzsaw_.*|turbine_.*|wrench_.*|frame_.*|cover_.*_wire_gt_.*|(tiny|small|medium|large|huge|quadruple|nonuple)_.*_pipe|fluid_cell_.*|assemble_.*|coil_.*|scythe_.*|pickaxe_.*|shovel_.*|axe_.*|file_.*|wire_cutter_.*|_.*_hammer_.*|saw_.*|spade_.*|sword_.*|knife_.*|butchery_.*|crowbar_.*|hoe_.*|.*_wire_.*|wetware_.*)$/
+const RegexList =/^gtceu:(shaped|assembler|assembly_line)\/(ring_.*|small_gear_.*|drill_head_.*|tiny_dust_.*|screwdriver_.*|small_dust_.*|stick_.*|chainsaw_.*|plate_.*|nugget_.*|rotor_.*|spring_.*|foil_.*|bolt_.*|block_.*|gear_.*|fine_wire_.*|screw_.*|buzzsaw_.*|turbine_.*|wrench_.*|frame_.*|cover_.*_wire_gt_.*|(tiny|small|medium|large|huge|quadruple|nonuple)_.*_pipe|fluid_cell_.*|assemble_.*|coil_.*|scythe_.*|pickaxe_.*|shovel_.*|axe_.*|file_.*|wire_cutter_.*|_.*_hammer_.*|saw_.*|spade_.*|sword_.*|knife_.*|butchery_.*|crowbar_.*|hoe_.*|.*_wire_.*|superconducting_coil_.*)$/
 
 const RecTyp = ["gtceu:assembler", 'gtceu:assembly_line', 'gtceu:circuit_assembler', 'gtceu:shaped', 'crafting_shaped']
 
@@ -423,21 +423,96 @@ event.custom(
 }
 )
 
+const GTM = event.recipes.gtceu
 
+GTM.macerator('macerate_zinc_plate')
+.itemInputs('gtceu:zinc_plate')
+.itemOutputs('gtceu:zinc_dust')
+.duration(65)
+.EUt(2)
 
+GTM.bender('bend_zinc_plate_to_foil')
+.itemInputs('gtceu:zinc_plate')
+.itemOutputs('4x gtceu:zinc_foil')
+.duration(65)
+.EUt(24)
 
+GTM.bender('bend_zinc_plate_to_double_plate')
+.itemInputs('2x gtceu:zinc_plate')
+.itemOutputs('gtceu:double_zinc_plate')
+.duration(130)
+.EUt(96)
 
+GTM.arc_furnace('arc_zinc_plate')
+.itemInputs('gtceu:zinc_plate')
+.itemOutputs('gtceu:zinc_ingot')
+.inputFluids('#ad_astra:oxygen 65')
+.duration(130)
+.EUt(24)
 
+GTM.extractor('extract_zinc_plate')
+.itemInputs('gtceu:zinc_plate')
+.outputFluids('gtceu:zinc 144')
+.duration(130)
+.EUt(24)
 
+event.custom(
+{
+  "type": "compactcrafting:miniaturization",
+  "version": 1,
+  "recipeSize": 5,
+  "layers": [
+    {
+      "type": "compactcrafting:filled",
+      "component": "G"
+    },
+    {
+      "type": "compactcrafting:hollow",
+      "wall": "G"
+    },
+    {
+      "type": "compactcrafting:mixed",
+      "pattern": [
+        ["G", "G", "G", "G", "G"],
+        ["G", "-", "-", "-", "G"],
+        ["G", "-", "O", "-", "G"],
+        ["G", "-", "-", "-", "G"],
+        ["G", "G", "G", "G", "G"]
+      ]
+    },
+    {
+      "type": "compactcrafting:hollow",
+      "wall": "G"
+    },
+    {
+      "type": "compactcrafting:filled",
+      "component": "G"
+    }
+  ],
 
+  "catalyst": {
+    "item": "gtceu:gravi_star"
+  },
 
+  "components": {
+    "G": {
+      "type": "compactcrafting:block",
+      "block": "gtceu:neutronium_block"
+    },
+    "O": {
+      "type": "compactcrafting:block",
+      "block": "gtceu:stellarite_block"
+    }
+  },
 
-
-
-
-
-
-
+  "outputs": [
+    {
+      "item": "gtceu:pulsar",
+      "Count": 1
+    }
+  ]
+}
+)
 
 
 

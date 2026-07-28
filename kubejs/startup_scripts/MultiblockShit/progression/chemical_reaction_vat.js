@@ -1,6 +1,6 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 event.create('chemical_vat')
-.category('hamburgercheeseburgerbigmacwhopperhamburgercheeseburgerbigmacwhopper')
+.category('technological')
 .setMaxIOSize(6, 6, 4, 4)
 .setSlotOverlay(false, false, false, GuiTextures.MOLECULAR_OVERLAY_1)
 .setSlotOverlay(false, false, true, GuiTextures.MOLECULAR_OVERLAY_2)
@@ -27,7 +27,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
     .rotationState(RotationState.NON_Y_AXIS)
     .machine((holder) => new $CoilWorkableElectricMultiblockMachine(holder)) 
     .recipeTypes([GTRecipeTypes.get('chemical_vat'), GTRecipeTypes.get('large_chemical_reactor'), GTRecipeTypes.get('chemical_reactor')])
-    .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe) => TemperatureModifier(machine, recipe), (machine, recipe) => PressureModifier(machine, recipe)])
+    .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe) => TemperatureModifier(machine, recipe), (machine, recipe) => PressureModifier(machine, recipe), (machine, recipe) => GTRecipeModifiers.pyrolyseOvenOverclock(machine, recipe)])
     .appearanceBlock(() => Block.getBlock("gtceu:inert_machine_casing"))
     .pattern(definition => FactoryBlockPattern.start()
     .aisle("AABBBBBAA", "AABAAABAA", "ABBAAABBA", "ABAAAAABA", "ABAAAAABA", "ABAAAAABA", "ABBAAABBA", "AABAAABAA", "AABBBBBAA")

@@ -10,7 +10,7 @@ Multiblocks:
 
   # Whether the Synthesis Vessel is Enabled
   # Default = True
-  SynthesisVessel: true
+  SynthesisVessel: false
 
   # Whether the Large Pyrolysis Oven is Enabled
   # Default = True
@@ -18,7 +18,7 @@ Multiblocks:
 
   # Whether the Advanced Fusion Reactors are Enabled
   # Default = True
-  AdvancedFusionReactors: true
+  AdvancedFusionReactors: false
 
   # Whether the Compact Assembly Line is Enabled
   # Tip: Controller recipe should contain 4 Assembly Line controllers

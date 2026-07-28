@@ -280,14 +280,6 @@ W: '#forge:tools/wrenches'
 // G - R - E - G - T - E - C - H from here
 
 
-
-GTM.assembler(('magikstone_casing'))
-.itemInputs('6x gtceu:condensed_mana_plate', 'gtceu:source_frame')
-.itemOutputs('3x gtceu:magikstone_casing')
-.duration(50)
-.circuit(6)
-.EUt(16)
-
 GTM.electrolyzer(('decomposition_electrolyzing_sculk'))
 .itemInputs('gtceu:sculk_dust')
 .itemOutputs('gtceu:deepslate_dust', 'gtceu:echo_dust')
@@ -300,7 +292,6 @@ GTM.fluid_solidifier(('echo_shard_catalyst_crystalizing'))
 .itemOutputs('2x minecraft:echo_shard')
 .duration(20)
 .EUt(16)
-
 
 GTM.forming_press(('sheep_spawn_egg'))
 .itemInputs('8x minecraft:mutton', 'egg')
