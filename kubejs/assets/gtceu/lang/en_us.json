@@ -215,17 +215,17 @@
 
     "§7 -- MARTIAN ORES --": "",
 
-    "material.gtceu.dilithium": "§6Dilithium, §r[A]",
-    "material.gtceu.kraethite": "§3Kraethite, §r[A]",
-    "material.gtceu.xycrhovite": "§dXycrhovite, §r[A]",
-    "material.gtceu.vheszcryl": "§dVheszcryl, §r[A]",
-    "material.gtceu.nulledryte": "§1Nulle§2dryte, §r[A]",
+    "material.gtceu.dilithium": "§6Dilithium §r[A]",
+    "material.gtceu.kraethite": "§3Kraethite §r[A]",
+    "material.gtceu.xycrhovite": "§dXycrhovite §r[A]",
+    "material.gtceu.vheszcryl": "§dVheszcryl §r[A]",
+    "material.gtceu.nulledryte": "§1Nulle§2dryte §r[A]",
     "material.gtceu.grothemite": "§6Grothemite, §r[A]",
-    "material.gtceu.phazdurite": "§0Phaz§cdur§4ite, §r[A]",
-    "material.gtceu.orvexite": "§2Orvexite, §r[A]",
-    "material.gtceu.krethavine": "§9Kretha§bvine, §r[A]",
-    "material.gtceu.chronosite": "§1Chrono§bsite, §r[A]",
-    "material.gtceu.vhaelcryite": "§dVhaelcryite, §r[A]",
+    "material.gtceu.phazdurite": "§0Phaz§cdur§4ite §r[A]",
+    "material.gtceu.orvexite": "§2Orvexite §r[A]",
+    "material.gtceu.krethavine": "§9Kretha§bvine §r[A]",
+    "material.gtceu.chronosite": "§1Chrono§bsite §r[A]",
+    "material.gtceu.vhaelcryite": "§dVhaelcryite §r[A]",
 
     "§7 -- VENUS ORE PROCESSING INTERMEDIATES --": "",
 

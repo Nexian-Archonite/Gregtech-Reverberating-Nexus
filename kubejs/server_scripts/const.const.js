@@ -192,7 +192,7 @@ const types = [
 const researchTypes = ['organism_assembly_line', 'component_part_assembly'];
 
 global.ComponentResearch = (event, recipeId, researchItem, cwuT, totalCWU, euT, recipeType) => {
-    const dataItem = (cwuT > 0 && cwuT < 32) ? 'gtceu:data_orb' : (cwuT < 160) ? 'gtceu:data_module' : 'gtceu:living_disk';
+    const dataItem = (cwuT > 0 && cwuT < 32) ? 'gtceu:data_orb' : (cwuT < 144) ? 'gtceu:data_module' : 'gtceu:living_disk';
     const researchId = `1x_${researchItem.replace(':', '_')}`;
 
     event.recipes.gtceu.research_station(`component_research_${researchId}`)

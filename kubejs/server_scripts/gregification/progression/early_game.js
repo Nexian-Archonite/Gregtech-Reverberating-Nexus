@@ -178,6 +178,7 @@ event.recipes.create.compacting('gtceu:compressed_fireclay', ['gtceu:fireclay_du
 
 
 global.dualCasing('condensed_mana', 'source', 'magikstone_casing')
+global.dualCasing('sulvarium-over-kraethite_steel', 'cindralite', 'sulvan_steel_casing')
 
 
 event.campfireCooking('kubejs:boiling_water_bucket', 'minecraft:water_bucket', 0, 600)

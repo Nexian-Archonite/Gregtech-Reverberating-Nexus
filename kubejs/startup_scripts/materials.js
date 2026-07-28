@@ -1318,6 +1318,7 @@ event.create('cindralite')
     .color(0x888888).secondaryColor(0xff3300)
     .iconSet(GEM_HORIZONTAL)
     .element('cindralite')
+    .flags(rod, frame)
 
 event.create('aetherite') 
     .gem()
@@ -1490,6 +1491,7 @@ event.create('indium-vor-dys-cad_supersolder_alloy')
     .flags(no_decomp)
     .components('47x indium', '6x vorrexite', '3x dysprosium', '8x cadmium', '3x tin', '7x darmstadtium', '2x zirconium')
     .blastTemp(11000, null, va.uhv, 750)
+    .liquid(8000)
 
 event.create('sulvarium-over-kraethite_steel')
     .ingot()
@@ -1498,6 +1500,7 @@ event.create('sulvarium-over-kraethite_steel')
     .components('6x sulvarium', '6x kraethite', '3x antisource', '4x cadmium', '2x nexus', '2x awakened_draconium')
     .cableProperties(v.uhv, 28, 0, true)
     .blastTemp(11000, null, va.uhv, 750)
+    .liquid(11000)
 
 
 //Subatomic / Atomic Physics here:
@@ -2767,7 +2770,9 @@ primordials.forEach(p => {
         .color(p.primary)
         .secondaryColor(p.secondary)
 })
-
+event.create('primordial_essence')
+        .liquid(new GTFluidBuilder().customStill().temperature(303))
+        .color(0x006666)
 // ============================================================
 // GT:RN ALIEN ORE PROCESSING — INTERMEDIATE FLUID REGISTRATIONS
 // ============================================================
@@ -3056,6 +3061,8 @@ event.create('naquadria_nitrate_solution')
     GTMaterials.SiliconDioxide.setProperty(PropertyKey.ORE, new $OreProperty())
     GTMaterials.Rutile.setProperty(PropertyKey.ORE, new $OreProperty())
     GTMaterials.Europium.setProperty(PropertyKey.ORE, new $OreProperty())
+    GTMaterials.Osmium.setProperty(PropertyKey.ORE, new $OreProperty())
+    GTMaterials.Iridium.setProperty(PropertyKey.ORE, new $OreProperty())
     
     
     
