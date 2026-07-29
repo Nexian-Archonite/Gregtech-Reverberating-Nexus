@@ -1410,7 +1410,7 @@ GTM.assembly_line('aetherite_thermostorm_chamber')
 .itemInputs('gtceu:pyrathene_frame', '4x #gtceu:circuits/uhv', '4x gtceu:dense_sulvarium-over-kraethite_steel_plate', '8x gtceu:uv_electric_pump', '8x gtceu:stellarite_normal_fluid_pipe', '64x gtceu:fine_naquadrium_wire', '16x gtceu:sulvarium-over-kraethite_steel_bolt')
 .inputFluids('gtceu:indium-vor-dys-cad_supersolder_alloy 9216', 'gtceu:stellarite 2304', 'gtceu:polyether_ether_ketone 1152')
 .itemOutputs('gtceu:aetherite_thermostorm_chamber')
-.stationResearch(b => b.researchStack('gtceu:hyperfrost').EUt(va.uhv).CWUt(144, 262144))
+.stationResearch(global.AssemblyLineResearch(event, 'hyperfrost', 'gtceu:hyperfrost', 144, 262144, va.zpm))
 .duration(1000)
 .EUt(va.uhv, 2.5)
 

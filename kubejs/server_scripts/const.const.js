@@ -189,12 +189,13 @@ const types = [
 
 // thank you Star Technology for the inspiration
 
-const researchTypes = ['organism_assembly_line', 'component_part_assembly'];
+const researchTypes = ['organism_assembly_line', 'component_part_assembly', 'assembly_line']
 
 global.ComponentResearch = (event, recipeId, researchItem, cwuT, totalCWU, euT, recipeType) => {
-    const dataItem = (cwuT > 0 && cwuT < 32) ? 'gtceu:data_orb' : (cwuT < 144) ? 'gtceu:data_module' : 'gtceu:living_data_disk';
-    const researchId = `1x_${researchItem.replace(':', '_')}`;
+    const dataItem = (cwuT > 140) ? 'gtceu:living_data_disk' : 'gtceu:data_module'
+    const researchId = `1x_${researchItem.replace(':', '_')}`
 
+    console.log('recipe:', recipeId, 'cwuT:', cwuT)
     event.recipes.gtceu.research_station(`component_research_${researchId}`)
         .itemInputs(dataItem)
         .itemInputs(researchItem)
@@ -206,21 +207,21 @@ global.ComponentResearch = (event, recipeId, researchItem, cwuT, totalCWU, euT, 
         )
         .CWUt(cwuT)
         .totalCWU(totalCWU)
-        .EUt(euT);
+        .EUt(euT)
 
     return b => b
         .researchStack(Item.of(researchItem))
         .CWUt(cwuT)
-        .EUt(euT);
-};
+        .EUt(euT)
+}
 
 researchTypes.forEach(type => {
-    const constName = type.split('_').map(w => w[0].toUpperCase() + w.slice(1)).join('') + 'Research';
+    const constName = type.split('_').map(w => w[0].toUpperCase() + w.slice(1)).join('') + 'Research'
     
     global[constName] = (event, recipeId, researchItem, cwuT, totalCWU, euT) => {
-        return global.ComponentResearch(event, recipeId, researchItem, cwuT, totalCWU, euT, `gtceu:${type}`);
-    };
-});
+        return global.ComponentResearch(event, recipeId, researchItem, cwuT, totalCWU, euT, `gtceu:${type}`)
+    }
+})
 
 
 ServerEvents.recipes(event => {
@@ -289,7 +290,7 @@ const transcendentBlastTier = [
     { name: 'omnium', blastTemp: 19449, EUt: va.uhv, duration: 1600 },
     { name: 'sulvarium-over-kraethite_steel', blastTemp: 11000, EUt: va.uv, duration: 750 },
     { name: 'aetheric-thermavyte', blastTemp: 10799, EUt: va.uhv, duration: 800 }
-];
+]
 
 GTM.bender('bend_vorrexite_to_foil')
 .itemInputs('gtceu:vorrexite_plate')
@@ -322,7 +323,7 @@ const transcendentAlloyBlastTier = [
     {
         name: 'sulvarium-over-kraethite_steel',
         blastTemp: 11000,
-        EUt: va.uhv,
+        EUt: va.uv,
         duration: 12937,
         components: [
             '6x sulvarium', 
@@ -357,6 +358,10 @@ function ogConsumption(blastTemp) {
     return Math.max(25, Math.floor(base * mod))
 }
 
+const blastDurationMap = {}
+transcendentBlastTier.forEach(mat => {
+    blastDurationMap[mat.name] = mat.duration
+})
 
 transcendentBlastTier.forEach(mat => {
     GTM.electric_blast_furnace(`blast_${mat.name}_gas`)
@@ -364,7 +369,7 @@ transcendentBlastTier.forEach(mat => {
         .inputFluids(`gtceu:oganesson ${ogConsumption(mat.blastTemp)}`)
         .itemOutputs(`gtceu:hot_${mat.name}_ingot`)
         .blastFurnaceTemp(mat.blastTemp)
-        .duration(Math.floor((0.67 - 0.03 * Math.log2(mat.blastTemp / 10000)) * mat.duration))
+        .duration(Math.floor((0.60 - 0.03 * Math.log2(mat.blastTemp / 10000)) * mat.duration))
         .EUt(mat.EUt)
     if (mat.name !== 'aetheric-thermavyte') {
         event.remove({id: `gtceu:vacuum_freezer/cool_hot_${mat.name}_ingot`})
@@ -380,6 +385,7 @@ transcendentBlastTier.forEach(mat => {
 })
 
 transcendentAlloyBlastTier.forEach(mat => {
+    const baseDuration = blastDurationMap[mat.name] ?? mat.duration * 0.1
     const totalMb = mat.components.reduce((sum, c) => {
         const amount = parseInt(c.split('x')[0].trim())
         return sum + (amount * 144)
@@ -395,7 +401,7 @@ transcendentAlloyBlastTier.forEach(mat => {
         .inputFluids(`gtceu:bose-einstein_oganesson-xenon_trifluoride_condensate_plasma ${25*Math.log10(totalMb)}`)
         .outputFluids(`gtceu:molten_${mat.name} ${totalMb}`, `gtceu:oganesson-xenon_trifluoride ${25*Math.log10(totalMb)}`)
         .blastFurnaceTemp(mat.blastTemp)
-        .duration((0.67 - 0.004 * Math.log2(totalMb)) * mat.duration)
+        .duration((0.60 - 0.02 * Math.log2(totalMb)) * mat.duration)
         .EUt(mat.EUt)
         if (mat.name !== 'aetheric-thermavyte') {
         event.remove({id: `gtceu:vacuum_freezer/${mat.name}`})
@@ -404,7 +410,7 @@ transcendentAlloyBlastTier.forEach(mat => {
         .inputFluids(`gtceu:molten_${mat.name} 144`, `gtceu:bose-einstein_oganesson-xenon_trifluoride_condensate_plasma ${ogConsumption(mat.blastTemp)}`)
         .itemOutputs(`gtceu:${mat.name}_ingot`)
         .outputFluids(`gtceu:oganesson-xenon_trifluoride ${ogConsumption(mat.blastTemp)}`)
-        .duration(Math.floor((0.60 - 0.03 * Math.log2(mat.blastTemp / 10000)) * mat.duration))
+        .duration(Math.floor((0.60 - 0.03 * Math.log2(mat.blastTemp / 10000)) *baseDuration))
         .EUt(mat.EUt * 0.8)
     
 

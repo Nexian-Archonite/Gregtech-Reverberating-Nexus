@@ -1,4 +1,4 @@
-const $AssemblyLineMulti = Java.loadClass('com.gregtechceu.gtceu.common.machine.multiblock.electric.AssemblyLineMachine');
+const $AssemblyLineMulti = Java.loadClass('com.gregtechceu.gtceu.common.machine.multiblock.electric.AssemblyLineMachine')
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('component_part_assembly')
@@ -8,9 +8,9 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
         .setHasResearchSlot(true)
         .setSound(GTSoundEntries.ASSEMBLER)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE, FillDirection.LEFT_TO_RIGHT)
-        .setMaxTooltips(4);
+        .setMaxTooltips(4)
 
-});
+})
 
 GTCEuStartupEvents.registry('gtceu:machine', event => {
 
@@ -45,6 +45,6 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .build())
     ["partSorter(java.util.function.Function)"]((mc) => $AssemblyLineMulti.partSorter(mc))
         .workableCasingModel('gtceu:block/casings/solid/vhaelcryite_casing',
-            'gtceu:block/multiblock/implosion_compressor');
+            'gtceu:block/multiblock/implosion_compressor')
 
-});
+})

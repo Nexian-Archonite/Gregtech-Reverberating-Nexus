@@ -113,7 +113,7 @@ event.addAdvanced('gtceu:b_nand_memory_chip', (item, advanced, text) => {
 
 event.addAdvanced('gtceu:b_nor_memory_chip', (item, advanced, text) => {
     text.add(1, Text.of('§7Biological NOR Logic Gate'))
-});
+})
 
 [
     'catalyst_core',
