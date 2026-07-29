@@ -136,7 +136,6 @@
     "material.gtceu.enriched_naquadrium_boride": "§6Enriched Naquadrium Boride",
     "material.gtceu.altaite": "§5Altaite",
     "material.gtceu.pentacalc_chloride": "§7Pentacalcium Chloride",
-    "material.gtceu.rhenium_heptoxide": "§6Dirhen Heptoxide",
     "material.gtceu.rhenium_fluorosulfate": "§eRhenium Flurosulfate",
     "material.gtceu.tiemannite": "§4Tiemannite",
     "material.gtceu.naquadrium_boride": "§aNaquadrium Boride",
@@ -172,7 +171,7 @@
     "material.gtceu.axiom-re": "§6Axiom-Re",
 
     "material.gtceu.radioactive_bronze_ore": "Radioactive.. Radioactive Bronze? How the fuck is that even possible? Like... according to my knowledge, there is not even a natural source of Bronze, let alone Radioactive‽",
-    "material.gtceu.bullshit": "Aha, you scallywag! you dare to touch my wholy and 100% real not clickbait lang file? thats horse radish, thats a load of baloney, scram buster, get outta town! shoo, this town ain't big enough both of us, you hillbilly chair heater",
+    "material.gtceu.bullshit": "Aha, you scallywag! you dare to touch my holy and 100% real not clickbait lang file? thats horse radish, thats a load of baloney, scram buster, get outta town! shoo, this town ain't big enough for the both of us, you hillbilly chair heater",
 
     "material.gtceu.andesite_alloy": "§8Andesite Alloy",
     "material.gtceu.igneous_bronze": "§6Igneous Bronze",
@@ -205,7 +204,7 @@
     "material.gtceu.vorrexinite": "§5Vorrexinite §r[A]",
     "material.gtceu.vorrexite": "§5Vorrexite §r[A]",
     "material.gtceu.thermastone": "§6Thermastone §r[A]",
-    "material.gtceu.thermavyte": "§6Thermavyte §r[A]",
+    "material.gtceu.thermavyte": "§4Thermavyte §r[A]",
     "material.gtceu.cindrax": "§7Cindrax §r[A]",
     "material.gtceu.cindralite": "§7Cindralite §r[A]",
     "material.gtceu.aetheric_palladite": "§2Aetheric Palladite §r[A]",
@@ -215,7 +214,6 @@
 
     "§7 -- MARTIAN ORES --": "",
 
-    "material.gtceu.dilithium": "§6Dilithium §r[A]",
     "material.gtceu.kraethite": "§3Kraethite §r[A]",
     "material.gtceu.xycrhovite": "§dXycrhovite §r[A]",
     "material.gtceu.vheszcryl": "§dVheszcryl §r[A]",
@@ -235,7 +233,7 @@
     "material.gtceu.zinc_chloride_solution": "§fZinc Chloride Solution",
     "material.gtceu.kethrenite_ammine_solution": "§4Kethrenite Ammine Solution",
     "material.gtceu.pgm_chloride_solution": "§5PGM Chloride Solution",
-    "material.gtceu.thermavyte_oxide_dust": "§6Thermavyte Oxide",
+    "material.gtceu.thermavyte_oxide": "§6Thermavyte Oxide",
     "material.gtceu.chromium_trioxide_solution": "§cChromium Trioxide Solution",
     "material.gtceu.cindrax_alkaline_melt": "§7Cindrax Alkaline Melt",
     "material.gtceu.sodium_chloride_solution": "§fSodium Chloride Solution",
@@ -274,10 +272,22 @@
     "-------- Alien Alloys --------": "",
 
     "material.gtceu.chronocrytic-vhaelsalite": "§1Chrono§dcrytic-§dVhael§bsalite §r[A]",
-    "material.gtceu.sulvarium--over-kraethite_steel": "§6Sulvarium§r-Over-§bKraethite Steel §r[A]",
+    "material.gtceu.sulvarium-over-kraethite_steel": "§6Sulvarium§r-Over-§bKraethite Steel §r[A]",
     "material.gtceu.indium-vor-dys-cad_supersolder_alloy": "§5Indium§r-§cVor§r-§6Dys§r-§7Cad§r Supersolder Alloy",
+    "material.gtceu.aetheric-thermavyte": "§2Aetherite§r-§4Thermavyte",
+    "material.gtceu.bose-einstein_oganesson-xenon_trifluoride_condensate": "§aBose-Einstein §1Oganesson§r-§bXenon Trifluoride§r Condensate",
 
+    "-------- Alien Related Compounds --------": "",
 
+    "material.gtceu.xenon_difluoride": "§bXenon Bifluoride",
+    "material.gtceu.xenon_trifluoride": "§bXenon Trifluoride",
+    "material.gtceu.xenon_tetrafluoride": "§bXenon Tetrafluoride",
+
+    "material.gtceu.antimony_pentafluoride": "§7Antimony §bPentafluoride",
+    "material.gtceu.antimony_hexafluoride": "§7Antimony §bHexafluoride",
+
+    "material.gtceu.xenon_trifluoride-hexafluoroantimonate": "§bXenon Trifluoride§r - Hexa§bfluoro§7antimonate",
+    "material.gtceu.oganesson-xenon_trifluoride": "§1Oganesson§r-§bXenon Trifluoride",
 
 
     "material.gtceu.primordial_essence": "§1Primordial §kEssence",
@@ -322,6 +332,10 @@
     "material.gtceu.tributyl_phosphate": "Tributyl Phosphate",
     "material.gtceu.oxalic_acid": "Oxalic Acid",
 
+    "material.gtceu.hexene": "Hexene",
+    "material.gtceu.hexanol": "Hexene",
+    "material.gtceu.dihexyl_phosphoric_acid": "Dihexyl Phosphoric Acid",
+
     "material.gtceu.ammonium": "Ammonium",
     "material.gtceu.ammonium_carbonate": "Ammonium Carbonate",
     "material.gtceu.dinitrogen_trioxide": "Dinitrogen Trioxide",
@@ -342,6 +356,19 @@
     "material.gtceu.purified_netherite_sludge": "§7Purified Netherite Sludge",
     "material.gtceu.caesium_hydroxide": "Caesium Hydroxide",
     "material.gtceu.caesium_sulfate": "Caesium Sulfate",
+
+    "material.gtceu.rare_earth_sludge": "§7Rare Earth Sludge",
+    "material.gtceu.zirconium_yttride": "§bZirconium §7Yttride",
+    "material.gtceu.zirconium_tritelluride": "§bZirconium §eTritelluride",
+    "material.gtceu.dissolved_rare_earth_sludge": "§7Dissolved Rare Earth Sludge",
+    "material.gtceu.tritellurium_cerolanthanide": "§eTritellurium §7Cero§6lanthanide",
+    "material.gtceu.rarer_earth_sludge": "§eRarer Earth Sludge",
+    "material.gtceu.dhpa-rarer_earth_complex": "§eDHPA-Rarer Earth Complex",
+    "material.gtceu.rarest_earth_sludge": "§6Rarest Earth Sludge",
+    "material.gtceu.dtpa-rarest_earth_complex": "§eDTPA-Rarest Earth Complex",
+    
+
+    
 
 
     "material.gtceu.nuclear_steam": "§8Nuclear Steam",
@@ -476,6 +503,7 @@
     "material.gtceu.jarosite": "§6Jarosite",
     "material.gtceu.fluorapatite": "§aFluorapatite",
     "material.gtceu.rhodite": "§7Rhodite",
+    "material.gtceu.dilithium": "§6Dilithium",
     "material.gtceu.anti-dilithide": "§9Anti-Dilithide",
     "material.gtceu.cryostatic-antilithide": "§9Cryostatic-Antilithide",
     "material.gtceu.phenakite": "§fPhenakite",
@@ -591,6 +619,7 @@
     "gtceu.ore_processing_plant": "§6Primitive Ore Processing",
     "gtceu.electric_ore_processing_plant": "§7Ore Factory Processing",
     "gtceu.plant_ore_processing": "§7Advanced Plant Processing",
+    "gtceu.array_ore_processing": "§dArray Ore Processing",
     "gtceu.primitive_coking_array": "§6Primitive Array Coking",
     "gtceu.interstellar_miner": "§2Interstellar Mining",
     "gtceu.supercritical_fission": "§7Heart of Harmonia Burning",
@@ -606,7 +635,7 @@
     "block.gtceu.effervescent_echoite_exile": "§1Effervescent Echonite Exile",
     "block.gtceu.metaphysical_metallurgy_tainter": "§dMetaphysical Metallurgy Tainter",
     "block.gtceu.industrial_refraction_kiln": "§cIndustrial Refractory Kiln",
-    "block.gtceu.superphasic_mixer": "Supermixer 3000™",
+    "block.gtceu.phase_alternator": "Phase Alternator",
     "block.gtceu.mechanical_conjuration_institute": "§2Mechanical Conjuration Institute",
     "block.gtceu.chemical_reaction_vat": "§8Chemical Reaction Vat",
     "block.gtceu.cyclotron": "§2Cyclotron",
@@ -625,6 +654,7 @@
     "block.gtceu.primitive_processing_factory": "§6Primitive Processing Factory",
     "block.gtceu.ore_processing_factory": "§7Ore Processing Factory",
     "block.gtceu.ore_processing_plant": "§7Ore Processing Plant",
+    "block.gtceu.ore_processing_array": "§dOre Processing Array",
     "block.gtceu.primitive_coking_array": "§6Primitive Coking Array",
     "block.gtceu.interstellar_miner": "§2Interstellar Miner",
     "block.gtceu.heart_of_harmonia": "§7Heart of Harmonia",
@@ -633,6 +663,7 @@
     "block.gtceu.solar_collector": "§7Solar Collector",
     "block.gtceu.lunar_collector": "§7Lunar Collector",
     "block.gtceu.component_part_assembly": "§dComponent Part Assembler",
+    "block.gtceu.hyperfrost": "Hyperfrost", 
 
     
     "block.gtceu.steel_gearbox": "§bNexus Steel §rGearbox Casing",

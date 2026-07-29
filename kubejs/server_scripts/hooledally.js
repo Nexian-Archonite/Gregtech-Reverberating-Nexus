@@ -511,8 +511,7 @@ event.custom(
       "Count": 1
     }
   ]
-}
-)
+})
 
 
 

@@ -286,7 +286,7 @@ GTM.assembly_line('organism_assembly_line')
 .itemOutputs('gtceu:organism_assembly_line')
 .duration(12000)
 .EUt(32768)
-["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack(Item.of('gtceu:luv_assembler')).EUt(GTValues.VA[GTValues.IV]).duration(2400))
+["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack(Item.of('biomancy:bio_lab')).EUt(GTValues.VA[GTValues.IV]).duration(2400))
    
 GTM.organism_assembly_line('organism_assembly_line')
 .itemInputs('2x gtceu:flesh_alloy_casing', '24x gtceu:flesh_alloy_plate', '16x gtceu:flesh_alloy_rod', '12x gtceu:double_flesh_alloy_plate', 'biomancy:bio_forge', 'biomancy:bio_lab', 'biomancy:primordial_cradle', '64x gtceu:stem_cells')
@@ -295,7 +295,7 @@ GTM.organism_assembly_line('organism_assembly_line')
 .duration(2000)
 .EUt(2048)
 .cleanroom(CleanroomType.STERILE_CLEANROOM)
-   
+.stationResearch(global.OrganismAssemblyLineResearch(biomanced, 'organism_assembly_line', 'biomancy:bio_lab', 32, 51200, va.luv))
 
 const nutrientRecipes = [
 ["minecraft:bamboo", 2, 260, 1],

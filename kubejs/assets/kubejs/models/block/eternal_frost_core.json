@@ -4,9 +4,9 @@
 	"parent": "heat_core",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "kubejs:block/smolding_heat_core",
-		"2": "kubejs:block/smolding_heat_core_bottom",
-		"3": "kubejs:block/smolding_heat_core_top",
+		"0": "kubejs:block/power_cores/frost_core_core",
+		"2": "kubejs:block/power_cores/frost_core_bottom",
+		"3": "kubejs:block/power_cores/frost_core_top",
 		"particle": "kubejs:block/smolding_heat_core"
 	},
 	"elements": [

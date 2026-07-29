@@ -473,7 +473,7 @@ GTM.electric_blast_furnace('rare_earth_kidnapping')
 
 GTM.alloy_smelter('zirconium_tritelluride')
 .itemInputs('gtceu:zirconium_dust', '3x gtceu:tellurium_dust')
-.itemOutputs('4x gtceu:zirconium_tritelluride_dust')
+.itemOutputs('4x gtceu:zirconium_tritelluride_ingot')
 .duration(100)
 .EUt(512)
 
@@ -483,6 +483,38 @@ GTM.large_chemical_reactor('split_of_the_century')
 .itemOutputs('6x gtceu:zirconium_yttride_dust', '3x gtceu:tritellurium_cerolanthanide_dust')
 .duration(400)
 .EUt(512)
+
+GTM.chemical_reactor('hexanal_synthesis')
+.inputFluids('gtceu:ethylene 3000')
+.notConsumable('gtceu:chromium_dust')
+.outputFluids('gtceu:hexene')
+.duration(200)
+.EUt(512)
+.circuit(17)
+
+GTM.large_chemical_reactor('wetting_the_hexanol')
+.inputFluids('gtceu:hexene', 'water 100', 'gtceu:sulfuric_acid 250')
+.outputFluids('gtceu:hexanol', 'gtceu:diluted_sulfuric_acid 250')
+.duration(200)
+.EUt(512)
+
+GTM.large_chemical_reactor('dihexyl_phosphoric_acid')
+.inputFluids('gtceu:hexanol 2000', 'gtceu:phosphoryl_chloride')
+.outputFluids('gtceu:dihexyl_phosphoric_acid', 'gtceu:hydrochloric_acid')
+.duration(200)
+.EUt(2048)
+
+GTM.chemical_reactor('dihexyl_sacrificing')
+.inputFluids('gtceu:rarer_earth_sludge', 'gtceu:dihexyl_phosphoric_acid')
+.outputFluids('gtceu:rarest_earth_sludge 500', 'gtceu:dhpa-rarer_earth_complex')
+.duration(200)
+.EUt(2048)
+
+GTM.chemical_reactor('dtpa_sacrificing')
+.inputFluids('gtceu:rarest_earth_sludge', 'gtceu:diethylenetriaminepentaacetic_acid 500')
+.outputFluids('gtceu:dtpa-rarest_earth_complex')
+.duration(200)
+.EUt(2048)
 
 GTM.vacuum_freezer(('supercooled_ice'))
 .inputFluids(Fluid.of('gtceu:ice 50000'))
@@ -995,7 +1027,7 @@ GTM.large_chemical_reactor(('phosphorus_trichloride'))
 .EUt(512)
 
 GTM.large_chemical_reactor(('phosphoryl_chloride'))
-.inputFluids('gtceu:phosphorus_trichloride 1000', 'gtceu:oxygen 500')
+.inputFluids('gtceu:phosphorus_trichloride 1000', 'gtceu:oxygen 250')
 .outputFluids('gtceu:phosphoryl_chloride 1000')
 .duration(20)
 .EUt(512)
@@ -1509,13 +1541,13 @@ const thesecondlisttoendalllists = {
             ['mars_phazdurite', 'mars_wustite', 'mars_merrillite', 'mars_gold']
         ],
         fluids: [
-            'gtceu:oganesson_plasma 1000',
+            'gtceu:oganesson 1000',
             'gtceu:antisource 5000',
-            'gtceu:oganesson_plasma 1000',
+            'gtceu:oganesson 1000',
             'gtceu:antisource 5000',
-            'gtceu:oganesson_plasma 1000',
+            'gtceu:oganesson 1000',
             'gtceu:antisource 5000',
-            'gtceu:oganesson_plasma 1000',
+            'gtceu:oganesson 1000',
         ]
     },
     venus: {
@@ -1777,18 +1809,18 @@ GTM.brewery('irons_spellbooks:compat/legendary_ink')
 .duration(20)
 .EUt(512)
 
+GTM.alloy_smelter('irons_spellbooks:compat/cinder_essence')
+.itemInputs('7x gtceu:ferroarcane_dust', 'gtceu:purified_netherite_dust')
+.itemOutputs('8x irons_spellbooks:cinder_essence')
+.duration(20)
+.EUt(2048)
+
 GTM.autoclave('arcane_dust_to_ferroarcane')
 .itemInputs('gtceu:arcane_dust')
 .inputFluids('gtceu:iron_iii_chloride 250')
 .itemOutputs('gtceu:ferroarcane_dust')
 .duration(20)
 .EUt(32)
-
-GTM.alloy_smelter('irons_spellbooks:compat/cinder_essence')
-.itemInputs('7x gtceu:ferroarcane_dust', 'gtceu:purified_netherite_dust')
-.itemOutputs('8x irons_spellbooks:cinder_essence')
-.duration(20)
-.EUt(2048)
 
 GTM.metaphysical_metallurgy_tainter('ferroarcane_to_raw_ascendine')
 .itemInputs('4x gtceu:ferroarcane_dust')

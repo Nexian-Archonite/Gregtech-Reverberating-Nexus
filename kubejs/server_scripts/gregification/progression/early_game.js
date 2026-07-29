@@ -176,11 +176,6 @@ event.shaped('gtceu:empty_wooden_form', [
 
 event.recipes.create.compacting('gtceu:compressed_fireclay', ['gtceu:fireclay_dust', Fluid.of('minecraft:water 125')])
 
-
-global.dualCasing('condensed_mana', 'source', 'magikstone_casing')
-global.dualCasing('sulvarium-over-kraethite_steel', 'cindralite', 'sulvan_steel_casing')
-
-
 event.campfireCooking('kubejs:boiling_water_bucket', 'minecraft:water_bucket', 0, 600)
 event.campfireCooking('minecraft:torch', 'minecraft:stick', 0, 100)
 event.campfireCooking('minecraft:stone', 'minecraft:cobblestone', 0, 200)

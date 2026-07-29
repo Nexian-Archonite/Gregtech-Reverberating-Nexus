@@ -1,13 +1,13 @@
 {
-	"format_version": "1.9.0",
+	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"parent": "heat_core",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "kubejs:block/everlasting_heat_core",
-		"2": "kubejs:block/everlasting_heat_core_bottom",
-		"3": "kubejs:block/everlasting_heat_core_top",
-		"particle": "kubejs:block/everlasting_heat_core"
+		"0": "kubejs:block/power_cores/dormant_core_core",
+		"2": "kubejs:block/power_cores/dormant_core_bottom",
+		"3": "kubejs:block/power_cores/dormant_core_top",
+		"particle": "kubejs:block/smolding_heat_core"
 	},
 	"elements": [
 		{
@@ -78,11 +78,11 @@
 			"scale": [0.33, 0.33, 0.33]
 		},
 		"firstperson_righthand": {
-			"rotation": [90, 128, 44.5],
+			"rotation": [90, -128, 44.5],
 			"translation": [-9, 8.25, 0]
 		},
 		"firstperson_lefthand": {
-			"rotation": [90, 128, 44.5],
+			"rotation": [90, -128, 44.5],
 			"translation": [-9, 8.25, 0]
 		},
 		"gui": {

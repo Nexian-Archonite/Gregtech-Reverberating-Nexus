@@ -31,21 +31,21 @@ const voltagetierexpensive = {
     }
 
 const allthevoltage1 = [
-    'ulv',
-    'lv',
-    'mv',
-    'hv',
-    'ev',
-    'iv',
-    'luv',
-    'zpm',
-    'uv',
-    'uhv',
-    'uev',
-    'uiv',
-    'uxv',
-    'opv',
-    'max'
+    'ulv', //8 EU/t
+    'lv',  //32 EU/t
+    'mv',  //128 EU/t
+    'hv',  //512 EU/t
+    'ev',  //2048 EU/t
+    'iv',  //8192 EU/t
+    'luv', //32768 EU/t
+    'zpm', //131072 EU/t
+    'uv',  //524288 EU/t
+    'uhv', //2097152 EU/t
+    'uev', //8388608 EU/t
+    'uiv', //33554432 EU/t
+    'uxv', //134217728 EU/t
+    'opv', //536870912 EU/t
+    'max'  //2147483648 EU/t
 ]
 
 const allthevoltage2 = {
@@ -223,11 +223,11 @@ researchTypes.forEach(type => {
 });
 
 
-ServerEvents.recipes(gtm => {
-const GTM = gtm.recipes.gtceu
+ServerEvents.recipes(event => {
+const GTM = event.recipes.gtceu
 
-global.dualCasing = (primary, secondary, output) => {
-    gtm.shaped(Item.of(`2x gtceu:${output}`), [
+const dualCasing = (primary, secondary, output) => {
+    event.shaped(Item.of(`2x gtceu:${output}`), [
         'PHP',
         'PFP',
         'PWP'
@@ -240,17 +240,46 @@ global.dualCasing = (primary, secondary, output) => {
 
     GTM.assembler(`${output}`)
         .itemInputs(`6x gtceu:${primary}_plate`, `gtceu:${secondary}_frame`)
-        .itemOutputs(`gtceu:${output}`)
+        .itemOutputs(`2x gtceu:${output}`)
         .duration(50)
         .circuit(6)
         .EUt(16)
 }
 
-global.transcendentBlastTier = [
+const dualCasingAdv = (primary, secondary, output) => {
+    GTM.component_part_assembly(`${output}`)
+        .itemInputs(`8x gtceu:${primary}_plate`, `gtceu:${secondary}_frame`, `6x gtceu:${primary}_bolt`, `4x gtceu:${secondary}_foil`)
+        .itemOutputs(`3x gtceu:${output}`)
+        .inputFluids(`gtceu:${primary} 144`, 'gtceu:indium-vor-dys-cad_supersolder_alloy 72')
+        .duration(50)
+        .EUt(32768)
+}
+
+dualCasing('condensed_mana', 'source', 'magikstone_casing')
+dualCasing('vhaelcryite', 'pyrathene', 'vhaelcryite_casing')
+
+dualCasingAdv('sulvarium-over-kraethite_steel', 'cindralite', 'sulvan_steel_casing')
+dualCasingAdv('aetheric-thermavyte', 'vorrexite', 'aetherite_casing')
+
+const transcendentBlastTier = [
     { name: 'omnium', blastTemp: 19449, EUt: va.uhv, duration: 1600 },
-    { name: 'sulvarium-over-kraethite_steel', blastTemp: 11000, EUt: va.uv, duration: 750},
+    { name: 'sulvarium-over-kraethite_steel', blastTemp: 11000, EUt: va.uv, duration: 750 },
+    { name: 'aetheric-thermavyte', blastTemp: 10799, EUt: va.uhv, duration: 800 }
 ];
-global.transcendentAlloyBlastTier = [
+
+GTM.bender('bend_vorrexite_to_foil')
+.itemInputs('gtceu:vorrexite_plate')
+.itemOutputs('4x gtceu:vorrexite_foil')
+.circuit(1)
+.duration(89)
+
+event.shaped('2x gtceu:vorrexite_foil', [
+'HP'
+], {
+H: '#forge:tools/hammers',
+P: 'gtceu:vorrexite_plate'
+})
+const transcendentAlloyBlastTier = [
     {
         name: 'indium-vor-dys-cad_supersolder_alloy',
         blastTemp: 8000,
@@ -269,31 +298,46 @@ global.transcendentAlloyBlastTier = [
     {
         name: 'sulvarium-over-kraethite_steel',
         blastTemp: 11000,
-        EUt: va.uv,
+        EUt: va.uhv,
         duration: 12937,
         components: [
             '6x sulvarium', 
             '6x kraethite', 
             '3x antisource', 
-            '4x cadmium', 
+            '4x holmium', 
             '2x nexus', 
             '2x awakened_draconium'
+        ]
+    },
+    {
+        name: 'aetheric-thermavyte',
+        blastTemp: 10799,
+        EUt: va.uhv,
+        duration: 3000,
+        components: [
+            '2x aetherite',
+            '2x thermavyte',
+            '1x neutronium'
         ]
     }
 ]
 
-global.transcendentBlastTier.forEach(mat => {
+
+transcendentBlastTier.forEach(mat => {
     GTM.electric_blast_furnace(`blast_${mat.name}_gas`)
         .itemInputs(`gtceu:${mat.name}_dust`)
-        .inputFluids(`gtceu:oganesson_plasma ${Math.floor(50 + (mat.blastTemp - 10000) * 0.02)}`)
+        .inputFluids(`gtceu:oganesson ${Math.floor(50 + (mat.blastTemp - 10000) * 0.02)}`)
         .itemOutputs(`gtceu:hot_${mat.name}_ingot`)
         .blastFurnaceTemp(mat.blastTemp)
         .duration(Math.floor((0.67 - 0.03 * Math.log2(mat.blastTemp / 10000)) * mat.duration))
         .EUt(mat.EUt)
-    gtm.remove({id: `gtceu:vacuum_freezer/cool_hot_${mat.name}_ingot`})
+    if (mat.name !== 'aetheric-thermavyte') {
+        event.remove({id: `gtceu:vacuum_freezer/cool_hot_${mat.name}_ingot`})
+    }
+
 })
 
-global.transcendentAlloyBlastTier.forEach(mat => {
+transcendentAlloyBlastTier.forEach(mat => {
     const totalMb = mat.components.reduce((sum, c) => {
         const amount = parseInt(c.split('x')[0].trim())
         return sum + (amount * 144)
@@ -306,11 +350,15 @@ global.transcendentAlloyBlastTier.forEach(mat => {
             return `${amount}x gtceu:${name}_dust`
         })
     )
-        .inputFluids(`gtceu:oganesson_plasma ${25*Math.log10(totalMb)}`)
-        .outputFluids(`gtceu:molten_${mat.name} ${totalMb}`)
+        .inputFluids(`gtceu:oganesson ${25*Math.log10(totalMb)}`)
+        .outputFluids(`gtceu:molten_${mat.name} ${totalMb}`, `gtceu:oganesson ${25*Math.log10(totalMb)}`)
         .blastFurnaceTemp(mat.blastTemp)
         .duration((0.67 - 0.004 * Math.log2(totalMb)) * mat.duration)
         .EUt(mat.EUt)
-    gtm.remove({id: `gtceu:vacuum_freezer/${mat.name}`})
+        if (mat.name !== 'aetheric-thermavyte') {
+        event.remove({id: `gtceu:vacuum_freezer/${mat.name}`})
+        }
+
+    
 })
 })

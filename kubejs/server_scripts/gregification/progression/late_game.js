@@ -139,8 +139,7 @@ GTM.fusion_accelerator('anti-dilithide')
 .perTick(true)
 .inputFluids('gtceu:negatron 6', 'gtceu:nulltron 8', 'gtceu:positron 6')
 .itemOutputs('gtceu:anti-dilithide_gem')
-.EUt(va.uv, 4)
-.fusionStartEU(8388304)
+.EUt(va.uv, 12)
 .duration(1000)
 
 GTM.particle_accelerator('enriched_naquadrium_bombardment')
@@ -152,8 +151,7 @@ GTM.particle_accelerator('enriched_naquadrium_bombardment')
 .chancedFluidOutput('gtceu:naquadah 5', 2500, 0)
 .chancedFluidOutput('gtceu:trinium 5', 3000, 0)
 .chancedFluidOutput('gtceu:naquadria 5', 3500, 0)
-.fusionStartEU(6291456)
-.EUt(65535)
+.EUt(va.iv, 8)
 .duration(1000)
 .circuit(4)
 
@@ -168,8 +166,7 @@ GTM.particle_accelerator('up_down_to_proton')
     .perTick(true)
     .inputFluids('gtceu:up_quark 2', 'gtceu:down_quark 1')
     .outputFluids('gtceu:proton 1')
-    .fusionStartEU(8388608)
-    .EUt(524288)
+    .EUt(v.uv, 4)
     .duration(200)
     .circuit(1)
 
@@ -177,8 +174,7 @@ GTM.particle_accelerator('sub_sur_to_negatron')
     .perTick(true)
     .inputFluids('gtceu:sub_quark 2', 'gtceu:sur_quark 1')
     .outputFluids('gtceu:negatron 1')
-    .fusionStartEU(8388608)
-    .EUt(524288)
+    .EUt(v.uv, 4)
     .duration(200)
     .circuit(1)
 
@@ -186,8 +182,7 @@ GTM.particle_accelerator('up_down_to_neutron')
     .perTick(true)
     .inputFluids('gtceu:down_quark 1', 'gtceu:up_quark 2')
     .outputFluids('gtceu:neutron 1')
-    .fusionStartEU(8388608)
-    .EUt(524288)
+    .EUt(v.uv, 4)
     .duration(200)
     .circuit(2)
 
@@ -195,8 +190,7 @@ GTM.particle_accelerator('sub_sur_to_nulltron')
     .perTick(true)
     .inputFluids('gtceu:sur_quark 1', 'gtceu:sub_quark 2')
     .outputFluids('gtceu:nulltron 1')
-    .fusionStartEU(8388608)
-    .EUt(524288)
+    .EUt(v.uv, 4)
     .duration(200)
     .circuit(2)
 
@@ -204,8 +198,7 @@ GTM.particle_accelerator('top_bottom_to_omega_hadron')
     .perTick(true)
     .inputFluids('gtceu:top_quark 1', 'gtceu:bottom_quark 1', 'gtceu:strange_quark 1')
     .outputFluids('gtceu:omega_hadron 1')
-    .fusionStartEU(134217728)
-    .EUt(8388608)
+    .EUt(v.uhv, 16)
     .duration(200)
     .circuit(1)
 
@@ -213,8 +206,7 @@ GTM.particle_accelerator('inferior_superior_to_null_hadron')
     .perTick(true)
     .inputFluids('gtceu:inferior_quark 1', 'gtceu:superior_quark 1', 'gtceu:ordinary_quark 1')
     .outputFluids('gtceu:null_hadron 1')
-    .fusionStartEU(134217728)
-    .EUt(8388608)
+    .EUt(v.uhv, 16)
     .duration(200)
     .circuit(1)
 
@@ -222,8 +214,7 @@ GTM.particle_accelerator('omega_annihilation_to_omniparticle')
     .perTick(true)
     .inputFluids('gtceu:omega_hadron 1', 'gtceu:null_hadron 1')
     .outputFluids('gtceu:omniparticle_plasma 1')
-    .fusionStartEU(536870912)
-    .EUt(33554432)
+    .EUt(v.uev, 16)
     .duration(200)
     .circuit(2)
 
@@ -232,8 +223,7 @@ GTM.particle_accelerator('first_gen_lepton_production')
     .perTick(true)
     .inputFluids('gtceu:up_quark 1', 'gtceu:sub_quark 1')
     .outputFluids('gtceu:electron 1', 'gtceu:gamma_photon 1')
-    .fusionStartEU(8388608)
-    .EUt(524288)
+    .EUt(v.uv, 4)
     .duration(500)
     .circuit(3)
 
@@ -241,8 +231,7 @@ GTM.particle_accelerator('first_gen_lepton_production_alt')
     .perTick(true)
     .inputFluids('gtceu:down_quark 1', 'gtceu:sur_quark 1')
     .outputFluids('gtceu:positron 1', 'gtceu:gamma_photon 1')
-    .fusionStartEU(8388608)
-    .EUt(524288)
+    .EUt(v.uv, 4)
     .duration(500)
     .circuit(3)
 
@@ -252,8 +241,7 @@ GTM.particle_accelerator('second_gen_lepton_production')
     .outputFluids('gtceu:muon 1', 'gtceu:antimuon 1')
     .chancedFluidOutput('gtceu:up_quark 1', 500, 0)
     .chancedFluidOutput('gtceu:sub_quark 1', 500, 0)
-    .fusionStartEU(8388608)
-    .EUt(524288)
+    .EUt(v.uv, 4)
     .duration(500)
     .circuit(3)
 
@@ -263,8 +251,7 @@ GTM.particle_accelerator('second_gen_lepton_production_alt')
     .outputFluids('gtceu:muon 1', 'gtceu:antimuon 1')
     .chancedFluidOutput('gtceu:down_quark 1', 500, 0)
     .chancedFluidOutput('gtceu:sur_quark 1', 500, 0)
-    .fusionStartEU(8388608)
-    .EUt(524288)
+    .EUt(v.uv, 4)
     .duration(500)
     .circuit(3)
 
@@ -275,8 +262,7 @@ GTM.particle_accelerator('third_gen_lepton_production')
     .chancedFluidOutput('gtceu:charm_quark 1', 500, 0)
     .chancedFluidOutput('gtceu:curse_quark 1', 500, 0)
     .chancedFluidOutput('gtceu:glueball 1', 100, 0)
-    .fusionStartEU(8388608)
-    .EUt(524288)
+    .EUt(v.uv, 4)
     .duration(500)
     .circuit(3)
 
@@ -287,8 +273,7 @@ GTM.particle_accelerator('third_gen_lepton_production_alt')
     .chancedFluidOutput('gtceu:strange_quark 1', 500, 0)
     .chancedFluidOutput('gtceu:ordinary_quark 1', 500, 0)
     .chancedFluidOutput('gtceu:glueball 1', 100, 0)
-    .fusionStartEU(8388608)
-    .EUt(524288)
+    .EUt(v.uv, 4)
     .duration(500)
     .circuit(3)
 
@@ -297,8 +282,7 @@ GTM.particle_accelerator('glueball_collision_preon')
     .inputFluids('gtceu:glueball 2')
     .outputFluids('gtceu:preon 1')
     .chancedFluidOutput('gtceu:higgs_boson 1', 100, 0)
-    .fusionStartEU(33554432)
-    .EUt(2097152)
+    .EUt(v.uv, 16)
     .duration(1000)
     .circuit(20)
 
@@ -308,8 +292,7 @@ GTM.particle_accelerator('glueball_collision_preon_bosonated')
     .chancedFluidInput('gtceu:catalytic_boson', 500, 0)
     .outputFluids('gtceu:preon 5')
     .chancedFluidOutput('gtceu:higgs_boson 2', 250, 0)
-    .fusionStartEU(33554432)
-    .EUt(2097152)
+    .EUt(v.uv, 16)
     .duration(1000)
     .circuit(14)
 
@@ -317,8 +300,7 @@ GTM.fusion_accelerator('stellarite_synthesis')
     .perTick(true)
     .inputFluids('gtceu:preon 10', 'gtceu:neutronium 1')
     .outputFluids('gtceu:stellarite 10')
-    .fusionStartEU(33554432)
-    .EUt(2097152)
+    .EUt(v.uv, 12)
     .duration(1000)
 
 GTM.solar_collection('passive_neutrinos')
@@ -347,16 +329,14 @@ GTM.particle_accelerator('hydrogen_ionization')
 .perTick(true)
 .inputFluids('gtceu:hydrogen 1')
 .outputFluids('gtceu:proton 1', 'gtceu:electron 1')
-.fusionStartEU(131072)
-.EUt(8192)
+.EUt(v.zpm, 4)
 .duration(1000)
 
 GTM.particle_accelerator('electron-proton_degeneracy')
 .perTick(true)
 .inputFluids('gtceu:proton 1', 'gtceu:electron 1')
 .outputFluids('gtceu:neutron 1', 'gtceu:electron_neutrino 1')
-.fusionStartEU(131072)
-.EUt(8192)
+.EUt(v.zpm, 4)
 .duration(1000)
 .circuit(16)
 
@@ -364,8 +344,7 @@ GTM.particle_accelerator('positron-negatron_degeneracy')
 .perTick(true)
 .inputFluids('gtceu:negatron 1', 'gtceu:positron 1')
 .outputFluids('gtceu:nulltron 1', 'gtceu:electron_antrino 1')
-.fusionStartEU(131072)
-.EUt(8192)
+.EUt(v.zpm, 4)
 .duration(1000)
 .circuit(16)
 
@@ -373,48 +352,42 @@ GTM.particle_accelerator('pair_production')
 .perTick(true)
 .inputFluids('gtceu:gamma_photon 2')
 .outputFluids('gtceu:electron 1', 'gtceu:positron 1')
-.fusionStartEU(131072)
-.EUt(8192)
+.EUt(v.zpm, 4)
 .duration(1000)
 
 GTM.particle_accelerator('pair_annihilation')
 .perTick(true)
 .inputFluids('gtceu:electron 1', 'gtceu:positron 1')
 .outputFluids('gtceu:gamma_photon 2')
-.fusionStartEU(131072)
-.EUt(8192)
+.EUt(v.zpm, 4)
 .duration(1000)
 
 GTM.particle_accelerator('proton_annihilation')
 .perTick(true)
 .inputFluids('gtceu:proton 1', 'gtceu:gamma_photon 1')
 .outputFluids('gtceu:up_quark 2', 'gtceu:down_quark 1')
-.fusionStartEU(524288)
-.EUt(32768)
+.EUt(v.zpm, 8)
 .duration(1000)
 
 GTM.particle_accelerator('negatron_annihilation')
 .perTick(true)
 .inputFluids('gtceu:negatron 1', 'gtceu:gamma_photon 1')
 .outputFluids('gtceu:sub_quark 2', 'gtceu:sur_quark 1')
-.fusionStartEU(524288)
-.EUt(32768)
+.EUt(v.zpm, 8)
 .duration(1000)
 
 GTM.particle_accelerator('neutron_annihilation')
 .perTick(true)
 .inputFluids('gtceu:neutron 1', 'gtceu:gamma_photon 1')
 .outputFluids('gtceu:down_quark 2', 'gtceu:up_quark 1')
-.fusionStartEU(524288)
-.EUt(32768)
+.EUt(v.zpm, 8)
 .duration(1000)
 
 GTM.particle_accelerator('nulltron_annihilation')
 .perTick(true)
 .inputFluids('gtceu:nulltron 1', 'gtceu:gamma_photon 1')
 .outputFluids('gtceu:sur_quark 2', 'gtceu:sub_quark 1')
-.fusionStartEU(524288)
-.EUt(32768)
+.EUt(v.zpm, 8)
 .duration(1000)
 
 const gen1to2list = [
@@ -436,8 +409,7 @@ gen1to2list.forEach(t => {
         .chancedFluidInput(`gtceu:${t.boson} 1`, 2500, 0)
         .outputFluids(`gtceu:${t.output} 1`)
         .duration(1000)
-        .EUt(524288)
-        .fusionStartEU(33554432)
+        .EUt(v.uv, 16)
 })
 
 Object.entries(gen2to3list).forEach(([gen2, gen3]) => {
@@ -446,8 +418,7 @@ GTM.particle_accelerator(`${recipeID}-gamma_ascension`)
 .perTick(true)
 .inputFluids(`${gen2} 1`, 'gtceu:gamma_photon 1')
 .chancedFluidOutput(`${gen3} 1`, 2500, 0)
-.fusionStartEU(2097152)
-.EUt(131072)
+.EUt(v.uv, 16)
 .duration(1000)
 })
 
@@ -461,7 +432,7 @@ const neutrino_to_lepton = {
 }
 Object.entries(neutrino_to_lepton).forEach(([neutrino, lipton]) => {
 const recipeID = lipton.replace('gtceu:', '') 
-let EUt = 131072
+let EUt = 524288
 if (neutrino === 'gtceu:tau_neutrino' || neutrino === 'gtceu:tau_antrino') { EUt = EUt * 16}  else 
 if (neutrino === 'gtceu:muon_neutrino' || neutrino === 'gtceu:muon_antrino') { EUt = EUt * 4 }
 GTM.particle_accelerator(`inverse_${recipeID}_compton_reaction`)
@@ -469,7 +440,6 @@ GTM.particle_accelerator(`inverse_${recipeID}_compton_reaction`)
 .inputFluids(`${neutrino} 1`, (neutrino === 'gtceu:tau_neutrino' || neutrino === 'gtceu:tau_antrino') ? 'gtceu:gamma_photon 2' : 'gtceu:gamma_photon 1')
 .outputFluids(`${lipton} 1`)
 .EUt(EUt)
-.fusionStartEU(EUt * 4)
 .duration(1000)
 .circuit(6)
 
@@ -479,7 +449,6 @@ GTM.particle_accelerator(`inverse_${recipeID}_compton_reaction_bosonated`)
     .chancedFluidInput('gtceu:catalytic_boson 1', 500, 0)
     .outputFluids(`${lipton} 2`)
     .EUt(EUt)
-    .fusionStartEU(EUt * 6)
     .duration(1000)
     .circuit(7)
 
@@ -489,16 +458,14 @@ GTM.particle_accelerator('higgs_muon_decay')
     .perTick(true)
     .inputFluids('gtceu:higgs_boson 1', 'gtceu:muon_neutrino 1')
     .outputFluids('gtceu:m_boson 1', 'gtceu:catalytic_boson 1', 'gtceu:muon 1')
-    .fusionStartEU(33554432)
-    .EUt(2097152)
+    .EUt(v.uv, 16)
     .duration(1000)
 
 GTM.particle_accelerator('higgs_antimuon_decay')
     .perTick(true)
     .inputFluids('gtceu:higgs_boson 1', 'gtceu:muon_antrino 1')
     .outputFluids('gtceu:inverse_m_boson 1', 'gtceu:catalytic_boson 1', 'gtceu:antimuon 1')
-    .fusionStartEU(33554432)
-    .EUt(2097152)
+    .EUt(v.uv, 16)
     .duration(1000)
 
 GTM.chemical_reactor('m_boson_polarity_flip')
@@ -535,8 +502,7 @@ Object.entries(quarkDoublets).forEach(([top, bottom]) => {
         .inputFluids(`${top} 1`)
         .chancedFluidInput('gtceu:m_boson 1', 500, 0)
         .outputFluids(`${bottom} 1`, 'gtceu:tau_antrino 1')
-        .fusionStartEU(8388608)
-        .EUt(524288)
+        .EUt(v.uv, 16)
         .duration(1000)
 
     GTM.particle_accelerator(`inverse_m_boson_${bottomID}_to_${topID}`)
@@ -544,8 +510,7 @@ Object.entries(quarkDoublets).forEach(([top, bottom]) => {
         .inputFluids(`${bottom} 1`)
         .chancedFluidInput('gtceu:inverse_m_boson 1', 500, 0)
         .outputFluids(`${top} 1`, 'gtceu:tau_neutrino 1')
-        .fusionStartEU(8388608)
-        .EUt(524288)
+        .EUt(v.uv, 16)
         .duration(1000)
 })
 
@@ -554,8 +519,7 @@ GTM.particle_accelerator('pm_boson_electron')
     .inputFluids('gtceu:electron_neutrino 1', 'gtceu:electron_antrino 1')
     .chancedFluidOutput('gtceu:pm_boson 1', 500, 0)
     .chancedFluidOutput('gtceu:inverse_pm_boson 1', 500, 0)
-    .fusionStartEU(8388608)
-    .EUt(524288)
+    .EUt(v.uv, 16)
     .duration(1000)
 
 GTM.particle_accelerator('pm_boson_muon')
@@ -563,8 +527,7 @@ GTM.particle_accelerator('pm_boson_muon')
     .inputFluids('gtceu:muon_neutrino 1', 'gtceu:muon_antrino 1')
     .chancedFluidOutput('gtceu:pm_boson 1', 2000, 0)
     .chancedFluidOutput('gtceu:inverse_pm_boson 1', 2000, 0)
-    .fusionStartEU(8388608)
-    .EUt(524288)
+    .EUt(v.uv, 16)
     .duration(1000)
 
 GTM.particle_accelerator('pm_boson_tau')
@@ -574,24 +537,21 @@ GTM.particle_accelerator('pm_boson_tau')
     .chancedFluidOutput('gtceu:inverse_pm_boson 1', 4000, 0)
     .chancedFluidOutput('gtceu:m_boson 1', 50, 0)
     .chancedFluidOutput('gtceu:inverse_m_boson 1', 50, 0)
-    .fusionStartEU(8388608)
-    .EUt(524288)
+    .EUt(v.uv, 16)
     .duration(1000)
 
 GTM.fusion_accelerator('lepton-dense_complex_synthesis')
     .perTick(true)
     .inputFluids('gtceu:tau 2', 'gtceu:muon 6', 'gtceu:electron 3', 'gtceu:positron 3')
     .outputFluids('gtceu:lepton-dense_complex 16')
-    .fusionStartEU(8388608)
-    .EUt(524288)
+    .EUt(v.uv, 16)
     .duration(1000)
 
 GTM.fusion_accelerator('antilepton-dense_complex_synthesis')
     .perTick(true)
     .inputFluids('gtceu:antitau 2', 'gtceu:antimuon 6', 'gtceu:positron 3', 'gtceu:electron 3')
     .outputFluids('gtceu:antilepton-dense_complex 16')
-    .fusionStartEU(8388608)
-    .EUt(524288)
+    .EUt(v.uv, 16)
     .duration(1000)
 
 
@@ -599,16 +559,14 @@ GTM.fusion_accelerator('neutronium_synthesis')
     .perTick(true)
     .inputFluids('gtceu:neutron 150')
     .outputFluids('gtceu:neutronium 10')
-    .fusionStartEU(8388608)
-    .EUt(524288)
+    .EUt(v.uv, 16)
     .duration(1000)
 
 GTM.fusion_accelerator('ephemeral_naquadite_synthesis')
     .perTick(true)
     .inputFluids('gtceu:transuranic_naquadrium_alloy 8', 'gtceu:darmstadtium 2', 'gtceu:lepton-dense_complex 1', 'gtceu:antilepton-dense_complex 1')
     .outputFluids('gtceu:ephemeral_naquadite 12')
-    .fusionStartEU(8388608)
-    .EUt(524288)
+    .EUt(v.uv, 16)
     .duration(1000)
 
 // time to serious -- UHV Components (kill me)
@@ -622,7 +580,6 @@ GTM.assembly_line('ultimate_battery')
     .EUt(300000)
 
 
-global.dualCasing('vhaelcryite', 'pyrathene', 'vhaelcryite_casing')
 
 
 GTM.component_part_assembly('transcendent_dilithide_coil')
@@ -766,7 +723,7 @@ GTM.fluid_solidifier('liquid_to_crystal_dust')
     .EUt(128)
 
 
-const FLUIDS = new Set(['oxygen', 'sulfur_dioxide', 'carbon_dioxide', 'fluorine', 'mercury', 'radon', 'oganesson_plasma'])
+const FLUIDS = new Set(['oxygen', 'sulfur_dioxide', 'carbon_dioxide', 'fluorine', 'mercury', 'radon', 'oganesson'])
 
 const rollinrollinrollinrollin = [
     { ore: 'cassiterite',          inCount: 15, main: ['10x', 'tin'],             secondary: ['5000', 'oxygen'],                    traces: [] },
@@ -809,23 +766,6 @@ const rollinrollinrollinrollin = [
     { ore: 'tiemannite',           inCount: 8,  main: ['4x', 'mercury'],          secondary: ['3x', 'selenium'],                    traces: [] },
     { ore: 'rutile',               inCount: 12, main: ['7x', 'titanium'],         secondary: ['4000', 'oxygen'],                    traces: [] },
 ]
-/*
-    { ore: 'nulledryte',           inCount: 14, main: ['8x', 'chronosite'],       secondary: ['400', 'oganesson_plasma'],           traces: [['2x', 'rhenium_iii_sulfate'], ['1x', 'merrillite']] },
-    { ore: 'xycrhovite',           inCount: 12, main: ['6x', 'draconium'],        secondary: ['4x', 'echo'],                        traces: [['2x', 'dilithium'], ['1x', 'phenakite']] },
-    { ore: 'vheszcryl',            inCount: 12, main: ['6x', 'vhaelcryite'],      secondary: ['4x', 'transcendentine'],             traces: [['2x', 'enstatite'], ['1x', 'ulvospinel']] },
-    { ore: 'grothemite',           inCount: 16, main: ['8x', 'rare_earth'],       secondary: ['5x', 'hafnium'],                     traces: [['3x', 'iron'], ['2x', 'potassium']] },
-    { ore: 'krethavine',           inCount: 14, main: ['6x', 'kraethite'],        secondary: ['5x', 'lanthanum'],                   traces: [['3x', 'titanium'], ['2x', 'zirconium']] },
-    { ore: 'orvexite',             inCount: 12, main: ['5x', 'rare_earth'],       secondary: ['4x', 'osmiridium'],                  traces: [['2x', 'plutonium'], ['1x', 'rhodium']] },
-    { ore: 'phazdurite',           inCount: 14, main: ['6x', 'transcendentine'],  secondary: ['4x', 'naquadria'],                   traces: [['1000', 'radon']] },
-    { ore: 'vaelthorite', inCount: 16, main: ['6x', 'vaelthorium'], secondary: ['4x', 'lead'], traces: [['1000', 'sulfur']] },
-    { ore: 'sulvarite', inCount: 18, main: ['6x', 'sulvarium'], secondary: ['4x', 'gold'], traces: [['1000', 'bismuth']] },
-    { ore: 'kethrenite', inCount: 16, main: ['6x', 'kethrite'], secondary: ['4x', 'copper'], traces: [['1000', 'nickel']] },
-    { ore: 'vorrexinite', inCount: 24, main: ['6x', 'vorrexite'], secondary: ['4x', 'osmium'], traces: [['500', 'iridium']] },
-    { ore: 'thermastone', inCount: 20, main: ['6x', 'thermavyte'], secondary: ['4x', 'chromium'], traces: [['1000', 'magnesium']] },
-    { ore: 'cindrax', inCount: 14, main: ['6x', 'cindralite'], secondary: ['4x', 'tin'], traces: [['1000', 'silicon']] },
-    { ore: 'aetheric_palladite', inCount: 28, main: ['6x', 'aetherite'], secondary: ['4x', 'niobium'], traces: [['500', 'palladium']] },
-    { ore: 'pyrathite', inCount: 18, main: ['6x', 'pyrathene'], secondary: ['4x', 'titanium'], traces: [['1000', 'vanadium']] },
-   */
 rollinrollinrollinrollin.forEach(function (recipeData) {
   const inputItem = recipeData.ore === 'redstone' 
     ? recipeData.inCount + 'x minecraft:redstone'
@@ -1054,6 +994,7 @@ GTM.organism_assembly_line('biomechanical_factory')
 .inputFluids('gtceu:refined_sentience 16000', 'gtceu:artificial_blood 10000', 'gtceu:mutagen 8000', 'gtceu:polyether_ether_ketone 6000', 'gtceu:crystal_methamphetamine 4000')
 .itemOutputs('gtceu:biomechanical_factory')
 .cleanroom(CleanroomType.STERILE_CLEANROOM)
+.stationResearch(global.OrganismAssemblyLineResearch(event, 'biomechanical_factory', 'biomancy:bio_forge', 64, 102400, va.zpm))
 .duration(1000)
 .EUt(8388608)
 
@@ -1203,8 +1144,7 @@ GTM.fusion_accelerator('transcendent_dilithide')
 .inputFluids('gtceu:transcendentine 16')
 .outputFluids('gtceu:transcendent_dilithide 32')
 .duration(1000)
-.EUt(va.uhv)
-.fusionStartEU(8388608)
+.EUt(v.uv, 16)
 
 GTM.fusion_accelerator('transcendent_dilithide_alt')
 .perTick(true)
@@ -1212,14 +1152,13 @@ GTM.fusion_accelerator('transcendent_dilithide_alt')
 .inputFluids('gtceu:transcendentine 16')
 .outputFluids('gtceu:transcendent_dilithide 32')
 .duration(1000)
-.EUt(va.uhv)
-.fusionStartEU(8388608)
+.EUt(v.uv, 16)
 
 GTM.fusion_accelerator('bose-einstein_neutronium')
 .chancedInput('gtceu:pulsar', 40, 0)
 .perTick(true)
 .inputFluids('gtceu:cryothetic_zero 10')
-.outputFluids('gtceu:bose-einstein_neutronium 1')
+.outputFluids('gtceu:bose-einstein_neutronium 10')
 .duration(400)
 .EUt(va.uhv)
 
@@ -1397,6 +1336,917 @@ for (let [name, ingredients] of Object.entries(UHVcomponents)) {
         .duration(400)
         .EUt(2097152)
 }
+
+GTM.large_chemical_reactor('xenon_difluoride')
+.inputFluids('gtceu:xenon', 'gtceu:fluorine 2000')
+.outputFluids('gtceu:xenon_difluoride')
+.duration(400)
+.EUt(131072)
+
+GTM.large_chemical_reactor('xenon_tetrafluoride')
+.inputFluids('gtceu:xenon_difluoride', 'gtceu:fluorine 2000')
+.outputFluids('gtceu:xenon_tetrafluoride')
+.duration(400)
+.EUt(131072)
+
+GTM.large_chemical_reactor('antimony_pentafluoride')
+.itemInputs('6x gtceu:antimony_trifluoride_dust', 'gtceu:silicon_dioxide_dust')
+.inputFluids('gtceu:hydrofluoric_acid 2000')
+.outputFluids('gtceu:antimony_pentafluoride', 'water 2000')
+.itemOutputs('gtceu:silicon_dust')
+.circuit(4)
+.duration(400)
+.EUt(131072)
+
+GTM.mixer('xenon_trifluoride-hexafluoroantimonate')
+.inputFluids('gtceu:xenon_tetrafluoride', 'gtceu:antimony_pentafluoride')
+.outputFluids('gtceu:xenon_trifluoride-hexafluoroantimonate')
+.duration(400)
+.EUt(524288)
+
+GTM.phase_alternator('oganesson-xenon_trifluoride')
+.inputFluids('gtceu:oganesson', 'gtceu:xenon_trifluoride-hexafluoroantimonate')
+.outputFluids('gtceu:oganesson-xenon_trifluoride 900', /*haha you lost 10% from oganessoning too hard*/ 'gtceu:antimony_hexafluoride')
+.duration(400)
+.EUt(524288)
+
+GTM.fusion_reactor('oganesson-xenon_trifluoride_quiescification_cy')
+.inputFluids('gtceu:oganesson-xenon_trifluoride 10000', 'gtceu:cryothetic_zero 2500')
+.outputFluids('gtceu:bose-einstein_oganesson-xenon_trifluoride_condensate_plasma 10000')
+.duration(40)
+.EUt(524288)
+.fusionStartEU(320000000)
+
+GTM.fusion_reactor('oganesson-xenon_trifluoride_quiescification_he3')
+.inputFluids('gtceu:oganesson-xenon_trifluoride 10000', 'gtceu:hypothermic_helium_3_plasma 3500')
+.outputFluids('gtceu:bose-einstein_oganesson-xenon_trifluoride_condensate_plasma 9500')
+.duration(40)
+.EUt(524288)
+.fusionStartEU(320000000)
+
+GTM.electrolyzer('decomposition_electrolyzing_bose-einstein_oganesson-xenon_trifluoride_condensate')
+.inputFluids('gtceu:bose-einstein_oganesson-xenon_trifluoride_condensate_plasma')
+.outputFluids('gtceu:xenon_difluoride', 'gtceu:fluorine')
+.itemOutputs('gtceu:oganesson_dust')
+.duration(276)
+.EUt(30)
+
+GTM.electrolyzer('decomposition_electrolyzing_oganesson-xenon_trifluoride')
+.inputFluids('gtceu:oganesson-xenon_trifluoride')
+.outputFluids('gtceu:xenon_difluoride', 'gtceu:fluorine')
+.itemOutputs('gtceu:oganesson_dust')
+.duration(276)
+.EUt(30)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // END of late game 

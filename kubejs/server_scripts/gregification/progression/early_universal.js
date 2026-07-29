@@ -258,9 +258,9 @@ GTM.assembler(('mechanical_conjuration_institute'))
 .duration(600)
 .EUt(128)
 
-GTM.assembler(('superphasic_mixer'))
+GTM.assembler(('phase_alternator'))
 .itemInputs('gtceu:mv_mixer', 'gtceu:mv_fluid_heater', '24x #gtceu:circuits/ev', '24x gtceu:double_cobalt_brass_plate')
-.itemOutputs('gtceu:superphasic_mixer')
+.itemOutputs('gtceu:phase_alternator')
 .duration(600)
 .EUt(512)
 
