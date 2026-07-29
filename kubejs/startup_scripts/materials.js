@@ -1306,7 +1306,7 @@ event.create('vorrexite')
     .color(0x330022).secondaryColor(0xff0066)
     .iconSet(EMERALD)
     .element('vorrexite')
-    .flags(frame, foil)
+    .flags(frame, bolt_and_screw, foil)
 
 event.create('thermavyte')
     .gem()
@@ -1319,7 +1319,7 @@ event.create('cindralite')
     .color(0x888888).secondaryColor(0xff3300)
     .iconSet(GEM_HORIZONTAL)
     .element('cindralite')
-    .flags(rod, frame, foil)
+    .flags(frame, bolt_and_screw)
 
 event.create('aetherite') 
     .gem()
@@ -1501,7 +1501,7 @@ event.create('sulvarium-over-kraethite_steel')
     .color(0xffee00).secondaryColor(0x00ffee)
     .flags(plates, rod, gear, small_gear, frame, small_gear, spring, bolt_and_screw, rotor, dense_plate, fine_wire, round)
     .components('6x sulvarium', '6x kraethite', '3x antisource', '4x holmium', '2x nexus', '2x awakened_draconium')
-    .cableProperties(v.uhv, 28, 0, true)
+    .cableProperties(v.uhv, 20, 0, true)
     .blastTemp(11000, null, va.uhv, 1050)
     .liquid(11000)
 
@@ -1509,7 +1509,7 @@ event.create('aetheric-thermavyte')
     .ingot()
     .color(0x003322).secondaryColor(0xff6600)
     .components('2x aetherite', '2x thermavyte', 'neutronium')
-    .flags(rod, frame, plates, gear, bolt_and_screw)
+    .flags(rod, frame, plates, gear, foil)
     .blastTemp(10799, null, va.uhv, 800)
     .liquid(10799)
 
@@ -1905,7 +1905,7 @@ event.create('dtpa-rarest_earth_complex')
         .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, fine_wire, dense_plate)
         .blastTemp(1050, "low", GTValues.VA[GTValues.MV], 500)
         .fluidPipeProperties(1050, 250, true, true, true, false)
-        .cableProperties(GTValues.V[GTValues.EV], 2,2, false)
+        .cableProperties(v.ev, 2,2, false)
 
     event.create('mechanical_stainless')
         .ingot()
@@ -2069,7 +2069,8 @@ event.create('dtpa-rarest_earth_complex')
     .color(0x8c0059).secondaryColor(0xccbbe5)
     .flags(fine_wire, spring, small_spring, foil, bolt_and_screw)
     .components('chronosite', 'vhaelcryite')
-    .cableProperties(v.uv, 20, 0, true)
+    .cableProperties(v.uhv, 28, 0, true)
+    
 
 
 
@@ -3314,7 +3315,7 @@ Object.entries(naquadriumadjacentpartsheheha).forEach(([type, chezmix]) => {
     compIngot('tri-osmic_matrix', ['4x osmium', 'selenium', 'tungsten'], 0x4849c4, SHINY, [6300, 'high', va.zpm, 1800], [ring, gear, small_gear, plates, rod, long_rod, rotor, round, bolt_and_screw, foil, fine_wire], null)
     compIngot('axiom-re', ['gallium', 'rhenium'], 0xeebe80, SHINY, [4650, 'mid', va.luv, 1400], [plates, long_rod, rod, spring, small_spring, foil], [v.zpm, 6, 3, false])
     compIngot('pentarch-t', ['trinium', 'taint', 'titanium', 'tantalum', 'tellurium'], 0x9b7e99, SHINY, [6500, 'high', va.zpm, 1650], [spring, foil, long_rod, plates, bolt_and_screw, gear, rod], [v.zpm, 8, 6, false])
-    compIngot('astazine-e', ['3x europium', '2x cobalt', 'titanium', 'lutetium'], 0X4FB5FB, METALLIC, [6500, 'high', va.luv, 300], [long_rod, rod, plates, spring, small_spring, fine_wire, frame], [v.uhv, 4, 16, false])
+    compIngot('astrazine-e', ['3x europium', '2x cobalt', 'titanium', 'lutetium'], 0X4FB5FB, METALLIC, [6500, 'high', va.luv, 300], [long_rod, rod, plates, spring, small_spring, fine_wire, frame], [v.uhv, 4, 16, false])
 
     //mmh smores (i meant ores)
 

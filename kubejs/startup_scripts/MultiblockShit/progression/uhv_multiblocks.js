@@ -38,7 +38,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeType('quantum_condensate_exchanger')
         .recipeModifiers([GTRecipeModifiers.OC_PERFECT, GTRecipeModifiers.BATCH_MODE])
-        .appearanceBlock(() => Block.getBlock('kubejs:subzero_casing'))
+        .appearanceBlock(() => Block.getBlock('gtceu:vhaelcryite_casing'))
         .pattern(definition => FactoryBlockPattern.start()
             .aisle('       BBBBBBB       ', '       C     C       ', '       C     C       ', '       C     C       ', '       C     C       ', '       C     C       ', '       CCCCCCC       ', '                     ', '                     ', '                     ', '                     ', '                     ', '                     ', '                     ', '                     ', '                     ', '                     ', '                     ', '                     ', '                     ', '                     ', '                     ', '                     ')
             .aisle('     BBBDDDDDBBB     ', '        DEEED        ', '        DEFED        ', '        DEEED        ', '        DEFED        ', '        DEEED        ', '     CCCBBBBBCCC     ', '       C     C       ', '       C     C       ', '       C     C       ', '       C     C       ', '       C     C       ', '       C     C       ', '       CCCCCCC       ', '                     ', '                     ', '                     ', '                     ', '                     ', '                     ', '                     ', '       CCCCCCC       ', '                     ')

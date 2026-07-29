@@ -166,7 +166,7 @@
     "material.gtceu.aluminium_oxide": "§bAluminium Oxide",
 
     "material.gtceu.tri-osmic_matrix": "§9Tri-Osmic Matrix",
-    "material.gtceu.astazine-e": "§bAstrazine-E",
+    "material.gtceu.astrazine-e": "§bAstrazine-E",
     "material.gtceu.pentarch-t": "§2Pentarch-T",
     "material.gtceu.axiom-re": "§6Axiom-Re",
 
@@ -629,6 +629,7 @@
     "gtceu.solar_collection": "§7Solar Collection",
     "gtceu.lunar_collection": "§7Lunar Collection",
     "gtceu.component_part_assembly": "§dComponent Assembly",
+    "gtceu.quantum_condensate_exchanger": "§bQuantum Condensate Exchanger",
 
     "block.gtceu.echo_imbuement_chamber": "§1Echonite Imbuement Chamber",
     "block.gtceu.primitive_alloyment_kiln": "§6Primitive Alloyment Kiln",
@@ -664,6 +665,7 @@
     "block.gtceu.lunar_collector": "§7Lunar Collector",
     "block.gtceu.component_part_assembly": "§dComponent Part Assembler",
     "block.gtceu.hyperfrost": "Hyperfrost", 
+    "block.gtceu.aetherite_thermostorm_chamber": "§2Aetherite §4Thermostorm§r Chamber",
 
     
     "block.gtceu.steel_gearbox": "§bNexus Steel §rGearbox Casing",

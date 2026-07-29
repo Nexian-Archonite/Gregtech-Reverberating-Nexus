@@ -969,7 +969,7 @@ GTM.organism_assembly_line('sentient_smd_inductor')
 .EUt(8388608)
 
 GTM.organism_assembly_line('sentient_circuit_board')
-.itemInputs('16x gtceu:wetware_circuit_board', '4x gtceu:sentient_neuron_dish', 'gtceu:uv_electric_pump', 'gtceu:zpm_sensor', '#gtceu:circuits/zpm', '16x gtceu:astazine-e_foil')
+.itemInputs('16x gtceu:wetware_circuit_board', '4x gtceu:sentient_neuron_dish', 'gtceu:uv_electric_pump', 'gtceu:zpm_sensor', '#gtceu:circuits/zpm', '16x gtceu:astrazine-e_foil')
 .inputFluids('gtceu:sterilized_growth_medium 6000', 'gtceu:mutagen 2000', 'gtceu:refined_sentience 1000', 'gtceu:crystal_methamphetamine 72')
 .itemOutputs('16x gtceu:sentient_circuit_board', '4x gtceu:petri_dish')
 .perTick(true)
@@ -1314,10 +1314,10 @@ GTM.particle_accelerator('antimatter_tank_draining_alt')
 
 const UHVcomponents = {
     catalyst_core: ['4x gtceu:sulvarium-over-kraethite_steel_rod', 'gtceu:fusion_glass', 'gtceu:preon_star', '32x gtceu:fine_transuranic_naquadrium_alloy_wire', 'gtceu:uv_emitter', '4x gtceu:tainted_zircalloy_ring', 'gtceu:naquadria 576'],
-    computational_matrix: ['gtceu:sulvarium-over-kraethite_steel_frame', '#gtceu:circuits/uhv', '2x #gtceu:circuits/uv', '3x #gtceu:circuits/zpm', '4x gtceu:astazine-e_single_cable', '4x gtceu:transuranic_naquadrium_alloy_bolt', 'gtceu:indium-vor-dys-cad_supersolder_alloy 2304'],
+    computational_matrix: ['gtceu:sulvarium-over-kraethite_steel_frame', '#gtceu:circuits/uhv', '2x #gtceu:circuits/uv', '3x #gtceu:circuits/zpm', '4x gtceu:astrazine-e_single_cable', '4x gtceu:transuranic_naquadrium_alloy_bolt', 'gtceu:indium-vor-dys-cad_supersolder_alloy 2304'],
     high_strength_panel: ['gtceu:dense_sulvarium-over-kraethite_steel_plate', '#gtceu:circuits/zpm', '4x gtceu:tainted_zircalloy_screw', 'gtceu:polyether_ether_ketone 576'],
     microfluidic_flow_valve: ['gtceu:uv_fluid_regulator', 'gtceu:stellarite_small_fluid_pipe', '2x gtceu:sulvarium-over-kraethite_steel_plate', '4x gtceu:sulvarium-over-kraethite_steel_round', '4x gtceu:styrene_butadiene_rubber_ring', '2x gtceu:sulvarium-over-kraethite_steel_ring', 'gtceu:polyether_ether_ketone 576'],
-    micropower_router: ['4x gtceu:astazine-e_double_cable', '2x gtceu:sulvarium-over-kraethite_steel_plate', '#gtceu:circuits/uv', '4x gtceu:sulvarium-over-kraethite_steel_bolt', 'gtceu:polybenzimidazole 576'],
+    micropower_router: ['4x gtceu:astrazine-e_double_cable', '2x gtceu:sulvarium-over-kraethite_steel_plate', '#gtceu:circuits/uv', '4x gtceu:sulvarium-over-kraethite_steel_bolt', 'gtceu:polybenzimidazole 576'],
     precision_drive_mechanism: ['gtceu:sulvarium-over-kraethite_steel_frame', 'gtceu:uv_electric_motor', '#gtceu:circuits/uv', 'gtceu:tri-osmic_matrix_gear', 'gtceu:small_sulvarium-over-kraethite_steel_gear', '8x gtceu:sulvarium-over-kraethite_steel_round', 'gtceu:triconite 2000'],
     super_magnetic_core: ['gtceu:long_bose-einstein_neutronium_rod', '2x gtceu:cryosporsite_rod', '3x gtceu:sulvarium-over-kraethite_steel_rod', '16x gtceu:fine_tainted_zircalloy_wire', '2x gtceu:stellarite_tiny_fluid_pipe', 'gtceu:hypothermic_helium_3_plasma 2000'],
     transmission_assembly: ['gtceu:stellarite_frame', 'gtceu:uv_electric_motor', '2x gtceu:sulvarium-over-kraethite_steel_rod', '2x gtceu:sulvarium-over-kraethite_steel_ring', '4x gtceu:sulvarium-over-kraethite_steel_round', '16x gtceu:fine_tainted_zircalloy_wire', 'gtceu:triconite 2000']
@@ -1368,13 +1368,13 @@ GTM.phase_alternator('oganesson-xenon_trifluoride')
 .inputFluids('gtceu:oganesson', 'gtceu:xenon_trifluoride-hexafluoroantimonate')
 .outputFluids('gtceu:oganesson-xenon_trifluoride 900', /*haha you lost 10% from oganessoning too hard*/ 'gtceu:antimony_hexafluoride')
 .duration(400)
-.EUt(524288)
+.EUt(va.uv, 4)
 
 GTM.fusion_reactor('oganesson-xenon_trifluoride_quiescification_cy')
 .inputFluids('gtceu:oganesson-xenon_trifluoride 10000', 'gtceu:cryothetic_zero 2500')
 .outputFluids('gtceu:bose-einstein_oganesson-xenon_trifluoride_condensate_plasma 10000')
 .duration(40)
-.EUt(524288)
+.EUt(va.uv, 4)
 .fusionStartEU(320000000)
 
 GTM.fusion_reactor('oganesson-xenon_trifluoride_quiescification_he3')
@@ -1398,25 +1398,35 @@ GTM.electrolyzer('decomposition_electrolyzing_oganesson-xenon_trifluoride')
 .duration(276)
 .EUt(30)
 
+GTM.assembly_line('hyperfrost')
+.itemInputs('gtceu:aetheric-thermavyte_frame', '3x #gtceu:circuits/uhv', '6x gtceu:dense_echolumium_plate', '3x gtceu:zpm_electric_pump', '4x gtceu:neutronium_normal_fluid_pipe', '32x gtceu:fine_chronocrytic-vhaelsalite_wire', '6x gtceu:hssd_bolt')
+.inputFluids('gtceu:indium-vor-dys-cad_supersolder_alloy 1152')
+.itemOutputs('gtceu:hyperfrost')
+.stationResearch(b => b.researchStack('gtceu:mega_vacuum_freezer').EUt(va.uhv).CWUt(72, 131072))
+.duration(1000)
+.EUt(va.uhv, 1.5)
 
+GTM.assembly_line('aetherite_thermostorm_chamber')
+.itemInputs('gtceu:pyrathene_frame', '4x #gtceu:circuits/uhv', '4x gtceu:dense_sulvarium-over-kraethite_steel_plate', '8x gtceu:uv_electric_pump', '8x gtceu:stellarite_normal_fluid_pipe', '64x gtceu:fine_naquadrium_wire', '16x gtceu:sulvarium-over-kraethite_steel_bolt')
+.inputFluids('gtceu:indium-vor-dys-cad_supersolder_alloy 9216', 'gtceu:stellarite 2304', 'gtceu:polyether_ether_ketone 1152')
+.itemOutputs('gtceu:aetherite_thermostorm_chamber')
+.stationResearch(b => b.researchStack('gtceu:hyperfrost').EUt(va.uhv).CWUt(144, 262144))
+.duration(1000)
+.EUt(va.uhv, 2.5)
 
+GTM.organism_assembly_line('living_data_disk')
+.itemInputs('gtceu:sentience_printed_circuit_board', '2x #gtceu:circuits/uv',  '32x gtceu:b_ram_chip', '16x gtceu:b_nor_memory_chip', '16x gtceu:b_nand_memory_chip', '32x gtceu:fine_astrazine-e_wire')
+.inputFluids('gtceu:mutagen 144', 'gtceu:refined_sentience 216')
+.itemOutputs('gtceu:living_data_disk')
+.stationResearch(global.OrganismAssemblyLineResearch(event, 'living_data_disk', 'gtceu:data_module', 64, 51200, va.zpm))
+.duration(1000)
+.EUt(va.uv)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+GTM.quantum_condensate_exchanger('oganesson-xenon_trifluoride_quiescification')
+.inputFluids('gtceu:oganesson-xenon_trifluoride 20000')
+.outputFluids('gtceu:bose-einstein_oganesson-xenon_trifluoride_condensate_plasma 20000')
+.duration(100)
+.EUt(va.uhv, 4)
 
 
 

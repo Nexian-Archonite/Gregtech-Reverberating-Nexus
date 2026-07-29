@@ -4,7 +4,7 @@ const GTM = sentience.recipes.gtceu
 
 // RAM recipes
 GTM.organism_assembly_line('wetware_mainframe_biomechanical')
-.itemInputs('2x gtceu:tritanium_frame', '2x gtceu:wetware_processor_computer', '8x gtceu:sentient_smd_diode', '8x gtceu:sentient_smd_capacitor', '8x gtceu:sentient_smd_transistor', '8x gtceu:sentient_smd_resistor', '8x gtceu:sentient_smd_inductor', '32x gtceu:polyether_ether_ketone_foil', '8x gtceu:b_ram_chip', '4x gtceu:chronocrytic-vhaelsalite_double_wire', '8x gtceu:astazine-e_plate')
+.itemInputs('2x gtceu:tritanium_frame', '2x gtceu:wetware_processor_computer', '8x gtceu:sentient_smd_diode', '8x gtceu:sentient_smd_capacitor', '8x gtceu:sentient_smd_transistor', '8x gtceu:sentient_smd_resistor', '8x gtceu:sentient_smd_inductor', '32x gtceu:polyether_ether_ketone_foil', '8x gtceu:b_ram_chip', '4x gtceu:chronocrytic-vhaelsalite_double_wire', '8x gtceu:astrazine-e_plate')
 .inputFluids('gtceu:mutagen 1440', 'gtceu:soldering_alloy 1440', 'gtceu:polyether_ether_ketone 576')
 .itemOutputs('gtceu:wetware_processor_mainframe')
 .cleanroom(CleanroomType.STERILE_CLEANROOM)
@@ -12,7 +12,7 @@ GTM.organism_assembly_line('wetware_mainframe_biomechanical')
 .EUt(1200000)
 
 GTM.organism_assembly_line('wetware_super_computer_biomechanical')
-.itemInputs('gtceu:sentience_printed_circuit_board', '2x gtceu:wetware_processor_assembly', 'gtceu:sentient_smd_diode', '2x gtceu:b_nor_memory_chip', '4x gtceu:b_ram_chip', '24x gtceu:fine_chronocrytic-vhaelsalite_wire', '32x gtceu:polyether_ether_ketone_foil', '4x gtceu:astazine-e_plate')
+.itemInputs('gtceu:sentience_printed_circuit_board', '2x gtceu:wetware_processor_assembly', 'gtceu:sentient_smd_diode', '2x gtceu:b_nor_memory_chip', '4x gtceu:b_ram_chip', '24x gtceu:fine_chronocrytic-vhaelsalite_wire', '32x gtceu:polyether_ether_ketone_foil', '4x gtceu:astrazine-e_plate')
 .inputFluids('gtceu:mutagen 576', 'gtceu:soldering_alloy 576')
 .itemOutputs('gtceu:wetware_processor_computer')
 .cleanroom(CleanroomType.STERILE_CLEANROOM)
