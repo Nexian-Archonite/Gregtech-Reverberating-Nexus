@@ -192,10 +192,9 @@ const types = [
 const researchTypes = ['organism_assembly_line', 'component_part_assembly', 'assembly_line']
 
 global.ComponentResearch = (event, recipeId, researchItem, cwuT, totalCWU, euT, recipeType) => {
-    const dataItem = (cwuT > 140) ? 'gtceu:living_data_disk' : 'gtceu:data_module'
+    const dataItem = (cwuT >= 64) ? 'gtceu:data_module' : 'gtceu:data_orb'
     const researchId = `1x_${researchItem.replace(':', '_')}`
 
-    console.log('recipe:', recipeId, 'cwuT:', cwuT)
     event.recipes.gtceu.research_station(`component_research_${researchId}`)
         .itemInputs(dataItem)
         .itemInputs(researchItem)
@@ -289,7 +288,8 @@ dualCasingAdv('aetheric-thermavyte', 'vorrexite', 'aetherite_casing')
 const transcendentBlastTier = [
     { name: 'omnium', blastTemp: 19449, EUt: va.uhv, duration: 1600 },
     { name: 'sulvarium-over-kraethite_steel', blastTemp: 11000, EUt: va.uv, duration: 750 },
-    { name: 'aetheric-thermavyte', blastTemp: 10799, EUt: va.uhv, duration: 800 }
+    { name: 'aetheric-thermavyte', blastTemp: 10799, EUt: va.uhv, duration: 800 },
+    { name: 'indium-vor-dys-cad_supersolder_alloy', blastTemp: 11000, EUt: va.uhv, duration: 750}
 ]
 
 GTM.bender('bend_vorrexite_to_foil')
@@ -364,12 +364,22 @@ transcendentBlastTier.forEach(mat => {
 })
 
 transcendentBlastTier.forEach(mat => {
-    GTM.electric_blast_furnace(`blast_${mat.name}_gas`)
+    GTM.electric_blast_furnace(`blast_${mat.name}_og`)
         .itemInputs(`gtceu:${mat.name}_dust`)
         .inputFluids(`gtceu:oganesson ${ogConsumption(mat.blastTemp)}`)
         .itemOutputs(`gtceu:hot_${mat.name}_ingot`)
+        .outputFluids(`gtceu:quasifluxed_oganesson ${ogConsumption(mat.blastTemp)}`)
         .blastFurnaceTemp(mat.blastTemp)
         .duration(Math.floor((0.60 - 0.03 * Math.log2(mat.blastTemp / 10000)) * mat.duration))
+        .EUt(mat.EUt)
+
+    GTM.electric_blast_furnace(`blast_${mat.name}_og(xef3)`)
+        .itemInputs(`gtceu:${mat.name}_dust`)
+        .inputFluids(`gtceu:oganesson-xenon_trifluoride ${ogConsumption(mat.blastTemp)}`)
+        .itemOutputs(`gtceu:hot_${mat.name}_ingot`)
+        .outputFluids(`gtceu:quasifluxed_oganesson_trifluoride ${ogConsumption(mat.blastTemp)}`)
+        .blastFurnaceTemp(mat.blastTemp)
+        .duration(Math.floor((0.57 - 0.03 * Math.log2(mat.blastTemp / 10000)) * mat.duration))
         .EUt(mat.EUt)
     if (mat.name !== 'aetheric-thermavyte') {
         event.remove({id: `gtceu:vacuum_freezer/cool_hot_${mat.name}_ingot`})
@@ -391,15 +401,15 @@ transcendentAlloyBlastTier.forEach(mat => {
         return sum + (amount * 144)
     }, 0)
 
-    GTM.alloy_blast_smelter(`${mat.name}_gas`)
+    GTM.alloy_blast_smelter(`${mat.name}_og`)
         .itemInputs(
         mat.components.map(component => {
             let [amount, name] = component.split('x ')
             return `${amount}x gtceu:${name}_dust`
         })
     )
-        .inputFluids(`gtceu:bose-einstein_oganesson-xenon_trifluoride_condensate_plasma ${25*Math.log10(totalMb)}`)
-        .outputFluids(`gtceu:molten_${mat.name} ${totalMb}`, `gtceu:oganesson-xenon_trifluoride ${25*Math.log10(totalMb)}`)
+        .inputFluids(`gtceu:oganesson ${25*Math.log10(totalMb)}`)
+        .outputFluids(`gtceu:molten_${mat.name} ${totalMb}`)
         .blastFurnaceTemp(mat.blastTemp)
         .duration((0.60 - 0.02 * Math.log2(totalMb)) * mat.duration)
         .EUt(mat.EUt)

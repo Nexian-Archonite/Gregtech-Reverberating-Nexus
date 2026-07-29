@@ -1502,7 +1502,7 @@ event.create('sulvarium-over-kraethite_steel')
     .flags(plates, rod, gear, small_gear, frame, small_gear, spring, bolt_and_screw, rotor, dense_plate, fine_wire, round)
     .components('6x sulvarium', '6x kraethite', '3x antisource', '4x holmium', '2x nexus', '2x awakened_draconium')
     .cableProperties(v.uhv, 20, 0, true)
-    .blastTemp(11000, null, va.uhv, 1050)
+    .blastTemp(11000, null, va.uv, 1050)
     .liquid(11000)
 
 event.create('aetheric-thermavyte')
@@ -3129,6 +3129,24 @@ event.create('bose-einstein_oganesson-xenon_trifluoride_condensate')
     .plasma(0)
     .color(0x3c3f85)
     .components('oganesson', 'xenon_trifluoride')
+
+event.create('quasiflux')
+    .liquid(293)
+    .color(0x861bbb)
+    .element('quasiflux')
+
+event.create('quasifluxed_oganesson')
+    .liquid(293)
+    .color(0x9025d5)
+    .components('quasiflux', 'oganesson')
+    ,flags(no_decomp)
+
+event.create('quasifluxed_oganesson-xenon_trifluoride')
+    .liquid(293)
+    .color(0xbe4aff)
+    .components('quasiflux', 'oganesson-xenon_trifluoride')
+    ,flags(no_decomp)
+
     
     //material changes go brrbrrbrbrb
 
