@@ -275,11 +275,10 @@
     "material.gtceu.sulvarium-over-kraethite_steel": "§6Sulvarium§r-Over-§bKraethite Steel §r[A]",
     "material.gtceu.indium-vor-dys-cad_supersolder_alloy": "§5Indium§r-§cVor§r-§6Dys§r-§7Cad§r Supersolder Alloy",
     "material.gtceu.aetheric-thermavyte": "§2Aetherite§r-§4Thermavyte",
-    "material.gtceu.bose-einstein_oganesson-xenon_trifluoride_condensate": "§aBose-Einstein §1Oganesson§r-§bXenon Trifluoride§r Condensate",
 
     "-------- Alien Related Compounds --------": "",
 
-    "material.gtceu.xenon_difluoride": "§bXenon Bifluoride",
+    "material.gtceu.xenon_difluoride": "§bXenon Difluoride",
     "material.gtceu.xenon_trifluoride": "§bXenon Trifluoride",
     "material.gtceu.xenon_tetrafluoride": "§bXenon Tetrafluoride",
 
@@ -288,11 +287,14 @@
 
     "material.gtceu.xenon_trifluoride-hexafluoroantimonate": "§bXenon Trifluoride§r - Hexa§bfluoro§7antimonate",
     "material.gtceu.oganesson-xenon_trifluoride": "§1Oganesson§r-§bXenon Trifluoride",
+    "material.gtceu.bose-einstein_oganesson-xenon_trifluoride_condensate": "§aBose-Einstein §1Oganesson§r-§bXenon Trifluoride§r Condensate",
 
 
     "material.gtceu.primordial_essence": "§1Primordial §kEssence",
     "material.gtceu.erebus_essence": "§0Erebus §kEssence",
     "material.gtceu.aether_essence": "§fAether §kEssence",
+    "material.gtceu.boreas_essence": "§bBoreas §kEssence",
+    "material.gtceu.prometheus_essence": "§4Prometheus §kEssence",
 
     "material.gtceu.sodium_cyanide": "Sodium Cyanide",
     "material.gtceu.chloroacetic_mixture": "Chloroacetic Mixture",
