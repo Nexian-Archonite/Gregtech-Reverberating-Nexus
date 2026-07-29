@@ -1409,20 +1409,20 @@ GTM.assembly_line('hyperfrost')
 .EUt(va.uhv, 1.5)
 
 GTM.assembly_line('aetherite_thermostorm_chamber')
-.itemInputs('gtceu:pyrathene_frame', '4x #gtceu:circuits/uhv', '4x gtceu:dense_sulvarium-over-kraethite_steel_plate', '8x gtceu:uv_electric_pump', '8x gtceu:stellarite_normal_fluid_pipe', '64x gtceu:fine_naquadrium_wire', '16x gtceu:sulvarium-over-kraethite_steel_bolt')
+.itemInputs('gtceu:pyrathene_frame', '4x #gtceu:circuits/uhv', '4x gtceu:dense_pyrathene_plate', '8x gtceu:uv_electric_pump', '8x gtceu:stellarite_normal_fluid_pipe', '64x gtceu:fine_naquadrium_wire', '16x gtceu:sulvarium-over-kraethite_steel_bolt')
 .inputFluids('gtceu:indium-vor-dys-cad_supersolder_alloy 9216', 'gtceu:stellarite 2304', 'gtceu:polyether_ether_ketone 1152')
 .itemOutputs('gtceu:aetherite_thermostorm_chamber')
 .stationResearch(global.AssemblyLineResearch(event, 'aetherite_thermostorm_chamber', 'gtceu:hyperfrost', 144, 262144, va.zpm))
 .duration(1000)
 .EUt(va.uhv, 2.5)
 
-GTM.organism_assembly_line('living_data_disk')
+/* GTM.organism_assembly_line('living_data_disk')
 .itemInputs('gtceu:sentience_printed_circuit_board', '2x #gtceu:circuits/uv',  '32x gtceu:b_ram_chip', '16x gtceu:b_nor_memory_chip', '16x gtceu:b_nand_memory_chip', '32x gtceu:fine_astrazine-e_wire')
 .inputFluids('gtceu:mutagen 144', 'gtceu:refined_sentience 216')
 .itemOutputs('gtceu:living_data_disk')
 .stationResearch(global.OrganismAssemblyLineResearch(event, 'living_data_disk', 'gtceu:data_module', 64, 51200, va.zpm))
 .duration(1000)
-.EUt(va.uv)
+.EUt(va.uv) */
 
 GTM.quantum_condensate_exchanger('oganesson-xenon_trifluoride_quiescification')
 .inputFluids('gtceu:oganesson-xenon_trifluoride 20000')
@@ -1430,17 +1430,26 @@ GTM.quantum_condensate_exchanger('oganesson-xenon_trifluoride_quiescification')
 .duration(100)
 .EUt(va.uhv, 4)
 
+GTM.assembler('chithion-flame_casing_casing')
+.itemInputs('16x netherrack')
+.inputFluids('gtceu:prometheus_essence 25')
+.itemOutputs('gtceu:chithion-flame_casing')
+.duration(1000)
+.EUt(512)
 
+GTM.assembler('cryonull_casing')
+.itemInputs('16x ad_astra:glacio_stone')
+.inputFluids('gtceu:boreas_essence 25')
+.itemOutputs('gtceu:cryonull_casing')
+.duration(1000)
+.EUt(512)
 
-
-
-
-
-
-
-
-
-
+GTM.assembler('unreal_engine_intake')
+.itemInputs('2x gtceu:sulvarium-over-kraethite_steel_rotor', '4x gtceu:stellarite_normal_fluid_pipe', 'gtceu:sulvan_steel_casing')
+.itemOutputs('2x gtceu:unreal_engine_intake')
+.inputFluids('gtceu:polyether_ether_ketone 36')
+.duration(1000)
+.EUt(512)
 
 
 

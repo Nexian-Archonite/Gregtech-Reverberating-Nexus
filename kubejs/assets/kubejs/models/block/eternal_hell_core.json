@@ -7,7 +7,7 @@
 		"0": "kubejs:block/power_cores/heat_core",
 		"2": "kubejs:block/power_cores/heat_core_bottom",
 		"3": "kubejs:block/power_cores/heat_core_top",
-		"particle": "kubejs:block/everlasting_heat_core"
+		"particle": "kubejs:block/power_cores/heat_core"
 	},
 	"elements": [
 		{

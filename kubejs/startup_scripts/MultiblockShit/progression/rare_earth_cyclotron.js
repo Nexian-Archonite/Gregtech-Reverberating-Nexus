@@ -1,7 +1,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 event.create('cyclotron')
 .category('imthescatmanbebobebobeboeboboeoebobeoboebboeboeboeboeboeboeboeobeobeboebooeboeeoboeboeboebo')
-.setMaxIOSize(1, 9, 1, 3)
+.setMaxIOSize(1, 9, 1, 6)
 .setSlotOverlay(true, true, GuiTextures.CENTRIFUGE_OVERLAY)
 .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE, FillDirection.LEFT_TO_RIGHT)
 .setSound(GTSoundEntries.CENTRIFUGE)
@@ -11,7 +11,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 
     event.create('cyclotron', 'multiblock')
     .rotationState(RotationState.NON_Y_AXIS)
-    .recipeTypes([GTRecipeTypes.get('cyclotron'), 'centrifuge'])
+    .recipeType(GTRecipeTypes.get('cyclotron'))
     .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT, GTRecipeModifiers.PARALLEL_HATCH])
     .appearanceBlock(() => Block.getBlock("gtceu:vibration_safe_casing"))
     .pattern(definition => FactoryBlockPattern.start()

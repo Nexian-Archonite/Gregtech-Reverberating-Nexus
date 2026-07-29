@@ -127,6 +127,6 @@ bio.create('gtceu:biological_soc_wafer')
 .textureJson({layer0: 'gtceu:item/sentient_circuitry/biological_soc_wafer'})
 .displayName('Biological SoC Wafer')
 
-bio.create('gtceu:living_data_disk')
-.textureJson({layer0: 'gtceu:item/sentient_circuitry/living_disk'})
+/* bio.create('gtceu:living_data_disk')
+.textureJson({layer0: 'gtceu:item/sentient_circuitry/living_disk'}) */
 })

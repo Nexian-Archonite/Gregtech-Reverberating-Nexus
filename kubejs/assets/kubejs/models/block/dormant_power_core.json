@@ -4,10 +4,10 @@
 	"parent": "heat_core",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "kubejs:block/power_cores/dormant_core_core",
+		"0": "kubejs:block/power_cores/dormant_core",
 		"2": "kubejs:block/power_cores/dormant_core_bottom",
 		"3": "kubejs:block/power_cores/dormant_core_top",
-		"particle": "kubejs:block/smolding_heat_core"
+		"particle": "kubejs:block/power_cores/dormant_core"
 	},
 	"elements": [
 		{

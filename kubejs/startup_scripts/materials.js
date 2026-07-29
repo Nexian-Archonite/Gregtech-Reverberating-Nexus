@@ -455,7 +455,7 @@ event.create('pyrathene')
 
 event.create('quasiflux')
     .protons(0)
-    .neutrons()
+    .neutrons(0)
     .symbol('QFX')
 })
 
@@ -1816,34 +1816,6 @@ event.create('dtpa-rarest_earth_complex')
     .liquid(0)
     .blastTemp(1, null, va.uhv, 1400)
     
-    event.create('chronocrytic-vhaelsalite')
-    .ingot()
-    .color(0x8c0059).secondaryColor(0xccbbe5)
-    .flags(fine_wire, spring, small_spring, foil, bolt_and_screw)
-    .components('chronosite', 'vhaelcryite')
-    .cableProperties(v.uhv, 28, 0, true)
-    
-// alien materials -----------------------------------------------------------------------
-event.create('chronosite')
-    .gem()
-    .color(0x1a0033).secondaryColor(0x99ddff)
-    .iconSet(GEM_VERTICAL)
-    .element('chronosite')
-    .flags(rod, frame)
-
-event.create('vhaelcryite')
-    .gem()
-    .color(0xff007f).secondaryColor(0xff99cc)
-    .iconSet(GEM_VERTICAL)
-    .element('vhaelcryite')
-    .flags(no_decomp, plates)
-
-event.create('kraethite')
-    .gem()
-    .color(0x00cfff).secondaryColor(0x004466)
-    .iconSet(GEM_HORIZONTAL)
-    .element('kraethite')
-
 
 // venus elements
 event.create('vaelthorium')
@@ -1895,7 +1867,7 @@ event.create('pyrathene')
     .color(0xcc0000).secondaryColor(0xffaa00)
     .iconSet(RUBY)
     .element('pyrathene')
-    .flags(frame)
+    .flags(frame, plates, dense_plate)
 
 event.create('transcendentine')
     .element('transcendentine')
@@ -1911,6 +1883,28 @@ event.create('draconium')
     .element('draconium')
     .addOreByproducts('titanium', 'rhenium', 'naquadah')
     .ignoredTagPrefixes([TagPrefix.dustTiny, TagPrefix.dustSmall])
+    
+// alien materials -----------------------------------------------------------------------
+event.create('chronosite')
+    .gem()
+    .color(0x1a0033).secondaryColor(0x99ddff)
+    .iconSet(GEM_VERTICAL)
+    .element('chronosite')
+    .flags(rod, frame)
+
+event.create('vhaelcryite')
+    .gem()
+    .color(0xff007f).secondaryColor(0xff99cc)
+    .iconSet(GEM_VERTICAL)
+    .element('vhaelcryite')
+    .flags(plates, rod, frame)
+
+event.create('kraethite')
+    .gem()
+    .color(0x00cfff).secondaryColor(0x004466)
+    .iconSet(GEM_HORIZONTAL)
+    .element('kraethite')
+
 
     // venus minerals
 event.create('vaelthorite')
@@ -2064,7 +2058,7 @@ event.create('sulvarium-over-kraethite_steel')
     .color(0xffee00).secondaryColor(0x00ffee)
     .flags(plates, rod, gear, small_gear, frame, small_gear, spring, bolt_and_screw, rotor, dense_plate, fine_wire, round)
     .components('6x sulvarium', '6x kraethite', '3x antisource', '4x holmium', '2x nexus', '2x awakened_draconium')
-    .cableProperties(v.uhv, 20, 0, true)
+    .cableProperties(v.uv, 20, 0, true)
     .blastTemp(11000, null, va.uv, 1050)
     .liquid(11000)
 
@@ -2081,20 +2075,29 @@ event.create('vaelkethrite')
     .color(0x7c2208).secondaryColor(0x8c2200)
     .iconSet(NETHERSTAR)
     .flags(rod, frame, plates, foil)
+    .components('vaelthorium', 'kethrite')
 
 event.create('nexian_pyrite')
     .ingot()
-    .color(0x8B1515).secondary(0x5580B8)
+    .color(0x8B1515).secondaryColor(0x5580B8)
     .components('37x nexus_steel', '12x neutronium', '8x naquadah_alloy', '2x oganesson', '3x promethium')
     .blastTemp(16800, null, va.uv, 900)
     .liquid(16800)
 
-event.created('activated_nexian_pyrite')
+event.create('activated_nexian_pyrite')
     .ingot()
-    .color(0xA01C1C).secondary(0x6699DD)
+    .color(0xA01C1C).secondaryColor(0x6699DD)
     .components('nexian_pyrite', '4x pyrathene', '4x cindralite')
     .flags(rod, frame, plates, foil, no_decomp, no_abs_recipe)
     .liquid(16800)
+    .blastTemp(16800, null, va.uhv, 1050)
+
+event.create('chronocrytic-vhaelsalite')
+    .ingot()
+    .color(0x8c0059).secondaryColor(0xccbbe5)
+    .flags(fine_wire, spring, small_spring, foil, bolt_and_screw)
+    .components('chronosite', 'vhaelcryite')
+    .cableProperties(v.uhv, 28, 0, true)
 
     
     
@@ -3629,15 +3632,17 @@ casing('aetherite_casing', '§3Cryothetically§r Hyperoperative §2Aetheric§r-�
 
 casing('peek_casing', "§aAcidically Nulled §6Poly-Ether Ether Ketone §rCasing", 'solid/peek_casing', 10, 23, 'needs_iron_tool')
 
-casing('peek_pipe_casing', '§6Poly-Ether Ether Ketone Pipe §rCasing', 'pipe/peek_casing', 10, 23, 'needs_iron_tool')
+casing('peek_pipe_casing', '§6Poly-Ether Ether Ketone Pipe §rCasing', 'pipe/peek', 10, 23, 'needs_iron_tool')
+
+casing('sulvan_steel_pipe_casing', '§6Sulvarium§r-Over-§bKraethite Steel §rPipe Casing', 'pipe/sulvan_steel_casing', 17, 40, 'needs_netherite_tool')
 
 casing('sulvan_steel_gearbox', '§6Sulvarium§r-Over-§bKraethite Steel §rGearbox', 'gearbox/sulvan_steel_gearbox', 17, 40, 'needs_netherite_tool')
 
-casing('activated_nexian_pyrite_casing', '§4I§cn§6f§ee§6r§cn§4o§cs§6t§ea§6t§ci§4c§r-§6Alloyment §k§1A§2c§3t§4i§5v§6a§7t§8e§9d§r §bNexian Pyrite§r Casing', 'solid/activated_nexian_pyrite_casing', 23, 60, 'needs_duranium_tool')
+casing('activated_nexian_pyrite_casing', '§4I§cn§6f§ee§6r§cn§4o§cs§6t§ea§6t§ci§4c§r-§6Alloyment §1§kA§2§kc§3§kt§4§ki§5§kv§6§ka§7§kt§8§ke§9§kd§r §bNexian §6Pyrite§r Casing', 'solid/activated_nexian_pyrite_casing', 23, 60, 'needs_duranium_tool')
 
 casing('chithion-flame_casing', '§9§kPrimordially§r Stabilized §4Infernal Chithion-Flame§r Casing', 'temperature/chithion_flame_casing', 9, 11, 'needs_iron_tool')
 
-casing('cryonull_casing', '§9§kPrimordially§r Stabilized §3Cryothetic Cryonull§r Casing', 'temperature/chithion_flame_casing', 9, 11, 'needs_iron_tool')
+casing('cryonull_casing', '§9§kPrimordially§r Stabilized §3Cryothetic Cryonull§r Casing', 'temperature/cryonull_casing', 9, 11, 'needs_iron_tool')
 
 event.create('gtceu:sulvan_steel_firebox', 'gtceu:active')
 .displayName('§6Sulvarium§r-Over-§bKraethite Steel §rFirebox')

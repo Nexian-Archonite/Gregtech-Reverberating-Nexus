@@ -244,6 +244,22 @@ const dualCasing = (primary, secondary, output) => {
         .duration(50)
         .circuit(6)
         .EUt(16)
+
+    const maceratorRecipe = GTM.macerator(`${output}_recycling`)
+        .itemInputs(`gtceu:${output}`)
+        .duration(50)
+        .EUt(16)
+
+    if (primary === secondary) {
+        maceratorRecipe.itemOutputs(`4x gtceu:${primary}_dust`)
+    } else {
+        maceratorRecipe.itemOutputs(`3x gtceu:${primary}_dust`, `gtceu:${secondary}_dust`)
+    }
+}
+if (primary === secondary) {
+    maceratorRecipe.itemOutputs(`4x gtceu:${primary}_dust`)
+} else {
+    maceratorRecipe.itemOutputs(`3x gtceu:${primary}_dust`, `gtceu:${secondary}_dust`)
 }
 
 const dualCasingAdv = (primary, secondary, output) => {
@@ -364,20 +380,11 @@ transcendentBlastTier.forEach(mat => {
 })
 
 transcendentBlastTier.forEach(mat => {
-    GTM.electric_blast_furnace(`blast_${mat.name}_og`)
-        .itemInputs(`gtceu:${mat.name}_dust`)
-        .inputFluids(`gtceu:oganesson ${ogConsumption(mat.blastTemp)}`)
-        .itemOutputs(`gtceu:hot_${mat.name}_ingot`)
-        .outputFluids(`gtceu:quasifluxed_oganesson ${ogConsumption(mat.blastTemp)}`)
-        .blastFurnaceTemp(mat.blastTemp)
-        .duration(Math.floor((0.60 - 0.03 * Math.log2(mat.blastTemp / 10000)) * mat.duration))
-        .EUt(mat.EUt)
-
-    GTM.electric_blast_furnace(`blast_${mat.name}_og(xef3)`)
+    GTM.electric_blast_furnace(`blast_${mat.name}_og-xef3`)
         .itemInputs(`gtceu:${mat.name}_dust`)
         .inputFluids(`gtceu:oganesson-xenon_trifluoride ${ogConsumption(mat.blastTemp)}`)
         .itemOutputs(`gtceu:hot_${mat.name}_ingot`)
-        .outputFluids(`gtceu:quasifluxed_oganesson_trifluoride ${ogConsumption(mat.blastTemp)}`)
+        .outputFluids(`gtceu:quasifluxed_oganesson-xenon_trifluoride ${ogConsumption(mat.blastTemp)}`)
         .blastFurnaceTemp(mat.blastTemp)
         .duration(Math.floor((0.57 - 0.03 * Math.log2(mat.blastTemp / 10000)) * mat.duration))
         .EUt(mat.EUt)
@@ -408,10 +415,10 @@ transcendentAlloyBlastTier.forEach(mat => {
             return `${amount}x gtceu:${name}_dust`
         })
     )
-        .inputFluids(`gtceu:oganesson ${25*Math.log10(totalMb)}`)
+        .inputFluids(`gtceu:oganesson-xenon_trifluoride ${25*Math.log10(totalMb)}`)
         .outputFluids(`gtceu:molten_${mat.name} ${totalMb}`)
         .blastFurnaceTemp(mat.blastTemp)
-        .duration((0.60 - 0.02 * Math.log2(totalMb)) * mat.duration)
+        .duration((0.57 - 0.02 * Math.log2(totalMb)) * mat.duration)
         .EUt(mat.EUt)
         if (mat.name !== 'aetheric-thermavyte') {
         event.remove({id: `gtceu:vacuum_freezer/${mat.name}`})
