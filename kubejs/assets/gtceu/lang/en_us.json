@@ -59,6 +59,127 @@
     "block.gtceu.large_rock_crusher.tooltip.1": "Has §6Perfect Overclock",
     "block.gtceu.large_rock_crusher.tooltip.2": "Can up to have §bone§r Energy Hatch",
 
+
+
+    "block.gtceu.echo_imbuement_chamber.tooltip.0": "§7Imbues matter with resonating echoes from beyond.",
+    "block.gtceu.echo_imbuement_chamber.tooltip.1": "Available Recipe Types: §1Echonite Chamber Imbuement",
+
+    "block.gtceu.primitive_alloyment_kiln.tooltip.0": "§7The humble beginning of true metallurgy.",
+    "block.gtceu.primitive_alloyment_kiln.tooltip.1": "Available Recipe Types: Kiln Alloyment",
+
+    "block.gtceu.effervescent_echoite_exile.tooltip.0": "§7Purges unstable Echoite through violent resonance.",
+    "block.gtceu.effervescent_echoite_exile.tooltip.1": "Available Recipe Types: §1Effervescent Echoite Exile",
+
+    "block.gtceu.metaphysical_metallurgy_tainter.tooltip.0": "§7Corrupts metals with impossible metaphysical properties.",
+    "block.gtceu.metaphysical_metallurgy_tainter.tooltip.1": "Available Recipe Types: §dMetaphysical Metallurgy Tainting",
+
+    "block.gtceu.industrial_refraction_kiln.tooltip.0": "§7Industrial heat refined into perfect alloying conditions.",
+    "block.gtceu.industrial_refraction_kiln.tooltip.1": "Available Recipe Types: Kiln Alloyment",
+
+    "block.gtceu.phase_alternator.tooltip.0": "§7Reality shifts with every alternating cycle.",
+    "block.gtceu.phase_alternator.tooltip.1": "Available Recipe Types: Phase Alternating",
+
+    "block.gtceu.mechanical_conjuration_institute.tooltip.0": "§7Where machinery learns to summon the impossible.",
+    "block.gtceu.mechanical_conjuration_institute.tooltip.1": "Available Recipe Types: §2Mechanical Institute Conjuration",
+
+    "block.gtceu.chemical_reaction_vat.tooltip.0": "§7Every reaction deserves a vessel large enough.",
+    "block.gtceu.chemical_reaction_vat.tooltip.1": "Available Recipe Types: §8Chemical Vat Synthesis, Chemical Reactor, Large Chemical Reactor",
+
+    "block.gtceu.cyclotron.tooltip.0": "§7Particles race endlessly toward greater energies.",
+    "block.gtceu.cyclotron.tooltip.1": "Available Recipe Types: §2Cyclotron-Cycling",
+
+    "block.gtceu.nuclear_fission_reactor.tooltip.0": "§7Harnesses the atom's relentless desire to split.",
+    "block.gtceu.nuclear_fission_reactor.tooltip.1": "Available Recipe Types: §5Nuclear Fission",
+
+    "block.gtceu.nuclear_turbine.tooltip.0": "§7Turns radioactive fury into usable power.",
+    "block.gtceu.nuclear_turbine.tooltip.1": "Available Recipe Types: §5Nuclear Turbine",
+
+    "block.gtceu.echoversal_space_complex.tooltip.0": "§7Builds colossal projects where space itself yields.",
+    "block.gtceu.echoversal_space_complex.tooltip.1": "Available Recipe Types: §9Space Factory Assembly",
+
+    "block.gtceu.nuclear_dissolvant.tooltip.0": "§7Separates even the most stubborn nuclear compounds.",
+    "block.gtceu.nuclear_dissolvant.tooltip.1": "Available Recipe Types: §5Nuclear Dissolvant",
+
+    "block.gtceu.extraction_column.tooltip.0": "§7Draws valuable fractions from complex mixtures.",
+    "block.gtceu.extraction_column.tooltip.1": "Available Recipe Types: §5Extraction Column",
+
+    "block.gtceu.scrubbing_column.tooltip.0": "§7Purifies gases through relentless cleansing.",
+    "block.gtceu.scrubbing_column.tooltip.1": "Available Recipe Types: §5Scrubbing Column",
+
+    "block.gtceu.partition_column.tooltip.0": "§7Separates substances with unwavering precision.",
+    "block.gtceu.partition_column.tooltip.1": "Available Recipe Types: §5Partition Column",
+
+    "block.gtceu.stripping_column.tooltip.0": "§7Removes volatile components from reluctant mixtures.",
+    "block.gtceu.stripping_column.tooltip.1": "Available Recipe Types: §5Stripping Column",
+
+    "block.gtceu.organism_assembly_line.tooltip.0": "§7Engineers life with industrial efficiency.",
+    "block.gtceu.organism_assembly_line.tooltip.1": "Available Recipe Types: §4Organism Line Assembly",
+
+    "block.gtceu.biomechanical_factory.tooltip.0": "§7Steel and flesh perfected as one.",
+    "block.gtceu.biomechanical_factory.tooltip.1": "Available Recipe Types: §4Biomechanical Extruding, §4Biomechanical Recycling, §4Biomechanical Mixing, §4Biomechanical Imbuing, §4Biomechanical Delaminating",
+
+    "block.gtceu.incubation_chamber.tooltip.0": "§7Where engineered life first begins to breathe.",
+    "block.gtceu.incubation_chamber.tooltip.1": "Available Recipe Types: §4Organism Chamber Incubation, §cSpawn Simulating",
+
+    "block.gtceu.primitive_cylindrical_hearth.tooltip.0": "§7Simple flames forged civilization's first metals.",
+    "block.gtceu.primitive_cylindrical_hearth.tooltip.1": "Available Recipe Types: §6Primitive Cylindrical Hearth",
+
+    "block.gtceu.primitive_processing_factory.tooltip.0": "§7The first step toward industrial refinement.",
+    "block.gtceu.primitive_processing_factory.tooltip.1": "Available Recipe Types: §6Primitive Ore Processing",
+
+    "block.gtceu.ore_processing_factory.tooltip.0": "§7Every ore deserves complete refinement.",
+    "block.gtceu.ore_processing_factory.tooltip.1": "Available Recipe Types: §7Ore Factory Processing",
+
+    "block.gtceu.ore_processing_plant.tooltip.0": "§7Advanced systems extract every worthwhile fragment.",
+    "block.gtceu.ore_processing_plant.tooltip.1": "Available Recipe Types: §7Advanced Plant Processing",
+
+    "block.gtceu.ore_processing_array.tooltip.0": "§7Hundreds of ores processed in perfect harmony.",
+    "block.gtceu.ore_processing_array.tooltip.1": "Available Recipe Types: §dArray Ore Processing",
+
+    "block.gtceu.primitive_coking_array.tooltip.0": "§7Ancient methods scaled to industrial proportions.",
+    "block.gtceu.primitive_coking_array.tooltip.1": "Available Recipe Types: §6Primitive Array Coking",
+
+    "block.gtceu.interstellar_miner.tooltip.0": "§7No world is beyond the reach of industry.",
+    "block.gtceu.interstellar_miner.tooltip.1": "Available Recipe Types: §2Interstellar Mining",
+
+    "block.gtceu.heart_of_harmonia.tooltip.0": "§7A stellar heart beating with endless energy.",
+    "block.gtceu.heart_of_harmonia.tooltip.1": "Available Recipe Types: §7Heart of Harmonia Burning",
+
+    "block.gtceu.transcendental_polydimensional_accelerator.tooltip.0": "§7Accelerates matter beyond the limits of dimensions.",
+    "block.gtceu.transcendental_polydimensional_accelerator.tooltip.1": "Available Recipe Types: §dParticle Acceleration, §dFusion Acceleration",
+
+    "block.gtceu.applied_enigma.tooltip.0": "§7The answer is less important than the mystery.",
+    "block.gtceu.applied_enigma.tooltip.1": "Available Recipe Types: §dApplied Enigma",
+
+    "block.gtceu.solar_collector.tooltip.0": "§7Captures the endless generosity of the Sun.",
+    "block.gtceu.solar_collector.tooltip.1": "Available Recipe Types: §7Solar Collection",
+
+    "block.gtceu.lunar_collector.tooltip.0": "§7Harvests the Moon's silent radiance.",
+    "block.gtceu.lunar_collector.tooltip.1": "Available Recipe Types: §7Lunar Collection",
+
+    "block.gtceu.component_part_assembly.tooltip.0": "§7Precision gives rise to perfection.",
+    "block.gtceu.component_part_assembly.tooltip.1": "Available Recipe Types: §dComponent Assembly",
+
+    "block.gtceu.aetherite_thermostorm_chamber.tooltip.0": "§7Compresses thermal chaos into stable quantum condensates.",
+    "block.gtceu.aetherite_thermostorm_chamber.tooltip.1": "Available Recipe Types: §bQuantum Condensate Exchanger",
+
+    "block.gtceu.everflamed_hell_forge.tooltip.0": "§7A furnace whose §4Hellfire§7 never fades",
+    "block.gtceu.everflamed_hell_forge.tooltip.1": "§7Every ingot is baptized in §cHeat§7 beyond reason",
+    "block.gtceu.everflamed_hell_forge.tooltip.2": "§7Even §4Hell§7 fears what emerges from within",
+    "block.gtceu.everflamed_hell_forge.tooltip.3": "Available Recipe Types: Electric Blast Furnace",
+
+    "block.gtceu.pandemonic_blast_synchronizer.tooltip.0": "§7The synchronized chorus of a million §4infernal§7 furnaces",
+    "block.gtceu.pandemonic_blast_synchronizer.tooltip.1": "§7Every pulse raises the §cHeat§7 beyond mortal limits",
+    "block.gtceu.pandemonic_blast_synchronizer.tooltip.2": "§7Only perfection survives the §4Pandemonium§7",
+    "block.gtceu.pandemonic_blast_synchronizer.tooltip.3": "Available Recipe Types: Alloy Blast Smelter",
+
+    "block.gtceu.fracto-liminal_abyss_metal_alloyment_engine.tooltip.0": "§7The §5F.§7racto-§6L.§7iminal §1A.§7byss §3M.§7etal §4E.§7ngine",
+    "block.gtceu.fracto-liminal_abyss_metal_alloyment_engine.tooltip.1": "§7Where reality itself becomes another alloying element",
+    "block.gtceu.fracto-liminal_abyss_metal_alloyment_engine.tooltip.2": "§7Impossible metals are born beneath infinite §cHeat§7",
+    "block.gtceu.fracto-liminal_abyss_metal_alloyment_engine.tooltip.3": "§7Even the §1Abyss§7 bends before the §5F.§6L.§1A.§3M.§4E",
+    "block.gtceu.fracto-liminal_abyss_metal_alloyment_engine.tooltip.4": "Available Recipe Types: §6Fractal §7Metal §1Alloyment",
+
+    "block.gtceu.fracto-liminal_abyss_metal_alloyment_engine.tooltip.5": "Can Use §1L§2a§3s§4e§5r §6H§7a§8t§9c§1h§2e§3s",
     "recipe.capability.cwu.name": "§3CWU/t",    
 
     "material.gtceu.infinity": "§fI§en§df§ci§bn§ai§9t§fy",
@@ -195,37 +316,67 @@
 
     "§7 -- VENUS ORES --": "",
 
-    "material.gtceu.vaelthorite": "§cVaelthorite §r[A]",
-    "material.gtceu.vaelthorium": "§cVaelthorium §r[A]",
-    "material.gtceu.sulvarite": "§6Sulvarite §r[A]",
-    "material.gtceu.sulvarium": "§6Sulvarium §r[A]",
-    "material.gtceu.kethrenite": "§4Kethrenite §r[A]",
-    "material.gtceu.kethrite": "§4Kethrite §r[A]",
-    "material.gtceu.vorrexinite": "§5Vorrexinite §r[A]",
-    "material.gtceu.vorrexite": "§5Vorrexite §r[A]",
-    "material.gtceu.thermastone": "§6Thermastone §r[A]",
-    "material.gtceu.thermavyte": "§4Thermavyte §r[A]",
-    "material.gtceu.cindrax": "§7Cindrax §r[A]",
-    "material.gtceu.cindralite": "§7Cindralite §r[A]",
-    "material.gtceu.aetheric_palladite": "§2Aetheric Palladite §r[A]",
-    "material.gtceu.aetherite": "§2Aetherite §r[A]",
-    "material.gtceu.pyrathite": "§4Pyrathite §r[A]",
-    "material.gtceu.pyrathene": "§4Pyrathene §r[A]",
+    "material.gtceu.vaelthorite": "§cVaelthorite §r[A O]",
+    "material.gtceu.vaelthorium": "§cVaelthorium §r[A M]",
+    "material.gtceu.sulvarite": "§6Sulvarite §r[A M]",
+    "material.gtceu.sulvarium": "§6Sulvarium §r[A O]",
+    "material.gtceu.kethrenite": "§4Kethrenite §r[A M]",
+    "material.gtceu.kethrite": "§4Kethrite §r[A O]",
+    "material.gtceu.vorrexinite": "§5Vorrexinite §r[A M]",
+    "material.gtceu.vorrexite": "§5Vorrexite §r[A O]",
+    "material.gtceu.thermastone": "§6Thermastone §r[A M]",
+    "material.gtceu.thermavyte": "§4Thermavyte §r[A O]",
+    "material.gtceu.cindrax": "§7Cindrax §r[A M]",
+    "material.gtceu.cindralite": "§7Cindralite §r[A O]",
+    "material.gtceu.aetheric_palladite": "§2Aetheric Palladite §r[A M]",
+    "material.gtceu.aetherite": "§2Aetherite §r[A O]",
+    "material.gtceu.pyrathite": "§4Pyrathite §r[A M]",
+    "material.gtceu.pyrathene": "§4Pyrathene §r[A O]",
 
     "§7 -- MARTIAN ORES --": "",
 
-    "material.gtceu.kraethite": "§3Kraethite §r[A]",
-    "material.gtceu.xycrhovite": "§dXycrhovite §r[A]",
-    "material.gtceu.vheszcryl": "§dVheszcryl §r[A]",
-    "material.gtceu.nulledryte": "§1Nulle§2dryte §r[A]",
-    "material.gtceu.grothemite": "§6Grothemite, §r[A]",
-    "material.gtceu.phazdurite": "§0Phaz§cdur§4ite §r[A]",
-    "material.gtceu.orvexite": "§2Orvexite §r[A]",
-    "material.gtceu.krethavine": "§9Kretha§bvine §r[A]",
-    "material.gtceu.chronosite": "§1Chrono§bsite §r[A]",
-    "material.gtceu.vhaelcryite": "§dVhaelcryite §r[A]",
+    "material.gtceu.kraethite": "§3Kraethite §r[A M]",
+    "material.gtceu.xycrhovite": "§dXycrhovite §r[A M]",
+    "material.gtceu.vheszcryl": "§dVheszcryl §r[A M]",
+    "material.gtceu.nulledryte": "§1Nulle§2dryte §r[A M]",
+    "material.gtceu.grothemite": "§6Grothemite, §r[A M]",
+    "material.gtceu.phazdurite": "§0Phaz§cdur§4ite §r[A M]",
+    "material.gtceu.orvexite": "§2Orvexite §r[A M]",
+    "material.gtceu.krethavine": "§9Kretha§bvine §r[A O]",
+    "material.gtceu.chronosite": "§1Chrono§bsite §r[A O]",
+    "material.gtceu.vhaelcryite": "§dVhaelcryite §r[A O]",
 
-    "§7 -- VENUS ORE PROCESSING INTERMEDIATES --": "",
+    "§7-- NETHER ORES --": "",
+
+    "material.gtceu.ignavite": "§cIgnavite §r[A O]",
+    "material.gtceu.ignavyte": "§cIgnavyte §r[A M]",
+    "material.gtceu.flagraxite": "§6Flagraxite §r[A O]",
+    "material.gtceu.flagrax": "§6Flagrax §r[A M]",
+    "material.gtceu.vhorrite": "§4Vhorrite §r[A O]",
+    "material.gtceu.vhorryte": "§4Vhorryte §r[A M]",
+    "material.gtceu.ghulvenite": "§7Ghulvenite §r[A O]",
+    "material.gtceu.ghulveyte": "§7Ghulveyte §r[A M]",
+    "material.gtceu.ashraxite": "§8Ashraxite §r[A O]",
+    "material.gtceu.ashrax": "§8Ashrax §r[A M]",
+    "material.gtceu.pyrrhovite": "§4Pyrrhovite §r[A O]",
+    "material.gtceu.pyrrhovyte": "§4Pyrrhovyte §r[A M]",
+
+    "§7-- END ORES --": "",
+
+    "material.gtceu.vaexthrynite": "§dVaexthrynite §r[A O]",
+    "material.gtceu.vaex-thryn": "§dVaex-thryn §r[A M]",
+    "material.gtceu.orvaelite": "§aOrvaelite §r[A O]",
+    "material.gtceu.orvaelithe": "§aOrvaelithe §r[A M]",
+    "material.gtceu.khzaevhulite": "§5Khzaevhulite §r[A O]",
+    "material.gtceu.khzaevhul": "§5Khzaevhul §r[A M]",
+    "material.gtceu.aeuvrite": "§fAeuvrite §r[A O]",
+    "material.gtceu.aeuvrith-al": "§fAeuvrith-al §r[A M]",
+    "material.gtceu.xhyvorzite": "§1Xhyvorzite §r[A O]",
+    "material.gtceu.xhyv-orzael": "§1Xhyv-orzael §r[A M]",
+    "material.gtceu.vaethosite": "§dVaethosite §r[A O]",
+    "material.gtceu.ng-vaethos": "§dNg-vaethos §r[A M]",
+
+    "§7 -- ALIEN ORE PROCESSING INTERMEDIATES --": "",
 
     "material.gtceu.vaelthorium_sulfate_solution": "§cVaelthorium Sulfate Solution",
     "material.gtceu.vanadium_solution": "§eVanadium Solution",
@@ -241,9 +392,6 @@
     "material.gtceu.aetherite_residue": "§2Aetherite Residue",
     "material.gtceu.pyrathite_fluoride_vapor": "§cPyrathite Fluoride Vapor",
     "material.gtceu.vanadium_oxyfluoride": "§6Vanadium Oxyfluoride",
-
-    "§7 -- MARTIAN ORE PROCESSING INTERMEDIATES --": "",
-
     "material.gtceu.unstable_oganesson_solution": "§bUnstable Oganesson Solution",
     "material.gtceu.cryostabilized_decay_matrix": "§bCryostabilized Decay Matrix",
     "material.gtceu.xycrhovite_resonance_solution": "§dXycrhovite Resonance Solution",
@@ -256,9 +404,6 @@
     "material.gtceu.lanthanum_chloride_solution": "§3Lanthanum Chloride Solution",
     "material.gtceu.magnesium_chloride_solution": "§fMagnesium Chloride Solution",
     "material.gtceu.orvexite_nitrate_solution": "§aOrvexite Nitrate Solution",
-
-    "§7 -- PHAZDURITE PUREX CHAIN --": "",
-
     "material.gtceu.phazdurite_feed_solution": "§5Phazdurite Feed Solution",
     "material.gtceu.adjusted_phazdurite_feed": "§5Adjusted Phazdurite Feed",
     "material.gtceu.phazdurite_organic_phase": "§5Phazdurite Organic Phase",
@@ -268,13 +413,39 @@
     "material.gtceu.aqueous_transcendentine_solution": "§5Aqueous Transcendentine Solution",
     "material.gtceu.organic_naquadria_phase": "§5Organic Naquadria Phase",
     "material.gtceu.naquadria_nitrate_solution": "§5Naquadria Nitrate Solution",
+    "material.gtceu.ignavite_calcine": "§6Ignavite Calcine",
+    "material.gtceu.ignavyte_chloride_solution": "§6Ignavyte Chloride Solution",
+    "material.gtceu.flagrax_chloride_melt": "§6Flagrax Chloride Melt",
+    "material.gtceu.vhorrite_alkaline_melt": "§6Vhorrite Alkaline Melt",
+    "material.gtceu.unstable_vaex_solution": "§bUnstable Vaex Solution",
+    "material.gtceu.stabilized_vaex_solution": "§bStabilized Vaex Solution",
+    "material.gtceu.orvaelithe_nitrate_solution": "§3Orvaelithe Nitrate Solution",
+    "material.gtceu.stable_orvaelithe_solution": "§bStabilized Orvaelithe Solution",
+    "material.gtceu.khzaevhul_crystal_slurry": "§5Khzaevhul Crystal Slurry",
+    "material.gtceu.locked_khzaevhul_slurry": "§dLocked Khzaevhul Slurry",
 
     "-------- Alien Alloys --------": "",
 
-    "material.gtceu.chronocrytic-vhaelsalite": "§1Chrono§dcrytic-§dVhael§bsalite §r[A]",
-    "material.gtceu.sulvarium-over-kraethite_steel": "§6Sulvarium§r-Over-§bKraethite Steel §r[A]",
-    "material.gtceu.indium-vor-dys-cad_supersolder_alloy": "§5Indium§r-§cVor§r-§6Dys§r-§7Cad§r Supersolder Alloy",
-    "material.gtceu.aetheric-thermavyte": "§2Aetheric§r-§4Thermavyte",
+    "material.gtceu.chronocrytic-vhaelsalite": "§1Chrono§dcrytic-§dVhael§bsalite §r[A A]",
+    "material.gtceu.sulvarium-over-kraethite_steel": "§6Sulvarium§r-Over-§bKraethite Steel §r[A A]",
+    "material.gtceu.indium-vor-dys-cad_supersolder_alloy": "§5Indium§r-§cVor§r-§6Dys§r-§7Cad§r Supersolder Alloy §r[A A]",
+    "material.gtceu.aetheric-thermavyte": "§2Aetheric§r-§4Thermavyte §r[A A]",
+    "material.gtceu.ignatherm": "§cPyroclast §rFerrite §r[A A]",
+    "material.gtceu.vhoric_steel": "§4Hadean §rSuperalloy §r[A A]",
+    "material.gtceu.pyrghul_alloy": "§7Infernal Bearing §rSteel §r[A A]",
+    "material.gtceu.vaexium": "§bVoidborne §rInvar §r[A A]",
+    "material.gtceu.korzene": "§5Aetherion §rMaraging Steel §r[A A]",
+    "material.gtceu.abyssal_netherite": "§1A§9b§1y§9s§1s§9a§1l §8Netherite §r[A A]",
+    "material.gtceu.nexian_pyrite": "§4Nexian §bPyrite §r[A A]",
+    "material.gtceu.activated_nexian_pyrite": "§6Activated §4Nexian §bPyrite §r[A A]",
+
+    "-------- Alien Crystal Fusions --------": "",
+    
+    "material.gtceu.vaelkethrite": "§cVael§4kethrite",
+    "material.gtceu.chithion-flame": "§5Chithionr-§4Flame",
+    "material.gtceu.cryonull": "§3Cryo§0null",
+    "material.gtceu.thermavylized-vaelite": "§6Thermav§4ylized§7-§aVaelite",
+    "material.gtceu.cindralite-kethrite": "§cCindral§6ite§7-§4Kethrite",
 
     "-------- Alien Related Compounds --------": "",
 
@@ -289,12 +460,16 @@
     "material.gtceu.oganesson-xenon_trifluoride": "§1Oganesson§r-§bXenon Trifluoride",
     "material.gtceu.bose-einstein_oganesson-xenon_trifluoride_condensate": "§aBose-Einstein §1Oganesson§r-§bXenon Trifluoride§r Condensate",
 
+    "material.gtceu.infernality_catalysm": "§6I§4n§6f§4e§6r§4n§6a§4l§6i§4t§6y §5Cataclysm §r[A]",
+
 
     "material.gtceu.primordial_essence": "§1Primordial §kEssence",
     "material.gtceu.erebus_essence": "§0Erebus §kEssence",
     "material.gtceu.aether_essence": "§fAether §kEssence",
     "material.gtceu.boreas_essence": "§bBoreas §kEssence",
     "material.gtceu.prometheus_essence": "§4Prometheus §kEssence",
+
+    "-------- Return to Normal? --------": "",
 
     "material.gtceu.sodium_cyanide": "Sodium Cyanide",
     "material.gtceu.chloroacetic_mixture": "Chloroacetic Mixture",
@@ -555,7 +730,7 @@
     "block.gtceu.naquadrium_coil_block": "§7Naquadrium §rCoil",
     "block.gtceu.trinium_coil_block": "§dTrinium §rCoil",
     "block.gtceu.tritanium_coil_block": "§4Tritanium §rCoil",
-    "block.gtceu.transcendental_dilithide_coil_block": "§5Transcendental §6Dilithide §rCoil",
+    "block.gtceu.transcendent_dilithide_coil_block": "§5Transcendental §6Dilithide §rCoil",
 
 
 
@@ -590,15 +765,14 @@
     "gtceu.large_rock_crusher": "Large Rock Crusher",
     "block.gtceu.large_rock_crusher": "Large Rock Crusher Controller",
 
-    "gtceu.echo_imbuement_chamber": "§1Echonite Imbuement Chamber",
-    "gtceu.alloying_kiln": "Alloyment Kiln",
+    "gtceu.echo_imbuement_chamber": "§1Echonite Chamber Imbuement",
+    "gtceu.alloying_kiln": "Kiln Alloyment",
     "gtceu.echoite_exile": "§1Effervescent Echoite Exile",
-    "gtceu.metaphysical_metallurgy_tainter": "§dMetaphysical Metallurgy Tainter",
-    "gtceu.industrial_refraction_kiln": "§cIndustrial Refractory Kiln",
-    "gtceu.phase_alternator": "Phase Alternator",
-    "gtceu.mechanical_conjuration_institute": "§2Mechanical Conjuration Institute",
-    "gtceu.chemical_vat": "§8Chemical Vat",
-    "gtceu.sculk_crafter": "§3Sculk Crafter",
+    "gtceu.metaphysical_metallurgy_tainter": "§dMetaphysical Metallurgy Tainting",
+    "gtceu.phase_alternator": "Phase Alternating",
+    "gtceu.mechanical_conjuration_institute": "§2Mechanical Institute Conjuration",
+    "gtceu.chemical_vat": "§8Chemical Vat Synthesis",
+    "gtceu.sculk_crafter": "§3Sculk Crafting",
     "gtceu.cyclotron": "§2Cyclotron-Cycling",
     "gtceu.nuclear_fission": "§5Nuclear Fission",
     "gtceu.nuclear_turbine": "§5Nuclear Turbine",
@@ -632,42 +806,46 @@
     "gtceu.lunar_collection": "§7Lunar Collection",
     "gtceu.component_part_assembly": "§dComponent Assembly",
     "gtceu.quantum_condensate_exchanger": "§bQuantum Condensate Exchanger",
+    "gtceu.fractal_metal_alloyment": "§6Fractal §7Metal §1Alloyment",
 
-    "block.gtceu.echo_imbuement_chamber": "§1Echonite Imbuement Chamber",
-    "block.gtceu.primitive_alloyment_kiln": "§6Primitive Alloyment Kiln",
-    "block.gtceu.effervescent_echoite_exile": "§1Effervescent Echonite Exile",
-    "block.gtceu.metaphysical_metallurgy_tainter": "§dMetaphysical Metallurgy Tainter",
-    "block.gtceu.industrial_refraction_kiln": "§cIndustrial Refractory Kiln",
-    "block.gtceu.phase_alternator": "Phase Alternator",
-    "block.gtceu.mechanical_conjuration_institute": "§2Mechanical Conjuration Institute",
-    "block.gtceu.chemical_reaction_vat": "§8Chemical Reaction Vat",
-    "block.gtceu.cyclotron": "§2Cyclotron",
-    "block.gtceu.nuclear_fission_reactor": "§5Nuclear Fission Reactor",
-    "block.gtceu.nuclear_turbine": "§5Nuclear Turbine",
-    "block.gtceu.echoversal_space_complex": "§9Echoversal Space Complex",
-    "block.gtceu.nuclear_dissolvant": "§5Nuclear Dissolvant",
-    "block.gtceu.extraction_column": "§5Extraction Column",
-    "block.gtceu.scrubbing_column": "§5Scrubbing Column",
-    "block.gtceu.partition_column": "§5Partition Column",
-    "block.gtceu.stripping_column": "§5Stripping Column",
-    "block.gtceu.organism_assembly_line": "§4Organism Assembly Line",
-    "block.gtceu.biomechanical_factory": "§4Biomechanical Factory",
-    "block.gtceu.incubation_chamber": "§8Incubative Multi-Purpose™ Chamber",
-    "block.gtceu.primitive_cylindrical_hearth": "§6Primitive Cylindrical Hearth",
-    "block.gtceu.primitive_processing_factory": "§6Primitive Processing Factory",
-    "block.gtceu.ore_processing_factory": "§7Ore Processing Factory",
-    "block.gtceu.ore_processing_plant": "§7Ore Processing Plant",
-    "block.gtceu.ore_processing_array": "§dOre Processing Array",
-    "block.gtceu.primitive_coking_array": "§6Primitive Coking Array",
-    "block.gtceu.interstellar_miner": "§2Interstellar Miner",
-    "block.gtceu.heart_of_harmonia": "§7Heart of Harmonia",
-    "block.gtceu.transcendental_polydimensional_accelerator": "§dTranscendentine Polydimensional Accelerator",
-    "block.gtceu.applied_enigma": "§dApplied Enigma",
-    "block.gtceu.solar_collector": "§7Solar Collector",
-    "block.gtceu.lunar_collector": "§7Lunar Collector",
-    "block.gtceu.component_part_assembly": "§dComponent Part Assembler",
-    "block.gtceu.hyperfrost": "Hyperfrost", 
-    "block.gtceu.aetherite_thermostorm_chamber": "§2Aetherite §4Thermostorm§r Chamber",
+    "block.gtceu.echo_imbuement_chamber": "§1Echonite Imbuement Chamber §r(EIC)",
+    "block.gtceu.primitive_alloyment_kiln": "§6Primitive Alloyment Kiln §r(PAK)",
+    "block.gtceu.effervescent_echoite_exile": "§1Effervescent Echonite Exile §r(EEE)",
+    "block.gtceu.metaphysical_metallurgy_tainter": "§dMetaphysical Metallurgy Tainter §r(MMT)",
+    "block.gtceu.industrial_refraction_kiln": "§cIndustrial Refractory Kiln §r(IRK)",
+    "block.gtceu.phase_alternator": "Phase Alternator §r(PA)",
+    "block.gtceu.mechanical_conjuration_institute": "§2Mechanical Conjuration Institute §r(MCI)",
+    "block.gtceu.chemical_reaction_vat": "§8Chemical Reaction Vat §r(CRV)",
+    "block.gtceu.cyclotron": "§2Cyclotron §r(CT)",
+    "block.gtceu.nuclear_fission_reactor": "§5Nuclear Fission Reactor §r(NFR)",
+    "block.gtceu.nuclear_turbine": "§5Nuclear Turbine §r(NT)",
+    "block.gtceu.echoversal_space_complex": "§9Echoversal Space Complex §r(ESC)",
+    "block.gtceu.nuclear_dissolvant": "§5Nuclear Dissolvant §r(ND)",
+    "block.gtceu.extraction_column": "§5Extraction Column §r(EC)",
+    "block.gtceu.scrubbing_column": "§5Scrubbing Column §r(SC)",
+    "block.gtceu.partition_column": "§5Partition Column §r(PC)",
+    "block.gtceu.stripping_column": "§5Stripping Column §r(STC)",
+    "block.gtceu.organism_assembly_line": "§4Organism Assembly Line §r(OAL)",
+    "block.gtceu.biomechanical_factory": "§4Biomechanical Factory §r(BMF)",
+    "block.gtceu.incubation_chamber": "§8Incubative Multi-Purpose™ Chamber §r(IMPC)",
+    "block.gtceu.primitive_cylindrical_hearth": "§6Primitive Cylindrical Hearth §r(PCH)",
+    "block.gtceu.primitive_processing_factory": "§6Primitive Processing Factory §r(PPF)",
+    "block.gtceu.ore_processing_factory": "§7Ore Processing Factory §r(OPF)",
+    "block.gtceu.ore_processing_plant": "§7Ore Processing Plant §r(OPP)",
+    "block.gtceu.ore_processing_array": "§dOre Processing Array §r(OPA)",
+    "block.gtceu.primitive_coking_array": "§6Primitive Coking Array §r(PCA)",
+    "block.gtceu.interstellar_miner": "§2Interstellar Miner §r(IM)",
+    "block.gtceu.heart_of_harmonia": "§7Heart of Harmonia §r(HoH)",
+    "block.gtceu.transcendental_polydimensional_accelerator": "§dTranscendentine Polydimensional Accelerator §r(TPA)",
+    "block.gtceu.applied_enigma": "§dApplied Enigma §r(AE)",
+    "block.gtceu.solar_collector": "§7Solar Collector §r(SOL)",
+    "block.gtceu.lunar_collector": "§7Lunar Collector §r(LUN)",
+    "block.gtceu.component_part_assembly": "§dComponent Part Assembler §r(CPA)",
+    "block.gtceu.hyperfrost": "Hyperfrost §r(HF)",
+    "block.gtceu.aetherite_thermostorm_chamber": "§2Aetherite §4Thermostorm§r Chamber §r(ATC)",
+    "block.gtceu.everflamed_hell_forge": "§6Ever§4flamed §4§kHELL §6Forge §r(EHF)",
+    "block.gtceu.pandemonic_blast_synchronizer": "§5Pan§4demonic §8Blast §4Smelter §r(PBS)",
+    "block.gtceu.fracto-liminal_abyss_metal_alloyment_engine": "§5Fracto-§6Liminal §1Abyss §3Metal §4Engine §r(§5F§6L§1A§3M§4E)",
 
     
     "block.gtceu.steel_gearbox": "§bNexus Steel §rGearbox Casing",
@@ -777,12 +955,16 @@
     "gtceu.jei.ore_vein.mars_krethavine_deposit": "Krethavine Deposit",
     "gtceu.jei.ore_vein.mars_orvexite_deposit": "Orvexite Deposit",
     "gtceu.jei.ore_vein.mars_phazdurite_deposit": "Phazdurite Deposit",
-
-    
     "gtceu.jei.ore_vein.venusian_vaelthor_sulfides": "Vaelthor Sulfide Deposits",
     "gtceu.jei.ore_vein.venusian_kethren_complex": "Kethren Magmatic Complex",
     "gtceu.jei.ore_vein.venusian_thermal_rift": "Thermal Rift Formation",
     "gtceu.jei.ore_vein.venusian_aetheric_abyss": "Aetheric Abyss Deposit",
+    "gtceu.nether_igneous_forge": "Nether Igneous Forge",
+    "gtceu.nether_burning_depths": "Nether Burning Depths",
+    "gtceu.nether_ashen_seams": "Nether Ashen Seams",
+    "gtceu.end_void_rift": "End Void Rift",
+    "gtceu.end_ancient_core": "End Ancient Core",
+    "gtceu.end_stellar_fault": "End Stellar Fault",
 
 
     "tagprefix.moon": "Moon %s Ore",

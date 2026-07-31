@@ -722,6 +722,14 @@ GTM.fluid_solidifier('liquid_to_crystal_dust')
     .duration(40)
     .EUt(128)
 
+GTM.fusion_accelerator('disassembler')
+    .itemInputs('gtceu:large_assembler')
+    .itemOutputs('extendedfeatures:disassembler')
+    .perTick(true)
+    .inputFluids('gtceu:higgs_boson 1')
+    .duration(100)
+    .EUt(2048)
+
 
 const FLUIDS = new Set(['oxygen', 'sulfur_dioxide', 'carbon_dioxide', 'fluorine', 'mercury', 'radon', 'oganesson'])
 
@@ -1315,14 +1323,14 @@ GTM.particle_accelerator('antimatter_tank_draining_alt')
 .circuit(1)
 
 const UHVcomponents = {
-    catalyst_core: ['4x gtceu:sulvarium-over-kraethite_steel_rod', 'gtceu:fusion_glass', 'gtceu:preon_star', '32x gtceu:fine_transuranic_naquadrium_alloy_wire', 'gtceu:uv_emitter', '4x gtceu:tainted_zircalloy_ring', 'gtceu:naquadria 576'],
-    computational_matrix: ['gtceu:sulvarium-over-kraethite_steel_frame', '#gtceu:circuits/uhv', '2x #gtceu:circuits/uv', '3x #gtceu:circuits/zpm', '4x gtceu:astrazine-e_single_cable', '4x gtceu:transuranic_naquadrium_alloy_bolt', 'gtceu:indium-vor-dys-cad_supersolder_alloy 2304'],
-    high_strength_panel: ['gtceu:dense_sulvarium-over-kraethite_steel_plate', '#gtceu:circuits/zpm', '4x gtceu:tainted_zircalloy_screw', 'gtceu:polyether_ether_ketone 576'],
-    microfluidic_flow_valve: ['gtceu:uv_fluid_regulator', 'gtceu:stellarite_small_fluid_pipe', '2x gtceu:sulvarium-over-kraethite_steel_plate', '4x gtceu:sulvarium-over-kraethite_steel_round', '4x gtceu:styrene_butadiene_rubber_ring', '2x gtceu:sulvarium-over-kraethite_steel_ring', 'gtceu:polyether_ether_ketone 576'],
-    micropower_router: ['4x gtceu:astrazine-e_double_cable', '2x gtceu:sulvarium-over-kraethite_steel_plate', '#gtceu:circuits/uv', '4x gtceu:sulvarium-over-kraethite_steel_bolt', 'gtceu:polybenzimidazole 576'],
-    precision_drive_mechanism: ['gtceu:sulvarium-over-kraethite_steel_frame', 'gtceu:uv_electric_motor', '#gtceu:circuits/uv', 'gtceu:tri-osmic_matrix_gear', 'gtceu:small_sulvarium-over-kraethite_steel_gear', '8x gtceu:sulvarium-over-kraethite_steel_round', 'gtceu:triconite 2000'],
-    super_magnetic_core: ['gtceu:long_bose-einstein_neutronium_rod', '2x gtceu:cryosporsite_rod', '3x gtceu:sulvarium-over-kraethite_steel_rod', '16x gtceu:fine_tainted_zircalloy_wire', '2x gtceu:stellarite_tiny_fluid_pipe', 'gtceu:hypothermic_helium_3_plasma 2000'],
-    transmission_assembly: ['gtceu:stellarite_frame', 'gtceu:uv_electric_motor', '2x gtceu:sulvarium-over-kraethite_steel_rod', '2x gtceu:sulvarium-over-kraethite_steel_ring', '4x gtceu:sulvarium-over-kraethite_steel_round', '16x gtceu:fine_tainted_zircalloy_wire', 'gtceu:triconite 2000']
+    catalyst_core: ['4x gtceu:abyssal_netherite_rod', 'gtceu:fusion_glass', 'gtceu:preon_star', '32x gtceu:fine_abyssal_netherite_wire', 'gtceu:uv_emitter', '4x gtceu:abyssal_netherite_ring', 'gtceu:naquadria 576'],
+    computational_matrix: ['gtceu:abyssal_netherite_frame', '#gtceu:circuits/uhv', '2x #gtceu:circuits/uv', '3x #gtceu:circuits/zpm', '4x gtceu:astrazine-e_single_cable', '4x gtceu:abyssal_netherite_bolt', 'gtceu:indium-vor-dys-cad_supersolder_alloy 2304'],
+    high_strength_panel: ['gtceu:dense_abyssal_netherite_plate', '#gtceu:circuits/zpm', '4x gtceu:abyssal_netherite_screw', 'gtceu:polyether_ether_ketone 576'],
+    microfluidic_flow_valve: ['gtceu:uv_fluid_regulator', 'gtceu:stellarite_small_fluid_pipe', '2x gtceu:abyssal_netherite_plate', '4x gtceu:abyssal_netherite_round', '4x gtceu:styrene_butadiene_rubber_ring', '2x gtceu:abyssal_netherite_ring', 'gtceu:polyether_ether_ketone 576'],
+    micropower_router: ['4x gtceu:astrazine-e_double_cable', '2x gtceu:abyssal_netherite_plate', '#gtceu:circuits/uv', '4x gtceu:abyssal_netherite_bolt', 'gtceu:polybenzimidazole 576'],
+    precision_drive_mechanism: ['gtceu:abyssal_netherite_frame', 'gtceu:uv_electric_motor', '#gtceu:circuits/uv', 'gtceu:abyssal_netherite_gear', 'gtceu:small_abyssal_netherite_gear', '8x gtceu:abyssal_netherite_round', 'gtceu:triconite 2000'],
+    super_magnetic_core: ['gtceu:long_bose-einstein_neutronium_rod', '2x gtceu:cryosporsite_rod', '3x gtceu:abyssal_netherite_rod', '16x gtceu:fine_abyssal_netherite_wire', '2x gtceu:stellarite_tiny_fluid_pipe', 'gtceu:bose-einstein_oganesson-xenon_trifluoride_condensate_plasma 2000'],
+    transmission_assembly: ['gtceu:abyssal_netherite_frame', 'gtceu:uv_electric_motor', '2x gtceu:abyssal_netherite_rod', '2x gtceu:abyssal_netherite_ring', '4x gtceu:abyssal_netherite_round', '16x gtceu:fine_abyssal_netherite_wire', 'gtceu:triconite 2000']
 }
 
 
@@ -1337,6 +1345,10 @@ for (let [name, ingredients] of Object.entries(UHVcomponents)) {
         .stationResearch(global.ComponentPartAssemblyResearch(event, `uhv_${name}`, `gtceu:ruined_${name}`, 48, 144000, va.uhv))
         .duration(400)
         .EUt(2097152)
+}
+
+const UHVcomponents2electricboogaloo = {
+    electric_motor: ['gtceu:uhv_super_magnetic_core', '2x gtceu:long_abyssal_netherite_rod', 'gtceu:uhv_tranmission_assembly', '64x gtceu:fine_abyssal_netherite_wire', 'gtceu:uhv_micropower_router']
 }
 
 GTM.large_chemical_reactor('xenon_difluoride')
@@ -1451,21 +1463,43 @@ GTM.assembler('unreal_engine_intake')
 .duration(1000)
 .EUt(512)
 
+GTM.fractal_metal_alloyment('awakened_draconium')
+.inputFluids('gtceu:americium_plasma 10000')
+.inputFluids('gtceu:purified_draconium 10368', 'gtceu:echo_shard 576')
+.itemInputs('draconicevolution:dragon_heart')
+.outputFluids('gtceu:awakened_draconium_plasma 10368')
+.duration(1000)
+.EUt(va.uv, 6)
+.addData('TempMK', 100)
 
+const FLAME = global.FLAME
 
+const plasmaRanges = [
+    { plasma: 'americium', maxMK: 100 },
+    { plasma: 'infernality_catalysm', maxMK: 300 },
+]
 
+function getPlasmas(TempMK) {
+    return plasmaRanges.filter(p => p.maxMK >= TempMK)
+}
 
+function autoFLAME(inputs, output, duration, EUt, TempMK, catalyst) {
+    if (catalyst === undefined) catalyst = null
+    let plasmas = getPlasmas(TempMK)
+    if (plasmas.length === 0) throw new Error('No plasma defined for ' + TempMK + ' MK — add a new entry to plasmaRanges')
+    for (let p of plasmas) {
+        FLAME(p.plasma, inputs, output, duration, EUt, TempMK, catalyst)
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
+autoFLAME(['ignavyte 8', 'flagrax 5', 'zirconium 3', 'hafnium 2', 'carbon 1'], 'ignatherm', 6704, [va.uv, 4], 50)
+autoFLAME(['vhorryte 7', 'ashrax 4', 'niobium 2', 'tantalum 2', 'manganese 1'], 'vhoric_steel', 6456, [va.uv, 4], 50)
+autoFLAME(['ghulveyte 6', 'pyrrhovyte 5', 'copper 3', 'electrotine 2', 'platinum 1'], 'pyrghul_alloy', 5393, [va.uv, 4], 50)
+autoFLAME(['vaex-thryn 8', 'nexus 7', 'orvaelithe 5', 'palladium 2', 'molybdenum 1'], 'vaexium', 8728, [va.uv, 4], 50)
+autoFLAME(['khzaevhul 7', 'ng-vaethos 5', 'naquadah_alloy 3', 'tungsten 2', 'ruthenium 1'], 'korzene', 7377, [va.uv, 4], 50)
+autoFLAME(['auralloy-omega 13', 'ignatherm 4', 'vhoric_steel 4', 'pyrghul_alloy 4', 'stellarite 2'], 'abyssal_netherite', 10000, [va.uv, 16], 100)
+autoFLAME(['sulvarium 6', 'kraethite 6', 'antisource 3', 'holmium 4', 'nexus 2', 'awakened_draconium 2'], 'sulvarium-over-kraethite_steel', 9056, [va.uv, 6], 75)
+autoFLAME(['nexus_steel 37', 'abyssal_netherite 12', 'korzene 8', 'sulvarium-over-kraethite_steel 4', 'promethium 3', 'vaexium 2'], 'activated_nexian_pyrite', 20000, [va.uhv, 16], 200, 'cindralite-kethrite_gem 8')
 
 
 

@@ -1009,4 +1009,137 @@ event.add("gtceu:mercurian_pgm_rare_earth", vein => {
         .radius(3)
     )
 })
+
+// ============================================================
+// Nether Ore Veins
+// ============================================================
+event.add("gtceu:nether_igneous_forge", vein => {
+    vein.weight(10)
+    vein.clusterSize(22)
+    vein.density(0.18)
+    vein.discardChanceOnAirExposure(0)
+
+    vein.layer('netherrack')
+    vein.dimensions('minecraft:the_nether')
+
+    vein.heightRangeUniform(20, 96)
+
+    vein.layeredVeinGenerator(generator => generator
+        .buildLayerPattern(pattern => pattern
+            .layer(l => l.weight(4).mat(GTMaterials.get("ignavite")))
+            .layer(l => l.weight(3).mat(GTMaterials.get("flagraxite")))
+            .layer(l => l.weight(2).mat(GTMaterials.Pyrite))
+            .layer(l => l.weight(1).mat(GTMaterials.get("blue_zircon")))
+        )
+    )
+})
+
+event.add("gtceu:nether_burning_depths", vein => {
+    vein.weight(9)
+    vein.clusterSize(20)
+    vein.density(0.17)
+    vein.discardChanceOnAirExposure(0)
+
+    vein.layer('netherrack')
+    vein.dimensions('minecraft:the_nether')
+
+    vein.heightRangeUniform(0, 72)
+
+    vein.layeredVeinGenerator(generator => generator
+        .buildLayerPattern(pattern => pattern
+            .layer(l => l.weight(4).mat(GTMaterials.get("vhorrite")))
+            .layer(l => l.weight(3).mat(GTMaterials.get("ghulvenite")))
+            .layer(l => l.weight(2).mat(GTMaterials.Platinum))
+            .layer(l => l.weight(1).mat(GTMaterials.Electrotine))
+        )
+    )
+})
+
+event.add("gtceu:nether_ashen_seams", vein => {
+    vein.weight(8)
+    vein.clusterSize(18)
+    vein.density(0.16)
+    vein.discardChanceOnAirExposure(0)
+
+    vein.layer('netherrack')
+    vein.dimensions('minecraft:the_nether')
+
+    vein.heightRangeUniform(0, 64)
+
+    vein.layeredVeinGenerator(generator => generator
+        .buildLayerPattern(pattern => pattern
+            .layer(l => l.weight(4).mat(GTMaterials.get("ashraxite")))
+            .layer(l => l.weight(3).mat(GTMaterials.get("pyrrhovite")))
+            .layer(l => l.weight(2).mat(GTMaterials.Sulfur))
+            .layer(l => l.weight(1).mat(GTMaterials.Hafnium))
+        )
+    )
+})
+
+// ============================================================
+// End Ore Veins
+// ============================================================
+
+event.add("gtceu:end_void_rift", vein => {
+    vein.weight(8)
+    vein.clusterSize(18)
+    vein.density(0.15)
+    vein.discardChanceOnAirExposure(0)
+
+    vein.layer('endocrite')
+    vein.dimensions('minecraft:the_end')
+
+    vein.heightRangeUniform(0, 80)
+
+    vein.layeredVeinGenerator(generator => generator
+        .buildLayerPattern(pattern => pattern
+            .layer(l => l.weight(4).mat(GTMaterials.get("vaexthrynite")))
+            .layer(l => l.weight(3).mat(GTMaterials.get("orvaelite")))
+            .layer(l => l.weight(2).mat(GTMaterials.get("draconium")))
+            .layer(l => l.weight(1).mat(GTMaterials.Naquadah))
+        )
+    )
+})
+
+event.add("gtceu:end_ancient_core", vein => {
+    vein.weight(7)
+    vein.clusterSize(17)
+    vein.density(0.14)
+    vein.discardChanceOnAirExposure(0)
+
+    vein.layer('endocrite')
+    vein.dimensions('minecraft:the_end')
+
+    vein.heightRangeUniform(-16, 64)
+
+    vein.layeredVeinGenerator(generator => generator
+        .buildLayerPattern(pattern => pattern
+            .layer(l => l.weight(4).mat(GTMaterials.get("khzaevhulite")))
+            .layer(l => l.weight(3).mat(GTMaterials.get("aeuvrite")))
+            .layer(l => l.weight(2).mat(GTMaterials.Plutonium239))
+            .layer(l => l.weight(1).mat(GTMaterials.Uraninite))
+        )
+    )
+})
+
+event.add("gtceu:end_stellar_fault", vein => {
+    vein.weight(7)
+    vein.clusterSize(16)
+    vein.density(0.14)
+    vein.discardChanceOnAirExposure(0)
+
+    vein.layer('endocrite')
+    vein.dimensions('minecraft:the_end')
+
+    vein.heightRangeUniform(16, 96)
+
+    vein.layeredVeinGenerator(generator => generator
+        .buildLayerPattern(pattern => pattern
+            .layer(l => l.weight(4).mat(GTMaterials.get("xhyvorzite")))
+            .layer(l => l.weight(3).mat(GTMaterials.get("vaethosite")))
+            .layer(l => l.weight(2).mat(GTMaterials.Scheelite))
+            .layer(l => l.weight(1).mat(GTMaterials.Naquadah))
+        )
+    )
+})
 })

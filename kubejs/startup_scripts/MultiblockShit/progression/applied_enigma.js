@@ -41,7 +41,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .or(Predicates.autoAbilities(definition.getRecipeTypes())))
     .where("x", Predicates.controller(Predicates.blocks(definition.get())))
         .build())
-    .workableCasingModel('gtceu:block/casings/solid/tp-da/transcendentine_over_auralloy_casing', 'gtceu:block/machines/assembler')
+    .workableCasingModel('gtceu:block/casings/solid/transcendentine_over_auralloy_casing', 'gtceu:block/machines/assembler')
 })
 
 

@@ -366,21 +366,6 @@ event.replaceOutput(
     'gtceu:treated_wood_dust'
 )
 
-event.shaped('draconicevolution:draconium_ingot', [
-'NNN',
-'NNN',
-'NNN'
-], {
-N: 'draconicevolution:draconium_nugget'
-})
-
-event.shaped('draconicevolution:draconium_block', [
-'III',
-'III',
-'III'
-], {
-I: 'draconicevolution:draconium_ingot'
-})
 
 event.custom(
     {

@@ -1521,12 +1521,28 @@ const thesecondlisttoendalllists = {
         fluids: []
     },
     nether: {
-        ores: [],
-        fluids: []
+        ores: [
+            ['netherrack_ignavite', 'netherrack_flagraxite', 'netherrack_pyrite', 'netherrack_blue_zircon'],
+            ['netherrack_vhorrite', 'netherrack_ghulvenite', 'netherrack_platinum', 'netherrack_electrotine'],
+            ['netherrack_ashraxite', 'netherrack_pyrrhovite', 'netherrack_sulfur', 'netherrack_hafnium']
+        ],
+        fluids: [
+            'gtceu:americium_plasma 1000',
+            'gtceu:acidic_unpure_uncracked_sulfuric_netherite_slag 10000',
+            'gtceu:rare_earth_sludge 50000'
+    ]
     },
     end: {
-        ores: [],
-        fluids: []
+        ores: [
+            ['endstone_vaexthrynite', 'endstone_orvaelite', 'endstone_draconium', 'endstone_naquadah'],
+            ['endstone_khzaevhulite', 'endstone_aeuvrite', 'endstone_plutonium', 'endstone_uraninite'],
+            ['endstone_xhyvorzite', 'endstone_vaethosite', 'endstone_scheelite', 'endstone_naquadah']
+        ],
+        fluids: [
+            'gtceu:echo_shard 10000',
+            'gtceu:transcendentine 10000',
+            'gtceu:primordial_essence 10000'
+        ]
     },
     undergarden: {
         ores: [],
@@ -1613,7 +1629,7 @@ Object.entries(thesecondlisttoendalllists).forEach(function(dimEntry) {
             .addData("HeatPressure", 10)
             .addData("Temp", 6000)
             .duration(200)
-            .EUt(131072)
+            .EUt(524288)
 
         ores.forEach(function(ore) {
             recipe.itemOutputs('16x gtceu:' + ore + '_ore')
@@ -1828,34 +1844,10 @@ GTM.autoclave('arcane_dust_to_ferroarcane')
 .duration(20)
 .EUt(32)
 
-GTM.metaphysical_metallurgy_tainter('ferroarcane_to_raw_ascendine')
-.itemInputs('4x gtceu:ferroarcane_dust')
-.inputFluids('gtceu:heat_treated_taint 16', 'gtceu:hypothermic_helium_3_plasma 16', 'gtceu:resonance_plasma 16')
-.itemOutputs('6x gtceu:raw_ascendine_dust')
-.duration(20)
-.EUt(8192)
-
-GTM.metaphysical_metallurgy_tainter('raw_ascendine_to_ascendine')
-.itemInputs('4x gtceu:raw_ascendine_dust')
-.inputFluids('gtceu:chromatically_mutated_taint 16', 'gtceu:hypothermic_helium_3_plasma 16', 'gtceu:resonance_plasma 16')
-.itemOutputs('7x gtceu:ascendine_dust')
-.duration(20)
-.EUt(8192)
-
-GTM.metaphysical_metallurgy_tainter('ascendine_to_transcending_ascendine')
-.itemInputs('4x gtceu:ascendine_dust')
-.inputFluids('gtceu:alloyed_taint 16', 'gtceu:hypothermic_helium_3_plasma 16', 'gtceu:resonance_plasma 16')
-.itemOutputs('8x gtceu:transcending_ascendine_dust')
-.duration(20)
-.EUt(8192)
-
-GTM.metaphysical_metallurgy_tainter('transcending_ascendine_to_transcendentine')
-.itemInputs('4x gtceu:transcending_ascendine_dust')
-.inputFluids('gtceu:perfected_taint 16', 'gtceu:hypothermic_helium_3_plasma 16', 'gtceu:resonance_plasma 16')
-.itemOutputs('9x gtceu:transcendentine_dust')
-.duration(20)
-.EUt(8192)
-
+GTM.electrolyzer('decomposition_electrolyzing_ferroarcane')
+.itemInputs('gtceu:ferroarcane_dust')
+.itemOutputs('gtceu:arcane_dust')
+.outputFluids('gtceu:iron_iii_chloride 250')
 GTM.implosion_compressor('auralloy-omega_transcendentine_alloying')
 .itemInputs('8x gtceu:transcendentine_dust', '2x gtceu:auralloy-omega_dust', '4x gtceu:industrial_tnt')
 .itemOutputs('10x gtceu:auralloy-omega_over_transcendentine_dust')

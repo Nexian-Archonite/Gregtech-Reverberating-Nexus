@@ -108,7 +108,18 @@ const oreProcessableTiers = {
     { material: 'thermastone', secondary: 'magnesium', tertiary: 'chromium', quaternary: 'titanium', quinary: 'vanadium' },
     { material: 'cindrax', secondary: 'silicon', tertiary: 'tin', quaternary: 'aluminium', quinary: 'gallium' },
     { material: 'aetheric_palladite', secondary: 'niobium', tertiary: 'palladium', quaternary: 'rhodium', quinary: 'hafnium' },
-    { material: 'pyrathite', secondary: 'titanium', tertiary: 'vanadium', quaternary: 'tungsten', quinary: 'molybdenum' }
+    { material: 'ignavite',      secondary: 'ignavyte',    tertiary: 'sulfur',       quaternary: 'gold',          quinary: 'pyrite' },
+    { material: 'flagraxite',    secondary: 'flagrax',     tertiary: 'pyrite',       quaternary: 'sulfur',        quinary: 'platinum' },
+    { material: 'vhorrite',      secondary: 'vhorryte',    tertiary: 'zirconium',    quaternary: 'mercury',      quinary: 'gold' },
+    { material: 'ghulvenite',    secondary: 'ghulveyte',   tertiary: 'electrotine',  quaternary: 'hafnium',       quinary: 'platinum' },
+    { material: 'ashraxite',     secondary: 'ashrax',      tertiary: 'cindralite',   quaternary: 'sulfur',        quinary: 'gold' },
+    { material: 'pyrrhovite',    secondary: 'pyrrhovyte',  tertiary: 'thermavyte',   quaternary: 'platinum',      quinary: 'hafnium' },
+    { material: 'vaexthrynite',  secondary: 'vaex-thryn',  tertiary: 'draconium',    quaternary: 'naquadah',      quinary: 'radon' },
+    { material: 'orvaelite',     secondary: 'orvaelithe',  tertiary: 'tungstate',    quaternary: 'scheelite',     quinary: 'draconium' },
+    { material: 'khzaevhulite',  secondary: 'khzaevhul',   tertiary: 'plutonium',    quaternary: 'plutonium_241', quinary: 'naquadah' },
+    { material: 'aeuvrite',      secondary: 'aeuvrith-al', tertiary: 'uraninite',    quaternary: 'radon',         quinary: 'draconium' },
+    { material: 'xhyvorzite',    secondary: 'xhyv-orzael', tertiary: 'naquadrium',   quaternary: 'scheelite',     quinary: 'plutonium' },
+    { material: 'vaethosite',    secondary: 'ng-vaethos',  tertiary: 'scheelite',    quaternary: 'naquadah',      quinary: 'tungstate' },
   ]
 }
 

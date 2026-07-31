@@ -140,8 +140,8 @@ const tiers = [
         europium: "astrazine-e",
         neutronium: "stellarite",
         darmstadtium: "ephemeral_naquadite",
-        enriched_naquadah_trinium_europium_duranide: "chronocrytic-vhaelsalite",
-        ruthenium_trinium_americium_neutronate: "sulvarium-over-kraethite_steel"
+        enriched_naquadah_trinium_europium_duranide: "sulvarium-over-kraethite_steel",
+        ruthenium_trinium_americium_neutronate: "chronocrytic-vhaelsalite"
         
         // Add more replacements as needed
     }
@@ -256,57 +256,87 @@ const dualCasing = (primary, secondary, output) => {
         maceratorRecipe.itemOutputs(`3x gtceu:${primary}_dust`, `gtceu:${secondary}_dust`)
     }
 }
-if (primary === secondary) {
-    maceratorRecipe.itemOutputs(`4x gtceu:${primary}_dust`)
-} else {
-    maceratorRecipe.itemOutputs(`3x gtceu:${primary}_dust`, `gtceu:${secondary}_dust`)
-}
 
 const dualCasingAdv = (primary, secondary, output) => {
     GTM.component_part_assembly(`${output}`)
-        .itemInputs(`8x gtceu:${primary}_plate`, `gtceu:${secondary}_frame`, `6x gtceu:${secondary}_bolt`, `4x gtceu:${primary}_foil`)
-        .itemOutputs(`3x gtceu:${output}`)
-        .inputFluids(`gtceu:${primary} 144`, 'gtceu:indium-vor-dys-cad_supersolder_alloy 72')
+        .itemInputs(`64x gtceu:${primary}_plate`, `8x gtceu:${secondary}_frame`, `32x gtceu:${secondary}_bolt`, `32x gtceu:${primary}_foil`)
+        .itemOutputs(`2x gtceu:${output}`)
+        .inputFluids(`gtceu:${primary} 1152`, 'gtceu:indium-vor-dys-cad_supersolder_alloy 576')
         .duration(50)
         .EUt(32768)
+        const maceratorRecipe = GTM.macerator(`${output}_recycling`)
+        .itemInputs(`gtceu:${output}`)
+        .duration(50)
+        .EUt(16)
+
+    if (primary === secondary) {
+        maceratorRecipe.itemOutputs(`5x gtceu:${primary}_dust`, `3x gtceu:small_${primary}_dust`)
+    } else {
+        maceratorRecipe.itemOutputs(`4x gtceu:${primary}_dust`, `2x gtceu:small_${primary}_dust`, `gtceu:${secondary}_dust`, `gtceu:small_${secondary}_dust`)
+    }
 }
 
 const gearCasing = (primary, secondary, output) => {
     GTM.component_part_assembly(`${output}_gearbox`)
-        .itemInputs(`8x gtceu:${primary}_plate`, `gtceu:${secondary}_frame`, `6x gtceu:${secondary}_bolt`, `4x gtceu:${primary}_gear`)
-        .itemOutputs(`3x gtceu:${output}`)
-        .inputFluids(`gtceu:${primary} 144`, 'gtceu:indium-vor-dys-cad_supersolder_alloy 72')
+        .itemInputs(`64x gtceu:${primary}_plate`, `8x gtceu:${secondary}_frame`, `32x gtceu:${secondary}_bolt`, `32x gtceu:${primary}_gear`)
+        .itemOutputs(`16x gtceu:${output}`)
+        .inputFluids(`gtceu:${primary} 1152`, 'gtceu:indium-vor-dys-cad_supersolder_alloy 576')
         .duration(50)
         .EUt(32768)
         .circuit(2)
+        const maceratorRecipe = GTM.macerator(`${output}_recycling`)
+        .itemInputs(`gtceu:${output}`)
+        .duration(50)
+        .EUt(16)
+
+    if (primary === secondary) {
+        maceratorRecipe.itemOutputs(`13x gtceu:${primary}_dust`, `gtceu:small_${primary}_dust`)
+    } else {
+        maceratorRecipe.itemOutputs(`12x gtceu:${primary}_dust`, `gtceu:${secondary}_dust`, `gtceu:small_${secondary}_dust`)
+    }
 }
 
 const fireCasing = (primary, secondary, output) => {
     GTM.component_part_assembly(`${output}_firebox`)
-        .itemInputs(`8x gtceu:${primary}_plate`, `gtceu:${secondary}_frame`, `6x gtceu:${secondary}_bolt`, `4x gtceu:${primary}_rod`)
-        .itemOutputs(`3x gtceu:${output}`)
-        .inputFluids(`gtceu:${primary} 144`, 'gtceu:indium-vor-dys-cad_supersolder_alloy 72')
+        .itemInputs(`64x gtceu:${primary}_plate`, `8x gtceu:${secondary}_frame`, `32x gtceu:${secondary}_bolt`, `32x gtceu:${primary}_rod`)
+        .itemOutputs(`16x gtceu:${output}`)
+        .inputFluids(`gtceu:${primary} 1152`, 'gtceu:indium-vor-dys-cad_supersolder_alloy 576')
         .duration(50)
         .EUt(32768)
         .circuit(4)
+        const maceratorRecipe = GTM.macerator(`${output}_recycling`)
+        .itemInputs(`gtceu:${output}`)
+        .duration(50)
+        .EUt(16)
+
+    if (primary === secondary) {
+        maceratorRecipe.itemOutputs(`9x gtceu:${primary}_dust`, `gtceu:small_${primary}_dust`)
+    } else {
+        maceratorRecipe.itemOutputs(`8x gtceu:${primary}_dust`, `gtceu:${secondary}_dust`, `gtceu:small_${secondary}_dust`)
+    }
 }
 
 dualCasing('condensed_mana', 'source', 'magikstone_casing')
 dualCasing('vhaelcryite', 'pyrathene', 'vhaelcryite_casing')
+dualCasing('polyether_ether_ketone', 'polyether_ether_ketone', 'peek_casing')
 
 dualCasingAdv('sulvarium-over-kraethite_steel', 'cindralite', 'sulvan_steel_casing')
-gearCasing('sulvarium-over-kraethite_steel', 'cindralite', 'sulvan_steel_casing')
-fireCasing('sulvarium-over-kraethite_steel', 'cindralite', 'sulvan_steel_casing')
+gearCasing('sulvarium-over-kraethite_steel', 'cindralite', 'sulvan_steel_gearbox')
+fireCasing('sulvarium-over-kraethite_steel', 'cindralite', 'sulvan_steel_firebox')
 
 dualCasingAdv('aetheric-thermavyte', 'vorrexite', 'aetherite_casing')
 
+GTM.component_part_assembly('peek_pipe_casing')
+.itemInputs('64x gtceu:polyether_ether_ketone_plate', '32x gtceu:polyether_ether_ketone_normal_fluid_pipe', '8x gtceu:polyether_ether_ketone_frame')
+.itemOutputs('16x gtceu:peek_pipe_casing')
+.duration(50)
+.EUt(16)
 
-const transcendentBlastTier = [
-    { name: 'omnium', blastTemp: 19449, EUt: va.uhv, duration: 1600 },
-    { name: 'sulvarium-over-kraethite_steel', blastTemp: 11000, EUt: va.uv, duration: 750 },
-    { name: 'aetheric-thermavyte', blastTemp: 10799, EUt: va.uhv, duration: 800 },
-    { name: 'indium-vor-dys-cad_supersolder_alloy', blastTemp: 11000, EUt: va.uhv, duration: 750}
-]
+GTM.component_part_assembly('sulvan_steel_pipe_casing')
+.itemInputs('64x gtceu:sulvarium-over-kraethite_steel_plate', '32x gtceu:polyether_ether_ketone_normal_fluid_pipe', '8x gtceu:sulvarium-over-kraethite_steel_frame')
+.itemOutputs('16x gtceu:sulvan_steel_pipe_casing')
+.duration(50)
+.EUt(16)
 
 GTM.bender('bend_vorrexite_to_foil')
 .itemInputs('gtceu:vorrexite_plate')
@@ -320,46 +350,94 @@ event.shaped('2x gtceu:vorrexite_foil', [
 H: '#forge:tools/hammers',
 P: 'gtceu:vorrexite_plate'
 })
+
+const transcendentBlastTier = [
+    { name: 'omnium', blastTemp: 19449, EUt: va.uhv, duration: 1600 },
+    { name: 'sulvarium-over-kraethite_steel', blastTemp: 11000, EUt: va.uv, duration: 750 },
+    { name: 'aetheric-thermavyte', blastTemp: 10799, EUt: va.uhv, duration: 800 },
+    { name: 'indium-vor-dys-cad_supersolder_alloy', blastTemp: 11000, EUt: va.uhv, duration: 750},
+    { name: 'transcendent_dilithide', blastTemp: 16800, EUt: va.uhv, duration: 950},
+    { name: 'ignatherm', blastTemp: 12360, EUt: va.luv, duration: 941 },
+    { name: 'vhoric_steel', blastTemp: 12940, EUt: va.luv, duration: 1076 },
+    { name: 'pyrghul_alloy', blastTemp: 11820, EUt: va.luv, duration: 846 },
+    { name: 'vaexium', blastTemp: 13380, EUt: va.zpm, duration: 1012 },
+    { name: 'korzene', blastTemp: 13590, EUt: va.zpm, duration: 1093 },
+    { name: 'abyssal_netherite', blastTemp: 16000, EUt: va.uv, duration: 1100 },
+    { name: 'nexian_pyrite', blastTemp: 16800, EUt: va.uv, duration: 900 },
+    { name: 'activated_nexian_pyrite', blastTemp: 16800, EUt: va.uhv, duration: 1050 },
+    { name: 'awakened_draconium', blastTemp: 13200, EUt: va.uhv, duration: 1000 }
+]
+
 const transcendentAlloyBlastTier = [
     {
         name: 'indium-vor-dys-cad_supersolder_alloy',
         blastTemp: 8000,
         EUt: va.uhv,
         duration: 62700,
-        components: [
-            '47x indium',
-            '6x vorrexite',
-            '3x dysprosium',
-            '8x cadmium',
-            '3x tin',
-            '7x darmstadtium',
-            '2x zirconium'
-        ]
+        components: ['47x indium', '6x vorrexite', '3x dysprosium', '8x cadmium', '3x tin', '7x darmstadtium', '2x zirconium']
     },
     {
         name: 'sulvarium-over-kraethite_steel',
         blastTemp: 11000,
         EUt: va.uv,
         duration: 12937,
-        components: [
-            '6x sulvarium', 
-            '6x kraethite', 
-            '3x antisource', 
-            '4x holmium', 
-            '2x nexus', 
-            '2x awakened_draconium'
-        ]
+        components: ['6x sulvarium', '6x kraethite', '3x antisource', '4x holmium', '2x nexus', '2x awakened_draconium']
     },
     {
         name: 'aetheric-thermavyte',
         blastTemp: 10799,
         EUt: va.uhv,
         duration: 3000,
-        components: [
-            '2x aetherite',
-            '2x thermavyte',
-            '1x neutronium'
-        ]
+        components: ['2x aetherite','2x thermavyte','1x neutronium']
+    },
+    {
+        name: 'ignatherm',
+        blastTemp: 12360,
+        EUt: va.luv,
+        duration: 13409,
+        components: ['8x ignavyte', '5x flagrax', '3x zirconium', '2x hafnium', '1x carbon']
+    },
+    {
+        name: 'vhoric_steel',
+        blastTemp: 12940,
+        EUt: va.luv,
+        duration: 12912,
+        components: ['7x vhorryte', '4x ashrax', '2x niobium', '2x tantalum', '1x manganese']
+    },
+    {
+        name: 'pyrghul_alloy',
+        blastTemp: 11820,
+        EUt: va.luv,
+        duration: 10786,
+        components: ['6x ghulveyte', '5x pyrrhovyte', '3x copper', '2x electrotine', '1x platinum']
+    },
+    {
+        name: 'vaexium',
+        blastTemp: 13380,
+        EUt: va.zpm,
+        duration: 17457,
+        components: ['8x vaex-thryn', '7x nexus', '5x orvaelithe', '2x palladium', '1x molybdenum']
+    },
+    {
+        name: 'korzene',
+        blastTemp: 13590,
+        EUt: va.zpm,
+        duration: 14750,
+        components: ['7x khzaevhul', '5x ng-vaethos', '3x naquadah_alloy', '2x tungsten', '1x ruthenium']
+    },
+    {
+        name: 'abyssal_netherite',
+        blastTemp: 16000,
+        EUt: va.uv,
+        duration: 22275,
+        components: ['13x auralloy-omega', '4x ignatherm', '4x vhoric_steel', '4x pyrghul_alloy', '2x stellarite']
+    },
+    {
+        name: 'nexian_pyrite',
+        blastTemp: 16800,
+        EUt: va.uv,
+        duration: 44550,
+        components: ['37x nexus_steel', '12x abyssal_netherite', '8x korzene', '4x sulvarium-over-kraethite_steel', '3x promethium', '2x vaexium']
     }
 ]
 
@@ -386,18 +464,22 @@ transcendentBlastTier.forEach(mat => {
         .itemOutputs(`gtceu:hot_${mat.name}_ingot`)
         .outputFluids(`gtceu:quasifluxed_oganesson-xenon_trifluoride ${ogConsumption(mat.blastTemp)}`)
         .blastFurnaceTemp(mat.blastTemp)
-        .duration(Math.floor((0.57 - 0.03 * Math.log2(mat.blastTemp / 10000)) * mat.duration))
+        .duration(Math.floor((0.57 - 0.03 * Math.log(mat.blastTemp / 10000)) * mat.duration))
         .EUt(mat.EUt)
     if (mat.name !== 'aetheric-thermavyte') {
         event.remove({id: `gtceu:vacuum_freezer/cool_hot_${mat.name}_ingot`})
-    }
-    GTM.quantum_condensate_exchanger(`hypercool_${mat.name}`)
+
+        GTM.vacuum_freezer(`hypercool_${mat.name}`)
         .itemInputs(`gtceu:hot_${mat.name}_ingot`)
         .inputFluids(`gtceu:bose-einstein_oganesson-xenon_trifluoride_condensate_plasma ${ogConsumption(mat.blastTemp)}`)
         .itemOutputs(`gtceu:${mat.name}_ingot`)
         .outputFluids(`gtceu:oganesson-xenon_trifluoride ${ogConsumption(mat.blastTemp)}`)
-        .duration(Math.floor((0.60 - 0.03 * Math.log2(mat.blastTemp / 10000)) * mat.duration))
+        .duration(Math.floor((0.60 - 0.04887 * Math.log(mat.blastTemp / 10000)) * mat.duration))
         .EUt(mat.EUt * 0.8)
+    }
+    
+
+    
 
 })
 
@@ -418,19 +500,74 @@ transcendentAlloyBlastTier.forEach(mat => {
         .inputFluids(`gtceu:oganesson-xenon_trifluoride ${25*Math.log10(totalMb)}`)
         .outputFluids(`gtceu:molten_${mat.name} ${totalMb}`)
         .blastFurnaceTemp(mat.blastTemp)
-        .duration((0.57 - 0.02 * Math.log2(totalMb)) * mat.duration)
+        .duration((0.57 - 0.03 * Math.log(totalMb /100)) * mat.duration)
         .EUt(mat.EUt)
+
         if (mat.name !== 'aetheric-thermavyte') {
         event.remove({id: `gtceu:vacuum_freezer/${mat.name}`})
-        }
-    GTM.quantum_condensate_exchanger(`hypercool_molten_${mat.name}`)
-        .inputFluids(`gtceu:molten_${mat.name} 144`, `gtceu:bose-einstein_oganesson-xenon_trifluoride_condensate_plasma ${ogConsumption(mat.blastTemp)}`)
-        .itemOutputs(`gtceu:${mat.name}_ingot`)
-        .outputFluids(`gtceu:oganesson-xenon_trifluoride ${ogConsumption(mat.blastTemp)}`)
-        .duration(Math.floor((0.60 - 0.03 * Math.log2(mat.blastTemp / 10000)) *baseDuration))
-        .EUt(mat.EUt * 0.8)
-    
 
-    
+        GTM.quantum_condensate_exchanger(`hypercool_molten_${mat.name}`)
+        .inputFluids(`gtceu:${mat.name}_plasma 144`, `gtceu:bose-einstein_oganesson-xenon_trifluoride_condensate_plasma ${ogConsumption(mat.blastTemp)}`)
+        .outputFluids(`gtceu:molten_${mat.name} 144`,`gtceu:oganesson-xenon_trifluoride ${ogConsumption(mat.blastTemp)}`)
+        .duration(Math.floor((0.60 - 0.04887 * Math.log(mat.blastTemp / 10000)) * baseDuration))
+        .EUt(mat.EUt * 0.8)
+
+        GTM.vacuum_freezer(`hypercool_molten_${mat.name}`)
+        .inputFluids(`gtceu:molten_${mat.name} 144`, `gtceu:oganesson-xenon_trifluoride ${ogConsumption(mat.blastTemp)}`)
+        .itemOutputs(`gtceu:${mat.name}_ingot`)
+        .outputFluids(`gtceu:quasifluxed_oganesson-xenon_trifluoride ${ogConsumption(mat.blastTemp)}`)
+        .duration(Math.floor((0.60 - 0.04887 * Math.log(mat.blastTemp / 10000)) * baseDuration))
+        .EUt(mat.EUt * 0.8)
+        }
 })
+
+
+global.FLAME = (plasma, inputs, output, duration, EUt, MegaKevin, catalyst) => {
+    if (catalyst === undefined) catalyst = null
+    
+    // Map of plasma base temperatures in MK
+    const baseTemps = {
+        'americium': 100,
+        'infernality_catalysm': 300,
+        // Add other plasmas here as needed, fallback defaults to 300 (or MegaKelvin)
+    }
+
+    let baseTemp = baseTemps[plasma] 
+    
+    let id = `${plasma}_${output.replace('_plasma', '')}`
+    let totalAmount = inputs.reduce((sum, fluid) => {
+        let amount = parseInt(fluid.split(' ')[1])
+        return sum + amount * 144
+    }, 0)
+    
+    let prefixedInputs = inputs.map(fluid => {
+        let [name, amount] = fluid.split(' ')
+        return `gtceu:${name} ${parseInt(amount) * 144}`
+    })
+
+    let tempDifference = Math.max(0, baseTemp - MegaKevin)
+    let steps = Math.floor(tempDifference / 100)
+    let adjustedDuration = Math.round(duration * Math.pow(0.95, steps))
+
+    let recipe = GTM.fractal_metal_alloyment(id)
+        .inputFluids(`gtceu:${plasma}_plasma ${Math.round(1000 * Math.log(MegaKevin))}`)
+        .inputFluids(prefixedInputs)
+
+    if (catalyst) {
+        let [name, amount] = catalyst.split(' ')
+        recipe = recipe.itemInputs(`${parseInt(amount)}x gtceu:${name}`)
+    }
+
+    if (Array.isArray(EUt)) {
+        recipe.EUt(EUt[0], EUt[1]) 
+    } else {
+        recipe.EUt(EUt) 
+    }
+
+    recipe
+        .outputFluids(`gtceu:${output}_plasma ${totalAmount}`)
+        .duration(adjustedDuration)
+        .addData('TempMK', MegaKevin)
+}
+
 })

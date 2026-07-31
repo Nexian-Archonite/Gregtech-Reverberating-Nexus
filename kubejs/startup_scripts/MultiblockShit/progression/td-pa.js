@@ -29,7 +29,6 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
     event.create('transcendental_polydimensional_accelerator', 'multiblock')
     .rotationState(RotationState.NON_Y_AXIS)
     .recipeTypes([GTRecipeTypes.get('particle_accelerator'), GTRecipeTypes.get('fusion_accelerator')])
-    // .recipeModifiers(GTRecipeModifiers.OC_PERFECT)
     .appearanceBlock(() => Block.getBlock("gtceu:auralloy-omega_over_transcendentine_casing"))
     .pattern(definition => FactoryBlockPattern.start()
 .aisle("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabacccabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabacccabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
@@ -155,6 +154,6 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
     .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)))
 .where('x', Predicates.controller(Predicates.blocks(definition.get())))
 .build())
-.workableCasingModel(`gtceu:block/casings/solid/tp-da/transcendentine_over_auralloy_casing`, `gtceu:block/multiblock/fusion_reactor`)
+.workableCasingModel(`gtceu:block/casings/solid/transcendentine_over_auralloy_casing`, `gtceu:block/multiblock/fusion_reactor`)
 
 })

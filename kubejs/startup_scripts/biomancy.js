@@ -1,15 +1,3 @@
-StartupEvents.registry('block', bio => {
-bio.create('gtceu:flesh_alloy_casing')
-.textureAll('gtceu:block/casings/solid/flesh_alloy/casing')
-.displayName('§4Flesh Alloy Casing')
-.soundType('sculk')
-.hardness(13)
-.resistance(25)
-.requiresTool(true)
-.tagBlock('minecraft:mineable/pickaxe')
-.tagBlock('minecraft:needs_diamond_tool')
-})
-
 GTCEuStartupEvents.registry('gtceu:material_icon_set', bio => {
 bio.create('flesh_alloy')
 })

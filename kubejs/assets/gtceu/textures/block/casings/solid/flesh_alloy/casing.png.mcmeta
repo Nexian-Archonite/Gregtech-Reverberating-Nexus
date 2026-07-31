@@ -1,8 +1,0 @@
-{
-    "ldlib": {
-        "connection": "gtceu:block/casings/solid/flesh_alloy/casing_ctm"
-    },
-    "animation": {
-        "frametime": 8
-    }
-}

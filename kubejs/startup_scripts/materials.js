@@ -398,65 +398,121 @@ event.create('awakened_draconium')
     .neutrons(301)
     .symbol('AwkDr')
 
+// Alien Elements
+// Alien Elements
 event.create('chronosite')
     .protons(217)
     .neutrons(183)
-    .symbol('§kCh')
+    .symbol('Ch')
 
 event.create('vhaelcryite')
     .protons(211)
     .neutrons(179)
-    .symbol('§kVh')
+    .symbol('Vh')
 
 event.create('kraethite')
     .protons(166)
     .neutrons(153)
-    .symbol('§kKv')
+    .symbol('Kv')
 
+// VENUS
 event.create('vaelthorium')
     .protons(171)
     .neutrons(158)
-    .symbol('§kVt')
+    .symbol('Vt')
 
 event.create('sulvarium')
     .protons(158)
     .neutrons(147)
-    .symbol('§kSv')
+    .symbol('Sv')
 
 event.create('kethrite')
     .protons(163)
     .neutrons(151)
-    .symbol('§kKt')
+    .symbol('Kt')
 
 event.create('vorrexite')
     .protons(169)
     .neutrons(155)
-    .symbol('§kVx')
+    .symbol('Vx')
 
 event.create('thermavyte')
     .protons(161)
     .neutrons(149)
-    .symbol('§kTv')
+    .symbol('Tv')
 
 event.create('cindralite')
     .protons(155)
     .neutrons(144)
-    .symbol('§kCl')
+    .symbol('Cl')
 
 event.create('aetherite')
     .protons(174)
     .neutrons(160)
-    .symbol('§kAe')
+    .symbol('Ae')
 
 event.create('pyrathene')
     .protons(167)
     .neutrons(154)
-    .symbol('§kPy')
+    .symbol('Py')
 
+// Imposter (sus)
 event.create('quasiflux')
     .protons(0)
     .neutrons(0)
     .symbol('QFX')
+
+// NETHER
+
+event.create('ignavyte')
+    .protons(173).neutrons(162)
+    .symbol('Igv')
+
+event.create('flagrax')
+    .protons(175).neutrons(164)
+    .symbol('Flx')
+
+event.create('vhorryte')
+    .protons(178).neutrons(167)
+    .symbol('Vhr')
+
+event.create('ghulveyte')
+    .protons(180).neutrons(169)
+    .symbol('Ghv')
+
+event.create('ashrax')
+    .protons(182).neutrons(171)
+    .symbol('Asx')
+
+event.create('pyrrhovyte')
+    .protons(184).neutrons(173)
+    .symbol('Pyv')
+
+// END
+
+event.create('vaex-thryn')
+    .protons(187).neutrons(176)
+    .symbol('Vxt')
+
+event.create('orvaelithe')
+    .protons(189).neutrons(178)
+    .symbol('Ovl')
+
+event.create('khzaevhul')
+    .protons(191).neutrons(180)
+    .symbol('Kzh')
+
+event.create('aeuvrith-al')
+    .protons(193).neutrons(182)
+    .symbol('Avr')
+
+event.create('xhyv-orzael')
+    .protons(195).neutrons(184)
+    .symbol('Xhz')
+
+event.create('ng-vaethos')
+    .protons(197).neutrons(186)
+    .symbol('Nvt')
 })
 
 GTCEuStartupEvents.registry('gtceu:material', event => {
@@ -504,6 +560,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     .addOreByproducts('lanthanum', 'nexus', 'gold')
     .separatedInto('gold')
     .washedIn('sodium_persulfate')
+    .liquid(1700)
 
     event.create('echo')
     .element("echo")
@@ -1261,7 +1318,8 @@ event.create('awakened_draconium')
     .color(0xd9400b).iconSet(METALLIC)
     .ingot()
     .element('awakened_draconium')
-    .liquid(13650)
+    .fluid()
+    .plasma(13650)
     .blastTemp(13200, "mid", va.uhv, 1000)
     .flags(foil, plates)
 
@@ -1516,7 +1574,7 @@ event.create('omniparticle')
 
 event.create('purified_draconium')
     .color(0x702880).iconSet(METALLIC)
-    .dust()
+    .ingot()
     .element('draconium')
     .blastTemp(7200, "mid", va.zpm, 1000)
     .liquid(7000)
@@ -1674,7 +1732,7 @@ event.create('dtpa-rarest_earth_complex')
         .components('1x titanium', '1x perfected_taint')
         .color(0x3e2a58).iconSet(GTMaterialIconSet.METALLIC)
         .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, no_decomp, dense_plate)
-        .blastTemp(2200, "mid", GTValues.VA[GTValues.EV], 600)
+        .blastTemp(2200, "mid", va.zpm, 600)
         .liquid(2200)
         .fluidPipeProperties(2200, 200, true, true, true, false)
 
@@ -1683,7 +1741,7 @@ event.create('dtpa-rarest_earth_complex')
         .components('7x tungsten_steel', '4x americium','3x purified_netherite')
         .color(0xdcdcff).iconSet(GTMaterialIconSet.METALLIC)
         .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, dense_plate, fine_wire)
-        .blastTemp(4250, "mid", GTValues.VA[GTValues.EV], 650)
+        .blastTemp(4250, "mid", va.ev, 650)
         .liquid(4250)
         .fluidPipeProperties(4250, 300, true, true, true, true)
         .toolStats(
@@ -1815,7 +1873,32 @@ event.create('dtpa-rarest_earth_complex')
     .ingot()
     .liquid(0)
     .blastTemp(1, null, va.uhv, 1400)
-    
+
+// alien materials
+// mars elements
+
+event.create('chronosite')
+    .gem()
+    .color(0x1a0033).secondaryColor(0x99ddff)
+    .iconSet(GEM_VERTICAL)
+    .element('chronosite')
+    .flags(rod, frame)
+    .fluid()
+
+event.create('vhaelcryite')
+    .gem()
+    .color(0xff007f).secondaryColor(0xff99cc)
+    .iconSet(GEM_VERTICAL)
+    .element('vhaelcryite')
+    .flags(plates, rod, frame)
+    .fluid()
+
+event.create('kraethite')
+    .gem()
+    .color(0x00cfff).secondaryColor(0x004466)
+    .iconSet(GEM_HORIZONTAL)
+    .element('kraethite')
+    .fluid()
 
 // venus elements
 event.create('vaelthorium')
@@ -1823,18 +1906,21 @@ event.create('vaelthorium')
     .color(0x2d0010).secondaryColor(0xcc4400)
     .iconSet(GEM_VERTICAL)
     .element('vaelthorium')
+    .fluid()
 
 event.create('sulvarium')
     .gem()
     .color(0xffcc00).secondaryColor(0x664400)
     .iconSet(NETHERSTAR)
     .element('sulvarium')
+    .fluid()
 
 event.create('kethrite')
     .gem()
     .color(0xff4400).secondaryColor(0x1a0000)
     .iconSet(RUBY)
     .element('kethrite')
+    .fluid()
 
 event.create('vorrexite')
     .gem()
@@ -1842,12 +1928,14 @@ event.create('vorrexite')
     .iconSet(EMERALD)
     .element('vorrexite')
     .flags(frame, bolt_and_screw, foil)
+    .fluid()
 
 event.create('thermavyte')
     .gem()
     .color(0xff6600).secondaryColor(0x2a0a00)
     .iconSet(CERTUS)
     .element('thermavyte')
+    .fluid()
 
 event.create('cindralite')
     .gem()
@@ -1855,12 +1943,14 @@ event.create('cindralite')
     .iconSet(GEM_HORIZONTAL)
     .element('cindralite')
     .flags(frame, bolt_and_screw)
+    .fluid()
 
 event.create('aetherite') 
     .gem()
     .color(0x003322).secondaryColor(0x00ff99)
     .iconSet(GEM_VERTICAL)
     .element('aetherite')
+    .fluid()
 
 event.create('pyrathene')
     .gem()
@@ -1868,6 +1958,7 @@ event.create('pyrathene')
     .iconSet(RUBY)
     .element('pyrathene')
     .flags(frame, plates, dense_plate)
+    .fluid()
 
 event.create('transcendentine')
     .element('transcendentine')
@@ -1884,29 +1975,116 @@ event.create('draconium')
     .addOreByproducts('titanium', 'rhenium', 'naquadah')
     .ignoredTagPrefixes([TagPrefix.dustTiny, TagPrefix.dustSmall])
     
-// alien materials -----------------------------------------------------------------------
-event.create('chronosite')
-    .gem()
-    .color(0x1a0033).secondaryColor(0x99ddff)
-    .iconSet(GEM_VERTICAL)
-    .element('chronosite')
-    .flags(rod, frame)
+// nether materials
 
-event.create('vhaelcryite')
-    .gem()
-    .color(0xff007f).secondaryColor(0xff99cc)
-    .iconSet(GEM_VERTICAL)
-    .element('vhaelcryite')
-    .flags(plates, rod, frame)
+//========================
+// NETHER METALS
+//========================
 
-event.create('kraethite')
-    .gem()
-    .color(0x00cfff).secondaryColor(0x004466)
-    .iconSet(GEM_HORIZONTAL)
-    .element('kraethite')
+event.create('ignavyte')
+    .color(0xB22000).secondaryColor(0xFF6600)
+    .iconSet(SHINY)
+    .ingot()
+    .element('ignavyte')
+    .blastTemp(11042, null, va.luv, 874)
+    .liquid(11042)
+
+event.create('flagrax')
+    .color(0xFF3300).secondaryColor(0x661100)
+    .iconSet(METALLIC)
+    .ingot()
+    .element('flagrax')
+    .blastTemp(11791, null, va.luv, 1051)
+    .liquid(11791)
+
+event.create('vhorryte')
+    .color(0x8B0000).secondaryColor(0xFF1111)
+    .iconSet(DULL)
+    .ingot()
+    .element('vhorryte')
+    .blastTemp(12356, null, va.luv, 913)
+    .liquid(12356)
+
+event.create('ghulveyte')
+    .color(0xBBCCCC).secondaryColor(0x334444)
+    .iconSet(SHINY)
+    .ingot()
+    .element('ghulveyte')
+    .blastTemp(12988, null, va.luv, 1028)
+    .liquid(12988)
+
+event.create('ashrax')
+    .color(0x2A1A0A).secondaryColor(0x6B4A2A)
+    .iconSet(DULL)
+    .ingot()
+    .element('ashrax')
+    .blastTemp(13547, null, va.luv, 845)
+    .liquid(13547)
+
+event.create('pyrrhovyte')
+    .color(0x4A0000).secondaryColor(0xCC4400)
+    .iconSet(METALLIC)
+    .ingot()
+    .element('pyrrhovyte')
+    .blastTemp(12081, null, va.luv, 986)
+    .liquid(12081)
 
 
-    // venus minerals
+//========================
+// END METALS
+//========================
+
+event.create('vaex-thryn')
+    .color(0xC8B4FF).secondaryColor(0x1A0033)
+    .iconSet(SHINY)
+    .ingot()
+    .element('vaex-thryn')
+    .blastTemp(13124, null, va.zpm, 917)
+    .liquid(13124)
+
+event.create('orvaelithe')
+    .color(0x00FFD0).secondaryColor(0x003322)
+    .iconSet(METALLIC)
+    .ingot()
+    .element('orvaelithe')
+    .blastTemp(13600, null, va.zpm, 1083)
+    .liquid(13600)
+
+event.create('khzaevhul')
+    .color(0x2B002B).secondaryColor(0xFF00FF)
+    .iconSet(SHINY)
+    .ingot()
+    .element('khzaevhul')
+    .blastTemp(12532, null, va.zpm, 891)
+    .liquid(12532)
+
+event.create('aeuvrith-al')
+    .color(0xEEEEFF).secondaryColor(0x9900CC)
+    .iconSet(SHINY)
+    .ingot()
+    .element('aeuvrith-al')
+    .blastTemp(13376, null, va.zpm, 1046)
+    .liquid(13376)
+
+event.create('xhyv-orzael')
+    .color(0x000033).secondaryColor(0x4444FF)
+    .iconSet(DULL)
+    .ingot()
+    .element('xhyv-orzael')
+    .blastTemp(12844, null, va.zpm, 959)
+    .liquid(12844)
+
+event.create('ng-vaethos')
+    .color(0xFF99EE).secondaryColor(0x220011)
+    .iconSet(METALLIC)
+    .ingot()
+    .element('ng-vaethos')
+    .blastTemp(13461, null, va.zpm, 832)
+    .liquid(13461)
+
+// venus minerals
+
+
 event.create('vaelthorite')
     .dust()
     .ore(2, 2, true)
@@ -2043,64 +2221,200 @@ event.create('phazdurite')
     .addOreByproducts('transcendentine', 'naquadria', 'radon')
     .flags(no_decomp)
 
-// Alien Alloys
+//========================
+// NETHER MINERALS
+//========================
 
-event.create('indium-vor-dys-cad_supersolder_alloy')
-    .ingot()
-    .color(0x6600aa).secondaryColor(0x00ccbb)
-    .flags(no_decomp)
-    .components('47x indium', '6x vorrexite', '3x dysprosium', '8x cadmium', '3x tin', '7x darmstadtium', '2x zirconium')
-    .blastTemp(11000, null, va.uhv, 750)
-    .liquid(8000)
-
-event.create('sulvarium-over-kraethite_steel')
-    .ingot()
-    .color(0xffee00).secondaryColor(0x00ffee)
-    .flags(plates, rod, gear, small_gear, frame, small_gear, spring, bolt_and_screw, rotor, dense_plate, fine_wire, round)
-    .components('6x sulvarium', '6x kraethite', '3x antisource', '4x holmium', '2x nexus', '2x awakened_draconium')
-    .cableProperties(v.uv, 20, 0, true)
-    .blastTemp(11000, null, va.uv, 1050)
-    .liquid(11000)
-
-event.create('aetheric-thermavyte')
-    .ingot()
-    .color(0x003322).secondaryColor(0xff6600)
-    .components('2x aetherite', '2x thermavyte', 'neutronium')
-    .flags(rod, frame, plates, gear, foil)
-    .blastTemp(10799, null, va.uhv, 800)
-    .liquid(10799)
-
-event.create('vaelkethrite')
+event.create('ignavite')
     .gem()
-    .color(0x7c2208).secondaryColor(0x8c2200)
+    .ore(2, 2, true)
+    .color(0xD53A00).secondaryColor(0xFF8A22)
+    .iconSet(RUBY)
+    .components('4x ignavyte', '2x sulfur', '1x thermavyte')
+    .addOreByproducts('gold', 'pyrite', 'zirconium')
+    .flags(no_decomp)
+
+event.create('flagraxite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0xE63A18).secondaryColor(0x5A1808)
+    .iconSet(BRIGHT)
+    .components('4x flagrax', '2x pyrite', '1x sulfur')
+    .addOreByproducts('platinum', 'electrotine', 'hafnium')
+    .flags(no_decomp)
+
+event.create('vhorrite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0x990000).secondaryColor(0xFF3333)
+    .iconSet(GEM_VERTICAL)
+    .components('4x vhorryte', '2x zirconium', '1x redstone')
+    .addOreByproducts('gold', 'thermavyte', 'pyrite')
+    .flags(no_decomp)
+
+event.create('ghulvenite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0xC8D8D8).secondaryColor(0x445555)
+    .iconSet(OPAL)
+    .components('4x ghulveyte', '2x electrotine', '1x hafnium')
+    .addOreByproducts('platinum', 'cindralite', 'zirconium')
+    .flags(no_decomp)
+
+event.create('ashraxite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0x3A2412).secondaryColor(0x735232)
+    .iconSet(DIAMOND)
+    .components('4x ashrax', '2x cindralite', '1x sulfur')
+    .addOreByproducts('gold', 'thermavyte', 'pyrite')
+    .flags(no_decomp)
+
+event.create('pyrrhovite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0x660000).secondaryColor(0xDD5511)
+    .iconSet(GEM_HORIZONTAL)
+    .components('4x pyrrhovyte', '2x thermavyte', '1x platinum')
+    .addOreByproducts('hafnium', 'sulfur', 'electrotine')
+    .flags(no_decomp)
+
+
+//========================
+// END MINERALS
+//========================
+
+event.create('vaexthrynite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0xD6C4FF).secondaryColor(0x2A1055)
     .iconSet(NETHERSTAR)
-    .flags(rod, frame, plates, foil)
-    .components('vaelthorium', 'kethrite')
+    .components('4x vaex-thryn', '2x draconium', '1x naquadah')
+    .addOreByproducts('radon', 'uraninite', 'scheelite')
+    .flags(no_decomp)
 
-event.create('nexian_pyrite')
-    .ingot()
-    .color(0x8B1515).secondaryColor(0x5580B8)
-    .components('37x nexus_steel', '12x neutronium', '8x naquadah_alloy', '2x oganesson', '3x promethium')
-    .blastTemp(16800, null, va.uv, 900)
-    .liquid(16800)
+event.create('orvaelite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0x22FFD8).secondaryColor(0x004433)
+    .iconSet(EMERALD)
+    .components('4x orvaelithe', '2x tungstate', '1x scheelite')
+    .addOreByproducts('draconium', 'naquadrium', 'radon')
+    .flags(no_decomp)
 
-event.create('activated_nexian_pyrite')
-    .ingot()
-    .color(0xA01C1C).secondaryColor(0x6699DD)
-    .components('nexian_pyrite', '4x pyrathene', '4x cindralite')
-    .flags(rod, frame, plates, foil, no_decomp, no_abs_recipe)
-    .liquid(16800)
-    .blastTemp(16800, null, va.uhv, 1050)
+event.create('khzaevhulite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0x400040).secondaryColor(0xFF44FF)
+    .iconSet(RUBY)
+    .components('4x khzaevhul', '2x plutonium', '1x plutonium_241')
+    .addOreByproducts('naquadah', 'radon', 'uraninite')
+    .flags(no_decomp)
 
-event.create('chronocrytic-vhaelsalite')
-    .ingot()
-    .color(0x8c0059).secondaryColor(0xccbbe5)
-    .flags(fine_wire, spring, small_spring, foil, bolt_and_screw)
-    .components('chronosite', 'vhaelcryite')
-    .cableProperties(v.uhv, 28, 0, true)
+event.create('aeuvrite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0xFFFFFF).secondaryColor(0xAA22DD)
+    .iconSet(OPAL)
+    .components('4x aeuvrith-al', '2x uraninite', '1x radon')
+    .addOreByproducts('draconium', 'naquadah', 'tungstate')
+    .flags(no_decomp)
 
-    
-    
+event.create('xhyvorzite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0x111144).secondaryColor(0x5A5AFF)
+    .iconSet(BRIGHT)
+    .components('4x xhyv-orzael', '2x naquadrium', '1x scheelite')
+    .addOreByproducts('plutonium', 'draconium', 'radon')
+    .flags(no_decomp)
+
+event.create('vaethosite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0xFFB3F3).secondaryColor(0x331122)
+    .iconSet(GEM_VERTICAL)
+    .components('4x ng-vaethos', '2x scheelite', '1x naquadah')
+    .addOreByproducts('tungstate', 'uraninite', 'plutonium_241')
+    .flags(no_decomp)
+
+// Alien Alloys / Combined Crystals
+function AlienAlloy(name, form, primary, secondary, icon, flags, components, temp, voltage, duration, fluidTemp, cable, generatePlasma) {
+    if (generatePlasma === undefined) generatePlasma = true
+    let mat = event.create(name)
+        [form]()                                    // .ingot() / .gem() / .dust() etc
+        .color(primary).secondaryColor(secondary)
+        .fluid()
+
+    if (icon) mat.iconSet(icon)                     // METALLIC, SHINY, DULL etc
+    if (flags) mat.flags(flags)                     // [rotor, plates, no_decomp] etc
+    if (components) mat.components(components)      // ['8x something', '1x other']
+
+    if (cable) mat.cableProperties(cable[0], cable[1], cable[2], cable[3])
+                                                    // [voltage, amperage, loss, superconductor]
+
+    if (temp) mat.blastTemp(temp, null, voltage, duration)
+    // "highest" tier = null here? or does blastTemp accept the tier string
+
+    if (generatePlasma) {
+        if (fluidTemp) {
+            mat.plasma(fluidTemp)
+        } else if (temp) {
+            mat.plasma(temp)
+        }
+    } else if (temp) {
+        mat.liquid(temp)
+    }
+
+    return mat
+}
+
+function AlienFusion(name, primary, secondary, icon, flags, components) {
+    let mat = event.create(name)
+        .gem()
+        .color(primary).secondaryColor(secondary)
+        .fluid()
+
+    if (icon) mat.iconSet(icon)
+    if (flags) mat.flags(flags)
+    if (components) mat.components(components)
+
+    return mat
+}
+
+// gems
+
+
+//metals
+AlienAlloy('indium-vor-dys-cad_supersolder_alloy', 'ingot', 0x6600aa, 0x00ccbb, DULL, [no_decomp], ['47x indium', '6x vorrexite', '3x dysprosium', '8x cadmium', '3x tin', '7x darmstadtium', '2x zirconium'], 11000, va.uhv, 750, 8000, null)
+AlienAlloy('sulvarium-over-kraethite_steel', 'ingot', 0xffee00, 0x00ffee, METALLIC, [plates, rod, gear, small_gear, frame, spring, bolt_and_screw, rotor, dense_plate, fine_wire, round], ['6x sulvarium', '6x kraethite', '3x antisource', '4x holmium', '2x nexus', '2x awakened_draconium'], 11000, va.uv, 1050, 11000, [v.uv, 20, 0, true])
+AlienAlloy('aetheric-thermavyte', 'ingot', 0x003322, 0xff6600, SHINY, [rod, frame, plates, gear, foil], ['2x aetherite', '2x thermavyte', 'neutronium'], 10799, va.uhv, 800, null, null)
+AlienAlloy('ignatherm', 'ingot', 0xC83D1A, 0x5A170A, METALLIC, null, ['8x ignavyte', '5x flagrax', '3x zirconium', '2x hafnium', '1x carbon'], 12360, va.luv, 941, null, null)
+AlienAlloy('vhoric_steel', 'ingot', 0x7A2E2A, 0xB0463E, DULL, [plates, rod, gear, frame, dense_plate, rotor], ['7x vhorryte', '4x ashrax', '2x niobium', '2x tantalum', '1x manganese'], 12940, va.luv, 1076, null, null)
+AlienAlloy('pyrghul_alloy', 'ingot', 0xB9CBC7, 0xD55A28, SHINY, [foil, fine_wire, spring, bolt_and_screw], ['6x ghulveyte', '5x pyrrhovyte', '3x copper', '2x electrotine', '1x platinum'], 11820, va.luv, 846, null, null)
+AlienAlloy('vaexium', 'ingot', 0xBDD3F3, 0x2FD5BE, SHINY, [plates, rod, frame, gear, rotor, dense_plate, fine_wire], ['8x vaex-thryn', '7x nexus', '5x orvaelithe', '2x palladium', '1x molybdenum'], 13380, va.zpm, 1012, null, null)
+AlienAlloy('korzene', 'ingot', 0x68417A, 0xF06BE3, METALLIC, [plates, rod, frame, gear, dense_plate, foil, bolt_and_screw], ['7x khzaevhul', '5x ng-vaethos', '3x naquadah_alloy', '2x tungsten', '1x ruthenium'], 13590, va.zpm, 1093, null, null)
+AlienAlloy('abyssal_netherite', 'ingot', 0x30283A, 0xA020FF, METALLIC, [plates, rod, gear, small_gear, frame, spring, bolt_and_screw, rotor, dense_plate, fine_wire, round], ['13x auralloy-omega', '4x ignatherm', '4x vhoric_steel', '4x pyrghul_alloy', '2x stellarite'], 16000, va.uv, 1100, null, null)
+AlienAlloy('nexian_pyrite', 'ingot', 0x8B1515, 0x5580B8, DULL, null, ['37x nexus_steel', '12x abyssal_netherite', '8x korzene', '4x sulvarium-over-kraethite_steel', '3x promethium', '2x vaexium'], 16800, va.uv, 900, null, null)
+AlienAlloy('activated_nexian_pyrite', 'ingot', 0xA01C1C, 0x6699DD, METALLIC, [rod, frame, plates, foil, no_decomp, no_abs_recipe], ['nexian_pyrite', '4x pyrathene', '4x cindralite'], 16800, va.uhv, 1050, null, null)
+AlienAlloy('chronocrytic-vhaelsalite', 'ingot', 0x8c0059, 0xccbbe5, METALLIC, [fine_wire, spring, small_spring, foil, bolt_and_screw], ['3x chronosite', '3x vhaelcryite', '2x enriched_naquadrium', 'trinium', 'duranium'], null, null, null, null, [v.uhv, 28, 0, true])
+
+
+AlienFusion('vaelkethrite', 0x7c2208, 0x8c2200, NETHERSTAR, [rod, frame, plates, foil], ['1x vaelthorium', '1x kethrite'])
+AlienFusion('thermavylized-vaelite', 0xff4400, 0x2d0010, CERTUS, null, ['1x thermavyte', '1x vaelthorium'])
+AlienFusion('cindralite-kethrite', 0xcc3300, 0x888888, RUBY, null, ['1x cindralite', '1x kethrite'])
+AlienFusion('chithion-flame', 0x943800, 0xC35D44, QUARTZ, null, ['1x cindralite', '1x thermavyte'])
+AlienFusion('cryonull', 0x001833, 0x00cfff, GEM_HORIZONTAL, null, ['1x vorrexite', '1x kraethite'])
+
+event.create('inactivated_infernality')
+.components('1x thermavylized-vaelite', '1x cindralite-kethrite')
+.color(0x8B2200).secondaryColor(0x3D0000)
+.plasma(500000)
+
+event.create('infernality_catalysm')
+.components('inactivated_infernality')
+.color(0xFF4400).secondaryColor(0x8B0000)
+.plasma(500000000)
     
     
     
@@ -2843,10 +3157,6 @@ event.create('primordial_essence')
 // GT:RN ALIEN ORE PROCESSING — INTERMEDIATE FLUID REGISTRATIONS
 // ============================================================
 
-// ============================================================
-// VAELTHORITE INTERMEDIATES
-// ============================================================
-
 event.create('vaelthorium_sulfate_solution')
     .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID))
     .color(0x4a1a00)
@@ -2859,10 +3169,6 @@ event.create('vanadium_solution')
     .components('1x vanadium', '1x sulfur', '4x oxygen', '1x water')
     .flags(no_decomp)
 
-// ============================================================
-// SULVARITE INTERMEDIATES
-// ============================================================
-
 event.create('sulvarite_leachate')
     .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID))
     .color(0xddaa00)
@@ -2874,29 +3180,17 @@ event.create('zinc_chloride_solution')
     .color(0xccccaa)
     .components('1x zinc', '2x chlorine', '1x water')
 
-// ============================================================
-// KETHRENITE INTERMEDIATES
-// ============================================================
-
 event.create('kethrenite_ammine_solution')
     .liquid()
     .color(0x993300)
     .components('1x kethrite', '1x copper', '1x nickel', '3x nitrogen', '3x hydrogen')
     .flags(no_decomp)
 
-// ============================================================
-// VORREXINITE INTERMEDIATES
-// ============================================================
-
 event.create('pgm_chloride_solution')
     .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID))
     .color(0x220011)
     .components('1x iridium', '1x ruthenium', '1x rarest_metal_mixture', '6x chlorine', '1x water')
     .flags(no_decomp)
-
-// ============================================================
-// THERMASTONE INTERMEDIATES
-// ============================================================
 
 event.create('thermavyte_oxide')
     .liquid()
@@ -2910,10 +3204,6 @@ event.create('chromium_trioxide_solution')
     .components('1x chromium', '3x oxygen', '1x water')
     .flags(no_decomp)
 
-// ============================================================
-// CINDRAX INTERMEDIATES
-// ============================================================
-
 event.create('cindrax_alkaline_melt')
     .liquid()
     .color(0x666655)
@@ -2924,10 +3214,6 @@ event.create('sodium_chloride_solution')
     .liquid()
     .color(0xeeeedd)
     .components('1x sodium', '1x chlorine', '1x water')
-
-// ============================================================
-// AETHERIC PALLADITE INTERMEDIATES
-// ============================================================
 
 event.create('palladite_leachate')
     .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID))
@@ -2941,10 +3227,6 @@ event.create('aetherite_residue')
     .components('1x aetherite', '1x hafnium', '1x sulfur')
     .flags(no_decomp)
 
-// ============================================================
-// PYRATHITE INTERMEDIATES
-// ============================================================
-
 event.create('pyrathite_fluoride_vapor')
     .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID))
     .color(0xee3300)
@@ -2956,10 +3238,6 @@ event.create('vanadium_oxyfluoride')
     .color(0xcc6600)
     .components('1x vanadium', '1x oxygen', '1x fluorine')
     .flags(no_decomp)
-
-// ============================================================
-// NULLEDRYTE INTERMEDIATES
-// ============================================================
 
 event.create('unstable_oganesson_solution')
     .liquid()
@@ -2973,10 +3251,6 @@ event.create('cryostabilized_decay_matrix')
     .components('1x oganesson', '1x darmstadtium', '2x helium')
     .flags(no_decomp)
 
-// ============================================================
-// XYCRHOVITE INTERMEDIATES
-// ============================================================
-
 event.create('xycrhovite_resonance_solution')
     .liquid()
     .color(0xff88cc)
@@ -2988,10 +3262,6 @@ event.create('echo_fluid')
     .color(0x4400aa)
     .components('1x echo', '1x refined_sentience')
     .flags(no_decomp)
-
-// ============================================================
-// VHESZCRYL INTERMEDIATES
-// ============================================================
 
 event.create('vheszcryl_extract')
     .liquid()
@@ -3005,10 +3275,6 @@ event.create('transcendentine_solution')
     .components('1x transcendentine', '1x water')
     .flags(no_decomp)
 
-// ============================================================
-// GROTHEMITE INTERMEDIATES
-// ============================================================
-
 event.create('grothemite_leachate')
     .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID))
     .color(0x7a3a10)
@@ -3020,10 +3286,6 @@ event.create('iron_sulfate_solution')
     .color(0x996622)
     .components('1x iron', '1x sulfur', '4x oxygen', '1x water')
     .flags(no_decomp)
-
-// ============================================================
-// KRETHAVINE INTERMEDIATES
-// ============================================================
 
 event.create('krethavine_tetrachloride')
     .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID))
@@ -3042,20 +3304,11 @@ event.create('magnesium_chloride_solution')
     .color(0xddddcc)
     .components('1x magnesium_chloride', '1x water')
 
-// ============================================================
-// ORVEXITE INTERMEDIATES
-// ============================================================
-
 event.create('orvexite_nitrate_solution')
     .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID))
     .color(0x336622)
     .components('1x rare_earth', '1x osmiridium', '1x rhodium', '3x nitric_acid')
     .flags(no_decomp)
-
-
-// ============================================================
-// PHAZDURITE INTERMEDIATES (PUREX CHAIN)
-// ============================================================
 
 event.create('phazdurite_feed_solution')
     .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID))
@@ -3093,7 +3346,6 @@ event.create('phazdurite_scrub_waste')
     .components('1x nitric_acid', '1x water')
     .flags(no_decomp)
 
-
 event.create('organic_naquadria_phase')
     .liquid()
     .color(0x440022)
@@ -3106,7 +3358,55 @@ event.create('naquadria_nitrate_solution')
     .components('1x naquadria', '2x nitric_acid')
     .flags(no_decomp)
 
+event.create('ignavite_calcine')
+    .fluid()
+    .color(0xA64A1A).secondaryColor(0x4A2A18)
+    .flags(no_decomp)
 
+event.create('ignavyte_chloride_solution')
+    .fluid()
+    .color(0xC96A32).secondaryColor(0x6B2C12)
+    .flags(no_decomp)
+
+event.create('flagrax_chloride_melt')
+    .fluid()
+    .color(0xFF5A1A).secondaryColor(0x5C1808)
+    .flags(no_decomp)
+
+event.create('vhorrite_alkaline_melt')
+    .fluid()
+    .color(0x7A2418).secondaryColor(0xD64A38)
+    .flags(no_decomp)
+
+event.create('unstable_vaex_solution')
+    .fluid()
+    .color(0x76D7FF).secondaryColor(0x1A3E6B)
+    .flags(no_decomp)
+
+event.create('stabilized_vaex_solution')
+    .fluid()
+    .color(0xA8ECFF).secondaryColor(0x4586C8)
+    .flags(no_decomp)
+
+event.create('orvaelithe_nitrate_solution')
+    .fluid()
+    .color(0x37FFD8).secondaryColor(0x0A5B4F)
+    .flags(no_decomp)
+
+event.create('stable_orvaelithe_solution')
+    .fluid()
+    .color(0x7FFFEA).secondaryColor(0x169C8B)
+    .flags(no_decomp)
+
+event.create('khzaevhul_crystal_slurry')
+    .fluid()
+    .color(0x8B2AFF).secondaryColor(0x210042)
+    .flags(no_decomp)
+
+event.create('locked_khzaevhul_slurry')
+    .fluid()
+    .color(0xD175FF).secondaryColor(0x4A148A)
+    .flags(no_decomp)
 
 
 // alien shit lmao. well more i mean
@@ -3154,15 +3454,9 @@ event.create('bose-einstein_oganesson-xenon_trifluoride_condensate')
     .components('oganesson', 'xenon_trifluoride')
 
 event.create('quasiflux')
-    .liquid(293)
     .color(0x861bbb)
     .element('quasiflux')
 
-event.create('quasifluxed_oganesson')
-    .liquid(293)
-    .color(0x9025d5)
-    .components('quasiflux', 'oganesson')
-    .flags(no_decomp)
 
 event.create('quasifluxed_oganesson-xenon_trifluoride')
     .liquid(293)
@@ -3242,6 +3536,11 @@ event.create('quasifluxed_oganesson-xenon_trifluoride')
     addFluid(GTMaterials.Oganesson, $FluidStorageKeys.LIQUID)
     addFluid(GTMaterials.AmmoniumChloride, $FluidStorageKeys.LIQUID)
     addFluid(GTMaterials.DiethylenetriaminepentaaceticAcid, $FluidStorageKeys.LIQUID)
+    addFluid(GTMaterials.Zirconium, $FluidStorageKeys.LIQUID)
+    addFluid(GTMaterials.Hafnium, $FluidStorageKeys.LIQUID)
+    addFluid(GTMaterials.Electrotine, $FluidStorageKeys.LIQUID)
+    addFluid(GTMaterials.Promethium, $FluidStorageKeys.LIQUID)
+    addFluid(GTMaterials.Holmium, $FluidStorageKeys.LIQUID)
 
     GTMaterials.Glowstone.setComponents("1x tricalcium_phosphate", "1x gold")
     GTMaterials.Glowstone.setFormula("AuCa3(PO4)2", true)
@@ -3622,9 +3921,11 @@ casing('signalum_casing', '§cParticle Attracting Signalum §rCasing', 'solid/th
 
 casing('nitinol_casing', '§7Seismic Resilient Nitinol §rCasing', 'solid/nitinol_casing', 13, 30, 'needs_diamond_tool')
 
-casing('auralloy-omega_over_transcendentine_casing', '§dTerakelvin Resilient §6Aura§7lloy-Ω §rOver §dTranscendentine §rParticle Accelerator Casing', 'solid/tp-da/transcendentine_over_auralloy_casing', 13, 30, 'needs_diamond_tool')
+casing('auralloy-omega_over_transcendentine_casing', '§dTerakelvin Resilient §6Aura§7lloy-Ω §rOver §dTranscendentine §rParticle Accelerator Casing', 'solid/transcendentine_over_auralloy_casing', 13, 30, 'needs_diamond_tool')
 
 casing('vhaelcryite_casing', 'Surreal §4Pyrathene§r-§dVhaelcryite §rCasing', 'solid/vhaelcryite_casing', 13, 30, 'needs_diamond_tool')
+
+casing('vaelkethrite_casing', '§6Hypergolic §cVael§4kethrite §9Crystal §1Matrix §8Fusion §rCasing', 'solid/vaelkethrite_casing', 13, 30, 'needs_diamond_tool')
 
 casing('sulvan_steel_casing', 'Hypertensile-§7Cindra§rtechnic §6Sulvarium§r-Over-§bKraethite Steel §rCasing', 'solid/sulvan_steel_casing', 17, 40, 'needs_netherite_tool')
 
@@ -3634,7 +3935,7 @@ casing('peek_casing', "§aAcidically Nulled §6Poly-Ether Ether Ketone §rCasing
 
 casing('peek_pipe_casing', '§6Poly-Ether Ether Ketone Pipe §rCasing', 'pipe/peek', 10, 23, 'needs_iron_tool')
 
-casing('sulvan_steel_pipe_casing', '§6Sulvarium§r-Over-§bKraethite Steel §rPipe Casing', 'pipe/sulvan_steel_casing', 17, 40, 'needs_netherite_tool')
+casing('sulvan_steel_pipe_casing', '§6Sulvarium§r-Over-§bKraethite Steel §rPipe Casing', 'pipe/sulvan_steel', 17, 40, 'needs_netherite_tool')
 
 casing('sulvan_steel_gearbox', '§6Sulvarium§r-Over-§bKraethite Steel §rGearbox', 'gearbox/sulvan_steel_gearbox', 17, 40, 'needs_netherite_tool')
 
@@ -3643,6 +3944,8 @@ casing('activated_nexian_pyrite_casing', '§4I§cn§6f§ee§6r§cn§4o§cs§6t§
 casing('chithion-flame_casing', '§9§kPrimordially§r Stabilized §4Infernal Chithion-Flame§r Casing', 'temperature/chithion_flame_casing', 9, 11, 'needs_iron_tool')
 
 casing('cryonull_casing', '§9§kPrimordially§r Stabilized §3Cryothetic Cryonull§r Casing', 'temperature/cryonull_casing', 9, 11, 'needs_iron_tool')
+
+casing('flesh_alloy_casing', '§4Flesh Alloy Casing', 'flesh/casing', 13, 25, 'needs_iron_tool')
 
 event.create('gtceu:sulvan_steel_firebox', 'gtceu:active')
 .displayName('§6Sulvarium§r-Over-§bKraethite Steel §rFirebox')
@@ -3669,7 +3972,17 @@ event
     .tagBlock('minecraft:mineable/pickaxe')
     .tagBlock('minecraft:needs_iron_tool')
 
-
+event
+    .create('eternal_power_core')
+    .displayName('§8Dormant Power Core')
+    .soundType('sculk_catalyst')
+    .fullBlock(false)
+    .hardness(50)
+    .resistance(12500)
+    .requiresTool(true)
+    .tagBlock('minecraft:mineable/pickaxe')
+    .tagBlock('minecraft:needs_diamond_tool')
+    .box(4, 4, 4, 12, 12, 12, true)
 
 event
     .create('eternal_hell_core')
@@ -3686,18 +3999,6 @@ event
 event
     .create('eternal_frost_core')
     .displayName('§3Eternal Frost Core')
-    .soundType('sculk_catalyst')
-    .fullBlock(false)
-    .hardness(50)
-    .resistance(12500)
-    .requiresTool(true)
-    .tagBlock('minecraft:mineable/pickaxe')
-    .tagBlock('minecraft:needs_diamond_tool')
-    .box(4, 4, 4, 12, 12, 12, true)
-
-event
-    .create('dormant_power_core')
-    .displayName('§8Dormant Heat Core')
     .soundType('sculk_catalyst')
     .fullBlock(false)
     .hardness(50)

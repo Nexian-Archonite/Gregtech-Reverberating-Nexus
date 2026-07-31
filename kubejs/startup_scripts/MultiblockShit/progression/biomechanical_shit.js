@@ -71,7 +71,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('#', Predicates.any())
             .build())
         .workableCasingModel(
-            "gtceu:block/casings/solid/flesh_alloy/casing",
+            "gtceu:block/casings/flesh/casing",
             "gtceu:block/multiblock/assembly_line"
         )
 
@@ -117,11 +117,11 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
     .aisle("bbbbbbbbbbbbbbbbb", "baaabaaaaaaabaaab", "baaacaaaaaaacaaab", "baaacaaacaaacaaab", "baaacacccccacaaab", "baaaaacccccaaaaab", "baaacccccccccaaab", "aaaacccccccccaaaa", "aaaaaacccccaaaaaa", "aaaacacccccacaaaa", "abaacaaacaaacaaba", "abaaaaaaaaaaaaaba", "aabbbbbbbbbbbbbaa")
     .aisle("bbbbbbbbbbbbbbbbb", "baabaaaaaaaaabaab", "baacaaaaaaaaacaab", "baacaaaaaaaaacaab", "baacaaaaaaaaacaab", "aaaccaaaaaaaccaaa", "aaaacaaaaaaacaaaa", "aaaacaaaaaaacaaaa", "aaaccaaaaaaaccaaa", "aaacaaaaaaaaacaaa", "aaacaaaabaaaacaaa", "abacabbbbbbbacaba", "abbbbaaaaaaabbbba")
     .aisle("abbbbbaabaabbbbba", "abbaaabbbbbaaabba", "accaaabababaaacca", "accaaabababaaacca", "accaaabbbbbaaacca", "acacaaababaaacaca", "acccaaababaaaccca", "acccaaabbbaaaccca", "acacaaaabaaaacaca", "accaaaaabaaaaacca", "accaaabbbbbaaacca", "acaabbaaaaabbaaca", "abbbaaaaaaaaabbba")
-    .aisle("aabbbaaaaaaabbbaa", "abaaabbbbbbbaaaba", "acaaaaadddaaaaaca", "acaaaaaaaaaaaaaca", "acaaaaaaaaaaaaaca", "acaaaaaaaaaaaaaca", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "acaaaaaaaaaaaaaca", "acaaaaaaaaaaaaaca", "acaaabbeeebbaaaca", "acabbaaaaaaabbaca", "abbaaaaaaaaaaabba")
-    .aisle("aabbaaaaaaaaabbaa", "abaabbbbbbbbbaaba", "acaabadaaadabaaca", "acaabaaaaaaabaaca", "aacabaaaaaaabacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "acaabbeeeeebbaaca", "acabaaaaaaaaabaca", "abbaaaaaaaaaaabba")
-    .aisle("aabbaaaaaaaaabbaa", "abaabbbbbbbbbaaba", "acaaadaaaaadaaaca", "acaaaaaaaaaaaaaca", "aacabaaaaaaabacaa", "aacabaaaaaaabacaa", "aacabaaaaaaabacaa", "aacabaaaaaaabacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "acaabeeeeeeebaaca", "acabaaaaaaaaabaca", "abbaaaaaaaaaaabba")
-    .aisle("abbbbaaaaaaabbbba", "abaabbbbbbbbbaaba", "acaabdaafaadbaaca", "accabaaaaaaabacca", "aacabaaaaaaabacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "aacabaaaaaaabacaa", "aacabaaaaaaabacaa", "aacabaaaaaaabacaa", "accbbeeeeeeebbcca", "acabaaaaaaaaabaca", "abbaaaaaaaaaaabba")
-    .aisle("aabbaaaaaaaaabbaa", "abaabbbbbbbbbaaba", "acaaadaaaaadaaaca", "acaaaaaaaaaaaaaca", "aacabaaaaaaabacaa", "aacabaaaaaaabacaa", "aacabaaaaaaabacaa", "aacabaaaaaaabacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "acaabeeeeeeebaaca", "acabaaaaaaaaabaca", "abbaaaaaaaaaaabba")
+    .aisle("aabbbaaaaaaabbbaa", "abaaabbbbbbbaaaba", "acaaaaadddaaaaaca", "acaaaaadddaaaaaca", "acaaaaaaaaaaaaaca", "acaaaaaaaaaaaaaca", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "acaaaaaaaaaaaaaca", "acaaaaaaaaaaaaaca", "acaaabbeeebbaaaca", "acabbaaaaaaabbaca", "abbaaaaaaaaaaabba")
+    .aisle("aabbaaaaaaaaabbaa", "abaabbbbbbbbbaaba", "acaabadaaadabaaca", "acaabadaaadabaaca", "aacabaaaaaaabacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "acaabbeeeeebbaaca", "acabaaaaaaaaabaca", "abbaaaaaaaaaaabba")
+    .aisle("aabbaaaaaaaaabbaa", "abaabbbbbbbbbaaba", "acaaadaaaaadaaaca", "acaaadaaaaadaaaca", "aacabaaaaaaabacaa", "aacabaaaaaaabacaa", "aacabaaaaaaabacaa", "aacabaaaaaaabacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "acaabeeeeeeebaaca", "acabaaaaaaaaabaca", "abbaaaaaaaaaaabba")
+    .aisle("abbbbaaaaaaabbbba", "abaabbbbbbbbbaaba", "acaabdaafaadbaaca", "accabdaaaaadbacca", "aacabaaaaaaabacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "aacabaaaaaaabacaa", "aacabaaaaaaabacaa", "aacabaaaaaaabacaa", "accbbeeeeeeebbcca", "acabaaaaaaaaabaca", "abbaaaaaaaaaaabba")
+    .aisle("aabbaaaaaaaaabbaa", "abaabbbbbbbbbaaba", "acaaadaaaaadaaaca", "acaaadaaaaadaaaca", "aacabaaaaaaabacaa", "aacabaaaaaaabacaa", "aacabaaaaaaabacaa", "aacabaaaaaaabacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "acaabeeeeeeebaaca", "acabaaaaaaaaabaca", "abbaaaaaaaaaaabba")
     .aisle("aabbaaaaaaaaabbaa", "abaabbbbbbbbbaaba", "acaabaaaaaaabaaca", "acaabaaaaaaabaaca", "aacabaaaaaaabacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "acaabbeeeeebbaaca", "acabaaaaaaaaabaca", "abbaaaaaaaaaaabba")
     .aisle("aabbbaaaaaaabbbaa", "abaaabbbbbbbaaaba", "acaaaaaaaaaaaaaca", "acaaaaaaaaaaaaaca", "acaaaaaaaaaaaaaca", "acaaaaaaaaaaaaaca", "aacaaaaaaaaaaacaa", "aacaaaaaaaaaaacaa", "acaaaaaaaaaaaaaca", "acaaaaaaaaaaaaaca", "acaaabbeeebbaaaca", "acabbaaaaaaabbaca", "abbaaaaaaaaaaabba")
     .aisle("abbbbbaabaabbbbba", "abbaaabbbbbaaabba", "accaaabababaaacca", "accaaabababaaacca", "accaaabbbbbaaacca", "acacaaababaaacaca", "acccaaababaaaccca", "acccaaabbbaaaccca", "acacaaaabaaaacaca", "accaaaaabaaaaacca", "accaaabbbbbaaacca", "acaabbaaaaabbaaca", "abbbaaaaaaaaabbba")
@@ -132,11 +132,16 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
     .where("a", Predicates.any())
     .where("b", Predicates.blocks("gtceu:flesh_alloy_casing"))
     .where("c", Predicates.blocks("gtceu:organism_glass"))
-    .where("d", Predicates.blocks("gtceu:stable_machine_casing"))
+    .where("d", Predicates.blocks("gtceu:stable_machine_casing")
+        .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setPreviewCount(0))
+        .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setPreviewCount(0))
+        .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setPreviewCount(0))
+        .or(Predicates.abilities(PartAbility.EXPORT_FLUIDS).setPreviewCount(0))
+        .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2)))
     .where("e", Predicates.blocks("gtceu:sterilizing_filter_casing"))
     .where("f", Predicates.controller(Predicates.blocks(definition.get())))
     .build())
-   .workableCasingModel("gtceu:block/casings/solid/flesh_alloy/casing", "gtceu:block/multiblock/fusion_reactor")
+   .workableCasingModel("gtceu:block/casings/flesh/casing", "gtceu:block/multiblock/fusion_reactor")
     
 
     event.create(`biomechanical_mixer`, "simple")
