@@ -1,0 +1,6 @@
+{
+  "biomes": ["minecraft:taiga", "minecraft:old_growth_pine_taiga", "minecraft:old_growth_spruce_taiga"],
+  "bed": "minecraft:gravel", "waterline": "minecraft:podzol", "bank": "minecraft:grass_block",
+  "waterline_below": 1, "waterline_above": 0,
+  "underwater_noise": 0.25, "above_water_noise": 0.25
+}

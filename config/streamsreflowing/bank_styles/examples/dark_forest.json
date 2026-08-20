@@ -1,0 +1,5 @@
+{
+  "biomes": ["minecraft:dark_forest"],
+  "bed": "minecraft:mossy_cobblestone", "waterline": "minecraft:mud", "bank": "minecraft:grass_block",
+  "underwater_noise": 0.23
+}

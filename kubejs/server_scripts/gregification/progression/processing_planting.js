@@ -1,7 +1,7 @@
 // kubejs/server_scripts/processing_planting.js
 
 const oreProcessableTiers = {
-  PrimitiveProcessing: [
+  ElectricProcessing: [
     { material: 'iron', secondary: 'nickel', tertiary: 'tin' },
     { material: 'magnetite', secondary: 'gold', tertiary: 'gold' },
     { material: 'copper', secondary: 'gold', tertiary: 'nickel' },
@@ -19,10 +19,6 @@ const oreProcessableTiers = {
     { material: 'condensed_mana', secondary: 'mana', tertiary: 'mana', quaternary: 'mana' },
     { material: 'extraterrestrial_resonite', secondary: 'pitchblende', tertiary: 'extraterrestrial_resonite', quaternary: 'aluminium' },
     { material: 'enstatite', secondary: 'magnesium', tertiary: 'silicon', quaternary: 'iron' },
-
-  ],
-
-  ElectricProcessing: [
     { material: 'diamond', secondary: 'carbon', tertiary: 'graphite', quaternary: 'graphite' },
     { material: 'emerald', secondary: 'beryllium', tertiary: 'aluminium', quaternary: 'aluminium' },
     { material: 'ruby', secondary: 'chromium', tertiary: 'red_garnet', quaternary: 'cinnabar' },
@@ -127,31 +123,16 @@ ServerEvents.recipes(function (event) {
   const GTM = event.recipes.gtceu
 
   // Build tier lists
-  oreProcessableTiers.primitive = oreProcessableTiers.PrimitiveProcessing.slice()
+  oreProcessableTiers.electric = oreProcessableTiers.ElectricProcessing.slice()
 
-  oreProcessableTiers.electric = oreProcessableTiers.primitive.concat(
-    oreProcessableTiers.ElectricProcessing
-  )
+oreProcessableTiers.advanced = oreProcessableTiers.electric.concat(
+  oreProcessableTiers.AdvancedProcessing
+)
 
-  oreProcessableTiers.advanced = oreProcessableTiers.electric.concat(
-    oreProcessableTiers.AdvancedProcessing
-  )
+oreProcessableTiers.alien = oreProcessableTiers.advanced.concat(
+  oreProcessableTiers.AlienProcessing
+)
 
-  oreProcessableTiers.alien = oreProcessableTiers.advanced.concat(
-    oreProcessableTiers.AlienProcessing
-  )
-
-  // Primitive tier - ore_processing_plant
-  oreProcessableTiers.primitive.forEach(function (ore) {
-    GTM.ore_processing_plant('primitive_' + ore.material + '_ore_processing')
-      .itemInputs('gtceu:crushed_' + ore.material + '_ore')
-      .itemOutputs('2x gtceu:' + ore.material + '_dust')
-      .chancedOutput('gtceu:' + ore.secondary + '_dust', 5000, 0)
-      .chancedOutput('gtceu:' + ore.tertiary + '_dust', 2500, 0)
-      .inputFluids('water 500')
-      .duration(100)
-      .EUt(32)
-  })
 
   // Electric tier - electric_ore_processing_plant
   oreProcessableTiers.electric.forEach(function (ore) {
@@ -186,11 +167,12 @@ ServerEvents.recipes(function (event) {
     }
     })
     oreProcessableTiers.alien.forEach(function (ore) {
-
+      const isAlien = oreProcessableTiers.AlienProcessing.includes(ore)
+const secondaryAmount = isAlien ? 2 : 6
       const recipe = GTM.array_ore_processing('array_' + ore.material + '_ore_processing')
     .itemInputs('gtceu:crushed_' + ore.material + '_ore')
       .itemOutputs('8x gtceu:' + ore.material + '_dust')
-      .chancedOutput('6x gtceu:' + ore.secondary + '_dust', 7500, 0)
+      .chancedOutput(`${secondaryAmount}x gtceu:${ore.secondary}_dust`, 7500, 0)
       .chancedOutput('4x gtceu:' + ore.tertiary + '_dust', 5000, 0)
       .inputFluids('gtceu:carborane_acid 100', 'gtceu:resonance_plasma 5')
       .duration(40)
@@ -206,21 +188,7 @@ ServerEvents.recipes(function (event) {
 
 
 
-
-  event.shaped(Item.of('gtceu:primitive_processing_factory'), [
-        'HRS',
-        'PBR',
-        'FRS'
-    ], {
-        H: '#forge:tools/hammers',
-        R: 'gtceu:brass_rod',
-        S: 'gtceu:brass_screw',
-        P: 'gtceu:brass_plate',
-        B: 'gtceu:firebricks',
-        F: '#forge:tools/screwdrivers'
-    }).id('gtceu:shaped/primitive_ore_factory')
-
-    event.shaped(Item.of('gtceu:ore_processing_factory'), [
+    event.shaped('gtceu:ore_processing_factory', [
         'GCG', 
         'PLP', 
         'WPW'
@@ -232,7 +200,7 @@ ServerEvents.recipes(function (event) {
         W: 'gtceu:tin_single_cable'
     }).id('gtceu:shaped/electric_ore_factory')
 
-  event.shaped(Item.of('gtceu:ore_processing_plant'), [
+  event.shaped('gtceu:ore_processing_plant', [
         'GCG',
         'PLP',
         'WPW'

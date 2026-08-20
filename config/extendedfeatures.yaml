@@ -2,7 +2,7 @@
 Multiblocks:
   # Whether the Robust Alloy Materializer is Enabled
   # Default = True
-  RobustAlloyMaterializer: true
+  RobustAlloyMaterializer: false
 
   # Whether the Large Cracking Machine is Enabled
   # Default = True
@@ -16,17 +16,13 @@ Multiblocks:
   # Default = True
   LargePyrolysisOven: true
 
-  # Whether the Advanced Fusion Reactors are Enabled
-  # Default = True
-  AdvancedFusionReactors: false
-
   # Whether the Compact Assembly Line is Enabled
   # Tip: Controller recipe should contain 4 Assembly Line controllers
   # Default = True
-  CompactAssemblyLine: true
+  CompactAssemblyLine: false
 
   # Whether the Rock Processing Plant is Enabled
-  # Tip: Controller recipe should contain a macerator, a centrifuge and an electrolyzer
+  # Tip: Controller recipe should contain a large macerator, a large centrifuge and an large electrolyzer
   # Default = True
   RockProcessingPlant: true
 
@@ -39,28 +35,36 @@ Multiblocks:
   TreeGrowingChamber: true
 
   # Whether the Disassembler is enabled
-  # §cWarning: §rUniversal Circuits MUST be enabled
-  # otherwise it could lead to some issues with recipes
+  # §cUniversal Circuits MUST be enabled
   # Default = True
   Disassembler: true
 
-# Configuration Toggles for Optical Features
-OpticalMachines:
-  # Whether the Expanded Data Access Hatches are Enabled
+  # Whether the Large Air Collector is Enabled
   # Default = True
-  ExpandedDataAccessHatches: true
-
-  # Whether the Wireless Optical Hatches & Cloud Transmission Database are Enabled
-  # Default = True
-  WirelessOptical: true
+  LargeGasCollector: true
 
   # Whether the Expanded Data Bank is Enabled
   # Default = True
   ExpandedDatabank: true
 
-  # Whether the Optical Tranmission Network is Enabled
+  # Whether the Matrix Data Relay is Enabled
+  # §cRequires Wireless Optical Hatches enabled
   # Default = True
-  OpticalTransmissionNetwork: true
+  MatrixDataRelay: true
+
+# Configuration Toggles for Normal Machines
+RegularMachines:
+  # Whether the Expanded Data Access Hatches are Enabled
+  # Default = True
+  ExpandedDataAccessHatches: true
+
+  # Whether the Wireless Optical Hatches are Enabled
+  # Default = True
+  WirelessOpticalHatches: true
+
+  # Whether the Configurable Cleaning Maintenance Hatch is Enabled
+  # Default = True
+  CCMHatch: true
 
 # Whether the Universal Circuits are Enabled.
 UniversalCircuits: true

@@ -5,6 +5,12 @@ event.add('gtceu:the_end_marker')
 })
 
 ItemEvents.tooltip(event => {
+
+event.addAdvanced('gtceu:sentient_microchip_processor', (item, advanced, text) => {
+    text.add(1, Text.of('§7The power of a toddler in the palm of your hands'))
+    text.add(2, Text.of('§2LuV-Tier Circuit'))
+})
+
 event.addAdvanced('gtceu:sentient_processor', (item, advanced, text) => {
     text.add(1, Text.of('§7Whatever it is, it regrets to be what it is'))
     text.add(2, Text.of('§2ZPM-Tier Circuit'))
@@ -115,7 +121,18 @@ event.addAdvanced('gtceu:b_nor_memory_chip', (item, advanced, text) => {
     text.add(1, Text.of('§7Biological NOR Logic Gate'))
 })
 
-[
+event.addAdvanced(/gtceu:(.*_)?omnium_.*/, (item, advanced, text) => {
+    text.add(1, Text.of(`The Purest form of &[rainbow]Matter`))
+})
+
+event.addAdvanced(/gtceu:(.*_)?nullium_.*/, (item, advanced, text) => {
+    text.add(1, Text.of(`The Purest form of &[nullium]Antimatter`))
+})
+event.addAdvanced(/gtceu:(.*_)?infinity.*/, (item, advanced, text) => {
+    text.add(1, Text.of(`The Fused. Made into &[infinity]THE INFINITE`))
+})
+
+;[
     'catalyst_core',
     'computational_matrix',
     'high_strength_panel',
@@ -126,8 +143,6 @@ event.addAdvanced('gtceu:b_nor_memory_chip', (item, advanced, text) => {
     'transmission_assembly'
 ].forEach(gabagool => {
 
-const name = gabagool.split('_')
-    .map(word => word[0].toUpperCase() + word.slice(1)).join(' ')
 
 event.addAdvanced(`gtceu:ruined_${gabagool}`, (item, advanced, text) => {
     text.add(1, Text.of(`§7Wields the knowledge to ancient components`))
@@ -136,7 +151,7 @@ event.addAdvanced(`gtceu:ruined_${gabagool}`, (item, advanced, text) => {
 
 event.addAdvanced(`gtceu:uhv_${gabagool}`, (item, advanced, text) => {
     text.add(1, Text.of(`§7Resurrected from the dead Kha'Reh-Zul`))
-    text.add(2, Text.of(`§7Imbued with the essence of the §5Chorite God`))
+    text.add(2, Text.of(`§7Imbued with the essence of the §[chorite]Chorite God`))
 })
 })
 

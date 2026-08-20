@@ -1,0 +1,6 @@
+#If true, when shoot during aiming and has a scope installed,
+#make tracer start under the scope, instead of from the center of the scope.
+#
+#Added in version 5.9.3
+improve_tracer_start_position_when_aiming = true
+

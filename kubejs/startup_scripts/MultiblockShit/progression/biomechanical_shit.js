@@ -4,7 +4,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     biomechanical_extruder: [GTSoundEntries.COMPRESSOR, 4, 2, 1, 0],
     biomechanical_recycler: [GTSoundEntries.MACERATOR, 2, 6, 2, 4],
     biomechanical_imbuer: [GTSoundEntries.COOLING, 6, 2, 2, 2],
-    organism_incubation_chamber: [GTSoundEntries.CHEMICAL, 6, 15, 2, 4],
+    organism_incubation_chamber: [GTSoundEntries.CHEMICAL, 6, 6, 2, 4],
     spawn_simulator: [GTSoundEntries.PORTAL_CLOSING, 4, 12, 1, 3]
 
 

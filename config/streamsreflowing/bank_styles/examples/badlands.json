@@ -1,0 +1,4 @@
+{
+  "biomes": ["minecraft:badlands", "minecraft:eroded_badlands", "minecraft:wooded_badlands"],
+  "enabled": false
+}

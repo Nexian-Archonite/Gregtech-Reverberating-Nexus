@@ -1,3 +1,4 @@
+/*
 ServerEvents.recipes(ae => {
 const GTM = ae.recipes.gtceu
 GTM.polarizer(('ae2guide'))
@@ -458,7 +459,7 @@ appliedAssembly('arseng:portable_source_cell_64k', 1, 1, ['arseng:source_cell_ho
 appliedAssembly('ae2:portable_item_cell_256k', 1, 1, ['ae2:item_cell_housing', 'ae2:cell_component_256k', 'ae2:energy_cell', '2x #gtceu:circuits/hv'], 512, 200)
 appliedAssembly('ae2:portable_fluid_cell_256k', 1, 1, ['ae2:fluid_cell_housing', 'ae2:cell_component_256k', 'ae2:energy_cell', '2x #gtceu:circuits/hv'], 512, 200)
 appliedAssembly('arseng:portable_source_cell_256k', 1, 1, ['arseng:source_cell_housing', 'ae2:cell_component_256k', 'ae2:energy_cell', '2x #gtceu:circuits/hv'], 512, 200)
-*/
+
 
 
 
@@ -513,7 +514,7 @@ appliedEnigma('ae2:logic_processor', 4, 4, ['ae2:printed_logic_processor', 'ae2:
 appliedEnigma('megacells:accumulation_processor', 4, 4, ['megacells:printed_accumulation_processor', 'ae2:printed_silicon'], 480, 40, null, 'gtceu:redstone 144')
 appliedEnigma('advanced_ae:quantum_processor', 4, 4, ['advanced_ae:printed_quantum_processor', 'ae2:printed_silicon'], 1920, 80, null, 'gtceu:redstone 144')
 
-/* m-tier portable cells
+ m-tier portable cells
 appliedEnigma('megacells:portable_item_cell_1m', 1, 1, ['megacells:mega_item_cell_housing', 'megacells:cell_component_1m', 'ae2:dense_energy_cell', '2x #gtceu:circuits/iv'], 2048, 200)
 appliedEnigma('megacells:portable_fluid_cell_1m', 1, 1, ['megacells:mega_fluid_cell_housing', 'megacells:cell_component_1m', 'ae2:dense_energy_cell', '2x #gtceu:circuits/iv'], 2048, 200)
 appliedEnigma('megacells:portable_source_cell_1m', 1, 1, ['megacells:mega_source_cell_housing', 'megacells:cell_component_1m', 'ae2:dense_energy_cell', '2x #gtceu:circuits/iv'], 2048, 200)
@@ -533,7 +534,7 @@ appliedEnigma('megacells:portable_source_cell_64m', 1, 1, ['megacells:mega_sourc
 appliedEnigma('megacells:portable_item_cell_256m', 1, 1, ['megacells:mega_item_cell_housing', 'megacells:cell_component_256m', 'ae2:dense_energy_cell', '2x #gtceu:circuits/iv'], 2048, 200)
 appliedEnigma('megacells:portable_fluid_cell_256m', 1, 1, ['megacells:mega_fluid_cell_housing', 'megacells:cell_component_256m', 'ae2:dense_energy_cell', '2x #gtceu:circuits/iv'], 2048, 200)
 appliedEnigma('megacells:portable_source_cell_256m', 1, 1, ['megacells:mega_source_cell_housing', 'megacells:cell_component_256m', 'ae2:dense_energy_cell', '2x #gtceu:circuits/iv'], 2048, 200)
-*/
+
 
 //quantum computer / assembler matrix
 appliedEnigma('expatternprovider:assembler_matrix_frame', 1, 4, ['4x lapis_lazuli', '4x gtceu:echoing_fluxum_steel_plate', 'ae2:quartz_glass'], 8192, 100, null, 'gtceu:redstone 144')
@@ -626,3 +627,5 @@ appliedEnigma(`advanced_ae:quantum_${armor}`, 1, 32, ['4x advanced_ae:quantum_pr
 
 
 })
+
+*/

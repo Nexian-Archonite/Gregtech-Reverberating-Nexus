@@ -2,7 +2,7 @@ const $AssemblyLineMulti = Java.loadClass('com.gregtechceu.gtceu.common.machine.
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('component_part_assembly')
-        .category('highly_advanced')
+        .category('alien')
         .setEUIO('in')
         .setMaxIOSize(6, 1, 2, 0)
         .setHasResearchSlot(true)
@@ -13,8 +13,9 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 })
 
 GTCEuStartupEvents.registry('gtceu:machine', event => {
+const Ext = Java.loadClass("com.extendedfeatures.init.utils.internal.ExtendedAbilities")
 
-    event.create('component_part_assembly', 'multiblock')
+    event.create('component_assembler', 'multiblock')
         .machine((holder) => new $AssemblyLineMulti(holder))
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('component_part_assembly')
@@ -33,7 +34,8 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
                 .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setMaxGlobalLimited(3).setPreviewCount(0))
                 .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2).setPreviewCount(0))
                 .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
-                .or(Predicates.abilities(PartAbility.OPTICAL_DATA_RECEPTION).setExactLimit(1)))
+                .or(Predicates.abilities(PartAbility.OPTICAL_DATA_RECEPTION).setExactLimit(1))
+                .or(Predicates.abilities(Ext.WIRELESS_OPTICAL_RECEPTOR).setMaxGlobalLimited(1)))
             .where('G', Predicates.blocks('kubejs:enderium_glass'))
             .where('I', Predicates.blocks('gtceu:ulv_input_bus'))
             .where('O', Predicates.abilities(PartAbility.EXPORT_ITEMS).addTooltips(Component.translatable("gtceu.multiblock.pattern.location_end")))

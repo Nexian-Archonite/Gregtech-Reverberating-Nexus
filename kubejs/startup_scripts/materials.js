@@ -21,6 +21,9 @@ GTCEuStartupEvents.registry('gtceu:material_icon_set', event => {
 
     event.create('naquadrium')
 
+    event.create('omnic_nullate')
+    event.create('nullic_omnate')
+
 })
 
 
@@ -117,17 +120,22 @@ GTCEuStartupEvents.registry("gtceu:element", event => {
     event.create("infinity")
     .protons(999)
     .neutrons(999)
-    .symbol("Ω")
+    .symbol("&[infinity][Ω]")
 
     event.create("omnium")
     .protons(279)
     .neutrons(461)
-    .symbol("ℵ₁")
+    .symbol("&[rainbow][ℵ₁]")
 
     event.create('nullium')
     .protons(397)
     .neutrons(761)
-    .symbol("ℵ₋₁")
+    .symbol("&[nullium][ℵ₋₁]")
+
+    event.create('stellar_neutronate')
+    .protons(0)
+    .neutrons(999)
+    .symbol('ΨNtΨ')
 
     event.create('naquadrium')
     .protons(182)
@@ -261,15 +269,30 @@ event.create('exo_quark')
     .neutrons(0)
     .symbol('[x±³⁄₂]')
 
+event.create('meso_quark')
+    .protons(0)
+    .neutrons(0)
+    .symbol('[x±¹]')
+
 event.create('endo_quark')
     .protons(0)
     .neutrons(0)
     .symbol('[x±³⁄₄]')
 
+event.create('dark_hadron')
+    .protons(0)
+    .neutrons(0)
+    .symbol('∂m')
+
 event.create('stellarite')
     .protons(0)
     .neutrons(999)
     .symbol('S☼Ψ⌬⍣t')
+
+event.create('aurorialis')
+    .protons(100)
+    .neutrons(100)
+    .symbol('§$*Ao*')
 
 //almost  fictional particles
 event.create('muon')
@@ -368,20 +391,20 @@ event.create('catalystic_boson')
     .neutrons(0)
     .symbol('[Z⁰]')
  
-// --- OMEGA BARYON ---
-event.create('omega_hadron')
-    .protons(0)
-    .neutrons(0)
-    .symbol('[Ω⁻]')
- 
-// --- ANTI-OMEGA BARYON ---
-event.create('null_hadron')
+// --- OMNI HADRON ---
+event.create('omni_hadron')
     .protons(0)
     .neutrons(0)
     .symbol('[Ω⁺]')
  
-// --- OMNIPARTICLE ---
-event.create('omniparticle')
+// --- NULL HADRON ---
+event.create('null_hadron')
+    .protons(0)
+    .neutrons(0)
+    .symbol('[Ω⁻]')
+ 
+// --- OMEGAPARTICLE ---
+event.create('omegaparticle')
     .protons(0)
     .neutrons(0)
     .symbol('[Ω⁰]')
@@ -398,7 +421,6 @@ event.create('awakened_draconium')
     .neutrons(301)
     .symbol('AwkDr')
 
-// Alien Elements
 // Alien Elements
 event.create('chronosite')
     .protons(217)
@@ -444,7 +466,7 @@ event.create('thermavyte')
 event.create('cindralite')
     .protons(155)
     .neutrons(144)
-    .symbol('Cl')
+    .symbol('Ci')
 
 event.create('aetherite')
     .protons(174)
@@ -513,6 +535,45 @@ event.create('xhyv-orzael')
 event.create('ng-vaethos')
     .protons(197).neutrons(186)
     .symbol('Nvt')
+
+// UNDERGARDEN
+
+event.create('mythryl')
+    .protons(199)
+    .neutrons(188)
+    .symbol('My')
+
+event.create('velium')
+    .protons(201)
+    .neutrons(190)
+    .symbol('Vl')
+
+event.create('myxorite')
+    .protons(203)
+    .neutrons(192)
+    .symbol('Mx')
+
+event.create('lythera')
+    .protons(205)
+    .neutrons(194)
+    .symbol('Ly')
+
+event.create('umbracite')
+    .protons(207)
+    .neutrons(196)
+    .symbol('Um')
+
+event.create('viridrine')
+    .protons(209)
+    .neutrons(198)
+    .symbol('Vr')
+
+// random shit
+
+event.create('antifermium')
+    .protons(100)
+    .neutrons(157)
+    .symbol('F̄m̄')
 })
 
 GTCEuStartupEvents.registry('gtceu:material', event => {
@@ -536,6 +597,13 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     .liquid(3000)
     .color(0x7851a9)
     .flags(no_decomp)
+
+    event.create('transcendentine')
+    .element('transcendentine')
+    .color(0x6B2D8B)
+    .ingot()
+    .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, no_decomp)
+    .liquid(303)
     
 
     event.create('source')
@@ -557,7 +625,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     .color(0x95abff).iconSet(GTMaterialIconSet.SHINY)
     .gem()
     .ore(2, 4, true)
-    .addOreByproducts('lanthanum', 'nexus', 'gold')
+    .addOreByproducts('lanthanum', 'condensed_mana', 'gold')
     .separatedInto('gold')
     .washedIn('sodium_persulfate')
     .liquid(1700)
@@ -566,6 +634,12 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     .element("echo")
     .color(0x111b21).iconSet(GTMaterialIconSet.SHINY)
     .dust()
+
+    event.create('echo_fluid')
+    .liquid()
+    .color(0x4400aa)
+    .components('1x echo', '1x refined_sentience')
+    .flags(no_decomp)
 
     event
     .create('condensed_mana')
@@ -582,13 +656,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     .element('mysterymystery')
     .color(0xd09f54)
     .liquid(2250)
-    
-    event
-    .create('andesite_alloy')
-    .ingot()
-    .components('andesite', 'iron')
-    .color(0x839689).iconSet(GTMaterialIconSet.DULL)
-    .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor)
+
 
     event
     .create('source_attuned_copper')
@@ -639,7 +707,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     event.create('igneous_bronze')
         .ingot()
-        .components('4x bronze', '2x andesite_alloy')
+        .components('4x bronze', '2x andesite')
         .color(0x834b00).iconSet(GTMaterialIconSet.METALLIC)
         .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear)
         .liquid(1100)
@@ -832,7 +900,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     event
     .create('magically_manifested_mechanical')
     .dust()
-    .components('1x wizaring_steel', '1x nickel_zinc_ferrite', '1x cupronickel', '1x mechanical_essence')
+    .components('1x wizarding_steel', '1x nickel_zinc_ferrite', '1x cupronickel', '1x mechanical_essence')
     .formula('(Wsg Homie)(NiZnFe4O8)(CuNi)(Hooplah)')
     .color(0x1c0003).iconSet(GTMaterialIconSet.SHINY)
     .flags(no_decomp)
@@ -882,7 +950,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     .blastTemp(4450, "high", GTValues.VA[GTValues.IV], 600)
 
     event.create('tainted_zircalloy')
-    .components('93x zirconium','2x titanium', '2x dysprosium','1x carbon', '1x chromium', '1x taint')
+    .components('147x zirconium', '6x alloyed_taint', '3x tin', 'iron', 'chromium', 'kanthal', 'aluminium')
     .ingot()
     .iconSet(GTMaterialIconSet.METALLIC)
     .liquid(2200)
@@ -896,7 +964,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     .ore(2, 2, true)
     .element('resonance')
     .color(0x000999).iconSet(GTMaterialIconSet.EMERALD)
-    .addOreByproducts('pitchblende', 'extraterrestrial_resonite', 'aluminium')
+    .addOreByproducts('pitchblende', 'desh', 'aluminium')
     .washedIn('mercury')
 
     event.create('resonite')
@@ -1227,7 +1295,7 @@ event.create('enriched_naquadrium')
     .element('enriched_naquadrium')
     .color(0x192919).secondaryColor(0x00ffcc).iconSet(SHINY)
     .ingot(4)
-    .flags(rod, foil)
+    .flags(rod, foil, frame, gear, bolt_and_screw, ring, rotor)
     .blastTemp(7200, "high", va.iv, 900)
     .liquid(7100)
     .radioactiveHazard(2)
@@ -1243,7 +1311,7 @@ event.create("omnium")
     .element("omnium")
     .ingot()
     .iconSet(GTMaterialIconSet.getByName("omnium"))
-    .blastTemp(19449, "high", va.uhv, 1600)
+    .blastTemp(19449, null, va.uhv, 1600)
     .flags(bolt_and_screw, gear, small_gear, plates, ring, rod, long_rod, round, frame)
     .liquid(new GTFluidBuilder().customStill().temperature(262144))
 
@@ -1252,9 +1320,9 @@ event.create("nullium")
     .ingot()
     .iconSet(GTMaterialIconSet.getByName("nullium"))
     .cableProperties(v.uiv, 32, 0, true)
-    .blastTemp(29600, "higher", va.uev, 2400)
+    .blastTemp(29600, null, va.uev, 2400)
     .flags(bolt_and_screw, gear, small_gear, plates, ring, rod, long_rod, round, frame)
-    .plasma(0)
+    .liquid(new GTFluidBuilder().customStill().temperature(0))
 
 event.create("infinity")
     .element("infinity")
@@ -1263,8 +1331,8 @@ event.create("infinity")
     .cableProperties(v.uxv, 48, 0, true)
     .iconSet(GTMaterialIconSet.getByName("infinity"))
     .flags(bolt_and_screw, gear, small_gear, plates, ring, rod, long_rod, round, frame, rotor)
-    .blastTemp(29600, "higher", va.uiv, 3200)
-    .plasma(999999)
+    .blastTemp(29600, null, va.uiv, 3200)
+    .liquid(new GTFluidBuilder().customStill().temperature(999999))
 
     
 event.create('hypothermic_helium_3_plasma')
@@ -1320,7 +1388,7 @@ event.create('awakened_draconium')
     .element('awakened_draconium')
     .fluid()
     .plasma(13650)
-    .blastTemp(13200, "mid", va.uhv, 1000)
+    .blastTemp(13200, null, va.uhv, 1000)
     .flags(foil, plates)
 
 
@@ -1423,13 +1491,18 @@ event.create('superior_quark')
 .color(0x80110B)
 .element('superior_quark')
 
-//quick hypermatter shit >:D
+//quick darkmatter shit >:D
 
 
 event.create('exo_quark')
     .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(1000000000))
     .color(0x00FFFF)
     .element('exo_quark')
+
+event.create('meso_quark')
+    .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(1000000000))
+    .color(0xFFFF55)
+    .element('meso_quark')
 
 event.create('endo_quark')
     .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(1000000000))
@@ -1440,6 +1513,11 @@ event.create('exotron')
     .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(500000000))
     .color(0xFFFF00)
     .element('exotron')
+
+event.create('dark_hadron')
+    .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(500000000))
+    .color(0x000000)
+    .element('dark_hadron')
 
 // Matter Lepton Suite
 event.create('muon')
@@ -1498,17 +1576,17 @@ event.create('gamma_photon')
     .element('gamma_photon')
     .color(0xFFFFAA)
     .liquid(2000000000)
-//2 6 3 3
+
 event.create('lepton-dense_complex')
     .color(0x9B30FF)
     .liquid(2000000000)
-    .components('tau', 'muon', 'electron', 'positron')
+    .components('tau', 'muon', 'electron')
     .flags(no_decomp)
 
 event.create('antilepton-dense_complex')
     .color(0x64CF00)
     .liquid(2000000000)
-    .components('antitau', 'antimuon', 'positron', 'electron')
+    .components('antitau', 'antimuon', 'electron')
     .flags(no_decomp)
 
 event.create('preon')
@@ -1540,35 +1618,35 @@ event.create('catalytic_boson')
     .color(0xE8E8E8)
     .element('catalytic_boson')
 
-// --- pW BOSON ---
+// --- pM BOSON ---
 event.create('pm_boson')
     .liquid(1400000000)
     .color(0xCC8800)
     .element('pm_boson')
 
-// --- ANTI-pW BOSON ---
+// --- ANTI-pM BOSON ---
 event.create('inverse_pm_boson')
     .liquid(1400000000)
     .color(0x0A2255)
     .element('inverse_pm_boson')
  
-// --- OMEGA BARYON ---
-event.create('omega_hadron')
+// --- OMNI HADRON ---
+event.create('omni_hadron')
     .liquid(2147000000)
     .color(0xFF6600)
-    .element('omega_hadron')
+    .element('omni_hadron')
  
-// --- ANTI-OMEGA BARYON ---
+// --- NULL HADRON ---
 event.create('null_hadron')
     .liquid(2147000000)
     .color(0x0066FF)
     .element('null_hadron')
  
-// --- OMNIPARTICLE ---
-event.create('omniparticle')
+// --- OMEGAPARTICLE ---
+event.create('omegaparticle')
     .plasma(2147483647)
     .color(0xFFFFFF)
-    .element('omniparticle')
+    .element('omegaparticle')
 
 //ah yes, draconium
 
@@ -1683,6 +1761,7 @@ event.create('dtpa-rarest_earth_complex')
 
     // from here on now, ONLY progression materials.
 
+
     event.create('nexus_steel')
         .ingot()
         .components('2x nexus', '6x steel')
@@ -1693,17 +1772,6 @@ event.create('dtpa-rarest_earth_complex')
         .blastTemp(1400, "low", va.lv, 450)
         .cableProperties(v.ev, 3, 3, false)
         .fluidPipeProperties(1300, 75, true, true, true, false)
-        .polarizesInto('magnetic_nexus_steel')
-
-    event.create('magnetic_nexus_steel')
-            .ingot()
-            .components('2x nexus', '6x steel')
-            .color(0x99ccff).iconSet(GTMaterialIconSet.MAGNETIC)
-            .secondaryColor(0x0066cc)
-            .flags(rod, magnetic, no_decomp)
-            .arcSmeltInto('nexus_steel')
-            .macerateInto('nexus_steel')
-            .ingotSmeltInto('nexus_steel')
 
 
             
@@ -1731,8 +1799,8 @@ event.create('dtpa-rarest_earth_complex')
         .ingot()
         .components('1x titanium', '1x perfected_taint')
         .color(0x3e2a58).iconSet(GTMaterialIconSet.METALLIC)
-        .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, no_decomp, dense_plate)
-        .blastTemp(2200, "mid", va.zpm, 600)
+        .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, no_decomp, dense_plate, no_abs_recipe)
+        .blastTemp(2200, "mid", va.ev, 600)
         .liquid(2200)
         .fluidPipeProperties(2200, 200, true, true, true, false)
 
@@ -1848,7 +1916,6 @@ event.create('dtpa-rarest_earth_complex')
     .secondaryColor(0x119eb2).color(0xB07958).iconSet(DULL)
     .liquid(9000)
     .flags(rotor, bolt_and_screw, rod, long_rod, dense_plate, plates, small_gear, no_abs_recipe, no_decomp)
-    .cableProperties(v.uev, 32, 0, true)
     .blastTemp(9000, "highest", va.uv, 800)
 
     event.create('transcendent_dilithide')
@@ -1857,14 +1924,24 @@ event.create('dtpa-rarest_earth_complex')
     .cableProperties(v.uv, 8, 4, false)
     .liquid(16800)
     .blastTemp(16800, "highest", va.uhv, 950)
+    .ingot()
 
     event.create('stellarite')
     .color(0x4B1F6F).iconSet(SHINY)
     .element('stellarite')
-    .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, dense_plate)
+    .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, dense_plate, foil)
     .fluidPipeProperties(2147000000, 8150, true, true, true, true)
     .liquid(126000)
     .blastTemp(18400, "higher", va.uhv, 1500)
+
+    event.create('stellar_neutronate')
+    .color(0xfafafa).iconSet(SHINY)
+    .element('stellar_neutronate')
+    .flags(plates, rod, gear, bolt_and_screw)
+    .plasma(262144)
+    .cableProperties(v.uev, 32, 0, true)
+    .fluid()
+    .ingot()
 
     event.create('bose-einstein_neutronium')
     .color(0x65ff97).iconSet(SHINY)
@@ -1875,7 +1952,10 @@ event.create('dtpa-rarest_earth_complex')
     .blastTemp(1, null, va.uhv, 1400)
 
 // alien materials
-// mars elements
+
+//========================
+// MARS GEMS
+//========================
 
 event.create('chronosite')
     .gem()
@@ -1900,12 +1980,16 @@ event.create('kraethite')
     .element('kraethite')
     .fluid()
 
-// venus elements
+
+//========================
+// VENUS GEMS
+//========================
 event.create('vaelthorium')
     .gem()
     .color(0x2d0010).secondaryColor(0xcc4400)
     .iconSet(GEM_VERTICAL)
     .element('vaelthorium')
+    .flags(rod, frame, plates)
     .fluid()
 
 event.create('sulvarium')
@@ -1920,6 +2004,7 @@ event.create('kethrite')
     .color(0xff4400).secondaryColor(0x1a0000)
     .iconSet(RUBY)
     .element('kethrite')
+    .flags(rod, frame, plates)
     .fluid()
 
 event.create('vorrexite')
@@ -1927,7 +2012,7 @@ event.create('vorrexite')
     .color(0x330022).secondaryColor(0xff0066)
     .iconSet(EMERALD)
     .element('vorrexite')
-    .flags(frame, bolt_and_screw, foil)
+    .flags(frame, bolt_and_screw)
     .fluid()
 
 event.create('thermavyte')
@@ -1960,13 +2045,6 @@ event.create('pyrathene')
     .flags(frame, plates, dense_plate)
     .fluid()
 
-event.create('transcendentine')
-    .element('transcendentine')
-    .color(0x6B2D8B)
-    .ingot()
-    .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, no_decomp)
-    .liquid(303)
-
 event.create('draconium')
     .ore(1, 2, false)
     .color(0x702880).iconSet(METALLIC)
@@ -1975,8 +2053,6 @@ event.create('draconium')
     .addOreByproducts('titanium', 'rhenium', 'naquadah')
     .ignoredTagPrefixes([TagPrefix.dustTiny, TagPrefix.dustSmall])
     
-// nether materials
-
 //========================
 // NETHER METALS
 //========================
@@ -2082,7 +2158,64 @@ event.create('ng-vaethos')
     .blastTemp(13461, null, va.zpm, 832)
     .liquid(13461)
 
-// venus minerals
+//========================
+// UNDERGARDEN METALS
+//========================
+
+event.create('mythryl')
+    .color(0x006666).secondaryColor(0x008c8c)
+    .iconSet(SHINY)
+    .ingot()
+    .element('mythryl')
+    .blastTemp(13874, null, va.zpm, 961)
+    .liquid(13874)
+
+event.create('velium')
+    .color(0xA7DCC8).secondaryColor(0x5C8F84)
+    .iconSet(METALLIC)
+    .ingot()
+    .element('velium')
+    .blastTemp(14211, null, va.zpm, 1024)
+    .liquid(14211)
+
+event.create('myxorite')
+    .color(0x5E68D8).secondaryColor(0x262B63)
+    .iconSet(DULL)
+    .ingot()
+    .element('myxorite')
+    .blastTemp(14583, null, va.zpm, 884)
+    .liquid(14583)
+
+
+//========================
+// UNDERGARDEN GEMS
+//========================
+
+event.create('lythera')
+    .gem()
+    .color(0xF0D000).secondaryColor(0xA08800)
+    .iconSet(GEM_VERTICAL)
+    .element('lythera')
+    .fluid()
+
+event.create('umbracite')
+    .gem()
+    .color(0x35263F).secondaryColor(0x8E7DB3)
+    .iconSet(GEM_HORIZONTAL)
+    .element('umbracite')
+    .fluid()
+
+event.create('viridrine')
+    .gem()
+    .color(0x3EDB8A).secondaryColor(0x0D5C43)
+    .iconSet(EMERALD)
+    .element('viridrine')
+    .fluid()
+
+
+//========================
+// VENUS MINERALS
+//========================
 
 
 event.create('vaelthorite')
@@ -2091,7 +2224,7 @@ event.create('vaelthorite')
     .color(0x2d0010).secondaryColor(0x664400)
     .iconSet(METALLIC)
     .components('1x vaelthorium', '1x sulfur', '1x lead')
-    .addOreByproducts('vaelthorium', 'sulfur', 'lead')
+    .addOreByproducts('thorium', 'sulfur', 'lead')
     .flags(no_decomp)
 
 event.create('sulvarite')
@@ -2100,7 +2233,7 @@ event.create('sulvarite')
     .color(0xffcc00).secondaryColor(0x886600)
     .iconSet(METALLIC)
     .components('1x sulvarium', '1x bismuth', '1x gold')
-    .addOreByproducts('sulvarium', 'bismuth', 'gold')
+    .addOreByproducts('silver', 'bismuth', 'gold')
     .flags(no_decomp)
 
 event.create('kethrenite')
@@ -2109,7 +2242,7 @@ event.create('kethrenite')
     .color(0xff4400).secondaryColor(0x331100)
     .iconSet(METALLIC)
     .components('1x kethrite', '1x copper', '1x nickel')
-    .addOreByproducts('kethrite', 'copper', 'nickel')
+    .addOreByproducts('redstone', 'copper', 'nickel')
     .flags(no_decomp)
 
 event.create('vorrexinite')
@@ -2118,7 +2251,7 @@ event.create('vorrexinite')
     .color(0x330022).secondaryColor(0x880044)
     .iconSet(METALLIC)
     .components('1x vorrexite', '1x osmium', '1x iridium')
-    .addOreByproducts('vorrexite', 'osmium', 'iridium')
+    .addOreByproducts('ruthenium', 'osmium', 'iridium')
     .flags(no_decomp)
 
 event.create('thermastone')
@@ -2127,7 +2260,7 @@ event.create('thermastone')
     .color(0xff6600).secondaryColor(0x553300)
     .iconSet(METALLIC)
     .components('1x thermavyte', '1x magnesium', '1x chromium')
-    .addOreByproducts('thermavyte', 'magnesium', 'chromium')
+    .addOreByproducts('tantalum', 'magnesium', 'chromium')
     .flags(no_decomp)
 
 event.create('cindrax')
@@ -2136,7 +2269,7 @@ event.create('cindrax')
     .color(0x888888).secondaryColor(0x442200)
     .iconSet(METALLIC)
     .components('1x cindralite', '1x silicon', '1x tin')
-    .addOreByproducts('cindralite', 'silicon', 'tin')
+    .addOreByproducts('manganese', 'silicon', 'tin')
     .flags(no_decomp)
 
 event.create('aetheric_palladite')
@@ -2145,7 +2278,7 @@ event.create('aetheric_palladite')
     .color(0x003322).secondaryColor(0x00ff99)
     .iconSet(METALLIC)
     .components('1x aetherite', '1x niobium', '1x palladium')
-    .addOreByproducts('aetherite', 'niobium', 'palladium')
+    .addOreByproducts('aluminium', 'niobium', 'palladium')
     .flags(no_decomp)
 
 event.create('pyrathite')
@@ -2154,17 +2287,28 @@ event.create('pyrathite')
     .color(0xcc0000).secondaryColor(0xffaa00)
     .iconSet(METALLIC)
     .components('1x pyrathene', '1x titanium', '1x vanadium')
-    .addOreByproducts('pyrathene', 'titanium', 'vanadium')
+    .addOreByproducts('source', 'titanium', 'vanadium')
     .flags(no_decomp)
 
-// mars minerals
+//========================
+// MARS MINERALS
+//========================
+// random tomfooler
+    event.create('rhenium_iii_sulfate')
+    .components('2x rhenium', 'sulfur', '4x oxygen')
+    .ore(1, 2, true)
+    .formula('Re2(SO4)3')
+    .color(0x3e6e9b).iconSet(DULL)
+    .dust()
+    .flags(no_decomp)
+// back to unfoolery
 event.create('nulledryte')
     .dust()
     .ore(2, 2, true)
     .color(0x1a0033).secondaryColor(0x00aa33)
     .iconSet(METALLIC)
     .components('8x chronosite', '1x oganesson')
-    .addOreByproducts('chronosite', 'oganesson', 'rhenium_iii_sulfate')
+    .addOreByproducts('oganesson', 'oganesson', 'rhenium_iii_sulfate')
     .flags(no_decomp)
 
 event.create('xycrhovite')
@@ -2182,7 +2326,7 @@ event.create('vheszcryl')
     .color(0xff007f).secondaryColor(0x330011)
     .iconSet(METALLIC)
     .components('6x vhaelcryite', '4x transcendentine')
-    .addOreByproducts('vhaelcryite', 'transcendentine', 'enstatite')
+    .addOreByproducts('rhodium', 'transcendentine', 'enstatite')
     .flags(no_decomp)
 
 event.create('grothemite')
@@ -2200,7 +2344,7 @@ event.create('krethavine')
     .color(0x3366ff).secondaryColor(0x66ddff)
     .iconSet(METALLIC)
     .components('6x kraethite', '5x lanthanum', '3x titanium')
-    .addOreByproducts('kraethite', 'lanthanum', 'titanium')
+    .addOreByproducts('nexus', 'lanthanum', 'titanium')
     .flags(no_decomp)
 
 event.create('orvexite')
@@ -2338,7 +2482,66 @@ event.create('vaethosite')
     .addOreByproducts('tungstate', 'uraninite', 'plutonium_241')
     .flags(no_decomp)
 
-// Alien Alloys / Combined Crystals
+//========================
+// UNDERGARDEN MINERALS
+//========================
+
+event.create('mythryte')
+    .dust()
+    .ore(2, 2, true)
+    .color(0x005b5b).secondaryColor(0x008c8c)
+    .iconSet(METALLIC)
+    .components('1x mythryl', '1x gold', '1x indium')
+    .addOreByproducts('mythryl', 'gold', 'indium')
+    .flags(no_decomp)
+
+event.create('velithite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0xA7DCC8).secondaryColor(0x5C8F84)
+    .iconSet(METALLIC)
+    .components('1x velium', '1x zinc', '1x bismuth')
+    .addOreByproducts('velium', 'zinc', 'bismuth')
+    .flags(no_decomp)
+
+event.create('myxorinite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0x5E68D8).secondaryColor(0x262B63)
+    .iconSet(METALLIC)
+    .components('1x myxorite', '1x palladium', '1x tellurium')
+    .addOreByproducts('myxorite', 'palladium', 'tellurium')
+    .flags(no_decomp)
+
+event.create('lytherite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0xB5A030).secondaryColor(0x6B5E1A)
+    .iconSet(METALLIC)
+    .components('1x lythera', '1x condensed_mana', '1x selenium')
+    .addOreByproducts('lythera', 'condensed_mana', 'selenium')
+    .flags(no_decomp)
+
+event.create('umbralite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0x35263F).secondaryColor(0x8E7DB3)
+    .iconSet(METALLIC)
+    .components('1x umbracite', '1x nexus', '1x bismuth')
+    .addOreByproducts('umbracite', 'nexus', 'bismuth')
+    .flags(no_decomp)
+
+event.create('viridite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0x3EDB8A).secondaryColor(0x0D5C43)
+    .iconSet(METALLIC)
+    .components('1x viridrine', '1x silver', '1x zinc')
+    .addOreByproducts('viridrine', 'silver', 'zinc')
+    .flags(no_decomp)
+
+
+// Alien Alloys
 function AlienAlloy(name, form, primary, secondary, icon, flags, components, temp, voltage, duration, fluidTemp, cable, generatePlasma) {
     if (generatePlasma === undefined) generatePlasma = true
     let mat = event.create(name)
@@ -2351,10 +2554,10 @@ function AlienAlloy(name, form, primary, secondary, icon, flags, components, tem
     if (components) mat.components(components)      // ['8x something', '1x other']
 
     if (cable) mat.cableProperties(cable[0], cable[1], cable[2], cable[3])
-                                                    // [voltage, amperage, loss, superconductor]
+                                // [voltage, amperage, loss, superconductor]
 
     if (temp) mat.blastTemp(temp, null, voltage, duration)
-    // "highest" tier = null here? or does blastTemp accept the tier string
+
 
     if (generatePlasma) {
         if (fluidTemp) {
@@ -2382,29 +2585,48 @@ function AlienFusion(name, primary, secondary, icon, flags, components) {
     return mat
 }
 
+function AlienMat(name, primary, secondary, icon, flags, element, temp, gasTier, voltage, duration, fluidTemp, form) {
+    let mat = event.create(name)
+    .color(primary).secondaryColor(secondary)
+    .iconSet(icon)
+    [form]()
+    .element(element)
+    if (flags) mat.flags(flags)
+    if (temp && voltage && duration) {
+    mat.blastTemp(temp, gasTier, voltage, duration)
+}
+    if (fluidTemp) mat.liquid(fluidTemp)
+}
 // gems
 
 
 //metals
-AlienAlloy('indium-vor-dys-cad_supersolder_alloy', 'ingot', 0x6600aa, 0x00ccbb, DULL, [no_decomp], ['47x indium', '6x vorrexite', '3x dysprosium', '8x cadmium', '3x tin', '7x darmstadtium', '2x zirconium'], 11000, va.uhv, 750, 8000, null)
-AlienAlloy('sulvarium-over-kraethite_steel', 'ingot', 0xffee00, 0x00ffee, METALLIC, [plates, rod, gear, small_gear, frame, spring, bolt_and_screw, rotor, dense_plate, fine_wire, round], ['6x sulvarium', '6x kraethite', '3x antisource', '4x holmium', '2x nexus', '2x awakened_draconium'], 11000, va.uv, 1050, 11000, [v.uv, 20, 0, true])
+AlienAlloy('indium-vor-dys-cad_supersolder_alloy', 'ingot', 0x6600aa, 0x00ccbb, DULL, null, ['47x indium', '6x vorrexite', '3x dysprosium', '8x cadmium', '3x tin', '7x darmstadtium', '2x zirconium'], 11000, va.uhv, 750, 8000, null)
+AlienAlloy('sulvan_steel', 'ingot', 0xffee00, 0x00ffee, METALLIC, [plates, rod, gear, small_gear, frame, spring, bolt_and_screw, rotor, dense_plate, fine_wire, round], ['6x sulvarium', '6x kraethite', '3x antisource', '4x holmium', '2x nexus', '2x awakened_draconium'], 11000, va.uv, 1050, 11000, [v.uv, 20, 0, true])
 AlienAlloy('aetheric-thermavyte', 'ingot', 0x003322, 0xff6600, SHINY, [rod, frame, plates, gear, foil], ['2x aetherite', '2x thermavyte', 'neutronium'], 10799, va.uhv, 800, null, null)
-AlienAlloy('ignatherm', 'ingot', 0xC83D1A, 0x5A170A, METALLIC, null, ['8x ignavyte', '5x flagrax', '3x zirconium', '2x hafnium', '1x carbon'], 12360, va.luv, 941, null, null)
-AlienAlloy('vhoric_steel', 'ingot', 0x7A2E2A, 0xB0463E, DULL, [plates, rod, gear, frame, dense_plate, rotor], ['7x vhorryte', '4x ashrax', '2x niobium', '2x tantalum', '1x manganese'], 12940, va.luv, 1076, null, null)
-AlienAlloy('pyrghul_alloy', 'ingot', 0xB9CBC7, 0xD55A28, SHINY, [foil, fine_wire, spring, bolt_and_screw], ['6x ghulveyte', '5x pyrrhovyte', '3x copper', '2x electrotine', '1x platinum'], 11820, va.luv, 846, null, null)
+AlienAlloy('ignatherm', 'ingot', 0xC83D1A, 0x5A170A, METALLIC, [foil, fine_wire, spring, bolt_and_screw, frame], ['8x ignavyte', '5x flagrax', '3x zirconium', '2x hafnium', '1x carbon'], 12360, va.luv, 941, null, null)
+AlienAlloy('vhoric_steel', 'ingot', 0x7A2E2A, 0xB0463E, METALLIC, [plates, rod, gear, frame, dense_plate, rotor], ['7x vhorryte', '4x ashrax', '2x niobium', '2x tantalum', '1x manganese'], 12940, va.luv, 1076, null, null)
+AlienAlloy('pyrghul_alloy', 'ingot', 0xB9CBC7, 0xD55A28, SHINY, [foil, fine_wire, spring, bolt_and_screw, frame], ['6x ghulveyte', '5x pyrrhovyte', '3x copper', '2x electrotine', '1x platinum'], 11820, va.luv, 846, null, null)
 AlienAlloy('vaexium', 'ingot', 0xBDD3F3, 0x2FD5BE, SHINY, [plates, rod, frame, gear, rotor, dense_plate, fine_wire], ['8x vaex-thryn', '7x nexus', '5x orvaelithe', '2x palladium', '1x molybdenum'], 13380, va.zpm, 1012, null, null)
 AlienAlloy('korzene', 'ingot', 0x68417A, 0xF06BE3, METALLIC, [plates, rod, frame, gear, dense_plate, foil, bolt_and_screw], ['7x khzaevhul', '5x ng-vaethos', '3x naquadah_alloy', '2x tungsten', '1x ruthenium'], 13590, va.zpm, 1093, null, null)
 AlienAlloy('abyssal_netherite', 'ingot', 0x30283A, 0xA020FF, METALLIC, [plates, rod, gear, small_gear, frame, spring, bolt_and_screw, rotor, dense_plate, fine_wire, round], ['13x auralloy-omega', '4x ignatherm', '4x vhoric_steel', '4x pyrghul_alloy', '2x stellarite'], 16000, va.uv, 1100, null, null)
-AlienAlloy('nexian_pyrite', 'ingot', 0x8B1515, 0x5580B8, DULL, null, ['37x nexus_steel', '12x abyssal_netherite', '8x korzene', '4x sulvarium-over-kraethite_steel', '3x promethium', '2x vaexium'], 16800, va.uv, 900, null, null)
-AlienAlloy('activated_nexian_pyrite', 'ingot', 0xA01C1C, 0x6699DD, METALLIC, [rod, frame, plates, foil, no_decomp, no_abs_recipe], ['nexian_pyrite', '4x pyrathene', '4x cindralite'], 16800, va.uhv, 1050, null, null)
-AlienAlloy('chronocrytic-vhaelsalite', 'ingot', 0x8c0059, 0xccbbe5, METALLIC, [fine_wire, spring, small_spring, foil, bolt_and_screw], ['3x chronosite', '3x vhaelcryite', '2x enriched_naquadrium', 'trinium', 'duranium'], null, null, null, null, [v.uhv, 28, 0, true])
+AlienAlloy('nexian_pyrite', 'ingot', 0x8B1515, 0x5580B8, METALLIC, null, ['37x nexus_steel', '12x abyssal_netherite', '8x korzene', '4x sulvan_steel', '3x promethium', '2x vaexium'], 16800, va.uv, 900, null, null)
+AlienAlloy('activated_nexian_pyrite', 'ingot', 0xA01C1C, 0x6699DD, METALLIC, [rod, frame, plates, foil, no_decomp, no_abs_recipe, bolt_and_screw], ['nexian_pyrite', '4x pyrathene', '4x cindralite'], 16800, va.uhv, 1050, null, null)
+AlienAlloy('chronocrytic-vhaelsalite', 'ingot', 0x8c0059, 0xccbbe5, METALLIC, [fine_wire, spring, small_spring, foil, bolt_and_screw], ['chronosite', 'vhaelcryite', 'enriched_naquadrium', 'duranium'], null, null, null, null, [v.uhv, 28, 0, true])
 
+AlienAlloy('mythrolyc_umbraloy', 'ingot', 0x1A4A4A, 0x6B3D6B, SHINY, [plates, rod, gear, small_gear, frame, spring, bolt_and_screw, rotor, dense_plate, fine_wire, round, no_abs_recipe], ['4x vhoric_steel', '3x vaexium', '2x mythryl', '2x umbracite'], 18900, va.uhv, 1200, 18900, null, true)
+AlienAlloy('mythrovirdyne', 'ingot', 0x1A8A5A, 0x8C7AB0, SHINY, [plates, rod, gear, small_gear, frame, spring, bolt_and_screw, rotor, dense_plate, fine_wire, round, no_abs_recipe], ['4x pyrghul_alloy', '3x korzene', '2x mythryl', '2x viridrine'], 18600, va.uhv, 1050, 18600, null, true)
 
-AlienFusion('vaelkethrite', 0x7c2208, 0x8c2200, NETHERSTAR, [rod, frame, plates, foil], ['1x vaelthorium', '1x kethrite'])
+AlienFusion('vaelkethrite', 0x7c2208, 0x8c2200, NETHERSTAR, [rod, frame, plates, foil, bolt_and_screw], ['1x vaelthorium', '1x kethrite'])
 AlienFusion('thermavylized-vaelite', 0xff4400, 0x2d0010, CERTUS, null, ['1x thermavyte', '1x vaelthorium'])
 AlienFusion('cindralite-kethrite', 0xcc3300, 0x888888, RUBY, null, ['1x cindralite', '1x kethrite'])
 AlienFusion('chithion-flame', 0x943800, 0xC35D44, QUARTZ, null, ['1x cindralite', '1x thermavyte'])
 AlienFusion('cryonull', 0x001833, 0x00cfff, GEM_HORIZONTAL, null, ['1x vorrexite', '1x kraethite'])
+AlienFusion('surreal-pyrathene', 0xff007f, 0xcc0000, GEM_HORIZONTAL, [rod, frame, plates, foil, bolt_and_screw], ['vhaelcryite', 'pyrathene'])
+
+// UEV baselines
+AlienMat('aurorialis', 0x5d44de, 0xde44ce, SHINY, [rod, frame, plates], 'aurorialis', 3200, null, va.uhv, 750, 8000, 'ingot')
+
 
 event.create('inactivated_infernality')
 .components('1x thermavylized-vaelite', '1x cindralite-kethrite')
@@ -2470,32 +2692,9 @@ const compIngot = (name, elements, color, icon, blasting, flags, cabel) => {
 }
 
 
-    // Large Multis
-const largeMulti = (name, components, color) => {
-    compIngot(name, components, color, DULL, [2200, 'low', GTValues.VA[GTValues.MV], 2000], 
-        name == 'beryllium_bronze' ? [plates, frame, rod, dense_plate] : [plates, frame, rod], null)
-}
-
-const Transplatine = (name, components, color) => {
-    compIngot(name, components, color, DULL, [2900, 'mid', GTValues.VA[GTValues.HV], 1900], [plates, frame, rod], null) 
-}
-
 const matGenD = (name, components, color) => {
     compIngot(name, components, color, DULL, [1900, 'low', GTValues.VA[GTValues.MV], 1600], [plates, frame, gear, rod], null)
 }
-
-
-    largeMulti('birmabright', ['7x aluminium', '2x magnesium', '1x manganese'], 0xbfbfbf)
-    largeMulti('duralumin', ['4x aluminium', '3x copper', '1x magnesium', '1x manganese'], 0x66ccff)
-    largeMulti('hydronalium', ['6x aluminium', '3x magnesium', '1x manganese'], 0x660000)
-    largeMulti('beryllium_aluminium_alloy', ['7x beryllium', '1x aluminium'], 0x006699)
-    largeMulti('elgiloy', ['4x cobalt', '2x chromium', '1x nickel', '1x steel', '1x molybdenum', '1x manganese'], 0xff00ff)
-    largeMulti('beryllium_bronze', ['10x copper', '1x beryllium'], 0x003300)
-    largeMulti('silicon_bronze', ['32x copper', '2x silicon', '1x manganese'], 0x1a1a1a)
-    largeMulti('kovar', ['18x iron', '11x nickel', '6x cobalt'], 0x000080)
-    largeMulti('zamak', ['1x zinc', '4x aluminium', '3x copper'], 0x8c8c8c)
-    largeMulti('tumbaga', ['20x copper', '6x gold', '1x silver'], 0xffdb4d)
-    Transplatine('transplatine', ['17x platinum', '5x silver', '2x osmium', '2x chromium'], 0xb9b2c1)
 
 
     matGenD('signalum', ['1x silver', '3x copper', '4x redstone'], 0xff3300)
@@ -2582,6 +2781,45 @@ event.create('thionyl_chloride')
     .components('2x chlorine', '1x oxygen', '1x sulfur')
     .formula('Cl2OS')
 
+event.create('perfluorovelium')
+    .fluid()
+    .iconSet(DULL)
+    .color(0xC7FFF8)
+    .secondaryColor(0x63CDBF)
+    .components('1x velium', '4x fluorine')
+    .flags(no_decomp)
+
+event.create('perfluorobis_velyl_methylene_ether')
+    .dust()
+    .iconSet(DULL)
+    .color(0xB7FFF2)
+    .secondaryColor(0x3AAE98)
+    .components('8x carbon', '8x fluorine', '2x oxygen', '2x hydrogen', '2x velium')
+    .flags(no_decomp)
+
+event.create('perfluorovinyl_ether')
+    .liquid(365)
+    .color(0xD9FFF9)
+    .components('2x carbon', '3x fluorine', '1x oxygen')
+
+event.create('raw_velyl_rubber')
+    .dust()
+    .iconSet(DULL)
+    .color(0xD8FFF8)
+    .secondaryColor(0x7BDCC7)
+    .components('8x carbon', '8x fluorine', '2x oxygen', '1x velium')
+    .flags(no_decomp)
+
+event.create('velyl_rubber')
+    .polymer()
+    .liquid(900)
+    .color(0xF3FFFD)
+    .secondaryColor(0x9EE8DA)
+    .components('8x carbon', '8x fluorine', '2x oxygen', '1x velium')
+    .flags(rod, plates, frame, foil, ring)
+    .fluidPipeProperties(2000, 3200, true, true, true, true)
+    .flags(no_decomp)
+
 event.create('polyether_ether_ketone')
     .polymer()
     .liquid(616)
@@ -2601,6 +2839,80 @@ event.create('torlon')
     .flags(rod, plates, frame, foil)
     .formula('(C22H13N2O5Cl)n')
     .fluidPipeProperties(700, 600, true, true, false, false)
+
+//PEDOT:PSS
+event.create('polystyrene')
+    .fluid()
+    .iconSet(DULL)
+    .color(0xF0F0E8)
+    .components('8x carbon', '8x hydrogen')
+    .formula('C8H8')
+
+event.create('poly_styrene_sulfonic_acid')
+    .fluid()
+    .iconSet(DULL)
+    .color(0xE8E0F0)
+    .components('8x carbon', '8x hydrogen', '3x oxygen', '1x sulfur')
+    .formula('C8H8SO3')
+
+event.create('sodium_poly_styrene_sulfonate')
+    .fluid()
+    .iconSet(DULL)
+    .color(0xE8E8F0)
+    .components('8x carbon', '7x hydrogen', '3x oxygen', '1x sulfur', '1x sodium')
+    .formula('C8H7NaO3S')
+
+event.create('thiophene')
+    .fluid()
+    .iconSet(DULL)
+    .color(0xD0B090)
+    .components('4x carbon', '4x hydrogen', '1x sulfur')
+    .formula('C4H4S')
+
+event.create('tetrabromothiophene')
+    .fluid()
+    .iconSet(DULL)
+    .color(0x806060)
+    .components('4x carbon', '4x hydrogen', '4x bromine', '1x sulfur')
+    .formula('C4H4Br4S')
+
+event.create('dibromothiophene')
+    .fluid()
+    .iconSet(DULL)
+    .color(0xB08080)
+    .components('4x carbon', '4x hydrogen', '2x bromine', '1x sulfur')
+    .formula('C4H4Br2S')
+
+event.create('hydrogen_bromide')
+    .fluid()
+    .iconSet(DULL)
+    .color(0xD0D0D0)
+    .components('1x hydrogen', '1x bromine')
+    .formula('HBr')
+
+event.create('ethylene_glycol')
+    .fluid()
+    .iconSet(DULL)
+    .color(0xD8D8D8)
+    .components('2x carbon', '6x hydrogen', '2x oxygen')
+    .formula('C2H6O2')
+
+event.create('edot')
+    .fluid()
+    .iconSet(DULL)
+    .color(0xC8D6D8)
+    .components('6x carbon', '6x hydrogen', '2x oxygen', '1x sulfur')
+    .formula('C6H6O2S')
+
+event.create('pedot_pss')
+    .polymer()
+    .liquid(633)
+    .iconSet(DULL)
+    .color(0x151525)
+    .components('14x carbon', '11x hydrogen', '5x oxygen', '2x sulfur')
+    .flags(rod, plates, frame, foil)
+    .formula('C14H11O5S2')
+    .fluidPipeProperties(433, 150, false, false, false, false)
 
 
      // my chenisy shit here:
@@ -2694,27 +3006,27 @@ event.create('torlon')
         .color(0x603227)
         .flags(no_decomp)
 
-        event.create('purified_uncracked_sulfuric_netherite_slag')
+        event.create('uncracked_sulfuric_netherite_slag')
         .liquid(7200)
         .components('1x netherite')
         .color(0x503020)
         .flags(no_decomp)
 
-        event.create('purified_uncracked_netherite_slag')
+        event.create('uncracked_netherite_slag')
         .liquid(7200)
         .components('1x netherite')
         .color(0x4d2051)
         .flags(no_decomp)
 
-        event.create('purified_cracked_netherite_slag')
+        event.create('cracked_netherite_slag')
         .liquid(6900) //nice
         .components('1x netherite')
         .color(0x3a2c29)
         .flags(no_decomp)
 
-        event.create('purified_netherite_sludge')
+        event.create('netherite_sludge')
         .liquid(3600)
-        .components('1x purified_netherite', '2x platinum_group_sludge', '1x naquadah', '3x bastnaesite', '2x tungstate', '6x netherite')
+        .components('1x purified_netherite', '2x platinum_group_sludge', '1x naquadah', '3x bastnasite', '2x tungstate', '6x netherite')
         .color(0x4e4237)
         .flags(no_decomp)
 
@@ -2769,7 +3081,7 @@ event.create('torlon')
     .flags(no_decomp)
     
 
-    //holyfuckingshit Hydroxylamine Nitrate
+    //holyfucklamine Nitrate
 
     event.create('ammonium')
     .components('1x ammonia', '1x hydrogen')
@@ -2849,16 +3161,6 @@ event.create('torlon')
     .iconSet(SHINY)
     .flags(rod, no_decomp)
     .ingot()
-    
-    event.create("radioactive_bronze_ore")
-    .iconSet(GTMaterialIconSet.RADIOACTIVE)
-    .components('999x uranium_233', '1x bronze')
-    .formula('"To advance in the steam age, we will need to mine some Bronze Ore"')
-    .color(0x3CFE3B)
-    .radioactiveHazard(9)
-    .flags(rod)
-    .ingot()
-    .ore(69, 2)
 
     event.create('mixed_thorium_uranium_233_mass')
     .color(0x003c00)
@@ -3022,8 +3324,7 @@ event.create('mixed_plutonium_dioxide')
     .color(0xfe1b1b)
     .components('3x plutonium_dioxide', '1x plutonium_241_dioxide')
     .formula('(Pu²³⁹)₃(Pu²⁴¹)O₈')
-    .flags(rod)
-    .ingot()
+    .dust()
 
 event.create('regenerated_tbp')
     .liquid()
@@ -3071,10 +3372,20 @@ event.create('fibrinogen')
 
 
 event.create('blood_proteins')
+    .dust()
     .gas()
     .color(0xffe9bf)
     .components('2x human_serum_albumin', '2x hemoglobin', '1x fibrinogen')
     .flags(no_decomp)
+
+// Blood electrolytes - the ion soup that keeps your cells from fucking dying
+event.create('blood_electrolytes')
+    .dust()
+    .gas()
+    .color(0xF0F8FF)
+    .components('3x sodium', '2x potassium', '2x calcium', '1x magnesium', '4x chlorine', '1x phosphorus')
+    .flags(no_decomp)
+
 
 event.create('blood_plasma')
     .gas()
@@ -3085,14 +3396,6 @@ event.create('blood_plasma')
 event.create('natural_blood')
     .gas()
     .color(0xB30E08)
-
-// Blood electrolytes - the ion soup that keeps your cells from fucking dying
-event.create('blood_electrolytes')
-    .dust()
-    .gas()
-    .color(0xF0F8FF)
-    .components('3x sodium', '2x potassium', '2x calcium', '1x magnesium', '4x chlorine', '1x phosphorus')
-    .flags(no_decomp)
 
 event.create('cellulose')
     .dust()
@@ -3242,25 +3545,13 @@ event.create('vanadium_oxyfluoride')
 event.create('unstable_oganesson_solution')
     .liquid()
     .color(0x00ffcc)
-    .components('1x oganesson', '1x xenon', '1x heavy_water')
+    .components('1x oganesson', '1x xenon', '1x distilled_water')
     .flags(no_decomp)
 
 event.create('cryostabilized_decay_matrix')
     .liquid(40)
     .color(0x00ccaa)
     .components('1x oganesson', '1x darmstadtium', '2x helium')
-    .flags(no_decomp)
-
-event.create('xycrhovite_resonance_solution')
-    .liquid()
-    .color(0xff88cc)
-    .components('1x draconium', '1x dilithium', '1x refined_sentience')
-    .flags(no_decomp)
-
-event.create('echo_fluid')
-    .liquid()
-    .color(0x4400aa)
-    .components('1x echo', '1x refined_sentience')
     .flags(no_decomp)
 
 event.create('vheszcryl_extract')
@@ -3344,7 +3635,6 @@ event.create('phazdurite_scrub_waste')
     .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID))
     .color(0x110008)
     .components('1x nitric_acid', '1x water')
-    .flags(no_decomp)
 
 event.create('organic_naquadria_phase')
     .liquid()
@@ -3447,11 +3737,13 @@ event.create('oganesson-xenon_trifluoride')
     .gas(600)
     .color(0x382f84)
     .components('oganesson', 'xenon_trifluoride')
+    .formula('Og-Xe F3')
 
 event.create('bose-einstein_oganesson-xenon_trifluoride_condensate')
     .plasma(0)
     .color(0x3c3f85)
     .components('oganesson', 'xenon_trifluoride')
+    .formula('Og-Xe F3')
 
 event.create('quasiflux')
     .color(0x861bbb)
@@ -3463,8 +3755,183 @@ event.create('quasifluxed_oganesson-xenon_trifluoride')
     .color(0xbe4aff)
     .components('quasiflux', 'oganesson-xenon_trifluoride')
     .flags(no_decomp)
+    .formula('QFX(Og-Xe F3)')
 
-    
+// Undergarden Magma chains:
+const magmaticboys = {
+    'mythrii': [0x2A4055, 0x6E5A7A],
+    'velian': [0x2A5A45, 0x1A3D30],
+    'myxoric': [0x2A1F6B, 0x1A1340],
+    'lythergic': [0x7A6A00, 0x4D4400],
+    'umbral': [0x1A1220, 0x3D2D52],
+    'viridine': [0x1A6635, 0x0D4D22],
+    'mystical_undergarden': [0xC4607A, 0xD4A0B0],
+    'ethereal_undergarden': [0xB04070, 0x6090B0],
+}
+const minerals = {
+    'mythrii': 'mythryte',
+    'velian': 'velithite',
+    'myxoric': 'myxorinite',
+    'lythergic': 'lytherite',
+    'umbral': 'umbralite',
+    'viridine': 'viridite',
+}
+
+Object.entries(magmaticboys).forEach(([name, [color, secondary]]) => {
+event.create(`${name}_magma`)
+.liquid(3700)
+.color(color - 0x111111)
+.secondaryColor(secondary - 0x111111)
+
+if (name !== 'mystical_undergarden' && name !== 'ethereal_undergarden') {
+event.create(`${name}`)
+.liquid(3650)
+.components('mysterymystery', `2x ${minerals[name]}`, 'mysterymystery')
+.color(color)
+.secondaryColor(secondary)
+.flags(no_decomp)
+.dust()
+
+event.create(`${name}_indi-carbon-natrium_hydroxide`)
+.dust()
+.components('mysterymystery', `2x ${minerals[name]}`, 'indium', 'carbon', 'sodium_hydroxide')
+.color(color - 0x080808)
+.secondaryColor(secondary - 0x080808)
+.flags(no_decomp)
+
+event.create(`${name}_indite`)
+.dust()
+.components('mysterymystery', `2x ${minerals[name]}`, 'indium')
+.color(color + 0x200020)
+.secondaryColor(secondary + 0x200020)
+.flags(no_decomp)
+
+event.create(`enriched_${name}_mixture`)
+    .liquid()
+    .flags(no_decomp)
+    .color(color + 0x001500)
+    .secondaryColor(secondary + 0x001500)
+    .components('mysterymystery', `2x ${minerals[name]}`, 'mysterymystery')
+
+event.create(`molten_${name}_mixture`)
+    .liquid(3100)
+    .flags(no_decomp)
+    .color(color + 0x150000)
+    .secondaryColor(secondary + 0x150000)
+    .components('mysterymystery', `2x ${minerals[name]}`, 'mysterymystery')
+
+}
+})
+
+// gee willikers
+event.create('flesh_alloy')
+    .components('2x tungsten_steel', 'collagen')
+    .iconSet(GTMaterialIconSet.getByName("flesh_alloy"))
+    .ingot()
+    .color(0xffffff)
+    .flags(gear, small_gear, plates, rod, no_decomp)
+    .ignoredTagPrefixes(TagPrefix.block)
+
+// Deinococcus radiodurans
+event.create('martian_bacterial_sludge')
+    .color(0xD43D2A)
+    .liquid(293)
+
+event.create('enriched_martian_bacterial_sludge')
+    .color(0xED5A10)
+    .liquid(293)
+
+event.create('refined_sentience')
+    .color(0x7de8f0)
+    .liquid(283)
+
+event.create('xycrhovite_resonance_solution')
+    .liquid()
+    .color(0xff88cc)
+    .components('1x draconium', '1x dilithium', '1x refined_sentience')
+    .flags(no_decomp)
+
+event.create('protein_powder')
+    .dust()
+    .color(0xAAFF00).secondaryColor(0x00FFDD)
+    .components('6x flour', '4x sugar', '3x blood_proteins', '2x enriched_naquadrium', '1x crystal_methamphetamine', '1x refined_sentience')
+
+event.create('protein_shake')
+    .fluid()
+    .color(0xAAFF00).secondaryColor(0x00FFDD)
+    .components('protein_powder', 'milk')
+
+event.create('draconic_serum')
+    .fluid()
+    .color(0x7B2FBE).secondaryColor(0xD500F9)
+
+event.create('fermentation_bacterium')
+    .liquid()
+    .color(0xfd8151)
+    .flags(no_decomp)
+
+event.create('aromatic_hydrocarbon_bacterium')
+    .liquid()
+    .color(0x815b33)
+    .flags(no_decomp)
+
+event.create('petroleum_dissolving_bacterium')
+    .liquid()
+    .color(0x4b4b4b)
+    .flags(no_decomp)
+
+event.create('octane_eating_bacterium')
+    .liquid()
+    .color(0x913e3d)
+    .flags(no_decomp)
+
+event.create('bitumen_combusting_bacterium')
+    .liquid()
+    .color(0xb9ad9f)
+    .flags(no_decomp)
+
+event.create('volatile_carbon_gas_bacterium')
+    .liquid()
+    .color(0x80a466)
+    .flags(no_decomp)
+
+
+event.create('sentient_alloy')
+    .components('3x flesh_alloy', '2x iridium', '1x refined_sentience')
+    .color(0x7de8f0).secondaryColor(0xa1e4e4).iconSet(GTMaterialIconSet.getByName("flesh_alloy"))
+    .ingot()
+    .flags(gear, small_gear, plates, rod, no_decomp)
+    .ignoredTagPrefixes(TagPrefix.block)
+
+const brines = {
+    raw:                        0xD4C47A,
+    hot:                        0xC87820,
+    hot_chlorinated_brominated: 0xB86A10,
+    hot_alkaline_debrominated:  0xC49A30,
+    hot_debrominated:           0xBF8018,
+    debrominated:               0xC8B85A,
+}
+
+Object.entries(brines).forEach(([name, color]) => {
+    event.create(`${name}_brine`)
+        .liquid(new GTFluidBuilder())
+        .color(color)
+        .flags(no_decomp)
+})
+
+const bromineIntermediates = {
+    brominated_chlorine_vapor:     [0xA05020, 'gas'],
+    acidic_bromine_solution:       [0xC44010, 'acid'],
+    concentrated_bromine_solution: [0x8B2500, 'acid'],
+    acidic_bromine_exhaust:        [0x784020, 'acid'],
+}
+
+Object.entries(bromineIntermediates).forEach(([name, [color, type]]) => {
+    const builder = event.create(name).color(color).flags(no_decomp)
+    if (type === 'gas') builder.gas(new GTFluidBuilder())
+    else builder.liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID))
+})
+
     //material changes go brrbrrbrbrb
 
     GTMaterials.Dysprosium.setProperty($PropertyKey.INGOT, new $IngotProperty())
@@ -3509,7 +3976,14 @@ event.create('quasifluxed_oganesson-xenon_trifluoride')
     GTMaterials.Lanthanum.setProperty(PropertyKey.ORE, new $OreProperty())
 
     GTMaterials.Oganesson.setProperty(PropertyKey.GEM, new $GemProperty)
+    GTMaterials.Fermium.setProperty(PropertyKey.GEM, new $GemProperty)
+    GTMaterials.Fermium.setMaterialIconSet(GEM_VERTICAL)
 
+    event.create('antifermium')
+    .color(0x678b30)
+    .iconSet(GEM_HORIZONTAL)
+    .element('antifermium')
+    .gem()
 
     GTMaterials.Helium3.setProperty(PropertyKey.ORE, new $OreProperty)
     GTMaterials.Helium3.setProperty(PropertyKey.GEM, new $GemProperty)
@@ -3526,7 +4000,7 @@ event.create('quasifluxed_oganesson-xenon_trifluoride')
     GTMaterials.Plutonium239.addFlags(rod)
     GTMaterials.Bronze.addFlags(fine_wire)
     GTMaterials.Trinium.addFlags(frame)
-    GTMaterials.Netherite.addFlags(frame, rod, dense_plate)
+    GTMaterials.Netherite.addFlags(frame, rod, dense_plate, bolt_and_screw, gear, long_rod)
 
     GTMaterials.Invar.addFlags(dense_plate)
     GTMaterials.Electrum.addFlags(dense_plate)
@@ -3592,13 +4066,6 @@ event.create('quasifluxed_oganesson-xenon_trifluoride')
     .dust()
     .flags(no_decomp)
 
-    event.create('rhenium_iii_sulfate')
-    .components('2x rhenium', 'sulfur', '4x oxygen')
-    .ore(1, 2, true)
-    .formula('Re2(SO4)3')
-    .color(0x3e6e9b).iconSet(DULL)
-    .dust()
-    .flags(no_decomp)
 
     event.create('boron_trichloride')
     .components('1x boron', '3x chlorine')
@@ -3643,11 +4110,11 @@ event.create('quasifluxed_oganesson-xenon_trifluoride')
     }
 Object.entries(naquadriumadjacentpartsheheha).forEach(([type, chezmix]) => {
     event.create(`impure_${type}_solution`).color(chezmix[0]).liquid()
-    event.create(`${type}_solution`).color(chezmix[1]).liquid()
+    event.create(`${type}_solution`).color(chezmix[1]).liquid().dust()
     event.create(`acidic_${type}_solution`).color(chezmix[2]).liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID))
     event.create(`${type}_waste`).color(chezmix[4]).liquid()
 
-    event.create(`${type}_boride`).color(chezmix[3]).dust().flags(no_decomp, rod).components(`1x ${type}`, '1x boron')
+    event.create(`${type}_boride`).color(chezmix[3]).dust().flags(no_decomp, rod).components(`1x ${type}`, '2x boron')
 })
 //return to sender: ZPM alloys
 
@@ -3687,16 +4154,23 @@ Object.entries(rareorespleasefuckingkillme).forEach(([ore, [elements, color, ico
     compOreD(ore, elements, color, icon, [funkyshit, fluid])
 })
 
+event.create('omnic_nullate')
+.components('2x nullium', '1x omnium')
+.iconSet(GTMaterialIconSet.getByName('omnic_nullate'))
+.gem().ignoredTagPrefixes([TagPrefix.gemExquisite, TagPrefix.gemFlawless])
 
+event.create('nullic_omnate')
+.components('2x omnium', '1x nullium')
+.iconSet(GTMaterialIconSet.getByName('nullic_omnate'))
+.gem().ignoredTagPrefixes([TagPrefix.gemExquisite, TagPrefix.gemFlawless, TagPrefix.block])
+})
 
+GTCEuStartupEvents.materialModification(event => {
+    GTMaterials.RutheniumTriniumAmericiumNeutronate.removeProperty(PropertyKey.WIRE)
+    GTMaterials.EnrichedNaquadahTriniumEuropiumDuranide.removeProperty(PropertyKey.WIRE)
 })
 
 StartupEvents.registry("item", event => {
-        event.create('multiblock_upgrade_kit')
-        .displayName('Multiblock Upgrade Kit')
-        .texture('kubejs:item/upgrade_kit')
-        .tooltip('§7Used to upgrade some HV machines into multiblocks capable of §6Perfect Overclock')
-
 event.create("uxpic_wafer").texture("kubejs:item/uxpic/uxpic_wafer").displayName("UXPIC Wafer").tooltip("§7Raw Ultra Extreme Power Circuit")
     event.create("uxpic_chip").texture("kubejs:item/uxpic/uxpic_chip").displayName("UXPIC Chip").tooltip("§7Ultra Extreme Power IC")
 
@@ -3781,7 +4255,65 @@ const yumyumrods = ["uranium_235_oxide", "enriched_naquadrium_boride", "plutoniu
     .textureJson({ layer0: `gtceu:item/rod/chopped/chopped_mixed_oxide_fuel_rod`})
     .displayName('Chopped MOX Fuel Rod')
 
-const oreamalgamcreation3000 = ['overworld', 'nether', 'end', 'undergarden', 'moon', 'mars', 'mercury', 'venus', 'glacio']
+    // Equilibrium Chain
+
+    ;Object.entries({matter: 'rainbow', antimatter: 'nullium'}).forEach(([side, format]) => {
+    const nexonSymbol = side === 'matter' ? 'ℵ₁' : 'ℵ₋₁'
+    const ferminator = side === 'antimatter' ? 'F̄m̄' : 'Fm';
+
+    const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1)
+    event.create(`gtceu:conceptual_${side}_nexon`)
+    .textureJson({ 
+        layer0: `gtceu:item/nexons/${side}`, 
+        layer1: 'gtceu:item/nexons/overlay',
+        layer2: `gtceu:item/nexons/${side}_imperfection`
+    })
+
+    .displayName(`&[${format}]Conceptual ${capitalize(side)} §rNexon`)
+    .tooltip(`&[${format}]${nexonSymbol}`)
+
+    ;['positive', 'neutral', 'negative'].forEach((charge) => {
+        const chargeSymbol = charge === 'positive' ? '§c⁺' : charge === 'negative' ? '§9⁻' : '§6⁰'
+    event.create(`gtceu:${charge}_${side}_nexon`)
+    .textureJson({ 
+        layer0: `gtceu:item/nexons/${side}`, 
+        layer1: 'gtceu:item/nexons/overlay',
+        layer2: `gtceu:item/nexons/${charge}`,
+        layer3: `gtceu:item/nexons/${side}_imperfection`
+    })
+    .displayName(`&[${format}]${capitalize(charge)} ${capitalize(side)} §rNexon`)
+    .tooltip(`&[${format}]${nexonSymbol}${chargeSymbol}`)})
+
+    event.create(`gtceu:stabilized_${side}-fermite`)
+    .textureJson({
+        layer0: `gtceu:item/nexons/${side}_gem`
+    })
+    .displayName(`Stabilized &[${format}]${capitalize(side)}-Fermite`)
+    .tooltip(`${ferminator}(&[${format}]${nexonSymbol}§r)`)
+
+
+    event.create(`gtceu:perfected_${side}_nexon`)
+    .textureJson({ 
+        layer0: `gtceu:item/nexons/${side}`, 
+        layer1: 'gtceu:item/nexons/overlay',
+    })
+    .displayName(`&[rainbow]Perfected &[${format}]${capitalize(side)} §rNexon`)
+    .tooltip(`&[${format}]${nexonSymbol}`)
+    })
+
+    event.create('gtceu:perfectly_mirroring_nexon')
+    .textureJson({ 
+        layer0: `gtceu:item/nexons/matter_half`, 
+        layer1: `gtceu:item/nexons/antimatter_half`, 
+        layer2: 'gtceu:item/nexons/overlay',
+    })
+    .displayName(`&[rainbow]Perfected &[nullium]Mirroring §rNexon`)
+    .tooltip(`&[infinity][Ω]`)
+
+
+
+
+const oreamalgamcreation3000 = ['overworld', 'nether', 'end', 'undergarden', 'mythical_undergarden', 'moon', 'mars', 'mercury', 'venus', 'glacio']
 oreamalgamcreation3000.forEach(name => {
 event.create(`gtceu:${name}_ore_amalgam`)
 .textureJson({ layer0: `gtceu:item/ore_amalgam/${name}_ore_amalgam`})
@@ -3815,6 +4347,8 @@ const name = typashit.split('_')
 
     event.create("gtceu:antimatter_tank")
     .textureJson({ layer0: 'gtceu:item/components/kha/tank'})
+
+    event.create('gtceu:dragon_heart')
     
 })
 
@@ -3900,60 +4434,47 @@ function casing(id, name, texture, hardness, resistance, tool, type, model, soun
 }
 
 casing('nexus_steel_casing', '§bNexus Steel §rCasing', 'solid/nexus_steel_casing', 13, 25, 'needs_iron_tool')
-
 casing('igneous_bronze_casing', '§6Igneous Bronze §rCasing', 'solid/igneous_bronze_casing', 8, 13, 'needs_stone_tool')
-
 casing('magikstone_casing', '§9Magik Stone §rCasing', 'solid/magikstone_casing', 7, 13, 'needs_stone_tool')
-
 casing('source_casing', '§dSource Casing', 'solid/source_casing', 1, 6, 'needs_stone_tool', null, null, 'glass')
-
 casing('echoing_fluxum_casing', '§9Echoing Fluxum §rCasing', 'solid/fluix_casing', 1, 6, 'needs_stone_tool', null, null, 'glass')
-
 casing('wizarding_steel_casing', '§bWizard §dSteel §rCasing', 'solid/wizarding_steel_casing', 9, 23, 'needs_stone_tool', 'gtceu:active', 'gtceu:block/wizarding_steel_casing')
-
 casing('resonite_casing', '§1Resonance Manipulative Resonite §rCasing', 'solid/resonite_casing', 9, 23, 'needs_iron_tool')
-
 casing('enderium_casing', '§1Radiologically-Insulative Enderium §rCasing', 'solid/thermal_casing/enderium_casing', 9, 23, 'needs_iron_tool')
-
 casing('lumium_casing', '§6Photo-kinetically Absorbitive Lumium §rCasing', 'solid/thermal_casing/lumium_casing', 9, 23, 'needs_iron_tool')
-
 casing('signalum_casing', '§cParticle Attracting Signalum §rCasing', 'solid/thermal_casing/signalum_casing', 9, 23, 'needs_iron_tool')
-
 casing('nitinol_casing', '§7Seismic Resilient Nitinol §rCasing', 'solid/nitinol_casing', 13, 30, 'needs_diamond_tool')
 
 casing('auralloy-omega_over_transcendentine_casing', '§dTerakelvin Resilient §6Aura§7lloy-Ω §rOver §dTranscendentine §rParticle Accelerator Casing', 'solid/transcendentine_over_auralloy_casing', 13, 30, 'needs_diamond_tool')
-
 casing('vhaelcryite_casing', 'Surreal §4Pyrathene§r-§dVhaelcryite §rCasing', 'solid/vhaelcryite_casing', 13, 30, 'needs_diamond_tool')
-
 casing('vaelkethrite_casing', '§6Hypergolic §cVael§4kethrite §9Crystal §1Matrix §8Fusion §rCasing', 'solid/vaelkethrite_casing', 13, 30, 'needs_diamond_tool')
-
 casing('sulvan_steel_casing', 'Hypertensile-§7Cindra§rtechnic §6Sulvarium§r-Over-§bKraethite Steel §rCasing', 'solid/sulvan_steel_casing', 17, 40, 'needs_netherite_tool')
-
+casing('abyssal_netherite_casing', '§5E§dt§5h§de§dr§5e§da§dl§5l§dy§r §0Voiden &[nul]Abyssal Netherite §rCasing', 'abyssal/casing', 17, 40, 'needs_netherite_tool')
 casing('aetherite_casing', '§3Cryothetically§r Hyperoperative §2Aetheric§r-§4Thermavyte§r Casing', 'solid/aetherite_casing', 17, 40, 'needs_netherite_tool')
-
 casing('peek_casing', "§aAcidically Nulled §6Poly-Ether Ether Ketone §rCasing", 'solid/peek_casing', 10, 23, 'needs_iron_tool')
-
+casing('velyl_rubber_casing', `§5E§dt§5h§de§dr§5e§da§dl§5l§dy§r §8Durable §bPoly§r(§3perfluorobis§r(§avelyl§r)§bmethylene ether§r) Rubber Casing`, 'solid/velyl_rubber_casing', 10, 23, 'needs_iron_tool')
 casing('peek_pipe_casing', '§6Poly-Ether Ether Ketone Pipe §rCasing', 'pipe/peek', 10, 23, 'needs_iron_tool')
-
 casing('sulvan_steel_pipe_casing', '§6Sulvarium§r-Over-§bKraethite Steel §rPipe Casing', 'pipe/sulvan_steel', 17, 40, 'needs_netherite_tool')
-
-casing('sulvan_steel_gearbox', '§6Sulvarium§r-Over-§bKraethite Steel §rGearbox', 'gearbox/sulvan_steel_gearbox', 17, 40, 'needs_netherite_tool')
-
+casing('sulvan_steel_gearbox_casing', '§6Sulvarium§r-Over-§bKraethite Steel §rGearbox', 'gearbox/sulvan_steel_gearbox', 17, 40, 'needs_netherite_tool')
 casing('activated_nexian_pyrite_casing', '§4I§cn§6f§ee§6r§cn§4o§cs§6t§ea§6t§ci§4c§r-§6Alloyment §1§kA§2§kc§3§kt§4§ki§5§kv§6§ka§7§kt§8§ke§9§kd§r §bNexian §6Pyrite§r Casing', 'solid/activated_nexian_pyrite_casing', 23, 60, 'needs_duranium_tool')
-
+casing('pyrghul_alloy_casing', '§4Infernal §7Infernal Bearing §rSteel Casing', 'solid/pyrghul_alloy_casing', 13, 30, 'needs_iron_tool')
 casing('chithion-flame_casing', '§9§kPrimordially§r Stabilized §4Infernal Chithion-Flame§r Casing', 'temperature/chithion_flame_casing', 9, 11, 'needs_iron_tool')
-
-casing('cryonull_casing', '§9§kPrimordially§r Stabilized §3Cryothetic Cryonull§r Casing', 'temperature/cryonull_casing', 9, 11, 'needs_iron_tool')
-
+casing('cryonull_casing', '§9§kPrimordially§r Stabilized §3Hypothermic Cryonull§r Casing', 'temperature/cryonull_casing', 9, 11, 'needs_iron_tool')
 casing('flesh_alloy_casing', '§4Flesh Alloy Casing', 'flesh/casing', 13, 25, 'needs_iron_tool')
+casing('abyssal_netherite_machine_casing', 'Abyssal Netherite Machine Casing', 'abyssal/machine_casing', 5, 10, 'needs_iron_tool',)
+casing('abyssal_netherite_pipe_casing', 'Abyssal Netherite Pipe Casing', 'abyssal/pipe_casing', 5, 10, 'needs_iron_tool')
+casing('abyssal_netherite_gearbox_casing', 'Abyssal Netherite Gearbox', 'abyssal/gearbox', 5, 10, 'needs_iron_tool')
+casing('mythrolyc_umbraloy_casing', '§5E§dt§5h§de§dr§5e§da§dl§5l§dy §3Acid§r-§3Temper§4ature §6Immune §2Myth§3rolyc §5Umb§draloy§r Casing', 'solid/mythrolyc_umbraloy_casing', 17, 40, 'needs_duranium_tool')
+casing('mythrovirdyne_casing', '§5E§dt§5h§de§dr§5e§da§dl§5l§dy §eHypertensile §3Mythro§2virdyne Casing', 'solid/mythrovirdyne_casing', 17, 40, 'needs_duranium_tool')
 
-event.create('gtceu:sulvan_steel_firebox', 'gtceu:active')
+event.create('gtceu:sulvan_steel_firebox_casing', 'gtceu:active')
 .displayName('§6Sulvarium§r-Over-§bKraethite Steel §rFirebox')
 .firebox('gtceu:block/casings/solid/sulvan_steel_casing', 'gtceu:block/casings/firebox/sulvan_steel_firebox', 'gtceu:block/casings/solid/sulvan_steel_casing')
 .hardness(17)
 .resistance(40)
 .tagBlock(`forge:needs_netherite_tool`)
 .tagBlock('gtceu:mineable/pickaxe_or_wrench')
+.soundType('metal')
 
 event.create('gtceu:unreal_engine_intake', 'gtceu:active')
 .displayName('§6Unreal§r Engine Intake')
@@ -3962,6 +4483,42 @@ event.create('gtceu:unreal_engine_intake', 'gtceu:active')
 .resistance(40)
 .tagBlock(`forge:needs_netherite_tool`)
 .tagBlock('gtceu:mineable/pickaxe_or_wrench')
+.soundType('metal')
+
+    event.create('gtceu:abyssal_netherite_firebox_casing', 'gtceu:active')
+        .hardness(5)
+        .resistance(10)
+        .soundType('metal')
+        .tagBlock('mineable/pickaxe')
+        .tagBlock('minecraft:needs_iron_tool')
+        .requiresTool(true)
+        .noValidSpawns(true)
+        .firebox('gtceu:block/casings/abyssal/machine_casing',
+                'gtceu:block/casings/abyssal/firebox_casing',
+                'gtceu:block/casings/abyssal/machine_casing')
+        .soundType('metal')
+
+    event.create('gtceu:abyssal_netherite_engine_intake', 'gtceu:active')
+        .hardness(5)
+        .resistance(10)
+        .soundType('metal')
+        .tagBlock('mineable/pickaxe')
+        .tagBlock('minecraft:needs_iron_tool')
+        .requiresTool(true)
+        .noValidSpawns(true)
+        .simple('gtceu:block/casings/abyssal/engine_intake_casing')
+        .soundType('metal')
+
+    event.create('gtceu:abyssal_netherite_heat_escape_casing', 'gtceu:active')
+        .hardness(5)
+        .resistance(10)
+        .soundType('metal')
+        .tagBlock('mineable/pickaxe')
+        .tagBlock('minecraft:needs_iron_tool')
+        .requiresTool(true)
+        .noValidSpawns(true)
+        .bloom('gtceu:block/casings/abyssal/heat_escape')
+        .soundType('metal')
 
 event
     .create('botania:auric_livingrock')
@@ -4304,4 +4861,107 @@ GTCEuStartupEvents.registry("gtceu:dimension_marker", event => {
         .overrideName("Undergarden")
 
     
+})
+
+GTCEuStartupEvents.registry('gtceu:material_icon_set', bio => {
+bio.create('flesh_alloy')
+})
+
+StartupEvents.registry('item', bio => {
+const componentsmuahaha = ['capacitor', 'resistor', 'transistor', 'inductor', 'diode']
+componentsmuahaha.forEach(parp => {
+bio.create(`gtceu:sentient_smd_${parp}`)
+    .textureJson({ layer0: `gtceu:item/sentient_circuitry/sentient_smd_${parp}`})
+    .displayName(`Sentient SMD ${parp.charAt(0).toUpperCase() + parp.slice(1)}`)
+    .tooltip('§7Sentient Electronic Component')
+})
+
+const biologicalComponents = [
+    'cpu',
+    'nano_cpu',
+    'qubit_cpu',
+    'nand_memory',
+    'nor_memory',
+    'ram',
+]
+
+const acronyms = new Set(['cpu', 'nand', 'nor', 'ram'])
+
+biologicalComponents.forEach(type => {
+    const name = type.split('_')
+        .map(word => acronyms.has(word) ? word.toUpperCase() : word[0].toUpperCase() + word.slice(1))
+        .join(' ')
+    bio.create(`gtceu:b_${type}_chip`)
+        .textureJson({ layer0: `gtceu:item/sentient_circuitry/b_${type}_chip` })
+        .displayName(`Biological ${name} Chip`)
+    bio.create(`gtceu:b_${type}_wafer`)
+        .textureJson({ layer0: `gtceu:item/sentient_circuitry/b_${type}_wafer` })
+        .displayName(`Biological ${name} Wafer`)
+})
+
+bio.create('gtceu:biological_wafer')
+.textureJson({ layer0: `gtceu:item/sentient_circuitry/biological_wafer` })
+
+bio.create('gtceu:sentient_microchip_processor')
+.tag('gtceu:circuits')
+.tag('gtceu:circuits/luv')
+.textureJson({ layer0: 'gtceu:item/sentient_circuitry/sentient_microchip_processor'})
+.displayName('Sentient Microchip Processor')
+
+bio.create('gtceu:sentient_processor')
+.tag('gtceu:circuits')
+.tag('gtceu:circuits/zpm')
+.textureJson({ layer0: 'gtceu:item/sentient_circuitry/sentient_processor'})
+.displayName('Sentient Processor')
+
+bio.create('gtceu:sentient_processor_assembly')
+.tag('gtceu:circuits')
+.tag('gtceu:circuits/uv')
+.textureJson({ layer0: 'gtceu:item/sentient_circuitry/sentient_processor_assembly'})
+.displayName('Sentient Processor Assembly')
+
+bio.create('gtceu:sentient_processor_computer')
+.tag('gtceu:circuits')
+.tag('gtceu:circuits/uhv')
+.textureJson({ layer0: 'gtceu:item/sentient_circuitry/sentient_processor_computer'})
+.displayName('Sentient Supercomputer')
+
+bio.create('gtceu:sentient_processor_mainframe')
+.tag('gtceu:circuits')
+.tag('gtceu:circuits/uev')
+.textureJson({ layer0: 'gtceu:item/sentient_circuitry/sentient_processor_mainframe', layer1: 'gtceu:item/sentient_circuitry/neuron_line'})
+.displayName('Sentient Mainframe')
+
+bio.create('gtceu:sentience_processing_unit')
+.textureJson({ layer0: 'gtceu:item/sentient_circuitry/sentient_processing_unit'})
+//change the naming and I'll ruin your life
+bio.create('gtceu:sentient_circuit_board')
+.textureJson({ layer0: 'gtceu:item/sentient_circuitry/sentient_circuit_board'})
+
+bio.create('gtceu:sentience_printed_circuit_board')
+.textureJson({ layer0: 'gtceu:item/sentient_circuitry/sentient_printed_circuit_board'})
+
+bio.create('gtceu:neuron_dish')
+.textureJson({layer0: 'gtceu:item/sentient_circuitry/neuron_dish'})
+
+bio.create('gtceu:sentient_neuron_dish')
+.textureJson({layer0: 'gtceu:item/sentient_circuitry/sentience_dish'})
+
+bio.create('gtceu:biological_boule')
+.textureJson({layer0: 'gtceu:item/sentient_circuitry/biological_boule'})
+
+bio.create('gtceu:biological_soc')
+.textureJson({layer0: 'gtceu:item/sentient_circuitry/biological_soc'})
+.displayName('Biological SoC')
+
+bio.create('gtceu:biological_soc_wafer')
+.textureJson({layer0: 'gtceu:item/sentient_circuitry/biological_soc_wafer'})
+.displayName('Biological SoC Wafer');
+['fermentation', 'aromatic_hydrocarbon', 'petroleum_dissolving', 'octane_eating', 'bitumen_combusting', 'volatile_carbon_gas']
+.forEach(bac => {
+bio.create(`gtceu:${bac}_bacterium_colony`)
+.textureJson({layer0: `gtceu:item/bacteria/${bac}_bacterium`})
+})
+/* bio.create('gtceu:living_data_disk')
+.textureJson({layer0: 'gtceu:item/sentient_circuitry/living_disk'}) */
 })

@@ -1,0 +1,5 @@
+{
+  "biomes": ["minecraft:plains", "minecraft:sunflower_plains"],
+  "bed": "minecraft:mud", "waterline": "minecraft:mud", "bank": "minecraft:grass_block",
+  "underwater_noise": 0.20
+}

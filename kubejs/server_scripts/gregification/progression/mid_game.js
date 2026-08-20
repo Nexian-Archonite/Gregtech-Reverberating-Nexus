@@ -1,41 +1,47 @@
 ServerEvents.recipes(event => {
 const GTM = event.recipes.gtceu
 
-GTM.distillation_tower(('unpure_source_from_tainted'))
-    .inputFluids(Fluid.of('gtceu:virulence_tainted_source 2500'))
-    .outputFluids(Fluid.of('undergarden:virulent_mix_source 2065'), Fluid.of('gtceu:unpure_source 435'), Fluid.of('gtceu:taint 3'))
+GTM.distillation_tower('unpure_source_from_tainted')
+    .inputFluids('gtceu:virulence_tainted_source 2500')
+    .outputFluids('undergarden:virulent_mix_source 2065', 'gtceu:unpure_source 435', 'gtceu:taint 3')
     .duration(40)
     .EUt(128)
 
-    GTM.fluid_heater(('virtulence_to_taint'))
-    .inputFluids(Fluid.of('undergarden:virulent_mix_source 100'))
-    .outputFluids(Fluid.of('gtceu:taint 25'))
+    GTM.fluid_heater('virtulence_to_taint')
+    .inputFluids('undergarden:virulent_mix_source 100')
+    .outputFluids('gtceu:taint 25')
     .duration(40)
     .EUt(128)
 
-    GTM.distillation_tower(('source_distillation'))
-    .inputFluids(Fluid.of('gtceu:unpure_source 1000'))
-    .outputFluids(Fluid.of('gtceu:crystalline_sludge 500'), Fluid.of('gtceu:source 500'))
+    GTM.distillation_tower('source_distillation')
+    .inputFluids('gtceu:unpure_source 1000')
+    .outputFluids('gtceu:crystalline_sludge 500', 'gtceu:source 500')
     .duration(40)
     .EUt(128)
 
-    GTM.centrifuge(('crystalline_sludge'))
-    .inputFluids(Fluid.of('gtceu:crystalline_sludge 1000'))
-    .itemOutputsRanged(Item.of('gtceu:diamond_dust'), 1, 6)
-    .itemOutputsRanged(Item.of('gtceu:mana_dust'), 3, 11)
-    .itemOutputsRanged(Item.of('gtceu:ruby_dust'), 1, 5)
-    .itemOutputsRanged(Item.of('gtceu:sapphire_dust'), 1, 4)
-    .itemOutputsRanged(Item.of('gtceu:aluminium_dust'), 0, 2)
-    .itemOutputsRanged(Item.of('gtceu:arcane_dust'), 3,7)
-    .outputFluids(Fluid.of('gtceu:source 100'))
+    GTM.centrifuge('crystalline_sludge')
+    .inputFluids('gtceu:crystalline_sludge 1000')
+    .itemOutputsRanged('gtceu:diamond_dust', 1, 6)
+    .itemOutputsRanged('gtceu:mana_dust', 3, 11)
+    .itemOutputsRanged('gtceu:ruby_dust', 1, 5)
+    .itemOutputsRanged('gtceu:sapphire_dust', 1, 4)
+    .itemOutputsRanged('gtceu:aluminium_dust', 0, 2)
+    .itemOutputsRanged('gtceu:arcane_dust', 3,7)
+    .outputFluids('gtceu:source 100')
     .duration(600)
     .EUt(64)
 
-    GTM.electrolyzer(('tainted_calcite_concentrate'))
-    .inputFluids(Fluid.of('gtceu:tainted_calcite_concentrate 1000'))
-    .outputFluids(Fluid.of('gtceu:dissolved_calcium_carbonate 4800'), Fluid.of('gtceu:taint 200'), Fluid.of('gtceu:sulfuric_acid 1000'))
+    GTM.electrolyzer('tainted_calcite_concentrate')
+    .inputFluids('gtceu:tainted_calcite_concentrate 1000')
+    .outputFluids('gtceu:dissolved_calcium_carbonate 4800','gtceu:taint 200', 'gtceu:sulfuric_acid 1000')
     .duration(200)
     .EUt(32)
+
+    GTM.manifold_collapsing('tainted_magmatic_mineral_sludge')
+    .inputFluids('gtceu:tainted_magmatic_mineral_sludge 10000')
+    .outputFluids('gtceu:tainted_rich_magmatic_mineral_sludge 3500','gtceu:tainted_medium_magmatic_mineral_sludge 3000', 'gtceu:tainted_poor_magmatic_mineral_sludge 2500')
+    .duration(240)
+    .EUt(120)
 
     GTM.centrifuge(('tainted_magmatic_mineral_sludge'))
     .inputFluids(Fluid.of('gtceu:tainted_magmatic_mineral_sludge 10000'))
@@ -62,6 +68,13 @@ GTM.distillation_tower(('unpure_source_from_tainted'))
         .inputFluids(Fluid.of(`gtceu:decalcified_${idk}_magmatic_mineral_sludge 1000`))
         .outputFluids(Fluid.of(`gtceu:${idk}_magmatic_mineral_sludge 1000`))
         .itemOutputs('7x gtceu:calcium_carbonate_dust')
+        .duration(160)
+        .EUt(120)
+
+        GTM.cyclotron((`advanced_${idk}_mineral_magma_purification_via_decomposition`))
+        .inputFluids(Fluid.of(`gtceu:decalcified_${idk}_magmatic_mineral_sludge 1000`))
+        .outputFluids(Fluid.of(`gtceu:${idk}_magmatic_mineral_sludge 1200`))
+        .itemOutputs('9x gtceu:calcium_carbonate_dust')
         .duration(160)
         .EUt(120)
     })
@@ -143,23 +156,11 @@ GTM.distillation_tower(('unpure_source_from_tainted'))
     .outputFluids(Fluid.of('gtceu:perfected_taint 144'))
     .duration(45)
     .EUt(128)
+
+// manual override ig
+
     
 // return from Taint
-    GTM.assembler(('effervescent_echoite_exile'))
-    .itemInputs('gtceu:mv_mixer', '12x gtceu:condensed_mana_plate', '4x gtceu:invar_plate', '16x gtceu:aluminium_dust', 'kubejs:multiblock_upgrade_kit')
-    .inputFluids(Fluid.of(`gtceu:tantalum ${144*24}`))
-    .itemOutputs('gtceu:effervescent_echoite_exile')
-    .duration(400)
-    .EUt(128)
-
-    
-
-GTM.assembler(('industrial_refraction_kiln'))
-.itemInputs('gtceu:primitive_alloyment_kiln', 'gtceu:lumium_frame', '12x gtceu:signalum_plate', '8x gtceu:enderium_plate', '4x #gtceu:circuits/hv', '2x gtceu:kanthal_coil_block')
-.inputFluids(Fluid.of('gtceu:soldering_alloy 4000'))
-.itemOutputs('gtceu:industrial_refraction_kiln')
-.duration(600)
-.EUt(512)
 
 //QoL tbf
 GTM.assembler(('inductor_source_attuned'))
@@ -326,18 +327,6 @@ GTM.electrolyzer(('condensed_mana_to_regular'))
 .duration(40)
 .EUt(32)
 
-GTM.mechanical_conjuration_institute(('stainless_dust_to_mechanical'))
-.inputFluids(Fluid.of('gtceu:mechanical_concentrate 144'))
-.itemInputs('gtceu:stainless_steel_dust')
-.itemOutputs('gtceu:mechanical_stainless_dust')
-.duration(100)
-.EUt(512)
-
-GTM.mechanical_conjuration_institute(('liquid_stainless_to_mechanical'))
-.inputFluids(Fluid.of('gtceu:stainless_steel 72'), Fluid.of('gtceu:mechanical_concentrate 72'))
-.outputFluids(Fluid.of('gtceu:mechanical_stainless 144'))
-.duration(100)
-.EUt(2048)
 
 GTM.chemical_bath(('whydoesthisnotautocompletethisgoddamncoolingrecipe'))
     .itemInputs('gtceu:hot_mechanical_stainless_ingot')
@@ -374,7 +363,7 @@ GTM.chemical_bath(('whydoesthisnotautocompletethisgoddamncoolingrecipe'))
         }).id(`gtceu:shaped/${tier}_automatic_sculk_crafter`)
     })
 
-const energisticsassembly = [
+/*const energisticsassembly = [
     ["mv", "copper", 'hv'],
     ["hv", "gold", 'ev'],
     ["ev", "aluminium", 'iv'],
@@ -394,7 +383,7 @@ energisticsassembly.forEach(([componenttier, cablematerial, circuittier]) => {
         H: `gtceu:${componenttier}_machine_hull`,
         T: `gtceu:${cablematerial}_double_cable`
     }).id(`gtceu:shaped/${componenttier}_energistics_assembler`)
-})
+}) */
 
 const biomechanicalmachines = [
     ["iv", "auralloy-omega"],
@@ -469,6 +458,14 @@ GTM.cyclotron(('rare_earth_cycling'))
 .duration(64)
 .EUt(GTValues.V[GTValues.EV], 3)
 
+
+GTM.centrifuge(('rare_earth_separation'))
+.inputFluids('gtceu:tributyl_phosphate 60')
+.itemInputs('4x gtceu:rare_earth_dust')
+.outputFluids('gtceu:rare_earth_sludge 250', 'water 40')
+.duration(64)
+.EUt(20)
+
 GTM.electric_blast_furnace('rare_earth_kidnapping')
 .inputFluids('gtceu:rare_earth_sludge')
 .itemInputs('6x gtceu:zirconium_tritelluride_dust')
@@ -540,18 +537,11 @@ GTM.phase_alternator(('cryothetic_zero'))
 .duration(10)
 .EUt(2048)
 
-GTM.echo_imbuement_chamber(('cryosporsite_imbuement'))
-.inputFluids('gtceu:cryothetic_zero 144')
-.itemInputs('gtceu:dysprosium_dust')
-.itemOutputs('gtceu:cryosporsite_dust')
-.duration(20)
+GTM.vacuum_freezer('cryosporsite')
+.inputFluids('gtceu:dysprosium 1296')
+.outputFluids('gtceu:cryosporsite 576')
+.duration(10)
 .EUt(2048)
-
-GTM.metaphysical_metallurgy_tainter(('cryosporsite_tainting'))
-.inputFluids(Fluid.of('gtceu:cryothetic_zero 18'), Fluid.of('gtceu:dysprosium 18'))
-.outputFluids(Fluid.of('gtceu:cryosporsite 36'))
-.duration(20)
-.EUt(8192)
 
 //chemistry part: ii (haha get the refer- GET OUT) ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 GTM.chemical_reactor(('aqua_regihydroxide'))
@@ -597,21 +587,21 @@ event.smelting('2x gtceu:netherite_scrap', 'gtceu:crumbling_ancient_debris').xp(
 
 GTM.chemical_bath(('ancient_debris_acidosis'))
 .itemInputs('gtceu:crumbling_ancient_debris')
-.inputFluids(Fluid.of('gtceu:infernal_acid 1000'))
-.outputFluids(Fluid.of('gtceu:acidic_unpure_uncracked_sulfuric_netherite_slag 2000'))
+.inputFluids('gtceu:infernal_acid 1000')
+.outputFluids('gtceu:acidic_unpure_uncracked_sulfuric_netherite_slag 2000')
 .duration(200)
 .EUt(8192)
 
 GTM.chemical_vat(('ancient_debris_acidososmosis'))
 .itemInputs('gtceu:crumbling_ancient_debris')
-.inputFluids(Fluid.of('gtceu:infernal_acid 1000'))
-.outputFluids(Fluid.of('gtceu:acidic_unpure_uncracked_sulfuric_netherite_slag 4000'))
+.inputFluids('gtceu:infernal_acid 1000')
+.outputFluids('gtceu:acidic_unpure_uncracked_sulfuric_netherite_slag 4000')
 .addData("HeatPressure", 3.75)
 .addData("Temp", 1400)
 .duration(400)
 .EUt(8192)
 
-GTM.chemical_vat(('unpurified_netherite_alkalization'))
+GTM.chemical_vat(('unpurified_netherite_alkaliosmodacidosmosis'))
 .inputFluids(Fluid.of('gtceu:acidic_unpure_uncracked_sulfuric_netherite_slag 1000'))
 .itemInputs('16x gtceu:sodium_hydroxide_dust')
 .outputFluids(Fluid.of('gtceu:unpure_uncracked_sulfuric_netherite_slag 1050'))
@@ -621,38 +611,38 @@ GTM.chemical_vat(('unpurified_netherite_alkalization'))
 .duration(200)
 .EUt(8192)
 
-GTM.cyclotron(('netherite_slag_purification'))
+GTM.cyclotron(('netherite_slag_samosaosmosis_purification'))
 .inputFluids(Fluid.of('gtceu:unpure_uncracked_sulfuric_netherite_slag 2100'))
 .notConsumable('botania:alchemy_catalyst')
 .itemOutputs('2x gtceu:platinum_group_sludge_dust', '3x gtceu:netherrack_dust', 'gtceu:zirconium_dust')
-.outputFluids(Fluid.of('gtceu:purified_uncracked_sulfuric_netherite_slag 1500'))
+.outputFluids(Fluid.of('gtceu:uncracked_sulfuric_netherite_slag 1500'))
 .duration(600)
 .EUt(GTValues.V[GTValues.IV], 3)
 
-GTM.chemical_vat(('purified_netherite_slag_desulfurization'))
-.inputFluids(Fluid.of('gtceu:purified_uncracked_sulfuric_netherite_slag 1000'))
+GTM.chemical_vat(('netherite_slag_desulfurization'))
+.inputFluids(Fluid.of('gtceu:uncracked_sulfuric_netherite_slag 1000'))
 .itemInputs('4x gtceu:caesium_hydroxide_dust')
 .itemOutputs('4x gtceu:caesium_sulfate_dust')
-.outputFluids(Fluid.of('gtceu:purified_uncracked_netherite_slag 1000'))
+.outputFluids(Fluid.of('gtceu:uncracked_netherite_slag 1000'))
 .duration(200)
 .addData("HeatPressure", 1.25)
 .addData("Temp", 530)
 .EUt(8192)
 
-GTM.cracker(('purified_netherite_slag_cracking'))
-.inputFluids(Fluid.of('gtceu:purified_uncracked_netherite_slag 4000'), Fluid.of('gtceu:steam 1000'))
-.outputFluids(Fluid.of('gtceu:purified_cracked_netherite_slag 4000'), Fluid.of('gtceu:scrub_waste 1000'))
+GTM.cracker(('netherite_slag_cracking'))
+.inputFluids(Fluid.of('gtceu:uncracked_netherite_slag 4000'), Fluid.of('gtceu:steam 1000'))
+.outputFluids(Fluid.of('gtceu:cracked_netherite_slag 4000'), Fluid.of('gtceu:scrub_waste 1000'))
 .duration(200)
 .EUt(8192)
 
-GTM.electrolyzer(('purified_netherite_slag_cracking_residue_removal'))
-.inputFluids(Fluid.of('gtceu:purified_cracked_netherite_slag 1000'))
-.outputFluids(Fluid.of('gtceu:purified_netherite_sludge 900'), Fluid.of('gtceu:scrub_waste 50'), Fluid.of('gtceu:rich_magmatic_mineral_sludge 50'))
+GTM.electrolyzer(('netherite_slag_cracking_residue_removal'))
+.inputFluids(Fluid.of('gtceu:cracked_netherite_slag 1000'))
+.outputFluids(Fluid.of('gtceu:netherite_sludge 900'), Fluid.of('gtceu:scrub_waste 50'), Fluid.of('gtceu:rich_magmatic_mineral_sludge 50'))
 .duration(200)
 .EUt(GTValues.VA[GTValues.EV], 3)
 
-GTM.cyclotron(('purified_netherite_sludge_cycling'))
-.inputFluids(Fluid.of('gtceu:purified_netherite_sludge 1000'))
+GTM.cyclotron(('netherite_sludge_cycling'))
+.inputFluids(Fluid.of('gtceu:netherite_sludge 1000'))
 .itemOutputs('gtceu:purified_netherite_scrap', '2x gtceu:platinum_group_sludge_dust', 'gtceu:naquadah_dust', '3x gtceu:bastnasite_dust', '2x gtceu:tungstate_dust', '6x gtceu:netherite_dust')
 .outputFluids(Fluid.of('gtceu:aqua_regia 100'))
 .duration(400)
@@ -1059,7 +1049,7 @@ GTM.large_chemical_reactor(('tributyl_phosphate'))
 .inputFluids('gtceu:phosphoryl_chloride 1000', 'gtceu:n-butanol 3000')
 .outputFluids('gtceu:tributyl_phosphate 1000', 'gtceu:hydrochloric_acid 3000')
 .duration(20)
-.EUt(2048)
+.EUt(512)
 
 //Oxalic Acid 1A:
 GTM.chemical_vat(('sodium_formate'))
@@ -1071,7 +1061,7 @@ GTM.chemical_vat(('sodium_formate'))
 .duration(40)
 .EUt(2048)
 
-GTM.chemical_vat(('sodium_oxalate'))
+GTM.chemical_vat('sodium_oxalate')
 .itemInputs('2x gtceu:sodium_formate_dust')
 .itemOutputs('gtceu:sodium_oxalate_dust')
 .outputFluids('gtceu:hydrogen 1000')
@@ -1088,7 +1078,7 @@ GTM.large_chemical_reactor('oxalic_acid')
 .EUt(2048)
 //Oxalic Acid 1B:
 
-GTM.chemical_vat(('oxalic_acid_via_nitric_acidosis'))
+GTM.chemical_vat('oxalic_acid_via_nitric_acidosis')
 .itemInputs('sugar')
 .inputFluids('gtceu:nitric_acid 2000')
 .itemOutputs('gtceu:oxalic_acid_dust')
@@ -1545,8 +1535,14 @@ const thesecondlisttoendalllists = {
         ]
     },
     undergarden: {
-        ores: [],
-        fluids: []
+        ores: [
+            ['depthrock_mythryte', 'depthrock_myxorinite', 'depthrock_umbralite'],
+            ['depthrock_velithite', 'depthrock_lytherite', 'depthrock_viridite']
+        ],
+        fluids: [
+            'gtceu:mystical_undergarden_magma 5000',
+            'gtceu:tainted_magmatic_mineral_sludge 50000',
+        ]
     },
     moon: {
         ores: [],
@@ -1618,8 +1614,14 @@ Object.entries(thelisttoendalllists).forEach(function(dimEntry) {
 })
 
 Object.entries(thesecondlisttoendalllists).forEach(function(dimEntry) {
-    var dimension = dimEntry[0]
     var data = dimEntry[1]
+    var dimension
+    if (dimEntry[0] === 'undergarden') {
+        dimension = 'mythical_undergarden'
+    } else {
+        dimension = dimEntry[0]
+    }
+
 
     data.ores.forEach(function(ores, circuit) {
         var recipe = GTM.chemical_vat(dimension + '_amalgam_separation_alt_' + circuit)
@@ -1839,7 +1841,7 @@ GTM.alloy_smelter('irons_spellbooks:compat/cinder_essence')
 
 GTM.autoclave('arcane_dust_to_ferroarcane')
 .itemInputs('gtceu:arcane_dust')
-.inputFluids('gtceu:iron_iii_chloride 250')
+.inputFluids('gtceu:iron 288')
 .itemOutputs('gtceu:ferroarcane_dust')
 .duration(20)
 .EUt(32)
@@ -1847,7 +1849,10 @@ GTM.autoclave('arcane_dust_to_ferroarcane')
 GTM.electrolyzer('decomposition_electrolyzing_ferroarcane')
 .itemInputs('gtceu:ferroarcane_dust')
 .itemOutputs('gtceu:arcane_dust')
-.outputFluids('gtceu:iron_iii_chloride 250')
+.outputFluids('gtceu:iron 288')
+.duration(20)
+.EUt(32)
+
 GTM.implosion_compressor('auralloy-omega_transcendentine_alloying')
 .itemInputs('8x gtceu:transcendentine_dust', '2x gtceu:auralloy-omega_dust', '4x gtceu:industrial_tnt')
 .itemOutputs('10x gtceu:auralloy-omega_over_transcendentine_dust')
@@ -2118,14 +2123,14 @@ GTM.mixer('naquadrium_solution_acidizing')
 .EUt(512)
 
 GTM.centrifuge('acidic_enriched_naquadrium_separation')
-.inputFluids('gtceu:acidic_enriched_naquadrium_solution')
+.inputFluids('gtceu:acidic_enriched_naquadrium_solution 3000')
 .itemOutputs('3x gtceu:enriched_naquadrium_boride_dust')
 .outputFluids('gtceu:enriched_naquadrium_waste 2000', 'gtceu:aqua_regia 500')
 .duration(100)
 .EUt(512)
 
 GTM.centrifuge('acidic_naquadrium_separation')
-.inputFluids('gtceu:acidic_naquadrium_solution')
+.inputFluids('gtceu:acidic_naquadrium_solution 3000')
 .itemOutputs('3x gtceu:naquadrium_boride_dust')
 .outputFluids('gtceu:naquadrium_waste 2000', 'gtceu:hydrofluoric_acid 500')
 .duration(100)
@@ -2161,12 +2166,13 @@ GTM.cyclotron('platline_skip')
 
 
 //QoL that i didn't add yet
-
+/*
 GTM.assembly_line('applied_enigma')
 .itemInputs('16x gtceu:iv_robot_arm', '12x gtceu:vintanium_octal_cable', '8x #gtceu:circuits/luv', '6x gtceu:iv_conveyor_module', 'gtceu:echoing_fluxum_casing')
 .inputFluids('gtceu:transcendentine 16000', 'gtceu:auralloy-omega 4000')
 .itemOutputs('gtceu:applied_enigma')
 .EUt(30720)
 .duration(600)
-//ladies and gentlemen and everyone between. that marks the end of the show, but don't fret! the lines that went from Hyde to Stein have concluded, but it goes on in late_game.js
+ ladies and gentlemen and everyone between. that marks the end of the show, but don't fret! the lines that went from Hyde to Stein have concluded, but it goes on in late_game.js 
+ */
 })

@@ -1,0 +1,4 @@
+{
+  "biomes": ["minecraft:forest", "minecraft:flower_forest", "minecraft:birch_forest", "minecraft:old_growth_birch_forest"],
+  "bed": "minecraft:rooted_dirt", "waterline": "minecraft:gravel", "bank": "minecraft:grass_block"
+}

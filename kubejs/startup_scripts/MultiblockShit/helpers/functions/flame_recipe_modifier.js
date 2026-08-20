@@ -3,6 +3,11 @@ const PLASMA_TEMPS = {
     "gtceu:infernality_catalysm_plasma": 300
 }
 
+let MAX_PLASMA_TEMP = 0
+for (let key in PLASMA_TEMPS) {
+    if (PLASMA_TEMPS[key] > MAX_PLASMA_TEMP) MAX_PLASMA_TEMP = PLASMA_TEMPS[key]
+}
+
 function FLAMETemperatureModifier(machine, recipe) {
     if (!(machine instanceof $MetaMachine)) return ModifierFunction.NULL
     if (!(recipe instanceof $GTRecipe)) return ModifierFunction.NULL
@@ -12,24 +17,12 @@ function FLAMETemperatureModifier(machine, recipe) {
     }
 
     let recipeTemp = recipe.data.getInt("TempMK")
-
     let coilMaxTemp = machine.getCoilType().getCoilTemperature()
     if (recipeTemp * 1000000 > coilMaxTemp * 10000) {
         return ModifierFunction.NULL
     }
 
-    let fluidInputs = recipe.getInputContents($FluidRecipeCapability.CAP)
-    let plasmaTemp = -1
+    if (recipeTemp > MAX_PLASMA_TEMP) return ModifierFunction.NULL
 
-    for (let fluid of fluidInputs) {
-        let fluidId = fluid.getFluid().builtInRegistryHolder().key().location().toString()
-        if (PLASMA_TEMPS[fluidId] !== undefined) {
-            plasmaTemp = PLASMA_TEMPS[fluidId]
-            break
-        }
-    }
-
-    if (plasmaTemp === -1) return ModifierFunction.NULL
-
-    if (recipeTemp > plasmaTemp) return
+    return ModifierFunction.IDENTITY
 }

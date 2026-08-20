@@ -1,0 +1,4 @@
+#If true, prevrent extra particles (magical affix, blood lord gem etc.) from spawning.
+#开启后，关闭额外粒子（诸如魔法武器，嗜血领主宝石等）的生成，有助于缓解挡视野的问题
+disable_extra_particles = false
+

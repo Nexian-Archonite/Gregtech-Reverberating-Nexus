@@ -1,0 +1,4 @@
+{
+  "biomes": ["minecraft:river"],
+  "bed": "minecraft:gravel", "waterline": "minecraft:gravel", "bank": "minecraft:grass_block"
+}

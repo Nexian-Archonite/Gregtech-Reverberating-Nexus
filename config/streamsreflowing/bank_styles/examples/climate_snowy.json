@@ -1,0 +1,7 @@
+{
+  "tags": ["c:is_snowy"],
+  "bed": "minecraft:gravel", "waterline": "minecraft:packed_ice",
+  "bank_enabled": false,
+  "waterline_below": 1, "waterline_above": 0,
+  "underwater_noise": 0.20, "above_water_noise": 0.20
+}

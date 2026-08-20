@@ -378,21 +378,6 @@ GTM.extractor('blood_extraction')
 .duration(100)
 .EUt(512)
 // --------------------------------------- test one
-biomanced.shaped('2x gtceu:sterilizing_filter_casing', 
-    [
-    'LEL',
-    'FBF',
-    "MTR"
-    ], {
-    L: 'gtceu:polybenzimidazole_large_fluid_pipe',
-    E: "gtceu:luv_emitter",
-    F: "gtceu:item_filter",
-    B: "gtceu:blacklight",
-    M: "gtceu:luv_electric_motor",
-    T: "gtceu:trinium_frame",
-    R: "gtceu:hssd_rotor"
-    }).id('gtceu:shaped/filter_casing_sterile')
-
 GTM.organism_assembly_line('filter_casing_sterile')
 .itemInputs('32x gtceu:polybenzimidazole_small_fluid_pipe', '16x gtceu:luv_emitter', '32x gtceu:item_filter', '16x gtceu:blacklight', '16x gtceu:luv_electric_motor', '16x gtceu:trinium_frame', '16x gtceu:hssd_rotor')
 .inputFluids('gtceu:artificial_blood 5000')
@@ -608,6 +593,7 @@ GTM.organism_incubation_chamber(`${type}_incubation`)
 .duration(time)
 .EUt(32768)
 })
+
 biomanced.replaceOutput(
     {type: 'gtceu:arc_furnace'},
     'gtceu:flesh_alloy_ingot',

@@ -199,16 +199,9 @@ ServerEvents.recipes(event => {
 
     GTM.chemical_reactor('vheszcryl_gem_precipitation')
         .inputFluids('gtceu:vheszcryl_extract 2000', 'gtceu:ammonia 500')
-        .itemOutputs('5x gtceu:vhaelcryite_dust')
+        .itemOutputs('5x gtceu:vhaelcryite_dust', '3x gtceu:enstatite_dust')
         .duration(360)
         .EUt(16384)
-
-    GTM.electrolyzer('vheszcryl_transcendentine_recovery')
-        .inputFluids('gtceu:transcendentine_solution 500')
-        .itemOutputs('3x gtceu:transcendentine_dust')
-        .duration(200)
-        .EUt(32768)
-
 
     GTM.chemical_vat('grothemite_acid_cracking')
         .itemInputs('4x gtceu:grothemite_dust')
@@ -275,13 +268,6 @@ ServerEvents.recipes(event => {
         .duration(440)
         .EUt(32768)
 
-    GTM.chemical_reactor('orvexite_plutonium_reduction')
-        .inputFluids('gtceu:plutonium_nitrate_solution 500', 'gtceu:hydrogen 1000')
-        .itemOutputs('3x gtceu:plutonium_dust')
-        .outputFluids('gtceu:nitric_acid 250')
-        .duration(300)
-        .EUt(32768)
-
 
     GTM.chemical_vat('phazdurite_feed_preparation')
         .itemInputs('4x gtceu:phazdurite_dust')
@@ -312,7 +298,7 @@ ServerEvents.recipes(event => {
 
     GTM.partition_column('phazdurite_actinide_partition')
         .inputFluids('gtceu:phazdurite_scrubbed_phase 3000', 'gtceu:hydroxylamine_nitrate 500')
-        .outputFluids('gtceu:transcendentine_solution 500', 'gtceu:organic_naquadria_phase 2000')
+        .outputFluids('gtceu:transcendentine_solution 1000', 'gtceu:organic_naquadria_phase 2000')
         .duration(800)
         .EUt(16384)
 
@@ -352,8 +338,8 @@ ServerEvents.recipes(event => {
         .EUt(8192)
 
     GTM.chemical_reactor('ignavyte_recovery')
-        .inputFluids('gtceu:ignavyte_chloride_solution 2500', 'gtceu:hydrogen 1000')
-        .itemOutputs('3x gtceu:ignavyte_dust', '2x gtceu:sulfur_dust', '2x gtceu:gold_dust', 'gtceu:pyrite_dust')
+        .inputFluids('gtceu:ignavyte_chloride_solution 500', 'gtceu:hydrogen 1000')
+        .itemOutputs('3x gtceu:ignavyte_dust', '2x gtceu:sulfur_dust', '2x gtceu:gold_dust', 'gtceu:thermavyte_dust')
         .outputFluids('gtceu:hydrochloric_acid 500')
         .duration(420)
         .EUt(8192)

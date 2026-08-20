@@ -43,17 +43,6 @@ Object.entries(tierReplacements).forEach(([inputs, replacement]) => {
 
 // I have no idea how it works, but it works, so im not touching this shit
 
-event.replaceOutput(
-    {},
-    "create:zinc_ingot",
-    "gtceu:zinc_ingot"
-)
-
-event.replaceOutput(
-    {},
-    "create:zinc_nugget",
-    "gtceu:zinc_nugget"
-)
 
 event.replaceInput(
     {id: 'gtceu:shaped/wood_wall'},
@@ -117,42 +106,6 @@ event.replaceInput(
 )
 
 event.replaceInput(
-    {id: 'ars_nouveau:imbuement_split_arrow'},
-    'ars_nouveau:source_gem',
-    'gtceu:source_gem'
-)
-
-event.replaceInput(
-    {id: 'ars_nouveau:imbuement_pierce_arrow'},
-    'ars_nouveau:source_gem',
-    'gtceu:source_gem'
-)
-
-event.replaceInput(
-    {id: 'ars_nouveau:imbuement_amplify_arrow'},
-    'ars_nouveau:source_gem',
-    'gtceu:source_gem'
-)
-
-event.replaceInput(
-    {id: 'arseng:source_cell_housing'},
-    'ars_nouveau:source_gem',
-    'gtceu:source_gem'
-)
-
-event.replaceInput(
-    {id: 'arseng:source_cell_housing'},
-    'ars_nouveau:source_block',
-    'gtceu:source_block'
-)
-
-event.replaceInput(
-    {id: 'ars_nouveau:starbuncle_shades'},
-    'ars_nouveau:source_gem',
-    'gtceu:source_gem'
-)
-
-event.replaceInput(
     {input: 'botania:mana_powder'},
     'botania:mana_powder',
     'gtceu:mana_dust'
@@ -195,24 +148,6 @@ event.replaceInput(
     {type: "gtceu:assembly_line"},
     'gtceu:long_magnetic_samarium_rod',
     'gtceu:long_cryosporsite_rod'
-)
-
-event.replaceInput(
-    {output: 'create:brass_sheet'},
-    'create:brass_sheet',
-    'gtceu:brass_plate'
-)
-
-event.replaceInput(
-    {output: 'create:gold_sheet'},
-    'create:gold_sheet',
-    'gtceu:gold_plate'
-)
-
-event.replaceInput(
-    {output: 'create:copper_sheet'},
-    'create:gold_sheet',
-    'gtceu:gold_plate'
 )
 
 event.replaceInput(
@@ -299,33 +234,6 @@ event.replaceOutput(
     'gtceu:energite_dust'
 )
 
-event.replaceOutput(
-    {output: 'gtceu:tiny_magnetic_nexus_steel_dust'},
-    'gtceu:tiny_magnetic_nexus_steel_dust',
-    'gtceu:tiny_nexus_steel_dust'
-)
-event.replaceOutput(
-    {output: 'gtceu:small_magnetic_nexus_steel_dust'},
-    'gtceu:small_magnetic_nexus_steel_dust',
-    'gtceu:small_nexus_steel_dust'
-)
-event.replaceOutput(
-    {output: 'gtceu:magnetic_nexus_steel_dust'},
-    'gtceu:magnetic_nexus_steel_dust',
-    'gtceu:nexus_steel_dust'
-)
-
-event.replaceOutput(
-    {output: `gtceu:magnetic_nexus_steel_block`},
-    `gtceu:magnetic_nexus_steel_block`,
-    `gtceu:nexus_steel_block`
-)
-
-event.replaceOutput(
-    {output: `gtceu:magnetic_nexus_steel_ingot`},
-    `gtceu:magnetic_nexus_steel_ingot`,
-    `gtceu:nexus_steel_ingot`
-)
 
 event.replaceInput(
     {mod: 'ad_astra'},
@@ -366,47 +274,6 @@ event.replaceOutput(
     'gtceu:treated_wood_dust'
 )
 
-
-event.custom(
-    {
-  "type": "draconicevolution:fusion_crafting",
-  "catalyst": {
-    "type": "draconicevolution:ingredient_stack",
-    "count": 8,
-    "items": [
-      {
-        "item": "gtceu:purified_draconium_block"
-      }
-    ]
-  },
-  "ingredients": [
-    {
-      "item": "apotheotic_additions:gemboundsigil"
-    },
-    {
-      "item": "irons_spellbooks:cinder_essence"
-    },
-    {
-      "item": "draconicevolution:wyvern_core"
-    },
-    {
-      "item": "draconicevolution:dragon_heart"
-    },
-    {
-      "item": "gtceu:exquisite_echo_shard_gem"
-    },
-    {
-      "item": "irons_spellbooks:dragonskin"
-    }
-  ],
-  "result": {
-    "count": 8,
-    "item": "gtceu:awakened_draconium_block"
-  },
-  "tier": "WYVERN",
-  "total_energy": 5000000
-}
-)
 
 const GTM = event.recipes.gtceu
 
@@ -498,11 +365,180 @@ event.custom(
   ]
 })
 
+;['vaelkethrite', 'surreal-pyrathene'].forEach(name => {
+event.recipes.gtceu.bender(`bend_${name}_plate_to_foil`)
+.itemInputs(`gtceu:${name}_plate`)
+.itemOutputs(`4x gtceu:${name}_foil`)
+.circuit(1)
+.duration(200)
+.EUt(24)
 
+event.shaped(`2x gtceu:${name}_foil`, [
+'HP'
+], {
+H: `#gtceu:tools/crafting_hammers`,
+P: `gtceu:${name}_plate`
+})
+})
+const fluidAmounts = { water: 450, distilled_water: 337, lubricant: 112 }
+const durations = { water: 4480, distilled_water: 3360, lubricant: 2240 }
+const gabagooltyoes = {
+    plate: 144,
+    rod: 72,
+    nugget: 16,
+    gear: 576,
+    block: 1296
+}
+;['allthemodium', 'vibranium', 'unobtainium'].forEach(bahhumbug => {
+GTM.bender(`bend_${bahhumbug}_to_plate`)
+.itemInputs(`allthemodium:${bahhumbug}_ingot`)
+.itemOutputs(`allthemodium:${bahhumbug}_plate`)
+.duration(600)
+.EUt(24)
+.circuit(1)
 
+GTM.extruder(`extrude_${bahhumbug}_to_plate`)
+.itemInputs(`allthemodium:${bahhumbug}_ingot`)
+.notConsumable('gtceu:plate_extruder_mold')
+.itemOutputs(`allthemodium:${bahhumbug}_plate`)
+.duration(600)
+.EUt(384)
 
+GTM.forge_hammer(`hammer_${bahhumbug}_to_plate`)
+.itemInputs(`3x allthemodium:${bahhumbug}_ingot`)
+.itemOutputs(`2x allthemodium:${bahhumbug}_plate`)
+.duration(600)
+.EUt(16)
+;['lubricant', 'distilled_water', 'water'].forEach(type => {
+  const suffix = type === 'lubricant' ? '' : `_${type}`
+  const fluidId = type === 'water' ? `water ${fluidAmounts[type]}` : `gtceu:${type} ${fluidAmounts[type]}`
+  GTM.cutter(`cut_${bahhumbug}_block_to_plate${suffix}`)
+    .itemInputs(`allthemodium:${bahhumbug}_block`)
+    .inputFluids(fluidId)
+    .itemOutputs(`allthemodium:${bahhumbug}_plate`)
+    .duration(durations[type])
+})
 
+GTM.lathe(`lathe_${bahhumbug}_to_rod`)
+.itemInputs(`allthemodium:${bahhumbug}_ingot`)
+.itemOutputs(`2x allthemodium:${bahhumbug}_rod`)
+.duration(600)
+.EUt(24)
 
+event.shaped(`allthemodium:${bahhumbug}_plate`, [
+'H',
+'P',
+'P'
+], {
+H: '#forge:tools/hammers',
+P: `allthemodium:${bahhumbug}_ingot`
+})
+
+event.shaped(`allthemodium:${bahhumbug}_rod`, [
+'F ',
+' P',
+], {
+F: '#forge:tools/files',
+P: `allthemodium:${bahhumbug}_ingot`
+})
+
+event.shaped(`allthemodium:${bahhumbug}_sword`, [
+'NPN',
+' P ',
+' R '
+], {
+N: `allthemodium:${bahhumbug}_nugget`,
+P: `allthemodium:${bahhumbug}_plate`,
+R: `allthemodium:${bahhumbug}_rod`
+})
+
+event.shaped(`allthemodium:${bahhumbug}_axe`, [
+'PPN',
+'PR ',
+' R '
+], {
+N: `allthemodium:${bahhumbug}_nugget`,
+P: `allthemodium:${bahhumbug}_plate`,
+R: `allthemodium:${bahhumbug}_rod`
+})
+
+event.shaped(`allthemodium:${bahhumbug}_pickaxe`, [
+'PPP',
+'NRN',
+' R '
+], {
+N: `allthemodium:${bahhumbug}_nugget`,
+P: `allthemodium:${bahhumbug}_plate`,
+R: `allthemodium:${bahhumbug}_rod`
+})
+
+event.shaped(`allthemodium:${bahhumbug}_shovel`, [
+' P ',
+'NRN',
+' R '
+], {
+N: `allthemodium:${bahhumbug}_nugget`,
+P: `allthemodium:${bahhumbug}_plate`,
+R: `allthemodium:${bahhumbug}_rod`
+})
+event.shaped(`allthemodium:${bahhumbug}_hoe`, [
+'PPN',
+' R ',
+' R '
+], {
+N: `allthemodium:${bahhumbug}_nugget`,
+P: `allthemodium:${bahhumbug}_plate`,
+R: `allthemodium:${bahhumbug}_rod`
+})
+
+event.shaped(`allthemodium:${bahhumbug}_gear`, [
+'RPR',
+'PWP',
+'RPR'
+], {
+R: `allthemodium:${bahhumbug}_rod`,
+P: `allthemodium:${bahhumbug}_plate`,
+W: '#gtceu:tools/crafting_wrenches'
+})
+Object.entries(gabagooltyoes).forEach(([type, amount]) => {
+    GTM.extractor(`extract_${bahhumbug}_${type}`)
+        .itemInputs(`allthemodium:${bahhumbug}_${type}`)
+        .outputFluids(`allthemodium:molten_${bahhumbug} ${amount}`)
+        .duration(Math.floor(200 * (amount / 144)))
+        .EUt(144)
+
+    if (type !== "rod") {
+        GTM.fluid_solidifier(`solidify_${bahhumbug}_to_${type}`)
+            .notConsumable(`gtceu:${type}_casting_mold`)
+            .inputFluids(`allthemodium:molten_${bahhumbug} ${amount}`)
+            .itemOutputs(`allthemodium:${bahhumbug}_${type}`)
+            .duration(Math.floor(20 * (amount / 144)))
+            .EUt(7)
+
+        if (type === "nugget") {
+            GTM.macerator(`macerate_${bahhumbug}_${type}`)
+                .itemInputs(`allthemodium:${bahhumbug}_${type}`)
+                .chancedOutput(`allthemodium:${bahhumbug}_dust`, 1111, 0)
+                .duration(Math.floor(280 * (amount / 144)))
+                .EUt(7)
+        } else {
+            GTM.macerator(`macerate_${bahhumbug}_${type}`)
+                .itemInputs(`allthemodium:${bahhumbug}_${type}`)
+                .itemOutputs(`${Math.floor(amount / 144)}x allthemodium:${bahhumbug}_dust`)
+                .duration(Math.floor(280 * (amount / 144)))
+                .EUt(7)
+        }
+    }
+})
+
+GTM.macerator(`macerate_${bahhumbug}_rod`)
+    .itemInputs(`allthemodium:${bahhumbug}_rod`)
+    .chancedOutput(`allthemodium:${bahhumbug}_dust`, 5000, 0)
+    .duration(140)
+    .EUt(7)
+})
+
+;['vibranium_allthemodium_alloy', 'unobtainium_allthemodium_alloy', 'unobtainium_vibranium_alloy']
 
 
 
@@ -1704,3 +1740,39 @@ event.custom(
 
 })
 
+const armorparts = ["helmet", "chestplate", "leggings", "boots"]
+const armorSets = {
+    "AllTheModium": armorparts.map(p => `allthewizardgear:allthemodium_mage_${p}`),
+    "Vibranium": armorparts.map(p => `allthewizardgear:vibranium_mage_${p}`),
+    "Unobtainium": armorparts.map(p => `allthewizardgear:unobtainium_mage_${p}`)
+}
+const flySets = ["AllTheModium", "Vibranium"]
+
+PlayerEvents.tick(event => {
+    const { player, player: { headArmorItem, chestArmorItem, legsArmorItem, feetArmorItem } } = event
+    if (player.age % 20 != 0) return
+
+    const slots = [headArmorItem, chestArmorItem, legsArmorItem, feetArmorItem]
+    let playerArmorSet
+    Object.keys(armorSets).forEach(set => {
+        if (playerArmorSet) return
+        for (let i = 0; i < armorparts.length; i++) {
+            if (slots[i].id != armorSets[set][i]) break
+            if (i == armorparts.length - 1) playerArmorSet = set
+        }
+    })
+
+    const ArmorSetMayfly = flySets.includes(playerArmorSet) || armorSets.Unobtainium.some((armor, i) => armor == slots[i].id)
+
+    if (player.isCreative() || player.isSpectator()) return
+
+    if (ArmorSetMayfly) {
+        player.abilities.mayfly = true
+        player.onUpdateAbilities()
+    } else {
+        player.abilities.mayfly = false
+        player.abilities.flying = false
+        player.onUpdateAbilities()
+    }
+
+})

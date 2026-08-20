@@ -569,7 +569,7 @@ const vanillaSimulations = [
     {
         id: 'warden', egg: 'minecraft:warden_spawn_egg',
         guaranteed: [['minecraft:sculk_catalyst', 1]],
-        chanced: [['minecraft:sculk_catalyst', 2500]]
+        chanced: [['minecraft:sculk_catalyst', 2500], ['apotheosis:warden_tendril', 5000]]
     },
     {
         id: 'witch', egg: 'minecraft:witch_spawn_egg',

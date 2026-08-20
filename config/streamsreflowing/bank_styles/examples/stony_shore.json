@@ -1,0 +1,4 @@
+{
+  "biomes": ["minecraft:stony_shore"],
+  "bed": "minecraft:gravel", "waterline": "minecraft:cobblestone", "bank_enabled": false
+}

@@ -8,7 +8,6 @@
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["568D9E322C9011A8"]
 			icon: "gtceu:overworld_marker"
 			id: "573BB768D27D66AE"
 			subtitle: "All IMPORTANT ores that spawn in the Overworld"
@@ -421,7 +420,7 @@
 		{
 			dependencies: ["573BB768D27D66AE"]
 			id: "56A97B383205A7EF"
-			subtitle: "Three aluminum ores and one cesium ore wearing an aluminum trenchcoat. Welcome to Electric Boogaloo."
+			subtitle: "Three aluminum ores and one cesium ore wearing an aluminum trenchcoat. Welcome to the Aluminium Boogaloo."
 			tasks: [
 				{
 					id: "7A37ED0748100B84"
@@ -449,7 +448,6 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["1F43A0729D266DB2"]
 			icon: "gtceu:undergarden_marker"
 			id: "438632B22DF16A24"
 			subtitle: "The weird side"
@@ -672,7 +670,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["486E0CD8F4E8D06E"]
 			icon: "gtceu:the_nether_marker"
 			id: "0464487DB008A1D0"
 			subtitle: "H e l l"

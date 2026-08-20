@@ -17,6 +17,7 @@
 	quests: [
 		{
 			dependencies: ["084A5B4889E9B054"]
+			description: ["{image:minecraft:textures/images/mana_plasm.png width:230 height:90 align:center}"]
 			hide_until_deps_complete: true
 			id: "306928B5B6E7792F"
 			subtitle: "Plant some flowers on Potted Soil and extract it that way :D"
@@ -29,9 +30,17 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["084A5B4889E9B054"]
+			dependencies: [
+				"084A5B4889E9B054"
+				"6B0863CF6A940B3F"
+				"74533235A53DD65B"
+				"306928B5B6E7792F"
+				"5EF8F50656807598"
+			]
+			hide_until_deps_complete: true
 			id: "4FFBC48C27F5D2A7"
 			invisible_until_tasks: 5
+			min_required_dependencies: 5
 			optional: true
 			rewards: [{
 				id: "6436891F8C28B17F"
@@ -100,24 +109,6 @@
 		}
 		{
 			dependencies: ["6B0863CF6A940B3F"]
-			hide_until_deps_complete: true
-			id: "02C37FFD04B5019F"
-			rewards: [{
-				id: "66E25BBF2CF82CDE"
-				item: "neapolitan:strawberry_banana_smoothie"
-				type: "item"
-			}]
-			subtitle: "GT:RN comes with a handful of mods you can remove without consequence. Like the Compact Machines mod or Compact Crafting Fork. Apotheosis and such CAN be removed aswell, but it'll be useful in side content, so maybe don't?"
-			tasks: [{
-				id: "34E8AF27A9C61FE0"
-				title: "Optional Mods"
-				type: "checkmark"
-			}]
-			x: -5.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["6B0863CF6A940B3F"]
 			id: "74533235A53DD65B"
 			rewards: [{
 				id: "1963AA78F6B790E0"
@@ -131,6 +122,24 @@
 				type: "checkmark"
 			}]
 			x: -2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["084A5B4889E9B054"]
+			hide_until_deps_complete: true
+			id: "5EF8F50656807598"
+			rewards: [{
+				id: "7ADD10288BB2380C"
+				item: "rusticdelight:syrup_cookie"
+				type: "item"
+			}]
+			subtitle: "don't fall for me ewil plan >:3"
+			tasks: [{
+				id: "7221354CA94A24C9"
+				type: "checkmark"
+			}]
+			title: "Haf a cookie :3"
+			x: 2.0d
 			y: 0.0d
 		}
 	]

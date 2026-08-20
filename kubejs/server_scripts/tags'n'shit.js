@@ -2,15 +2,7 @@
 const Ihide = [
     "ars_nouveau:source_gem",
     "ars_nouveau:source_gem_block",
-    "create:zinc_ingot",
-    "create:brass_ingot",
-    "create:zinc_nugget",
-    "create:brass_nugget",
-    "create:andesite_alloy_block",
     "botania:mana_powder",
-    "create:iron_sheet",
-    "create:copper_sheet",
-    "create:brass_sheet",
     "ae2:fluix_dust",
     "ae2:fluix_crystal",
     "ae2:certus_quartz_crystal",
@@ -29,23 +21,18 @@ const Ihide = [
     "botania:manasteel_ingot",
     "botania:manasteel_nugget",
     "botania:manasteel_block",
-    "createaddition:electrum_ingot",
-    "createaddition:electrum_nugget",
-    "createaddition:electrum_block",
     "minecraft:netherite_scrap",
     "gtceu:energium_dust",
-    "draconicevolution:awakened_draconium_dust",
-    "draconicevolution:awakened_draconium_ingot",
-    "draconicevolution:awakened_draconium_block",
-    "draconicevolution:awakened_draconium_nugget",
+    /alltheores:.*/,
+    /allthemodium:.*_(clump|shard|crystal|alloy_dust)/,
+    /allthemodium:dirty_.*/
+    
 ]
 
 ServerEvents.tags('item', event =>{
 
 
-event.add('forge:ingots/andesite_alloy', 'create:andesite_alloy')
 event.add('forge:flour', 'gtceu:wheat_dust')
-event.add('forge:dusts/wheat', 'create:wheat_fluor')
 event.add('botania:manasteel_ingots', 'gtceu:manasteel_ingot')
 event.add('botania:mana_dusts', 'gtceu:mana_dust')
 event.add('botania:manasteel_blocks', 'gtceu:manasteel_block')
@@ -67,6 +54,10 @@ event.add('minecraft:mineable/hoe', /botania:.*(_.*)?_mystical_flower/)
 
 event.removeAllTagsFrom('ad_astra:oil_bucket')
 event.removeAllTagsFrom('ad_astra:hydrogen_bucket')
+event.removeAllTagsFrom(/alltheores:.*/)
+event.removeAllTagsFrom(/allthemodium:.*_(clump|shard|crystal|alloy_dust)/)
+event.removeAllTagsFrom(/allthemodium:dirty_.*/)
+
 event.add('forge:dusts/arcane', 'irons_spellbooks:arcane_essence')
 
 event.add('ad_astra:calorite_plates', 'gtceu:venian_calorite_plate')

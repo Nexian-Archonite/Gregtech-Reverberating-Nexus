@@ -557,6 +557,9 @@
     },
     "wart_forest_edge": {
       "enabled [default: true]": true
+    },
+    "gloomwood": {
+      "enabled [default: true]": true
     }
   }
 }

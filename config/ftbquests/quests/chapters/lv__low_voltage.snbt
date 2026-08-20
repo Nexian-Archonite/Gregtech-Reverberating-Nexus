@@ -5,11 +5,10 @@
 	group: "4B637402490FA38D"
 	icon: "gtceu:nexus_steel_ingot"
 	id: "794BCEDCC46401C0"
-	order_index: 2
+	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["7E7FD2B3ECE8E9EC"]
 			id: "3A8C2C4178E31D86"
 			rewards: [{
 				id: "3D14DE77F91B0D49"
@@ -26,7 +25,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["77813CB4026F0C88"]
 			id: "27E0B77DD8F5790E"
 			tasks: [{
 				id: "1BBA6D0E19EB08B7"
@@ -165,7 +163,7 @@
 			y: 10.0d
 		}
 		{
-			dependencies: ["405E6C37CE552C7D"]
+			dependencies: ["30217A6502010810"]
 			id: "7A5930218FF70FDE"
 			tasks: [{
 				id: "2A4B8C9908D70A85"
@@ -322,6 +320,26 @@
 			}]
 			x: 0.0d
 			y: 5.5d
+		}
+		{
+			id: "154CC3AE5B2A2687"
+			tasks: [{
+				id: "63711A0F4593C508"
+				item: "gtceu:ferroarcane_dust"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 5.5d
+		}
+		{
+			id: "743D5B4F2F3E6C68"
+			tasks: [{
+				id: "3496E55B171E0D01"
+				item: "gtceu:igneous_bronze_dust"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 3.5d
 		}
 	]
 	title: "LV - Low Voltage"

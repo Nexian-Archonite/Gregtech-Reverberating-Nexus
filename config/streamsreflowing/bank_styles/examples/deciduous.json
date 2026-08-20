@@ -1,0 +1,6 @@
+﻿{
+  "tags": ["c:is_tree/deciduous"],
+  "bed": "minecraft:gravel", "waterline": "minecraft:clay", "bank": "streamsreflowing:chameleon",
+  "waterline_below": 1, "waterline_above": 0,
+  "underwater_noise": 0.12, "above_water_noise": 0.12
+}

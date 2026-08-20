@@ -116,15 +116,6 @@
     "crafting_monitor": true,
     "part_name": true
   },
-  "jade_vs": {
-    "block_velocity.display_mode": "SPEED_ONLY",
-    "ship_angular_velocity.degrees_mode": true,
-    "ship_mass": true,
-    "ship_angular_velocity.display_mode": "SPEED_ONLY",
-    "ship_angular_velocity": true,
-    "block_velocity": true,
-    "block_mass": true
-  },
   "ars_nouveau": {
     "mob_jar": true
   },
@@ -146,5 +137,22 @@
   },
   "gravestone": {
     "grave": true
+  },
+  "goety_revelation": {
+    "rune_reactor_id": true,
+    "runestone_id": true
+  },
+  "goety": {
+    "block_owner": true,
+    "soul_energy": true,
+    "raider_leader": true,
+    "hostile": true,
+    "servant_mode": true,
+    "capture_mode": true,
+    "zombie_villager": true,
+    "villager_profession": true,
+    "train_to": true,
+    "summon_lifespan": true,
+    "trainable": true
   }
 }

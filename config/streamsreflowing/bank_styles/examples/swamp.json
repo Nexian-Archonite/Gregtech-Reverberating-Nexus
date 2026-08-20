@@ -1,0 +1,6 @@
+{
+  "biomes": ["minecraft:swamp"],
+  "bed": "minecraft:clay", "waterline": "minecraft:gravel", "bank": "minecraft:grass_block",
+  "waterline_below": 2, "waterline_above": 2,
+  "underwater_noise": 0.25, "above_water_noise": 0.23
+}

@@ -1,0 +1,5 @@
+{
+  "biomes": ["minecraft:jungle", "minecraft:sparse_jungle", "minecraft:bamboo_jungle"],
+  "bed": "minecraft:mossy_cobblestone", "waterline": "minecraft:mud", "bank": "minecraft:moss_block",
+  "underwater_noise": 0.23
+}

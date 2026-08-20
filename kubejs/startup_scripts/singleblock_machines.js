@@ -28,14 +28,14 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .workableTieredHullModel("gtceu:block/machines/automatic_sculk_crafter")
         )
 
-    event.create("energistics_assembler", "simple")
+    /*event.create("energistics_assembler", "simple")
         .tiers(GTValues.MV, GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM)
         .definition((tier, builder) =>
             builder
                 .langValue(`${GTValues.VLVH[tier]} Energistics Assembler`)
                 .recipeType("energistics_assembler")
                 .workableTieredHullModel("gtceu:block/machines/circuit_assembler")
-        )
+        )*/
 
 })
 

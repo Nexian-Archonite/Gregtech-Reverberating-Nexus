@@ -1,0 +1,34 @@
+#Entity types that armor squash will not take effect on
+armor_squash_blacklist = ["minecraft:player", "minecraft:armor_stand", "dummmmmmy:target_dummy"]
+#If true, bolt action shotgun is bolt action, otherwise is shotgun
+ba_shotgun_is_ba = false
+#If true, Magic damage reduction affix will only work on #forge:is_magic damage types, instead of every armor-piercing damage types
+fix_magic_protection = true
+#Max fill amount of projection magic enchantment, per 2 ticks
+#Range: > 1
+projection_magic_max_fill_speed = 4
+
+[perfect_blocking]
+	#If true, Executing posture broken enemies will instantly kill it
+	enable_instant_kill = false
+	#Damage bonus for ranged damage towards posture-broken enemies
+	#Range: 0.0 ~ 3.4028234663852886E38
+	ranged_damage_bonus = 1.5
+	#Max perfect blocks needed to break minions' posture
+	#Range: > 1
+	max_posture_for_minions = 1
+	#Max perfect blocks needed to break bosses' (#forge:bosses) posture
+	#Range: > 1
+	max_posture_for_bosses = 5
+
+[loot]
+	#If true, add guns to some archeology loot tables
+	inject_archeology_loot_tables = true
+	#If true, add guns to some chest loot tables
+	inject_chest_loot_tables = true
+
+[lesraisins_tactical_equipements]
+	#The minimum left attack cooldown for a melee weapon to be considered as Apotheosis heavy weapon.
+	#Range: > 0
+	lrtac_heavy_weapon_cooldown_threshold = 15
+

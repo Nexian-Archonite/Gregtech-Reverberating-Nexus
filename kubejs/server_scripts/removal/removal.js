@@ -1,71 +1,29 @@
 ServerEvents.recipes(e => {
     e.remove({input: 'iron_block', type: 'ae2:inscriber'})
-    e.remove({not: {mod: 'gtceu'}, output: 'gtceu:andesite_alloy_ingot'})
 
     e.remove({id: 'gtceu:electrolyzer/decomposition_electrolyzing_echoite'})
     e.remove({id: 'gtceu:electrolyzer/decomposition_electrolyzing_tainted_calcite_concentrate'})
 
     e.remove({id: 'gtceu:mixer/energium_dust'})
 
-    e.remove({id: 'ars_nouveau:source_gem_block'})
+    e.remove({id: 'ars_nouveau:imbuement_amethyst_block'})
     e.remove({id: 'ars_nouveau:source_gem_block_2'})
     e.remove({id: 'botania:mana_ring'})
 
     e.remove({output: /gtceu:.*_solar_panel/})
     e.remove({id: 'minecraft:ancient_debris'})
-    e.remove({mod: /(ad_astra|ad_astra_giselle_addon|create|)/, input: /ad_astra:.*(iron|steel|desh|ostrum|calorite)_.*/})
-    e.remove({mod: /(ad_astra|ad_astra_giselle_addon|create|)/, output: /ad_astra:.*(iron|steel|desh|ostrum|calorite)_.*/})
+    e.remove({mod: /(ad_astra|ad_astra_giselle_addon|)/, input: /ad_astra:.*(iron|steel|desh|ostrum|calorite)_.*/})
+    e.remove({mod: /(ad_astra|ad_astra_giselle_addon|)/, output: /ad_astra:.*(iron|steel|desh|ostrum|calorite)_.*/})
 
     e.remove({type: 'crafting_shaped', output: /ad_astra:(steel|desh|ostrum|calorite)_(engine|tank)/})
-
-
-    e.remove({output: /(ae2|megacells):(spatial_)?cell_component_.*/})
-    e.remove({output: /(?!gtceu).*:(.*_)?(cell|disk)_housing/})
-    e.remove({output: /(?!gtceu).*:(.*_)?(cell|disk)_(drive_)?.*/})
-    e.remove({id: 'ae2:network/crafting/molecular_assembler'})
-    e.remove({id: 'ae2:network/blocks/interfaces_interface'})
-    e.remove({id: 'ae2:network/blocks/pattern_providers_interface'})
-    e.remove({output: /ae2:(inscriber|charger)/})
-    e.remove({id: 'advanced_ae:quantum_alloy'})
-    e.remove({id: 'advanced_ae:quantum_alloy_plate'})
-    e.remove({id: 'advanced_ae:quantum_storage_component'})
-    e.remove({id: 'advanced_ae:quantum_processor_print_eae'})
-    e.remove({id: 'advanced_ae:quantum_processor_chamber'})
-    e.remove({id: 'advanced_ae:quantum_infusion'})
-    e.remove({mod: 'ae2', output: /ae2:.*_(smart|covered|glass|covered_dense|smart_dense)_cable/})
-    e.remove({mod: 'minecraft', output: /avaritia:(infinity|neutronium|neutron)_.*/})
-    e.remove({mod: 'avaritia'})
-    e.remove({type: 'ae2:inscriber'})
-    e.remove({type: 'ae2:charger'})
-    e.remove({id: /gtceu:forming_press\/ae2_processor_.*_print(2)?/})
-    e.remove({id: 'arseng:mega_source_cell_housing'})
-    e.remove({id: 'arseng:source_cell_housing'})
-    e.remove({id: /arseng:source_storage_cell_.*/})
-    e.remove({id: /ae2:network\/cells\/.*_storage_cell_.*_storage/})
-    e.remove({id: /ae2:network\/cells\/.*_storage_cell_.*/})
-    e.remove({id: /ae2:network\/crafting\/.*_cpu_crafting_storage/})
-    e.remove({id: /ae2:network\/cells\/.*_cell_housing/})
-
-    e.remove({id: 'ae2things:cells/disk_housing'})
-    e.remove({id: 'ae2:network/crafting/cpu_crafting_monitor'})
-    e.remove({id: 'ae2:network/crafting/cpu_crafting_accelerator'})
-    e.remove({id: /gtceu:assembler\/ae2_processor_.*/})
-    e.remove({id: /ae2things:cells\/disk_drive_.*(_storage)?/})
 
     e.remove({output: 'botania:manasteel_ingot'})
     e.remove({output: 'botania:manasteel_nugget'})
 
-    e.remove({id: 'advanced_ae:reactionchamber'})
     e.remove({id: 'minecraft:netherite_ingot'})
     e.remove({id: 'gtceu:smelting/smelt_dust_netherite_to_ingot'})
-    e.remove({type: 'createaddition:rolling'})
     e.remove({id: 'ad_astra:engine_frame'})
-
-    e.remove({id: 'draconicevolution:compress/awakened_draconium_ingot'})
-    e.remove({id: 'draconicevolution:decompress/awakened_draconium_ingot'})
-    e.remove({id: 'draconicevolution:decompress/awakened_draconium_nugget'})
-    e.remove({id: 'draconicevolution:compress/awakened_draconium_block'})
-
+    
     e.remove({id: 'ad_astra:desh_ingot'})
     e.remove({id: 'ad_astra:ostrum_ingot'})
     e.remove({id: 'ad_astra:calorite_ingot'})
@@ -87,5 +45,62 @@ ServerEvents.recipes(e => {
     e.remove({id: 'ad_astra:solar_panel'})
     e.remove({id: 'ad_astra_giselle_addon:crafting/automation_nasa_workbench'})
 
-    e.remove({id: 'draconicevolution:awakened_draconium_block'})
+        const recipeTypes = ["compressing", "nasa_workbench", "fuel_refinery", "alloying", "cryo_freezing"]
+    const machineIds = ["compressor", "nasa_workbench", "fuel_refinery", "etrionic_blast_furnace", "cryo_freezer"]
+    
+    recipeTypes.forEach((type) => {
+        e.remove({type: `ad_astra:${type}`})
+    })
+
+    machineIds.forEach((type) => {
+        e.remove({output: `ad_astra:${type}`})
+    })
+
+    e.remove({output: /gtceu:(tiny_|small_|double_)?flesh_alloy_.*/})
+    e.remove({output: /gtceu:(tiny_|small_|double_)?sentient_alloy_.*/})
+
+    e.remove({output: 'gtceu:plutonium_241', type: 'gtceu:fusion_reactor'})
+    e.remove({output: 'gtceu:uranium_235', type: 'gtceu:fusion_reactor'})
+    e.remove({output: 'gtceu:plutonium', type: 'gtceu:fusion_reactor'})
+    e.remove({output: 'gtceu:uranium', type: 'gtceu:fusion_reactor'})
+    e.remove({id: 'gtceu:shaped/iron_door'})
+    e.remove({output: 'ars_nouveau:source_gem'})
+    e.remove({id: 'gtceu:shapeless/dust_bronze'})
+
+    e.remove({id: 'gtceu:large_chemical_reactor/naquadah_separation'})
+
+    e.remove({id: 'gtceu:fusion_reactor/mercury_and_magnesium_to_uranium_238_plasma'})
+    e.remove({id: 'gtceu:fusion_reactor/gold_and_aluminium_to_uranium_235_plasma'})
+    e.remove({id: 'gtceu:fusion_reactor/xenon_and_zinc_to_plutonium_239_plasma'})
+    e.remove({id: 'gtceu:fusion_reactor/krypton_and_cerium_to_plutonium_241_plasma'})
+
+    e.remove({id: /gtceu:chemical_skips\/.*/})
+
+
+    e.remove({id: 'gtceu:shaped/basic_circuit_board'})
+
+    e.remove({id: 'minecraft:furnace'})
+    e.remove({id: 'minecraft:crafting_table'})
+    e.remove({id: 'quark:building/crafting/furnaces/blackstone_furnace'})
+    e.remove({id: 'quark:building/crafting/furnaces/deepslate_furnace'})
+    e.remove({id: 'quark:building/crafting/furnaces/cobblestone_furnace'})
+    e.remove({id: 'quark:building/crafting/furnaces/mixed_furnace'})
+
+    e.remove({id: 'minecraft:wooden_axe'})
+    e.remove({ output: "gtceu:resistor" })
+
+
+
+    e.remove({id: 'undergarden:catalyst'})
+e.remove({output: /allthemodium:allthemodium_(sword|axe|pickaxe|shovel|hoe)/})
+;['allthemodium', 'vibranium', 'unobtainium'].forEach(typaway => {
+    e.remove({output: `allthemodium:${typaway}_gear`})
+    e.remove({output: `allthemodium:${typaway}_plate`})
+    e.remove({output: `allthemodium:${typaway}_dust`})
+    e.remove({output: `allthemodium:${typaway}_rod`})
+    e.remove({id: new RegExp(`allthemodium:smithing/${typaway}_(sword|axe|pickaxe|shovel|hoe)_smithing`)})
+    
+    
+})
+    e.remove({mod: 'alltheores'})
 })

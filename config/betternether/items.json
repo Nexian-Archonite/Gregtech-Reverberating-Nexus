@@ -50,7 +50,12 @@
     "spawn_egg_skull [default: true]": true,
     "bowl_upgrade_smithing_template [default: true]": true,
     "flaming_ruby_upgrade_smithing_template [default: true]": true,
-    "cincinnasite_diamond_upgrade_smithing_template [default: true]": true
+    "cincinnasite_diamond_upgrade_smithing_template [default: true]": true,
+    "music_disc_gloom_woods [default: true]": true,
+    "music_disc_gloom_wisps [default: true]": true,
+    "music_disc_gloomsculk [default: true]": true,
+    "gloomwood_boat [default: true]": true,
+    "gloomwood_chest_boat [default: true]": true
   },
   "tools": {
     "cincinnasite_chestplate [default: true]": true,
@@ -86,5 +91,10 @@
     "flaming_ruby_pickaxe [default: true]": true,
     "flaming_ruby_shovel [default: true]": true,
     "flaming_ruby_helmet [default: true]": true
+  },
+  "musicDiscs": {
+    "music_disc_gloom_woods [default: true]": true,
+    "music_disc_gloom_wisps [default: true]": true,
+    "music_disc_gloomsculk [default: true]": true
   }
 }
