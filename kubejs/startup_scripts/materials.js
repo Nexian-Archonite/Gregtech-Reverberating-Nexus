@@ -192,11 +192,6 @@ event.create('neutron')
     .neutrons(0)
     .symbol('[e₊₁]')
 
-    event.create('exotron')
-    .protons(0)
-    .neutrons(0)
-    .symbol('[eₓ⁻]')
-
     event.create('glueball')
     .protons(0)
     .neutrons(0)
@@ -267,22 +262,27 @@ event.create('superior_quark')
 event.create('exo_quark')
     .protons(0)
     .neutrons(0)
-    .symbol('[x±³⁄₂]')
+    .symbol('&[nul][∂±³⁄₂]')
 
 event.create('meso_quark')
     .protons(0)
     .neutrons(0)
-    .symbol('[x±¹]')
+    .symbol('&[nul][∂±¹]')
 
 event.create('endo_quark')
     .protons(0)
     .neutrons(0)
-    .symbol('[x±³⁄₄]')
+    .symbol('&[nul][∂±³⁄₄]')
+
+    event.create('exotron')
+    .protons(0)
+    .neutrons(0)
+    .symbol('&[nul][∂ₓ⁻]')
 
 event.create('dark_hadron')
     .protons(0)
     .neutrons(0)
-    .symbol('∂m')
+    .symbol('&[nul]∂m')
 
 event.create('stellarite')
     .protons(0)
@@ -1496,22 +1496,22 @@ event.create('superior_quark')
 
 event.create('exo_quark')
     .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(1000000000))
-    .color(0x00FFFF)
+    .color(0x000000)
     .element('exo_quark')
 
 event.create('meso_quark')
     .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(1000000000))
-    .color(0xFFFF55)
+    .color(0x000000)
     .element('meso_quark')
 
 event.create('endo_quark')
     .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(1000000000))
-    .color(0xFF00FF)
+    .color(0x000000)
     .element('endo_quark')
 
 event.create('exotron')
     .liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID).temperature(500000000))
-    .color(0xFFFF00)
+    .color(0x000000)
     .element('exotron')
 
 event.create('dark_hadron')
@@ -3984,6 +3984,7 @@ Object.entries(bromineIntermediates).forEach(([name, [color, type]]) => {
     .iconSet(GEM_HORIZONTAL)
     .element('antifermium')
     .gem()
+    .liquid()
 
     GTMaterials.Helium3.setProperty(PropertyKey.ORE, new $OreProperty)
     GTMaterials.Helium3.setProperty(PropertyKey.GEM, new $GemProperty)
@@ -4015,6 +4016,7 @@ Object.entries(bromineIntermediates).forEach(([name, [color, type]]) => {
     addFluid(GTMaterials.Electrotine, $FluidStorageKeys.LIQUID)
     addFluid(GTMaterials.Promethium, $FluidStorageKeys.LIQUID)
     addFluid(GTMaterials.Holmium, $FluidStorageKeys.LIQUID)
+    addFluid(GTMaterials.Fermium, $FluidStorageKeys.LIQUID)
 
     GTMaterials.Glowstone.setComponents("1x tricalcium_phosphate", "1x gold")
     GTMaterials.Glowstone.setFormula("AuCa3(PO4)2", true)
@@ -4157,17 +4159,17 @@ Object.entries(rareorespleasefuckingkillme).forEach(([ore, [elements, color, ico
 event.create('omnic_nullate')
 .components('2x nullium', '1x omnium')
 .iconSet(GTMaterialIconSet.getByName('omnic_nullate'))
-.gem().ignoredTagPrefixes([TagPrefix.gemExquisite, TagPrefix.gemFlawless])
+.gem().ignoredTagPrefixes([TagPrefix.gemExquisite, TagPrefix.gemFlawless, TagPrefix.block]).flags(no_decomp)
 
 event.create('nullic_omnate')
 .components('2x omnium', '1x nullium')
 .iconSet(GTMaterialIconSet.getByName('nullic_omnate'))
-.gem().ignoredTagPrefixes([TagPrefix.gemExquisite, TagPrefix.gemFlawless, TagPrefix.block])
+.gem().ignoredTagPrefixes([TagPrefix.gemExquisite, TagPrefix.gemFlawless, TagPrefix.block]).flags(no_decomp)
 })
 
 GTCEuStartupEvents.materialModification(event => {
-    GTMaterials.RutheniumTriniumAmericiumNeutronate.removeProperty(PropertyKey.WIRE)
-    GTMaterials.EnrichedNaquadahTriniumEuropiumDuranide.removeProperty(PropertyKey.WIRE)
+    //GTMaterials.RutheniumTriniumAmericiumNeutronate.removeProperty(PropertyKey.WIRE)
+    //GTMaterials.EnrichedNaquadahTriniumEuropiumDuranide.removeProperty(PropertyKey.WIRE)
 })
 
 StartupEvents.registry("item", event => {
@@ -4259,7 +4261,7 @@ const yumyumrods = ["uranium_235_oxide", "enriched_naquadrium_boride", "plutoniu
 
     ;Object.entries({matter: 'rainbow', antimatter: 'nullium'}).forEach(([side, format]) => {
     const nexonSymbol = side === 'matter' ? 'ℵ₁' : 'ℵ₋₁'
-    const ferminator = side === 'antimatter' ? 'F̄m̄' : 'Fm';
+    const ferminator = side === 'antimatter' ? '&[antifermium]F̄m̄§r' : '&[fermium]Fm§r';
 
     const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1)
     event.create(`gtceu:conceptual_${side}_nexon`)
@@ -4288,7 +4290,7 @@ const yumyumrods = ["uranium_235_oxide", "enriched_naquadrium_boride", "plutoniu
     .textureJson({
         layer0: `gtceu:item/nexons/${side}_gem`
     })
-    .displayName(`Stabilized &[${format}]${capitalize(side)}-Fermite`)
+    .displayName(`&[${format}]Stabilized ${capitalize(side)}-Fermite`)
     .tooltip(`${ferminator}(&[${format}]${nexonSymbol}§r)`)
 
 
@@ -4449,7 +4451,7 @@ casing('auralloy-omega_over_transcendentine_casing', '§dTerakelvin Resilient §
 casing('vhaelcryite_casing', 'Surreal §4Pyrathene§r-§dVhaelcryite §rCasing', 'solid/vhaelcryite_casing', 13, 30, 'needs_diamond_tool')
 casing('vaelkethrite_casing', '§6Hypergolic §cVael§4kethrite §9Crystal §1Matrix §8Fusion §rCasing', 'solid/vaelkethrite_casing', 13, 30, 'needs_diamond_tool')
 casing('sulvan_steel_casing', 'Hypertensile-§7Cindra§rtechnic §6Sulvarium§r-Over-§bKraethite Steel §rCasing', 'solid/sulvan_steel_casing', 17, 40, 'needs_netherite_tool')
-casing('abyssal_netherite_casing', '§5E§dt§5h§de§dr§5e§da§dl§5l§dy§r §0Voiden &[nul]Abyssal Netherite §rCasing', 'abyssal/casing', 17, 40, 'needs_netherite_tool')
+casing('abyssal_netherite_casing', '§5E§dt§5h§de§dr§5e§da§dl§5l &[nul]Abyssal Netherite §rCasing', 'abyssal/casing', 17, 40, 'needs_netherite_tool')
 casing('aetherite_casing', '§3Cryothetically§r Hyperoperative §2Aetheric§r-§4Thermavyte§r Casing', 'solid/aetherite_casing', 17, 40, 'needs_netherite_tool')
 casing('peek_casing', "§aAcidically Nulled §6Poly-Ether Ether Ketone §rCasing", 'solid/peek_casing', 10, 23, 'needs_iron_tool')
 casing('velyl_rubber_casing', `§5E§dt§5h§de§dr§5e§da§dl§5l§dy§r §8Durable §bPoly§r(§3perfluorobis§r(§avelyl§r)§bmethylene ether§r) Rubber Casing`, 'solid/velyl_rubber_casing', 10, 23, 'needs_iron_tool')

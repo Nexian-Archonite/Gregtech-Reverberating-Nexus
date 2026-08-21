@@ -35,7 +35,7 @@ colors:
   namedColors:
     - [phoenix]:BF00FF
     - [fermium]:984acf
-    - [antiferium]:678b30
+    - [antifermium]:678b30
 
   # Named gradient/effect codes using bracket syntax.
   # Format: '[name]:colorSpeed:moveSpeed:movementId:hex1,hex2...'

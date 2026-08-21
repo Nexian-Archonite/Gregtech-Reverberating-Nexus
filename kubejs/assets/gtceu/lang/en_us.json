@@ -122,7 +122,7 @@
     "block.gtceu.transcendental_polydimensional_accelerator.tooltip.3": "§7Has Parallels: No",
 
     "block.gtceu.mythrovirdyne_transcendence_accelerator.tooltip.0": "§7Accelerates matter beyond the limits of dimensions.",
-    "block.gtceu.mythrovirdyne_transcendence_accelerator.tooltip.1": "Available Recipe Types: §2Particle Acceleration, §2Fusion Acceleration",
+    "block.gtceu.mythrovirdyne_transcendence_accelerator.tooltip.1": "Available Recipe Types: §2Particle Acceleration, Fusion Acceleration, Equalzing",
     "block.gtceu.mythrovirdyne_transcendence_accelerator.tooltip.2": "§7Has Overclock: §8Regular",
     "block.gtceu.mythrovirdyne_transcendence_accelerator.tooltip.3": "§7Has Parallels: §bBatch",
 
@@ -175,13 +175,13 @@
     "block.gtceu.pandemonic_blast_synchronizer.tooltip.4": "§7Has Overclock: §6Perfect §3Subtick",
     "block.gtceu.pandemonic_blast_synchronizer.tooltip.5": "§7Has Parallels: §1Hatch",
 
-    "block.gtceu.fracto-liminal_abyss_metal_alloyment_engine.tooltip.0": "§7The §5F.§7racto-§6L.§7iminal §1A.§7byss §3M.§7etal §4E.§7ngine.",
-    "block.gtceu.fracto-liminal_abyss_metal_alloyment_engine.tooltip.1": "§7Where reality itself becomes another alloying element",
-    "block.gtceu.fracto-liminal_abyss_metal_alloyment_engine.tooltip.2": "§7Impossible metals are born beneath infinite §cHeat§7",
-    "block.gtceu.fracto-liminal_abyss_metal_alloyment_engine.tooltip.3": "§7Even the §1Abyss§7 bends before the §5F.§6L.§1A.§3M.§4E",
-    "block.gtceu.fracto-liminal_abyss_metal_alloyment_engine.tooltip.4": "Available Recipe Types: §6Fractal §7Metal §1Alloyment",
-    "block.gtceu.fracto-liminal_abyss_metal_alloyment_engine.tooltip.5": "§7Has Overclock: No",
-    "block.gtceu.fracto-liminal_abyss_metal_alloyment_engine.tooltip.6": "§7Has Parallels: §bBatch",
+    "block.gtceu.fracto-liminal_abyss_metal_engine.tooltip.0": "§7The §5F.§7racto-§6L.§7iminal §1A.§7byss §3M.§7etal §4E.§7ngine.",
+    "block.gtceu.fracto-liminal_abyss_metal_engine.tooltip.1": "§7Where reality itself becomes another alloying element",
+    "block.gtceu.fracto-liminal_abyss_metal_engine.tooltip.2": "§7Impossible metals are born beneath infinite §cHeat§7",
+    "block.gtceu.fracto-liminal_abyss_metal_engine.tooltip.3": "§7Even the §1Abyss§7 bends before the §5F.§6L.§1A.§3M.§4E",
+    "block.gtceu.fracto-liminal_abyss_metal_engine.tooltip.4": "Available Recipe Types: §6Fractal §7Metal §1Alloyment",
+    "block.gtceu.fracto-liminal_abyss_metal_engine.tooltip.5": "§7Has Overclock: No",
+    "block.gtceu.fracto-liminal_abyss_metal_engine.tooltip.6": "§7Has Parallels: §bBatch",
 
 
 
@@ -377,7 +377,7 @@
     "material.gtceu.myxorinite": "§9Myxorinite",
     "material.gtceu.myxorite": "§9Myxorite",
     "material.gtceu.lytherite": "§aLytherite",
-    "material.gtceu.lythera": "§aLythera",
+    "material.gtceu.lythera": "§6Lythera",
     "material.gtceu.umbralite": "§8Umbralite",
     "material.gtceu.umbracite": "§8Umbracite",
     "material.gtceu.viridite": "§2Viridite",
@@ -718,6 +718,7 @@
     "material.gtceu.omegaparticle": "§fOmegaparticle [Ω⁰]",
     "material.gtceu.omni_hadron": "§6Omni Hadron [Ω⁺]",
     "material.gtceu.null_hadron": "§9Null Hadron [Ω⁻]",
+    "material.gtceu.dark_hadron": "&[nul]Dark Hadron [∂m]", 
     "material.gtceu.preon": "§5Preon [P⁰]",
     "material.gtceu.m_boson": "§4Mirror-Boson [W⁻]",
     "material.gtceu.inverse_m_boson": "§9Inverse Mirror-Boson [W⁺]",
@@ -732,13 +733,13 @@
     "material.gtceu.aurorialis": "§$Aurorialis",
 
     "material.gtceu.fermium": "&[fermium]Fermium",
-    "material.gtceu.antifermium": "&[antifermium]fermium",
+    "material.gtceu.antifermium": "&[antifermium]Fermium",
 
     
-    "material.gtceu.exo_quark": "§bExo Quark [x±³⁄₂]",
-    "material.gtceu.meso_quark": "§eMeso Quark [x±¹]",
-    "material.gtceu.endo_quark": "§dEndo Quark [x±³⁄₄]",
-    "material.gtceu.exotron": "§eExotron [eₓ⁻]",
+    "material.gtceu.exo_quark": "&[nul]Exo Quark [∂±³⁄₂]",
+    "material.gtceu.meso_quark": "&[nul]Meso Quark [∂±¹]",
+    "material.gtceu.endo_quark": "&[nul]Endo Quark [∂±³⁄₄]",
+    "material.gtceu.exotron": "&[nul]Exotron [eₓ⁻]",
 
 
     "material.gtceu.jarosite": "§6Jarosite",
@@ -861,6 +862,7 @@
     "gtceu.supercritical_fission": "§7Heart of Harmonia Burning",
     "gtceu.particle_accelerator": "§dParticle Acceleration",
     "gtceu.fusion_accelerator": "§dFusion Acceleration",
+    "gtceu.equalizer": "§2Equalizing",
     "gtceu.applied_enigma": "§dApplied Enigma",
     "gtceu.solar_collection": "§7Solar Collection",
     "gtceu.lunar_collection": "§7Lunar Collection",
@@ -908,7 +910,7 @@
     "block.gtceu.aetherite_thermostorm_chamber": "§2Aetherite §4Thermostorm§r Chamber §r(ATC)",
     "block.gtceu.everflamed_hell_forge": "§6Ever§4flamed §4§kHELL §6Forge §r(EHF)",
     "block.gtceu.pandemonic_blast_synchronizer": "§5Pan§4demonic §8Blast §4Smelter §r(PBS)",
-    "block.gtceu.fracto-liminal_abyss_metal_alloyment_engine": "§5Fracto-§6Liminal §1Abyss §3Metal §4Engine §r(§5F§6L§1A§3M§4E§r)",
+    "block.gtceu.fracto-liminal_abyss_metal_engine": "§5Fracto-§6Liminal §1Abyss §3Metal §4Engine §r(§5F§6L§1A§3M§4E§r)",
     "block.gtceu.crystal_matrix_fusion_computer": "§bCrystal §1Matrix §4Fus§6ion §7Computer §r(CMFC)",
     "block.gtceu.molten_destabilizer": "§4Molten §6Destabilizer  §r(MS)",
     "block.gtceu.chemical_singularity": "§bChemical §6Singularity §r(CS)",

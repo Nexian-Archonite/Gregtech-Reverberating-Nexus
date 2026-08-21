@@ -236,7 +236,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         `§6🔥 Temperature: ${data.getInt("TempMK")} MK§r`
     ))
 
-        event.create('fracto-liminal_abyss_metal_alloyment_engine', 'multiblock')
+        event.create('fracto-liminal_abyss_metal_engine', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .machine((holder) => new $CoilWorkableElectricMultiblockMachine(holder))
         .recipeType('fractal_metal_alloyment')

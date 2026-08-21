@@ -348,7 +348,6 @@ dualCasingAdv('aetheric-thermavyte', 'vorrexite', 'aetherite_casing')
 dualCasingAdv('surreal-pyrathene', 'surreal-pyrathene', 'vhaelcryite_casing')
 dualCasingAdv('vaelkethrite', 'vaelkethrite', 'vaelkethrite_casing')
 dualCasingAdv('pyrghul_alloy', 'pyrghul_alloy', 'pyrghul_alloy_casing')
-dualCasingAdv('abyssal_netherite', 'abyssal_netherite', 'abyssal_netherite_machine_casing')
 dualCasingAdv('mythrolyc_umbraloy', 'mythrolyc_umbraloy', 'mythrolyc_umbraloy_casing')
 dualCasingAdv('mythrovirdyne', 'mythrovirdyne', 'mythrovirdyne_casing')
 dualCasingAdv('activated_nexian_pyrite', 'activated_nexian_pyrite', 'activated_nexian_pyrite_casing')
@@ -372,8 +371,23 @@ GTM.component_part_assembly('abyssal_netherite_pipe_casing')
 .duration(50)
 .EUt(16)
 
+GTM.component_part_assembly(`abyssal_netherite_machine_casing`)
+        .itemInputs(`16x gtceu:abyssal_netherite_casing`, `8x gtceu:abyssal_netherite_gear`, `32x gtceu:abyssal_netherite_foil`)
+        .itemOutputs(`16x gtceu:abyssal_netherite_machine_casing`)
+        .inputFluids(`gtceu:abyssal_netherite 1152`, 'gtceu:indium-vor-dys-cad_supersolder_alloy 576')
+        .duration(50)
+        .EUt(32768)
+        .circuit(2)
+
+        GTM.macerator(`abyssal_netherite_machine_casing_recycling`)
+        .itemInputs(`gtceu:abyssal_netherite_machine_casing`)
+        .itemOutputs(`13x gtceu:abyssal_netherite_dust`, `gtceu:small_abyssal_netherite_dust`)
+        .duration(50)
+        .EUt(16)
+    
+    
+
 const transcendentBlastTier = [
-    { name: 'omnium', blastTemp: 19449, EUt: va.uhv, duration: 1600 },
     { name: 'sulvan_steel', blastTemp: 11000, EUt: va.uv, duration: 750 },
     { name: 'aetheric-thermavyte', blastTemp: 10799, EUt: va.uhv, duration: 800 },
     { name: 'indium-vor-dys-cad_supersolder_alloy', blastTemp: 11000, EUt: va.uhv, duration: 750},
@@ -404,6 +418,10 @@ const transcendentBlastTier = [
     { name: 'aeuvrith-al', blastTemp: 13376, EUt: va.zpm, duration: 1046 },
     { name: 'xhyv-orzael', blastTemp: 12844, EUt: va.zpm, duration: 959 },
     { name: 'ng-vaethos', blastTemp: 13461, EUt: va.zpm, duration: 832 },
+
+    { name: 'omnium', blastTemp: 19449, EUt: va.uhv, duration: 1600 },
+    { name: 'nullium', blastTemp: 29600, EUt: va.uev, duration: 2400 },
+    { name: 'infinity', blastTemp: 29600, EUt: va.uiv, duration: 3200 },
 ]
 
 const transcendentAlloyBlastTier = [
