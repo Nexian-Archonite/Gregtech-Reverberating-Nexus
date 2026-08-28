@@ -33,9 +33,27 @@ colors:
   # Example: '[phoenix]:BF00FF'  ->  use as &[phoenix] in chat
   # Named codes are completely separate from single-char codes — no overlap ever.
   namedColors:
-    - [phoenix]:BF00FF
+    - [peenixsc]:BF00FF
     - [fermium]:984acf
     - [antifermium]:678b30
+    - [aelvythrex]:B8D4FF
+    - [czyvhaeln]:DDEEFF
+    - [thurvaexi]:CCDDFF
+    - [yrethnaul]:8899BB
+    - [phaevcyrl]:EEFFFF
+    - [kholvaetzh]:334488
+    - [vrethdulix]:553322
+    - [ghauzrenit]:442211
+    - [jolvekrasz]:221100
+    - [thuzkavel]:6B2200
+    - [drevhnauxt]:110800
+    - [uxvheltris]:CCBBAA
+    - [caelvr]:88AACC
+    - [fendrothex]:556644
+    - [mornivecht]:664422
+    - [sturvaelix]:99AABB
+    - [brechovite]:7A6655
+    - [drethnavik]:334455
 
   # Named gradient/effect codes using bracket syntax.
   # Format: '[name]:colorSpeed:moveSpeed:movementId:hex1,hex2...'
@@ -72,4 +90,23 @@ colors:
     - [chorite]:0.0:2.5:breath:16002B,4B087A,24003F
     - [nullium]:3.0:0.0:glitch:FFFFFF,AAAAAA,333333,000000
     - [infinity]:1.5:0.0:liquid_plasma:FFFFFF,AAAAAA,000000
+    - [lunar_shimmer]:0.0:0.0:mirror:B8D4FF,EEFFFF,001A4D
+    - [moonveil]:0.0:1.5:breath:CCDDFF,001A4D
+    - [pale_arc]:0.0:0.0:none:EEFFFF,8899BB
+    - [deep_vault]:0.0:2.0:breath:111122,334488
+    - [ember_pulse]:0.8:0.0:pulse:FF6633,220800
+    - [char_breath]:0.0:1.8:breath:553322,110800
+    - [scorch_wave]:1.0:1.5:wave:FF4411,221100,662200
+    - [ashglow]:0.0:0.0:none:CCBBAA,553311
+    - [slate_fade]:0.0:0.0:fade:88AACC,223344
+    - [loam]:0.0:0.0:none:556644,223311
+    - [ironveil]:0.0:1.2:breath:99AABB,334455
+    - [aelczyr_sheen]:0.0:0.0:mirror:DDEEFF,3366AA
+    - [thulvaex_deep]:0.0:2.5:breath:334477,111122
+    - [vrethren_forge]:1.0:1.2:pulse:DD4400,553322
+    - [jolvelix_flare]:0.8:1.0:wave:CC4411,221100
+    - [caeldrox_cast]:0.0:0.0:none:88AACC,556644
+    - [sturvik_plate]:0.0:0.0:mirror:99AABB,334455
+    - [morniloy]:0.0:1.8:breath:B8A86A,2A1A0A
+    - [sturvene]:0.0:1.8:breath:65727C,39444D
 

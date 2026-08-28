@@ -44,6 +44,7 @@ ServerEvents.recipes(e => {
     e.remove({id: 'ad_astra:water_pump'})
     e.remove({id: 'ad_astra:solar_panel'})
     e.remove({id: 'ad_astra_giselle_addon:crafting/automation_nasa_workbench'})
+    e.remove({id: 'gtceu:shaped/bronze_primitive_blast_furnace'})
 
         const recipeTypes = ["compressing", "nasa_workbench", "fuel_refinery", "alloying", "cryo_freezing"]
     const machineIds = ["compressor", "nasa_workbench", "fuel_refinery", "etrionic_blast_furnace", "cryo_freezer"]

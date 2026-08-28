@@ -176,7 +176,7 @@ global.periodicTableElement = (material, type) => {
                 case 'molten': prop.getStorage().enqueueRegistration(GTFluidStorageKeys.MOLTEN, new GTFluidBuilder()); break
             }
             mat.setProperty(PropertyKey.FLUID, prop); 
-            break;
+            break
         }  
     }
 }
@@ -192,6 +192,6 @@ global.coilMachineTempDisplay = (controller, components) => {
             Component.translatable("gtceu.multiblock.blast_furnace.max_temperature",
                 Component.literal(`§c${$FormattingUtil.formatNumbers(controller.getCoilType().getCoilTemperature() + 100 * Math.max(0, controller.getTier() - GTValues.MV))}K§r`)
             )
-        );
+        )
     }
 };

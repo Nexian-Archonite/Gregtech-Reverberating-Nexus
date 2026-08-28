@@ -568,6 +568,101 @@ event.create('viridrine')
     .neutrons(198)
     .symbol('Vr')
 
+// NETHER
+
+event.create('aelvythrex')
+    .protons(121)
+    .neutrons(184)
+    .symbol('Alv')
+
+event.create('czyvhaeln')
+    .protons(124)
+    .neutrons(189)
+    .symbol('Czv')
+
+event.create('thurvaexi')
+    .protons(126)
+    .neutrons(193)
+    .symbol('Tx')
+
+event.create('yrethnaul')
+    .protons(129)
+    .neutrons(198)
+    .symbol('Yr')
+
+event.create('phaevcyrl')
+    .protons(123)
+    .neutrons(187)
+    .symbol('Ph')
+
+event.create('kholvaetzh')
+    .protons(132)
+    .neutrons(204)
+    .symbol('Khv')
+
+// MERCURY
+
+event.create('vrethdulix')
+    .protons(120)
+    .neutrons(182)
+    .symbol('Vdx')
+
+event.create('ghauzrenit')
+    .protons(125)
+    .neutrons(191)
+    .symbol('Gz')
+
+event.create('jolvekrasz')
+    .protons(127)
+    .neutrons(196)
+    .symbol('Jk')
+
+event.create('thuzkavel')
+    .protons(128)
+    .neutrons(194)
+    .symbol('Tzk')
+
+event.create('drevhnauxt')
+    .protons(131)
+    .neutrons(202)
+    .symbol('Dn')
+
+event.create('uxvheltris')
+    .protons(133)
+    .neutrons(207)
+    .symbol('Ux')
+
+// OVERWORLD
+event.create('caelvr')
+    .protons(119)
+    .neutrons(180)
+    .symbol('Clv')
+
+event.create('fendrothex')
+    .protons(122)
+    .neutrons(185)
+    .symbol('Fn')
+
+event.create('mornivecht')
+    .protons(125)
+    .neutrons(192)
+    .symbol('Mon')
+
+event.create('sturvaelix')
+    .protons(127)
+    .neutrons(197)
+    .symbol('Stv')
+
+event.create('brechovite')
+    .protons(130)
+    .neutrons(200)
+    .symbol('Brv')
+
+event.create('drethnavik')
+    .protons(134)
+    .neutrons(209)
+    .symbol('Drv')
+
 // random shit
 
 event.create('antifermium')
@@ -577,6 +672,940 @@ event.create('antifermium')
 })
 
 GTCEuStartupEvents.registry('gtceu:material', event => {
+
+    event.create('naquadrium')
+    .element('naquadrium')
+    .color(0x1f1f1f).secondaryColor(0x00ffff).iconSet(DULL)
+    .ingot(4)
+    .flags(foil, spring, fine_wire, bolt_and_screw, rod)
+    .cableProperties(v.zpm, 5, 2, false)
+    .rotorStats(180, 110, 4, 1600)
+    .fluidPipeProperties(4000, 225, true, false, true, true)
+    .blastTemp(5400, "high", va.iv, 550)
+    .liquid(5350)
+    .radioactiveHazard(1)
+
+    // alien materials
+
+//========================
+// MARS GEMS
+//========================
+
+event.create('chronosite')
+    .gem()
+    .color(0x1a0033).secondaryColor(0x99ddff)
+    .iconSet(GEM_VERTICAL)
+    .element('chronosite')
+    .flags(rod, frame)
+    .fluid()
+
+event.create('vhaelcryite')
+    .gem()
+    .color(0xff007f).secondaryColor(0xff99cc)
+    .iconSet(GEM_VERTICAL)
+    .element('vhaelcryite')
+    .flags(plates, rod, frame)
+    .fluid()
+
+event.create('kraethite')
+    .gem()
+    .color(0x00cfff).secondaryColor(0x004466)
+    .iconSet(GEM_HORIZONTAL)
+    .element('kraethite')
+    .fluid()
+
+
+//========================
+// VENUS GEMS
+//========================
+event.create('vaelthorium')
+    .gem()
+    .color(0x2d0010).secondaryColor(0xcc4400)
+    .iconSet(GEM_VERTICAL)
+    .element('vaelthorium')
+    .flags(rod, frame, plates)
+    .fluid()
+
+event.create('sulvarium')
+    .gem()
+    .color(0xffcc00).secondaryColor(0x664400)
+    .iconSet(NETHERSTAR)
+    .element('sulvarium')
+    .fluid()
+
+event.create('kethrite')
+    .gem()
+    .color(0xff4400).secondaryColor(0x1a0000)
+    .iconSet(RUBY)
+    .element('kethrite')
+    .flags(rod, frame, plates)
+    .fluid()
+
+event.create('vorrexite')
+    .gem()
+    .color(0x330022).secondaryColor(0xff0066)
+    .iconSet(EMERALD)
+    .element('vorrexite')
+    .flags(frame, bolt_and_screw)
+    .fluid()
+
+event.create('thermavyte')
+    .gem()
+    .color(0xff6600).secondaryColor(0x2a0a00)
+    .iconSet(CERTUS)
+    .element('thermavyte')
+    .fluid()
+
+event.create('cindralite')
+    .gem()
+    .color(0x888888).secondaryColor(0xff3300)
+    .iconSet(GEM_HORIZONTAL)
+    .element('cindralite')
+    .flags(frame, bolt_and_screw)
+    .fluid()
+
+event.create('aetherite') 
+    .gem()
+    .color(0x003322).secondaryColor(0x00ff99)
+    .iconSet(GEM_VERTICAL)
+    .element('aetherite')
+    .fluid()
+
+event.create('pyrathene')
+    .gem()
+    .color(0xcc0000).secondaryColor(0xffaa00)
+    .iconSet(RUBY)
+    .element('pyrathene')
+    .flags(frame, plates, dense_plate)
+    .fluid()
+
+event.create('draconium')
+    .ore(1, 2, false)
+    .color(0x702880).iconSet(METALLIC)
+    .dust()
+    .element('draconium')
+    .addOreByproducts('titanium', 'rhenium', 'naquadah')
+    .ignoredTagPrefixes([TagPrefix.dustTiny, TagPrefix.dustSmall])
+    
+//========================
+// NETHER METALS
+//========================
+
+event.create('ignavyte')
+    .color(0xB22000).secondaryColor(0xFF6600)
+    .iconSet(SHINY)
+    .ingot()
+    .element('ignavyte')
+    .blastTemp(11042, null, va.luv, 874)
+    .liquid(11042)
+
+event.create('flagrax')
+    .color(0xFF3300).secondaryColor(0x661100)
+    .iconSet(METALLIC)
+    .ingot()
+    .element('flagrax')
+    .blastTemp(11791, null, va.luv, 1051)
+    .liquid(11791)
+
+event.create('vhorryte')
+    .color(0x8B0000).secondaryColor(0xFF1111)
+    .iconSet(DULL)
+    .ingot()
+    .element('vhorryte')
+    .blastTemp(12356, null, va.luv, 913)
+    .liquid(12356)
+
+event.create('ghulveyte')
+    .color(0xBBCCCC).secondaryColor(0x334444)
+    .iconSet(SHINY)
+    .ingot()
+    .element('ghulveyte')
+    .blastTemp(12988, null, va.luv, 1028)
+    .liquid(12988)
+
+event.create('ashrax')
+    .color(0x2A1A0A).secondaryColor(0x6B4A2A)
+    .iconSet(DULL)
+    .ingot()
+    .element('ashrax')
+    .blastTemp(13547, null, va.luv, 845)
+    .liquid(13547)
+
+event.create('pyrrhovyte')
+    .color(0x4A0000).secondaryColor(0xCC4400)
+    .iconSet(METALLIC)
+    .ingot()
+    .element('pyrrhovyte')
+    .blastTemp(12081, null, va.luv, 986)
+    .liquid(12081)
+
+
+//========================
+// END METALS
+//========================
+
+event.create('vaex-thryn')
+    .color(0xC8B4FF).secondaryColor(0x1A0033)
+    .iconSet(SHINY)
+    .ingot()
+    .element('vaex-thryn')
+    .blastTemp(13124, null, va.zpm, 917)
+    .liquid(13124)
+
+event.create('orvaelithe')
+    .color(0x00FFD0).secondaryColor(0x003322)
+    .iconSet(METALLIC)
+    .ingot()
+    .element('orvaelithe')
+    .blastTemp(13600, null, va.zpm, 1083)
+    .liquid(13600)
+
+event.create('khzaevhul')
+    .color(0x2B002B).secondaryColor(0xFF00FF)
+    .iconSet(SHINY)
+    .ingot()
+    .element('khzaevhul')
+    .blastTemp(12532, null, va.zpm, 891)
+    .liquid(12532)
+
+event.create('aeuvrith-al')
+    .color(0xEEEEFF).secondaryColor(0x9900CC)
+    .iconSet(SHINY)
+    .ingot()
+    .element('aeuvrith-al')
+    .blastTemp(13376, null, va.zpm, 1046)
+    .liquid(13376)
+
+event.create('xhyv-orzael')
+    .color(0x000033).secondaryColor(0x4444FF)
+    .iconSet(DULL)
+    .ingot()
+    .element('xhyv-orzael')
+    .blastTemp(12844, null, va.zpm, 959)
+    .liquid(12844)
+
+event.create('ng-vaethos')
+    .color(0xFF99EE).secondaryColor(0x220011)
+    .iconSet(METALLIC)
+    .ingot()
+    .element('ng-vaethos')
+    .blastTemp(13461, null, va.zpm, 832)
+    .liquid(13461)
+
+//========================
+// UNDERGARDEN METALS
+//========================
+
+event.create('mythryl')
+    .color(0x006666).secondaryColor(0x008c8c)
+    .iconSet(SHINY)
+    .ingot()
+    .element('mythryl')
+    .blastTemp(13874, null, va.zpm, 961)
+    .liquid(13874)
+
+event.create('velium')
+    .color(0xA7DCC8).secondaryColor(0x5C8F84)
+    .iconSet(METALLIC)
+    .ingot()
+    .element('velium')
+    .blastTemp(14211, null, va.zpm, 1024)
+    .liquid(14211)
+
+event.create('myxorite')
+    .color(0x5E68D8).secondaryColor(0x262B63)
+    .iconSet(DULL)
+    .ingot()
+    .element('myxorite')
+    .blastTemp(14583, null, va.zpm, 884)
+    .liquid(14583)
+
+
+//========================
+// UNDERGARDEN GEMS
+//========================
+
+event.create('lythera')
+    .gem()
+    .color(0xF0D000).secondaryColor(0xA08800)
+    .iconSet(GEM_VERTICAL)
+    .element('lythera')
+    .fluid()
+
+event.create('umbracite')
+    .gem()
+    .color(0x35263F).secondaryColor(0x8E7DB3)
+    .iconSet(GEM_HORIZONTAL)
+    .element('umbracite')
+    .fluid()
+
+event.create('viridrine')
+    .gem()
+    .color(0x3EDB8A).secondaryColor(0x0D5C43)
+    .iconSet(EMERALD)
+    .element('viridrine')
+    .fluid()
+
+//========================
+// MOON METALS
+//========================
+ 
+event.create('aelvythrex')
+    .color(0xB8D4FF).secondaryColor(0x001A4D)
+    .iconSet(SHINY)
+    .ingot()
+    .element('aelvythrex')
+    .blastTemp(16240, null, va.uhv, 1124)
+    .liquid(16240)
+ 
+event.create('czyvhaeln')
+    .color(0xDDEEFF).secondaryColor(0x223366)
+    .iconSet(SHINY)
+    .ingot()
+    .element('czyvhaeln')
+    .blastTemp(16880, null, va.uhv, 1093)
+    .liquid(16880)
+ 
+event.create('thurvaexi')
+    .color(0xCCDDFF).secondaryColor(0x334477)
+    .iconSet(SHINY)
+    .ingot()
+    .element('thurvaexi')
+    .blastTemp(17100, null, va.uhv, 1201)
+    .liquid(17100)
+ 
+event.create('yrethnaul')
+    .color(0x8899BB).secondaryColor(0x112244)
+    .iconSet(METALLIC)
+    .ingot()
+    .element('yrethnaul')
+    .blastTemp(17440, null, va.uhv, 1318)
+    .liquid(17440)
+ 
+event.create('phaevcyrl')
+    .color(0xEEFFFF).secondaryColor(0x004455)
+    .iconSet(SHINY)
+    .ingot()
+    .element('phaevcyrl')
+    .blastTemp(16600, null, va.uhv, 1177)
+    .liquid(16600)
+ 
+event.create('kholvaetzh')
+    .color(0x111122).secondaryColor(0x334488)
+    .iconSet(DULL)
+    .ingot()
+    .element('kholvaetzh')
+    .blastTemp(17800, null, va.uhv, 1402)
+    .liquid(17800)
+
+//========================
+// MERCURY METALS
+//========================
+ 
+event.create('vrethdulix')
+    .color(0x553322).secondaryColor(0xFF6633)
+    .iconSet(DULL)
+    .ingot()
+    .element('vrethdulix')
+    .blastTemp(16180, null, va.uhv, 1088)
+    .liquid(16180)
+ 
+event.create('ghauzrenit')
+    .color(0x442211).secondaryColor(0xDD4400)
+    .iconSet(METALLIC)
+    .ingot()
+    .element('ghauzrenit')
+    .blastTemp(16740, null, va.uhv, 1211)
+    .liquid(16740)
+ 
+event.create('jolvekrasz')
+    .color(0x221100).secondaryColor(0x883300)
+    .iconSet(DULL)
+    .ingot()
+    .element('jolvekrasz')
+    .blastTemp(17220, null, va.uhv, 1344)
+    .liquid(17220)
+ 
+event.create('thuzkavel')
+    .color(0x6B2200).secondaryColor(0xFF4411)
+    .iconSet(METALLIC)
+    .ingot()
+    .element('thuzkavel')
+    .blastTemp(16960, null, va.uhv, 1289)
+    .liquid(16960)
+ 
+event.create('drevhnauxt')
+    .color(0x110800).secondaryColor(0x662200)
+    .iconSet(DULL)
+    .ingot()
+    .element('drevhnauxt')
+    .blastTemp(17680, null, va.uhv, 1388)
+    .liquid(17680)
+ 
+event.create('uxvheltris')
+    .color(0xCCBBAA).secondaryColor(0x553311)
+    .iconSet(SHINY)
+    .ingot()
+    .element('uxvheltris')
+    .blastTemp(17940, null, va.uhv, 1419)
+    .liquid(17940)
+
+//========================
+// OVERWORLD METALS
+//========================
+ 
+event.create('caelvr')
+    .color(0x88AACC).secondaryColor(0x223344)
+    .iconSet(METALLIC)
+    .ingot()
+    .element('caelvr')
+    .blastTemp(16020, null, va.uhv, 1066)
+    .liquid(16020)
+ 
+event.create('fendrothex')
+    .color(0x556644).secondaryColor(0x223311)
+    .iconSet(DULL)
+    .ingot()
+    .element('fendrothex')
+    .blastTemp(16380, null, va.uhv, 1134)
+    .liquid(16380)
+ 
+event.create('mornivecht')
+    .color(0x2A1A0A).secondaryColor(0x664422)
+    .iconSet(DULL)
+    .ingot()
+    .element('mornivecht')
+    .blastTemp(16820, null, va.uhv, 1256)
+    .liquid(16820)
+ 
+event.create('sturvaelix')
+    .color(0x99AABB).secondaryColor(0x445566)
+    .iconSet(METALLIC)
+    .ingot()
+    .element('sturvaelix')
+    .blastTemp(17140, null, va.uhv, 1311)
+    .liquid(17140)
+ 
+event.create('brechovite')
+    .color(0x7A6655).secondaryColor(0x332211)
+    .iconSet(DULL)
+    .ingot()
+    .element('brechovite')
+    .blastTemp(17460, null, va.uhv, 1367)
+    .liquid(17460)
+ 
+event.create('drethnavik')
+    .color(0x334455).secondaryColor(0x001122)
+    .iconSet(METALLIC)
+    .ingot()
+    .element('drethnavik')
+    .blastTemp(17980, null, va.uhv, 1433)
+    .liquid(17980)
+
+
+//========================
+// VENUS MINERALS
+//========================
+
+
+event.create('vaelthorite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0x2d0010).secondaryColor(0x664400)
+    .iconSet(METALLIC)
+    .components('1x vaelthorium', '1x sulfur', '1x lead')
+    .addOreByproducts('thorium', 'sulfur', 'lead')
+    .flags(no_decomp)
+
+event.create('sulvarite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0xffcc00).secondaryColor(0x886600)
+    .iconSet(METALLIC)
+    .components('1x sulvarium', '1x bismuth', '1x gold')
+    .addOreByproducts('silver', 'bismuth', 'gold')
+    .flags(no_decomp)
+
+event.create('kethrenite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0xff4400).secondaryColor(0x331100)
+    .iconSet(METALLIC)
+    .components('1x kethrite', '1x copper', '1x nickel')
+    .addOreByproducts('redstone', 'copper', 'nickel')
+    .flags(no_decomp)
+
+event.create('vorrexinite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0x330022).secondaryColor(0x880044)
+    .iconSet(METALLIC)
+    .components('1x vorrexite', '1x osmium', '1x iridium')
+    .addOreByproducts('ruthenium', 'osmium', 'iridium')
+    .flags(no_decomp)
+
+event.create('thermastone')
+    .dust()
+    .ore(2, 2, true)
+    .color(0xff6600).secondaryColor(0x553300)
+    .iconSet(METALLIC)
+    .components('1x thermavyte', '1x magnesium', '1x chromium')
+    .addOreByproducts('tantalum', 'magnesium', 'chromium')
+    .flags(no_decomp)
+
+event.create('cindrax')
+    .dust()
+    .ore(2, 2, true)
+    .color(0x888888).secondaryColor(0x442200)
+    .iconSet(METALLIC)
+    .components('1x cindralite', '1x silicon', '1x tin')
+    .addOreByproducts('manganese', 'silicon', 'tin')
+    .flags(no_decomp)
+
+event.create('aetheric_palladite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0x003322).secondaryColor(0x00ff99)
+    .iconSet(METALLIC)
+    .components('1x aetherite', '1x niobium', '1x palladium')
+    .addOreByproducts('aluminium', 'niobium', 'palladium')
+    .flags(no_decomp)
+
+event.create('pyrathite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0xcc0000).secondaryColor(0xffaa00)
+    .iconSet(METALLIC)
+    .components('1x pyrathene', '1x titanium', '1x vanadium')
+    .addOreByproducts('source', 'titanium', 'vanadium')
+    .flags(no_decomp)
+
+//========================
+// MARS MINERALS
+//========================
+// random tomfooler
+    event.create('rhenium_iii_sulfate')
+    .components('2x rhenium', 'sulfur', '4x oxygen')
+    .ore(1, 2, true)
+    .formula('Re2(SO4)3')
+    .color(0x3e6e9b).iconSet(DULL)
+    .dust()
+    .flags(no_decomp)
+// back to unfoolery
+event.create('nulledryte')
+    .dust()
+    .ore(2, 2, true)
+    .color(0x1a0033).secondaryColor(0x00aa33)
+    .iconSet(METALLIC)
+    .components('8x chronosite', '1x oganesson')
+    .addOreByproducts('oganesson', 'oganesson', 'rhenium_iii_sulfate')
+    .flags(no_decomp)
+
+event.create('xycrhovite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0xcc99ff).secondaryColor(0x440066)
+    .iconSet(METALLIC)
+    .components('6x draconium', '4x echo')
+    .addOreByproducts('draconium', 'echo', 'dilithium')
+    .flags(no_decomp)
+
+event.create('vheszcryl')
+    .dust()
+    .ore(2, 2, true)
+    .color(0xff007f).secondaryColor(0x330011)
+    .iconSet(METALLIC)
+    .components('6x vhaelcryite', '4x transcendentine')
+    .addOreByproducts('rhodium', 'transcendentine', 'enstatite')
+    .flags(no_decomp)
+
+event.create('grothemite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0xffaa00).secondaryColor(0x332200)
+    .iconSet(METALLIC)
+    .components('8x rare_earth', '5x hafnium', '3x iron')
+    .addOreByproducts('rare_earth', 'hafnium', 'iron')
+    .flags(no_decomp)
+
+event.create('krethavine')
+    .dust()
+    .ore(2, 2, true)
+    .color(0x3366ff).secondaryColor(0x66ddff)
+    .iconSet(METALLIC)
+    .components('6x kraethite', '5x lanthanum', '3x titanium')
+    .addOreByproducts('nexus', 'lanthanum', 'titanium')
+    .flags(no_decomp)
+
+event.create('orvexite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0x006600).secondaryColor(0x003300)
+    .iconSet(METALLIC)
+    .components('5x rare_earth', '4x osmiridium', '2x plutonium')
+    .addOreByproducts('rare_earth', 'osmiridium', 'plutonium')
+    .flags(no_decomp)
+
+event.create('phazdurite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0x110000).secondaryColor(0xcc0000)
+    .iconSet(METALLIC)
+    .components('6x transcendentine', '4x naquadria')
+    .addOreByproducts('transcendentine', 'naquadria', 'radon')
+    .flags(no_decomp)
+
+//========================
+// NETHER MINERALS
+//========================
+
+event.create('ignavite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0xD53A00).secondaryColor(0xFF8A22)
+    .iconSet(RUBY)
+    .components('4x ignavyte', '2x sulfur', '1x thermavyte')
+    .addOreByproducts('gold', 'pyrite', 'zirconium')
+    .flags(no_decomp)
+
+event.create('flagraxite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0xE63A18).secondaryColor(0x5A1808)
+    .iconSet(BRIGHT)
+    .components('4x flagrax', '2x pyrite', '1x sulfur')
+    .addOreByproducts('platinum', 'electrotine', 'hafnium')
+    .flags(no_decomp)
+
+event.create('vhorrite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0x990000).secondaryColor(0xFF3333)
+    .iconSet(GEM_VERTICAL)
+    .components('4x vhorryte', '2x zirconium', '1x redstone')
+    .addOreByproducts('gold', 'thermavyte', 'pyrite')
+    .flags(no_decomp)
+
+event.create('ghulvenite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0xC8D8D8).secondaryColor(0x445555)
+    .iconSet(OPAL)
+    .components('4x ghulveyte', '2x electrotine', '1x hafnium')
+    .addOreByproducts('platinum', 'cindralite', 'zirconium')
+    .flags(no_decomp)
+
+event.create('ashraxite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0x3A2412).secondaryColor(0x735232)
+    .iconSet(DIAMOND)
+    .components('4x ashrax', '2x cindralite', '1x sulfur')
+    .addOreByproducts('gold', 'thermavyte', 'pyrite')
+    .flags(no_decomp)
+
+event.create('pyrrhovite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0x660000).secondaryColor(0xDD5511)
+    .iconSet(GEM_HORIZONTAL)
+    .components('4x pyrrhovyte', '2x thermavyte', '1x platinum')
+    .addOreByproducts('hafnium', 'sulfur', 'electrotine')
+    .flags(no_decomp)
+
+
+//========================
+// END MINERALS
+//========================
+
+event.create('vaexthrynite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0xD6C4FF).secondaryColor(0x2A1055)
+    .iconSet(NETHERSTAR)
+    .components('4x vaex-thryn', '2x draconium', '1x naquadah')
+    .addOreByproducts('radon', 'uraninite', 'scheelite')
+    .flags(no_decomp)
+
+event.create('orvaelite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0x22FFD8).secondaryColor(0x004433)
+    .iconSet(EMERALD)
+    .components('4x orvaelithe', '2x tungstate', '1x scheelite')
+    .addOreByproducts('draconium', 'naquadrium', 'radon')
+    .flags(no_decomp)
+
+event.create('khzaevhulite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0x400040).secondaryColor(0xFF44FF)
+    .iconSet(RUBY)
+    .components('4x khzaevhul', '2x plutonium', '1x plutonium_241')
+    .addOreByproducts('naquadah', 'radon', 'uraninite')
+    .flags(no_decomp)
+
+event.create('aeuvrite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0xFFFFFF).secondaryColor(0xAA22DD)
+    .iconSet(OPAL)
+    .components('4x aeuvrith-al', '2x uraninite', '1x radon')
+    .addOreByproducts('draconium', 'naquadah', 'tungstate')
+    .flags(no_decomp)
+
+event.create('xhyvorzite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0x111144).secondaryColor(0x5A5AFF)
+    .iconSet(BRIGHT)
+    .components('4x xhyv-orzael', '2x naquadrium', '1x scheelite')
+    .addOreByproducts('plutonium', 'draconium', 'radon')
+    .flags(no_decomp)
+
+event.create('vaethosite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0xFFB3F3).secondaryColor(0x331122)
+    .iconSet(GEM_VERTICAL)
+    .components('4x ng-vaethos', '2x scheelite', '1x naquadah')
+    .addOreByproducts('tungstate', 'uraninite', 'plutonium_241')
+    .flags(no_decomp)
+
+//========================
+// UNDERGARDEN MINERALS
+//========================
+
+event.create('mythryte')
+    .dust()
+    .ore(2, 2, true)
+    .color(0x005b5b).secondaryColor(0x008c8c)
+    .iconSet(METALLIC)
+    .components('1x mythryl', '1x gold', '1x indium')
+    .addOreByproducts('mythryl', 'gold', 'indium')
+    .flags(no_decomp)
+
+event.create('velithite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0xA7DCC8).secondaryColor(0x5C8F84)
+    .iconSet(METALLIC)
+    .components('1x velium', '1x zinc', '1x bismuth')
+    .addOreByproducts('velium', 'zinc', 'bismuth')
+    .flags(no_decomp)
+
+event.create('myxorinite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0x5E68D8).secondaryColor(0x262B63)
+    .iconSet(METALLIC)
+    .components('1x myxorite', '1x palladium', '1x tellurium')
+    .addOreByproducts('myxorite', 'palladium', 'tellurium')
+    .flags(no_decomp)
+
+event.create('lytherite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0xB5A030).secondaryColor(0x6B5E1A)
+    .iconSet(METALLIC)
+    .components('1x lythera', '1x condensed_mana', '1x selenium')
+    .addOreByproducts('lythera', 'condensed_mana', 'selenium')
+    .flags(no_decomp)
+
+event.create('umbralite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0x35263F).secondaryColor(0x8E7DB3)
+    .iconSet(METALLIC)
+    .components('1x umbracite', '1x nexus', '1x bismuth')
+    .addOreByproducts('umbracite', 'nexus', 'bismuth')
+    .flags(no_decomp)
+
+event.create('viridite')
+    .dust()
+    .ore(2, 2, true)
+    .color(0x3EDB8A).secondaryColor(0x0D5C43)
+    .iconSet(METALLIC)
+    .components('1x viridrine', '1x silver', '1x zinc')
+    .addOreByproducts('viridrine', 'silver', 'zinc')
+    .flags(no_decomp)
+
+//========================
+// MOON MINERALS
+//========================
+ 
+event.create('aelvythrexite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0xC8DFFF).secondaryColor(0x002266)
+    .iconSet(OPAL)
+    .components('4x aelvythrex', '2x ilmenite', '1x rutile')
+    .addOreByproducts('naquadria', 'europium', 'lutetium')
+    .flags(no_decomp)
+ 
+event.create('czyvhaelnite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0xEEF6FF).secondaryColor(0x334477)
+    .iconSet(NETHERSTAR)
+    .components('4x czyvhaeln', '2x spodumene', '1x bauxite')
+    .addOreByproducts('naquadria', 'hafnium', 'dysprosium')
+    .flags(no_decomp)
+ 
+event.create('thurvaexite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0xDDEEFF).secondaryColor(0x445588)
+    .iconSet(RUBY)
+    .components('4x thurvaexi', '2x sapphire', '1x apatite')
+    .addOreByproducts('cooperite', 'naquadria', 'europium')
+    .flags(no_decomp)
+ 
+event.create('yrethnaulite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0x9AAABB).secondaryColor(0x223355)
+    .iconSet(DULL)
+    .components('4x yrethnaul', '2x magnetite', '1x ilmenite')
+    .addOreByproducts('naquadria', 'lutetium', 'bastnasite')
+    .flags(no_decomp)
+ 
+event.create('phaevcyrlite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0xF0FFFF).secondaryColor(0x005566)
+    .iconSet(EMERALD)
+    .components('4x phaevcyrl', '2x rutile', '1x xenotime')
+    .addOreByproducts('naquadria', 'dysprosium', 'cooperite')
+    .flags(no_decomp)
+ 
+event.create('kholvaetzhite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0x1A1A33).secondaryColor(0x4455AA)
+    .iconSet(BRIGHT)
+    .components('4x kholvaetzh', '2x monazite', '1x bastnasite')
+    .addOreByproducts('naquadria', 'europium', 'hafnium')
+    .flags(no_decomp)
+
+
+//========================
+// MERCURY MINERALS
+//========================
+ 
+event.create('vrethdulixit')
+    .gem()
+    .ore(2, 2, true)
+    .color(0x664433).secondaryColor(0xFF7744)
+    .iconSet(RUBY)
+    .components('4x vrethdulix', '2x chromite', '1x pyroxene')
+    .addOreByproducts('naquadria', 'cooperite', 'iridium')
+    .flags(no_decomp)
+ 
+event.create('ghauzrenitite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0x553322).secondaryColor(0xEE5500)
+    .iconSet(DULL)
+    .components('4x ghauzrenit', '2x enstatite', '1x graphite')
+    .addOreByproducts('osmium', 'naquadria', 'cooperite')
+    .flags(no_decomp)
+ 
+event.create('jolvekrasite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0x331100).secondaryColor(0x994400)
+    .iconSet(DULL)
+    .components('4x jolvekrasz', '2x pyroxene', '1x enstatite')
+    .addOreByproducts('iridium', 'naquadria', 'osmium')
+    .flags(no_decomp)
+ 
+event.create('thuzkavelite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0x7A3300).secondaryColor(0xFF5522)
+    .iconSet(METALLIC)
+    .components('4x thuzkavel', '2x graphite', '1x chromite')
+    .addOreByproducts('cooperite', 'sperrylite', 'naquadria')
+    .flags(no_decomp)
+ 
+event.create('drevhnauxite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0x220A00).secondaryColor(0x773300)
+    .iconSet(BRIGHT)
+    .components('4x drevhnauxt', '2x enstatite', '1x pyroxene')
+    .addOreByproducts('naquadria', 'iridium', 'sperrylite')
+    .flags(no_decomp)
+ 
+event.create('uxvheltrisite')
+    .gem()
+    .ore(2, 2, true)
+    .color(0xDDCCBB).secondaryColor(0x664422)
+    .iconSet(SHINY)
+    .components('4x uxvheltris', '2x cooperite', '1x xenotime')
+    .addOreByproducts('osmium', 'naquadria', 'iridium')
+    .flags(no_decomp)
+
+//========================
+// OVERWORLD MINERALS
+//========================
+ 
+event.create('caelvrite')
+    .gem()
+    .ore(6, 3, true)
+    .color(0x99BBDD).secondaryColor(0x334455)
+    .iconSet(OPAL)
+    .components('4x caelvr', '2x molybdenite', '1x scheelite')
+    .addOreByproducts('naquadria', 'platinum', 'palladium')
+    .flags(no_decomp)
+ 
+event.create('fendrothexite')
+    .gem()
+    .ore(6, 3, true)
+    .color(0x667755).secondaryColor(0x334422)
+    .iconSet(EMERALD)
+    .components('4x fendrothex', '2x olivine', '1x molybdenite')
+    .addOreByproducts('iridium', 'naquadria', 'platinum')
+    .flags(no_decomp)
+ 
+event.create('mornivechtite')
+    .gem()
+    .ore(6, 3, true)
+    .color(0x3A2A1A).secondaryColor(0x775533)
+    .iconSet(DULL)
+    .components('4x mornivecht', '2x galena', '1x sphalerite')
+    .addOreByproducts('osmium', 'iridium', 'naquadria')
+    .flags(no_decomp)
+ 
+event.create('sturvaelixite')
+    .gem()
+    .ore(6, 3, true)
+    .color(0xAABBCC).secondaryColor(0x556677)
+    .iconSet(NETHERSTAR)
+    .components('4x sturvaelix', '2x bastnasite', '1x monazite')
+    .addOreByproducts('naquadria', 'osmium', 'palladium')
+    .flags(no_decomp)
+ 
+event.create('brechovitite')
+    .gem()
+    .ore(6, 3, true)
+    .color(0x8A7766).secondaryColor(0x443322)
+    .iconSet(RUBY)
+    .components('4x brechovite', '2x sphalerite', '1x galena')
+    .addOreByproducts('platinum', 'naquadria', 'iridium')
+    .flags(no_decomp)
+ 
+event.create('drethnaverite')
+    .gem()
+    .ore(6, 3, true)
+    .color(0x445566).secondaryColor(0x112233)
+    .iconSet(BRIGHT)
+    .components('4x drethnavik', '2x scheelite', '1x molybdenite')
+    .addOreByproducts('naquadria', 'osmium', 'cooperite')
+    .flags(no_decomp)
+
+
 
     event.create('mana')
     .element('mana')
@@ -629,6 +1658,11 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     .separatedInto('gold')
     .washedIn('sodium_persulfate')
     .liquid(1700)
+
+    event.create('nexian_flux')
+    .components('3x redstone', '2x nexus', 'obsidian')
+    .color(0x8B3DFF).iconSet(SHINY)
+    .dust()
 
     event.create('echo')
     .element("echo")
@@ -724,7 +1758,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     event
     .create('wizarding_steel')
-    .components('13x source', '8x mana', '6x ferroarcane', '3x igneous_bronze')
+    .components('13x source', '8x mana', '6x ferroarcane')
     .formula('Wsg')
     .color(0xdc00ff).iconSet(GTMaterialIconSet.SHINY)
     .ingot()
@@ -949,7 +1983,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     .flags(rod, plates, frame, no_abs_recipe, no_decomp)
     .blastTemp(4450, "high", GTValues.VA[GTValues.IV], 600)
 
-    event.create('tainted_zircalloy')
+    event.create('tainted_zircaloy')
     .components('147x zirconium', '6x alloyed_taint', '3x tin', 'iron', 'chromium', 'kanthal', 'aluminium')
     .ingot()
     .iconSet(GTMaterialIconSet.METALLIC)
@@ -1249,6 +2283,189 @@ event.create('sublimation_residue')
     .color(0x4A148C)
     .components('1x carbon', '1x oxygen')
 
+event.create('enriched_naquadrium')
+    .element('enriched_naquadrium')
+    .color(0x192919).secondaryColor(0x00ffcc).iconSet(SHINY)
+    .ingot(4)
+    .flags(rod, foil, frame, gear, bolt_and_screw, ring, rotor)
+    .blastTemp(7200, "high", va.iv, 900)
+    .liquid(7100)
+    .radioactiveHazard(2)
+
+event.create('nexus_steel')
+    .ingot()
+    .components('2x nexus', '6x steel')
+    .color(0x99ccff).iconSet(GTMaterialIconSet.METALLIC)
+    .liquid(1300)
+    .secondaryColor(0x0066cc)
+    .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, fine_wire)
+    .blastTemp(1400, "low", va.lv, 450)
+    .cableProperties(v.ev, 3, 3, false)
+    .fluidPipeProperties(1300, 75, true, true, true, false)
+
+event.create('awakened_draconium')
+    .color(0xd9400b).iconSet(METALLIC)
+    .ingot()
+    .element('awakened_draconium')
+    .fluid()
+    .plasma(13650)
+    .blastTemp(13200, null, va.uhv, 1000)
+    .flags(foil, plates)
+
+event.create('auralloy-omega')
+        .ingot()
+        .components('7x tungsten_steel', '4x americium','3x purified_netherite')
+        .color(0xdcdcff).iconSet(GTMaterialIconSet.METALLIC)
+        .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, dense_plate, fine_wire)
+        .blastTemp(4250, "mid", va.ev, 650)
+        .liquid(4250)
+        .fluidPipeProperties(4250, 300, true, true, true, true)
+        .toolStats(
+    ToolProperty.Builder.of(17.0, 9.0, 12288, 4)
+    .types(
+        GTToolType.HARD_HAMMER,
+        GTToolType.DRILL_LV,
+        GTToolType.DRILL_MV,
+        GTToolType.DRILL_HV,
+        GTToolType.DRILL_EV,
+        GTToolType.DRILL_IV,
+        GTToolType.CHAINSAW_LV,
+        GTToolType.CHAINSAW_HV,
+        GTToolType.CHAINSAW_IV,
+        GTToolType.PICKAXE,
+        GTToolType.SHOVEL,
+        GTToolType.BUZZSAW,
+        GTToolType.AXE,
+        GTToolType.FILE,
+        GTToolType.WIRE_CUTTER_LV,
+        GTToolType.WIRE_CUTTER_HV,
+        GTToolType.WIRE_CUTTER_IV,
+        GTToolType.WIRE_CUTTER,
+        GTToolType.WRENCH_LV,
+        GTToolType.WRENCH_HV,
+        GTToolType.WRENCH_IV,
+        GTToolType.MINING_HAMMER,
+        GTToolType.SAW,
+        GTToolType.SCREWDRIVER,
+        GTToolType.SPADE,
+        GTToolType.WRENCH,
+        GTToolType.SCREWDRIVER_LV,
+        GTToolType.SCREWDRIVER_HV,
+        GTToolType.SCREWDRIVER_IV,
+        GTToolType.SWORD,
+        GTToolType.KNIFE,
+        GTToolType.BUTCHERY_KNIFE,
+        GTToolType.CROWBAR,
+        GTToolType.HOE
+    )
+    .build()
+)
+
+    event.create('stellarite')
+    .color(0x4B1F6F).iconSet(SHINY)
+    .element('stellarite')
+    .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, dense_plate, foil)
+    .fluidPipeProperties(2147000000, 8150, true, true, true, true)
+    .liquid(126000)
+    .blastTemp(18400, "higher", va.uhv, 1500)
+
+
+// Alien Alloys
+function AlienAlloy(name, form, primary, secondary, icon, flags, components, temp, voltage, duration, fluidTemp, cable, generatePlasma) {
+    if (generatePlasma === undefined) generatePlasma = true
+    let mat = event.create(name)
+        [form]()
+        .color(primary).secondaryColor(secondary)
+        .fluid()
+
+    if (icon) mat.iconSet(icon)
+    if (flags) mat.flags(flags)
+    if (components) mat.components(components) 
+
+    if (cable) mat.cableProperties(cable[0], cable[1], cable[2], cable[3])
+                                // [voltage, amperage, loss, superconductor]
+
+    if (temp) mat.blastTemp(temp, null, voltage, duration)
+
+
+    if (generatePlasma) {
+        if (fluidTemp) {
+            mat.plasma(fluidTemp)
+        } else if (temp) {
+            mat.plasma(temp)
+        }
+    } else if (temp) {
+        mat.liquid(temp)
+    }
+
+    return mat
+}
+
+function AlienFusion(name, primary, secondary, icon, flags, components) {
+    let mat = event.create(name)
+        .gem()
+        .color(primary).secondaryColor(secondary)
+        .fluid()
+
+    if (icon) mat.iconSet(icon)
+    if (flags) mat.flags(flags)
+    if (components) mat.components(components)
+
+    return mat
+}
+
+function AlienMat(name, primary, secondary, icon, flags, element, temp, gasTier, voltage, duration, fluidTemp, form) {
+    let mat = event.create(name)
+    .color(primary).secondaryColor(secondary)
+    .iconSet(icon)
+    [form]()
+    .element(element)
+    if (flags) mat.flags(flags)
+    if (temp && voltage && duration) {
+    mat.blastTemp(temp, gasTier, voltage, duration)
+}
+    if (fluidTemp) mat.liquid(fluidTemp)
+}
+// gems
+
+
+//metals
+AlienAlloy('indium-vor-dys-cad_supersolder_alloy', 'ingot', 0x6600aa, 0x00ccbb, DULL, null, ['47x indium', '6x vorrexite', '3x dysprosium', '8x cadmium', '3x tin', '7x darmstadtium', '2x zirconium'], 8000, va.uhv, 750, 8000, null)
+AlienAlloy('sulvan_steel', 'ingot', 0xffee00, 0x00ffee, METALLIC, [plates, rod, gear, small_gear, frame, spring, bolt_and_screw, rotor, dense_plate, fine_wire, round], ['6x sulvarium', '6x kraethite', '3x antisource', '4x holmium', '2x nexus', '2x awakened_draconium'], 11000, va.uv, 1050, 11000, [v.uv, 20, 0, true])
+AlienAlloy('aetheric-thermavyte', 'ingot', 0x003322, 0xff6600, SHINY, [rod, frame, plates, gear, foil], ['2x aetherite', '2x thermavyte', 'neutronium'], 10799, va.uhv, 800, null, null)
+AlienAlloy('ignatherm', 'ingot', 0xC83D1A, 0x5A170A, METALLIC, [foil, fine_wire, spring, bolt_and_screw, frame], ['8x ignavyte', '5x flagrax', '3x zirconium', '2x hafnium', '1x carbon'], 12360, va.luv, 941, null, null)
+AlienAlloy('vhoric_steel', 'ingot', 0x7A2E2A, 0xB0463E, METALLIC, [plates, rod, gear, frame, dense_plate, rotor], ['7x vhorryte', '4x ashrax', '2x niobium', '2x tantalum', '1x manganese'], 12940, va.luv, 1076, null, null)
+AlienAlloy('pyrghul_alloy', 'ingot', 0xB9CBC7, 0xD55A28, SHINY, [foil, fine_wire, spring, bolt_and_screw, frame], ['6x ghulveyte', '5x pyrrhovyte', '3x copper', '2x electrotine', '1x platinum'], 11820, va.luv, 846, null, null)
+AlienAlloy('vaexium', 'ingot', 0xBDD3F3, 0x2FD5BE, SHINY, [plates, rod, frame, gear, rotor, dense_plate, fine_wire], ['8x vaex-thryn', '7x nexus', '5x orvaelithe', '2x palladium', '1x molybdenum'], 13380, va.zpm, 1012, null, null)
+AlienAlloy('korzene', 'ingot', 0x68417A, 0xF06BE3, METALLIC, [plates, rod, frame, gear, dense_plate, foil, bolt_and_screw], ['7x khzaevhul', '5x ng-vaethos', '3x naquadah_alloy', '2x tungsten', '1x ruthenium'], 13590, va.zpm, 1093, null, null)
+AlienAlloy('abyssal_netherite', 'ingot', 0x30283A, 0xA020FF, METALLIC, [plates, rod, gear, small_gear, frame, spring, bolt_and_screw, rotor, dense_plate, fine_wire, round, chainlet, chain_mesh], ['13x auralloy-omega', '4x ignatherm', '4x vhoric_steel', '4x pyrghul_alloy', '2x stellarite'], 16000, va.uv, 1100, null, null)
+AlienAlloy('nexian_pyrite', 'ingot', 0x8B1515, 0x5580B8, METALLIC, null, ['37x nexus_steel', '12x abyssal_netherite', '8x korzene', '4x sulvan_steel', '3x promethium', '2x vaexium'], 16800, va.uv, 900, null, null)
+AlienAlloy('activated_nexian_pyrite', 'ingot', 0xA01C1C, 0x6699DD, METALLIC, [rod, frame, plates, foil, no_decomp, no_abs_recipe, bolt_and_screw], ['nexian_pyrite', '4x pyrathene', '4x cindralite'], 16800, va.uhv, 1050, null, null)
+AlienAlloy('chronocrytic-vhaelsalite', 'ingot', 0x8c0059, 0xccbbe5, METALLIC, [fine_wire, spring, small_spring, foil, bolt_and_screw], ['chronosite', 'vhaelcryite', 'enriched_naquadrium', 'duranium'], null, null, null, null, [v.uhv, 28, 0, true])
+
+AlienAlloy('mythrolyc_umbraloy', 'ingot', 0x1A4A4A, 0x6B3D6B, SHINY, [plates, rod, gear, small_gear, frame, spring, bolt_and_screw, rotor, dense_plate, fine_wire, round, no_abs_recipe], ['4x vhoric_steel', '3x vaexium', '2x mythryl', '2x umbracite'], 18900, va.uhv, 1200, 18900, null, true)
+AlienAlloy('mythrovirdyne', 'ingot', 0x1A8A5A, 0x8C7AB0, SHINY, [plates, rod, gear, small_gear, frame, spring, bolt_and_screw, rotor, dense_plate, fine_wire, round, no_abs_recipe], ['4x pyrghul_alloy', '3x korzene', '2x mythryl', '2x viridrine'], 18600, va.uhv, 1050, 18600, null, true)
+
+// UEV
+AlienAlloy('aelczyr', 'ingot', 0xDDEEFF, 0x3366AA, SHINY, [rod, frame, plates, gear, foil], ['aelvythrex', 'czyvhaeln', 'lutetium', 'holmium'], 17420, va.uev, 900, null, null)
+AlienAlloy('thulvaex', 'ingot', 0x334477, 0x111122, SHINY, [rod, frame, plates, gear, foil], ['thurvaexi', 'kholvaetzh', 'steel', 'chromium'], 18240, va.uev, 950, null, null)
+AlienAlloy('vrethren', 'ingot', 0x553322, 0xDD4400, METALLIC, [rod, frame, plates, gear, foil], ['vrethdulix', 'ghauzrenit', 'trinium', 'chromium'], 17180, va.uev, 850, null, null)
+AlienAlloy('jolvelix', 'ingot', 0x221100, 0xCC4411, SHINY, [rod, frame, plates, gear, foil], ['jolvekrasz', 'uxvheltris', 'naquadrium', 'cobalt'], 18480, va.uev, 1000, null, null)
+AlienAlloy('caeldrox', 'ingot', 0x88AACC, 0x556644, METALLIC, [rod, frame, plates, gear, foil], ['caelvr', 'fendrothex', 'titanium', 'tungsten'], 16940, va.uev, 800, null, null)
+AlienAlloy('sturvik', 'ingot', 0x99AABB, 0x334455, METALLIC, [rod, frame, plates, gear, foil], ['sturvaelix', 'drethnavik', 'darmstadtium', 'tantalum'], 18360, va.uev, 950, null, null)
+
+AlienAlloy('morniloy-13', 'ingot', 0xB8A86A, 0x553322, SHINY, [rod, frame, plates, gear, foil, fine_wire], ['2x caeldrox', '2x vrethren', '2x aelczyr', '6x mornivecht', 'antifermium'], 19440, va.uev, 1200, null, [v.uev, 32, 0, true])
+AlienAlloy('sturvene-7', 'ingot', 0x65727C, 0x39444D, METALLIC, [plates, rod, gear, small_gear, frame, spring, bolt_and_screw, rotor, dense_plate, fine_wire, round, chainlet, chain_mesh], ['2x sturvik', '2x jolvelix', '2x thulvaex', '1x fermium'], 19400, va.uev, 1100, null, null)
+
+AlienFusion('vaelkethrite', 0x7c2208, 0x8c2200, NETHERSTAR, [rod, frame, plates, foil, bolt_and_screw], ['1x vaelthorium', '1x kethrite'])
+AlienFusion('thermavylized-vaelite', 0xff4400, 0x2d0010, CERTUS, null, ['1x thermavyte', '1x vaelthorium'])
+AlienFusion('cindralite-kethrite', 0xcc3300, 0x888888, RUBY, null, ['1x cindralite', '1x kethrite'])
+AlienFusion('chithion-flame', 0x943800, 0xC35D44, QUARTZ, null, ['1x cindralite', '1x thermavyte'])
+AlienFusion('cryonull', 0x001833, 0x00cfff, GEM_HORIZONTAL, null, ['1x vorrexite', '1x kraethite'])
+AlienFusion('surreal-pyrathene', 0xff007f, 0xcc0000, GEM_HORIZONTAL, [rod, frame, plates, foil, bolt_and_screw], ['vhaelcryite', 'pyrathene'])
+// UEV baselines
+AlienMat('aurorialis', 0x5d44de, 0xde44ce, SHINY, [rod, frame, plates], 'aurorialis', 3200, null, va.uhv, 750, 8000, 'ingot')
+
 //markiplier back everybody, my name is welcome
 event.create('desnium')
     .components('4x lunar_desh', '1x resonance', '1x americium')
@@ -1279,26 +2496,6 @@ event.create('vintanium')
     .liquid(4450)
 
         //the ZPM chain of totalitarian doom
-event.create('naquadrium')
-    .element('naquadrium')
-    .color(0x1f1f1f).secondaryColor(0x00ffff).iconSet(DULL)
-    .ingot(4)
-    .flags(foil, spring, fine_wire, bolt_and_screw, rod)
-    .cableProperties(v.zpm, 5, 2, false)
-    .rotorStats(180, 110, 4, 1600)
-    .fluidPipeProperties(4000, 225, true, false, true, true)
-    .blastTemp(5400, "high", va.iv, 550)
-    .liquid(5350)
-    .radioactiveHazard(1)
-
-event.create('enriched_naquadrium')
-    .element('enriched_naquadrium')
-    .color(0x192919).secondaryColor(0x00ffcc).iconSet(SHINY)
-    .ingot(4)
-    .flags(rod, foil, frame, gear, bolt_and_screw, ring, rotor)
-    .blastTemp(7200, "high", va.iv, 900)
-    .liquid(7100)
-    .radioactiveHazard(2)
 
 event.create('transuranic_naquadrium')
     .components('3x naquadrium', '1x uranium_233')
@@ -1309,18 +2506,33 @@ event.create('transuranic_naquadrium')
 
 event.create("omnium")
     .element("omnium")
+    .liquid(262144)
     .ingot()
     .iconSet(GTMaterialIconSet.getByName("omnium"))
+    .blastTemp(12000, null, va.uhv, 800)
+
+event.create('omnic_nexite')
+    .components('omnium', 'nexus')
+    .liquid(262144)
+    .ingot().color(0xdce3ff)
+    .iconSet(GTMaterialIconSet.getByName("omnium"))
+    .ignoredTagPrefixes(TagPrefix.block)
+
+event.create('polydimensionalized_omnic_nexite')
+    .components('omnic_nexite', 'aurorialis', 'fermium')
+    .ingot().color(0x95abff).secondaryColor(0x5d44de)
+    .iconSet(GTMaterialIconSet.getByName("omnium"))
     .blastTemp(19449, null, va.uhv, 1600)
-    .flags(bolt_and_screw, gear, small_gear, plates, ring, rod, long_rod, round, frame)
+    .flags(bolt_and_screw, gear, small_gear, plates, ring, rod, long_rod, round, frame, no_abs_recipe)
     .liquid(new GTFluidBuilder().customStill().temperature(262144))
+
 
 event.create("nullium")
     .element("nullium")
     .ingot()
     .iconSet(GTMaterialIconSet.getByName("nullium"))
     .cableProperties(v.uiv, 32, 0, true)
-    .blastTemp(29600, null, va.uev, 2400)
+    .blastTemp(29600, null, va.uev, 1200)
     .flags(bolt_and_screw, gear, small_gear, plates, ring, rod, long_rod, round, frame)
     .liquid(new GTFluidBuilder().customStill().temperature(0))
 
@@ -1331,7 +2543,7 @@ event.create("infinity")
     .cableProperties(v.uxv, 48, 0, true)
     .iconSet(GTMaterialIconSet.getByName("infinity"))
     .flags(bolt_and_screw, gear, small_gear, plates, ring, rod, long_rod, round, frame, rotor)
-    .blastTemp(29600, null, va.uiv, 3200)
+    .blastTemp(29600, null, va.uiv, 1600)
     .liquid(new GTFluidBuilder().customStill().temperature(999999))
 
     
@@ -1381,15 +2593,6 @@ event.create('hssd')
     .flags(bolt_and_screw, gear, small_gear, ring, long_rod, rod, frame, rotor, plates, round, foil)
     .blastTemp(5250, "high", GTValues.VA[GTValues.EV], 700)
     .liquid(5250)
-
-event.create('awakened_draconium')
-    .color(0xd9400b).iconSet(METALLIC)
-    .ingot()
-    .element('awakened_draconium')
-    .fluid()
-    .plasma(13650)
-    .blastTemp(13200, null, va.uhv, 1000)
-    .flags(foil, plates)
 
 
 
@@ -1762,17 +2965,6 @@ event.create('dtpa-rarest_earth_complex')
     // from here on now, ONLY progression materials.
 
 
-    event.create('nexus_steel')
-        .ingot()
-        .components('2x nexus', '6x steel')
-        .color(0x99ccff).iconSet(GTMaterialIconSet.METALLIC)
-        .liquid(1300)
-        .secondaryColor(0x0066cc)
-        .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, fine_wire)
-        .blastTemp(1400, "low", va.lv, 450)
-        .cableProperties(v.ev, 3, 3, false)
-        .fluidPipeProperties(1300, 75, true, true, true, false)
-
 
             
     event.create('echolumium')
@@ -1804,54 +2996,7 @@ event.create('dtpa-rarest_earth_complex')
         .liquid(2200)
         .fluidPipeProperties(2200, 200, true, true, true, false)
 
-    event.create('auralloy-omega')
-        .ingot()
-        .components('7x tungsten_steel', '4x americium','3x purified_netherite')
-        .color(0xdcdcff).iconSet(GTMaterialIconSet.METALLIC)
-        .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, dense_plate, fine_wire)
-        .blastTemp(4250, "mid", va.ev, 650)
-        .liquid(4250)
-        .fluidPipeProperties(4250, 300, true, true, true, true)
-        .toolStats(
-    ToolProperty.Builder.of(17.0, 9.0, 12288, 4)
-    .types(
-        GTToolType.HARD_HAMMER,
-        GTToolType.DRILL_LV,
-        GTToolType.DRILL_MV,
-        GTToolType.DRILL_HV,
-        GTToolType.DRILL_EV,
-        GTToolType.DRILL_IV,
-        GTToolType.CHAINSAW_LV,
-        GTToolType.CHAINSAW_HV,
-        GTToolType.CHAINSAW_IV,
-        GTToolType.PICKAXE,
-        GTToolType.SHOVEL,
-        GTToolType.BUZZSAW,
-        GTToolType.AXE,
-        GTToolType.FILE,
-        GTToolType.WIRE_CUTTER_LV,
-        GTToolType.WIRE_CUTTER_HV,
-        GTToolType.WIRE_CUTTER_IV,
-        GTToolType.WIRE_CUTTER,
-        GTToolType.WRENCH_LV,
-        GTToolType.WRENCH_HV,
-        GTToolType.WRENCH_IV,
-        GTToolType.MINING_HAMMER,
-        GTToolType.SAW,
-        GTToolType.SCREWDRIVER,
-        GTToolType.SPADE,
-        GTToolType.WRENCH,
-        GTToolType.SCREWDRIVER_LV,
-        GTToolType.SCREWDRIVER_HV,
-        GTToolType.SCREWDRIVER_IV,
-        GTToolType.SWORD,
-        GTToolType.KNIFE,
-        GTToolType.BUTCHERY_KNIFE,
-        GTToolType.CROWBAR,
-        GTToolType.HOE
-    )
-    .build()
-)
+
 
     event.create('rhodipalladic-desnite')
         .ingot()
@@ -1926,20 +3071,11 @@ event.create('dtpa-rarest_earth_complex')
     .blastTemp(16800, "highest", va.uhv, 950)
     .ingot()
 
-    event.create('stellarite')
-    .color(0x4B1F6F).iconSet(SHINY)
-    .element('stellarite')
-    .flags(bolt_and_screw, gear, plates, ring, long_rod, frame, rotor, small_gear, dense_plate, foil)
-    .fluidPipeProperties(2147000000, 8150, true, true, true, true)
-    .liquid(126000)
-    .blastTemp(18400, "higher", va.uhv, 1500)
-
     event.create('stellar_neutronate')
     .color(0xfafafa).iconSet(SHINY)
     .element('stellar_neutronate')
     .flags(plates, rod, gear, bolt_and_screw)
     .plasma(262144)
-    .cableProperties(v.uev, 32, 0, true)
     .fluid()
     .ingot()
 
@@ -1951,692 +3087,15 @@ event.create('dtpa-rarest_earth_complex')
     .liquid(0)
     .blastTemp(1, null, va.uhv, 1400)
 
-// alien materials
-
-//========================
-// MARS GEMS
-//========================
-
-event.create('chronosite')
-    .gem()
-    .color(0x1a0033).secondaryColor(0x99ddff)
-    .iconSet(GEM_VERTICAL)
-    .element('chronosite')
-    .flags(rod, frame)
-    .fluid()
-
-event.create('vhaelcryite')
-    .gem()
-    .color(0xff007f).secondaryColor(0xff99cc)
-    .iconSet(GEM_VERTICAL)
-    .element('vhaelcryite')
-    .flags(plates, rod, frame)
-    .fluid()
-
-event.create('kraethite')
-    .gem()
-    .color(0x00cfff).secondaryColor(0x004466)
-    .iconSet(GEM_HORIZONTAL)
-    .element('kraethite')
-    .fluid()
-
-
-//========================
-// VENUS GEMS
-//========================
-event.create('vaelthorium')
-    .gem()
-    .color(0x2d0010).secondaryColor(0xcc4400)
-    .iconSet(GEM_VERTICAL)
-    .element('vaelthorium')
-    .flags(rod, frame, plates)
-    .fluid()
-
-event.create('sulvarium')
-    .gem()
-    .color(0xffcc00).secondaryColor(0x664400)
-    .iconSet(NETHERSTAR)
-    .element('sulvarium')
-    .fluid()
-
-event.create('kethrite')
-    .gem()
-    .color(0xff4400).secondaryColor(0x1a0000)
-    .iconSet(RUBY)
-    .element('kethrite')
-    .flags(rod, frame, plates)
-    .fluid()
-
-event.create('vorrexite')
-    .gem()
-    .color(0x330022).secondaryColor(0xff0066)
-    .iconSet(EMERALD)
-    .element('vorrexite')
-    .flags(frame, bolt_and_screw)
-    .fluid()
-
-event.create('thermavyte')
-    .gem()
-    .color(0xff6600).secondaryColor(0x2a0a00)
-    .iconSet(CERTUS)
-    .element('thermavyte')
-    .fluid()
-
-event.create('cindralite')
-    .gem()
-    .color(0x888888).secondaryColor(0xff3300)
-    .iconSet(GEM_HORIZONTAL)
-    .element('cindralite')
-    .flags(frame, bolt_and_screw)
-    .fluid()
-
-event.create('aetherite') 
-    .gem()
-    .color(0x003322).secondaryColor(0x00ff99)
-    .iconSet(GEM_VERTICAL)
-    .element('aetherite')
-    .fluid()
-
-event.create('pyrathene')
-    .gem()
-    .color(0xcc0000).secondaryColor(0xffaa00)
-    .iconSet(RUBY)
-    .element('pyrathene')
-    .flags(frame, plates, dense_plate)
-    .fluid()
-
-event.create('draconium')
-    .ore(1, 2, false)
-    .color(0x702880).iconSet(METALLIC)
-    .dust()
-    .element('draconium')
-    .addOreByproducts('titanium', 'rhenium', 'naquadah')
-    .ignoredTagPrefixes([TagPrefix.dustTiny, TagPrefix.dustSmall])
-    
-//========================
-// NETHER METALS
-//========================
-
-event.create('ignavyte')
-    .color(0xB22000).secondaryColor(0xFF6600)
-    .iconSet(SHINY)
-    .ingot()
-    .element('ignavyte')
-    .blastTemp(11042, null, va.luv, 874)
-    .liquid(11042)
-
-event.create('flagrax')
-    .color(0xFF3300).secondaryColor(0x661100)
-    .iconSet(METALLIC)
-    .ingot()
-    .element('flagrax')
-    .blastTemp(11791, null, va.luv, 1051)
-    .liquid(11791)
-
-event.create('vhorryte')
-    .color(0x8B0000).secondaryColor(0xFF1111)
-    .iconSet(DULL)
-    .ingot()
-    .element('vhorryte')
-    .blastTemp(12356, null, va.luv, 913)
-    .liquid(12356)
-
-event.create('ghulveyte')
-    .color(0xBBCCCC).secondaryColor(0x334444)
-    .iconSet(SHINY)
-    .ingot()
-    .element('ghulveyte')
-    .blastTemp(12988, null, va.luv, 1028)
-    .liquid(12988)
-
-event.create('ashrax')
-    .color(0x2A1A0A).secondaryColor(0x6B4A2A)
-    .iconSet(DULL)
-    .ingot()
-    .element('ashrax')
-    .blastTemp(13547, null, va.luv, 845)
-    .liquid(13547)
-
-event.create('pyrrhovyte')
-    .color(0x4A0000).secondaryColor(0xCC4400)
-    .iconSet(METALLIC)
-    .ingot()
-    .element('pyrrhovyte')
-    .blastTemp(12081, null, va.luv, 986)
-    .liquid(12081)
-
-
-//========================
-// END METALS
-//========================
-
-event.create('vaex-thryn')
-    .color(0xC8B4FF).secondaryColor(0x1A0033)
-    .iconSet(SHINY)
-    .ingot()
-    .element('vaex-thryn')
-    .blastTemp(13124, null, va.zpm, 917)
-    .liquid(13124)
-
-event.create('orvaelithe')
-    .color(0x00FFD0).secondaryColor(0x003322)
-    .iconSet(METALLIC)
-    .ingot()
-    .element('orvaelithe')
-    .blastTemp(13600, null, va.zpm, 1083)
-    .liquid(13600)
-
-event.create('khzaevhul')
-    .color(0x2B002B).secondaryColor(0xFF00FF)
-    .iconSet(SHINY)
-    .ingot()
-    .element('khzaevhul')
-    .blastTemp(12532, null, va.zpm, 891)
-    .liquid(12532)
-
-event.create('aeuvrith-al')
-    .color(0xEEEEFF).secondaryColor(0x9900CC)
-    .iconSet(SHINY)
-    .ingot()
-    .element('aeuvrith-al')
-    .blastTemp(13376, null, va.zpm, 1046)
-    .liquid(13376)
-
-event.create('xhyv-orzael')
-    .color(0x000033).secondaryColor(0x4444FF)
-    .iconSet(DULL)
-    .ingot()
-    .element('xhyv-orzael')
-    .blastTemp(12844, null, va.zpm, 959)
-    .liquid(12844)
-
-event.create('ng-vaethos')
-    .color(0xFF99EE).secondaryColor(0x220011)
-    .iconSet(METALLIC)
-    .ingot()
-    .element('ng-vaethos')
-    .blastTemp(13461, null, va.zpm, 832)
-    .liquid(13461)
-
-//========================
-// UNDERGARDEN METALS
-//========================
-
-event.create('mythryl')
-    .color(0x006666).secondaryColor(0x008c8c)
-    .iconSet(SHINY)
-    .ingot()
-    .element('mythryl')
-    .blastTemp(13874, null, va.zpm, 961)
-    .liquid(13874)
-
-event.create('velium')
-    .color(0xA7DCC8).secondaryColor(0x5C8F84)
-    .iconSet(METALLIC)
-    .ingot()
-    .element('velium')
-    .blastTemp(14211, null, va.zpm, 1024)
-    .liquid(14211)
-
-event.create('myxorite')
-    .color(0x5E68D8).secondaryColor(0x262B63)
-    .iconSet(DULL)
-    .ingot()
-    .element('myxorite')
-    .blastTemp(14583, null, va.zpm, 884)
-    .liquid(14583)
-
-
-//========================
-// UNDERGARDEN GEMS
-//========================
-
-event.create('lythera')
-    .gem()
-    .color(0xF0D000).secondaryColor(0xA08800)
-    .iconSet(GEM_VERTICAL)
-    .element('lythera')
-    .fluid()
-
-event.create('umbracite')
-    .gem()
-    .color(0x35263F).secondaryColor(0x8E7DB3)
-    .iconSet(GEM_HORIZONTAL)
-    .element('umbracite')
-    .fluid()
-
-event.create('viridrine')
-    .gem()
-    .color(0x3EDB8A).secondaryColor(0x0D5C43)
-    .iconSet(EMERALD)
-    .element('viridrine')
-    .fluid()
-
-
-//========================
-// VENUS MINERALS
-//========================
-
-
-event.create('vaelthorite')
-    .dust()
-    .ore(2, 2, true)
-    .color(0x2d0010).secondaryColor(0x664400)
-    .iconSet(METALLIC)
-    .components('1x vaelthorium', '1x sulfur', '1x lead')
-    .addOreByproducts('thorium', 'sulfur', 'lead')
-    .flags(no_decomp)
-
-event.create('sulvarite')
-    .dust()
-    .ore(2, 2, true)
-    .color(0xffcc00).secondaryColor(0x886600)
-    .iconSet(METALLIC)
-    .components('1x sulvarium', '1x bismuth', '1x gold')
-    .addOreByproducts('silver', 'bismuth', 'gold')
-    .flags(no_decomp)
-
-event.create('kethrenite')
-    .dust()
-    .ore(2, 2, true)
-    .color(0xff4400).secondaryColor(0x331100)
-    .iconSet(METALLIC)
-    .components('1x kethrite', '1x copper', '1x nickel')
-    .addOreByproducts('redstone', 'copper', 'nickel')
-    .flags(no_decomp)
-
-event.create('vorrexinite')
-    .dust()
-    .ore(2, 2, true)
-    .color(0x330022).secondaryColor(0x880044)
-    .iconSet(METALLIC)
-    .components('1x vorrexite', '1x osmium', '1x iridium')
-    .addOreByproducts('ruthenium', 'osmium', 'iridium')
-    .flags(no_decomp)
-
-event.create('thermastone')
-    .dust()
-    .ore(2, 2, true)
-    .color(0xff6600).secondaryColor(0x553300)
-    .iconSet(METALLIC)
-    .components('1x thermavyte', '1x magnesium', '1x chromium')
-    .addOreByproducts('tantalum', 'magnesium', 'chromium')
-    .flags(no_decomp)
-
-event.create('cindrax')
-    .dust()
-    .ore(2, 2, true)
-    .color(0x888888).secondaryColor(0x442200)
-    .iconSet(METALLIC)
-    .components('1x cindralite', '1x silicon', '1x tin')
-    .addOreByproducts('manganese', 'silicon', 'tin')
-    .flags(no_decomp)
-
-event.create('aetheric_palladite')
-    .dust()
-    .ore(2, 2, true)
-    .color(0x003322).secondaryColor(0x00ff99)
-    .iconSet(METALLIC)
-    .components('1x aetherite', '1x niobium', '1x palladium')
-    .addOreByproducts('aluminium', 'niobium', 'palladium')
-    .flags(no_decomp)
-
-event.create('pyrathite')
-    .dust()
-    .ore(2, 2, true)
-    .color(0xcc0000).secondaryColor(0xffaa00)
-    .iconSet(METALLIC)
-    .components('1x pyrathene', '1x titanium', '1x vanadium')
-    .addOreByproducts('source', 'titanium', 'vanadium')
-    .flags(no_decomp)
-
-//========================
-// MARS MINERALS
-//========================
-// random tomfooler
-    event.create('rhenium_iii_sulfate')
-    .components('2x rhenium', 'sulfur', '4x oxygen')
-    .ore(1, 2, true)
-    .formula('Re2(SO4)3')
-    .color(0x3e6e9b).iconSet(DULL)
-    .dust()
-    .flags(no_decomp)
-// back to unfoolery
-event.create('nulledryte')
-    .dust()
-    .ore(2, 2, true)
-    .color(0x1a0033).secondaryColor(0x00aa33)
-    .iconSet(METALLIC)
-    .components('8x chronosite', '1x oganesson')
-    .addOreByproducts('oganesson', 'oganesson', 'rhenium_iii_sulfate')
-    .flags(no_decomp)
-
-event.create('xycrhovite')
-    .dust()
-    .ore(2, 2, true)
-    .color(0xcc99ff).secondaryColor(0x440066)
-    .iconSet(METALLIC)
-    .components('6x draconium', '4x echo')
-    .addOreByproducts('draconium', 'echo', 'dilithium')
-    .flags(no_decomp)
-
-event.create('vheszcryl')
-    .dust()
-    .ore(2, 2, true)
-    .color(0xff007f).secondaryColor(0x330011)
-    .iconSet(METALLIC)
-    .components('6x vhaelcryite', '4x transcendentine')
-    .addOreByproducts('rhodium', 'transcendentine', 'enstatite')
-    .flags(no_decomp)
-
-event.create('grothemite')
-    .dust()
-    .ore(2, 2, true)
-    .color(0xffaa00).secondaryColor(0x332200)
-    .iconSet(METALLIC)
-    .components('8x rare_earth', '5x hafnium', '3x iron')
-    .addOreByproducts('rare_earth', 'hafnium', 'iron')
-    .flags(no_decomp)
-
-event.create('krethavine')
-    .dust()
-    .ore(2, 2, true)
-    .color(0x3366ff).secondaryColor(0x66ddff)
-    .iconSet(METALLIC)
-    .components('6x kraethite', '5x lanthanum', '3x titanium')
-    .addOreByproducts('nexus', 'lanthanum', 'titanium')
-    .flags(no_decomp)
-
-event.create('orvexite')
-    .dust()
-    .ore(2, 2, true)
-    .color(0x006600).secondaryColor(0x003300)
-    .iconSet(METALLIC)
-    .components('5x rare_earth', '4x osmiridium', '2x plutonium')
-    .addOreByproducts('rare_earth', 'osmiridium', 'plutonium')
-    .flags(no_decomp)
-
-event.create('phazdurite')
-    .dust()
-    .ore(2, 2, true)
-    .color(0x110000).secondaryColor(0xcc0000)
-    .iconSet(METALLIC)
-    .components('6x transcendentine', '4x naquadria')
-    .addOreByproducts('transcendentine', 'naquadria', 'radon')
-    .flags(no_decomp)
-
-//========================
-// NETHER MINERALS
-//========================
-
-event.create('ignavite')
-    .gem()
-    .ore(2, 2, true)
-    .color(0xD53A00).secondaryColor(0xFF8A22)
-    .iconSet(RUBY)
-    .components('4x ignavyte', '2x sulfur', '1x thermavyte')
-    .addOreByproducts('gold', 'pyrite', 'zirconium')
-    .flags(no_decomp)
-
-event.create('flagraxite')
-    .dust()
-    .ore(2, 2, true)
-    .color(0xE63A18).secondaryColor(0x5A1808)
-    .iconSet(BRIGHT)
-    .components('4x flagrax', '2x pyrite', '1x sulfur')
-    .addOreByproducts('platinum', 'electrotine', 'hafnium')
-    .flags(no_decomp)
-
-event.create('vhorrite')
-    .gem()
-    .ore(2, 2, true)
-    .color(0x990000).secondaryColor(0xFF3333)
-    .iconSet(GEM_VERTICAL)
-    .components('4x vhorryte', '2x zirconium', '1x redstone')
-    .addOreByproducts('gold', 'thermavyte', 'pyrite')
-    .flags(no_decomp)
-
-event.create('ghulvenite')
-    .gem()
-    .ore(2, 2, true)
-    .color(0xC8D8D8).secondaryColor(0x445555)
-    .iconSet(OPAL)
-    .components('4x ghulveyte', '2x electrotine', '1x hafnium')
-    .addOreByproducts('platinum', 'cindralite', 'zirconium')
-    .flags(no_decomp)
-
-event.create('ashraxite')
-    .dust()
-    .ore(2, 2, true)
-    .color(0x3A2412).secondaryColor(0x735232)
-    .iconSet(DIAMOND)
-    .components('4x ashrax', '2x cindralite', '1x sulfur')
-    .addOreByproducts('gold', 'thermavyte', 'pyrite')
-    .flags(no_decomp)
-
-event.create('pyrrhovite')
-    .gem()
-    .ore(2, 2, true)
-    .color(0x660000).secondaryColor(0xDD5511)
-    .iconSet(GEM_HORIZONTAL)
-    .components('4x pyrrhovyte', '2x thermavyte', '1x platinum')
-    .addOreByproducts('hafnium', 'sulfur', 'electrotine')
-    .flags(no_decomp)
-
-
-//========================
-// END MINERALS
-//========================
-
-event.create('vaexthrynite')
-    .gem()
-    .ore(2, 2, true)
-    .color(0xD6C4FF).secondaryColor(0x2A1055)
-    .iconSet(NETHERSTAR)
-    .components('4x vaex-thryn', '2x draconium', '1x naquadah')
-    .addOreByproducts('radon', 'uraninite', 'scheelite')
-    .flags(no_decomp)
-
-event.create('orvaelite')
-    .gem()
-    .ore(2, 2, true)
-    .color(0x22FFD8).secondaryColor(0x004433)
-    .iconSet(EMERALD)
-    .components('4x orvaelithe', '2x tungstate', '1x scheelite')
-    .addOreByproducts('draconium', 'naquadrium', 'radon')
-    .flags(no_decomp)
-
-event.create('khzaevhulite')
-    .gem()
-    .ore(2, 2, true)
-    .color(0x400040).secondaryColor(0xFF44FF)
-    .iconSet(RUBY)
-    .components('4x khzaevhul', '2x plutonium', '1x plutonium_241')
-    .addOreByproducts('naquadah', 'radon', 'uraninite')
-    .flags(no_decomp)
-
-event.create('aeuvrite')
-    .gem()
-    .ore(2, 2, true)
-    .color(0xFFFFFF).secondaryColor(0xAA22DD)
-    .iconSet(OPAL)
-    .components('4x aeuvrith-al', '2x uraninite', '1x radon')
-    .addOreByproducts('draconium', 'naquadah', 'tungstate')
-    .flags(no_decomp)
-
-event.create('xhyvorzite')
-    .dust()
-    .ore(2, 2, true)
-    .color(0x111144).secondaryColor(0x5A5AFF)
-    .iconSet(BRIGHT)
-    .components('4x xhyv-orzael', '2x naquadrium', '1x scheelite')
-    .addOreByproducts('plutonium', 'draconium', 'radon')
-    .flags(no_decomp)
-
-event.create('vaethosite')
-    .gem()
-    .ore(2, 2, true)
-    .color(0xFFB3F3).secondaryColor(0x331122)
-    .iconSet(GEM_VERTICAL)
-    .components('4x ng-vaethos', '2x scheelite', '1x naquadah')
-    .addOreByproducts('tungstate', 'uraninite', 'plutonium_241')
-    .flags(no_decomp)
-
-//========================
-// UNDERGARDEN MINERALS
-//========================
-
-event.create('mythryte')
-    .dust()
-    .ore(2, 2, true)
-    .color(0x005b5b).secondaryColor(0x008c8c)
-    .iconSet(METALLIC)
-    .components('1x mythryl', '1x gold', '1x indium')
-    .addOreByproducts('mythryl', 'gold', 'indium')
-    .flags(no_decomp)
-
-event.create('velithite')
-    .dust()
-    .ore(2, 2, true)
-    .color(0xA7DCC8).secondaryColor(0x5C8F84)
-    .iconSet(METALLIC)
-    .components('1x velium', '1x zinc', '1x bismuth')
-    .addOreByproducts('velium', 'zinc', 'bismuth')
-    .flags(no_decomp)
-
-event.create('myxorinite')
-    .dust()
-    .ore(2, 2, true)
-    .color(0x5E68D8).secondaryColor(0x262B63)
-    .iconSet(METALLIC)
-    .components('1x myxorite', '1x palladium', '1x tellurium')
-    .addOreByproducts('myxorite', 'palladium', 'tellurium')
-    .flags(no_decomp)
-
-event.create('lytherite')
-    .dust()
-    .ore(2, 2, true)
-    .color(0xB5A030).secondaryColor(0x6B5E1A)
-    .iconSet(METALLIC)
-    .components('1x lythera', '1x condensed_mana', '1x selenium')
-    .addOreByproducts('lythera', 'condensed_mana', 'selenium')
-    .flags(no_decomp)
-
-event.create('umbralite')
-    .dust()
-    .ore(2, 2, true)
-    .color(0x35263F).secondaryColor(0x8E7DB3)
-    .iconSet(METALLIC)
-    .components('1x umbracite', '1x nexus', '1x bismuth')
-    .addOreByproducts('umbracite', 'nexus', 'bismuth')
-    .flags(no_decomp)
-
-event.create('viridite')
-    .dust()
-    .ore(2, 2, true)
-    .color(0x3EDB8A).secondaryColor(0x0D5C43)
-    .iconSet(METALLIC)
-    .components('1x viridrine', '1x silver', '1x zinc')
-    .addOreByproducts('viridrine', 'silver', 'zinc')
-    .flags(no_decomp)
-
-
-// Alien Alloys
-function AlienAlloy(name, form, primary, secondary, icon, flags, components, temp, voltage, duration, fluidTemp, cable, generatePlasma) {
-    if (generatePlasma === undefined) generatePlasma = true
-    let mat = event.create(name)
-        [form]()                                    // .ingot() / .gem() / .dust() etc
-        .color(primary).secondaryColor(secondary)
-        .fluid()
-
-    if (icon) mat.iconSet(icon)                     // METALLIC, SHINY, DULL etc
-    if (flags) mat.flags(flags)                     // [rotor, plates, no_decomp] etc
-    if (components) mat.components(components)      // ['8x something', '1x other']
-
-    if (cable) mat.cableProperties(cable[0], cable[1], cable[2], cable[3])
-                                // [voltage, amperage, loss, superconductor]
-
-    if (temp) mat.blastTemp(temp, null, voltage, duration)
-
-
-    if (generatePlasma) {
-        if (fluidTemp) {
-            mat.plasma(fluidTemp)
-        } else if (temp) {
-            mat.plasma(temp)
-        }
-    } else if (temp) {
-        mat.liquid(temp)
-    }
-
-    return mat
-}
-
-function AlienFusion(name, primary, secondary, icon, flags, components) {
-    let mat = event.create(name)
-        .gem()
-        .color(primary).secondaryColor(secondary)
-        .fluid()
-
-    if (icon) mat.iconSet(icon)
-    if (flags) mat.flags(flags)
-    if (components) mat.components(components)
-
-    return mat
-}
-
-function AlienMat(name, primary, secondary, icon, flags, element, temp, gasTier, voltage, duration, fluidTemp, form) {
-    let mat = event.create(name)
-    .color(primary).secondaryColor(secondary)
-    .iconSet(icon)
-    [form]()
-    .element(element)
-    if (flags) mat.flags(flags)
-    if (temp && voltage && duration) {
-    mat.blastTemp(temp, gasTier, voltage, duration)
-}
-    if (fluidTemp) mat.liquid(fluidTemp)
-}
-// gems
-
-
-//metals
-AlienAlloy('indium-vor-dys-cad_supersolder_alloy', 'ingot', 0x6600aa, 0x00ccbb, DULL, null, ['47x indium', '6x vorrexite', '3x dysprosium', '8x cadmium', '3x tin', '7x darmstadtium', '2x zirconium'], 11000, va.uhv, 750, 8000, null)
-AlienAlloy('sulvan_steel', 'ingot', 0xffee00, 0x00ffee, METALLIC, [plates, rod, gear, small_gear, frame, spring, bolt_and_screw, rotor, dense_plate, fine_wire, round], ['6x sulvarium', '6x kraethite', '3x antisource', '4x holmium', '2x nexus', '2x awakened_draconium'], 11000, va.uv, 1050, 11000, [v.uv, 20, 0, true])
-AlienAlloy('aetheric-thermavyte', 'ingot', 0x003322, 0xff6600, SHINY, [rod, frame, plates, gear, foil], ['2x aetherite', '2x thermavyte', 'neutronium'], 10799, va.uhv, 800, null, null)
-AlienAlloy('ignatherm', 'ingot', 0xC83D1A, 0x5A170A, METALLIC, [foil, fine_wire, spring, bolt_and_screw, frame], ['8x ignavyte', '5x flagrax', '3x zirconium', '2x hafnium', '1x carbon'], 12360, va.luv, 941, null, null)
-AlienAlloy('vhoric_steel', 'ingot', 0x7A2E2A, 0xB0463E, METALLIC, [plates, rod, gear, frame, dense_plate, rotor], ['7x vhorryte', '4x ashrax', '2x niobium', '2x tantalum', '1x manganese'], 12940, va.luv, 1076, null, null)
-AlienAlloy('pyrghul_alloy', 'ingot', 0xB9CBC7, 0xD55A28, SHINY, [foil, fine_wire, spring, bolt_and_screw, frame], ['6x ghulveyte', '5x pyrrhovyte', '3x copper', '2x electrotine', '1x platinum'], 11820, va.luv, 846, null, null)
-AlienAlloy('vaexium', 'ingot', 0xBDD3F3, 0x2FD5BE, SHINY, [plates, rod, frame, gear, rotor, dense_plate, fine_wire], ['8x vaex-thryn', '7x nexus', '5x orvaelithe', '2x palladium', '1x molybdenum'], 13380, va.zpm, 1012, null, null)
-AlienAlloy('korzene', 'ingot', 0x68417A, 0xF06BE3, METALLIC, [plates, rod, frame, gear, dense_plate, foil, bolt_and_screw], ['7x khzaevhul', '5x ng-vaethos', '3x naquadah_alloy', '2x tungsten', '1x ruthenium'], 13590, va.zpm, 1093, null, null)
-AlienAlloy('abyssal_netherite', 'ingot', 0x30283A, 0xA020FF, METALLIC, [plates, rod, gear, small_gear, frame, spring, bolt_and_screw, rotor, dense_plate, fine_wire, round], ['13x auralloy-omega', '4x ignatherm', '4x vhoric_steel', '4x pyrghul_alloy', '2x stellarite'], 16000, va.uv, 1100, null, null)
-AlienAlloy('nexian_pyrite', 'ingot', 0x8B1515, 0x5580B8, METALLIC, null, ['37x nexus_steel', '12x abyssal_netherite', '8x korzene', '4x sulvan_steel', '3x promethium', '2x vaexium'], 16800, va.uv, 900, null, null)
-AlienAlloy('activated_nexian_pyrite', 'ingot', 0xA01C1C, 0x6699DD, METALLIC, [rod, frame, plates, foil, no_decomp, no_abs_recipe, bolt_and_screw], ['nexian_pyrite', '4x pyrathene', '4x cindralite'], 16800, va.uhv, 1050, null, null)
-AlienAlloy('chronocrytic-vhaelsalite', 'ingot', 0x8c0059, 0xccbbe5, METALLIC, [fine_wire, spring, small_spring, foil, bolt_and_screw], ['chronosite', 'vhaelcryite', 'enriched_naquadrium', 'duranium'], null, null, null, null, [v.uhv, 28, 0, true])
-
-AlienAlloy('mythrolyc_umbraloy', 'ingot', 0x1A4A4A, 0x6B3D6B, SHINY, [plates, rod, gear, small_gear, frame, spring, bolt_and_screw, rotor, dense_plate, fine_wire, round, no_abs_recipe], ['4x vhoric_steel', '3x vaexium', '2x mythryl', '2x umbracite'], 18900, va.uhv, 1200, 18900, null, true)
-AlienAlloy('mythrovirdyne', 'ingot', 0x1A8A5A, 0x8C7AB0, SHINY, [plates, rod, gear, small_gear, frame, spring, bolt_and_screw, rotor, dense_plate, fine_wire, round, no_abs_recipe], ['4x pyrghul_alloy', '3x korzene', '2x mythryl', '2x viridrine'], 18600, va.uhv, 1050, 18600, null, true)
-
-AlienFusion('vaelkethrite', 0x7c2208, 0x8c2200, NETHERSTAR, [rod, frame, plates, foil, bolt_and_screw], ['1x vaelthorium', '1x kethrite'])
-AlienFusion('thermavylized-vaelite', 0xff4400, 0x2d0010, CERTUS, null, ['1x thermavyte', '1x vaelthorium'])
-AlienFusion('cindralite-kethrite', 0xcc3300, 0x888888, RUBY, null, ['1x cindralite', '1x kethrite'])
-AlienFusion('chithion-flame', 0x943800, 0xC35D44, QUARTZ, null, ['1x cindralite', '1x thermavyte'])
-AlienFusion('cryonull', 0x001833, 0x00cfff, GEM_HORIZONTAL, null, ['1x vorrexite', '1x kraethite'])
-AlienFusion('surreal-pyrathene', 0xff007f, 0xcc0000, GEM_HORIZONTAL, [rod, frame, plates, foil, bolt_and_screw], ['vhaelcryite', 'pyrathene'])
-
-// UEV baselines
-AlienMat('aurorialis', 0x5d44de, 0xde44ce, SHINY, [rod, frame, plates], 'aurorialis', 3200, null, va.uhv, 750, 8000, 'ingot')
-
-
 event.create('inactivated_infernality')
-.components('1x thermavylized-vaelite', '1x cindralite-kethrite')
+.components('8x thermavylized-vaelite', '8x cindralite-kethrite')
 .color(0x8B2200).secondaryColor(0x3D0000)
-.plasma(500000)
+.liquid(25000000)
 
 event.create('infernality_catalysm')
 .components('inactivated_infernality')
 .color(0xFF4400).secondaryColor(0x8B0000)
-.plasma(500000000)
+.liquid(150000000)
     
     
     
@@ -2826,7 +3285,7 @@ event.create('polyether_ether_ketone')
     .iconSet(DULL)
     .color(0xD4C4A0)
     .components('19x carbon', '12x hydrogen', '3x oxygen')
-    .flags(rod, plates, frame, foil)
+    .flags(rod, plates, frame, foil, chainlet, chain_mesh)
     .formula('(C19H12O3)n')
     .fluidPipeProperties(630, 400, true, true, false, false)
 
@@ -3854,7 +4313,7 @@ event.create('xycrhovite_resonance_solution')
 event.create('protein_powder')
     .dust()
     .color(0xAAFF00).secondaryColor(0x00FFDD)
-    .components('6x flour', '4x sugar', '3x blood_proteins', '2x enriched_naquadrium', '1x crystal_methamphetamine', '1x refined_sentience')
+    .components('6x wheat', '4x sugar', '3x blood_proteins', '2x enriched_naquadrium', '1x crystal_methamphetamine', '1x refined_sentience')
 
 event.create('protein_shake')
     .fluid()
@@ -4112,7 +4571,7 @@ Object.entries(bromineIntermediates).forEach(([name, [color, type]]) => {
     }
 Object.entries(naquadriumadjacentpartsheheha).forEach(([type, chezmix]) => {
     event.create(`impure_${type}_solution`).color(chezmix[0]).liquid()
-    event.create(`${type}_solution`).color(chezmix[1]).liquid().dust()
+    event.create(`${type}_solution`).color(chezmix[1]).liquid()
     event.create(`acidic_${type}_solution`).color(chezmix[2]).liquid(new GTFluidBuilder().attribute($FluidAttributes.ACID))
     event.create(`${type}_waste`).color(chezmix[4]).liquid()
 
@@ -4157,12 +4616,12 @@ Object.entries(rareorespleasefuckingkillme).forEach(([ore, [elements, color, ico
 })
 
 event.create('omnic_nullate')
-.components('2x nullium', '1x omnium')
+.components('1x omnium', '2x nullium')
 .iconSet(GTMaterialIconSet.getByName('omnic_nullate'))
 .gem().ignoredTagPrefixes([TagPrefix.gemExquisite, TagPrefix.gemFlawless, TagPrefix.block]).flags(no_decomp)
 
 event.create('nullic_omnate')
-.components('2x omnium', '1x nullium')
+.components('1x nullium', '2x omnium')
 .iconSet(GTMaterialIconSet.getByName('nullic_omnate'))
 .gem().ignoredTagPrefixes([TagPrefix.gemExquisite, TagPrefix.gemFlawless, TagPrefix.block]).flags(no_decomp)
 })
@@ -4312,7 +4771,13 @@ const yumyumrods = ["uranium_235_oxide", "enriched_naquadrium_boride", "plutoniu
     .displayName(`&[rainbow]Perfected &[nullium]Mirroring §rNexon`)
     .tooltip(`&[infinity][Ω]`)
 
+    event.create('gtceu:uhv_voltage_coil')
+    .displayName('Ultimate+ Voltage Coil')
+    .tooltip('UHV Voltage Coil')
 
+    event.create('gtceu:uev_voltage_coil')
+    .displayName('Ultimate++ Voltage Coil')
+    .tooltip('UEV Voltage Coil')
 
 
 const oreamalgamcreation3000 = ['overworld', 'nether', 'end', 'undergarden', 'mythical_undergarden', 'moon', 'mars', 'mercury', 'venus', 'glacio']
@@ -4328,6 +4793,10 @@ event.create('gtceu:preon_star')
 stComponents.forEach(typashit => {
 const name = typashit.split('_')
     .map(word => word[0].toUpperCase() + word.slice(1)).join(' ')
+
+    event.create(`gtceu:uev_${typashit}`)
+        .displayName(`§aUEV §r${name}`)
+        .textureJson({ layer0: `gtceu:item/components/uev/${typashit}`})
 
     event.create(`gtceu:uhv_${typashit}`)
         .displayName(`§4UHV §r${name}`)
@@ -4408,22 +4877,22 @@ ore.create("gtceu:cracked_ancient_debris")
 
 StartupEvents.registry('block', event => {
 function casing(id, name, texture, hardness, resistance, tool, type, model, sound) {
-    if (sound == undefined) sound = 'metal';
+    if (sound == undefined) sound = 'metal'
 
-    let builder;
+    let builder
 
     if (type != null) {
-        builder = event.create(`gtceu:${id}`, type);
+        builder = event.create(`gtceu:${id}`, type)
     } else {
-        builder = event.create(`gtceu:${id}`);
+        builder = event.create(`gtceu:${id}`)
     }
 
     builder
         .displayName(name)
-        .textureAll(`gtceu:block/casings/${texture}`);
+        .textureAll(`gtceu:block/casings/${texture}`)
 
     if (model != null) {
-        builder.model(model);
+        builder.model(model)
     }
 
     builder
@@ -4432,7 +4901,7 @@ function casing(id, name, texture, hardness, resistance, tool, type, model, soun
         .resistance(resistance)
         .requiresTool(true)
         .tagBlock('minecraft:mineable/pickaxe')
-        .tagBlock(`minecraft:${tool}`);
+        .tagBlock(`minecraft:${tool}`)
 }
 
 casing('nexus_steel_casing', '§bNexus Steel §rCasing', 'solid/nexus_steel_casing', 13, 25, 'needs_iron_tool')
@@ -4451,7 +4920,7 @@ casing('auralloy-omega_over_transcendentine_casing', '§dTerakelvin Resilient §
 casing('vhaelcryite_casing', 'Surreal §4Pyrathene§r-§dVhaelcryite §rCasing', 'solid/vhaelcryite_casing', 13, 30, 'needs_diamond_tool')
 casing('vaelkethrite_casing', '§6Hypergolic §cVael§4kethrite §9Crystal §1Matrix §8Fusion §rCasing', 'solid/vaelkethrite_casing', 13, 30, 'needs_diamond_tool')
 casing('sulvan_steel_casing', 'Hypertensile-§7Cindra§rtechnic §6Sulvarium§r-Over-§bKraethite Steel §rCasing', 'solid/sulvan_steel_casing', 17, 40, 'needs_netherite_tool')
-casing('abyssal_netherite_casing', '§5E§dt§5h§de§dr§5e§da§dl§5l &[nul]Abyssal Netherite §rCasing', 'abyssal/casing', 17, 40, 'needs_netherite_tool')
+casing('abyssal_netherite_casing', '§5E§dt§5h§de§dr§5e§da§dl§ &[nul]Abyssal Netherite §rCasing', 'abyssal/casing', 17, 40, 'needs_netherite_tool')
 casing('aetherite_casing', '§3Cryothetically§r Hyperoperative §2Aetheric§r-§4Thermavyte§r Casing', 'solid/aetherite_casing', 17, 40, 'needs_netherite_tool')
 casing('peek_casing', "§aAcidically Nulled §6Poly-Ether Ether Ketone §rCasing", 'solid/peek_casing', 10, 23, 'needs_iron_tool')
 casing('velyl_rubber_casing', `§5E§dt§5h§de§dr§5e§da§dl§5l§dy§r §8Durable §bPoly§r(§3perfluorobis§r(§avelyl§r)§bmethylene ether§r) Rubber Casing`, 'solid/velyl_rubber_casing', 10, 23, 'needs_iron_tool')
@@ -4964,6 +5433,4 @@ bio.create('gtceu:biological_soc_wafer')
 bio.create(`gtceu:${bac}_bacterium_colony`)
 .textureJson({layer0: `gtceu:item/bacteria/${bac}_bacterium`})
 })
-/* bio.create('gtceu:living_data_disk')
-.textureJson({layer0: 'gtceu:item/sentient_circuitry/living_disk'}) */
 })

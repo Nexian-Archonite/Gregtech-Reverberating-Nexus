@@ -1,6 +1,6 @@
 // priority: one bajillion
 // priority: 9999
-
+const NexTechMaterialFlags = Java.loadClass('com.coremod.nextech.NexTechMaterialFlags')
 const $SteamMulti = Java.loadClass('com.gregtechceu.gtceu.common.machine.multiblock.steam.SteamParallelMultiblockMachine')
 const $CoilWorkableElectricMultiblockMachine = Java.loadClass("com.gregtechceu.gtceu.api.machine.multiblock.CoilWorkableElectricMultiblockMachine")
 const $GTRecipe = Java.loadClass("com.gregtechceu.gtceu.api.recipe.GTRecipe")
@@ -20,8 +20,7 @@ const $FluidBuilder = Java.loadClass("com.gregtechceu.gtceu.api.fluids.FluidBuil
 const $DustProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.DustProperty")
 const $GemProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.GemProperty")
 const $PropertyKey = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey")
-
-
+  
 
 // Icon Sets
 const DULL = GTMaterialIconSet.DULL
@@ -77,6 +76,9 @@ const fine_wire = GTMaterialFlags.GENERATE_FINE_WIRE
 const rotor = GTMaterialFlags.GENERATE_ROTOR
 const round = GTMaterialFlags.GENERATE_ROUND
 const magnetic = GTMaterialFlags.IS_MAGNETIC
+
+const chainlet = NexTechMaterialFlags.GENERATE_CHAINLET
+const chain_mesh = NexTechMaterialFlags.GENERATE_CHAIN_MESH
 // Gem Flags
 const crystallizable = GTMaterialFlags.CRYSTALLIZABLE
 const lens = GTMaterialFlags.GENERATE_LENS

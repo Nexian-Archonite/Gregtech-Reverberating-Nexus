@@ -1,0 +1,15 @@
+{
+    "bar_settings": {
+        "color_provider": {
+            "color": "#ff00e6e6",
+            "type": "single"
+        },
+        "show_text": true,
+        "show_icon": true,
+        "icon": "minecraft:textures/gui/icons.png",
+        "enabled": true,
+        "disables_overlay": "minecraft:air_level",
+        "side": "right",
+        "fitted": false
+    }
+}

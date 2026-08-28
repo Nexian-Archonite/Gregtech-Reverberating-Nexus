@@ -2,6 +2,11 @@
 
 // priority: one bajillion
 // Useful functions
+
+// my baby boy
+const FLAMERecipes = Java.loadClass('com.coremod.nextech.NexTechRecipeTypes').FLAME_RECIPES
+
+
 const V = (voltage) => {
     return global.v[voltage]
 }
@@ -25,7 +30,7 @@ const vh = global.vh
 const vha = global.vha
 
 const voltagetierexpensive = {
-        "uev": "omnium",
+        "uev": "polydimensionalized_omnic_nexite",
         "uiv": "nullium",
         "uxv": "infinity"
     }
@@ -60,7 +65,7 @@ const allthevoltage2 = {
     'uv':  "ephemeral_naquadite", //524288 EU/t
     'uhv': "stellarite", //2097152 EU/t
     'uev': "polydimensionalized_omnic_nexite", //8388608 EU/t
-    'uiv': "omniated_n-p_higgs-nulliate", //33554432 EU/t
+    'uiv': "true_nullium", //33554432 EU/t
     'uxv': "absolute_infinity", //134217728 EU/t
     'opv': "nexian_infinity", //536870912 EU/t
     'max': "reverberating_nexus" //2147483648 EU/t
@@ -183,12 +188,12 @@ const types = [
   'block', 'powder', 'sheet', 'crystal', 'crushed'
 ]
 
-// thank you Star Technology for the inspiration
+// thank you Star Technology for sponsoring RAI-
 
 const researchTypes = ['organism_assembly_line', 'component_part_assembly', 'assembly_line']
 
 global.ComponentResearch = (event, recipeId, researchItem, cwuT, totalCWU, euT, recipeType) => {
-    const dataItem = (cwuT >= 64) ? 'gtceu:data_module' : 'gtceu:data_orb'
+    const dataItem = (cwuT >= 144) ? 'nextech:living_data_disk' : (cwuT >= 64) ? 'gtceu:data_module' : 'gtceu:data_orb'
     const researchId = `1x_${researchItem.replace(':', '_')}`
 
     event.recipes.gtceu.research_station(`component_research_${researchId}`)
@@ -333,7 +338,7 @@ dualCasing('auralloy-omega_over_transcendentine', 'auralloy-omega_over_transcend
 dualCasing('activated_nexian_pyrite', 'activated_nexian_pyrite', 'activated_nexian_pyrite_casing')
 dualCasing('velyl_rubber', 'velyl_rubber', 'velyl_rubber_casing')
 dualCasing('pyrghul_alloy', 'pyrghul_alloy', 'pyrghul_alloy_casing')
-dualCasing('tainted_zircalloy', 'tainted_zircalloy', 'atomic_casing')
+dualCasing('tainted_zircaloy', 'tainted_zircaloy', 'atomic_casing')
 
 
 dualCasingAdv('sulvan_steel', 'cindralite', 'sulvan_steel_casing')
@@ -390,7 +395,7 @@ GTM.component_part_assembly(`abyssal_netherite_machine_casing`)
 const transcendentBlastTier = [
     { name: 'sulvan_steel', blastTemp: 11000, EUt: va.uv, duration: 750 },
     { name: 'aetheric-thermavyte', blastTemp: 10799, EUt: va.uhv, duration: 800 },
-    { name: 'indium-vor-dys-cad_supersolder_alloy', blastTemp: 11000, EUt: va.uhv, duration: 750},
+    { name: 'indium-vor-dys-cad_supersolder_alloy', blastTemp: 8000, EUt: va.uhv, duration: 750},
     { name: 'transcendent_dilithide', blastTemp: 16800, EUt: va.uhv, duration: 950},
     { name: 'ignatherm', blastTemp: 12360, EUt: va.luv, duration: 941 },
     { name: 'vhoric_steel', blastTemp: 12940, EUt: va.luv, duration: 1076 },
@@ -418,10 +423,37 @@ const transcendentBlastTier = [
     { name: 'aeuvrith-al', blastTemp: 13376, EUt: va.zpm, duration: 1046 },
     { name: 'xhyv-orzael', blastTemp: 12844, EUt: va.zpm, duration: 959 },
     { name: 'ng-vaethos', blastTemp: 13461, EUt: va.zpm, duration: 832 },
+    { name: 'aelvythrex', blastTemp: 16240, EUt: va.uhv, duration: 1124 },
+    { name: 'czyvhaeln', blastTemp: 16880, EUt: va.uhv, duration: 1093 },
+    { name: 'thurvaexi', blastTemp: 17100, EUt: va.uhv, duration: 1201 },
+    { name: 'yrethnaul', blastTemp: 17440, EUt: va.uhv, duration: 1318 },
+    { name: 'phaevcyrl', blastTemp: 16600, EUt: va.uhv, duration: 1177 },
+    { name: 'kholvaetzh', blastTemp: 17800, EUt: va.uhv, duration: 1402 },
+    { name: 'vrethdulix', blastTemp: 16180, EUt: va.uhv, duration: 1088 },
+    { name: 'ghauzrenit', blastTemp: 16740, EUt: va.uhv, duration: 1211 },
+    { name: 'jolvekrasz', blastTemp: 17220, EUt: va.uhv, duration: 1344 },
+    { name: 'thuzkavel', blastTemp: 16960, EUt: va.uhv, duration: 1289 },
+    { name: 'drevhnauxt', blastTemp: 17680, EUt: va.uhv, duration: 1388 },
+    { name: 'uxvheltris', blastTemp: 17940, EUt: va.uhv, duration: 1419 },
+    { name: 'caelvr', blastTemp: 16020, EUt: va.uhv, duration: 1066 },
+    { name: 'fendrothex', blastTemp: 16380, EUt: va.uhv, duration: 1134 },
+    { name: 'mornivecht', blastTemp: 16820, EUt: va.uhv, duration: 1256 },
+    { name: 'sturvaelix', blastTemp: 17140, EUt: va.uhv, duration: 1311 },
+    { name: 'brechovite', blastTemp: 17460, EUt: va.uhv, duration: 1367 },
+    { name: 'drethnavik', blastTemp: 17980, EUt: va.uhv, duration: 1433 },
 
-    { name: 'omnium', blastTemp: 19449, EUt: va.uhv, duration: 1600 },
-    { name: 'nullium', blastTemp: 29600, EUt: va.uev, duration: 2400 },
-    { name: 'infinity', blastTemp: 29600, EUt: va.uiv, duration: 3200 },
+    { name: 'aelczyr', blastTemp: 17420, EUt: va.uev, duration: 900 },
+    { name: 'thulvaex', blastTemp: 18240, EUt: va.uev, duration: 950 },
+    { name: 'vrethren', blastTemp: 17180, EUt: va.uev, duration: 850 },
+    { name: 'jolvelix', blastTemp: 18480, EUt: va.uev, duration: 1000 },
+    { name: 'caeldrox', blastTemp: 16940, EUt: va.uev, duration: 800 },
+    { name: 'sturvik', blastTemp: 18360, EUt: va.uev, duration: 950 },
+    { name: 'morniloy-13', blastTemp: 19440, EUt: va.uev, duration: 1200 },
+
+
+    { name: 'omnium', blastTemp: 19449, EUt: va.uev, duration: 800 },
+    { name: 'nullium', blastTemp: 29600, EUt: va.uiv, duration: 1200 },
+    { name: 'infinity', blastTemp: 29600, EUt: va.uxv, duration: 1600 },
 ]
 
 const transcendentAlloyBlastTier = [
@@ -490,17 +522,10 @@ const transcendentAlloyBlastTier = [
     },
     {
         name: 'nexian_pyrite',
-        blastTemp: 16800,
+        blastTemp: 16000,
         EUt: va.uv,
         duration: 44550,
         components: ['37x nexus_steel', '12x abyssal_netherite', '8x korzene', '4x sulvan_steel', '3x promethium', '2x vaexium']
-    },
-    {
-        name: 'activated_nexian_pyrite',
-        blastTemp: 16800,
-        EUt: va.uv,
-        duration: 1000,
-        components: ['1x nexian_pyrite',  '2x cindralite-kethrite']
     },
     {
         name: 'mythrolyc_umbraloy',
@@ -515,9 +540,58 @@ const transcendentAlloyBlastTier = [
         EUt: va.uhv,
         duration: 1050,
         components: ['4x pyrghul_alloy', '3x korzene', '2x mythryl', '2x viridrine']
+    },
+    {
+        name: 'aelczyr',
+        blastTemp: 17420,
+        EUt: va.uev,
+        duration: 1350,
+        components: ['aelvythrex', 'czyvhaeln']
+    },
+    {
+        name: 'thulvaex',
+        blastTemp: 18240,
+        EUt: va.uev,
+        duration: 1425,
+        components: ['thurvaexi', 'kholvaetzh']
+    },
+    {
+        name: 'vrethren',
+        blastTemp: 17180,
+        EUt: va.uev,
+        duration: 1275,
+        components: ['vrethdulix', 'ghauzrenit']
+    },
+    {
+        name: 'jolvelix',
+        blastTemp: 18480,
+        EUt: va.uev,
+        duration: 1500,
+        components: ['jolvekrasz', 'uxvheltris']
+    },
+    {
+        name: 'caeldrox',
+        blastTemp: 16940,
+        EUt: va.uev,
+        duration: 1200,
+        components: ['caelvr', 'fendrothex']
+    },
+    {
+        name: 'sturvik',
+        blastTemp: 18360,
+        EUt: va.uev,
+        duration: 1425,
+        components: ['sturvaelix', 'drethnavik']
+    },
+    {
+        name: 'morniloy-13',
+        blastTemp: 19440,
+        EUt: va.uev,
+        duration: 6300,
+        components: ['2x caeldrox', '2x vrethren', '2x aelczyr', 'mornivecht']
     }
 ]
-
+// become alloy, damn you!
 function ogConsumption(blastTemp) {
     const base = 50 + (blastTemp - 10000) * 0.02
     let mod
@@ -567,21 +641,20 @@ transcendentAlloyBlastTier.forEach(mat => {
         return sum + (amount * 144)
     }, 0)
 
-    const noABSRecipe = new Set(['activated_nexian_pyrite', 'mythrovirdyne', 'mythrolyc_umbraloy'])
 
-// then in the forEach:
-if (!noABSRecipe.has(mat.name)) {
-        GTM.alloy_blast_smelter(`${mat.name}_og`)
+if (mat.blastTemp <= 16001) {
+    GTM.alloy_blast_smelter(`${mat.name}_og`)
         .itemInputs(
-        mat.components.map(component => {
-        let [amount, name] = component.split('x ')
-        return `${amount}x gtceu:${name}_dust`}))
+            mat.components.map(component => {
+                let [amount, name] = component.split('x ')
+                return `${amount}x gtceu:${name}_dust`
+            }))
         .inputFluids(`gtceu:oganesson-xenon_trifluoride ${25*Math.log10(totalMb)}`)
-        .outputFluids(`gtceu:molten_${mat.name} totalMb}`)
+        .outputFluids(`gtceu:molten_${mat.name} ${totalMb}`)
         .blastFurnaceTemp(mat.blastTemp)
-        .duration((0.57 - 0.03 * Math.log(totalMb /100)) * mat.duration)
+        .duration((0.57 - 0.03 * Math.log(totalMb / 100)) * mat.duration)
         .EUt(mat.EUt)
-    }
+}
 
     if (mat.name !== 'aetheric-thermavyte') {
         event.remove({id: `gtceu:vacuum_freezer/${mat.name}`})
@@ -602,19 +675,10 @@ if (!noABSRecipe.has(mat.name)) {
 })
 
 
-global.FLAME = (plasma, inputs, output, duration, EUt, MegaKevin, catalyst) => {
+global.FLAME = (inputs, output, duration, EUt, MegaKevin, catalyst) => {
     if (catalyst === undefined) catalyst = null
     
-    // Map of plasma base temperatures in MK
-    const baseTemps = {
-        'americium': 100,
-        'infernality_catalysm': 300,
-        // Add other plasmas here as needed, fallback defaults to 300 (or MegaKelvin)
-    }
-
-    let baseTemp = baseTemps[plasma] 
-    
-    let id = `${plasma}_${output.replace('_plasma', '')}`
+    let id = `${output.replace('_plasma', '')}`
     let totalAmount = inputs.reduce((sum, fluid) => {
         let amount = parseInt(fluid.split(' ')[1])
         return sum + amount * 144
@@ -625,12 +689,7 @@ global.FLAME = (plasma, inputs, output, duration, EUt, MegaKevin, catalyst) => {
         return `gtceu:${name} ${parseInt(amount) * 144}`
     })
 
-    let tempDifference = Math.max(0, baseTemp - MegaKevin)
-    let steps = Math.floor(tempDifference / 100)
-    let adjustedDuration = Math.round(duration * Math.pow(0.95, steps))
-
     let recipe = GTM.fractal_metal_alloyment(id)
-        .inputFluids(`gtceu:${plasma}_plasma ${Math.round(1000 * Math.log(MegaKevin))}`)
         .inputFluids(prefixedInputs)
 
     if (catalyst) {
@@ -645,17 +704,24 @@ global.FLAME = (plasma, inputs, output, duration, EUt, MegaKevin, catalyst) => {
 
     recipe
         .outputFluids(`gtceu:${output}_plasma ${totalAmount}`)
-        .duration(adjustedDuration)
-        .addData('TempMK', MegaKevin)
+        .duration(duration)
+        .addData('ebf_temp', MegaKevin)
 }
 
-global.registerComponents = (tier, mainMaterial, solderFluid, solderAmount, polymerFluid, polymerAmount, extraSolder1, extraSolder2) => {
+
+
+
+global.registerComponents = (tier, mainMaterial, solderFluid, solderAmount, polymerFluid, polymerAmount, extraSolder1, extraSolder2, rc) => {
     const tiers = ['uhv', 'uev', 'uiv', 'uxv', 'opv']
     let tierIndex = tiers.indexOf(tier)
     
     let currentTierCircuit = tier
     let prevTierCircuit = tierIndex > 0 ? tiers[tierIndex - 1] : 'uv'
     let prevPrevTierCircuit = tierIndex > 1 ? tiers[tierIndex - 2] : 'zpm'
+
+    console.log("Current:", currentTierCircuit);
+    console.log("Prev:", prevTierCircuit);
+    console.log("PrevPrev:", prevPrevTierCircuit);
     
     let componentTier = tierIndex > 0 ? tiers[tierIndex - 1] : 'uv'
     let researchPrereq = tierIndex === 0 ? 'ruined' : tiers[tierIndex - 1]
@@ -665,14 +731,14 @@ global.registerComponents = (tier, mainMaterial, solderFluid, solderAmount, poly
     let euTier = va[tier]
 
     const components = {
-        catalyst_core: [`4x gtceu:${mainMaterial}_rod`, 'gtceu:fusion_glass', 'gtceu:preon_star', `32x gtceu:fine_${mainMaterial}_wire`, `gtceu:${componentTier}_emitter`, `4x gtceu:${mainMaterial}_ring`, `${solderFluid} ${solderAmount}`],
-        computational_matrix: [`gtceu:${mainMaterial}_frame`, `#gtceu:circuits/${currentTierCircuit}`, `2x #gtceu:circuits/${prevTierCircuit}`, `3x #gtceu:circuits/${prevPrevTierCircuit}`, `4x gtceu:astrazine-e_single_cable`, `4x gtceu:${mainMaterial}_bolt`, `${solderFluid} ${solderAmount}`],
-        high_strength_panel: [`gtceu:dense_${mainMaterial}_plate`, `#gtceu:circuits/zpm`, `4x gtceu:${mainMaterial}_screw`, `${polymerFluid} ${polymerAmount}`],
+        catalyst_core: [`4x gtceu:${mainMaterial}_rod`, 'gtceu:fusion_glass', 'gtceu:preon_star', `32x gtceu:fine_${rc}_wire`, `gtceu:${componentTier}_emitter`, `4x gtceu:${mainMaterial}_ring`, `${solderFluid} ${solderAmount}`],
+        computational_matrix: [`gtceu:${mainMaterial}_frame`, `#gtceu:circuits/${currentTierCircuit}`, `2x #gtceu:circuits/${prevTierCircuit}`, `3x #gtceu:circuits/${prevPrevTierCircuit}`, `4x gtceu:${rc}_single_wire`, `4x gtceu:${mainMaterial}_bolt`, `${solderFluid} ${solderAmount}`],
+        high_strength_panel: [`gtceu:dense_${mainMaterial}_plate`, `4x gtceu:${mainMaterial}_chain_mesh`, `4x gtceu:${mainMaterial}_screw`, `${polymerFluid} ${polymerAmount}`],
         microfluidic_flow_valve: [`gtceu:${componentTier}_fluid_regulator`, 'gtceu:stellarite_small_fluid_pipe', `2x gtceu:${mainMaterial}_plate`, `4x gtceu:${mainMaterial}_round`, 'gtceu:styrene_butadiene_rubber_ring', `2x gtceu:${mainMaterial}_ring`, `${polymerFluid} ${polymerAmount}`],
-        micropower_router: [`4x gtceu:astrazine-e_double_cable`, `2x gtceu:${mainMaterial}_plate`, `#gtceu:circuits/${prevTierCircuit}`, `4x gtceu:${mainMaterial}_bolt`, `gtceu:velyl_rubber ${polymerAmount}`],
+        micropower_router: [`4x gtceu:${rc}_double_wire`, `2x gtceu:${mainMaterial}_plate`, `#gtceu:circuits/${prevTierCircuit}`, `4x gtceu:${mainMaterial}_bolt`, `gtceu:velyl_rubber ${polymerAmount}`],
         precision_drive_mechanism: [`gtceu:${mainMaterial}_frame`, `gtceu:${componentTier}_electric_motor`, `#gtceu:circuits/${prevTierCircuit}`, `gtceu:${mainMaterial}_gear`, `gtceu:small_${mainMaterial}_gear`, `8x gtceu:${mainMaterial}_round`, 'gtceu:triconite 2000'],
-        super_magnetic_core: ['gtceu:long_bose-einstein_neutronium_rod', '2x gtceu:cryosporsite_rod', `3x gtceu:${mainMaterial}_rod`, `16x gtceu:fine_${mainMaterial}_wire`, 'gtceu:stellarite_tiny_fluid_pipe', 'gtceu:bose-einstein_oganesson-xenon_trifluoride_condensate_plasma 2000'],
-        transmission_assembly: [`gtceu:${mainMaterial}_frame`, `gtceu:${componentTier}_electric_motor`, `2x gtceu:${mainMaterial}_rod`, `2x gtceu:${mainMaterial}_ring`, `4x gtceu:${mainMaterial}_round`, `16x gtceu:fine_${mainMaterial}_wire`, 'gtceu:triconite 2000']
+        super_magnetic_core: ['gtceu:long_bose-einstein_neutronium_rod', '2x gtceu:cryosporsite_rod', `3x gtceu:${mainMaterial}_rod`, `16x gtceu:fine_${rc}_wire`, 'gtceu:stellarite_tiny_fluid_pipe', 'gtceu:bose-einstein_oganesson-xenon_trifluoride_condensate_plasma 2000'],
+        transmission_assembly: [`gtceu:${mainMaterial}_frame`, `gtceu:${componentTier}_electric_motor`, `2x gtceu:${mainMaterial}_rod`, `2x gtceu:${mainMaterial}_ring`, `4x gtceu:${mainMaterial}_round`, `16x gtceu:fine_${rc}_wire`, 'gtceu:triconite 2000']
     }
 
     for (let [name, ingredients] of Object.entries(components)) {
@@ -690,12 +756,12 @@ global.registerComponents = (tier, mainMaterial, solderFluid, solderAmount, poly
     }
 
     const machines = {
-        electric_motor: [`gtceu:${tier}_super_magnetic_core`, `2x gtceu:long_${mainMaterial}_rod`, `gtceu:${tier}_transmission_assembly`, `64x gtceu:fine_${mainMaterial}_wire`, `gtceu:${tier}_micropower_router`, [`${solderFluid} ${solderAmount}`, `${extraSolder1} 2000`, `${extraSolder2} ${solderAmount}`]],
+        electric_motor: [`gtceu:${tier}_super_magnetic_core`, `2x gtceu:long_${mainMaterial}_rod`, `gtceu:${tier}_transmission_assembly`, `64x gtceu:fine_${rc}_wire`, `gtceu:${tier}_micropower_router`, [`${solderFluid} ${solderAmount}`, `${extraSolder1} 2000`, `${extraSolder2} ${solderAmount}`]],
         electric_pump: [`gtceu:${tier}_electric_motor`, 'gtceu:stellarite_normal_fluid_pipe', `gtceu:${tier}_microfluidic_flow_valve`, `8x gtceu:velyl_rubber_ring`, `gtceu:${mainMaterial}_rotor`, `gtceu:${tier}_micropower_router`, [`${solderFluid} ${solderAmount}`, `${extraSolder1} 2000`, `${extraSolder2} ${solderAmount}`]],
         conveyor_module: [`2x gtceu:${tier}_electric_motor`, `gtceu:${tier}_high_strength_panel`, `gtceu:${tier}_precision_drive_mechanism`, `4x gtceu:${mainMaterial}_ring`, `gtceu:${tier}_micropower_router`, [`${solderFluid} ${solderAmount}`, `${extraSolder1} 2000`, `gtceu:velyl_rubber 4608`, `${extraSolder2} ${solderAmount}`]],
         electric_piston: [`gtceu:${tier}_electric_motor`, `2x gtceu:${tier}_high_strength_panel`, `gtceu:${tier}_transmission_assembly`, `gtceu:${mainMaterial}_gear`, `gtceu:small_${mainMaterial}_gear`, `gtceu:${tier}_micropower_router`, [`${solderFluid} ${solderAmount}`, `${extraSolder1} 2000`, `${extraSolder2} ${solderAmount}`]],
         robot_arm: [`4x gtceu:long_${mainMaterial}_rod`, `gtceu:${tier}_precision_drive_mechanism`, `gtceu:${tier}_transmission_assembly`, `gtceu:${tier}_electric_motor`, `gtceu:${tier}_electric_piston`, `2x gtceu:${tier}_computational_matrix`, `2x gtceu:${tier}_micropower_router`, [`${solderFluid} ${solderAmount}`, `${extraSolder1} 2000`, `${extraSolder2} ${solderAmount}`]],
-        field_generator: [`gtceu:${mainMaterial}_frame`, `2x gtceu:${tier}_high_strength_panel`, `gtceu:${tier}_catalyst_core`, `2x gtceu:${tier}_emitter`, `gtceu:${tier}_computational_matrix`, `64x gtceu:fine_chronocrytic-vhaelsalite_wire`, `2x gtceu:${tier}_micropower_router`, [`${solderFluid} ${solderAmount}`, `${extraSolder2} ${solderAmount}`]],
+        field_generator: [`gtceu:${mainMaterial}_frame`, `2x gtceu:${tier}_high_strength_panel`, `gtceu:${tier}_catalyst_core`, `2x gtceu:${tier}_emitter`, `gtceu:${tier}_computational_matrix`, `64x gtceu:fine_${rc}_wire`, `2x gtceu:${tier}_micropower_router`, [`${solderFluid} ${solderAmount}`, `${extraSolder2} ${solderAmount}`]],
         emitter: [`gtceu:${mainMaterial}_frame`, `gtceu:${tier}_electric_motor`, `4x gtceu:long_${mainMaterial}_rod`, `gtceu:${tier}_catalyst_core`, `gtceu:${tier}_computational_matrix`, `64x gtceu:stellarite_foil`, `gtceu:${tier}_micropower_router`, [`${solderFluid} ${solderAmount * 2}`, `${extraSolder1} 2000`, `${extraSolder2} ${solderAmount}`]],
         sensor: [`gtceu:${mainMaterial}_frame`, `gtceu:${tier}_electric_motor`, `4x gtceu:${mainMaterial}_plate`, `gtceu:${tier}_catalyst_core`, `gtceu:${tier}_computational_matrix`, `64x gtceu:stellarite_foil`, `gtceu:${tier}_micropower_router`, [`${solderFluid} ${solderAmount * 2}`, `${extraSolder1} 2000`, `${extraSolder2} ${solderAmount}`]]
     }

@@ -1,5 +1,3 @@
-// kubejs/server_scripts/processing_planting.js
-
 const oreProcessableTiers = {
   ElectricProcessing: [
     { material: 'iron', secondary: 'nickel', tertiary: 'tin' },

@@ -125,7 +125,7 @@ GTM.distillation_tower('unpure_source_from_tainted')
     .duration(40)
     .EUt(128)
 
-    GTM.phase_alternator(('perfect_taint'))
+    GTM.phase_alternator(('perfected_taint'))
     .inputFluids(Fluid.of('gtceu:heat_treated_taint 175'), Fluid.of('gtceu:alloyed_taint 1000'), Fluid.of('gtceu:chromatically_mutated_taint 180'), Fluid.of('gtceu:mechanical_concentrate 5'))
     .outputFluids(Fluid.of('gtceu:perfected_taint 460'))
     .duration(200)
@@ -646,7 +646,7 @@ GTM.cyclotron(('netherite_sludge_cycling'))
 .itemOutputs('gtceu:purified_netherite_scrap', '2x gtceu:platinum_group_sludge_dust', 'gtceu:naquadah_dust', '3x gtceu:bastnasite_dust', '2x gtceu:tungstate_dust', '6x gtceu:netherite_dust')
 .outputFluids(Fluid.of('gtceu:aqua_regia 100'))
 .duration(400)
-.EUt(GTValues.V[GTValues.IV], 3)
+.EUt(GTValues.V[GTValues.EV], 3)
 
 GTM.alloy_blast_smelter(('purified_netherite_alloyment'))
 .itemInputs('4x gtceu:platinum_ingot', '4x gtceu:purified_netherite_scrap', '16x minecraft:gold_ingot')
@@ -682,7 +682,7 @@ GTM.assembler(('enriched_naquadrium_boride_fuel_rod_assembly'))
 .EUt(2048)
 
 GTM.assembler(('nuclear_reactor_assembly'))
-.itemInputs('gtceu:ev_chemical_reactor', '64x gtceu:tainted_zircalloy_plate','48x kubejs:mechanical_essence_ampule','32x gtceu:lead_plate', '16x #gtceu:circuits/iv','8x gtceu:tainted_titanium_normal_fluid_pipe', '4x gtceu:duct_tape')
+.itemInputs('gtceu:ev_chemical_reactor', '64x gtceu:tainted_zircaloy_plate','48x kubejs:mechanical_essence_ampule','32x gtceu:lead_plate', '16x #gtceu:circuits/iv','8x gtceu:tainted_titanium_normal_fluid_pipe', '4x gtceu:duct_tape')
 .inputFluids(Fluid.of('gtceu:polytetrafluoroethylene 24000'))
 .itemOutputs('gtceu:nuclear_fission_reactor')
 .duration(12000)
@@ -1105,7 +1105,7 @@ GTM.mixer('thorium_uranium_dioxide_mixing')
 .EUt(128)
 
 GTM.assembler('fuel_assembly')
-.itemInputs('64x gtceu:stainless_steel_rod', '14x gtceu:stainless_steel_rod', '4x gtceu:tainted_zircalloy_plate', '2x kubejs:obsidian_glass')
+.itemInputs('64x gtceu:stainless_steel_rod', '14x gtceu:stainless_steel_rod', '4x gtceu:tainted_zircaloy_plate', '2x kubejs:obsidian_glass')
 .itemOutputs('gtceu:fuel_assembly')
 .inputFluids('gtceu:polytetrafluoroethylene 144')
 .duration(60)
@@ -1507,8 +1507,22 @@ mercury: {
 
 const thesecondlisttoendalllists = {
     overworld: {
-        ores: [],
-        fluids: []
+        ores: [
+            ['deepslate_caelvrite', 'deepslate_molybdenite', 'deepslate_scheelite'],
+            ['deepslate_fendrothexite', 'deepslate_olivine', 'deepslate_molybdenite'],
+            ['deepslate_mornivechtite', 'deepslate_galena', 'deepslate_sphalerite'],
+            ['deepslate_sturvaelixite', 'deepslate_bastnasite', 'deepslate_monazite'],
+            ['deepslate_brechovitite', 'deepslate_sphalerite', 'deepslate_galena'],
+            ['deepslate_drethnaverite', 'deepslate_scheelite', 'deepslate_molybdenite']
+        ],
+        fluids: [
+            'gtceu:naquadria 5000',
+            'gtceu:osmium 1000',
+            'gtceu:iridium 1000',
+            'gtceu:platinum 2000',
+            'gtceu:palladium 2000',
+            'gtceu:naquadria 5000'
+        ]
     },
     nether: {
         ores: [
@@ -1520,7 +1534,7 @@ const thesecondlisttoendalllists = {
             'gtceu:americium_plasma 1000',
             'gtceu:acidic_unpure_uncracked_sulfuric_netherite_slag 10000',
             'gtceu:rare_earth_sludge 50000'
-    ]
+        ]
     },
     end: {
         ores: [
@@ -1545,8 +1559,22 @@ const thesecondlisttoendalllists = {
         ]
     },
     moon: {
-        ores: [],
-        fluids: []
+        ores: [
+            ['moon_aelvythrexite', 'moon_ilmenite', 'moon_rutile'],
+            ['moon_czyvhaelnite', 'moon_spodumene', 'moon_bauxite'],
+            ['moon_thurvaexite', 'moon_sapphire', 'moon_apatite'],
+            ['moon_yrethnaulite', 'moon_magnetite', 'moon_ilmenite'],
+            ['moon_phaevcyrlite', 'moon_rutile', 'moon_xenotime'],
+            ['moon_kholvaetzhite', 'moon_monazite', 'moon_bastnasite']
+        ],
+        fluids: [
+            'gtceu:helium_3 50000',
+            'gtceu:naquadria 5000',
+            'gtceu:europium 10000',
+            'gtceu:lutetium 10000',
+            'gtceu:promethium 10000',
+            'gtceu:holmium 10000'
+        ]
     },
     mars: {
         ores: [
@@ -1583,14 +1611,31 @@ const thesecondlisttoendalllists = {
         ]
     },
     mercury: {
-        ores: [],
-        fluids: []
+        ores: [
+            ['mercury_vrethdulixit', 'mercury_chromite', 'mercury_pyroxene'],
+            ['mercury_ghauzrenitite', 'mercury_enstatite', 'mercury_graphite'],
+            ['mercury_jolvekrasite', 'mercury_pyroxene', 'mercury_enstatite'],
+            ['mercury_thuzkavelite', 'mercury_graphite', 'mercury_chromite'],
+            ['mercury_drevhnauxite', 'mercury_enstatite', 'mercury_pyroxene'],
+            ['mercury_uxvheltrisite', 'mercury_cooperite', 'mercury_xenotime']
+        ],
+        fluids: [
+            'gtceu:iridium 1000',
+            'gtceu:osmium 1000',
+            'gtceu:naquadria 5000',
+            'gtceu:acidic_osmium_solution 2000',
+            'gtceu:rhodium_sulfate 5000'
+        ]
     }
 }
 
 Object.entries(thelisttoendalllists).forEach(function(dimEntry) {
     var dimension = dimEntry[0]
     var data = dimEntry[1]
+    var EUt = 32768
+    if (dimension === 'overworld' || dimension === 'mercury' || dimension === 'moon') {
+    EUt = 2097152
+    }
 
     data.ores.forEach(function(ores, circuit) {
         var recipe = GTM.chemical_vat(dimension + '_amalgam_separation_' + circuit)
@@ -1600,7 +1645,7 @@ Object.entries(thelisttoendalllists).forEach(function(dimEntry) {
             .addData("HeatPressure", 6)
             .addData("Temp", 600)
             .duration(200)
-            .EUt(32768)
+            .EUt(EUt)
 
         ores.forEach(function(ore) {
             recipe.itemOutputs('16x gtceu:' + ore + '_ore')

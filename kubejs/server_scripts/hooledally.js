@@ -43,6 +43,40 @@ Object.entries(tierReplacements).forEach(([inputs, replacement]) => {
 
 // I have no idea how it works, but it works, so im not touching this shit
 
+const RecyclingTierRegex = /gtceu:(lv|mv|hv|ev|iv|luv|zpm|uv|uhv|uev|uiv|uxv|opv|max)_/
+
+Object.entries(tierReplacements).forEach(([inputs, replacement]) => {
+        event.replaceOutput(
+            { type: 'gtceu:macerator', input: RecyclingTierRegex },
+            `gtceu:${inputs}_dust`,
+            `gtceu:${replacement}_dust`
+        )
+
+        event.replaceOutput(
+            { type: 'gtceu:macerator', input: RecyclingTierRegex },
+            `gtceu:small_${inputs}_dust`,
+            `gtceu:small_${replacement}_dust`
+        )
+
+        event.replaceOutput(
+            { type: 'gtceu:macerator', input: RecyclingTierRegex },
+            `gtceu:tiny_${inputs}_dust`,
+            `gtceu:tiny_${replacement}_dust`
+        )
+
+        event.replaceOutput(
+            { type: 'gtceu:arc_furnace', input: RecyclingTierRegex },
+            `gtceu:${inputs}_ingot`,
+            `gtceu:${replacement}_ingot`
+        )
+
+        event.replaceOutput(
+            { type: 'gtceu:arc_furnace', input: RecyclingTierRegex },
+            `gtceu:${inputs}_nugget`,
+            `gtceu:${replacement}_nugget`
+        )
+})
+
 
 event.replaceInput(
     {id: 'gtceu:shaped/wood_wall'},

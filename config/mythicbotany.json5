@@ -125,7 +125,7 @@
   
     // The amount the attack speed increases per level of hammer mobility.
     // Minimum: 0.0
-    "attack_speed_multiplier": 0.2,
+    "attack_speed_multiplier": 0.4,
     
     // The base attack speed attribute for mjoellnir.
     "base_attack_speed": -3.5,
@@ -144,7 +144,7 @@
     
     // The cooldown in ticks after a ranged attack, before mjoellnir can be thrown again.
     // Minimum: 0
-    "ranged_cooldown": 120,
+    "ranged_cooldown": 20,
     
     // What is required for a player to hold mjoellnir.
     // nothing  - Players will always be able to hold mjoellnir.
@@ -152,7 +152,7 @@
     // hearts   - Players need absorption hearts to hold mjoellnir.
     //            If they run out of golden hearts but still have the effect, mjoellnir is dropped.
     // Allowed values: nothing, effect, hearts
-    "requirement": "effect",
+    "requirement": "nothing",
     
     // What is required for a player that holds the ring of thor to hold mjoellnir.
     // If a player holds the ring of thor, this OR `mjoellnir.requirement` must be met.

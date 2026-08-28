@@ -151,10 +151,18 @@ event.addAdvanced(`gtceu:ruined_${gabagool}`, (item, advanced, text) => {
 
 event.addAdvanced(`gtceu:uhv_${gabagool}`, (item, advanced, text) => {
     text.add(1, Text.of(`§7Resurrected from the dead Kha'Reh-Zul`))
-    text.add(2, Text.of(`§7Imbued with the essence of the §[chorite]Chorite God`))
-})
+    text.add(2, Text.of(`§7Imbued with an iota of the §[chorite]Chorite God's essence`))
 })
 
+event.addAdvanced(`gtceu:uev_${gabagool}`, (item, advanced, text) => {
+    text.add(1, Text.of(`§7Refined Components, upgraded from the Resurrections`))
+    text.add(2, Text.of(`§7Imbued with a grain of sand worth's of the §[chorite]Chorite God's essence`))
+})
 
+})
+
+event.addAdvanced(/(tiny|small_)?gtceu:methylenedianiline_dust/, (item, advanced, text) => {
+    text.add(1, Text.of("4,4'-methylenedianiline. not that MDA. we are not liable."))
+})
 
 })

@@ -28,14 +28,14 @@
         // Type: Integer
         "automation_nasa_workbench_cook_time": 200,
         // Type: Long
-        "gravity_normalizer_energy_capacity": 9600,
+        "gravity_normalizer_energy_capacity": 96000,
         /*
          * Blocks = x * y * z
          * Type: Double
          */
-        "gravity_normalizer_energy_per_blocks": 0.5,
+        "gravity_normalizer_energy_per_blocks": 0.25,
         // Type: Integer
-        "gravity_normalizer_max_length": 31,
+        "gravity_normalizer_max_length": 64,
         // Type: Integer
         "gravity_normalizer_proof_duration": 10,
         /*

@@ -1006,6 +1006,14 @@ GTM.biomechanical_mixer('sentient_alloy_incubation')
 .duration(2000)
 .cleanroom(CleanroomType.STERILE_CLEANROOM)
 
+GTM.organism_assembly_line('living_data_disk')
+.itemInputs('gtceu:sentience_printed_circuit_board', '2x #gtceu:circuits/uv',  '32x gtceu:b_ram_chip', '16x gtceu:b_nor_memory_chip', '16x gtceu:b_nand_memory_chip', '32x gtceu:fine_astrazine-e_wire')
+.inputFluids('gtceu:mutagen 144', 'gtceu:refined_sentience 216')
+.itemOutputs('nextech:living_data_disk')
+.stationResearch(global.OrganismAssemblyLineResearch(event, 'living_data_disk', 'gtceu:data_module', 64, 51200, va.zpm))
+.duration(1000)
+.EUt(va.uv)
+
 GTM.organism_assembly_line('sentient_smd_resistor')
 .itemInputs('gtceu:flesh_alloy_plate', '4x gtceu:triconite_foil', 'gtceu:sentient_alloy_plate')
 .inputFluids('gtceu:artificial_blood 1000', 'gtceu:refined_sentience 100', 'gtceu:pedot_pss 144', 'gtceu:crystal_methamphetamine 36')
@@ -1084,8 +1092,7 @@ GTM.organism_assembly_line('biomechanical_factory')
 GTM.organism_incubation_chamber('dragon_incubation')
 .notConsumable('dragon_egg')
 .itemInputs('256x gtceu:stem_cells')
-.inputFluids('gtceu:primordial_essence 1000')
-.inputFluids('gtceu:sterilized_growth_medium 4000', 'gtceu:refined_sentience 200')
+.inputFluids('gtceu:draconic_serum 4000', 'gtceu:refined_sentience 200')
 .itemOutputs('dragon_egg', 'gtceu:dragon_heart')
 .cleanroom(CleanroomType.STERILE_CLEANROOM)
 .duration(5000)
@@ -1457,7 +1464,9 @@ GTM.particle_accelerator('antimatter_tank_draining_alt')
 
 const registerComponents = global.registerComponents
 
-registerComponents('uhv', 'abyssal_netherite', 'gtceu:indium-vor-dys-cad_supersolder_alloy', 1152, 'gtceu:polyether_ether_ketone', 576, 'gtceu:korzene', 'gtceu:vaexium')
+registerComponents('uhv', 'abyssal_netherite', 'gtceu:indium-vor-dys-cad_supersolder_alloy', 1152, 'gtceu:polyether_ether_ketone', 576, 'gtceu:korzene', 'gtceu:vaexium', 'astrazine-e')
+registerComponents('uev', 'sturvene-7', 'gtceu:indium-vor-dys-cad_supersolder_alloy', 2304, 'gtceu:polyether_ether_ketone', 1152, 'gtceu:fermium', 'gtceu:antifermium', 'morniloy-13')
+
 
 GTM.large_chemical_reactor('xenon_difluoride')
 .inputFluids('gtceu:xenon', 'gtceu:fluorine 2000')
@@ -1597,17 +1606,17 @@ GTM.assembly_line('everflamed_hell_forge')
 .duration(1000)
 .EUt(2097152)
 
-GTM.assembly_line('pandemonic_blast_smelter')
+GTM.assembly_line('pandemonic_blast_synchronizer')
 .itemInputs('gtceu:alloy_blast_smelter', '6x #gtceu:circuits/uhv', '16x gtceu:double_activated_nexian_pyrite_plate', '2x gtceu:uhv_electric_pump', '6x gtceu:uhv_robot_arm', '4x gtceu:uhv_field_generator', '4x gtceu:abyssal_netherite_spring')
-.itemOutputs('gtceu:everflamed_hell_forge')
-.stationResearch(global.AssemblyLineResearch(event, 'pandemonic_blast_smelter', 'gtceu:alloy_blast_smelter', 96, 307200, va.zpm))
+.itemOutputs('gtceu:pandemonic_blast_synchronizer')
+.stationResearch(global.AssemblyLineResearch(event, 'pandemonic_blast_synchronizer', 'gtceu:alloy_blast_smelter', 96, 307200, va.zpm))
 .duration(1000)
 .EUt(2097152)
 
-GTM.assembly_line('fracto-liminal_abyss_metal_engine')
+GTM.assembly_line('fracto_liminal_abyss_metal_engine')
 .itemInputs('gtceu:alloy_blast_smelter', 'gtceu:mega_blast_furnace', '16x #gtceu:circuits/uhv', '32x gtceu:stellar_neutronate_plate', '16x gtceu:uhv_electric_pump', '16x gtceu:uhv_field_generator', '4x gtceu:abyssal_netherite_spring', 'gtceu:pulsar')
-.itemOutputs('gtceu:fracto-liminal_abyss_metal_engine')
-.stationResearch(global.AssemblyLineResearch(event, 'fracto-liminal_abyss_metal_engine', 'gtceu:infernality_catalysm_plasma_bucket', 160, 512000, va.zpm))
+.itemOutputs('nextech:fracto_liminal_abyss_metal_engine')
+.stationResearch(global.AssemblyLineResearch(event, 'fracto_liminal_abyss_metal_engine', 'gtceu:infernality_catalysm_bucket', 160, 512000, va.zpm))
 .duration(2000)
 .EUt(2097152)
 
@@ -1663,43 +1672,38 @@ GTM.assembler('abyssal_netherite_intake')
 
 const FLAME = global.FLAME
 
-const plasmaRanges = [
-    { plasma: 'americium', maxMK: 100 },
-    { plasma: 'infernality_catalysm', maxMK: 300 },
-]
-
-function getPlasmas(TempMK) {
-    return plasmaRanges.filter(p => p.maxMK >= TempMK)
-}
-
 function autoFLAME(inputs, output, duration, EUt, TempMK, catalyst) {
     if (catalyst === undefined) catalyst = null
-    let plasmas = getPlasmas(TempMK)
-    if (plasmas.length === 0) throw new Error('No plasma defined for ' + TempMK + ' MK — add a new entry to plasmaRanges')
-    for (let p of plasmas) {
-        FLAME(p.plasma, inputs, output, duration, EUt, TempMK, catalyst)
-    }
+    FLAME(inputs, output, duration, EUt, TempMK, catalyst)
 }
-autoFLAME(['purified_draconium 10368', 'echo_shard 576'], 'awakened_draconium', 1000, [va.uv, 6], 100, 'gtceu:dragon_heart')
-autoFLAME(['ignavyte 8', 'flagrax 5', 'zirconium 3', 'hafnium 2', 'carbon 1'], 'ignatherm', 6704, [va.uv, 4], 50)
-autoFLAME(['vhorryte 7', 'ashrax 4', 'niobium 2', 'tantalum 2', 'manganese 1'], 'vhoric_steel', 6456, [va.uv, 4], 50)
-autoFLAME(['ghulveyte 6', 'pyrrhovyte 5', 'copper 3', 'electrotine 2', 'platinum 1'], 'pyrghul_alloy', 5393, [va.uv, 4], 50)
-autoFLAME(['vaex-thryn 8', 'nexus 7', 'orvaelithe 5', 'palladium 2', 'molybdenum 1'], 'vaexium', 8728, [va.uv, 4], 50)
-autoFLAME(['khzaevhul 7', 'ng-vaethos 5', 'naquadah_alloy 3', 'tungsten 2', 'ruthenium 1'], 'korzene', 7377, [va.uv, 4], 50)
-autoFLAME(['auralloy-omega 13', 'ignatherm 4', 'vhoric_steel 4', 'pyrghul_alloy 4', 'stellarite 2'], 'abyssal_netherite', 10000, [va.uv, 16], 100)
-autoFLAME(['sulvarium 6', 'kraethite 6', 'antisource 3', 'holmium 4', 'nexus 2', 'awakened_draconium 2'], 'sulvan_steel', 9056, [va.uv, 6], 75)
-autoFLAME(['nexus_steel 37', 'abyssal_netherite 12', 'korzene 8', 'sulvan_steel 4', 'promethium 3', 'vaexium 2'], 'activated_nexian_pyrite', 20000, [va.uhv, 16], 200, '8x gtceu:cindralite-kethrite_gem')
-autoFLAME(['vhoric_steel 4', 'vaexium 3', 'mythryl 2', 'umbracite 2'], 'mythrolyc_umbraloy', 9001, [va.uhv, 6], 150)
-autoFLAME(['pyrghul_alloy 4', 'korzene 3', 'mythryl 2', 'viridrine 2'], 'mythrovirdyne', 7500, [va.uhv, 4], 150)
 
+autoFLAME(['ignavyte 8', 'flagrax 5', 'zirconium 3', 'hafnium 2', 'carbon 1'], 'ignatherm', 1340, [va.luv, 4], 50)
+autoFLAME(['vhorryte 7', 'ashrax 4', 'niobium 2', 'tantalum 2', 'manganese 1'], 'vhoric_steel', 1291, [va.luv, 4], 50)
+autoFLAME(['ghulveyte 6', 'pyrrhovyte 5', 'copper 3', 'electrotine 2', 'platinum 1'], 'pyrghul_alloy', 1078, [va.luv, 4], 50)
+autoFLAME(['vaex-thryn 8', 'nexus 7', 'orvaelithe 5', 'palladium 2', 'molybdenum 1'], 'vaexium', 1745, [va.zpm, 4], 50)
+autoFLAME(['khzaevhul 7', 'ng-vaethos 5', 'naquadah_alloy 3', 'tungsten 2', 'ruthenium 1'], 'korzene', 1475, [va.zpm, 4], 50)
+autoFLAME(['auralloy-omega 13', 'ignatherm 4', 'vhoric_steel 4', 'pyrghul_alloy 4', 'stellarite 2'], 'abyssal_netherite', 2227, [va.uv, 16], 100)
+autoFLAME(['sulvarium 6', 'kraethite 6', 'antisource 3', 'holmium 4', 'nexus 2', 'awakened_draconium 2'], 'sulvan_steel', 1293, [va.uv, 6], 75)
+autoFLAME(['nexus_steel 37', 'abyssal_netherite 12', 'korzene 8', 'sulvan_steel 4', 'promethium 3', 'vaexium 2'], 'activated_nexian_pyrite', 4455, [va.uhv, 16], 200, '8x gtceu:cindralite-kethrite_gem')
+autoFLAME(['vhoric_steel 4', 'vaexium 3', 'mythryl 2', 'umbracite 2'], 'mythrolyc_umbraloy', 1200, [va.uhv, 6], 250)
+autoFLAME(['pyrghul_alloy 4', 'korzene 3', 'mythryl 2', 'viridrine 2'], 'mythrovirdyne', 1050, [va.uhv, 4], 250)
+
+autoFLAME(['aelvythrex 1', 'czyvhaeln 1', 'lutetium 1', 'holmium 1'], 'aelczyr', 1350, [va.uev, 4], 350)
+autoFLAME(['thurvaexi 1', 'kholvaetzh 1', 'steel 1', 'chromium 1'], 'thulvaex', 1425, [va.uev, 4], 350)
+autoFLAME(['vrethdulix 1', 'ghauzrenit 1', 'trinium 1', 'chromium 1'], 'vrethren', 1275, [va.uev, 4], 350)
+autoFLAME(['jolvekrasz 1', 'uxvheltris 1', 'naquadrium 1', 'cobalt 1'], 'jolvelix', 1500, [va.uev, 4], 350)
+autoFLAME(['caelvr 1', 'fendrothex 1', 'titanium 1', 'tungsten 1'], 'caeldrox', 1200, [va.uev, 4], 350)
+autoFLAME(['sturvaelix 1', 'drethnavik 1', 'darmstadtium 1', 'tantalum 1'], 'sturvik', 1425, [va.uev, 4], 350)
+autoFLAME(['caeldrox 2', 'vrethren 2', 'aelczyr 2', 'mornivecht 6', 'antifermium 1'], 'morniloy-13', 6300, [va.uev, 6], 350)
+autoFLAME(['sturvik 2', 'jolvelix 2', 'thulvaex 2', 'fermium 1'], 'sturvene-7', 1100, [va.uev, 6], 350)
    //------[1]--
     //[2]-[0]----
     //------[3]--
 
 GTM.matrix_fusion('inactivated_infernality_alt')
-.itemInputs('gtceu:exquisite_thermavyte_gem', 'gtceu:exquisite_vaelthorium_gem', 'gtceu:exquisite_cindralite_gem', 'gtceu:exquisite_kethrite_gem')
+.itemInputs('gtceu:flawless_thermavyte_gem', 'gtceu:flawless_vaelthorium_gem', 'gtceu:flawless_cindralite_gem', 'gtceu:flawless_kethrite_gem')
 .inputFluids('gtceu:quasifluxed_oganesson-xenon_trifluoride 1000')
-.outputFluids('gtceu:inactivated_infernality_plasma 1000')
+.outputFluids('gtceu:inactivated_infernality 1000')
 .duration(100)
 .EUt(va.uiv)
 
@@ -1707,7 +1711,7 @@ GTM.matrix_fusion('inactivated_infernality_alt')
 GTM.matrix_fusion('inactivated_infernality')
 .itemInputs('2x gtceu:exquisite_thermavylized-vaelite_gem','2x gtceu:exquisite_cindralite-kethrite_gem')
 .inputFluids('gtceu:quasifluxed_oganesson-xenon_trifluoride 1000')
-.outputFluids('gtceu:inactivated_infernality_plasma 1000')
+.outputFluids('gtceu:inactivated_infernality 1000')
 .duration(200)
 .EUt(va.uhv)
 
@@ -2177,6 +2181,7 @@ GTM.autoclave('eternal_hell_core')
 .perTick(true)
 .inputFluids('gtceu:prometheus_essence 100')
 .itemOutputs('kubejs:eternal_hell_core')
+.perTick(false)
 .duration(2000)
 .EUt(va.uhv)
 
@@ -2185,8 +2190,10 @@ GTM.autoclave('eternal_frost_core')
 .perTick(true)
 .inputFluids('gtceu:boreas_essence 100')
 .itemOutputs('kubejs:eternal_frost_core')
+.perTick(false)
 .duration(2000)
 .EUt(va.uhv)
+
 // Equilibrium Chain
 
 // its fucking time (CUEEEE THE DRUUUUM ROOOOOOOLLLLLS!!! 🥁🥁🥁🥁🥁🥁🥁🥁🥁🥁🔥)
@@ -2207,7 +2214,7 @@ GTM.equalizer(`preon_collision`)
 }).forEach(([side, lepton]) => {
     GTM.equalizer(`${side}_nexon_charge_splitting`)
     .itemInputs(`gtceu:conceptual_${side}_nexon`)
-    .itemOutputs(`gtceu:neutral_${side}_nexon`, `gtceu:negative_${side}_nexon`, `gtceu:positive_${side}_nexon`)
+    .itemOutputs(`gtceu:positive_${side}_nexon`, `gtceu:negative_${side}_nexon`, `gtceu:neutral_${side}_nexon`)
     .perTick(true)
     .inputFluids(`gtceu:${lepton} 5`)
     .duration(20)
@@ -2285,683 +2292,41 @@ Object.entries({
     GTM.particle_accelerator('matter-fermite_separation')
     .itemInputs('gtceu:stabilized_matter-fermite')
     .perTick(true)
-    .inputFluids('gtceu:source 9')
+    .inputFluids('gtceu:source 1')
     .perTick(false)
-    .outputFluids('gtceu:aurorialis 324', 'gtceu:omnium 144')
+    .outputFluids('gtceu:aurorialis 36', 'gtceu:omnium 144')
     .duration(128)
     .EUt(va.uhv, 8)
 
     GTM.particle_accelerator('matter-fermite_separation_alt')
     .itemInputs('gtceu:stabilized_matter-fermite')
     .perTick(true)
-    .inputFluids('gtceu:antisource 9')
+    .inputFluids('gtceu:antisource 1')
     .perTick(false)
-    .outputFluids('gtceu:aurorialis 324', 'gtceu:omnium 144')
+    .outputFluids('gtceu:aurorialis 36', 'gtceu:omnium 144')
     .duration(128)
     .EUt(va.uhv, 8)
 
     GTM.particle_accelerator('antimatter-fermite_separation')
     .itemInputs('gtceu:stabilized_antimatter-fermite')
     .perTick(true)
-    .inputFluids('gtceu:source 9')
+    .inputFluids('gtceu:source 1')
     .perTick(false)
-    .outputFluids('gtceu:aurorialis 324', 'gtceu:nullium 144')
+    .outputFluids('gtceu:aurorialis 36', 'gtceu:nullium 144')
     .duration(128)
     .EUt(va.uhv, 8)
 
     GTM.particle_accelerator('antimatter-fermite_separation_alt')
     .itemInputs('gtceu:stabilized_antimatter-fermite')
     .perTick(true)
-    .inputFluids('gtceu:antisource 9')
+    .inputFluids('gtceu:antisource 1')
     .perTick(false)
-    .outputFluids('gtceu:aurorialis 324', 'gtceu:nullium 144')
+    .outputFluids('gtceu:aurorialis 36', 'gtceu:nullium 144')
     .duration(128)
     .EUt(va.uhv, 8)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// END of late game 
-
     const voltagetierexpensive = {
-        "uev": "omnium",
+        "uev": "polydimensionalized_omnic_nexite",
         "uiv": "nullium",
     }
     Object.entries(voltagetierexpensive).forEach(([voltage, material]) => {
@@ -2971,7 +2336,7 @@ Object.entries({
 
     event.shaped(`gtceu:${voltage}_machine_casing`, [`MMM`, `MWM`, `MMM`], {M: `gtceu:${material}_plate`, W: "#forge:tools/wrenches"}).id(`gtceu:casing_${voltage}`)
 
-    event.replaceInput({id: `gtceu:shaped/uev_machine_hull`}, 'gtceu:red_alloy_single_cable', `gtceu:transuranic_naquadrium_alloy_single_wire`)
+    event.replaceInput({id: `gtceu:shaped/uev_machine_hull`}, 'gtceu:red_alloy_single_cable', `gtceu:morniloy-13_single_wire`)
 
     GTM.assembler(`casing_${voltage}`)
     .itemInputs(`8x gtceu:${material}_plate`,)
@@ -2984,13 +2349,13 @@ Object.entries({
     event.replaceInput(
     { output: /gtceu:uev_.*(_.*)?/ },
     'gtceu:red_alloy_single_cable',
-    'gtceu:chronocrytic-vhaelsalite_single_wire'
+    'gtceu:morniloy-13_single_wire'
     )
 
     event.replaceInput(
     { output: /gtceu:uev_.*(_.*)?/ },
     'gtceu:red_alloy_quadruple_cable',
-    'gtceu:chronocrytic-vhaelsalite_single_wire'
+    'gtceu:morniloy-13_single_wire'
     )
 
     event.replaceInput(
@@ -3032,25 +2397,25 @@ Object.entries({
     event.replaceInput(
     { output: /gtceu:uev_.*(_.*)?/ },
     'gtceu:lead_hex_wire',
-    'gtceu:enriched_naquadah_trinium_europium_duranide_hex_wire'
+    'gtceu:europium_hex_wire'
     )
 
     event.replaceInput(
     { output: /gtceu:uev_.*(_.*)?/ },
     'gtceu:lead_octal_wire',
-    'gtceu:enriched_naquadah_trinium_europium_duranide_octal_wire'
+    'gtceu:europium_octal_wire'
     )
 
     event.replaceInput(
     { output: /gtceu:uev_.*(_.*)?/ },
     'gtceu:lead_quadruple_wire',
-    'gtceu:enriched_naquadah_trinium_europium_duranide_quadruple_wire'
+    'gtceu:europium_quadruple_wire'
     )
     
     event.replaceInput(
     { output: /gtceu:uev_.*(_.*)?/ },
     'gtceu:lead_double_wire',
-    'gtceu:enriched_naquadah_trinium_europium_duranide_double_wire'
+    'gtceu:sulvan_steel_double_wire'
     )
 
     event.replaceInput(
@@ -3068,7 +2433,7 @@ Object.entries({
     event.replaceInput(
     { output: /gtceu:uev_.*(_.*)?/ },
     'gtceu:iron_plate',
-    'gtceu:omnium_plate'
+    'gtceu:polydimensionalized_omnic_nexite_plate'
     )
 
     event.replaceInput(
@@ -3083,7 +2448,23 @@ Object.entries({
     "gtceu:neutronium_buzz_saw_blade"
     )
 
-    event.remove({output: /gtceu:(uhv|uev)_transformer_(1a|2a|4a|8a|16a)/})
+    event.replaceInput(
+    { output: /gtceu:(uhv|uev|uiv)_.*/ },
+    "gtceu:polybenzimidazole_plate",
+    "gtceu:polyether_ether_ketone_plate"
+    )
+
+    event.replaceInput(
+    { output: /gtceu:(uhv|uev|uiv)_.*/ },
+    "gtceu:polybenzimidazole_foil",
+    "gtceu:polyether_ether_ketone_foil"
+    )
+
+    event.replaceInput(
+    { output: /gtceu:(uhv|uev|uiv)_.*/ },
+    "gtceu:polybenzimidazole_normal_fluid_pipe",
+    "gtceu:polyether_ether_ketone_normal_fluid_pipe"
+    )
 
 
 

@@ -1,5 +1,5 @@
 version = 3
-# (Default: 6) Worker threads used for chunk generation and IO.
+# (Default: 8) Worker threads used for chunk generation and IO.
 globalExecutorParallelism = "default"
 
 [fixes]
@@ -27,6 +27,8 @@ globalExecutorParallelism = "default"
 	optimizeScheduling = "default"
 	# (Default: 100000) Nanoseconds between chunk tasks run inside the tick loop. -1 disables.
 	midTickChunkTasksInterval = "default"
+	# (Default: true) Faster Perlin noise sampling. Produces identical terrain.
+	optimizeNoiseSampling = "default"
 
 	[generalOptimizations.autoSave]
 		# (Default: ENHANCED) VANILLA, ENHANCED (save during idle time) or PERIODIC (every 6000 ticks). Keep the quotes.
@@ -83,4 +85,6 @@ globalExecutorParallelism = "default"
 	reduceLockRadius = "default"
 	# (Default: true) Schedule generation tasks off the server thread.
 	asyncScheduling = "default"
+	# (Default: true) Abort an in-progress generation step when the chunk is no longer requested. Set to false if a pregenerator reports skipped chunks.
+	allowGenerationCancellation = "default"
 

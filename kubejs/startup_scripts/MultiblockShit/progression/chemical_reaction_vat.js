@@ -82,7 +82,7 @@ GTRecipeTypes.get("vacuum_reaction_chamber").addDataInfo((data) => {
     .rotationState(RotationState.NON_Y_AXIS)
     .machine((holder) => new $CoilWorkableElectricMultiblockMachine(holder)) 
     .recipeTypes(['vacuum_reaction_chamber', 'chemical_vat', 'large_chemical_reactor'])
-    .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe) => TemperatureModifier(machine, recipe), (machine, recipe) => PressureModifier(machine, recipe), (machine, recipe) => VacuumModifier(machine, recipe), GTRecipeModifiers.OC_PERFECT])
+    .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT_SUBTICK, (machine, recipe) => TemperatureModifier(machine, recipe), (machine, recipe) => PressureModifier(machine, recipe), (machine, recipe) => VacuumModifier(machine, recipe)])
     .appearanceBlock(() => Block.getBlock("gtceu:velyl_rubber_casing"))
     .pattern(definition => FactoryBlockPattern.start()
     .aisle("aaaaaaaabbbbbbbbbaaaaaaaa", "aaaaaaaabbbaaabbbaaaaaaaa", "aaaaaaaabbaaaaabbaaaaaaaa", "aaaaaaaabaaaaaaabaaaaaaaa", "aaaaaaabbaaaaaaabbaaaaaaa", "aaaaaaabaaaaaaaaabaaaaaaa", "aaaaaaabaaaaaaaaabaaaaaaa", "aaaaaaabaaaaaaaaabaaaaaaa", "aaaaaaabaaaaaaaaabaaaaaaa", "aaaaaaabaaaaaaaaabaaaaaaa", "aaaaaaabaaaaaaaaabaaaaaaa", "aaaaaaabaaaaaaaaabaaaaaaa", "aaaaaaabaaaaaaaaabaaaaaaa", "aaaaaaabaaaaaaaaabaaaaaaa", "aaaaaaabaaaaaaaaabaaaaaaa", "aaaaaaabaaaaaaaaabaaaaaaa", "aaaaaaabaaaaaaaaabaaaaaaa", "aaaaaaabaaaaaaaaabaaaaaaa", "aaaaaaabbaaaaaaabbaaaaaaa", "aaaaaaaabaaaaaaabaaaaaaaa", "aaaaaaaabbaaaaabbaaaaaaaa", "aaaaaaaabbbaaabbbaaaaaaaa", "aaaaaaaabbbbbbbbbaaaaaaaa")
