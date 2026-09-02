@@ -1,0 +1,64 @@
+features:
+  # How powerful the Omnic Computation Unit is (CWU/t)
+  OCUStrength: 32
+
+  # How powerful the Nexic Computation Unit is (CWU/t)
+  NCUStrength: 144
+
+  # How much coolant the Omnic Computation Unit uses
+  OCUCoolantUsed: 4
+
+  # How much coolant the Nexic Computation Unit uses
+  PCUCoolantUsed: 8
+
+  # How powerful the Omnic Computation Unit is (CWU/t) when damaged
+  damagedOCUStrength: 16
+
+  # How powerful the Nexic Computation Unit is (CWU/t) when damaged
+  damagedNCUStrength: 32
+
+  # How much EU the Omnic Computation uses per tick while not providing CWU/t (Goes off GTValues, ULV is 0, LV is 1, MV is 2, etc)
+  OCUEutUpkeep: 7
+
+  # How much EU the Omnic Computation can use at max (Goes off GTValues, ULV is 0, LV is 1, MV is 2, etc)
+  OCUMaxEUt: 9
+
+  # How much EU the Nexic Computation uses per tick while not providing CWU/t (Goes off GTValues, ULV is 0, LV is 1, MV is 2, etc)
+  NCUEutUpkeep: 9
+
+  # How much EU the Nexic Computation can use at max (Goes off GTValues, ULV is 0, LV is 1, MV is 2, etc)
+  NCUMaxEUt: 11
+
+  # How powerful the Omnic Heat Sink is (Cooling Provided)
+  HeatSinkStrength: 4
+
+  # How powerful the Omnic Active Cooler is (Cooling Provided)
+  ActiveCoolerStrength: 8
+
+  # How much EU the Omnic Heat Sink uses per tick (Goes off GTValues, ULV is 0, LV is 1, MV is 2, etc)
+  HeatSinkEutUpkeep: 2
+
+  # How much EU the Active Omnic Cooler uses per tick (Goes off GTValues, ULV is 0, LV is 1, MV is 2, etc)
+  ActiveCoolerEutUpkeep: 16
+
+  # How much coolant the Active Omnic Cooler can use at max in milibuckets
+  ActiveCoolerCoolantUse: 10
+
+  # What Base Coolant the Active Omnic Cooler uses while in the PHPCA (Gt or GT Kubejs Material)
+  ActiveCoolerCoolantBase: pcb_coolant
+
+  # What Stronger Coolant the Active Omnic Cooler uses while in the PHPCA  (Gt or GT Kubejs Material)
+  ActiveCoolerCoolant1: cryothetic_zero
+
+  # What Strongest Coolant the Active Omnic Cooler uses when in the PHPCA (Gt or GT Kubejs Material)
+  ActiveCoolerCoolant2: bose-einstein_oganesson-xenon_trifluoride_condensate
+
+  # Base CWU/t multiplier with no special coolant
+  BaseCoolantBoost: 1.0
+
+  # How much ActiveCoolerCoolant1 boosts base CWU/t
+  CoolantBoost1: 1.15
+
+  # How much ActiveCoolerCoolant2 boosts base CWU/t
+  CoolantBoost2: 1.3
+

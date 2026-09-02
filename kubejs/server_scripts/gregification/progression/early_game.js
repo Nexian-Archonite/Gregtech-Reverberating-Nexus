@@ -63,12 +63,6 @@ ServerEvents.recipes(event => {
         S: 'gtceu:treated_wood_slab'
     })
 
-event.shapeless('4x kubejs:primitive_glue_tube', [
-    '2x #forge:flour',
-    'kubejs:boiling_water_bucket',
-    '4x kubejs:empty_glue_tube',
-    '2x minecraft:sugar' 
-]).replaceIngredient('kubejs:boiling_water_bucket', 'minecraft:water_bucket')
 
 event.shapeless('quark:blackstone_furnace', [
 'minecraft:furnace'
@@ -336,14 +330,14 @@ GTM.mixer('echoite_mixer')
     .duration(1200)
     .circuit(4)
 
-GTM.echo_imbuement_chamber('echolumium_imbuement')
+GTM.echonite_imbuement_chamber('echolumium_imbuement')
 .itemInputs('gtceu:aluminium_ingot')
 .inputFluids('gtceu:echoite 120')
 .itemOutputs('gtceu:echolumium_ingot')
 .EUt(32)
 .duration(100)
 
-GTM.echo_imbuement_chamber('mechanical_imbuement')
+GTM.echonite_imbuement_chamber('mechanical_imbuement')
 .itemInputs('gtceu:stainless_steel_ingot')
 .inputFluids('gtceu:mechanical_concentrate 120')
 .itemOutputs('gtceu:mechanical_stainless_ingot')
@@ -364,14 +358,12 @@ GTM.primitive_blast_furnace('nexus_steel')
 GTM.primitive_blast_furnace('igneous_bronze_alternative')
 .itemInputs('3x gtceu:copper_dust', 'gtceu:tin_dust', '2x gtceu:andesite_dust')
 .itemOutputs('6x gtceu:igneous_bronze_ingot')
-.EUt(6)
-.duration(30)
+.duration(60)
 
 GTM.primitive_blast_furnace('igneous_bronze')
 .itemInputs('4x gtceu:bronze_dust', '2x gtceu:andesite_dust')
 .itemOutputs('6x gtceu:igneous_bronze_ingot')
-.EUt(6)
-.duration(30)
+.duration(60)
 
 GTM.chemical_bath('condensed_mana_gem')
 .inputFluids('blasmatech:mana 3000')
@@ -379,8 +371,6 @@ GTM.chemical_bath('condensed_mana_gem')
 .itemOutputs('gtceu:condensed_mana_gem')
 .EUt(16)
 .duration(25)
-
-
 
 GTM.centrifuge(('unpure_source_purification'))
 .inputFluids('gtceu:unpure_source 432')
@@ -700,7 +690,11 @@ event.shaped('chest', [
 P: '#minecraft:planks'
 })
 
-event.blasting('kubejs:carbonized_log', '#minecraft:logs', 0.1, 60)
+GTM.assembler('echonite_imbuement_chamber')
+.itemInputs('gtceu:lv_fluid_solidifier', 'gtceu:lv_autoclave', '16x gtceu:nexus_steel_plate', '6x gtceu:wizarding_steel_plate')
+.itemOutputs('gtceu:echonite_imbuement_chamber')
+.inputFluids('gtceu:rubber 288')
+.EUt(24)
 })
 
 

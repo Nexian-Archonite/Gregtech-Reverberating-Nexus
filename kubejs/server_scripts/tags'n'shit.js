@@ -118,3 +118,11 @@ event.add('ad_astra:tier_3_rocket_fuel', 'gtceu:cryostatic-antilithide')
 event.add('ad_astra:tier_4_rocket_fuel', 'gtceu:cryostatic-antilithide')
 event.removeAllTagsFrom('ad_astra:fuel')
 })
+
+ServerEvents.tags('block', event => {
+  const stoneTypes = ['moon', 'mars', 'mercury', 'venus', 'glacio', 'depthrock', 'shiverstone', 'tremblecrust']
+  
+  for (const stone of stoneTypes) {
+    event.add('minecraft:mineable/pickaxe', `#forge:ores_in_ground/${stone}`)
+  }
+})

@@ -1,4 +1,7 @@
 {
+  "framedblocks": {
+    "framed_item_frame": true
+  },
   "minecraft": {
     "item_storage.show_name_amount": 5,
     "furnace": true,
@@ -137,22 +140,5 @@
   },
   "gravestone": {
     "grave": true
-  },
-  "goety_revelation": {
-    "rune_reactor_id": true,
-    "runestone_id": true
-  },
-  "goety": {
-    "block_owner": true,
-    "soul_energy": true,
-    "raider_leader": true,
-    "hostile": true,
-    "servant_mode": true,
-    "capture_mode": true,
-    "zombie_villager": true,
-    "villager_profession": true,
-    "train_to": true,
-    "summon_lifespan": true,
-    "trainable": true
   }
 }

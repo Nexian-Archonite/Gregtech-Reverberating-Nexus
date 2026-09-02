@@ -804,13 +804,6 @@ GTM.alloy_blast_smelter('awakened_draconium')
     .circuit(1)
     .EUt(va.luv)
 
-GTM.fusion_accelerator('disassembler')
-    .itemInputs('gtceu:large_assembler')
-    .itemOutputs('extendedfeatures:disassembler')
-    .perTick(true)
-    .inputFluids('gtceu:higgs_boson 1')
-    .duration(100)
-    .EUt(2048)
 
 
 const FLUIDS = new Set(['oxygen', 'sulfur_dioxide', 'carbon_dioxide', 'fluorine', 'mercury', 'radon', 'oganesson'])
@@ -1677,25 +1670,27 @@ function autoFLAME(inputs, output, duration, EUt, TempMK, catalyst) {
     FLAME(inputs, output, duration, EUt, TempMK, catalyst)
 }
 
-autoFLAME(['ignavyte 8', 'flagrax 5', 'zirconium 3', 'hafnium 2', 'carbon 1'], 'ignatherm', 1340, [va.luv, 4], 50)
-autoFLAME(['vhorryte 7', 'ashrax 4', 'niobium 2', 'tantalum 2', 'manganese 1'], 'vhoric_steel', 1291, [va.luv, 4], 50)
-autoFLAME(['ghulveyte 6', 'pyrrhovyte 5', 'copper 3', 'electrotine 2', 'platinum 1'], 'pyrghul_alloy', 1078, [va.luv, 4], 50)
-autoFLAME(['vaex-thryn 8', 'nexus 7', 'orvaelithe 5', 'palladium 2', 'molybdenum 1'], 'vaexium', 1745, [va.zpm, 4], 50)
-autoFLAME(['khzaevhul 7', 'ng-vaethos 5', 'naquadah_alloy 3', 'tungsten 2', 'ruthenium 1'], 'korzene', 1475, [va.zpm, 4], 50)
-autoFLAME(['auralloy-omega 13', 'ignatherm 4', 'vhoric_steel 4', 'pyrghul_alloy 4', 'stellarite 2'], 'abyssal_netherite', 2227, [va.uv, 16], 100)
-autoFLAME(['sulvarium 6', 'kraethite 6', 'antisource 3', 'holmium 4', 'nexus 2', 'awakened_draconium 2'], 'sulvan_steel', 1293, [va.uv, 6], 75)
-autoFLAME(['nexus_steel 37', 'abyssal_netherite 12', 'korzene 8', 'sulvan_steel 4', 'promethium 3', 'vaexium 2'], 'activated_nexian_pyrite', 4455, [va.uhv, 16], 200, '8x gtceu:cindralite-kethrite_gem')
-autoFLAME(['vhoric_steel 4', 'vaexium 3', 'mythryl 2', 'umbracite 2'], 'mythrolyc_umbraloy', 1200, [va.uhv, 6], 250)
-autoFLAME(['pyrghul_alloy 4', 'korzene 3', 'mythryl 2', 'viridrine 2'], 'mythrovirdyne', 1050, [va.uhv, 4], 250)
+autoFLAME(['ignavyte 8', 'flagrax 5', 'zirconium 3', 'hafnium 2', 'carbon 1'], 'ignatherm', 1340, [va.luv, 4], 420)
+autoFLAME(['vhorryte 7', 'ashrax 4', 'niobium 2', 'tantalum 2', 'manganese 1'], 'vhoric_steel', 1291, [va.luv, 4], 420)
+autoFLAME(['ghulveyte 6', 'pyrrhovyte 5', 'copper 3', 'electrotine 2', 'platinum 1'], 'pyrghul_alloy', 1078, [va.luv, 4], 420)
+autoFLAME(['vaex-thryn 8', 'nexus 7', 'orvaelithe 5', 'palladium 2', 'molybdenum 1'], 'vaexium', 1745, [va.zpm, 4], 420)
+autoFLAME(['khzaevhul 7', 'ng-vaethos 5', 'naquadah_alloy 3', 'tungsten 2', 'ruthenium 1'], 'korzene', 1475, [va.zpm, 4], 420)
 
-autoFLAME(['aelvythrex 1', 'czyvhaeln 1', 'lutetium 1', 'holmium 1'], 'aelczyr', 1350, [va.uev, 4], 350)
-autoFLAME(['thurvaexi 1', 'kholvaetzh 1', 'steel 1', 'chromium 1'], 'thulvaex', 1425, [va.uev, 4], 350)
-autoFLAME(['vrethdulix 1', 'ghauzrenit 1', 'trinium 1', 'chromium 1'], 'vrethren', 1275, [va.uev, 4], 350)
-autoFLAME(['jolvekrasz 1', 'uxvheltris 1', 'naquadrium 1', 'cobalt 1'], 'jolvelix', 1500, [va.uev, 4], 350)
-autoFLAME(['caelvr 1', 'fendrothex 1', 'titanium 1', 'tungsten 1'], 'caeldrox', 1200, [va.uev, 4], 350)
-autoFLAME(['sturvaelix 1', 'drethnavik 1', 'darmstadtium 1', 'tantalum 1'], 'sturvik', 1425, [va.uev, 4], 350)
-autoFLAME(['caeldrox 2', 'vrethren 2', 'aelczyr 2', 'mornivecht 6', 'antifermium 1'], 'morniloy-13', 6300, [va.uev, 6], 350)
-autoFLAME(['sturvik 2', 'jolvelix 2', 'thulvaex 2', 'fermium 1'], 'sturvene-7', 1100, [va.uev, 6], 350)
+autoFLAME(['auralloy-omega 13', 'ignatherm 4', 'vhoric_steel 4', 'pyrghul_alloy 4', 'stellarite 2'], 'abyssal_netherite', 2227, [va.uv, 16], 550)
+autoFLAME(['sulvarium 6', 'kraethite 6', 'antisource 3', 'holmium 4', 'nexus 2', 'awakened_draconium 2'], 'sulvan_steel', 1293, [va.uv, 6],  550)
+
+autoFLAME(['nexus_steel 37', 'abyssal_netherite 12', 'korzene 8', 'sulvan_steel 4', 'promethium 3', 'vaexium 2'], 'activated_nexian_pyrite', 4455, [va.uhv, 16], 850, '8x gtceu:cindralite-kethrite_gem')
+autoFLAME(['vhoric_steel 4', 'vaexium 3', 'mythryl 2', 'umbracite 2'], 'mythrolyc_umbraloy', 1200, [va.uhv, 6], 600)
+autoFLAME(['pyrghul_alloy 4', 'korzene 3', 'mythryl 2', 'viridrine 2'], 'mythrovirdyne', 1050, [va.uhv, 4], 600)
+
+autoFLAME(['aelvythrex 1', 'czyvhaeln 1', 'lutetium 1', 'holmium 1'], 'aelczyr', 1350, [va.uev, 4], 1150)
+autoFLAME(['thurvaexi 1', 'kholvaetzh 1', 'steel 1', 'chromium 1'], 'thulvaex', 1425, [va.uev, 4], 1150)
+autoFLAME(['vrethdulix 1', 'ghauzrenit 1', 'trinium 1', 'chromium 1'], 'vrethren', 1275, [va.uev, 4], 1150)
+autoFLAME(['jolvekrasz 1', 'uxvheltris 1', 'naquadrium 1', 'cobalt 1'], 'jolvelix', 1500, [va.uev, 4], 1150)
+autoFLAME(['caelvr 1', 'fendrothex 1', 'titanium 1', 'tungsten 1'], 'caeldrox', 1200, [va.uev, 4], 1150)
+autoFLAME(['sturvaelix 1', 'drethnavik 1', 'darmstadtium 1', 'tantalum 1'], 'sturvik', 1425, [va.uev, 4], 1150)
+autoFLAME(['caeldrox 2', 'vrethren 2', 'aelczyr 2', 'mornivecht 6', 'antifermium 1'], 'morniloy-13', 6300, [va.uev, 6], 1150)
+autoFLAME(['sturvik 2', 'jolvelix 2', 'thulvaex 2', 'fermium 1'], 'sturvene-7', 1100, [va.uev, 6], 1150)
    //------[1]--
     //[2]-[0]----
     //------[3]--

@@ -19,7 +19,8 @@
     "recipeDataContent": {
       "renderRecipeDataAtCorner": true,
       "recipeDataContainers": [
-        "gtceu:data_{stick,orb,module}"
+        "gtceu:data_{stick,orb,module}",
+        "nextech:living_data_disk"
       ]
     },
     "waferRecipeLens": {

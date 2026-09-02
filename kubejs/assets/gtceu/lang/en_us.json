@@ -1,8 +1,8 @@
 {
-    "block.gtceu.echo_imbuement_chamber.tooltip.0": "§7Imbues matter with resonating echoes from beyond.",
-    "block.gtceu.echo_imbuement_chamber.tooltip.1": "Available Recipe Types: §1Echonite Chamber Imbuement",
-    "block.gtceu.echo_imbuement_chamber.tooltip.2": "§7Has Overclock: §4Pyrolyse Oven",
-    "block.gtceu.echo_imbuement_chamber.tooltip.3": "§7Has Parallels: §1Hatch",
+    "block.gtceu.echonite_imbuement_chamber.tooltip.0": "§7Imbues matter with resonating echoes from beyond.",
+    "block.gtceu.echonite_imbuement_chamber.tooltip.1": "Available Recipe Types: §1Echonite Chamber Imbuement",
+    "block.gtceu.echonite_imbuement_chamber.tooltip.2": "§7Has Overclock: §4Pyrolyse Oven",
+    "block.gtceu.echonite_imbuement_chamber.tooltip.3": "§7Has Parallels: §1Hatch",
 
     "block.gtceu.metaphysical_metallurgy_tainter.tooltip.0": "§7Corrupts metals with impossible metaphysical properties.",
     "block.gtceu.metaphysical_metallurgy_tainter.tooltip.1": "Available Recipe Types: §dMetaphysical Metallurgy Tainting",
@@ -325,7 +325,7 @@
     "material.gtceu.xycrhovite": "§dXycrhovite",
     "material.gtceu.vheszcryl": "§dVheszcryl",
     "material.gtceu.nulledryte": "§1Nulle§2dryte",
-    "material.gtceu.grothemite": "§6Grothemite,",
+    "material.gtceu.grothemite": "§6Grothemite",
     "material.gtceu.phazdurite": "§0Phaz§cdur§4ite",
     "material.gtceu.orvexite": "§2Orvexite",
     "material.gtceu.krethavine": "§9Kretha§bvine",
@@ -878,7 +878,7 @@
     "block.gtceu.transcendent_dilithide_coil_block": "§5Transcendental §6Dilithide §rCoil",
 
 
-    "gtceu.echo_imbuement_chamber": "§1Echonite Chamber Imbuement",
+    "gtceu.echonite_imbuement_chamber": "§1Echonite Chamber Imbuement",
     "gtceu.metaphysical_metallurgy_tainter": "§dMetaphysical Metallurgy Tainting",
     "gtceu.phase_alternator": "Phase Alternating",
     "gtceu.chemical_vat": "§8Chemical Vat Synthesis",
@@ -923,7 +923,7 @@
     "gtceu.bacteria_synthesizer": "§6Bacteria Synthesizer",
 
 
-    "block.gtceu.echo_imbuement_chamber": "§1Echonite Imbuement Chamber §r(EIC)",
+    "block.gtceu.echonite_imbuement_chamber": "§1Echonite Imbuement Chamber §r(EIC)",
     "block.gtceu.metaphysical_metallurgy_tainter": "§dMetaphysical Metallurgy Tainter §r(MMT)",
     "block.gtceu.phase_alternator": "Phase Alternator §r(PA)",
     "block.gtceu.chemical_reaction_vat": "§8Chemical Reaction Vat §r(CRV)",
@@ -1025,7 +1025,6 @@
     "material.gtceu.alloyed_taint": "§5Alloyed §kTaint",
     "material.gtceu.chromatically_mutated_taint": "§3Chromatically Mutated §kTaint",
 
-    "material.gtceu.primitive_glue": "Primitive Glue",
     "material.gtceu.lapotron": "§bLapotron",
     "material.gtceu.glowstone": "Aurophosphorite",
 

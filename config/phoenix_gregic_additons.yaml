@@ -1,9 +1,9 @@
 features:
   # Whether the Blazing Maintence Hatch is enabled
-  blazingHatchEnabled: true
+  blazingHatchEnabled: false
 
   # Whether the Blazing Cleanroom is enabled (This just disables the casings, you can have the hatch on with this off just fine)
-  blazingCleanroomEnabled: true
+  blazingCleanroomEnabled: false
 
   # Whether the Custom HPCA componets are enabled
   HPCAComponetsEnabled: true
@@ -15,7 +15,7 @@ features:
   recipesEnabled: false
 
   # Whether the ME Tag Input Bus and Hatch are enabled
-  tagInputsEnabled: true
+  tagInputsEnabled: false
 
   # How powerful the normal Phoenix Computation Unit is (CWU/t)
   BasicPCUStrength: 32
@@ -66,10 +66,10 @@ features:
   ActiveCoolerCoolantBase: pcb_coolant
 
   # What Stronger Coolant the Active Phoenix Cooler uses while in the PHPCA  (Gt or GT Kubejs Material)
-  ActiveCoolerCoolant1: sodium_potassium
+  ActiveCoolerCoolant1: cryothetic_zero
 
   # What Strongest Coolant the Active Phoenix Cooler uses when in the PHPCA (Gt or GT Kubejs Material)
-  ActiveCoolerCoolant2: cryostatic-antilithide
+  ActiveCoolerCoolant2: bose-einstein_oganesson-xenon_trifluoride_condensate
 
   # How much ActiveCoolerCoolant1 boosts base CWU/t ()
   BaseCoolantBoost: 1.0

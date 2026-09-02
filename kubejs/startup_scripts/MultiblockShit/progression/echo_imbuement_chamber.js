@@ -1,5 +1,5 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
-    event.create('echo_imbuement_chamber')
+    event.create('echonite_imbuement_chamber')
         .category('fligugigu')
         .setEUIO('in')
         .setMaxIOSize(1, 1, 1, 1)
@@ -12,11 +12,11 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
 GTCEuStartupEvents.registry('gtceu:machine', event => {
 
-    event.create('echo_imbuement_chamber', 'multiblock')
+    event.create('echonite_imbuement_chamber', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .machine((holder) => new $CoilWorkableElectricMultiblockMachine(holder))
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe) => GTRecipeModifiers.pyrolyseOvenOverclock(machine, recipe)])
-        .recipeTypes([GTRecipeTypes.get('echo_imbuement_chamber')])
+        .recipeTypes([GTRecipeTypes.get('echonite_imbuement_chamber')])
         .appearanceBlock(() => Block.getBlock("gtceu:nexus_steel_casing"))
 
         .pattern(definition => FactoryBlockPattern.start()

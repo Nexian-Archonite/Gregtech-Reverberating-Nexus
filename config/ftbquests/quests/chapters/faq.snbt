@@ -42,29 +42,54 @@
 			invisible_until_tasks: 5
 			min_required_dependencies: 5
 			optional: true
-			rewards: [{
-				id: "6436891F8C28B17F"
-				item: {
-					Count: 1
-					id: "gtceu:blue_steel_pickaxe"
-					tag: {
-						Damage: 0
-						DisallowContainerItem: 0b
-						GT.Behaviours: {
-							TorchPlacing: 1b
+			rewards: [
+				{
+					id: "6436891F8C28B17F"
+					item: {
+						Count: 1
+						id: "gtceu:blue_steel_pickaxe"
+						tag: {
+							Damage: 0
+							DisallowContainerItem: 0b
+							GT.Behaviours: {
+								TorchPlacing: 1b
+							}
+							GT.Tool: {
+								DefaultEnchantments: [ ]
+								HarvestLevel: 3
+								MaxDamage: 1023
+								ToolSpeed: 19.0f
+							}
+							HideFlags: 2
+							Unbreakable: 1
 						}
-						GT.Tool: {
-							DefaultEnchantments: [ ]
-							HarvestLevel: 3
-							MaxDamage: 1023
-							ToolSpeed: 19.0f
-						}
-						HideFlags: 2
-						Unbreakable: 1
 					}
+					type: "item"
 				}
-				type: "item"
-			}]
+				{
+					id: "149269442AE9CCA1"
+					item: {
+						Count: 1
+						id: "gtceu:prospector.hv"
+						tag: {
+							Charge: 1600000L
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "127CCF07B1A9B155"
+					item: {
+						Count: 1
+						id: "sophisticatedbackpacks:iron_backpack"
+						tag: {
+							inventorySlots: 54
+							upgradeSlots: 2
+						}
+					}
+					type: "item"
+				}
+			]
 			tasks: [{
 				id: "4D47B85B6AF3A36A"
 				title: "peekaboo :O"

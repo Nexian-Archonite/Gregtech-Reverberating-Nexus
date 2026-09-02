@@ -452,6 +452,7 @@ const transcendentBlastTier = [
 
 
     { name: 'omnium', blastTemp: 19449, EUt: va.uev, duration: 800 },
+    { name: "polydimensionalized_omnic_nexite", blastTemp: 19449, EUt: va.uev, duration: 1600},
     { name: 'nullium', blastTemp: 29600, EUt: va.uiv, duration: 1200 },
     { name: 'infinity', blastTemp: 29600, EUt: va.uxv, duration: 1600 },
 ]
@@ -718,10 +719,6 @@ global.registerComponents = (tier, mainMaterial, solderFluid, solderAmount, poly
     let currentTierCircuit = tier
     let prevTierCircuit = tierIndex > 0 ? tiers[tierIndex - 1] : 'uv'
     let prevPrevTierCircuit = tierIndex > 1 ? tiers[tierIndex - 2] : 'zpm'
-
-    console.log("Current:", currentTierCircuit);
-    console.log("Prev:", prevTierCircuit);
-    console.log("PrevPrev:", prevPrevTierCircuit);
     
     let componentTier = tierIndex > 0 ? tiers[tierIndex - 1] : 'uv'
     let researchPrereq = tierIndex === 0 ? 'ruined' : tiers[tierIndex - 1]

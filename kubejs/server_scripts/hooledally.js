@@ -43,7 +43,7 @@ Object.entries(tierReplacements).forEach(([inputs, replacement]) => {
 
 // I have no idea how it works, but it works, so im not touching this shit
 
-const RecyclingTierRegex = /gtceu:(lv|mv|hv|ev|iv|luv|zpm|uv|uhv|uev|uiv|uxv|opv|max)_/
+const RecyclingTierRegex = /gtceu:(lv|mv|hv|ev|iv|luv|zpm|uv|uhv|uev|uiv|uxv|opv|max)_.*/
 
 Object.entries(tierReplacements).forEach(([inputs, replacement]) => {
         event.replaceOutput(
@@ -90,23 +90,7 @@ event.replaceInput(
     "gtceu:nexus_steel_bolt"
 )
 
-event.replaceInput(
-    {id: 'gtceu:shaped/steam_miner_bronze'},
-    "gtceu:bronze_normal_fluid_pipe",
-    "gtceu:igneous_bronze_normal_fluid_pipe"
-)
 
-event.replaceInput(
-    {id: 'gtceu:shaped/steam_miner_bronze'},
-    "gtceu:small_bronze_gear",
-    "gtceu:small_igneous_bronze_gear"
-)
-
-event.replaceInput(
-    {id: 'steamadditions:shaped/steam2'},
-    "gtceu:bronze_gear",
-    "gtceu:potin_gear"
-)
 
 event.replaceInput(
     {id: 'gtceu:assembler/casing_aluminium_frostproof'},

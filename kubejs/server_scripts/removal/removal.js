@@ -66,7 +66,6 @@ ServerEvents.recipes(e => {
     e.remove({output: 'gtceu:uranium', type: 'gtceu:fusion_reactor'})
     e.remove({id: 'gtceu:shaped/iron_door'})
     e.remove({output: 'ars_nouveau:source_gem'})
-    e.remove({id: 'gtceu:shapeless/dust_bronze'})
 
     e.remove({id: 'gtceu:large_chemical_reactor/naquadah_separation'})
 
@@ -80,19 +79,8 @@ ServerEvents.recipes(e => {
 
     e.remove({id: 'gtceu:shaped/basic_circuit_board'})
 
-    e.remove({id: 'minecraft:furnace'})
-    e.remove({id: 'minecraft:crafting_table'})
-    e.remove({id: 'quark:building/crafting/furnaces/blackstone_furnace'})
-    e.remove({id: 'quark:building/crafting/furnaces/deepslate_furnace'})
-    e.remove({id: 'quark:building/crafting/furnaces/cobblestone_furnace'})
-    e.remove({id: 'quark:building/crafting/furnaces/mixed_furnace'})
-
-    e.remove({id: 'minecraft:wooden_axe'})
     e.remove({ output: "gtceu:resistor" })
 
-
-
-    e.remove({id: 'undergarden:catalyst'})
 e.remove({output: /allthemodium:allthemodium_(sword|axe|pickaxe|shovel|hoe)/})
 ;['allthemodium', 'vibranium', 'unobtainium'].forEach(typaway => {
     e.remove({output: `allthemodium:${typaway}_gear`})

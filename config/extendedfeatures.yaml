@@ -37,7 +37,7 @@ Multiblocks:
   # Whether the Disassembler is enabled
   # §cUniversal Circuits MUST be enabled
   # Default = True
-  Disassembler: true
+  Disassembler: false
 
   # Whether the Large Air Collector is Enabled
   # Default = True
