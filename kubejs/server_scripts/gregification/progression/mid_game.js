@@ -697,7 +697,6 @@ GTM.nuclear_fission(('uranium_235_burning'))
 .itemOutputs('gtceu:spent_uranium_235_oxide_fuel_rod')
 .duration(12500)
 
-
 GTM.nuclear_fission(('plutonium_239_burning'))
 .itemInputs('gtceu:plutonium_oxide_fuel_rod')
 .perTick(true)
@@ -1913,7 +1912,7 @@ GTM.supercritical_fission('pu239_burning')
     .perTick(false)
     .itemOutputs('gtceu:spent_plutonium_oxide_fuel_rod')
     .duration(600)
-    .EUt(-GTValues.VA[GTValues.ZPM], 4)
+    .EUt(-GTValues.V[GTValues.ZPM], 4)
 
 // MOX
 GTM.supercritical_fission('mox_burning')
@@ -1924,7 +1923,7 @@ GTM.supercritical_fission('mox_burning')
     .perTick(false)
     .itemOutputs('gtceu:spent_mox_fuel_rod')
     .duration(3000)
-    .EUt(-GTValues.VA[GTValues.ZPM], 4)
+    .EUt(-GTValues.V[GTValues.ZPM], 4)
 
 // Pu-241
 GTM.supercritical_fission('pu241_burning')
@@ -1935,9 +1934,9 @@ GTM.supercritical_fission('pu241_burning')
     .perTick(false)
     .itemOutputs('gtceu:spent_plutonium_241_oxide_fuel_rod')
     .duration(150)
-    .EUt(-GTValues.VA[GTValues.ZPM], 8)
+    .EUt(-GTValues.V[GTValues.ZPM], 8)
 
-// Enriched Naquadrium Boride
+// *Qx*B2
 GTM.supercritical_fission('enriched_naquadrium_boride_burning')
     .itemInputs('gtceu:enriched_naquadrium_boride_fuel_rod')
     .perTick(true)
@@ -1946,7 +1945,7 @@ GTM.supercritical_fission('enriched_naquadrium_boride_burning')
     .perTick(false)
     .itemOutputs('gtceu:spent_enriched_naquadrium_boride_fuel_rod')
     .duration(6000)
-    .EUt(-GTValues.VA[GTValues.ZPM], 160)
+    .EUt(-GTValues.V[GTValues.ZPM], 160)
 
 GTM.phase_alternator('cryothetic_zero_through_hypothermic_helium-3')
 .inputFluids('gtceu:ice 100000', 'gtceu:hypothermic_helium_3_plasma 1000')

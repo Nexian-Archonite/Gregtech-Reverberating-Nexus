@@ -19,10 +19,10 @@
     "block.gtceu.chemical_reaction_vat.tooltip.2": "§7Has Overclock: §4Pyrolyse Oven",
     "block.gtceu.chemical_reaction_vat.tooltip.3": "§7Has Parallels: §1Hatch",
 
-    "block.gtceu.chemical_singularity.tooltip.0": "§7For every reaction, there is a vacuum cold enough.",
-    "block.gtceu.chemical_singularity.tooltip.1": "Available Recipe Types: §bVacuum Reaction Chamber, §8Chemical Vat Synthesis, Large Chemical Reactor",
-    "block.gtceu.chemical_singularity.tooltip.2": "§7Has Overclock: §6Perfect Subtick",
-    "block.gtceu.chemical_singularity.tooltip.3": "§7Has Parallels: §1Hatch",
+    "block.gtceu.vacuum_reactor.tooltip.0": "§7For every reaction, there is a vacuum cold enough.",
+    "block.gtceu.vacuum_reactor.tooltip.1": "Available Recipe Types: §bVacuum Reaction Chamber",
+    "block.gtceu.vacuum_reactor.tooltip.2": "§7Has Overclock: §6Perfect Subtick",
+    "block.gtceu.vacuum_reactor.tooltip.3": "§7Has Parallels: §1Hatch",
 
     "block.gtceu.cyclotron.tooltip.0": "§7Particles race endlessly toward greater energies.",
     "block.gtceu.cyclotron.tooltip.1": "Available Recipe Types: §2Cyclotron-Cycling, Manifold Collapsing",
@@ -958,7 +958,7 @@
     "block.gtceu.pandemonic_blast_synchronizer": "§5Pan§4demonic §8Blast §4Synchronizer §r(PBS)",
     "block.gtceu.crystal_matrix_fusion_computer": "§bCrystal §1Matrix §4Fus§6ion §7Computer §r(CMFC)",
     "block.gtceu.molten_destabilizer": "§4Molten §6Destabilizer  §r(MS)",
-    "block.gtceu.chemical_singularity": "§bChemical §6Singularity §r(CS)",
+    "block.gtceu.vacuum_reactor": "§bChemical §6Singularity §r(CS)",
     "block.gtceu.bacterial_hydrocarbon_harvester": "§6Bacterial Hydrocarbon Harvester §r(BHH)",
     "block.gtceu.bacteria_synthesizer": "§6Bacteria Synthesizer §r(BS)",
 

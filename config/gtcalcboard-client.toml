@@ -4,4 +4,12 @@
 	#Whether to show a one-time welcome chat message upon first joining a world/server.
 	#If false, the welcome message will never be shown.
 	showWelcomeChatMessage = true
+	#Whether to check for new mod releases in the background.
+	#If false, update checking is completely disabled.
+	checkForUpdates = true
+	#Whether to display an unobtrusive indicator badge on the settings button inside the Calculator Board when a new version is available.
+	showUpdateBadge = true
+	#Whether to display a one-time chat notification upon joining a world if an update is available.
+	#Disabled by default to avoid cluttering chat in modpacks.
+	notifyUpdateInChat = false
 

@@ -1089,14 +1089,15 @@ GTM.organism_incubation_chamber('dragon_incubation')
 .itemOutputs('dragon_egg', 'gtceu:dragon_heart')
 .cleanroom(CleanroomType.STERILE_CLEANROOM)
 .duration(5000)
-.EUt(2097152)
+.EUt(524288)
 
-GTM.organism_incubation_chamber('draconic_creation')
+GTM.organism_assembly_line('draconic_creation')
 .itemInputs('egg', '16x gtceu:purified_draconium_block', '4x apotheotic_additions:gemboundsigil', '16x irons_spellbooks:cinder_essence',)
 .inputFluids('gtceu:primordial_essence 16000', 'gtceu:draconic_serum 16000')
 .itemOutputs('dragon_egg')
 .cleanroom(CleanroomType.STERILE_CLEANROOM)
-.duration(40000)
+.stationResearch(global.OrganismAssemblyLineResearch(event, 'draconic_creation', 'minecraft:dragon_egg', 64, 40960, va.zpm))
+.duration(10000)
 .EUt(2097152)
 
 GTM.organism_assembly_line('sentience_processing_unit')
@@ -1569,11 +1570,11 @@ GTM.assembly_line('molten_destabilizer')
 .duration(1000)
 .EUt(524288)
 
-GTM.assembly_line('chemical_singularity')
+GTM.assembly_line('vacuum_reactor')
 .itemInputs('gtceu:chemical_reaction_vat', 'gtceu:mega_vacuum_freezer', '32x gtceu:exquisite_cryonull_gem', '16x gtceu:dense_vaexium_plate', '8x gtceu:uhv_electric_pump', '2x gtceu:uhv_conveyor_module')
 .inputFluids('gtceu:indium-vor-dys-cad_supersolder_alloy 4608', 'gtceu:polyether_ether_ketone 4000', 'gtceu:cryothetic_zero 4000', 'gtceu:velyl_rubber 2000')
-.itemOutputs('gtceu:chemical_singularity')
-.stationResearch(global.AssemblyLineResearch(event, 'chemical_singularity', 'gtceu:chemical_reaction_vat', 96, 144000, va.luv))
+.itemOutputs('gtceu:vacuum_reactor')
+.stationResearch(global.AssemblyLineResearch(event, 'vacuum_reactor', 'gtceu:chemical_reaction_vat', 96, 144000, va.luv))
 .duration(1000)
 .EUt(524288)
 
@@ -1997,7 +1998,7 @@ GTM.chemical_vat('pedot_pss')
 .inputFluids('gtceu:edot 1000', 'gtceu:sodium_poly_styrene_sulfonate 1000', 'gtceu:iron_iii_chloride 2000')
 .itemInputs('gtceu:neuron_dish')
 .outputFluids('gtceu:pedot_pss 1296', 'gtceu:iron_ii_chloride 2000')
-.itemOutputs('gtceu:salt_dust', 'gtceu:petri_dish')
+.itemOutputs('gtceu:salt_dust')
 .cleanroom(CleanroomType.STERILE_CLEANROOM)
 .duration(600)
 .EUt(2048)
@@ -2461,6 +2462,39 @@ Object.entries({
     "gtceu:polyether_ether_ketone_normal_fluid_pipe"
     )
 
+const alienMinerals = {
+    aelvythrexite: ['aelvythrex', 'ilmenite', 'rutile'],
+    czyvhaelnite: ['czyvhaeln', 'spodumene', 'bauxite'],
+    thurvaexite: ['thurvaexi', 'sapphire', 'apatite'],
+    yrethnaulite: ['yrethnaul', 'magnetite', 'ilmenite'],
+    phaevcyrlite: ['phaevcyrl', 'rutile', 'xenotime'],
+    kholvaetzhite: ['kholvaetzh', 'monazite', 'bastnasite'],
 
+    vrethdulixit: ['vrethdulix', 'chromite', 'pyroxene'],
+    ghauzrenitite: ['ghauzrenit', 'enstatite', 'graphite'],
+    jolvekrasite: ['jolvekrasz', 'pyroxene', 'enstatite'],
+    thuzkavelite: ['thuzkavel', 'graphite', 'chromite'],
+    drevhnauxite: ['drevhnauxt', 'enstatite', 'pyroxene'],
+    uxvheltrisite: ['uxvheltris', 'cooperite', 'xenotime'],
+
+    caelvrite: ['caelvr', 'molybdenite', 'scheelite'],
+    fendrothexite: ['fendrothex', 'olivine', 'molybdenite'],
+    mornivechtite: ['mornivecht', 'galena', 'sphalerite'],
+    sturvaelixite: ['sturvaelix', 'bastnasite', 'monazite'],
+    brechovitite: ['brechovite', 'sphalerite', 'galena'],
+    drethnaverite: ['drethnavik', 'scheelite', 'molybdenite']
+}
+
+Object.entries(alienMinerals).forEach(([mineral, products]) => {
+GTM.vacuum_reaction_chamber(`${mineral}_to_${products[0]}`)
+.itemInputs(`7x gtceu:${mineral}_dust`, '2x gtceu:thermavylized-vaelite_gem', '2x gtceu:cindralite-kethrite_gem')
+.perTick(true)
+.inputFluids('gtceu:inactivated_infernality 30')
+.outputFluids('gtceu:infernality_catalysm 10')
+.perTick(false)
+.itemOutputs(`4x gtceu:small_${products[0]}_dust`, `2x gtceu:${products[0]}_dust`, `gtceu:${products[2]}_dust`)
+.duration(500)
+.addData('MaxTemp', 20)
+})
 
 })
